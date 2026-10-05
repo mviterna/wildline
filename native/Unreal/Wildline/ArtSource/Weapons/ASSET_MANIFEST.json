@@ -1,0 +1,302 @@
+{
+  "source_directory": "C:\\Work\\GameAssets",
+  "copied_on": "2026-10-05",
+  "integration_status": "TODO: not imported into Unreal or used at runtime",
+  "files": [
+    {
+      "path": "Rifles/Previews/M64_Kryptek_detail.png",
+      "bytes": 1372450,
+      "sha256": "338b3c229fcfdc43f3666ef3da7c998836fae94be9813ec5dfc11e0926c19e5b"
+    },
+    {
+      "path": "Rifles/Previews/M64_Kryptek_left.png",
+      "bytes": 1232991,
+      "sha256": "259af9f324820ab2c78f0cc9a9a982e7d05ed77eb31f9c2401048328b0115ca5"
+    },
+    {
+      "path": "Rifles/Previews/M64_Kryptek_right.png",
+      "bytes": 1249803,
+      "sha256": "951836da7fe450dd7bd3d36c0e227880d48c6b034118be43d6534012dbb075c7"
+    },
+    {
+      "path": "Rifles/Previews/M64_Kryptek_Scope_3-9x40_detail.png",
+      "bytes": 1410422,
+      "sha256": "e9f37d34397ea5a283c789c0ba50cfd5533d05781d80c89f888f1accd813ca41"
+    },
+    {
+      "path": "Rifles/Previews/M64_Kryptek_Scope_3-9x40_left.png",
+      "bytes": 1243150,
+      "sha256": "52886269f01362f035e38e7554b878f316701aadf3c48635384de3dce135419c"
+    },
+    {
+      "path": "Rifles/Previews/M64_Kryptek_Scope_3-9x40_right.png",
+      "bytes": 1263632,
+      "sha256": "86c263ad0a321f87cbae41f7c5ab0dbebc3f404acbefc2c68c3598519666a012"
+    },
+    {
+      "path": "Rifles/Previews/M64_Kryptek_Scope_HS219_Hydra_detail.png",
+      "bytes": 1406524,
+      "sha256": "ebbde93125b4e71a321a08092ffec83e33ad2fc7a0dfa4878bded760d46961d7"
+    },
+    {
+      "path": "Rifles/Previews/M64_Kryptek_Scope_HS219_Hydra_left.png",
+      "bytes": 1244594,
+      "sha256": "778142ac1f980dc093ed25093e0d61846f3b7306aae36b3d41642c88e3a30fb8"
+    },
+    {
+      "path": "Rifles/Previews/M64_Kryptek_Scope_HS219_Hydra_right.png",
+      "bytes": 1263096,
+      "sha256": "f664a7021552f372d42c9a8778dc718f9f4ad56569ab88cb515d60527be278df"
+    },
+    {
+      "path": "Rifles/Previews/Pardner_410_detail.png",
+      "bytes": 1328581,
+      "sha256": "de7bcd3aa9178e0123d8a837e571918d82244cc4b27894c10c1b3de86ba8c508"
+    },
+    {
+      "path": "Rifles/Previews/Pardner_410_detail_left.png",
+      "bytes": 1321624,
+      "sha256": "e2b03369cd619cdb02bc707434e709e77bc593f9e1a534d02ead56ede96c0471"
+    },
+    {
+      "path": "Rifles/Previews/Pardner_410_left.png",
+      "bytes": 1194922,
+      "sha256": "1aa1a4748c96ba9f24b5e4936afdd57d9c480ffbbf12f3e7e48fbe2df9f6450d"
+    },
+    {
+      "path": "Rifles/Previews/Pardner_410_right.png",
+      "bytes": 1194360,
+      "sha256": "b90a5f7e3d1977f7bc74e2a9549c685a55808794467ab3a63e06e31a3ab5cead"
+    },
+    {
+      "path": "Rifles/Previews/Rascal_Blue_detail.png",
+      "bytes": 1184326,
+      "sha256": "f28060ea8964f96d3682ea529d3f98676ddaefc4b7e1bfd5105992d27d630131"
+    },
+    {
+      "path": "Rifles/Previews/Rascal_Blue_left.png",
+      "bytes": 1109090,
+      "sha256": "e271cdc7f6839b7b7af66e7a7e82effff965b843d6d6fcc28b60ca6fcc554d21"
+    },
+    {
+      "path": "Rifles/Previews/Rascal_Blue_right.png",
+      "bytes": 1119008,
+      "sha256": "d2e9d01900a8fad66eabf436207e8a2c427d2e0478ba8c1882f7c3413a901f7e"
+    },
+    {
+      "path": "Rifles/Previews/Rascal_Red_detail.png",
+      "bytes": 1189340,
+      "sha256": "dd2c4068df8216f83359ffa6c09681737f57ea1efc7fb2ff935a61bc4ba2d895"
+    },
+    {
+      "path": "Rifles/Previews/Rascal_Red_left.png",
+      "bytes": 1119918,
+      "sha256": "285c5311dc36cd4eaa140204849bf449b0246d9ae9c9ad0340c4e3e9dd7746ed"
+    },
+    {
+      "path": "Rifles/Previews/Rascal_Red_right.png",
+      "bytes": 1123473,
+      "sha256": "c371b9b3bbc1eec47443a0be5e71f3628199e2cb8c26911620ba3f5d102a644e"
+    },
+    {
+      "path": "Rifles/Previews/Scope_3-9x40_front.png",
+      "bytes": 1167681,
+      "sha256": "144bb9981044e85cc8d9648663f1bc0d7eca1b43e92d5ff196beab5152e8d61e"
+    },
+    {
+      "path": "Rifles/Previews/Scope_3-9x40_left.png",
+      "bytes": 1124620,
+      "sha256": "e582d255a0b0101cd4ec54c8d2fce509ebbbd14e5fd71348ee96b985c60288a7"
+    },
+    {
+      "path": "Rifles/Previews/Scope_3-9x40_rear.png",
+      "bytes": 1163309,
+      "sha256": "fa7f46d712c674c335408c0b3810ff64d32e3a222bc2ad647a9151fb86490d5b"
+    },
+    {
+      "path": "Rifles/Previews/Scope_3-9x40_right.png",
+      "bytes": 1129452,
+      "sha256": "966ebe8c75fce58cc7f3bae60e899fc4b840c6275b4829724c08d5670f2d07e1"
+    },
+    {
+      "path": "Rifles/Previews/Scope_HS219_Hydra_front.png",
+      "bytes": 1177250,
+      "sha256": "1b4ccca1805e08c3cf22e8bef6339a505fc556acc5a9ca33d638782de095841b"
+    },
+    {
+      "path": "Rifles/Previews/Scope_HS219_Hydra_left.png",
+      "bytes": 1120470,
+      "sha256": "5ee45d16a32f767854256ee7d307382838cf58713b28ea868b476f2a7b89cb5f"
+    },
+    {
+      "path": "Rifles/Previews/Scope_HS219_Hydra_rear.png",
+      "bytes": 1170150,
+      "sha256": "982aa370eae37a0c0e43b1acaea767d4ec0f8dc77ac2bf7a695e4328f94135ea"
+    },
+    {
+      "path": "Rifles/Previews/Scope_HS219_Hydra_right.png",
+      "bytes": 1123167,
+      "sha256": "2367a3abe7f13c9ccf48855762735b008e4e83abbde06bce48c1ffdf07059ccc"
+    },
+    {
+      "path": "Rifles/Previews/Stevens_940D_detail.png",
+      "bytes": 1281674,
+      "sha256": "f8019cc17111d04e59df8a1b3a8e99ac29f42f75f66d83aeb65ea90b4003f8ea"
+    },
+    {
+      "path": "Rifles/Previews/Stevens_940D_detail_left.png",
+      "bytes": 1270140,
+      "sha256": "80be4ca649c5c75f5caa01b91e66d3f93d94df32bfc7a8b5c43f2d03006635bd"
+    },
+    {
+      "path": "Rifles/Previews/Stevens_940D_left.png",
+      "bytes": 1177422,
+      "sha256": "6c001782946558d67bdfa8ead3776c30ac795caec8511df3f8c611101e17e1c9"
+    },
+    {
+      "path": "Rifles/Previews/Stevens_940D_right.png",
+      "bytes": 1175852,
+      "sha256": "9e988c5ac957d72dece3692449ffe8c82b5dae24d0f06b3fa5ff5d03811b994c"
+    },
+    {
+      "path": "Rifles/SM_Rifle_M64_Kryptek.fbx",
+      "bytes": 6609356,
+      "sha256": "a84559d272d3c988da46431775246f86fec109888a475b8ec516b616d128960d"
+    },
+    {
+      "path": "Rifles/SM_Rifle_Rascal_Blue.fbx",
+      "bytes": 622940,
+      "sha256": "74c0b9075d95231860052249bac067cd4aa5c734573c9ff6b0e92cf68f901d99"
+    },
+    {
+      "path": "Rifles/SM_Rifle_Rascal_Red.fbx",
+      "bytes": 623308,
+      "sha256": "c0e9be6485d61fd117ae1920a4f67c2323f927bdefbc61ec39e765066d447c0c"
+    },
+    {
+      "path": "Rifles/SM_Scope_3-9x40.fbx",
+      "bytes": 405900,
+      "sha256": "e5dd3802798e25322ebbdf083e5b7de9f94087958ab6d1f261974d3ed2dd90bb"
+    },
+    {
+      "path": "Rifles/SM_Scope_HS219_Hydra.fbx",
+      "bytes": 638044,
+      "sha256": "ccb8f24f2b07cccacc63313fa551eafdd433f444646337a7ce2113f24a7df60b"
+    },
+    {
+      "path": "Rifles/SM_Shotgun_Pardner_410.fbx",
+      "bytes": 16394924,
+      "sha256": "127f2e051d0e7275ca93170b83c0f0f40d961b0b13f6632c9b62bc945a7b6568"
+    },
+    {
+      "path": "Rifles/SM_Shotgun_Stevens_940D.fbx",
+      "bytes": 16913228,
+      "sha256": "4ec25e01d55e572f1822f30ede938458e23cf59c11b2449411af0f3fa22b6d65"
+    },
+    {
+      "path": "Rifles/src/build_rifles.py",
+      "bytes": 30409,
+      "sha256": "eafcb5651f6277d4a360f624c27971fdb9c20fcb895be103502dd0f8d1a29cad"
+    },
+    {
+      "path": "Rifles/src/build_shotgun.py",
+      "bytes": 37166,
+      "sha256": "64e050b26b65583e39ea5c011b31287bb6efff548882079b070cb1a236c84ece"
+    },
+    {
+      "path": "Rifles/src/make_camo.py",
+      "bytes": 2666,
+      "sha256": "6776b886c0d7d788672f1bd4685bd4c4a83b4229f8efde26874a8c0d19e7d5b4"
+    },
+    {
+      "path": "Rifles/src/Rifle_M64_Kryptek.blend",
+      "bytes": 5577012,
+      "sha256": "162ec2c2dff5771a0040f1773e9b54f0e496a1b36df71906f9d1ced69c126864"
+    },
+    {
+      "path": "Rifles/src/Rifle_Rascal_Blue.blend",
+      "bytes": 1845406,
+      "sha256": "a5a6a43cfdb85c185339fdb7bedc5026c3986c08230353c5116bb11ece7405eb"
+    },
+    {
+      "path": "Rifles/src/Rifle_Rascal_Red.blend",
+      "bytes": 1845406,
+      "sha256": "6f07d04784bd79caf9e04b1521a5e1eca2faf9a0b5849f881092f38b33706e31"
+    },
+    {
+      "path": "Rifles/src/Shotgun_Pardner_410.blend",
+      "bytes": 3682675,
+      "sha256": "0e720e0a9f4b4bbea09954f069e1ba86325b35297482cf28a869d99936739508"
+    },
+    {
+      "path": "Rifles/src/Shotgun_Stevens_940D.blend",
+      "bytes": 3787522,
+      "sha256": "222bc9cc371e408d6c8947803c1a12ae7d6aae84888fd1d988de14ffe79fa5b2"
+    },
+    {
+      "path": "Rifles/Textures/T_Kryptek_Camo_D.png",
+      "bytes": 5336187,
+      "sha256": "ddba2548681cda0fb8457f69e072c27baeab130b4df741e124c6d3dc5492784c"
+    },
+    {
+      "path": "Rifles/Textures/T_Pardner410_Metal_D.png",
+      "bytes": 9581705,
+      "sha256": "dd61d94256d416558c66559da1d2b74b27eae0e27848370b28475920b027fe4b"
+    },
+    {
+      "path": "Rifles/Textures/T_Pardner410_Metal_N.png",
+      "bytes": 2190045,
+      "sha256": "8715e9bc330bcd6944cd397cb1f77f813b7adf3fb578416a4cfde521bf76037f"
+    },
+    {
+      "path": "Rifles/Textures/T_Pardner410_Metal_ORM.png",
+      "bytes": 10620337,
+      "sha256": "d6efe61bf1345e293f69fc8b46a5030dbab3bb5cf16c172ba69e7bcebd8612d1"
+    },
+    {
+      "path": "Rifles/Textures/T_Pardner410_Wood_D.png",
+      "bytes": 5698300,
+      "sha256": "4dce3e0a2a8f879f0ff9744f194745ec73fcdc8632bf1e7f88139d7755e51f79"
+    },
+    {
+      "path": "Rifles/Textures/T_Pardner410_Wood_N.png",
+      "bytes": 6282887,
+      "sha256": "8e02f7e0a202d3978fde3ac0e73a76307bd67f3b9bf12f6332613696132e7656"
+    },
+    {
+      "path": "Rifles/Textures/T_Pardner410_Wood_ORM.png",
+      "bytes": 6653201,
+      "sha256": "339fd9dca7517fbf3ab17a2e46af3681824752f49442b2bd593d4c2f1f31bf23"
+    },
+    {
+      "path": "Rifles/Textures/T_Stevens940D_Metal_D.png",
+      "bytes": 8879329,
+      "sha256": "94ed7b79375f716174c1c8a4d127ac8dffe71221b3a2a39cf3f997d41cffc4a5"
+    },
+    {
+      "path": "Rifles/Textures/T_Stevens940D_Metal_N.png",
+      "bytes": 2155456,
+      "sha256": "a9554ea483f960318df7c77fd3e7f7952f2cdcbb5077940b7b59600a3d66dd21"
+    },
+    {
+      "path": "Rifles/Textures/T_Stevens940D_Metal_ORM.png",
+      "bytes": 9389820,
+      "sha256": "db706e268ef5f2b931281d25d392089e144432daed6001e286b2674547c01798"
+    },
+    {
+      "path": "Rifles/Textures/T_Stevens940D_Wood_D.png",
+      "bytes": 6908374,
+      "sha256": "82a949e52ed54f20737d1765511b0735e41d5fa4dca3b80cd1111bbe74340709"
+    },
+    {
+      "path": "Rifles/Textures/T_Stevens940D_Wood_N.png",
+      "bytes": 6361613,
+      "sha256": "5a03d2cf1bb12a625743d5ccb01451362a7511652a9ae281041d5f9306bef127"
+    },
+    {
+      "path": "Rifles/Textures/T_Stevens940D_Wood_ORM.png",
+      "bytes": 7259591,
+      "sha256": "e32c596c5bf41ff32e66c5b71f4d077efe5554b88b6581277d04533ca6b0ec9e"
+    }
+  ]
+}

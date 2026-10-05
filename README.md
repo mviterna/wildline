@@ -129,6 +129,23 @@ this repository does not grant unrestricted redistribution of those assets.
 - Diagnostic logs and native screenshots are under `native` and the project's `Saved` directory. Generated build folders are excluded from Git.
 - `native/VerifyGraphicsPackage.ps1` checks migration from saved low settings to fixed high quality, live resolution changes, persistence and restart using a separate test profile, and captures the graphics menu.
 
+## TODO: integrate the new weapon assets
+
+The assets supplied in `C:/Work/GameAssets` are now stored under
+[`native/Unreal/Wildline/ArtSource/Weapons`](native/Unreal/Wildline/ArtSource/Weapons/README.md).
+They include M64 Kryptek-style and blue/red Rascal rifles, Pardner .410 and
+Stevens 940D shotguns, two scopes, textures, previews and editable Blender
+sources. **Adding these weapons to the game remains TODO.**
+
+- [ ] Import meshes and materials and add weapon/scope selection.
+- [ ] Fit each stock to the hunter's shoulder and both hands in movement and aim.
+- [ ] Add weapon-specific firing, action and reload animations, including the
+  supplied shotguns' break-action handling.
+- [ ] Verify sights, ammo, weapon switching and solo/co-op replication.
+
+The [weapon asset inventory and integration checklist](native/Unreal/Wildline/ArtSource/Weapons/README.md)
+records all seven exports, source conventions and remaining work.
+
 ## Asset credits
 
 - Poly Haven **Bark Brown 01**, **Forest Ground 01**, **Pine Tree 01**, **Forest Leaves 02** and **Grass Medium 01** photographs and normal/alpha maps, CC0. BlendSwap trees, ground-cover geometry and ferns, plus ambientCG leaf photographs, are recorded in the forest provenance file above.
