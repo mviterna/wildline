@@ -1,0 +1,63 @@
+{
+  "M_Neutral_Walk_Loop_F": {
+    "length": 4.0,
+    "root_delta": [
+      0.0,
+      800.0072021484375,
+      0.0
+    ],
+    "root_start": "<Struct 'Transform' (0x000002B7F90308D0) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 0.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+    "skeleton": "/Game/Characters/UEFN_Mannequin/Meshes/SK_UEFN_Mannequin.SK_UEFN_Mannequin"
+  },
+  "M_Neutral_Walk_Loop_RR": {
+    "length": 3.700000047683716,
+    "root_delta": [
+      -665.9835815429688,
+      0.0,
+      0.0
+    ],
+    "root_start": "<Struct 'Transform' (0x000002B7F9032070) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 0.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+    "skeleton": "/Game/Characters/UEFN_Mannequin/Meshes/SK_UEFN_Mannequin.SK_UEFN_Mannequin"
+  },
+  "M_Neutral_Run_Loop_F": {
+    "length": 2.5,
+    "root_delta": [
+      0.0,
+      1250.0,
+      0.0
+    ],
+    "root_start": "<Struct 'Transform' (0x000002B7F9032C40) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 0.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+    "skeleton": "/Game/Characters/UEFN_Mannequin/Meshes/SK_UEFN_Mannequin.SK_UEFN_Mannequin"
+  },
+  "M_Neutral_Crouch_Loop_F": {
+    "length": 3.700000047683716,
+    "root_delta": [
+      0.0,
+      832.511474609375,
+      0.0
+    ],
+    "root_start": "<Struct 'Transform' (0x000002B7F90308D0) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 0.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+    "skeleton": "/Game/Characters/UEFN_Mannequin/Meshes/SK_UEFN_Mannequin.SK_UEFN_Mannequin"
+  },
+  "M_Neutral_Stand_Idle_Loop": {
+    "length": 10.0,
+    "root_delta": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "root_start": "<Struct 'Transform' (0x000002B7F9032070) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 0.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+    "skeleton": "/Game/Characters/UEFN_Mannequin/Meshes/SK_UEFN_Mannequin.SK_UEFN_Mannequin"
+  },
+  "M_Neutral_Jump_F_Start_Stand_Lfoot": {
+    "length": 2.5,
+    "root_delta": [
+      0.0,
+      0.0,
+      -626.86572265625
+    ],
+    "root_start": "<Struct 'Transform' (0x000002B7F9032C40) {rotation: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}, translation: {x: 0.000000, y: 0.000000, z: 0.000000}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>",
+    "skeleton": "/Game/Characters/UEFN_Mannequin/Meshes/SK_UEFN_Mannequin.SK_UEFN_Mannequin"
+  },
+  "retargeter": "<Object '/Game/Characters/UE5_Mannequins/Rigs/RTG_UEFN_to_UE5_Mannequin.RTG_UEFN_to_UE5_Mannequin' (0x000002B79A27B000) Class 'IKRetargeter'>"
+}

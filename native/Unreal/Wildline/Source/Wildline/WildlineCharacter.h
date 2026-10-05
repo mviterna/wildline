@@ -1,0 +1,157 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "GameFramework/Character.h"
+#include "WildlineHunterProfile.h"
+#include "WildlineWeaponFX.h"
+#include "WildlineCharacter.generated.h"
+class UCameraComponent;
+class USpringArmComponent;
+class UStaticMeshComponent;
+class UProceduralMeshComponent;
+class UMaterialInstanceDynamic;
+class AWildlineWorld;
+UCLASS()
+class WILDLINE_API AWildlineCharacter : public ACharacter {
+    GENERATED_BODY()
+public:
+    AWildlineCharacter();
+    void BeginPlay() override;
+    void Tick(float Delta) override;
+    void SetupPlayerInputComponent(UInputComponent* Input) override;
+    void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out) const override;
+    float TakeDamage(float Damage,const FDamageEvent& Event,AController* Instigator,AActor* Causer) override;
+    UPROPERTY(ReplicatedUsing=OnRepRole) bool bSquirrel=false;
+    UPROPERTY(ReplicatedUsing=OnRepDead) bool bDead=false;
+    UPROPERTY(Replicated) bool bBot=false;
+    UPROPERTY(Replicated) bool bSprinting=false;
+    UPROPERTY(Replicated) float Stamina=100.f;
+    UPROPERTY(Replicated) float Health=100.f;
+    UPROPERTY(Replicated) int32 Ammo=5;
+    UPROPERTY(Replicated) int32 Bag=0;
+    UPROPERTY(Replicated) float ThermalUntil=0;
+    UPROPERTY(Replicated) float ThermalReadyAt=0;
+    UPROPERTY(Replicated) float ReloadUntil=0;
+    UPROPERTY(Replicated) float RespawnAt=0;
+    UPROPERTY(Replicated) int32 TreeIndex=INDEX_NONE;
+    UPROPERTY(Replicated) TArray<int32> Collected;
+    UPROPERTY(Replicated) TArray<int32> BagPeanuts;
+    UPROPERTY(ReplicatedUsing=OnRepWeapon) int32 SelectedWeapon=0;
+    UPROPERTY(Replicated) int32 CourseCheckpoint=0;
+    UPROPERTY(Replicated) int32 CourseLane=-1;
+    UPROPERTY(Replicated) int32 FeederVisits=0;
+    int32 RifleAmmo=5,ShotgunAmmo=2;
+    UFUNCTION() void OnRepWeapon();
+    void SelectWeapon(int32 Weapon);
+    void ReturnCarriedPeanuts();
+    UPROPERTY() UCameraComponent* FirstCamera;
+    UPROPERTY() UCameraComponent* ThirdCamera;
+    UPROPERTY() USpringArmComponent* Boom;
+    UPROPERTY() UStaticMeshComponent* ViewRifle;
+    UPROPERTY() UStaticMeshComponent* WorldRifle;
+    UPROPERTY() UStaticMeshComponent* ViewBolt;
+    UPROPERTY() UStaticMeshComponent* WorldBolt;
+    UPROPERTY(ReplicatedUsing=OnRepHunterProfile) FWildlineHunterProfile HunterProfile;
+    UPROPERTY(ReplicatedUsing=OnRepHunterProfile) FString HunterFaceData;
+    UPROPERTY() UTexture2D* HunterFaceTexture;
+    UPROPERTY() TArray<UMaterialInstanceDynamic*> HunterMaterials;
+    bool bProfileSubmitted=false;
+    bool bPreviewHunter=false;
+    void ApplyHunterProfile();
+    void SubmitSavedHunterProfile();
+    UFUNCTION() void OnRepHunterProfile();
+    UFUNCTION(Server,Reliable) void ServerSetHunterProfile(FWildlineHunterProfile Profile,const FString& FaceData);
+    UPROPERTY() USceneComponent* AnimalRoot;
+    UPROPERTY() USkeletalMesh* HumanMeshAsset;
+    UPROPERTY() USkeletalMesh* SquirrelMeshAsset;
+    UPROPERTY() TArray<UProceduralMeshComponent*> FurSections;
+    bool bThirdPerson=false;
+    UPROPERTY(Replicated) bool bAiming=false;
+    bool bFiring=false;
+    bool CanControl() const;
+    bool IsThermalActive() const;
+    bool IsScoped() const;
+    float ServerTime() const;
+    void ResetBotAwareness();
+    void ConfigureRole();
+    void ToggleCamera();
+    void StartSprint();
+    void StopSprint();
+    void StartAim();
+    void StopAim();
+    void StartFire();
+    void StopFire();
+    void DoJump();
+    void Climb();
+    void Thermal();
+    void Reload();
+    void DoCrouch();
+    void DoUnCrouch();
+    void MoveForward(float Value);
+    void MoveRight(float Value);
+    void Turn(float Value);
+    void LookUp(float Value);
+    void SetHeatVision(bool bActive);
+    UFUNCTION() void OnRepRole();
+    UFUNCTION() void OnRepDead();
+    UFUNCTION(Server,Reliable) void ServerSprint(bool bValue);
+    UFUNCTION(Server,Reliable) void ServerAim(bool bValue);
+    UFUNCTION(Server,Reliable) void ServerJump();
+    UFUNCTION(Server,Reliable) void ServerClimb();
+    UFUNCTION(Server,Unreliable) void ServerClimbInput(float Forward,float Side);
+    UFUNCTION(Server,Reliable) void ServerThermal();
+    UFUNCTION(Server,Reliable) void ServerReload();
+    UFUNCTION(Server,Reliable) void ServerFire(FVector_NetQuantizeNormal Direction);
+    UFUNCTION(NetMulticast,Unreliable) void MulticastShot(FVector_NetQuantizeNormal Direction);
+    UFUNCTION(NetMulticast,Unreliable) void MulticastSound(uint8 Event);
+    void Landed(const FHitResult& Hit) override;
+    float NextStepSound=0,NextBirdSound=4;
+    int32 HeardWinner=0;
+    UFUNCTION(NetMulticast,Unreliable) void MulticastImpacts(const TArray<FWildlineImpact>& Impacts);
+    int32 CosmeticShots=0,CosmeticImpacts=0,CosmeticSounds=0;
+    float VisualShotAt=-10.f;
+    UFUNCTION(NetMulticast,Reliable) void MulticastBlood(FVector_NetQuantize Impact,FVector_NetQuantizeNormal Direction);
+private:
+    float LastShot=-10.f;
+    float BoltCycleAt=-10.f;
+    float LastFireRequest=-10.f;
+    float ForwardInput=0,SideInput=0;
+    float TreeAngle=0;
+    float BotDecisionAt=0;
+    TWeakObjectPtr<AWildlineCharacter> BotTarget;
+    FVector BotLastKnown=FVector::ZeroVector;
+    float BotLastSeenAt=-100.f;
+    int32 BotDifficultyLevel=-1;
+    int32 FarmPatrolIndex=0;
+    bool bHeatApplied=false;
+    AWildlineWorld* Forest=nullptr;
+    UPROPERTY() TArray<UMaterialInterface*> OriginalMaterials;
+    void UpdateCamera(float Delta);
+    void BotThink(float Delta);
+    void Forage();
+    void UpdateCourse();
+    void CourseBotThink(float Delta);
+    void UpdateClimb(float Delta);
+    void BuildFur();
+
+};
+UCLASS()
+class WILDLINE_API AWildlineBullet : public AActor {
+    GENERATED_BODY()
+public:
+    AWildlineBullet();
+    void Tick(float Delta) override;
+    FVector Velocity=FVector::ZeroVector;
+    TWeakObjectPtr<AWildlineCharacter> Shooter;
+};
+UCLASS()
+class WILDLINE_API AWildlineBlood : public AActor {
+    GENERATED_BODY()
+public:
+    AWildlineBlood();
+    void BeginPlay() override;
+    void Tick(float Delta) override;
+    FVector Direction=FVector::ForwardVector;
+private:
+    UPROPERTY() TArray<UStaticMeshComponent*> Drops;
+    TArray<FVector> Velocities;
+};

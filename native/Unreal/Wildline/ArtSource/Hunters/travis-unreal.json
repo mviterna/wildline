@@ -1,0 +1,40 @@
+{
+  "SK_HunterMale": {
+    "skeleton": "/Game/Characters/Mannequins/Meshes/SK_Mannequin.SK_Mannequin",
+    "materials": [
+      "/Game/Wildline/Hunters/Materials/M_Brows.M_Brows",
+      "/Game/Wildline/Hunters/Materials/M_Eyes.M_Eyes",
+      "/Game/Wildline/Hunters/Materials/M_Cloth.M_Cloth",
+      "/Game/Wildline/Hunters/Materials/M_Boots.M_Boots",
+      "/Game/Wildline/Hunters/Materials/M_Hair.M_Hair",
+      "/Game/Wildline/Hunters/Materials/M_Skin_male.M_Skin_male",
+      "/Game/Wildline/Hunters/Materials/M_Cap.M_Cap"
+    ]
+  },
+  "SK_HunterFemale": {
+    "skeleton": "/Game/Characters/Mannequins/Meshes/SK_Mannequin.SK_Mannequin",
+    "materials": [
+      "/Game/Wildline/Hunters/Materials/M_Brows.M_Brows",
+      "/Game/Wildline/Hunters/Materials/M_Eyes.M_Eyes",
+      "/Game/Wildline/Hunters/Materials/M_Cloth.M_Cloth",
+      "/Game/Wildline/Hunters/Materials/M_Boots.M_Boots",
+      "/Game/Wildline/Hunters/Materials/M_Hair.M_Hair",
+      "/Game/Wildline/Hunters/Materials/M_Skin_female.M_Skin_female",
+      "/Game/Wildline/Hunters/Materials/M_Cap.M_Cap"
+    ]
+  },
+  "SK_HunterTravis": {
+    "skeleton": "/Game/Characters/Mannequins/Meshes/SK_Mannequin.SK_Mannequin",
+    "materials": [
+      "/Game/Wildline/Hunters/Materials/M_Brows.M_Brows",
+      "/Game/Wildline/Hunters/Materials/M_Eyes.M_Eyes",
+      "/Game/Wildline/Hunters/Materials/M_TravisCamo.M_TravisCamo",
+      "/Game/Wildline/Hunters/Materials/M_Boots.M_Boots",
+      "/Game/Wildline/Hunters/Materials/M_Hair.M_Hair",
+      "/Game/Wildline/Hunters/Materials/M_Skin_male.M_Skin_male",
+      "/Game/Wildline/Hunters/Materials/M_Cap.M_Cap",
+      "/Game/Wildline/Hunters/Materials/M_TravisBeard.M_TravisBeard",
+      "/Game/Wildline/Hunters/Materials/M_TravisVest.M_TravisVest"
+    ]
+  }
+}

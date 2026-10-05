@@ -1,0 +1,3455 @@
+[
+  {
+    "file": "native\\Unreal\\Wildline\\ArtSource\\Forest\\Broadleaf\\trees_grass_system.blend",
+    "unit": 1.0,
+    "objects": [
+      {
+        "name": "birchtree1",
+        "type": "MESH",
+        "dimensions": [
+          8.733081817626953,
+          13.77919864654541,
+          7.460999011993408
+        ],
+        "location": [
+          50.99999237060547,
+          -1.1920928955078125e-06,
+          2.384185791015625e-06
+        ],
+        "vertices": 72485,
+        "polygons": 31775,
+        "materials": [
+          "M_treebranches_birchtree",
+          "M_bark2_birchtree",
+          "M_treeleaves2_birchtree",
+          "M_treeleaves2_birchtree_hi",
+          "M_treeleaves2_birchtree.001",
+          "M_bark2_birchtree1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Camera",
+        "type": "CAMERA",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          49.78238296508789,
+          -29.482589721679688,
+          8.829207420349121
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Camera.001",
+        "type": "CAMERA",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          2.6832852363586426,
+          -2.3540217876434326,
+          1.21315336227417
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Camera.002",
+        "type": "CAMERA",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          57.691734313964844,
+          -11.11558723449707,
+          2.7730584144592285
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Camera.003",
+        "type": "CAMERA",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          2.9994289875030518,
+          -1.544766902923584,
+          0.37675976753234863
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass__old_lo",
+        "type": "MESH",
+        "dimensions": [
+          0.27874669432640076,
+          1.3258247375488281,
+          1.3258248567581177
+        ],
+        "location": [
+          4.653820037841797,
+          -2.5502076148986816,
+          -8.180469990293204e-08
+        ],
+        "vertices": 6,
+        "polygons": 2,
+        "materials": [
+          "M_grass_leaves_old_lo"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_green",
+        "type": "MESH",
+        "dimensions": [
+          0.1447792500257492,
+          0.7188706398010254,
+          0.7188706994056702
+        ],
+        "location": [
+          5.653820037841797,
+          -2.5502076148986816,
+          -8.180469990293204e-08
+        ],
+        "vertices": 6,
+        "polygons": 2,
+        "materials": [
+          "M_grass_leaves_green_lo"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_mesh.001",
+        "type": "MESH",
+        "dimensions": [
+          0.25,
+          0.25,
+          0.0
+        ],
+        "location": [
+          3.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 4,
+        "polygons": 1,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "trawa_niska_zroznicowana_systemcz",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "trawa_niska_zielona_systemcz",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "trawa_niska_mloda_systemcz",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "trawa_niska_stara_systemcz",
+            "PARTICLE_SYSTEM"
+          ]
+        ],
+        "particles": [
+          {
+            "name": "singlstrand_grass_different.001",
+            "object": null,
+            "count": 850
+          },
+          {
+            "name": "singlstrand_grass_green.001",
+            "object": null,
+            "count": 100
+          },
+          {
+            "name": "singlstrand_grass_young.001",
+            "object": null,
+            "count": 10
+          },
+          {
+            "name": "singlstrand_grass_old.001",
+            "object": null,
+            "count": 65
+          }
+        ]
+      },
+      {
+        "name": "grass_mix_lo",
+        "type": "MESH",
+        "dimensions": [
+          0.22504694759845734,
+          0.8838831782341003,
+          0.8838832974433899
+        ],
+        "location": [
+          6.641217231750488,
+          -2.543668508529663,
+          -7.102589449914376e-08
+        ],
+        "vertices": 6,
+        "polygons": 2,
+        "materials": [
+          "M_grass_leaves_mix_lo"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_system_hipoly",
+        "type": "MESH",
+        "dimensions": [
+          2.0,
+          2.0,
+          0.0
+        ],
+        "location": [
+          22.0,
+          -4.0,
+          0.0
+        ],
+        "vertices": 4,
+        "polygons": 1,
+        "materials": [
+          "ground"
+        ],
+        "modifiers": [
+          [
+            "trawa_niska_zroznicowana_systemcz",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "trawa_niska_zielona_systemcz",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "trawa_niska_mloda_systemcz",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "trawa_niska_stara_systemcz",
+            "PARTICLE_SYSTEM"
+          ]
+        ],
+        "particles": [
+          {
+            "name": "singlstrand_grass_different",
+            "object": null,
+            "count": 850
+          },
+          {
+            "name": "singlstrand_grass_green",
+            "object": null,
+            "count": 850
+          },
+          {
+            "name": "singlstrand_grass_young",
+            "object": null,
+            "count": 1600
+          },
+          {
+            "name": "singlstrand_grass_old",
+            "object": null,
+            "count": 850
+          }
+        ]
+      },
+      {
+        "name": "grass_system_lowpoly",
+        "type": "MESH",
+        "dimensions": [
+          8.0,
+          8.0,
+          0.0
+        ],
+        "location": [
+          27.467369079589844,
+          -1.2637815475463867,
+          0.0
+        ],
+        "vertices": 25,
+        "polygons": 16,
+        "materials": [
+          "ground"
+        ],
+        "modifiers": [
+          [
+            "Displace",
+            "DISPLACE"
+          ],
+          [
+            "ParticleSystem 1",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "ParticleSystem 2",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "ParticleSystem 3",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "ParticleSystem 4",
+            "PARTICLE_SYSTEM"
+          ]
+        ],
+        "particles": [
+          {
+            "name": "grass_alltog",
+            "object": "grass__old_lo",
+            "count": 400
+          },
+          {
+            "name": "grass_old",
+            "object": "grass__old_lo",
+            "count": 400
+          },
+          {
+            "name": "grass_young",
+            "object": "grass__old_lo",
+            "count": 400
+          },
+          {
+            "name": "grass_mix",
+            "object": "grass_mix_lo",
+            "count": 800
+          }
+        ]
+      },
+      {
+        "name": "grass_system_lowpoly.001",
+        "type": "MESH",
+        "dimensions": [
+          8.0,
+          8.0,
+          0.716899037361145
+        ],
+        "location": [
+          35.467369079589844,
+          -1.2637815475463867,
+          0.0
+        ],
+        "vertices": 25,
+        "polygons": 16,
+        "materials": [
+          "ground"
+        ],
+        "modifiers": [
+          [
+            "Displace",
+            "DISPLACE"
+          ],
+          [
+            "ParticleSystem 1",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "ParticleSystem 2",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "ParticleSystem 3",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "ParticleSystem 4",
+            "PARTICLE_SYSTEM"
+          ]
+        ],
+        "particles": [
+          {
+            "name": "grass_alltog",
+            "object": "grass__old_lo",
+            "count": 400
+          },
+          {
+            "name": "grass_old",
+            "object": "grass__old_lo",
+            "count": 400
+          },
+          {
+            "name": "grass_young",
+            "object": "grass__old_lo",
+            "count": 400
+          },
+          {
+            "name": "grass_mix",
+            "object": "grass_mix_lo",
+            "count": 800
+          }
+        ]
+      },
+      {
+        "name": "grass_young",
+        "type": "MESH",
+        "dimensions": [
+          0.22504694759845734,
+          0.8838831782341003,
+          0.8838832974433899
+        ],
+        "location": [
+          7.8175458908081055,
+          -2.5563855171203613,
+          -7.102589449914376e-08
+        ],
+        "vertices": 6,
+        "polygons": 2,
+        "materials": [
+          "M_grass_leaves_young"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Lamp",
+        "type": "LIGHT",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          2.923081398010254,
+          -3.2880399227142334,
+          6.8030171394348145
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "leaves.003",
+        "type": "MESH",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [
+          "M_treeleaves1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "leaves_birch",
+        "type": "MESH",
+        "dimensions": [
+          0.9762468934059143,
+          0.9762468338012695,
+          2.9481836349987134e-07
+        ],
+        "location": [
+          2.292078733444214,
+          -2.4397196769714355,
+          -5.549320768530319e-14
+        ],
+        "vertices": 4,
+        "polygons": 1,
+        "materials": [
+          "M_treeleaves2_birchtree.002"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "leaves_birch.002",
+        "type": "MESH",
+        "dimensions": [
+          0.9762468934059143,
+          0.9762469530105591,
+          2.9481836349987134e-07
+        ],
+        "location": [
+          5.327956676483154,
+          -2.7245876789093018,
+          -5.549320768530319e-14
+        ],
+        "vertices": 4,
+        "polygons": 1,
+        "materials": [
+          "M_treeleaves2_birchtree"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "leaves_birch.003",
+        "type": "MESH",
+        "dimensions": [
+          0.9762468934059143,
+          0.9762470722198486,
+          2.9481836349987134e-07
+        ],
+        "location": [
+          6.7283477783203125,
+          -5.368758201599121,
+          5.610521824905845e-08
+        ],
+        "vertices": 4,
+        "polygons": 1,
+        "materials": [
+          "M_treeleaves2_birchtree_hi"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "oaktree1",
+        "type": "MESH",
+        "dimensions": [
+          10.629964828491211,
+          11.029191017150879,
+          10.318925857543945
+        ],
+        "location": [
+          19.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 23952,
+        "polygons": 14540,
+        "materials": [
+          "M_bark1",
+          "M_treebranches_birchtree",
+          "M_treeleaves1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "oaktree2",
+        "type": "MESH",
+        "dimensions": [
+          8.75007152557373,
+          8.446706771850586,
+          8.667893409729004
+        ],
+        "location": [
+          21.56452178955078,
+          -2.5625498294830322,
+          7.875621795654297
+        ],
+        "vertices": 22101,
+        "polygons": 13544,
+        "materials": [
+          "M_treebranches_birchtree",
+          "M_bark1",
+          "M_treeleaves1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "oaktree3",
+        "type": "MESH",
+        "dimensions": [
+          10.662120819091797,
+          11.192680358886719,
+          11.270968437194824
+        ],
+        "location": [
+          39.0,
+          0.0,
+          1.0843145847320557
+        ],
+        "vertices": 57829,
+        "polygons": 35893,
+        "materials": [
+          "M_bark1",
+          "M_treebranches_birchtree",
+          "M_treeleaves1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "strand1",
+        "type": "MESH",
+        "dimensions": [
+          0.16616258025169373,
+          0.04414641857147217,
+          0.2713945508003235
+        ],
+        "location": [
+          1.4254446029663086,
+          -0.9025821685791016,
+          -0.03903297707438469
+        ],
+        "vertices": 29,
+        "polygons": 16,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand1.001",
+        "type": "MESH",
+        "dimensions": [
+          0.0367886908352375,
+          0.13846874237060547,
+          0.22616209089756012
+        ],
+        "location": [
+          2.0632691383361816,
+          -0.9002272486686707,
+          -0.041586898267269135
+        ],
+        "vertices": 29,
+        "polygons": 16,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand1.002",
+        "type": "MESH",
+        "dimensions": [
+          0.07791087031364441,
+          0.04414642974734306,
+          0.30052196979522705
+        ],
+        "location": [
+          2.590973138809204,
+          -0.9250063300132751,
+          -0.029914919286966324
+        ],
+        "vertices": 29,
+        "polygons": 16,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand1.003",
+        "type": "MESH",
+        "dimensions": [
+          0.16616258025169373,
+          0.04414641857147217,
+          0.2713945508003235
+        ],
+        "location": [
+          3.1078174114227295,
+          -0.8908075094223022,
+          -0.03903296962380409
+        ],
+        "vertices": 29,
+        "polygons": 16,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand2",
+        "type": "MESH",
+        "dimensions": [
+          0.051851801574230194,
+          0.054187532514333725,
+          0.28930261731147766
+        ],
+        "location": [
+          1.4268426895141602,
+          -0.8744659423828125,
+          -0.0403013601899147
+        ],
+        "vertices": 18,
+        "polygons": 10,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand2.001",
+        "type": "MESH",
+        "dimensions": [
+          0.05418756231665611,
+          0.0518517829477787,
+          0.28930261731147766
+        ],
+        "location": [
+          2.064667224884033,
+          -0.8721110224723816,
+          -0.04285528138279915
+        ],
+        "vertices": 18,
+        "polygons": 10,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand2.002",
+        "type": "MESH",
+        "dimensions": [
+          0.051851801574230194,
+          0.054187532514333725,
+          0.28930261731147766
+        ],
+        "location": [
+          2.591127872467041,
+          -0.8970734477043152,
+          -0.040301356464624405
+        ],
+        "vertices": 18,
+        "polygons": 10,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3",
+        "type": "MESH",
+        "dimensions": [
+          0.15878280997276306,
+          0.04456016421318054,
+          0.21919189393520355
+        ],
+        "location": [
+          1.4269590377807617,
+          -0.8516292572021484,
+          -0.04344657436013222
+        ],
+        "vertices": 29,
+        "polygons": 16,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3.001",
+        "type": "MESH",
+        "dimensions": [
+          0.3814060688018799,
+          0.42878860235214233,
+          0.29209449887275696
+        ],
+        "location": [
+          2.064385414123535,
+          -1.1504777669906616,
+          -0.04273897036910057
+        ],
+        "vertices": 408,
+        "polygons": 223,
+        "materials": [
+          "M_grass_leaves",
+          "M_grass_strand"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3.002",
+        "type": "MESH",
+        "dimensions": [
+          0.3785685896873474,
+          0.44868195056915283,
+          0.34987592697143555
+        ],
+        "location": [
+          1.426560878753662,
+          -0.9806804656982422,
+          -0.04018500819802284
+        ],
+        "vertices": 216,
+        "polygons": 121,
+        "materials": [
+          "M_grass_leaves",
+          "M_grass_strand"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3.003",
+        "type": "MESH",
+        "dimensions": [
+          0.5145463943481445,
+          0.45768728852272034,
+          0.35051342844963074
+        ],
+        "location": [
+          1.426560878753662,
+          -1.1528327465057373,
+          -0.04018500819802284
+        ],
+        "vertices": 408,
+        "polygons": 223,
+        "materials": [
+          "M_grass_leaves_old_lo",
+          "M_grass_strand"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3.004",
+        "type": "MESH",
+        "dimensions": [
+          0.3739016056060791,
+          0.3154737651348114,
+          0.2915632724761963
+        ],
+        "location": [
+          2.064385414123535,
+          -0.9783255457878113,
+          -0.04273894801735878
+        ],
+        "vertices": 216,
+        "polygons": 121,
+        "materials": [
+          "M_grass_leaves",
+          "M_grass_strand"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3.005",
+        "type": "MESH",
+        "dimensions": [
+          0.03713345527648926,
+          0.13231897354125977,
+          0.18265987932682037
+        ],
+        "location": [
+          2.067812442779541,
+          -0.8492743372917175,
+          -0.04273892939090729
+        ],
+        "vertices": 29,
+        "polygons": 16,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3.006",
+        "type": "MESH",
+        "dimensions": [
+          0.05331091582775116,
+          0.04456019774079323,
+          0.25978025794029236
+        ],
+        "location": [
+          2.5910589694976807,
+          -0.8739087581634521,
+          -0.024284247308969498
+        ],
+        "vertices": 29,
+        "polygons": 16,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3.007",
+        "type": "MESH",
+        "dimensions": [
+          0.5651593208312988,
+          0.502707302570343,
+          0.9491016864776611
+        ],
+        "location": [
+          3.108933687210083,
+          -1.141058087348938,
+          -0.040185000747442245
+        ],
+        "vertices": 444,
+        "polygons": 245,
+        "materials": [
+          "M_grass_leaves_yellow",
+          "M_grass_strand_bright",
+          "M_grass_strand_bright2"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3.008",
+        "type": "MESH",
+        "dimensions": [
+          0.3785686790943146,
+          0.44868203997612,
+          0.919502317905426
+        ],
+        "location": [
+          3.108933687210083,
+          -0.9689058065414429,
+          -0.040185000747442245
+        ],
+        "vertices": 252,
+        "polygons": 143,
+        "materials": [
+          "M_grass_leaves_yellow",
+          "M_grass_strand2",
+          "M_grass_strand_bright2",
+          "M_grass_strand_bright"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3.009",
+        "type": "MESH",
+        "dimensions": [
+          0.15878280997276306,
+          0.04456016421318054,
+          0.21919189393520355
+        ],
+        "location": [
+          3.1093318462371826,
+          -0.8398545980453491,
+          -0.04344656690955162
+        ],
+        "vertices": 29,
+        "polygons": 16,
+        "materials": [
+          "M_grass_leaves"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3.010",
+        "type": "MESH",
+        "dimensions": [
+          0.5651593208312988,
+          0.502707302570343,
+          0.48345088958740234
+        ],
+        "location": [
+          3.110384464263916,
+          -1.3877010345458984,
+          -0.040185000747442245
+        ],
+        "vertices": 408,
+        "polygons": 223,
+        "materials": [
+          "M_grass_leaves",
+          "M_grass_strand"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand3.011",
+        "type": "MESH",
+        "dimensions": [
+          0.3785686790943146,
+          0.44868203997612,
+          0.4563865065574646
+        ],
+        "location": [
+          3.108933687210083,
+          -1.703650712966919,
+          -0.040185000747442245
+        ],
+        "vertices": 216,
+        "polygons": 121,
+        "materials": [
+          "M_grass_leaves",
+          "M_grass_strand"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand_big",
+        "type": "MESH",
+        "dimensions": [
+          0.09299040585756302,
+          0.09411030262708664,
+          0.28867343068122864
+        ],
+        "location": [
+          1.4291372299194336,
+          -0.7550296783447266,
+          -0.03777029365301132
+        ],
+        "vertices": 64,
+        "polygons": 37,
+        "materials": [
+          "M_grass_strand2",
+          "M_grass_leaves"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "strand_big.001",
+        "type": "MESH",
+        "dimensions": [
+          0.09299040585756302,
+          0.09411030262708664,
+          0.28867343068122864
+        ],
+        "location": [
+          3.1115100383758545,
+          -0.7432550191879272,
+          -0.037770286202430725
+        ],
+        "vertices": 64,
+        "polygons": 37,
+        "materials": [
+          "M_grass_strand2",
+          "M_grass_leaves"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "strand_big2",
+        "type": "MESH",
+        "dimensions": [
+          0.1129409447312355,
+          0.1342668980360031,
+          0.41914451122283936
+        ],
+        "location": [
+          1.4291372299194336,
+          -0.6707572937011719,
+          -0.03777027875185013
+        ],
+        "vertices": 64,
+        "polygons": 37,
+        "materials": [
+          "M_trawa_srodki_zolte",
+          "M_grass_leaves_yellow"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "strand_big2.001",
+        "type": "MESH",
+        "dimensions": [
+          0.1129409447312355,
+          0.1342668980360031,
+          0.41914451122283936
+        ],
+        "location": [
+          3.1115100383758545,
+          -0.6589826345443726,
+          -0.03777027130126953
+        ],
+        "vertices": 64,
+        "polygons": 37,
+        "materials": [
+          "M_trawa_srodki_zolte",
+          "M_grass_leaves_yellow"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "strand_mid",
+        "type": "MESH",
+        "dimensions": [
+          0.07765144854784012,
+          0.01724526844918728,
+          0.28914034366607666
+        ],
+        "location": [
+          1.4293832778930664,
+          -0.8218212127685547,
+          -0.03832915425300598
+        ],
+        "vertices": 38,
+        "polygons": 25,
+        "materials": [
+          "M_grass_leaves",
+          "M_grass_strand"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand_mid.001",
+        "type": "MESH",
+        "dimensions": [
+          0.017245285212993622,
+          0.07765145599842072,
+          0.28914034366607666
+        ],
+        "location": [
+          2.0672078132629395,
+          -0.8194662928581238,
+          -0.04088307544589043
+        ],
+        "vertices": 38,
+        "polygons": 25,
+        "materials": [
+          "M_grass_leaves",
+          "M_grass_strand"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand_mid.002",
+        "type": "MESH",
+        "dimensions": [
+          0.07765144854784012,
+          0.01724526844918728,
+          0.28914034366607666
+        ],
+        "location": [
+          3.1117560863494873,
+          -0.8100465536117554,
+          -0.038329146802425385
+        ],
+        "vertices": 38,
+        "polygons": 25,
+        "materials": [
+          "M_grass_leaves",
+          "M_grass_strand"
+        ],
+        "modifiers": [
+          [
+            "EdgeSplit",
+            "EDGE_SPLIT"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "strand_singl",
+        "type": "MESH",
+        "dimensions": [
+          0.012975666671991348,
+          0.043053243309259415,
+          0.5855522751808167
+        ],
+        "location": [
+          1.4291372299194336,
+          -0.6155490875244141,
+          -0.03777027130126953
+        ],
+        "vertices": 24,
+        "polygons": 19,
+        "materials": [
+          "M_grass_strand_bright"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "strand_singl.001",
+        "type": "MESH",
+        "dimensions": [
+          0.012975621968507767,
+          0.04305320978164673,
+          0.8141047954559326
+        ],
+        "location": [
+          3.1115100383758545,
+          -0.6037744283676147,
+          -0.037770263850688934
+        ],
+        "vertices": 24,
+        "polygons": 19,
+        "materials": [
+          "M_grass_strand_bright"
+        ],
+        "modifiers": [],
+        "particles": []
+      }
+    ],
+    "images": [
+      {
+        "name": "birch tree bark.png",
+        "size": [
+          1400,
+          1400
+        ],
+        "packed": true,
+        "path": "//textures\\birch tree bark.png"
+      },
+      {
+        "name": "birch-tree-bark1.jpg",
+        "size": [
+          1536,
+          2048
+        ],
+        "packed": true,
+        "path": "//textures\\birch-tree-bark1.jpg"
+      },
+      {
+        "name": "birch-tree-bark2.jpg",
+        "size": [
+          3008,
+          2000
+        ],
+        "packed": true,
+        "path": "//textures\\birch-tree-bark2.jpg"
+      },
+      {
+        "name": "Branches1.png",
+        "size": [
+          1400,
+          1524
+        ],
+        "packed": true,
+        "path": "//textures\\Branches1.png"
+      },
+      {
+        "name": "Branches1.png.001",
+        "size": [
+          1400,
+          1524
+        ],
+        "packed": true,
+        "path": "//textures\\Branches1.png"
+      },
+      {
+        "name": "Branches1.png.002",
+        "size": [
+          1400,
+          1524
+        ],
+        "packed": true,
+        "path": "//textures\\Branches1.png"
+      },
+      {
+        "name": "Branches1a.png",
+        "size": [
+          1400,
+          1524
+        ],
+        "packed": true,
+        "path": "//textures\\Branches1a.png"
+      },
+      {
+        "name": "Branches_MAPLE.png",
+        "size": [
+          1600,
+          778
+        ],
+        "packed": true,
+        "path": "//textures\\Branches_MAPLE.png"
+      },
+      {
+        "name": "Branches_single.png",
+        "size": [
+          548,
+          907
+        ],
+        "packed": true,
+        "path": "//textures\\Branches_single.png"
+      },
+      {
+        "name": "episcura_textures_wood_bark_6210_l.jpg",
+        "size": [
+          3000,
+          2000
+        ],
+        "packed": true,
+        "path": "//textures\\episcura_textures_wood_bark_6210_l.jpg"
+      },
+      {
+        "name": "episcura_textures_wood_bark_6210_normal.jpg",
+        "size": [
+          3000,
+          2000
+        ],
+        "packed": true,
+        "path": "//textures\\episcura_textures_wood_bark_6210_normal.jpg"
+      },
+      {
+        "name": "grass_lo_green.png",
+        "size": [
+          1279,
+          639
+        ],
+        "packed": true,
+        "path": "//textures\\grass_lo_green.png"
+      },
+      {
+        "name": "grass_lo_mix.png",
+        "size": [
+          1551,
+          1044
+        ],
+        "packed": true,
+        "path": "//textures\\grass_lo_mix.png"
+      },
+      {
+        "name": "grass_lo_old.png",
+        "size": [
+          1823,
+          1720
+        ],
+        "packed": true,
+        "path": "//textures\\grass_lo_old.png"
+      },
+      {
+        "name": "grass_lo_young.png",
+        "size": [
+          1042,
+          722
+        ],
+        "packed": true,
+        "path": "//textures\\grass_lo_young.png"
+      },
+      {
+        "name": "grass_strand.png.001",
+        "size": [
+          130,
+          1122
+        ],
+        "packed": true,
+        "path": "//textures\\grass_strand.png"
+      },
+      {
+        "name": "images \u2014 kopia.jpg",
+        "size": [
+          159,
+          555
+        ],
+        "packed": true,
+        "path": "//textures\\images \u2014 kopia.jpg"
+      },
+      {
+        "name": "images.jpg",
+        "size": [
+          159,
+          555
+        ],
+        "packed": true,
+        "path": "//textures\\images.jpg"
+      },
+      {
+        "name": "noise.jpg",
+        "size": [
+          1024,
+          1024
+        ],
+        "packed": true,
+        "path": "//textures\\noise.jpg"
+      },
+      {
+        "name": "Render Result",
+        "size": [
+          0,
+          0
+        ],
+        "packed": false,
+        "path": ""
+      },
+      {
+        "name": "Warehouse-with-lights.jpg",
+        "size": [
+          2048,
+          1024
+        ],
+        "packed": true,
+        "path": "//textures\\Warehouse-with-lights.jpg"
+      }
+    ]
+  },
+  {
+    "file": "native\\Unreal\\Wildline\\ArtSource\\Forest\\Ferns\\BSwap_FernModels_01.blend",
+    "unit": 1.0,
+    "objects": [
+      {
+        "name": "Camera",
+        "type": "CAMERA",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          1.8349021673202515,
+          -3.3546478748321533,
+          1.924491047859192
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Fern_01",
+        "type": "MESH",
+        "dimensions": [
+          1.2950572967529297,
+          1.0394980907440186,
+          0.9300327301025391
+        ],
+        "location": [
+          6.984919309616089e-10,
+          0.0,
+          2.9103830456733704e-11
+        ],
+        "vertices": 181,
+        "polygons": 168,
+        "materials": [
+          "Mat_Fern_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Fern_01_LoD",
+        "type": "MESH",
+        "dimensions": [
+          1.2950572967529297,
+          1.0394980907440186,
+          0.9300327897071838
+        ],
+        "location": [
+          0.0,
+          -2.220446049250313e-16,
+          0.0
+        ],
+        "vertices": 84,
+        "polygons": 60,
+        "materials": [
+          "Mat_Fern_01",
+          "Mat_Fern_02"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Fern_02",
+        "type": "MESH",
+        "dimensions": [
+          1.914515495300293,
+          2.0360162258148193,
+          0.5430826544761658
+        ],
+        "location": [
+          -0.009236454963684082,
+          0.002311205491423607,
+          -0.009031356312334538
+        ],
+        "vertices": 200,
+        "polygons": 187,
+        "materials": [
+          "Mat_Fern_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Fern_02_LoD",
+        "type": "MESH",
+        "dimensions": [
+          1.914515495300293,
+          2.0360162258148193,
+          0.5430827736854553
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 121,
+        "polygons": 78,
+        "materials": [
+          "Mat_Fern_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Fern_03",
+        "type": "MESH",
+        "dimensions": [
+          1.4334807395935059,
+          1.8455018997192383,
+          0.6123854517936707
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 154,
+        "polygons": 110,
+        "materials": [
+          "Mat_Fern_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Fern_03_LoD",
+        "type": "MESH",
+        "dimensions": [
+          1.433480978012085,
+          1.8455018997192383,
+          0.6123854517936707
+        ],
+        "location": [
+          0.0,
+          0.0,
+          4.656612873077393e-10
+        ],
+        "vertices": 97,
+        "polygons": 88,
+        "materials": [
+          "Mat_Fern_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Fern_04",
+        "type": "MESH",
+        "dimensions": [
+          1.926142692565918,
+          1.4853242635726929,
+          0.5292264819145203
+        ],
+        "location": [
+          -1.4901161193847656e-08,
+          5.587935447692871e-09,
+          1.862645149230957e-09
+        ],
+        "vertices": 178,
+        "polygons": 128,
+        "materials": [
+          "Mat_Fern_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Fern_04_LoD",
+        "type": "MESH",
+        "dimensions": [
+          1.926142692565918,
+          1.4853242635726929,
+          0.5292264819145203
+        ],
+        "location": [
+          0.0,
+          0.0,
+          1.862645149230957e-09
+        ],
+        "vertices": 106,
+        "polygons": 100,
+        "materials": [
+          "Mat_Fern_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Hemi",
+        "type": "LIGHT",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          0.0,
+          0.0,
+          4.0
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Sun",
+        "type": "LIGHT",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      }
+    ],
+    "images": [
+      {
+        "name": "Nature_Fern_01_DiffuseMask.tga",
+        "size": [
+          512,
+          1024
+        ],
+        "packed": true,
+        "path": "D:\\Olli\\Eigene Bilder\\CC0 Textures\\Nature_Fern_01_DiffuseMask.tga"
+      },
+      {
+        "name": "Nature_Fern_02_DiffuseMask.tga",
+        "size": [
+          512,
+          1024
+        ],
+        "packed": true,
+        "path": "D:\\Olli\\Eigene Bilder\\CC0 Textures\\Nature_Fern_02_DiffuseMask.tga"
+      }
+    ]
+  },
+  {
+    "file": "native\\Unreal\\Wildline\\ArtSource\\Forest\\GrassField\\Realistic Grass Field.blend",
+    "unit": 1.0,
+    "objects": [
+      {
+        "name": "Camera",
+        "type": "CAMERA",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          0.0,
+          -9.63412094116211,
+          0.7449285984039307
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "clovers_1",
+        "type": "MESH",
+        "dimensions": [
+          0.001549435779452324,
+          0.0015621930360794067,
+          0.002557535422965884
+        ],
+        "location": [
+          -0.00023998980759643018,
+          -0.010974324308335781,
+          0.0
+        ],
+        "vertices": 27,
+        "polygons": 15,
+        "materials": [
+          "grass"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "clovers_2",
+        "type": "MESH",
+        "dimensions": [
+          0.006168050691485405,
+          0.0033895918168127537,
+          0.0035405298694968224
+        ],
+        "location": [
+          -0.00023998980759643018,
+          0.00012143827916588634,
+          0.0
+        ],
+        "vertices": 87,
+        "polygons": 47,
+        "materials": [
+          "grass"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "clovers_3",
+        "type": "MESH",
+        "dimensions": [
+          0.0037586926482617855,
+          0.004405368585139513,
+          0.0031551504507660866
+        ],
+        "location": [
+          -0.00023998980759643018,
+          0.01166771911084652,
+          0.0
+        ],
+        "vertices": 108,
+        "polygons": 60,
+        "materials": [
+          "grass"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "clovers_4",
+        "type": "MESH",
+        "dimensions": [
+          0.002021670574322343,
+          0.0023522302508354187,
+          0.0026161286514252424
+        ],
+        "location": [
+          -0.00023998980759643018,
+          0.027468862012028694,
+          0.0
+        ],
+        "vertices": 54,
+        "polygons": 30,
+        "materials": [
+          "grass"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "clovers_5",
+        "type": "MESH",
+        "dimensions": [
+          0.003916670102626085,
+          0.0040464093908667564,
+          0.002242728602141142
+        ],
+        "location": [
+          -0.00023998980759643018,
+          0.04206351190805435,
+          0.0
+        ],
+        "vertices": 243,
+        "polygons": 135,
+        "materials": [
+          "grass"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "clovers_6",
+        "type": "MESH",
+        "dimensions": [
+          0.0030055176466703415,
+          0.002384523395448923,
+          0.0015109061496332288
+        ],
+        "location": [
+          -0.00023998980759643018,
+          0.06321202963590622,
+          0.0
+        ],
+        "vertices": 81,
+        "polygons": 45,
+        "materials": [
+          "grass"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "cutout",
+        "type": "MESH",
+        "dimensions": [
+          0.4603863060474396,
+          0.4606926739215851,
+          0.0
+        ],
+        "location": [
+          18.686800003051758,
+          -17.0404052734375,
+          3.051093578338623
+        ],
+        "vertices": 9345,
+        "polygons": 7778,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "dandelion_1",
+        "type": "MESH",
+        "dimensions": [
+          0.00392658356577158,
+          0.00455460324883461,
+          0.023734964430332184
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 44,
+        "polygons": 46,
+        "materials": [
+          "grass.002",
+          "daisy"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "dandelion_2",
+        "type": "MESH",
+        "dimensions": [
+          0.007217437960207462,
+          0.005325682461261749,
+          0.02324194461107254
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 44,
+        "polygons": 46,
+        "materials": [
+          "grass.002",
+          "daisy"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "dandelion_3",
+        "type": "MESH",
+        "dimensions": [
+          0.0037544837687164545,
+          0.0032723185140639544,
+          0.013761768117547035
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 44,
+        "polygons": 46,
+        "materials": [
+          "grass.002",
+          "daisy"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "dandelion_4",
+        "type": "MESH",
+        "dimensions": [
+          0.003504157532006502,
+          0.003895638044923544,
+          0.016192864626646042
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 44,
+        "polygons": 46,
+        "materials": [
+          "grass.002",
+          "daisy"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "dandelion_5",
+        "type": "MESH",
+        "dimensions": [
+          0.01276436448097229,
+          0.006488074082881212,
+          0.02324194461107254
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 88,
+        "polygons": 92,
+        "materials": [
+          "grass.002",
+          "daisy"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_1",
+        "type": "MESH",
+        "dimensions": [
+          0.011292584240436554,
+          0.010202604345977306,
+          0.006789005361497402
+        ],
+        "location": [
+          -0.08518750965595245,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 704,
+        "polygons": 264,
+        "materials": [
+          "grass"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_10",
+        "type": "MESH",
+        "dimensions": [
+          0.0033385595306754112,
+          0.0034481133334338665,
+          0.0035006734542548656
+        ],
+        "location": [
+          -0.2791115641593933,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 3356,
+        "polygons": 1332,
+        "materials": [
+          "grass.007"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_10.001",
+        "type": "MESH",
+        "dimensions": [
+          0.0033385595306754112,
+          0.0034481133334338665,
+          0.0035006734542548656
+        ],
+        "location": [
+          -0.2791115641593933,
+          -0.033445000648498535,
+          0.0
+        ],
+        "vertices": 3356,
+        "polygons": 1332,
+        "materials": [
+          "dead_grass_2"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_11",
+        "type": "MESH",
+        "dimensions": [
+          0.010127835907042027,
+          0.008461377583444118,
+          0.008508744649589062
+        ],
+        "location": [
+          -0.2970094382762909,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 928,
+        "polygons": 348,
+        "materials": [
+          "grass.006"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_11.001",
+        "type": "MESH",
+        "dimensions": [
+          0.010127835907042027,
+          0.008461377583444118,
+          0.008508744649589062
+        ],
+        "location": [
+          -0.2970094382762909,
+          -0.033445000648498535,
+          0.0
+        ],
+        "vertices": 928,
+        "polygons": 348,
+        "materials": [
+          "dead_grass_3"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_12",
+        "type": "MESH",
+        "dimensions": [
+          0.01147875003516674,
+          0.013790609315037727,
+          0.009466656483709812
+        ],
+        "location": [
+          -0.31999921798706055,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 1024,
+        "polygons": 384,
+        "materials": [
+          "grass.005"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_12.001",
+        "type": "MESH",
+        "dimensions": [
+          0.01147875003516674,
+          0.013790609315037727,
+          0.009466656483709812
+        ],
+        "location": [
+          -0.31999921798706055,
+          -0.033445000648498535,
+          0.0
+        ],
+        "vertices": 1024,
+        "polygons": 384,
+        "materials": [
+          "dead_grass_4"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_13",
+        "type": "MESH",
+        "dimensions": [
+          0.005924670025706291,
+          0.005684607662260532,
+          0.002922759624198079
+        ],
+        "location": [
+          -0.3338316082954407,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 784,
+        "polygons": 294,
+        "materials": [
+          "grass.004"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_13.001",
+        "type": "MESH",
+        "dimensions": [
+          0.005924670025706291,
+          0.005684607662260532,
+          0.002922759624198079
+        ],
+        "location": [
+          -0.3338316082954407,
+          -0.033445000648498535,
+          0.0
+        ],
+        "vertices": 784,
+        "polygons": 294,
+        "materials": [
+          "dead_grass_5"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_14",
+        "type": "MESH",
+        "dimensions": [
+          0.01104344055056572,
+          0.01115245558321476,
+          0.0036845612339675426
+        ],
+        "location": [
+          -0.34521031379699707,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 608,
+        "polygons": 228,
+        "materials": [
+          "grass.003"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_14.001",
+        "type": "MESH",
+        "dimensions": [
+          0.01104344055056572,
+          0.01115245558321476,
+          0.0036845612339675426
+        ],
+        "location": [
+          -0.34521031379699707,
+          -0.033445000648498535,
+          0.0
+        ],
+        "vertices": 608,
+        "polygons": 228,
+        "materials": [
+          "dead_grass_6"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_15",
+        "type": "MESH",
+        "dimensions": [
+          0.0035751962568610907,
+          0.002840612083673477,
+          0.003409376833587885
+        ],
+        "location": [
+          -0.357978880405426,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 432,
+        "polygons": 162,
+        "materials": [
+          "grass.002"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_15.001",
+        "type": "MESH",
+        "dimensions": [
+          0.0035751962568610907,
+          0.002840612083673477,
+          0.003409376833587885
+        ],
+        "location": [
+          -0.357978880405426,
+          -0.033445000648498535,
+          0.0
+        ],
+        "vertices": 432,
+        "polygons": 162,
+        "materials": [
+          "dead_grass_7"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_16",
+        "type": "MESH",
+        "dimensions": [
+          0.0068589793518185616,
+          0.007526099681854248,
+          0.004597234074026346
+        ],
+        "location": [
+          -0.36646807193756104,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 1768,
+        "polygons": 663,
+        "materials": [
+          "grass.001"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_16.001",
+        "type": "MESH",
+        "dimensions": [
+          0.0068589793518185616,
+          0.007526099681854248,
+          0.004597234074026346
+        ],
+        "location": [
+          -0.36646807193756104,
+          -0.033445000648498535,
+          0.0
+        ],
+        "vertices": 1768,
+        "polygons": 663,
+        "materials": [
+          "dead_grass_8"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_2",
+        "type": "MESH",
+        "dimensions": [
+          0.0033385595306754112,
+          0.0034481133334338665,
+          0.0035006734542548656
+        ],
+        "location": [
+          -0.10135329514741898,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 3356,
+        "polygons": 1332,
+        "materials": [
+          "grass.001"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_3",
+        "type": "MESH",
+        "dimensions": [
+          0.008686978369951248,
+          0.008461377583444118,
+          0.008508744649589062
+        ],
+        "location": [
+          -0.11925116926431656,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 928,
+        "polygons": 348,
+        "materials": [
+          "grass.002"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_4",
+        "type": "MESH",
+        "dimensions": [
+          0.01147875003516674,
+          0.011096852831542492,
+          0.009477630257606506
+        ],
+        "location": [
+          -0.1422409564256668,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 1024,
+        "polygons": 384,
+        "materials": [
+          "grass.003"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_5",
+        "type": "MESH",
+        "dimensions": [
+          0.005924670025706291,
+          0.005684607662260532,
+          0.002922759624198079
+        ],
+        "location": [
+          -0.15607333183288574,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 784,
+        "polygons": 294,
+        "materials": [
+          "grass.004"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_6",
+        "type": "MESH",
+        "dimensions": [
+          0.011061789467930794,
+          0.011569298803806305,
+          0.0036845612339675426
+        ],
+        "location": [
+          -0.16745206713676453,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 992,
+        "polygons": 372,
+        "materials": [
+          "grass.005"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_7",
+        "type": "MESH",
+        "dimensions": [
+          0.003174862824380398,
+          0.0032022064551711082,
+          0.003637801157310605
+        ],
+        "location": [
+          -0.18022063374519348,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 512,
+        "polygons": 192,
+        "materials": [
+          "grass.006"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_8",
+        "type": "MESH",
+        "dimensions": [
+          0.010085267946124077,
+          0.011280780658125877,
+          0.004837005864828825
+        ],
+        "location": [
+          -0.1887098252773285,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 2432,
+        "polygons": 912,
+        "materials": [
+          "grass.007"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_9",
+        "type": "MESH",
+        "dimensions": [
+          0.017820727080106735,
+          0.01569257490336895,
+          0.006789005361497402
+        ],
+        "location": [
+          -0.2629457712173462,
+          -5.960464477539063e-08,
+          0.0
+        ],
+        "vertices": 704,
+        "polygons": 264,
+        "materials": [
+          "grass.006"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_9.001",
+        "type": "MESH",
+        "dimensions": [
+          0.017820727080106735,
+          0.01569257490336895,
+          0.006789005361497402
+        ],
+        "location": [
+          -0.2629457712173462,
+          -0.033445000648498535,
+          0.0
+        ],
+        "vertices": 704,
+        "polygons": 264,
+        "materials": [
+          "dead_grass_1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "ground",
+        "type": "MESH",
+        "dimensions": [
+          6.959050178527832,
+          12.467738151550293,
+          0.49039939045906067
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 12697,
+        "polygons": 12367,
+        "materials": [
+          "dirt"
+        ],
+        "modifiers": [
+          [
+            "Subsurf",
+            "SUBSURF"
+          ],
+          [
+            "Large Displace",
+            "DISPLACE"
+          ],
+          [
+            "Small Displace",
+            "DISPLACE"
+          ],
+          [
+            "grass",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "dandelions",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "rocks",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "clovers",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "dead grass",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "sunflowers",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "weeds",
+            "PARTICLE_SYSTEM"
+          ]
+        ],
+        "particles": [
+          {
+            "name": "grass",
+            "object": null,
+            "count": 2000
+          },
+          {
+            "name": "dandelions",
+            "object": null,
+            "count": 350
+          },
+          {
+            "name": "rocks",
+            "object": null,
+            "count": 2000
+          },
+          {
+            "name": "clovers",
+            "object": null,
+            "count": 1000
+          },
+          {
+            "name": "dead_grass",
+            "object": null,
+            "count": 2000
+          },
+          {
+            "name": "sunflower",
+            "object": null,
+            "count": 350
+          },
+          {
+            "name": "weeds",
+            "object": null,
+            "count": 125
+          }
+        ]
+      },
+      {
+        "name": "rock",
+        "type": "MESH",
+        "dimensions": [
+          0.0014949036994948983,
+          0.0015648991102352738,
+          0.0009587853564880788
+        ],
+        "location": [
+          0.07834994792938232,
+          4.469649138627574e-05,
+          0.0004672969807870686
+        ],
+        "vertices": 12,
+        "polygons": 9,
+        "materials": [
+          "rock"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "rock.001",
+        "type": "MESH",
+        "dimensions": [
+          0.001721414620988071,
+          0.0014755061129108071,
+          0.0006899154395796359
+        ],
+        "location": [
+          0.08945325762033463,
+          0.0,
+          0.0003328620223328471
+        ],
+        "vertices": 12,
+        "polygons": 9,
+        "materials": [
+          "rock.001"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "rock.002",
+        "type": "MESH",
+        "dimensions": [
+          0.0015046560438349843,
+          0.0013575764605775476,
+          0.00038465086254291236
+        ],
+        "location": [
+          0.10149426758289337,
+          1.906181023514364e-05,
+          0.0001773150870576501
+        ],
+        "vertices": 24,
+        "polygons": 18,
+        "materials": [
+          "rock.002"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "rock.003",
+        "type": "MESH",
+        "dimensions": [
+          0.0008097399258986115,
+          0.0009558265446685255,
+          0.0003817362303379923
+        ],
+        "location": [
+          0.10786065459251404,
+          0.0001804470957722515,
+          0.00017877240316011012
+        ],
+        "vertices": 18,
+        "polygons": 14,
+        "materials": [
+          "rock.003"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Spotlight",
+        "type": "LIGHT",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          19.76811981201172,
+          -17.85451889038086,
+          3.243448257446289
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "sunflower_1",
+        "type": "MESH",
+        "dimensions": [
+          0.006327359937131405,
+          0.006150722503662109,
+          0.013797498308122158
+        ],
+        "location": [
+          0.12876065075397491,
+          0.0,
+          0.0
+        ],
+        "vertices": 417,
+        "polygons": 184,
+        "materials": [
+          "grass.002",
+          "sunflower"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "sunflower_1.001",
+        "type": "MESH",
+        "dimensions": [
+          0.0071889073587954044,
+          0.006793483160436153,
+          0.015886342152953148
+        ],
+        "location": [
+          0.1397732049226761,
+          0.0,
+          0.0
+        ],
+        "vertices": 417,
+        "polygons": 184,
+        "materials": [
+          "grass.002",
+          "sunflower"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed",
+        "type": "MESH",
+        "dimensions": [
+          0.027510710060596466,
+          0.007821881212294102,
+          0.1883728951215744
+        ],
+        "location": [
+          0.15415218472480774,
+          0.0,
+          0.0
+        ],
+        "vertices": 372,
+        "polygons": 310,
+        "materials": [
+          "weeds_1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed.001",
+        "type": "MESH",
+        "dimensions": [
+          0.01749616675078869,
+          0.03685903549194336,
+          0.1495915949344635
+        ],
+        "location": [
+          0.1941821426153183,
+          0.0,
+          0.0
+        ],
+        "vertices": 330,
+        "polygons": 280,
+        "materials": [
+          "weeds_1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed.002",
+        "type": "MESH",
+        "dimensions": [
+          0.03275763988494873,
+          0.016823571175336838,
+          0.16846391558647156
+        ],
+        "location": [
+          0.22677510976791382,
+          0.0,
+          0.0
+        ],
+        "vertices": 322,
+        "polygons": 272,
+        "materials": [
+          "weeds_1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed.003",
+        "type": "MESH",
+        "dimensions": [
+          0.014727381058037281,
+          0.007182701025158167,
+          0.10752465575933456
+        ],
+        "location": [
+          0.2897714674472809,
+          0.0,
+          0.0
+        ],
+        "vertices": 42,
+        "polygons": 30,
+        "materials": [
+          "weeds_1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed.004",
+        "type": "MESH",
+        "dimensions": [
+          0.013364714570343494,
+          0.01563807763159275,
+          0.09666864573955536
+        ],
+        "location": [
+          0.3430045247077942,
+          0.0,
+          0.0
+        ],
+        "vertices": 42,
+        "polygons": 30,
+        "materials": [
+          "weeds_1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed.005",
+        "type": "MESH",
+        "dimensions": [
+          0.020152561366558075,
+          0.03610039874911308,
+          0.19821755588054657
+        ],
+        "location": [
+          0.39696210622787476,
+          0.0,
+          0.0
+        ],
+        "vertices": 408,
+        "polygons": 326,
+        "materials": [
+          "weeds_1"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed.006",
+        "type": "MESH",
+        "dimensions": [
+          0.03799804672598839,
+          0.015137353911995888,
+          0.1975509524345398
+        ],
+        "location": [
+          0.8002122640609741,
+          0.0,
+          0.0
+        ],
+        "vertices": 316,
+        "polygons": 258,
+        "materials": [
+          "weeds_2"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed.007",
+        "type": "MESH",
+        "dimensions": [
+          0.004976574797183275,
+          0.029072005301713943,
+          0.09380868822336197
+        ],
+        "location": [
+          0.7462546825408936,
+          0.0,
+          0.0
+        ],
+        "vertices": 42,
+        "polygons": 30,
+        "materials": [
+          "weeds_2"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed.008",
+        "type": "MESH",
+        "dimensions": [
+          0.01719827763736248,
+          0.016907505691051483,
+          0.10664878040552139
+        ],
+        "location": [
+          0.6930216550827026,
+          0.0,
+          0.0
+        ],
+        "vertices": 60,
+        "polygons": 38,
+        "materials": [
+          "weeds_2"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed.009",
+        "type": "MESH",
+        "dimensions": [
+          0.020996926352381706,
+          0.025089776143431664,
+          0.16918639838695526
+        ],
+        "location": [
+          0.6300252676010132,
+          0.0,
+          0.0
+        ],
+        "vertices": 340,
+        "polygons": 280,
+        "materials": [
+          "weeds_2"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed.010",
+        "type": "MESH",
+        "dimensions": [
+          0.019221611320972443,
+          0.037418656051158905,
+          0.18747663497924805
+        ],
+        "location": [
+          0.5974323153495789,
+          0.0,
+          0.0
+        ],
+        "vertices": 330,
+        "polygons": 280,
+        "materials": [
+          "weeds_2"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "weed.011",
+        "type": "MESH",
+        "dimensions": [
+          0.013424458913505077,
+          0.013871680945158005,
+          0.17364601790905
+        ],
+        "location": [
+          0.5574023723602295,
+          0.0,
+          0.0
+        ],
+        "vertices": 354,
+        "polygons": 302,
+        "materials": [
+          "weeds_2"
+        ],
+        "modifiers": [],
+        "particles": []
+      }
+    ],
+    "images": []
+  },
+  {
+    "file": "native\\Unreal\\Wildline\\ArtSource\\Forest\\Pine\\Kiefer_neu.blend",
+    "unit": 1.0,
+    "objects": [
+      {
+        "name": "Box",
+        "type": "MESH",
+        "dimensions": [
+          45.954891204833984,
+          48.00967025756836,
+          54.85038375854492
+        ],
+        "location": [
+          -0.542412281036377,
+          11.893774032592773,
+          0.0
+        ],
+        "vertices": 111,
+        "polygons": 91,
+        "materials": [
+          "Material.001"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Camera",
+        "type": "CAMERA",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          5.257656574249268,
+          -50.744659423828125,
+          8.380093574523926
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "leafs.001",
+        "type": "MESH",
+        "dimensions": [
+          20.965164184570312,
+          18.425941467285156,
+          25.53449249267578
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 600000,
+        "polygons": 200000,
+        "materials": [],
+        "modifiers": [
+          [
+            "leafs",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "ParticleSystem 2",
+            "PARTICLE_SYSTEM"
+          ],
+          [
+            "ParticleSystem 3",
+            "PARTICLE_SYSTEM"
+          ]
+        ],
+        "particles": [
+          {
+            "name": "kiefernadeln",
+            "object": null,
+            "count": 500000
+          },
+          {
+            "name": "kiefernadeln.001",
+            "object": null,
+            "count": 200000
+          },
+          {
+            "name": "Zapfen.001",
+            "object": null,
+            "count": 100
+          }
+        ]
+      },
+      {
+        "name": "Light",
+        "type": "LIGHT",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          4.076245307922363,
+          1.0054539442062378,
+          45.686119079589844
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Light.001",
+        "type": "LIGHT",
+        "dimensions": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "location": [
+          4.076245307922363,
+          1.0054539442062378,
+          45.686119079589844
+        ],
+        "vertices": 0,
+        "polygons": 0,
+        "materials": [],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Plane.000",
+        "type": "MESH",
+        "dimensions": [
+          0.09070111811161041,
+          0.2833649814128876,
+          2.378483533859253
+        ],
+        "location": [
+          33.26979446411133,
+          0.018927937373518944,
+          2.2875564098358154
+        ],
+        "vertices": 84,
+        "polygons": 80,
+        "materials": [
+          "nadel.000"
+        ],
+        "modifiers": [
+          [
+            "Solidify",
+            "SOLIDIFY"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "Plane.001",
+        "type": "MESH",
+        "dimensions": [
+          0.1129482090473175,
+          0.22838355600833893,
+          2.378385543823242
+        ],
+        "location": [
+          33.96284103393555,
+          0.008645182475447655,
+          1.586707592010498
+        ],
+        "vertices": 84,
+        "polygons": 80,
+        "materials": [
+          "nadel.001"
+        ],
+        "modifiers": [
+          [
+            "Solidify",
+            "SOLIDIFY"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "Plane.002",
+        "type": "MESH",
+        "dimensions": [
+          0.1402553766965866,
+          0.15578840672969818,
+          2.3784193992614746
+        ],
+        "location": [
+          32.493492126464844,
+          0.018927980214357376,
+          3.063856840133667
+        ],
+        "vertices": 84,
+        "polygons": 80,
+        "materials": [
+          "nadel.002"
+        ],
+        "modifiers": [
+          [
+            "Solidify",
+            "SOLIDIFY"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "tree.001",
+        "type": "MESH",
+        "dimensions": [
+          20.962860107421875,
+          18.416671752929688,
+          40.663490295410156
+        ],
+        "location": [
+          0.0,
+          0.0,
+          0.5992026329040527
+        ],
+        "vertices": 113573,
+        "polygons": 109250,
+        "materials": [
+          "Pine"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "Zapfen",
+        "type": "MESH",
+        "dimensions": [
+          1.8712849617004395,
+          2.8404552936553955,
+          1.8535642623901367
+        ],
+        "location": [
+          57.84660720825195,
+          -3.4892159419541713e-06,
+          0.12366374582052231
+        ],
+        "vertices": 1365,
+        "polygons": 803,
+        "materials": [
+          "Material.002"
+        ],
+        "modifiers": [
+          [
+            "Solidify",
+            "SOLIDIFY"
+          ],
+          [
+            "Subdivision",
+            "SUBSURF"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "Zapfen.001",
+        "type": "MESH",
+        "dimensions": [
+          1.3811200857162476,
+          2.241331100463867,
+          1.381200909614563
+        ],
+        "location": [
+          54.79646301269531,
+          1.5470454854948912e-06,
+          0.1428612619638443
+        ],
+        "vertices": 1365,
+        "polygons": 803,
+        "materials": [
+          "Material.002"
+        ],
+        "modifiers": [
+          [
+            "Solidify",
+            "SOLIDIFY"
+          ],
+          [
+            "Subdivision",
+            "SUBSURF"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "Zapfen.002",
+        "type": "MESH",
+        "dimensions": [
+          1.4636180400848389,
+          2.3785078525543213,
+          1.4584296941757202
+        ],
+        "location": [
+          51.991798400878906,
+          2.745097845036071e-06,
+          0.15785843133926392
+        ],
+        "vertices": 1365,
+        "polygons": 803,
+        "materials": [
+          "Material.002"
+        ],
+        "modifiers": [
+          [
+            "Solidify",
+            "SOLIDIFY"
+          ],
+          [
+            "Subdivision",
+            "SUBSURF"
+          ]
+        ],
+        "particles": []
+      }
+    ],
+    "images": [
+      {
+        "name": "Bark_09_3K_Height.png",
+        "size": [
+          1024,
+          3072
+        ],
+        "packed": true,
+        "path": "//textures\\Bark_09_3K_Height.png"
+      },
+      {
+        "name": "Bark_09_3K_Normal.png",
+        "size": [
+          1024,
+          3072
+        ],
+        "packed": true,
+        "path": "//textures\\Bark_09_3K_Normal.png"
+      },
+      {
+        "name": "Render Result",
+        "size": [
+          0,
+          0
+        ],
+        "packed": false,
+        "path": ""
+      },
+      {
+        "name": "TexturesCom_Leather_Italian_512_albedo.tif",
+        "size": [
+          512,
+          512
+        ],
+        "packed": true,
+        "path": "//textures\\TexturesCom_Leather_Italian_512_albedo.tif"
+      },
+      {
+        "name": "TexturesCom_Leather_Italian_512_roughness.tif",
+        "size": [
+          512,
+          512
+        ],
+        "packed": true,
+        "path": "//textures\\TexturesCom_Leather_Italian_512_roughness.tif"
+      },
+      {
+        "name": "TexturesCom_PineTreeBase_tiled_1K_albedo.tif",
+        "size": [
+          1024,
+          1024
+        ],
+        "packed": true,
+        "path": "//textures\\TexturesCom_PineTreeBase_tiled_1K_albedo.tif"
+      },
+      {
+        "name": "TexturesCom_PineTreeBase_tiled_1K_height.tif",
+        "size": [
+          1024,
+          1024
+        ],
+        "packed": true,
+        "path": "//textures\\TexturesCom_PineTreeBase_tiled_1K_height.tif"
+      },
+      {
+        "name": "TexturesCom_PineTreeBase_tiled_1K_normal.tif",
+        "size": [
+          1024,
+          1024
+        ],
+        "packed": true,
+        "path": "//textures\\TexturesCom_PineTreeBase_tiled_1K_normal.tif"
+      },
+      {
+        "name": "TexturesCom_PineTreeBase_tiled_1K_roughness.tif",
+        "size": [
+          1024,
+          1024
+        ],
+        "packed": true,
+        "path": "//textures\\TexturesCom_PineTreeBase_tiled_1K_roughness.tif"
+      }
+    ]
+  }
+]

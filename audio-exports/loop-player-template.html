@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Squirrel Scramble · Instrumental Loop</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;color:#f5f0dc;background:#101e1b}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 20% 0,#29453a 0,transparent 60%),#101e1b}.card{max-width:680px;width:100%;padding:44px 38px;background:linear-gradient(145deg,#1d3029e0,#152620);border:1px solid #59725c55;border-radius:28px;box-shadow:0 28px 80px #0005}.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:#d4b569}.badge{display:inline-flex;gap:8px;align-items:center;margin:20px 0 0;color:#c1d0b9;font-size:12px}.dot{height:6px;width:6px;background:#c3d77c;border-radius:50%}h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(38px,7vw,59px);line-height:1.05;margin:20px 0 16px}p{font-size:15px;color:#bdc7b8;line-height:1.6;margin:0}canvas{width:100%;height:90px;display:block;margin-top:28px}progress{width:100%;height:3px;appearance:none;border:0;display:block;background:#365046;border-radius:8px}progress::-webkit-progress-bar{background:#365046;border-radius:8px}progress::-webkit-progress-value{background:#d8bc71;border-radius:8px}.time{display:flex;justify-content:space-between;margin:10px 0 25px;color:#adc0b0;font-size:12px;font-variant-numeric:tabular-nums}.controls{display:flex;align-items:center;gap:12px}.controls button{font:inherit;border-radius:50px;border:1px solid #d8bc7133;padding:14px 22px;cursor:pointer}.primary{background:#dec17b;color:#1a271e;font-weight:650!important;flex:1}.secondary{background:transparent;color:#e6dec8}.primary:hover{background:#edcf89}button:disabled{opacity:.4;cursor:default}input{accent-color:#d8bc71;max-width:150px}.volume{display:flex;align-items:center;gap:12px;margin:24px 0;font-size:12px;color:#a9bba9}.status{min-height:24px;font-size:13px;color:#d1d9b9}.links{margin-top:28px;padding-top:22px;border-top:1px solid #59725c55;display:flex;gap:20px;flex-wrap:wrap}.links a{color:#d8bc71;text-decoration:none;font-size:13px}.links a:hover{text-decoration:underline}.note{margin-top:18px;font-size:12px;color:#8ea591}@media(max-width:450px){.card{padding:30px 22px}.controls button{padding:13px 17px}}
+</style></head><body><main class="card">
+<div class="eyebrow">A little woodland bluegrass</div>
+<h1>Squirrel<br>Scramble.</h1>
+<p>A polished instrumental section, made to keep the adventure moving.</p>
+<div class="badge"><span class="dot"></span>INSTRUMENTAL · REPEATS CONTINUOUSLY</div>
+<canvas id="wave" width="1100" height="140" aria-hidden="true"></canvas>
+<progress id="progress" value="0" max="1" aria-label="Position within loop"></progress>
+<div class="time"><span id="position">0:00</span><span>__DURATION__ seconds · 146 BPM</span></div>
+<div class="controls"><button class="primary" id="play">▶ Play loop</button><button class="secondary" id="stop" disabled>Stop</button></div>
+<label class="volume">Volume <input id="volume" aria-label="Volume" type="range" min="0" max="1" step="0.01" value="0.7"></label>
+<div class="status" id="status" role="status">Ready. Play once; it keeps going until you stop.</div>
+<nav class="links" aria-label="Downloads">
+<a download href="Squirrel%20Scramble%20-%20instrumental%20loop.wav">Loop WAV</a>
+<a download href="Squirrel%20Scramble%20-%20instrumental%20loop.ogg">Loop OGG</a>
+<a download href="Squirrel%20Scramble%20-%20instrumental%20loop.mp3">Loop MP3</a>
+<a download href="Squirrel%20Scramble%20-%20polished%20song.mp3">Full song MP3</a>
+</nav><p class="note">For game audio, use the WAV or OGG loop. The full song retains the opening vocals.</p>
+</main><script>
+const encoded='__AUDIO_BASE64__';
+const play=document.getElementById('play'),stop=document.getElementById('stop'),status=document.getElementById('status');
+const canvas=document.getElementById('wave'),draw=canvas.getContext('2d');
+let ctx,buffer,source,gain,playing=false,origin=0,stopped=0;
+function waveform(){const samples=buffer?.getChannelData(0);draw.clearRect(0,0,canvas.width,canvas.height);draw.fillStyle='#bdb179';const count=220;for(let i=0;i<count;i++){let peak=0;if(samples){const begin=Math.floor(i*samples.length/count),end=Math.floor((i+1)*samples.length/count);for(let j=begin;j<end;j+=8)peak=Math.max(peak,Math.abs(samples[j]));}else peak=.07+.1*Math.abs(Math.sin(i*.41));const h=Math.max(3,peak*180);draw.fillRect(i*5,70-h/2,2.5,h);}}
+async function prepare(){if(buffer)return;ctx=new AudioContext();gain=ctx.createGain();gain.gain.value=+document.getElementById('volume').value;gain.connect(ctx.destination);const data=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));buffer=await ctx.decodeAudioData(data.buffer);waveform();}
+play.onclick=async()=>{try{play.disabled=true;if(!buffer){status.textContent='Preparing the music…';await prepare();}if(playing){await ctx.suspend();playing=false;play.textContent='▶ Resume loop';status.textContent='Paused.';}else{await ctx.resume();if(!source){source=ctx.createBufferSource();source.buffer=buffer;source.loop=true;source.loopStart=0;source.loopEnd=buffer.duration;source.connect(gain);origin=ctx.currentTime;source.start();}playing=true;play.textContent='Ⅱ Pause loop';stop.disabled=false;status.textContent='Playing continuously · loop '+(Math.floor((ctx.currentTime-origin)/buffer.duration)+1);}}catch(e){status.textContent='Audio could not start. Please reopen this file in Chrome or Edge.';console.error(e);}finally{play.disabled=false;}};
+stop.onclick=()=>{if(source){source.stop();source.disconnect();source=null;}playing=false;play.textContent='▶ Play loop';stop.disabled=true;status.textContent='Stopped. Ready for another adventure.';document.getElementById('progress').value=0;document.getElementById('position').textContent='0:00';};
+document.getElementById('volume').oninput=e=>{if(gain)gain.gain.setTargetAtTime(+e.target.value,ctx.currentTime,.02);};
+function animate(){if(playing&&source){const elapsed=ctx.currentTime-origin,t=elapsed%buffer.duration;document.getElementById('progress').value=t/buffer.duration;document.getElementById('position').textContent='0:'+String(Math.floor(t)).padStart(2,'0');status.textContent='Playing continuously · loop '+(Math.floor(elapsed/buffer.duration)+1);}requestAnimationFrame(animate);}
+waveform();animate();
+</script></body></html>

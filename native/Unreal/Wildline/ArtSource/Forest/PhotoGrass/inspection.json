@@ -1,0 +1,2223 @@
+[
+  {
+    "file": "native\\Unreal\\Wildline\\ArtSource\\Forest\\PhotoGrass\\grass.blend",
+    "unit": 1.0,
+    "objects": [
+      {
+        "name": "grass_medium_01_geometry_nodes",
+        "type": "MESH",
+        "dimensions": [
+          1.2209316492080688,
+          1.2592098712921143,
+          1.1770583391189575
+        ],
+        "location": [
+          -3.5974087715148926,
+          0.06059861183166504,
+          0.0
+        ],
+        "vertices": 482,
+        "polygons": 512,
+        "materials": [
+          "grass_medium_01_sphere"
+        ],
+        "modifiers": [
+          [
+            "GeometryNodes",
+            "NODES"
+          ]
+        ],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_large_a_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.3170090317726135,
+          0.32655882835388184,
+          0.1466887891292572
+        ],
+        "location": [
+          -2.3999998569488525,
+          0.0,
+          0.0
+        ],
+        "vertices": 7044,
+        "polygons": 3277,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_large_a_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.3269655704498291,
+          0.3316594362258911,
+          0.14488962292671204
+        ],
+        "location": [
+          -2.3999998569488525,
+          0.0,
+          0.0
+        ],
+        "vertices": 2601,
+        "polygons": 1181,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_large_a_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.3269655704498291,
+          0.3269655704498291,
+          0.13528002798557281
+        ],
+        "location": [
+          -2.3999998569488525,
+          0.0,
+          0.0
+        ],
+        "vertices": 1193,
+        "polygons": 527,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_large_b_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.28409743309020996,
+          0.2757398784160614,
+          0.1692626178264618
+        ],
+        "location": [
+          -1.9999998807907104,
+          0.0,
+          0.0
+        ],
+        "vertices": 4823,
+        "polygons": 2399,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_large_b_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.2910386323928833,
+          0.2910386323928833,
+          0.16506877541542053
+        ],
+        "location": [
+          -2.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 2592,
+        "polygons": 1282,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_large_b_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.2910386323928833,
+          0.2910386323928833,
+          0.16506877541542053
+        ],
+        "location": [
+          -2.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 966,
+        "polygons": 474,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_large_c_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.27879106998443604,
+          0.25506988167762756,
+          0.14234741032123566
+        ],
+        "location": [
+          -1.5999997854232788,
+          0.0,
+          0.0
+        ],
+        "vertices": 6405,
+        "polygons": 3048,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_large_c_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.289859414100647,
+          0.289859414100647,
+          0.14030054211616516
+        ],
+        "location": [
+          -1.5999997854232788,
+          0.0,
+          0.0
+        ],
+        "vertices": 2596,
+        "polygons": 1205,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_large_c_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.289859414100647,
+          0.289859414100647,
+          0.13679076731204987
+        ],
+        "location": [
+          -1.5999997854232788,
+          0.0,
+          0.0
+        ],
+        "vertices": 1200,
+        "polygons": 539,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_mid_a_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.21561530232429504,
+          0.2213778793811798,
+          0.21774429082870483
+        ],
+        "location": [
+          -1.1999996900558472,
+          0.0,
+          0.0
+        ],
+        "vertices": 2593,
+        "polygons": 1148,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_mid_a_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.21897445619106293,
+          0.21614529192447662,
+          0.21774429082870483
+        ],
+        "location": [
+          -1.1999996900558472,
+          0.0,
+          0.0
+        ],
+        "vertices": 1493,
+        "polygons": 664,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_mid_a_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.20556426048278809,
+          0.21614529192447662,
+          0.19894452393054962
+        ],
+        "location": [
+          -1.1999996900558472,
+          0.0,
+          0.0
+        ],
+        "vertices": 754,
+        "polygons": 337,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_mid_b_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.18778881430625916,
+          0.20102860033512115,
+          0.17772157490253448
+        ],
+        "location": [
+          -0.7999995946884155,
+          0.0,
+          0.0
+        ],
+        "vertices": 1386,
+        "polygons": 637,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_mid_b_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.18778881430625916,
+          0.18286281824111938,
+          0.17772157490253448
+        ],
+        "location": [
+          -0.7999995946884155,
+          0.0,
+          0.0
+        ],
+        "vertices": 755,
+        "polygons": 342,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_mid_b_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.18778881430625916,
+          0.18229976296424866,
+          0.17772157490253448
+        ],
+        "location": [
+          -0.7999995946884155,
+          0.0,
+          0.0
+        ],
+        "vertices": 396,
+        "polygons": 177,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_mid_c_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.1923304796218872,
+          0.20285546779632568,
+          0.1446356624364853
+        ],
+        "location": [
+          -0.3999999463558197,
+          0.0,
+          0.0
+        ],
+        "vertices": 1580,
+        "polygons": 752,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_mid_c_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.1953992247581482,
+          0.20958372950553894,
+          0.13096381723880768
+        ],
+        "location": [
+          -0.3999999463558197,
+          0.0,
+          0.0
+        ],
+        "vertices": 737,
+        "polygons": 338,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_mid_c_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.1953992247581482,
+          0.20958372950553894,
+          0.13096381723880768
+        ],
+        "location": [
+          -0.3999999463558197,
+          0.0,
+          0.0
+        ],
+        "vertices": 412,
+        "polygons": 184,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_small_a_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.1848401129245758,
+          0.1623130440711975,
+          0.14042668044567108
+        ],
+        "location": [
+          1.4901161193847656e-07,
+          0.0,
+          0.0
+        ],
+        "vertices": 888,
+        "polygons": 433,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_small_a_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.1848401129245758,
+          0.1623130440711975,
+          0.14042668044567108
+        ],
+        "location": [
+          1.4901161193847656e-07,
+          0.0,
+          0.0
+        ],
+        "vertices": 716,
+        "polygons": 347,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_small_a_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.18488013744354248,
+          0.16204987466335297,
+          0.14042668044567108
+        ],
+        "location": [
+          1.4901161193847656e-07,
+          0.0,
+          0.0
+        ],
+        "vertices": 543,
+        "polygons": 268,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_small_b_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.16595670580863953,
+          0.18989211320877075,
+          0.09989527612924576
+        ],
+        "location": [
+          0.4000002443790436,
+          0.0,
+          0.0
+        ],
+        "vertices": 700,
+        "polygons": 338,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_small_b_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.16595670580863953,
+          0.18989211320877075,
+          0.09989527612924576
+        ],
+        "location": [
+          0.4000002443790436,
+          0.0,
+          0.0
+        ],
+        "vertices": 444,
+        "polygons": 211,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_small_b_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.1659780740737915,
+          0.18989211320877075,
+          0.09991812705993652
+        ],
+        "location": [
+          0.4000002443790436,
+          0.0,
+          0.0
+        ],
+        "vertices": 324,
+        "polygons": 151,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tall_a_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.16095641255378723,
+          0.15853148698806763,
+          0.3225463926792145
+        ],
+        "location": [
+          0.7999998331069946,
+          0.0,
+          0.0
+        ],
+        "vertices": 330,
+        "polygons": 147,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tall_a_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.16095641255378723,
+          0.15853148698806763,
+          0.3225463926792145
+        ],
+        "location": [
+          0.7999998331069946,
+          0.0,
+          0.0
+        ],
+        "vertices": 192,
+        "polygons": 82,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tall_a_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.1610656976699829,
+          0.15855488181114197,
+          0.32571926712989807
+        ],
+        "location": [
+          0.7999998331069946,
+          0.0,
+          0.0
+        ],
+        "vertices": 150,
+        "polygons": 63,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tall_b_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.14994846284389496,
+          0.13478967547416687,
+          0.28566300868988037
+        ],
+        "location": [
+          1.1999999284744263,
+          0.0,
+          0.0
+        ],
+        "vertices": 354,
+        "polygons": 161,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tall_b_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.14994846284389496,
+          0.13478967547416687,
+          0.28566300868988037
+        ],
+        "location": [
+          1.1999999284744263,
+          0.0,
+          0.0
+        ],
+        "vertices": 247,
+        "polygons": 113,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tall_b_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.14994846284389496,
+          0.13476957380771637,
+          0.28566300868988037
+        ],
+        "location": [
+          1.1999999284744263,
+          0.0,
+          0.0
+        ],
+        "vertices": 196,
+        "polygons": 88,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tall_c_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.15303082764148712,
+          0.1281569004058838,
+          0.2362561821937561
+        ],
+        "location": [
+          1.6000001430511475,
+          0.0,
+          0.0
+        ],
+        "vertices": 394,
+        "polygons": 175,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tall_c_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.15088531374931335,
+          0.1208462119102478,
+          0.22624319791793823
+        ],
+        "location": [
+          1.6000001430511475,
+          0.0,
+          0.0
+        ],
+        "vertices": 254,
+        "polygons": 113,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tall_c_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.15092988312244415,
+          0.1208462119102478,
+          0.22643442451953888
+        ],
+        "location": [
+          1.6000001430511475,
+          0.0,
+          0.0
+        ],
+        "vertices": 197,
+        "polygons": 85,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_a_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.06734775751829147,
+          0.07376875728368759,
+          0.11245334148406982
+        ],
+        "location": [
+          2.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 87,
+        "polygons": 40,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_a_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.06760948151350021,
+          0.07415664941072464,
+          0.1128859743475914
+        ],
+        "location": [
+          2.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 67,
+        "polygons": 30,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_a_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.0680622085928917,
+          0.074827641248703,
+          0.11363434046506882
+        ],
+        "location": [
+          2.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 43,
+        "polygons": 18,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_b_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.023569785058498383,
+          0.03439873456954956,
+          0.060208480805158615
+        ],
+        "location": [
+          2.200000762939453,
+          0.0,
+          0.0
+        ],
+        "vertices": 30,
+        "polygons": 15,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_b_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.02404276840388775,
+          0.034430865198373795,
+          0.060208480805158615
+        ],
+        "location": [
+          2.200000762939453,
+          0.0,
+          0.0
+        ],
+        "vertices": 22,
+        "polygons": 11,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_b_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.024578243494033813,
+          0.0343332439661026,
+          0.060208480805158615
+        ],
+        "location": [
+          2.200000762939453,
+          0.0,
+          0.0
+        ],
+        "vertices": 15,
+        "polygons": 8,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_c_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.016031447798013687,
+          0.029003772884607315,
+          0.08238869905471802
+        ],
+        "location": [
+          2.40000057220459,
+          0.0,
+          0.0
+        ],
+        "vertices": 44,
+        "polygons": 20,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_c_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.016230415552854538,
+          0.02919299528002739,
+          0.08248670399188995
+        ],
+        "location": [
+          2.40000057220459,
+          0.0,
+          0.0
+        ],
+        "vertices": 34,
+        "polygons": 15,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_c_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.014789348468184471,
+          0.029697995632886887,
+          0.08259321749210358
+        ],
+        "location": [
+          2.40000057220459,
+          0.0,
+          0.0
+        ],
+        "vertices": 22,
+        "polygons": 9,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_d_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.043039802461862564,
+          0.08858247846364975,
+          0.04782668501138687
+        ],
+        "location": [
+          2.6000003814697266,
+          0.0,
+          0.0
+        ],
+        "vertices": 36,
+        "polygons": 16,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_d_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.04314665496349335,
+          0.08867402374744415,
+          0.048047441989183426
+        ],
+        "location": [
+          2.6000003814697266,
+          0.0,
+          0.0
+        ],
+        "vertices": 30,
+        "polygons": 13,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_d_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.04377959668636322,
+          0.08839589357376099,
+          0.04751613363623619
+        ],
+        "location": [
+          2.6000003814697266,
+          0.0,
+          0.0
+        ],
+        "vertices": 18,
+        "polygons": 8,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_e_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.08526545017957687,
+          0.07415193319320679,
+          0.04945078864693642
+        ],
+        "location": [
+          2.8000001907348633,
+          0.0,
+          0.0
+        ],
+        "vertices": 66,
+        "polygons": 32,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_e_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.08543972671031952,
+          0.07449702173471451,
+          0.04982138052582741
+        ],
+        "location": [
+          2.8000001907348633,
+          0.0,
+          0.0
+        ],
+        "vertices": 48,
+        "polygons": 23,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_e_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.08496183156967163,
+          0.07419780641794205,
+          0.05009862780570984
+        ],
+        "location": [
+          2.8000001907348633,
+          0.0,
+          0.0
+        ],
+        "vertices": 38,
+        "polygons": 19,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_f_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.055195629596710205,
+          0.06889013946056366,
+          0.047074805945158005
+        ],
+        "location": [
+          3.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 60,
+        "polygons": 32,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_f_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.055195629596710205,
+          0.06889013946056366,
+          0.047074805945158005
+        ],
+        "location": [
+          3.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 44,
+        "polygons": 24,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_geonodes_tiny_f_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.05481787025928497,
+          0.06882898509502411,
+          0.047074805945158005
+        ],
+        "location": [
+          3.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 37,
+        "polygons": 21,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_large_a_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.3170090317726135,
+          0.32655882835388184,
+          0.1466887891292572
+        ],
+        "location": [
+          -2.3999998569488525,
+          0.0,
+          0.0
+        ],
+        "vertices": 7044,
+        "polygons": 3277,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_large_a_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.3269655704498291,
+          0.3316594362258911,
+          0.14488962292671204
+        ],
+        "location": [
+          -2.3999998569488525,
+          0.0,
+          0.0
+        ],
+        "vertices": 2601,
+        "polygons": 1181,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_large_a_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.3269655704498291,
+          0.3269655704498291,
+          0.13528002798557281
+        ],
+        "location": [
+          -2.3999998569488525,
+          0.0,
+          0.0
+        ],
+        "vertices": 1193,
+        "polygons": 527,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_large_b_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.28409743309020996,
+          0.2757398784160614,
+          0.1692626178264618
+        ],
+        "location": [
+          -1.9999998807907104,
+          0.0,
+          0.0
+        ],
+        "vertices": 4823,
+        "polygons": 2399,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_large_b_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.2910386323928833,
+          0.2910386323928833,
+          0.16506877541542053
+        ],
+        "location": [
+          -2.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 2592,
+        "polygons": 1282,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_large_b_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.2910386323928833,
+          0.2910386323928833,
+          0.16506877541542053
+        ],
+        "location": [
+          -2.0,
+          0.0,
+          0.0
+        ],
+        "vertices": 966,
+        "polygons": 474,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_large_c_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.27879106998443604,
+          0.25506988167762756,
+          0.14234741032123566
+        ],
+        "location": [
+          -1.5999997854232788,
+          0.0,
+          0.0
+        ],
+        "vertices": 6405,
+        "polygons": 3048,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_large_c_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.289859414100647,
+          0.289859414100647,
+          0.14030054211616516
+        ],
+        "location": [
+          -1.5999997854232788,
+          0.0,
+          0.0
+        ],
+        "vertices": 2596,
+        "polygons": 1205,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_large_c_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.289859414100647,
+          0.289859414100647,
+          0.13679076731204987
+        ],
+        "location": [
+          -1.5999997854232788,
+          0.0,
+          0.0
+        ],
+        "vertices": 1200,
+        "polygons": 539,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_mid_a_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.21561530232429504,
+          0.2213778793811798,
+          0.21774429082870483
+        ],
+        "location": [
+          -1.1999996900558472,
+          0.0,
+          0.0
+        ],
+        "vertices": 2593,
+        "polygons": 1148,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_mid_a_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.21897445619106293,
+          0.21614529192447662,
+          0.21774429082870483
+        ],
+        "location": [
+          -1.1999996900558472,
+          0.0,
+          0.0
+        ],
+        "vertices": 1493,
+        "polygons": 664,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_mid_a_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.20556426048278809,
+          0.21614529192447662,
+          0.19894452393054962
+        ],
+        "location": [
+          -1.1999996900558472,
+          0.0,
+          0.0
+        ],
+        "vertices": 754,
+        "polygons": 337,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_mid_b_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.18778881430625916,
+          0.20102860033512115,
+          0.17772157490253448
+        ],
+        "location": [
+          -0.7999995946884155,
+          0.0,
+          0.0
+        ],
+        "vertices": 1386,
+        "polygons": 637,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_mid_b_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.18778881430625916,
+          0.18286281824111938,
+          0.17772157490253448
+        ],
+        "location": [
+          -0.7999995946884155,
+          0.0,
+          0.0
+        ],
+        "vertices": 755,
+        "polygons": 342,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_mid_b_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.18778881430625916,
+          0.18229976296424866,
+          0.17772157490253448
+        ],
+        "location": [
+          -0.7999995946884155,
+          0.0,
+          0.0
+        ],
+        "vertices": 396,
+        "polygons": 177,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_mid_c_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.1923304796218872,
+          0.20285546779632568,
+          0.1446356624364853
+        ],
+        "location": [
+          -0.3999999463558197,
+          0.0,
+          0.0
+        ],
+        "vertices": 1580,
+        "polygons": 752,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_mid_c_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.1953992247581482,
+          0.20958372950553894,
+          0.13096381723880768
+        ],
+        "location": [
+          -0.3999999463558197,
+          0.0,
+          0.0
+        ],
+        "vertices": 737,
+        "polygons": 338,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_mid_c_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.1953992247581482,
+          0.20958372950553894,
+          0.13096381723880768
+        ],
+        "location": [
+          -0.3999999463558197,
+          0.0,
+          0.0
+        ],
+        "vertices": 412,
+        "polygons": 184,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_small_a_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.1848401129245758,
+          0.1623130440711975,
+          0.14042668044567108
+        ],
+        "location": [
+          1.4901161193847656e-07,
+          0.0,
+          0.0
+        ],
+        "vertices": 888,
+        "polygons": 433,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_small_a_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.1848401129245758,
+          0.1623130440711975,
+          0.14042668044567108
+        ],
+        "location": [
+          1.4901161193847656e-07,
+          0.0,
+          0.0
+        ],
+        "vertices": 716,
+        "polygons": 347,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_small_a_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.18488013744354248,
+          0.16204987466335297,
+          0.14042668044567108
+        ],
+        "location": [
+          1.4901161193847656e-07,
+          0.0,
+          0.0
+        ],
+        "vertices": 543,
+        "polygons": 268,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_small_b_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.16595670580863953,
+          0.18989211320877075,
+          0.09989527612924576
+        ],
+        "location": [
+          0.4000002443790436,
+          0.0,
+          0.0
+        ],
+        "vertices": 700,
+        "polygons": 338,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_small_b_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.16595670580863953,
+          0.18989211320877075,
+          0.09989527612924576
+        ],
+        "location": [
+          0.4000002443790436,
+          0.0,
+          0.0
+        ],
+        "vertices": 444,
+        "polygons": 211,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_small_b_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.1659780740737915,
+          0.18989211320877075,
+          0.09991812705993652
+        ],
+        "location": [
+          0.4000002443790436,
+          0.0,
+          0.0
+        ],
+        "vertices": 324,
+        "polygons": 151,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tall_a_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.16095641255378723,
+          0.15853148698806763,
+          0.3225463926792145
+        ],
+        "location": [
+          0.7999998331069946,
+          0.0,
+          0.0
+        ],
+        "vertices": 330,
+        "polygons": 147,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tall_a_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.16095641255378723,
+          0.15853148698806763,
+          0.3225463926792145
+        ],
+        "location": [
+          0.7999998331069946,
+          0.0,
+          0.0
+        ],
+        "vertices": 192,
+        "polygons": 82,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tall_a_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.1610656976699829,
+          0.15855488181114197,
+          0.32571926712989807
+        ],
+        "location": [
+          0.7999998331069946,
+          0.0,
+          0.0
+        ],
+        "vertices": 150,
+        "polygons": 63,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tall_b_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.14994846284389496,
+          0.13478967547416687,
+          0.28566300868988037
+        ],
+        "location": [
+          1.1999999284744263,
+          0.0,
+          0.0
+        ],
+        "vertices": 354,
+        "polygons": 161,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tall_b_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.14994846284389496,
+          0.13478967547416687,
+          0.28566300868988037
+        ],
+        "location": [
+          1.1999999284744263,
+          0.0,
+          0.0
+        ],
+        "vertices": 247,
+        "polygons": 113,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tall_b_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.14994846284389496,
+          0.13476957380771637,
+          0.28566300868988037
+        ],
+        "location": [
+          1.1999999284744263,
+          0.0,
+          0.0
+        ],
+        "vertices": 196,
+        "polygons": 88,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tall_c_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.15303082764148712,
+          0.1281569004058838,
+          0.2362561821937561
+        ],
+        "location": [
+          1.6000001430511475,
+          0.0,
+          0.0
+        ],
+        "vertices": 394,
+        "polygons": 175,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tall_c_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.15088531374931335,
+          0.1208462119102478,
+          0.22624319791793823
+        ],
+        "location": [
+          1.6000001430511475,
+          0.0,
+          0.0
+        ],
+        "vertices": 254,
+        "polygons": 113,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tall_c_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.15092988312244415,
+          0.1208462119102478,
+          0.22643442451953888
+        ],
+        "location": [
+          1.6000001430511475,
+          0.0,
+          0.0
+        ],
+        "vertices": 197,
+        "polygons": 85,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_a_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.06734775751829147,
+          0.07376875728368759,
+          0.11245334148406982
+        ],
+        "location": [
+          2.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 87,
+        "polygons": 40,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_a_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.06760948151350021,
+          0.07415664941072464,
+          0.1128859743475914
+        ],
+        "location": [
+          2.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 67,
+        "polygons": 30,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_a_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.0680622085928917,
+          0.074827641248703,
+          0.11363434046506882
+        ],
+        "location": [
+          2.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 43,
+        "polygons": 18,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_b_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.023569785058498383,
+          0.03439873456954956,
+          0.060208480805158615
+        ],
+        "location": [
+          2.200000762939453,
+          0.0,
+          0.0
+        ],
+        "vertices": 30,
+        "polygons": 15,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_b_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.02404276840388775,
+          0.034430865198373795,
+          0.060208480805158615
+        ],
+        "location": [
+          2.200000762939453,
+          0.0,
+          0.0
+        ],
+        "vertices": 22,
+        "polygons": 11,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_b_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.024578243494033813,
+          0.0343332439661026,
+          0.060208480805158615
+        ],
+        "location": [
+          2.200000762939453,
+          0.0,
+          0.0
+        ],
+        "vertices": 15,
+        "polygons": 8,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_c_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.016031447798013687,
+          0.029003772884607315,
+          0.08238869905471802
+        ],
+        "location": [
+          2.40000057220459,
+          0.0,
+          0.0
+        ],
+        "vertices": 44,
+        "polygons": 20,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_c_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.016230415552854538,
+          0.02919299528002739,
+          0.08248670399188995
+        ],
+        "location": [
+          2.40000057220459,
+          0.0,
+          0.0
+        ],
+        "vertices": 34,
+        "polygons": 15,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_c_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.014789348468184471,
+          0.029697995632886887,
+          0.08259321749210358
+        ],
+        "location": [
+          2.40000057220459,
+          0.0,
+          0.0
+        ],
+        "vertices": 22,
+        "polygons": 9,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_d_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.043039802461862564,
+          0.08858247846364975,
+          0.04782668501138687
+        ],
+        "location": [
+          2.6000003814697266,
+          0.0,
+          0.0
+        ],
+        "vertices": 36,
+        "polygons": 16,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_d_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.04314665496349335,
+          0.08867402374744415,
+          0.048047441989183426
+        ],
+        "location": [
+          2.6000003814697266,
+          0.0,
+          0.0
+        ],
+        "vertices": 30,
+        "polygons": 13,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_d_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.04377959668636322,
+          0.08839589357376099,
+          0.04751613363623619
+        ],
+        "location": [
+          2.6000003814697266,
+          0.0,
+          0.0
+        ],
+        "vertices": 18,
+        "polygons": 8,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_e_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.08526545017957687,
+          0.07415193319320679,
+          0.04945078864693642
+        ],
+        "location": [
+          2.8000001907348633,
+          0.0,
+          0.0
+        ],
+        "vertices": 66,
+        "polygons": 32,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_e_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.08543972671031952,
+          0.07449702173471451,
+          0.04982138052582741
+        ],
+        "location": [
+          2.8000001907348633,
+          0.0,
+          0.0
+        ],
+        "vertices": 48,
+        "polygons": 23,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_e_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.08496183156967163,
+          0.07419780641794205,
+          0.05009862780570984
+        ],
+        "location": [
+          2.8000001907348633,
+          0.0,
+          0.0
+        ],
+        "vertices": 38,
+        "polygons": 19,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_f_LOD0",
+        "type": "MESH",
+        "dimensions": [
+          0.055195629596710205,
+          0.06889013946056366,
+          0.047074805945158005
+        ],
+        "location": [
+          3.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 60,
+        "polygons": 32,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_f_LOD1",
+        "type": "MESH",
+        "dimensions": [
+          0.055195629596710205,
+          0.06889013946056366,
+          0.047074805945158005
+        ],
+        "location": [
+          3.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 44,
+        "polygons": 24,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      },
+      {
+        "name": "grass_medium_01_tiny_f_LOD2",
+        "type": "MESH",
+        "dimensions": [
+          0.05481787025928497,
+          0.06882898509502411,
+          0.047074805945158005
+        ],
+        "location": [
+          3.000000476837158,
+          0.0,
+          0.0
+        ],
+        "vertices": 37,
+        "polygons": 21,
+        "materials": [
+          "grass_medium_01"
+        ],
+        "modifiers": [],
+        "particles": []
+      }
+    ],
+    "images": [
+      {
+        "name": "grass_medium_01_alpha.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "packed": false,
+        "path": "//textures\\grass_medium_01_alpha_1k.png"
+      },
+      {
+        "name": "grass_medium_01_diff.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "packed": false,
+        "path": "//textures\\grass_medium_01_diff_1k.jpg"
+      },
+      {
+        "name": "grass_medium_01_dry_diff.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "packed": false,
+        "path": "//textures\\grass_medium_01_dry_diff_1k.png"
+      },
+      {
+        "name": "grass_medium_01_nor_gl.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "packed": false,
+        "path": "//textures\\grass_medium_01_nor_gl_1k.exr"
+      },
+      {
+        "name": "grass_medium_01_rough.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "packed": false,
+        "path": "//textures\\grass_medium_01_rough_1k.exr"
+      }
+    ]
+  }
+]

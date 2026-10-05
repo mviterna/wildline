@@ -1,0 +1,22 @@
+{
+  "mesh": "SK_HunterTravis",
+  "vertices": 18273,
+  "polygons": 15317,
+  "morphs": [
+    "Basis",
+    "FaceWidth",
+    "NoseDepth",
+    "SlimBuild"
+  ],
+  "slots": [
+    "H_Brows",
+    "H_Eyes",
+    "H_Cloth",
+    "H_Boots",
+    "H_Hair",
+    "H_Skin",
+    "H_Cap",
+    "H_Beard",
+    "H_Vest"
+  ]
+}

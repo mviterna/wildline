@@ -1,0 +1,102 @@
+[
+  {
+    "hunter": "SK_HunterMale",
+    "slot": "H_Brows",
+    "textures": [
+      "eyebrow001.png",
+      "eyebrow001.png"
+    ]
+  },
+  {
+    "hunter": "SK_HunterMale",
+    "slot": "H_Eyes",
+    "textures": [
+      "brown_eye.png",
+      "brown_eye.png"
+    ]
+  },
+  {
+    "hunter": "SK_HunterMale",
+    "slot": "H_Cloth",
+    "textures": [
+      "male_casualsuit05_diffuse.png",
+      "male_casualsuit05_diffuse.png",
+      "male_casualsuit05_normal.png"
+    ]
+  },
+  {
+    "hunter": "SK_HunterMale",
+    "slot": "H_Boots",
+    "textures": [
+      "shoes04_diffuse.png",
+      "shoes04_diffuse.png",
+      "shoes04_normal.png"
+    ]
+  },
+  {
+    "hunter": "SK_HunterMale",
+    "slot": "H_Hair",
+    "textures": [
+      "short01_diffuse.png",
+      "short01_diffuse.png"
+    ]
+  },
+  {
+    "hunter": "SK_HunterMale",
+    "slot": "H_Skin",
+    "textures": [
+      "young_lightskinned_male_diffuse.png",
+      "young_lightskinned_male_diffuse.png"
+    ]
+  },
+  {
+    "hunter": "SK_HunterFemale",
+    "slot": "H_Brows",
+    "textures": [
+      "eyebrow001.png",
+      "eyebrow001.png"
+    ]
+  },
+  {
+    "hunter": "SK_HunterFemale",
+    "slot": "H_Eyes",
+    "textures": [
+      "brown_eye.png",
+      "brown_eye.png"
+    ]
+  },
+  {
+    "hunter": "SK_HunterFemale",
+    "slot": "H_Cloth",
+    "textures": [
+      "male_casualsuit05_diffuse.png",
+      "male_casualsuit05_diffuse.png",
+      "male_casualsuit05_normal.png"
+    ]
+  },
+  {
+    "hunter": "SK_HunterFemale",
+    "slot": "H_Boots",
+    "textures": [
+      "shoes04_diffuse.png",
+      "shoes04_diffuse.png",
+      "shoes04_normal.png"
+    ]
+  },
+  {
+    "hunter": "SK_HunterFemale",
+    "slot": "H_Hair",
+    "textures": [
+      "short01_diffuse.png",
+      "short01_diffuse.png"
+    ]
+  },
+  {
+    "hunter": "SK_HunterFemale",
+    "slot": "H_Skin",
+    "textures": [
+      "young_lightskinned_female_diffuse.png",
+      "young_lightskinned_female_diffuse.png"
+    ]
+  }
+]

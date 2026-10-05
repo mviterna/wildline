@@ -1,0 +1,206 @@
+[
+  {
+    "mesh": "SM_Birch",
+    "slots": [
+      {
+        "slot": "F_Bark",
+        "material": "/Game/Wildline/Forest/Materials/M_TreeBark.M_TreeBark"
+      },
+      {
+        "slot": "F_Leaf",
+        "material": "/Game/Wildline/Forest/Materials/M_Leaves.M_Leaves"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_Clover",
+    "slots": [
+      {
+        "slot": "F_Grass",
+        "material": "/Game/Wildline/Forest/Materials/M_Grass.M_Grass"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_CloverWide",
+    "slots": [
+      {
+        "slot": "F_Grass",
+        "material": "/Game/Wildline/Forest/Materials/M_Grass.M_Grass"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_DryGrass",
+    "slots": [
+      {
+        "slot": "F_DryGrass",
+        "material": "/Game/Wildline/Forest/Materials/M_DryGrass.M_DryGrass"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_FallenLeaf",
+    "slots": [
+      {
+        "slot": "F_FallenLeaf",
+        "material": "/Game/Wildline/Forest/Materials/M_FallenLeaf.M_FallenLeaf"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_Fern1",
+    "slots": [
+      {
+        "slot": "F_Fern",
+        "material": "/Game/Wildline/Forest/Materials/M_Fern.M_Fern"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_Fern2",
+    "slots": [
+      {
+        "slot": "F_Fern_001",
+        "material": "/Game/Wildline/Forest/Materials/M_Grass.M_Grass"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_Fern3",
+    "slots": [
+      {
+        "slot": "F_Fern_002",
+        "material": "/Game/Wildline/Forest/Materials/M_Grass.M_Grass"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_Fern4",
+    "slots": [
+      {
+        "slot": "F_Fern_003",
+        "material": "/Game/Wildline/Forest/Materials/M_Grass.M_Grass"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_GrassA",
+    "slots": [
+      {
+        "slot": "F_Grass",
+        "material": "/Game/Wildline/Forest/Materials/M_Grass.M_Grass"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_GrassB",
+    "slots": [
+      {
+        "slot": "F_Grass",
+        "material": "/Game/Wildline/Forest/Materials/M_Grass.M_Grass"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_GrassC",
+    "slots": [
+      {
+        "slot": "F_Grass",
+        "material": "/Game/Wildline/Forest/Materials/M_Grass.M_Grass"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_Log",
+    "slots": [
+      {
+        "slot": "F_Bark",
+        "material": "/Game/Wildline/Forest/Materials/M_TreeBark.M_TreeBark"
+      },
+      {
+        "slot": "F_Heartwood",
+        "material": "/Game/Wildline/Forest/Materials/M_Heartwood.M_Heartwood"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_OakA",
+    "slots": [
+      {
+        "slot": "F_Bark",
+        "material": "/Game/Wildline/Forest/Materials/M_TreeBark.M_TreeBark"
+      },
+      {
+        "slot": "F_Leaf",
+        "material": "/Game/Wildline/Forest/Materials/M_Leaves.M_Leaves"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_OakB",
+    "slots": [
+      {
+        "slot": "F_Bark",
+        "material": "/Game/Wildline/Forest/Materials/M_TreeBark.M_TreeBark"
+      },
+      {
+        "slot": "F_Leaf",
+        "material": "/Game/Wildline/Forest/Materials/M_Leaves.M_Leaves"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_OakC",
+    "slots": [
+      {
+        "slot": "F_Bark",
+        "material": "/Game/Wildline/Forest/Materials/M_TreeBark.M_TreeBark"
+      },
+      {
+        "slot": "F_Leaf",
+        "material": "/Game/Wildline/Forest/Materials/M_Leaves.M_Leaves"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_Pine",
+    "slots": [
+      {
+        "slot": "F_Bark",
+        "material": "/Game/Wildline/Forest/Materials/M_TreeBark.M_TreeBark"
+      },
+      {
+        "slot": "F_Needles",
+        "material": "/Game/Wildline/Forest/Materials/M_Needles.M_Needles"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_Stone",
+    "slots": [
+      {
+        "slot": "F_Stone",
+        "material": "/Game/Wildline/Forest/Materials/M_Stone.M_Stone"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_Weed",
+    "slots": [
+      {
+        "slot": "F_Grass",
+        "material": "/Game/Wildline/Forest/Materials/M_Grass.M_Grass"
+      }
+    ]
+  },
+  {
+    "mesh": "SM_WeedB",
+    "slots": [
+      {
+        "slot": "F_Grass",
+        "material": "/Game/Wildline/Forest/Materials/M_Grass.M_Grass"
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "name": "wildline",
+  "version": "1.0.0",
+  "description": "Asymmetric multiplayer woodland hunting game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/*.test.js",
+    "test:browser": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "three": "^0.180.0",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.1"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "captured_preview_start_seconds": 14.13,
+  "trimmed_pcm_seconds": 60,
+  "recording_noise_floor_rms": 0.0008973469957709312,
+  "clipped_sample_fraction_before_cleanup": 0.00033038194444444445,
+  "input_loudness_lufs": "-8.05",
+  "cleaned_loudness_lufs": "-16.00",
+  "cleaned_true_peak_db": "-6.74",
+  "mp3_duration_seconds": 60.024,
+  "mp3_bitrate": 320000,
+  "sample_rate": 48000,
+  "channels": 2,
+  "filters": "highpass=f=30,afade=t=in:st=0:d=0.008,afade=t=out:st=59.92:d=0.08",
+  "cleaned_file": "C:\\Users\\mvite\\OneDrive\\Documents\\ChatGPT\\PhotoRealistic Multiplater\\audio-exports\\Squirrel Scramble - cleaned preview.mp3"
+}

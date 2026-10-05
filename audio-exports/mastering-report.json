@@ -1,0 +1,36 @@
+{
+  "source": "Original lossless playback recording",
+  "sample_rate": 48000,
+  "channels": 2,
+  "restored_clipped_samples": 7,
+  "filters": "highpass=f=28,equalizer=f=180:t=q:w=0.75:g=-0.7,equalizer=f=3200:t=q:w=0.8:g=-0.4",
+  "full_song": {
+    "duration_seconds": 60.0,
+    "loudness_lufs": "-16.00",
+    "true_peak_db": "-5.54",
+    "files": {
+      "wav": "C:\\Users\\mvite\\OneDrive\\Documents\\ChatGPT\\PhotoRealistic Multiplater\\audio-exports\\Squirrel Scramble - polished song.wav",
+      "mp3": "C:\\Users\\mvite\\OneDrive\\Documents\\ChatGPT\\PhotoRealistic Multiplater\\audio-exports\\Squirrel Scramble - polished song.mp3"
+    }
+  },
+  "instrumental_loop": {
+    "source_start_seconds": 20.570083333333333,
+    "source_end_seconds": 46.86997916666667,
+    "duration_seconds": 26.299895833333334,
+    "frames": 1262395,
+    "beats": 64,
+    "estimated_bpm": 146.00813752019778,
+    "crossfade_seconds": 0.20545833333333333,
+    "loudness_lufs": "-16.00",
+    "true_peak_db": "-6.34",
+    "boundary_step": 0.015836781764410314,
+    "nearby_99th_percentile_step": 0.179583380667125,
+    "confident_vocals_detected": 0,
+    "files": {
+      "wav": "C:\\Users\\mvite\\OneDrive\\Documents\\ChatGPT\\PhotoRealistic Multiplater\\audio-exports\\Squirrel Scramble - instrumental loop.wav",
+      "mp3": "C:\\Users\\mvite\\OneDrive\\Documents\\ChatGPT\\PhotoRealistic Multiplater\\audio-exports\\Squirrel Scramble - instrumental loop.mp3",
+      "ogg": "C:\\Users\\mvite\\OneDrive\\Documents\\ChatGPT\\PhotoRealistic Multiplater\\audio-exports\\Squirrel Scramble - instrumental loop.ogg"
+    }
+  },
+  "last_confident_vocal_end_seconds": 6.62
+}

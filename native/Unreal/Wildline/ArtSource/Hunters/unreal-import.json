@@ -1,0 +1,58 @@
+[
+  {
+    "mesh": "SK_HunterFemale",
+    "slots": [
+      "H_Brows",
+      "H_Eyes",
+      "H_Cloth",
+      "H_Boots",
+      "H_Hair",
+      "H_Skin",
+      "H_Cap"
+    ]
+  },
+  {
+    "mesh": "SK_HunterMale",
+    "slots": [
+      "H_Brows",
+      "H_Eyes",
+      "H_Cloth",
+      "H_Boots",
+      "H_Hair",
+      "H_Skin",
+      "H_Cap"
+    ]
+  },
+  {
+    "mesh": "SK_HunterTravis",
+    "slots": [
+      "H_Brows",
+      "H_Eyes",
+      "H_Cloth",
+      "H_Boots",
+      "H_Hair",
+      "H_Skin",
+      "H_Cap",
+      "H_Beard",
+      "H_Vest"
+    ]
+  },
+  {
+    "mesh": "SM_BoltRifle",
+    "slots": [
+      "R_Wood",
+      "R_Rubber",
+      "R_Metal",
+      "R_Black",
+      "R_Steel",
+      "R_Glass"
+    ]
+  },
+  {
+    "mesh": "SM_RifleBolt",
+    "slots": [
+      "R_Steel",
+      "R_Metal"
+    ]
+  }
+]

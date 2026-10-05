@@ -1,0 +1,31 @@
+{
+  "verified_at_utc": "2026-10-05T16:22:26.939709+00:00",
+  "status": "PASS",
+  "build": "Unreal Windows Development",
+  "binary": "C:\\Users\\mvite\\OneDrive\\Documents\\ChatGPT\\PhotoRealistic Multiplater\\native\\Build\\Windows\\Wildline\\Binaries\\Win64\\Wildline.exe",
+  "binary_sha256": "69acfe602d34b8f3e88a25de0eec4c4e8dad12bcf528675381c8e904547b51e8",
+  "automation_suites": 8,
+  "checks": [
+    "Independent persisted configs for all three modes",
+    "Independent normal and scope sensitivity persistence",
+    "Non-silent sound samples and packaged audio device initialization",
+    "Classic and Farm Raid regression",
+    "Both checkpoint routes, skipped checkpoints and feeder camping rejected",
+    "Five real-physics feeder trips in 45 seconds",
+    "20-second rifle thermal followed by 120-second cooldown; shotgun thermal rejected",
+    "Late joining client: player/time/score configs, progress/trips, thermal and multicast sound",
+    "Configured two-player limit rejects a third connection"
+  ],
+  "screenshots": [
+    "native/Preview/HillMenu.png",
+    "native/Preview/HillSquirrel.png",
+    "native/Preview/HillCourse.png",
+    "native/Preview/HillNeighborhood.png",
+    "native/Preview/HillSettings.png"
+  ],
+  "commands": [
+    "native/LaunchNative.ps1 -Test",
+    "native/LaunchNative.ps1 -Build",
+    "native/VerifyModesPackage.ps1 -Capture"
+  ]
+}

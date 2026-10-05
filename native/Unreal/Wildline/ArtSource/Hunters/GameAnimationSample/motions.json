@@ -1,0 +1,894 @@
+[
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Loop_F",
+    "name": "A_Hunter_Walk_Fwd",
+    "length": 4.0,
+    "distance": 826.4476928710938,
+    "root_delta": [
+      0.0,
+      826.4476928710938,
+      0.0
+    ],
+    "period": 1.0,
+    "offset": 0.9666666666666667,
+    "stride": 206.61192321777344,
+    "peaks": [
+      58,
+      118,
+      178
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Loop_FR",
+    "name": "A_Hunter_Walk_FwdRight",
+    "length": 4.0,
+    "distance": 826.4836174099394,
+    "root_delta": [
+      -584.4121704101562,
+      584.4121704101562,
+      0.0
+    ],
+    "period": 1.0,
+    "offset": 0.9666666666666667,
+    "stride": 206.62090435248484,
+    "peaks": [
+      58,
+      118,
+      178
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Loop_RR",
+    "name": "A_Hunter_Walk_Right",
+    "length": 3.700000047683716,
+    "distance": 687.9945678710938,
+    "root_delta": [
+      -687.9945678710938,
+      0.0,
+      0.0
+    ],
+    "period": 0.933333345361658,
+    "offset": 0.03333333376291636,
+    "stride": 173.54817928279843,
+    "peaks": [
+      2,
+      58,
+      114,
+      168
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Loop_BR",
+    "name": "A_Hunter_Walk_BwdRight",
+    "length": 4.0333333015441895,
+    "distance": 625.017786484714,
+    "root_delta": [
+      -441.9543151855469,
+      -441.9543151855469,
+      0.0
+    ],
+    "period": 0.9999999921183941,
+    "offset": 0.03333333307061313,
+    "stride": 154.96308755819354,
+    "peaks": [
+      2,
+      60,
+      122,
+      182
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Loop_B",
+    "name": "A_Hunter_Walk_Bwd",
+    "length": 4.0333333015441895,
+    "distance": 624.9968128238979,
+    "root_delta": [
+      0.0,
+      -624.9968128238979,
+      0.0
+    ],
+    "period": 0.9999999921183941,
+    "offset": 1.0333333251890071,
+    "stride": 154.95788747699947,
+    "peaks": [
+      62,
+      122,
+      182
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Loop_BL",
+    "name": "A_Hunter_Walk_BwdLeft",
+    "length": 4.0333333015441895,
+    "distance": 625.017786484714,
+    "root_delta": [
+      441.9543151855469,
+      -441.9543151855469,
+      0.0
+    ],
+    "period": 0.9999999921183941,
+    "offset": 0.03333333307061313,
+    "stride": 154.96308755819354,
+    "peaks": [
+      2,
+      60,
+      122,
+      182
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Loop_LL",
+    "name": "A_Hunter_Walk_Left",
+    "length": 3.700000047683716,
+    "distance": 687.9945678710938,
+    "root_delta": [
+      687.9945678710938,
+      0.0,
+      0.0
+    ],
+    "period": 0.933333345361658,
+    "offset": 0.466666672680829,
+    "stride": 173.54817928279843,
+    "peaks": [
+      28,
+      84,
+      142,
+      196
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Loop_FL",
+    "name": "A_Hunter_Walk_FwdLeft",
+    "length": 4.0,
+    "distance": 826.4463285757752,
+    "root_delta": [
+      584.3858032226562,
+      584.3858032226562,
+      0.0
+    ],
+    "period": 1.0166666666666666,
+    "offset": 0.9666666666666667,
+    "stride": 210.05510851300951,
+    "peaks": [
+      58,
+      118,
+      180
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Loop_F",
+    "name": "A_Hunter_Run_Fwd",
+    "length": 2.5,
+    "distance": 1291.3128662109375,
+    "root_delta": [
+      0.0,
+      1291.3128662109375,
+      0.0
+    ],
+    "period": 0.6166666666666667,
+    "offset": 0.6,
+    "stride": 318.5238403320312,
+    "peaks": [
+      36,
+      74,
+      110
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Loop_FR",
+    "name": "A_Hunter_Run_FwdRight",
+    "length": 2.5,
+    "distance": 1291.3128450044467,
+    "root_delta": [
+      -913.0960693359375,
+      913.0960693359375,
+      0.0
+    ],
+    "period": 0.6333333333333333,
+    "offset": 0.5666666666666667,
+    "stride": 327.13258740112644,
+    "peaks": [
+      34,
+      72,
+      110
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Loop_RR",
+    "name": "A_Hunter_Run_Right",
+    "length": 2.366666555404663,
+    "distance": 855.7099609375,
+    "root_delta": [
+      -855.7099609375,
+      0.0,
+      0.0
+    ],
+    "period": 0.5833333059096001,
+    "offset": 0.5333333082602058,
+    "stride": 210.91442699163736,
+    "peaks": [
+      32,
+      66,
+      102
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Loop_BR",
+    "name": "A_Hunter_Run_BwdRight",
+    "length": 2.566666603088379,
+    "distance": 795.4490356926353,
+    "root_delta": [
+      -562.4674072265625,
+      -562.4674072265625,
+      0.0
+    ],
+    "period": 0.6333333176451844,
+    "offset": 0.5666666526299018,
+    "stride": 196.27963218389704,
+    "peaks": [
+      34,
+      72,
+      110,
+      148
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Loop_B",
+    "name": "A_Hunter_Run_Bwd",
+    "length": 2.566666603088379,
+    "distance": 795.44873046875,
+    "root_delta": [
+      0.0,
+      -795.44873046875,
+      0.0
+    ],
+    "period": 0.6333333176451844,
+    "offset": 0.5999999851375432,
+    "stride": 196.27955686891235,
+    "peaks": [
+      36,
+      74,
+      112
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Loop_BL",
+    "name": "A_Hunter_Run_BwdLeft",
+    "length": 2.566666603088379,
+    "distance": 795.4486041089066,
+    "root_delta": [
+      562.4671020507812,
+      -562.4671020507812,
+      0.0
+    ],
+    "period": 0.6333333176451844,
+    "offset": 0.5333333201222605,
+    "stride": 196.27952568921071,
+    "peaks": [
+      32,
+      70,
+      108,
+      146
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Loop_LL",
+    "name": "A_Hunter_Run_Left",
+    "length": 2.366666555404663,
+    "distance": 855.7099609375,
+    "root_delta": [
+      855.7099609375,
+      0.0,
+      0.0
+    ],
+    "period": 0.5999999717927315,
+    "offset": 0.5333333082602058,
+    "stride": 216.94055347711264,
+    "peaks": [
+      32,
+      68,
+      104,
+      138
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Loop_FL",
+    "name": "A_Hunter_Run_FwdLeft",
+    "length": 2.5,
+    "distance": 1291.3128450044467,
+    "root_delta": [
+      913.0960693359375,
+      913.0960693359375,
+      0.0
+    ],
+    "period": 0.6333333333333333,
+    "offset": 0.5666666666666667,
+    "stride": 327.13258740112644,
+    "peaks": [
+      34,
+      72,
+      110
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Crouch/M_Neutral_Crouch_Loop_F",
+    "name": "A_Hunter_Crouch_Fwd",
+    "length": 3.700000047683716,
+    "distance": 860.0262451171875,
+    "root_delta": [
+      0.0,
+      860.0262451171875,
+      0.0
+    ],
+    "period": 0.9166666784801999,
+    "offset": 0.9000000115987417,
+    "stride": 213.06956523173565,
+    "peaks": [
+      54,
+      108,
+      164
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Crouch/M_Neutral_Crouch_Loop_FR",
+    "name": "A_Hunter_Crouch_FwdRight",
+    "length": 3.799999952316284,
+    "distance": 883.2424883292426,
+    "root_delta": [
+      -624.5467529296875,
+      624.5467529296875,
+      0.0
+    ],
+    "period": 0.9416666548503073,
+    "offset": 0.9333333216215435,
+    "stride": 218.8736868008869,
+    "peaks": [
+      56,
+      112,
+      169
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Crouch/M_Neutral_Crouch_Loop_RR",
+    "name": "A_Hunter_Crouch_Right",
+    "length": 3.9000000953674316,
+    "distance": 805.7868041992188,
+    "root_delta": [
+      -805.7868041992188,
+      0.0,
+      0.0
+    ],
+    "period": 0.9833333573789678,
+    "offset": 0.966666690304748,
+    "stride": 203.16846772544406,
+    "peaks": [
+      58,
+      118,
+      176
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Crouch/M_Neutral_Crouch_Loop_BR",
+    "name": "A_Hunter_Crouch_BwdRight",
+    "length": 3.9000000953674316,
+    "distance": 725.3146081686097,
+    "root_delta": [
+      -512.8748779296875,
+      -512.8748779296875,
+      0.0
+    ],
+    "period": 0.966666690304748,
+    "offset": 0.966666690304748,
+    "stride": 179.7788345033306,
+    "peaks": [
+      58,
+      116,
+      174
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Crouch/M_Neutral_Crouch_Loop_B",
+    "name": "A_Hunter_Crouch_Bwd",
+    "length": 3.8333332538604736,
+    "distance": 712.7945556640625,
+    "root_delta": [
+      0.0,
+      -712.7945556640625,
+      0.0
+    ],
+    "period": 0.9499999803045521,
+    "offset": 0.9999999792679496,
+    "stride": 176.6490855341372,
+    "peaks": [
+      60,
+      116,
+      174
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Crouch/M_Neutral_Crouch_Loop_BL",
+    "name": "A_Hunter_Crouch_BwdLeft",
+    "length": 3.9000000953674316,
+    "distance": 731.4147852242756,
+    "root_delta": [
+      517.1883544921875,
+      -517.1883544921875,
+      0.0
+    ],
+    "period": 0.966666690304748,
+    "offset": 0.966666690304748,
+    "stride": 181.29084420088884,
+    "peaks": [
+      58,
+      116,
+      174
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Crouch/M_Neutral_Crouch_Loop_LL",
+    "name": "A_Hunter_Crouch_Left",
+    "length": 3.8333332538604736,
+    "distance": 792.042236328125,
+    "root_delta": [
+      792.042236328125,
+      0.0,
+      0.0
+    ],
+    "period": 0.9499999803045521,
+    "offset": 0.9666666466256847,
+    "stride": 196.28872813349184,
+    "peaks": [
+      58,
+      116,
+      172
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Crouch/M_Neutral_Crouch_Loop_FL",
+    "name": "A_Hunter_Crouch_FwdLeft",
+    "length": 3.799999952316284,
+    "distance": 883.4113238839302,
+    "root_delta": [
+      624.6661376953125,
+      624.6661376953125,
+      0.0
+    ],
+    "period": 0.949999988079071,
+    "offset": 0.9333333216215435,
+    "stride": 220.85283097098255,
+    "peaks": [
+      56,
+      112,
+      170
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Idle/M_Neutral_Stand_Idle_Loop",
+    "name": "A_Hunter_Idle",
+    "length": 10.0,
+    "distance": 0.0,
+    "root_delta": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Idle/M_Neutral_Crouch_Idle_Loop",
+    "name": "A_Hunter_CrouchIdle",
+    "length": 10.0,
+    "distance": 0.0,
+    "root_delta": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Idle/M_Neutral_Stand_Turn_090_L",
+    "name": "A_Hunter_TurnLeft",
+    "length": 2.0,
+    "distance": 0.0,
+    "root_delta": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Idle/M_Neutral_Stand_Turn_090_R",
+    "name": "A_Hunter_TurnRight",
+    "length": 2.0,
+    "distance": 0.0,
+    "root_delta": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Jump/M_Neutral_Jump_F_Start_Stand_Lfoot",
+    "name": "A_Hunter_JumpStart",
+    "length": 2.5,
+    "distance": 0.0,
+    "root_delta": [
+      0.0,
+      0.0,
+      -647.5838012695312
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Jump/M_Neutral_Jump_Loop_Fall",
+    "name": "A_Hunter_Fall",
+    "length": 3.3333332538604736,
+    "distance": 0.0,
+    "root_delta": [
+      0.0,
+      0.0,
+      -3082.073486328125
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Jump/M_Neutral_Jump_F_Land_Stand_Light_Lfoot",
+    "name": "A_Hunter_Land",
+    "length": 2.7666666507720947,
+    "distance": 173.71629333496094,
+    "root_delta": [
+      0.0,
+      173.71629333496094,
+      -489.7079772949219
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Start_F_Lfoot",
+    "name": "A_Hunter_WalkStart_Fwd",
+    "length": 3.4666666984558105,
+    "distance": 684.4031694233418,
+    "root_delta": [
+      0.0,
+      684.4031694233418,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Start_FR_Lfoot",
+    "name": "A_Hunter_WalkStart_FwdRight",
+    "length": 3.2666666507720947,
+    "distance": 637.6526590941529,
+    "root_delta": [
+      -450.8885192871094,
+      450.8885192871094,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Start_RR_Lfoot",
+    "name": "A_Hunter_WalkStart_Right",
+    "length": 2.566666603088379,
+    "distance": 445.33447265625,
+    "root_delta": [
+      -445.33447265625,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Start_BR_Lfoot",
+    "name": "A_Hunter_WalkStart_BwdRight",
+    "length": 3.299999952316284,
+    "distance": 481.4831373611995,
+    "root_delta": [
+      -340.4599914550781,
+      -340.4599914550781,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Start_B_Lfoot",
+    "name": "A_Hunter_WalkStart_Bwd",
+    "length": 2.866666555404663,
+    "distance": 420.3092346191406,
+    "root_delta": [
+      0.0,
+      -420.3092346191406,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Start_BL_Lfoot",
+    "name": "A_Hunter_WalkStart_BwdLeft",
+    "length": 3.0999999046325684,
+    "distance": 449.8289093062975,
+    "root_delta": [
+      318.076416015625,
+      -318.0777282714844,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Start_LL_Lfoot",
+    "name": "A_Hunter_WalkStart_Left",
+    "length": 2.7333333492279053,
+    "distance": 475.82275390625,
+    "root_delta": [
+      475.82275390625,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Start_FL_Lfoot",
+    "name": "A_Hunter_WalkStart_FwdLeft",
+    "length": 3.0999999046325684,
+    "distance": 603.1177761811077,
+    "root_delta": [
+      426.6596984863281,
+      426.27755469083786,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Stop_F_Lfoot",
+    "name": "A_Hunter_WalkStop_Fwd",
+    "length": 2.9666666984558105,
+    "distance": 277.18402099609375,
+    "root_delta": [
+      -3.581475738201334e-08,
+      277.18402099609375,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Stop_FR_Lfoot",
+    "name": "A_Hunter_WalkStop_FwdRight",
+    "length": 5.666666507720947,
+    "distance": 276.1988478166996,
+    "root_delta": [
+      -195.30218505859375,
+      195.30197143554688,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Stop_RR_Lfoot",
+    "name": "A_Hunter_WalkStop_Right",
+    "length": 5.066666603088379,
+    "distance": 249.7186279296875,
+    "root_delta": [
+      -249.7186279296875,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Stop_BR_Lfoot",
+    "name": "A_Hunter_WalkStop_BwdRight",
+    "length": 5.266666889190674,
+    "distance": 216.49252976982555,
+    "root_delta": [
+      -153.08338928222656,
+      -153.08328247070312,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Stop_B_Lfoot",
+    "name": "A_Hunter_WalkStop_Bwd",
+    "length": 2.8333332538604736,
+    "distance": 216.1440887451172,
+    "root_delta": [
+      0.0,
+      -216.1440887451172,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Stop_BL_Lfoot",
+    "name": "A_Hunter_WalkStop_BwdLeft",
+    "length": 5.633333206176758,
+    "distance": 211.25996548406914,
+    "root_delta": [
+      149.38340759277344,
+      -149.38330078125,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Stop_LL_Lfoot",
+    "name": "A_Hunter_WalkStop_Left",
+    "length": 4.4666666984558105,
+    "distance": 244.6916961669922,
+    "root_delta": [
+      244.6916961669922,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Walk/M_Neutral_Walk_Stop_FL_Lfoot",
+    "name": "A_Hunter_WalkStop_FwdLeft",
+    "length": 4.699999809265137,
+    "distance": 291.36793692295356,
+    "root_delta": [
+      206.0282440185547,
+      206.0282440185547,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Start_F_Lfoot",
+    "name": "A_Hunter_RunStart_Fwd",
+    "length": 2.5999999046325684,
+    "distance": 1138.88427734375,
+    "root_delta": [
+      0.0,
+      1138.88427734375,
+      -0.00010235776426270604
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Start_FR_Lfoot",
+    "name": "A_Hunter_RunStart_FwdRight",
+    "length": 2.700000047683716,
+    "distance": 1190.826255955019,
+    "root_delta": [
+      -842.0413208007812,
+      842.0413208007812,
+      -0.00010247166210319847
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Start_RR_Lfoot",
+    "name": "A_Hunter_RunStart_Right",
+    "length": 2.5999999046325684,
+    "distance": 833.4343872070312,
+    "root_delta": [
+      -833.4343872070312,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Start_BR_Lfoot",
+    "name": "A_Hunter_RunStart_BwdRight",
+    "length": 2.7666666507720947,
+    "distance": 780.8508023843644,
+    "root_delta": [
+      -552.1449584960938,
+      -552.1448364257812,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Start_B_Lfoot",
+    "name": "A_Hunter_RunStart_Bwd",
+    "length": 2.799999952316284,
+    "distance": 783.8350219726562,
+    "root_delta": [
+      0.0,
+      -783.8350219726562,
+      -0.00010235776426270604
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Start_BL_Lfoot",
+    "name": "A_Hunter_RunStart_BwdLeft",
+    "length": 2.7333333492279053,
+    "distance": 770.6180384924061,
+    "root_delta": [
+      544.9092407226562,
+      -544.9092407226562,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Start_LL_Lfoot",
+    "name": "A_Hunter_RunStart_Left",
+    "length": 2.5,
+    "distance": 799.993408203125,
+    "root_delta": [
+      799.993408203125,
+      0.0,
+      -0.00010235776426270604
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Start_FL_Lfoot",
+    "name": "A_Hunter_RunStart_FwdLeft",
+    "length": 2.5333333015441895,
+    "distance": 1104.6348421195376,
+    "root_delta": [
+      781.0947875976562,
+      781.0947875976562,
+      -0.00010247166210319847
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Stop_F_Lfoot",
+    "name": "A_Hunter_RunStop_Fwd",
+    "length": 4.066666603088379,
+    "distance": 434.1063232421875,
+    "root_delta": [
+      0.0,
+      434.1063232421875,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Stop_FR_Lfoot",
+    "name": "A_Hunter_RunStop_FwdRight",
+    "length": 3.5,
+    "distance": 393.130205259964,
+    "root_delta": [
+      -278.1213073730469,
+      277.84869384765625,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Stop_RR_Lfoot",
+    "name": "A_Hunter_RunStop_Right",
+    "length": 3.1666667461395264,
+    "distance": 242.8611297607422,
+    "root_delta": [
+      -242.8611297607422,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Stop_BR_Lfoot",
+    "name": "A_Hunter_RunStop_BwdRight",
+    "length": 3.200000047683716,
+    "distance": 228.15036155492967,
+    "root_delta": [
+      -161.32672119140625,
+      -161.3266143798828,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Stop_B_Lfoot",
+    "name": "A_Hunter_RunStop_Bwd",
+    "length": 3.3333332538604736,
+    "distance": 232.90655517578125,
+    "root_delta": [
+      0.0,
+      -232.90655517578125,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Stop_BL_Lfoot",
+    "name": "A_Hunter_RunStop_BwdLeft",
+    "length": 3.799999952316284,
+    "distance": 224.3155567018749,
+    "root_delta": [
+      158.61505126953125,
+      -158.61505126953125,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Stop_LL_Lfoot",
+    "name": "A_Hunter_RunStop_Left",
+    "length": 3.700000047683716,
+    "distance": 248.90406799316406,
+    "root_delta": [
+      248.90406799316406,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "source": "/Game/Characters/UEFN_Mannequin/Animations/Run/M_Neutral_Run_Stop_FL_Lfoot",
+    "name": "A_Hunter_RunStop_FwdLeft",
+    "length": 3.433333396911621,
+    "distance": 386.848785428653,
+    "root_delta": [
+      272.05419921875,
+      275.0245361328125,
+      0.0
+    ]
+  }
+]

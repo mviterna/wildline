@@ -1,0 +1,151 @@
+[
+  {
+    "name": "SM_GrassA",
+    "height_cm": 23.000000417232513,
+    "triangles": 342,
+    "materials": [
+      "F_PhotoGrass"
+    ],
+    "source": "Poly Haven Grass Medium 01"
+  },
+  {
+    "name": "SM_GrassB",
+    "height_cm": 30.000001192092896,
+    "triangles": 338,
+    "materials": [
+      "F_PhotoGrass"
+    ],
+    "source": "Poly Haven Grass Medium 01"
+  },
+  {
+    "name": "SM_GrassC",
+    "height_cm": 15.999999642372131,
+    "triangles": 456,
+    "materials": [
+      "F_Grass"
+    ]
+  },
+  {
+    "name": "SM_DryGrass",
+    "height_cm": 25.999999046325684,
+    "triangles": 528,
+    "materials": [
+      "F_DryGrass"
+    ]
+  },
+  {
+    "name": "SM_Clover",
+    "height_cm": 10.000000149011612,
+    "triangles": 104,
+    "materials": [
+      "F_Grass"
+    ]
+  },
+  {
+    "name": "SM_CloverWide",
+    "height_cm": 9.000000357627869,
+    "triangles": 234,
+    "materials": [
+      "F_Grass"
+    ]
+  },
+  {
+    "name": "SM_Weed",
+    "height_cm": 50.0,
+    "triangles": 620,
+    "materials": [
+      "F_Grass"
+    ]
+  },
+  {
+    "name": "SM_WeedB",
+    "height_cm": 40.00000059604645,
+    "triangles": 516,
+    "materials": [
+      "F_Grass"
+    ]
+  },
+  {
+    "name": "SM_Fern1",
+    "height_cm": 60.00000238418579,
+    "triangles": 252,
+    "materials": [
+      "F_Fern"
+    ]
+  },
+  {
+    "name": "SM_Fern2",
+    "height_cm": 37.99999952316284,
+    "triangles": 276,
+    "materials": [
+      "F_Fern.001"
+    ]
+  },
+  {
+    "name": "SM_Fern3",
+    "height_cm": 37.99999952316284,
+    "triangles": 176,
+    "materials": [
+      "F_Fern.002"
+    ]
+  },
+  {
+    "name": "SM_Fern4",
+    "height_cm": 37.99999952316284,
+    "triangles": 200,
+    "materials": [
+      "F_Fern.003"
+    ]
+  },
+  {
+    "name": "SM_OakA",
+    "height_cm": 2400.0,
+    "triangles": 18557,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ],
+    "radius_cm": 71.0731673056667
+  },
+  {
+    "name": "SM_OakB",
+    "height_cm": 2400.0,
+    "triangles": 59295,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ],
+    "radius_cm": 58.227134366610244
+  },
+  {
+    "name": "SM_OakC",
+    "height_cm": 2400.0,
+    "triangles": 20944,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ],
+    "radius_cm": 56.8465039566844
+  },
+  {
+    "name": "SM_Pine",
+    "height_cm": 2400.0,
+    "triangles": 235040,
+    "materials": [
+      "F_Bark",
+      "F_Needles"
+    ],
+    "radius_cm": 70.83246665801498
+  },
+  {
+    "name": "SM_Stone",
+    "height_cm": 31.448704353533685,
+    "triangles": 576,
+    "materials": [
+      "F_Stone"
+    ]
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "engine": "Unreal Engine 5.8.3",
+  "checkedAtUtc": "2026-10-05T01:41:42.524037+00:00",
+  "windowsPackage": "native/Build/Windows/Wildline.exe",
+  "build": "PASS",
+  "nativeAutomationSuites": 4,
+  "nativeAutomationResult": "PASS",
+  "packagedLiveChecks": 52,
+  "packagedLiveResult": "PASS",
+  "networkHostResult": "PASS",
+  "networkClientResult": "PASS",
+  "networkTest": "Two packaged Windows processes on localhost UDP 7779; squirrel joins after hunter appearance and aiming update. Shared round/thermal, female body, outfit, face morph, JPEG portrait and raised rifle state verified.",
+  "squirrel": {
+    "source": "WildMesh3D free Rigged Squirrel",
+    "mesh": "SK_Squirrel",
+    "modelScale": 1.15,
+    "approximateTotalLengthCm": 49,
+    "approximateBodyLengthCm": 23.4,
+    "approximateTailLengthCm": 23.6,
+    "collisionRadiusCm": 7,
+    "collisionHalfHeightCm": 12,
+    "approximateEyeHeightCm": 13,
+    "animation": "Native walking/bounding gait, four-paw IK, spine/head/ears/blink, segmented tail, climb and leap poses",
+    "fur": "Bone-attached tapered geometry and original colour atlas",
+    "visualScope": "First realism pass; cinematic groom and authored/captured animal animation not included"
+  },
+  "screenshots": "native/Preview",
+  "temporaryToolDownloads": "Portable Blender files remain in native/AssetDownloads because automatic approval blocked cleanup",
+  "forest": {
+    "blendSwapPacks": 4,
+    "license": "CC0 geometry and shipped photographic textures; see forest provenance",
+    "nativeVegetationLayers": 19,
+    "importedMeshes": 19,
+    "lodsPerMesh": 4,
+    "grassHeightCm": [
+      23,
+      30,
+      16
+    ],
+    "matureTreeHeightMeters": [
+      14.9,
+      31
+    ],
+    "layoutSeed": 84672,
+    "ground": "Photographic leaf litter with color, normal and roughness maps",
+    "materials": "Masked two-sided foliage, photographic blade/leaf/fern textures, normals, subtle wind, instance variation",
+    "liveForestAssetsResult": "PASS",
+    "treeCollisionResult": "PASS",
+    "visualReview": "Three 1600x900 native Windows package screenshots, camp, understory and forest floor; no material compile errors",
+    "visualScope": "More detailed native forest; further landscape composition and cinematic lighting remain production work",
+    "boundary": "720 collidable timber post/rail instances; separate seeded surrounding woodland and 26m irregular terrain rim",
+    "roots": "Slope-aware planting; pine source root collar buried 460cm before instance scaling",
+    "trunkCollision": "Curved, tapered segmented stems; tilted-cylinder horizontal-radius compensation"
+  },
+  "evidence": {
+    "build": "native/polish-package.log",
+    "automation": "native/polish-automation.log",
+    "smoke": "native/polish-package-smoke.log",
+    "networkHost": "native/polish-net-host.log",
+    "networkClient": "native/polish-net-client.log",
+    "nativeForestRender": "native/forest-package-capture.log",
+    "assetProvenance": "native/Unreal/Wildline/ArtSource/Forest/PROVENANCE.md",
+    "nativeHunterRender": "native/hunter-package-review.log",
+    "nativeTravisRender": "native/travis-package-review.log",
+    "hunterProvenance": "native/Unreal/Wildline/ArtSource/Hunters/PROVENANCE.md",
+    "nativePolishRender": "native/polish-package-review.log",
+    "polishVerification": "native/polish-package-verification.log"
+  },
+  "hunter": {
+    "creator": "Native live 3D preview, male/female, custom/Travis presets, clothing, cap, hair, build, skin and face morph controls",
+    "portrait": "Local PNG/JPEG import, crop/align preview, compact JPEG save and co-op replication",
+    "portraitScope": "Photographic texture projection onto selected head; full head reconstruction is not implemented",
+    "meshes": [
+      "SK_HunterMale",
+      "SK_HunterFemale",
+      "SK_HunterTravis"
+    ],
+    "morphs": [
+      "FaceWidth",
+      "NoseDepth",
+      "SlimBuild"
+    ],
+    "rifle": "Original approximately 110cm sporting bolt-action mesh, separate lift/pull/return/lock bolt animation",
+    "reticle": "Outlined crosshair, mil marks and red center in optical and thermal scope",
+    "logCollision": "12 convex UCX wall hulls; walls block movement/projectiles, hollow tunnel remains open",
+    "assetVerification": "PASS persisted materials and morph shader usage in a fresh Unreal process",
+    "runtimeUV": "UV0 photo projection, UV1 diffuse atlas verified from render buffers",
+    "normalMapScope": "Cloth/boots use mesh normals pending tangent rebuild for diffuse UV1",
+    "rifleAnimation": "Two-hand stock IK with curled fingers; eight walk/run directions and airborne pose; replicated scoped posture; first-person recoil/bob"
+  },
+  "polish": {
+    "climbingCamera": "Outward-facing chase placement; all four species tested at three heights through eight look headings; chase restored on launch",
+    "boundaryContainment": "Visible fence, HUD boundary notice and removal of outward velocity at reserve limit",
+    "launchHeading": "Arrow on squirrel minimap and release/launch prompts",
+    "screenshots": [
+      "native/Preview/PolishHunterGrip.png",
+      "native/Preview/PolishSquirrelClimb.png",
+      "native/Preview/PolishSquirrelOrbit.png",
+      "native/Preview/PolishReserveBoundary.png"
+    ]
+  },
+  "packageExecutableSha256": "34eb76f6b77e79cb7323080994fb1e9c4aa44e427bfa89161b65f9968d2f335d",
+  "mapSha256": "557caad21deb8abbec61f4a3a8878d103b50158754d88a155dbb8094708cab7a"
+}
