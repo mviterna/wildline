@@ -78,7 +78,11 @@ At camp, select **Classic / Blackwood**, **Farm Raid / Peanut Heist**, or **King
 Hunters gather in a log lodge with a recessed stone fireplace, exposed beams,
 a woven rug, weathered picnic table, rocking chairs, bookcase, enamel cookware,
 antique lanterns, scanned firewood and four mounted squirrel trophies on carved
-oak shields. Walk to either weapon rack
+oak shields: grey, fox, red and a black-coated eastern grey, with intact noses,
+different coats, proportions and poses. Five open sash windows look into a
+3D woodland clearing, with oak sills, gathered green curtains and brass rods.
+A field noticeboard, wall clock, peg rail and specimen shelf add detail.
+Walk to either weapon rack
 and press **E** to equip the sporting rifle or pump-action shotgun. The selected
 weapon saves locally and carries into the round; ammunition stays separate.
 Weapon selection is no longer on the menu, and cannot change during a round.

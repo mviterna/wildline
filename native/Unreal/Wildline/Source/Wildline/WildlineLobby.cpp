@@ -8,13 +8,22 @@
 #include "Engine/StaticMesh.h"
 #include "Engine/World.h"
 #include "EngineUtils.h"
+#include "Camera/PlayerCameraManager.h"
+#include "GameFramework/PlayerController.h"
 
 namespace {
 UMaterialInterface* LobbyMat(const TCHAR* Name){return LoadObject<UMaterialInterface>(nullptr,*FString::Printf(TEXT("/Game/Wildline/Lobby/%s.%s"),Name,Name));}
 UMaterialInterface* Bark(){return LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/Wildline/Forest/Materials/M_TreeBark.M_TreeBark"));}
 }
-AWildlineLobby::AWildlineLobby(){RootComponent=CreateDefaultSubobject<USceneComponent>(TEXT("Waiting rooms"));RootComponent->SetMobility(EComponentMobility::Static);}
+AWildlineLobby::AWildlineLobby(){PrimaryActorTick.bCanEverTick=true;PrimaryActorTick.TickInterval=.25f;RootComponent=CreateDefaultSubobject<USceneComponent>(TEXT("Waiting rooms"));RootComponent->SetMobility(EComponentMobility::Static);}
 AWildlineLobby* AWildlineLobby::Find(UWorld* W){for(TActorIterator<AWildlineLobby> It(W);It;++It)return *It;return nullptr;}
+void AWildlineLobby::Tick(float DeltaSeconds){
+    Super::Tick(DeltaSeconds);
+    auto* PC=GetWorld()->GetFirstPlayerController();
+    const FVector Eye=PC&&PC->PlayerCameraManager?PC->PlayerCameraManager->GetCameraLocation()-Centre(false):FVector(0,0,-10000);
+    const bool Visible=FMath::Abs(Eye.X)<760&&FMath::Abs(Eye.Y)<760&&Eye.Z>-50&&Eye.Z<510;
+    if(Visible!=bLodgeSceneryVisible){bLodgeSceneryVisible=Visible;for(auto* C:LodgeScenery)if(C)C->SetVisibility(Visible,true);}
+}
 FVector AWildlineLobby::Centre(bool S){return FVector(S?2400:-2400,-6500,5500);}
 FVector AWildlineLobby::Spawn(bool S,int32 I){return Centre(S)+FVector(S?-180:-420,(I%4)*55-82,S?17:110);}
 FVector AWildlineLobby::Portal(bool S){return Centre(S)+FVector(S?210:440,0,0);}

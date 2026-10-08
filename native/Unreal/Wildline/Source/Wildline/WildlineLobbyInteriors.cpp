@@ -52,18 +52,24 @@ void AWildlineLobby::BuildLodge(){
         Display(I?TEXT("/Game/Wildline/Farm/Meshes/SM_ShotgunAction.SM_ShotgunAction"):TEXT("/Game/Wildline/Hunters/Meshes/SM_RifleBolt.SM_RifleBolt"));
         Sign(I?TEXT("SHOTGUN\nE / EQUIP"):TEXT("RIFLE\nE / EQUIP"),P+FVector(0,-7,205),14,FRotator(0,90,0));
     }
-    // Original squirrel taxidermy retains the licensed coat UVs and glass eyes;
-    // the new carved oak shields replace stretched primitive plaques.
+    // Species differ in coat, cheek/snout proportions, size and mounted pose.
+    const TCHAR* TrophyNames[]={TEXT("SquirrelTrophy"),TEXT("SquirrelTrophyFox"),TEXT("SquirrelTrophyRed"),TEXT("SquirrelTrophyBlack")};
+    const TCHAR* TrophyLabels[]={TEXT("EASTERN GREY SQUIRREL"),TEXT("FOX SQUIRREL"),TEXT("AMERICAN RED SQUIRREL"),TEXT("BLACK EASTERN GREY")};
+    const float TrophyScales[]={6.7f,7.3f,5.8f,6.6f};
+    const float TrophyTurns[]={-98.f,-83.f,-94.f,-78.f};
     for(int32 I=0;I<4;I++){
         const FVector P=O+FVector(-679,-456+I*225,245);
         Model(TEXT("SM_TrophyPlaque"),P,FVector(0,0,92));
-        auto* C=Piece(TEXT("Mounted squirrel taxidermy"),TEXT("Sphere"),P+FVector(23,0,53),FVector(100),nullptr,FRotator(0,-90,0));
-        if(auto* Mesh=LoadObject<UStaticMesh>(nullptr,TEXT("/Game/Wildline/Lobby/SM_SquirrelTrophy.SM_SquirrelTrophy"))){C->SetStaticMesh(Mesh);C->EmptyOverrideMaterials();C->SetRelativeScale3D(FVector(7));C->SetCastShadow(true);}
-        Sign(TEXT("EASTERN GREY SQUIRREL"),P+FVector(12,0,-10),7,FRotator::ZeroRotator);
+        const FString Asset=FString::Printf(TEXT("/Game/Wildline/Lobby/SM_%s.SM_%s"),TrophyNames[I],TrophyNames[I]);
+        if(auto* Mesh=LoadObject<UStaticMesh>(nullptr,*Asset)){
+            auto* C=Piece(TEXT("Mounted squirrel taxidermy"),TEXT("Sphere"),P+FVector(23,0,53),FVector(100),nullptr,FRotator(I==2?4:0,TrophyTurns[I],I==1?-4:0));
+            C->SetStaticMesh(Mesh);C->EmptyOverrideMaterials();C->SetRelativeScale3D(FVector(TrophyScales[I]));C->SetCastShadow(true);
+        }else UE_LOG(LogTemp,Error,TEXT("Missing waiting room model: %s"),*Asset);
+        Sign(TrophyLabels[I],P+FVector(12,0,-10),7,FRotator::ZeroRotator);
     }
-    Model(TEXT("SM_hanging_picture_frame_01"),O+FVector(683,360,242),FVector(0,0,102),FRotator(0,90,0));
-    Model(TEXT("SM_hanging_picture_frame_01"),O+FVector(-360,686,243),FVector(0,0,90),FRotator(0,180,0));
+    Model(TEXT("SM_hanging_picture_frame_01"),O+FVector(683,440,242),FVector(0,0,102),FRotator(0,90,0));
     Sign(TEXT("BLACKWOOD HUNTING LODGE"),O+FVector(674,0,411),22);
+    BuildLodgeDetails();
 }
 
 void AWildlineLobby::BuildTree(){

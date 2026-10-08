@@ -738,5 +738,68 @@
     "alpha": "OPAQUE",
     "two_sided": false,
     "source": "https://polyhaven.com/a/jolcham_oak_bark_01"
+  },
+  "M_WindowOak": {
+    "color": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_diff_4k.jpg",
+    "normal": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_rough_4k.jpg",
+    "factor": [
+      2.1,
+      1.6,
+      1.1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/dark_wooden_planks"
+  },
+  "M_CurtainFabric": {
+    "color": "Photoreal\\quatrefoil_jacquard_fabric\\quatrefoil_jacquard_fabric_diff_4k.jpg",
+    "normal": "Photoreal\\quatrefoil_jacquard_fabric\\quatrefoil_jacquard_fabric_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\quatrefoil_jacquard_fabric\\quatrefoil_jacquard_fabric_rough_4k.jpg",
+    "factor": [
+      1.15,
+      1.95,
+      0.95,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/quatrefoil_jacquard_fabric",
+    "desaturate": true
+  },
+  "M_LodgeDetailBrass": {
+    "factor": [
+      0.43,
+      0.25,
+      0.07,
+      1
+    ],
+    "roughness": 0.3,
+    "metallic": 0.75
+  },
+  "M_ClockIvory": {
+    "factor": [
+      0.76,
+      0.68,
+      0.48,
+      1
+    ],
+    "roughness": 0.85,
+    "metallic": 0
+  },
+  "M_ClockInk": {
+    "factor": [
+      0.026,
+      0.032,
+      0.024,
+      1
+    ],
+    "roughness": 0.7,
+    "metallic": 0
   }
 }

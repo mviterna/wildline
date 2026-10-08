@@ -80,12 +80,13 @@ void AWildlineController::RunLobbyReview(){
     auto View=[this](bool Animal,FVector Position,FVector Target){auto* Cam=GetWorld()->SpawnActor<ACameraActor>(AWildlineLobby::Centre(Animal)+Position,FRotator::ZeroRotator);Cam->SetActorRotation((AWildlineLobby::Centre(Animal)+Target-Cam->GetActorLocation()).Rotation());Cam->GetCameraComponent()->FieldOfView=83;SetViewTarget(Cam);};
     At(2,[this](){EnterWaitingRoom(false);});At(6,[Shot](){Shot(TEXT("LobbyHunterPlayer.png"));});
     At(7,[this,View](){GetHUD()->bShowHUD=false;View(false,FVector(500,-480,260),FVector(-190,250,220));});At(11,[Shot](){Shot(TEXT("LobbyHunterRoom.png"));});
-    At(12,[this,View](){View(false,FVector(-380,-15,280),FVector(-680,0,310));});At(16,[Shot](){Shot(TEXT("LobbyTrophies.png"));});
+    At(12,[this,View](){View(false,FVector(-130,-115,300),FVector(-680,-115,298));});At(16,[Shot](){Shot(TEXT("LobbyTrophies.png"));});
     At(17,[this](){EnterWaitingRoom(true);SetViewTarget(GetPawn());GetHUD()->bShowHUD=true;SetControlRotation(FRotator(5,0,0));});At(21,[Shot](){Shot(TEXT("LobbySquirrelPlayer.png"));});
     At(22,[this,View](){GetHUD()->bShowHUD=false;View(true,FVector(-315,-285,160),FVector(70,70,160));});At(26,[Shot](){Shot(TEXT("LobbySquirrelRoom.png"));});
     At(27,[this,View](){EnterWaitingRoom(false);GetHUD()->bShowHUD=false;View(false,FVector(-60,-230,210),FVector(-60,-600,140));});At(31,[Shot](){Shot(TEXT("LobbyWeaponRack.png"));});
     At(32,[this,View](){EnterWaitingRoom(true);GetHUD()->bShowHUD=false;View(true,FVector(-50,-80,90),FVector(-220,-275,25));});At(36,[Shot](){Shot(TEXT("LobbyAcornPantry.png"));});
-    At(37,[](){FPlatformMisc::RequestExit(false);});
+    At(37,[this,View](){EnterWaitingRoom(false);GetHUD()->bShowHUD=false;View(false,FVector(-410,-410,235),FVector(460,690,260));});At(41,[Shot](){Shot(TEXT("LobbyHunterWindows.png"));});
+    At(42,[](){FPlatformMisc::RequestExit(false);});
 }
 
 void AWildlineController::RunLobbyNetworkProbe(){

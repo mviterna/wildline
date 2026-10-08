@@ -3,7 +3,7 @@
 Blender --background --python convert_lobby_assets.py. Source glTF UVs, normals
 and material slots are preserved. Export origins are floor-centred in metres.
 """
-import bpy, json, math, random
+import bpy, bmesh, json, math, random
 from pathlib import Path
 from mathutils import Vector
 ROOT=Path(__file__).resolve().parent.parent/'ArtSource/Lobby'
@@ -104,7 +104,7 @@ def log(name,axis,position,length,radius,m,seed):
             uv.data[li].uv=(z/slices*length/2,j/n*.65)
     return o
 
-def architecture():
+def architecture(lodge_only=False):
     reset();wood=mat('M_LodgeTimber','dark_wooden_planks');floor=mat('M_LodgeFloor','wood_floor_worn')
     stone=mat('M_HearthStone','rustic_stone_wall');bark=mat('M_HollowBark','jolcham_oak_bark_01');litter=mat('M_HollowFloor','forest_leaves_03');cloth=mat('M_LodgeFabric','quatrefoil_jacquard_fabric')
     objects=[]
@@ -115,8 +115,32 @@ def architecture():
     for row in range(21):
         z=.12+row*.235
         for side in [-1,1]:
-            objects.append(log('Weathered interlocking log X','X',(0,side*7.04,z),14.4,.155,wood,row*11+side))
-            objects.append(log('Weathered interlocking log Y','Y',(side*7.04,0,z),14.25,.155,wood,row*17+side))
+            # Cut actual window apertures, including the radius of each log.
+            # FBX flips Y; both end walls use the same two opening positions.
+            x_gaps=[(-5.15,-2.95),(3.45,5.65)] if 1.55<z+.155 and z-.155<3.55 else []
+            y_gaps=[(-2.35,-.15)] if side==1 and 1.55<z+.155 and z-.155<3.55 else []
+            for axis,gaps,fixed,half in [('X',x_gaps,side*7.04,7.2),('Y',y_gaps,side*7.04,7.125)]:
+                cursor=-half
+                for a,b in gaps+[(half,half)]:
+                    if a>cursor:
+                        mid=(cursor+a)/2
+                        p=(mid,fixed,z) if axis=='X' else (fixed,mid,z)
+                        objects.append(log('Window-cut interlocking log '+axis,axis,p,a-cursor,.155,wood,row*17+side))
+                    cursor=b
+                # Retain the part of a boundary log above/below the rectangular
+                # opening, so daylight cannot leak around the oak trim.
+                for a,b in gaps:
+                    for boundary,below in [(1.55,True),(3.55,False)]:
+                        if (below and z-.17>=boundary) or (not below and z+.17<=boundary):continue
+                        mid=(a+b)/2;p=(mid,fixed,z) if axis=='X' else (fixed,mid,z)
+                        fragment=log('Window lintel log edge',axis,p,b-a,.155,wood,row*17+side)
+                        bm=bmesh.new();bm.from_mesh(fragment.data)
+                        bmesh.ops.bisect_plane(bm,geom=list(bm.verts)+list(bm.edges)+list(bm.faces),dist=.000001,
+                            plane_co=(0,0,boundary),plane_no=(0,0,1),clear_outer=below,clear_inner=not below)
+                        bmesh.ops.holes_fill(bm,edges=[e for e in bm.edges if e.is_boundary])
+                        bm.to_mesh(fragment.data);bm.free()
+                        if len(fragment.data.vertices):objects.append(fragment)
+                        else:bpy.data.objects.remove(fragment,do_unlink=True)
     for x in [-5.9,-3,0,3,5.9]:objects.append(box('Chamfered ceiling joist',(x,0,4.54),(.26,14.15,.36),wood,.04))
     objects.append(box('Ceiling panelling',(0,0,4.86),(14.35,14.35,.12),wood,.02))
     # Stone hearth built from irregular masonry, with actual recess and chimney.
@@ -129,6 +153,7 @@ def architecture():
     objects.append(box('Slate hearth slab',(1,-6.14,.06),(3.85,1.70,.12),stone,.035))
     objects.append(box('Weathered mantel',(1,-6.28,1.80),(3.85,.84,.19),wood,.035))
     export('SM_LodgeArchitecture',objects,False)
+    if lodge_only:return
     # A continuous sculpted hollow trunk replaces the old polygon of flat panels.
     reset();bark=mat('M_HollowBark','jolcham_oak_bark_01');litter=mat('M_HollowFloor','forest_leaves_03');wood=mat('M_LodgeTimber','dark_wooden_planks')
     verts=[];faces=[];n=256;slices=100
@@ -163,7 +188,11 @@ def architecture():
     mod=o.modifiers.new('Rounded moulding','BEVEL');mod.width=.012;mod.segments=4;export('SM_TrophyPlaque',[o],False)
 
 import sys
-if '--architecture-only' in sys.argv:
+if '--lodge-only' in sys.argv:
+    MATERIALS=json.loads((ROOT/'material-index.json').read_text())
+    REPORT=[r for r in json.loads((ROOT/'model-index.json').read_text()) if r['name']!='SM_LodgeArchitecture']
+    architecture(lodge_only=True)
+elif '--architecture-only' in sys.argv:
     MATERIALS=json.loads((ROOT/'material-index.json').read_text())
     REPORT=[r for r in json.loads((ROOT/'model-index.json').read_text()) if r['name'] not in ['SM_LodgeArchitecture','SM_HollowArchitecture','SM_LodgeRug','SM_TrophyPlaque']]
     architecture()

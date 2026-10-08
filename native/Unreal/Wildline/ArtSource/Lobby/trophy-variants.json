@@ -1,0 +1,42 @@
+[
+  {
+    "name": "SquirrelTrophy",
+    "vertices": 8703,
+    "proportions": [
+      1,
+      1,
+      1
+    ],
+    "nose_included": true
+  },
+  {
+    "name": "SquirrelTrophyFox",
+    "vertices": 8703,
+    "proportions": [
+      1.15,
+      1.1,
+      1.04
+    ],
+    "nose_included": true
+  },
+  {
+    "name": "SquirrelTrophyRed",
+    "vertices": 8703,
+    "proportions": [
+      0.86,
+      0.92,
+      0.95
+    ],
+    "nose_included": true
+  },
+  {
+    "name": "SquirrelTrophyBlack",
+    "vertices": 8703,
+    "proportions": [
+      0.96,
+      1.02,
+      1.05
+    ],
+    "nose_included": true
+  }
+]

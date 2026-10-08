@@ -304,10 +304,10 @@
     "name": "SM_LodgeArchitecture",
     "dimensions_m": [
       14.412060737609863,
-      14.411846160888672,
-      5.047430515289307
+      14.412060737609863,
+      5.047017574310303
     ],
-    "triangles": 373944,
+    "triangles": 589464,
     "materials": [
       "M_HearthStone",
       "M_LodgeFloor",
@@ -350,6 +350,47 @@
     "triangles": 568,
     "materials": [
       "M_LodgeTimber"
+    ]
+  },
+  {
+    "name": "SM_LodgeWindowDressings",
+    "dimensions_m": [
+      0.5999999642372131,
+      3.2250001430511475,
+      2.4800002574920654
+    ],
+    "triangles": 25676,
+    "materials": [
+      "M_CurtainFabric",
+      "M_LodgeDetailBrass",
+      "M_WindowOak"
+    ]
+  },
+  {
+    "name": "SM_LodgeClock",
+    "dimensions_m": [
+      0.11600001156330109,
+      0.6800000071525574,
+      0.6800000071525574
+    ],
+    "triangles": 13948,
+    "materials": [
+      "M_ClockInk",
+      "M_ClockIvory",
+      "M_WindowOak"
+    ]
+  },
+  {
+    "name": "SM_LodgePegRail",
+    "dimensions_m": [
+      0.18399998545646667,
+      2.5,
+      0.1899999976158142
+    ],
+    "triangles": 5888,
+    "materials": [
+      "M_LodgeDetailBrass",
+      "M_WindowOak"
     ]
   }
 ]

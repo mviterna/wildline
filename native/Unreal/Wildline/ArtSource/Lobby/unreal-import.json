@@ -301,20 +301,6 @@
     ]
   },
   {
-    "name": "SM_LodgeArchitecture",
-    "slots": [
-      "M_LodgeTimber",
-      "M_LodgeFloor",
-      "M_HearthStone"
-    ],
-    "nanite": true,
-    "extent_cm": [
-      720.6030578613281,
-      720.59228515625,
-      252.37153887748718
-    ]
-  },
-  {
     "name": "SM_HollowArchitecture",
     "slots": [
       "M_HollowBark",
@@ -350,6 +336,61 @@
       2.250003733223366,
       42.90796661376953,
       51.813271686434746
+    ]
+  },
+  {
+    "name": "SM_LodgeWindowDressings",
+    "slots": [
+      "M_LodgeDetailBrass",
+      "M_WindowOak",
+      "M_CurtainFabric"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      30.00001096725464,
+      161.25000762939453,
+      124.00000762939453
+    ]
+  },
+  {
+    "name": "SM_LodgeClock",
+    "slots": [
+      "M_WindowOak",
+      "M_ClockInk",
+      "M_ClockIvory"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      5.80000144329631,
+      34.0,
+      34.0
+    ]
+  },
+  {
+    "name": "SM_LodgePegRail",
+    "slots": [
+      "M_LodgeDetailBrass",
+      "M_WindowOak"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      9.200008978607912,
+      125.0,
+      9.5
+    ]
+  },
+  {
+    "name": "SM_LodgeArchitecture",
+    "slots": [
+      "M_LodgeTimber",
+      "M_LodgeFloor",
+      "M_HearthStone"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      720.6030578613281,
+      720.60302734375,
+      252.35087847709656
     ]
   }
 ]

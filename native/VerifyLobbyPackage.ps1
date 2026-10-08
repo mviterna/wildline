@@ -36,7 +36,7 @@ try{
         if($taskP.ExitCode -ne 0){throw 'Lobby render review failed.'}
         $taskLog=Get-Content (Join-Path $PSScriptRoot 'lobby-review.log') -Raw
         if($taskLog -match 'LogMaterial: Error|LogShaderCompilers: Error|Failed to compile Material|Missing waiting room model|Fatal error'){throw 'Lobby render has material or asset errors.'}
-        foreach($taskName in @('LobbyHunterPlayer.png','LobbyHunterRoom.png','LobbyTrophies.png','LobbySquirrelPlayer.png','LobbySquirrelRoom.png','LobbyWeaponRack.png','LobbyAcornPantry.png')){
+        foreach($taskName in @('LobbyHunterPlayer.png','LobbyHunterRoom.png','LobbyTrophies.png','LobbySquirrelPlayer.png','LobbySquirrelRoom.png','LobbyWeaponRack.png','LobbyAcornPantry.png','LobbyHunterWindows.png')){
             $taskShot=Join-Path $PSScriptRoot "Unreal/Wildline/Saved/LobbyProbes/review/Saved/Screenshots/Windows/$taskName"
             if(!(Test-Path -LiteralPath $taskShot)){throw "Missing screenshot: $taskName"}
             if((Get-Item -LiteralPath $taskShot).LastWriteTime -lt $taskP.StartTime){throw "Stale screenshot: $taskName"}

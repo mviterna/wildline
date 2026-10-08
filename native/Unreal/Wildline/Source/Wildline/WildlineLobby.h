@@ -5,6 +5,7 @@
 class UStaticMeshComponent;
 class UMaterialInterface;
 class UStaticMesh;
+class USceneComponent;
 
 // Both interiors are built deterministically on every peer, above the reserve.
 // Only readiness/player state replicates; decorative components need no network traffic.
@@ -14,6 +15,7 @@ class WILDLINE_API AWildlineLobby : public AActor {
 public:
     AWildlineLobby();
     void BeginPlay() override;
+    void Tick(float DeltaSeconds) override;
     static AWildlineLobby* Find(UWorld* World);
     static FVector Centre(bool Squirrel);
     static FVector Spawn(bool Squirrel,int32 Index=0);
@@ -23,11 +25,14 @@ public:
     static FVector Rack(int32 Weapon);
     UPROPERTY() TArray<UStaticMeshComponent*> Props;
 private:
+    UPROPERTY() TArray<USceneComponent*> LodgeScenery;
+    bool bLodgeSceneryVisible=false;
     UStaticMeshComponent* Piece(const TCHAR* Name,const TCHAR* Shape,FVector Position,FVector Size,UMaterialInterface* Material,FRotator Rotation=FRotator::ZeroRotator,bool Collision=false);
     UStaticMeshComponent* Model(const TCHAR* Asset,FVector Position,FVector DesiredSize=FVector::ZeroVector,FRotator Rotation=FRotator::ZeroRotator,bool Collision=false);
     void Sign(const FString& Text,FVector Position,float Size,FRotator Rotation=FRotator(0,180,0));
     void Light(FVector Position,FLinearColor Color,float Intensity,float Radius,bool Shadows=false);
     void BuildLodge();
+    void BuildLodgeDetails();
     void BuildTree();
     void BuildPortal(bool Squirrel);
 };
