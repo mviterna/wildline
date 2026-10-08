@@ -50,15 +50,35 @@ bool FWildlineForageTest::RunTest(const FString& Parameters){
     return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWildlineTravisTest,"Wildline.Hunters.TravisPreset",EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter)
-bool FWildlineTravisTest::RunTest(const FString& Parameters){
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWildlinePhotoHuntersTest,"Wildline.Hunters.PhotoPresets",EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter)
+bool FWildlinePhotoHuntersTest::RunTest(const FString& Parameters){
     auto P=FWildlineHunterProfile::Travis();
-    TestEqual(TEXT("Travis is a named preset"),P.Preset,1);
-    TestTrue(TEXT("Slim modern starting appearance"),P.Body==0&&P.Outfit==1&&P.Slimness>.7f&&!P.bCap&&P.bBeard&&!P.bUsePhoto);
-    P.Outfit=2;P.Slimness=.2f;P.FaceWidth=-.4f;P.bCap=true;P.bBeard=false;P.Clamp();
-    TestTrue(TEXT("Editing keeps preset identity and accepts independent appearance changes"),P.Preset==1&&P.Outfit==2&&P.Slimness==.2f&&P.FaceWidth==-.4f&&P.bCap&&!P.bBeard);
-    P.Preset=999;P.Slimness=10;P.Clamp();TestEqual(TEXT("Invalid preset clamps"),P.Preset,1);TestEqual(TEXT("Slimness bounded"),P.Slimness,1.f);
-    const auto Reset=FWildlineHunterProfile::Travis();TestTrue(TEXT("Reset creates a fresh copy of preset values"),Reset.Slimness>.7f&&Reset.Outfit==1&&Reset.bBeard);
+    TestTrue(TEXT("Travis uses the named photo head with no upload or extra beard"),P.Preset==1&&P.IsPhotoPreset()&&!P.bBeard&&!P.bUsePhoto);
+    P.Outfit=2;P.Slimness=.2f;P.FaceWidth=-.4f;P.bCap=true;P.Clamp();
+    TestTrue(TEXT("Appearance edits retain Travis"),P.Preset==1&&P.Outfit==2&&P.Slimness==.2f&&P.FaceWidth==-.4f&&P.bCap);
+    P.Preset=2;P.bBeard=true;P.Clamp();
+    TestTrue(TEXT("Saved Travis 2 migrates to Travis, preserving customization"),P.Preset==1&&P.Outfit==2&&P.Slimness==.2f&&!P.bBeard);
+    auto E=FWildlineHunterProfile::Ethan();E.Clamp();
+    TestTrue(TEXT("Ethan has a distinct stable ID and a built-in photo"),E.Preset==3&&E.IsPhotoPreset()&&!E.bUsePhoto&&!E.bBeard);
+    E.Outfit=0;E.Slimness=.3f;E.Clamp();
+    TestTrue(TEXT("Ethan remains selected after customization"),E.Preset==3&&E.Outfit==0&&E.Slimness==.3f);
+    TestEqual(TEXT("Ethan uses the third visible option"),E.PresetOptionIndex(),2);
+    TestEqual(TEXT("Travis uses the second visible option"),P.PresetOptionIndex(),1);
+    E.Body=1;E.Clamp();TestFalse(TEXT("Female body uses the custom head controls"),E.IsPhotoPreset());
+    auto G=FWildlineHunterProfile::Greyson();G.Clamp();
+    TestTrue(TEXT("Greyson has a distinct stable ID and a built-in photo"),G.Preset==4&&G.IsPhotoPreset()&&!G.bUsePhoto&&!G.bBeard);
+    TestEqual(TEXT("Greyson follows Ethan in the visible options"),G.PresetOptionIndex(),3);
+    E.Body=0;
+    TestTrue(TEXT("Ethan is 30 percent shorter than his previous 102 cm height"),FMath::IsNearlyEqual(E.HeightScale()*174.5f,102.f*.7f,.01f));
+    TestTrue(TEXT("Greyson is 20 percent shorter than his previous 138 cm height"),FMath::IsNearlyEqual(G.HeightScale()*174.5f,138.f*.8f,.01f));
+    TestEqual(TEXT("Travis retains adult height"),P.HeightScale(),1.f);
+    auto Female=G;Female.Body=1;TestEqual(TEXT("Custom female body retains its original height"),Female.HeightScale(),1.f);
+    TestTrue(TEXT("Both kids have smaller hands and feet relative to their bodies"),E.HandScale()<G.HandScale()&&G.HandScale()<1.f&&E.FootScale()<G.FootScale()&&G.FootScale()<1.f);
+    TestTrue(TEXT("Adult proportions remain unchanged"),P.HandScale()==1.f&&P.FootScale()==1.f&&Female.HandScale()==1.f&&Female.FootScale()==1.f);
+    G.Outfit=2;G.Slimness=.4f;G.FaceWidth=.2f;G.bCap=true;G.bBeard=true;G.Clamp();
+    TestTrue(TEXT("Greyson customization retains the photo preset without an extra beard"),G.Preset==4&&G.Outfit==2&&G.Slimness==.4f&&G.FaceWidth==.2f&&G.bCap&&!G.bBeard);
+    P.Preset=999;P.Slimness=10;P.Clamp();TestEqual(TEXT("Invalid preset clamps"),P.Preset,4);TestEqual(TEXT("Slimness bounded"),P.Slimness,1.f);
+    const auto Reset=FWildlineHunterProfile::Travis();TestTrue(TEXT("Reset restores photo preset defaults"),Reset.Slimness>.7f&&Reset.Outfit==1&&!Reset.bBeard);
     TestEqual(TEXT("Existing hunter default stays custom"),FWildlineHunterProfile().Preset,0);return true;
 }
 

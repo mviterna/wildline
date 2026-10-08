@@ -11,6 +11,7 @@
 #include "Engine/StaticMesh.h"
 #include "WildlineHUD.h"
 #include "WildlineMenu.h"
+#include "WildlineIntro.h"
 #include "WildlineHunterCreator.h"
 #include "WildlineUserSettings.h"
 #include "GameFramework/GameSession.h"
@@ -67,7 +68,7 @@ void AWildlineGameMode::BeginPlay(){Super::BeginPlay();
         }
     }
 }
-void AWildlineGameMode::Tick(float Delta){Super::Tick(Delta);auto* S=GetGameState<AWildlineGameState>();if(S&&S->bRoundStarted&&!S->Winner&&S->RoundRemaining()<=0)S->Winner=WildlineRules::TimeoutWinner(S->ExpeditionMode);}
+void AWildlineGameMode::Tick(float Delta){Super::Tick(Delta);auto* S=GetGameState<AWildlineGameState>();if(S&&S->bRoundStarted&&!S->Winner&&S->RoundRemaining()<=0)S->Winner=S->MatchConfig.TimeWinner?S->MatchConfig.TimeWinner:WildlineRules::TimeoutWinner(S->ExpeditionMode);}
 void AWildlineGameMode::PickRole(APlayerController* PC,bool bAnimal){
     if(!PC)return;
     if(auto* P=Cast<AWildlineCharacter>(PC->GetPawn());P&&P->bSquirrel==bAnimal&&GetGameState<AWildlineGameState>()->bRoundStarted)return;
@@ -77,12 +78,18 @@ void AWildlineGameMode::PickRole(APlayerController* PC,bool bAnimal){
     auto* S=GetGameState<AWildlineGameState>();if(S&&!S->bRoundStarted){S->bRoundStarted=true;S->RoundStartedAt=S->GetServerWorldTimeSeconds();}RefreshBots();
 }
 void AWildlineGameMode::RefreshBots(){
-    if(GetWorld()->bIsTearingDown)return;
-    TArray<AWildlineCharacter*> Existing;int32 Hunters=0,Animals=0;
-    for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It){if(It->bPreviewHunter)continue;if(It->bBot)Existing.Add(*It);else if(It->bSquirrel)Animals++;else Hunters++;}
-    for(auto* B:Existing){B->ReturnCarriedPeanuts();if(B->Controller)B->Controller->Destroy();B->Destroy();}
-    auto Spawn=[&](bool Animal,int32 Index){FVector P=SpawnLocation(Animal,Index+1);const FTransform Transform(FRotator::ZeroRotator,P);auto* B=GetWorld()->SpawnActorDeferred<AWildlineCharacter>(AWildlineCharacter::StaticClass(),Transform,nullptr,nullptr,ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn);if(B){B->bSquirrel=Animal;B->bBot=true;UGameplayStatics::FinishSpawningActor(B,Transform);if(!Animal&&GetGameState<AWildlineGameState>()->ExpeditionMode==WildlineRules::FarmMode)B->SelectWeapon(WildlineRules::ShotgunWeapon);}};
-    if(Hunters==0)Spawn(false,0);for(int32 I=Animals;I<3;I++)Spawn(true,I);
+    if(GetWorld()->bIsTearingDown)return;const auto* State=GetGameState<AWildlineGameState>();if(!State)return;
+    const auto& C=State->MatchConfig;
+    TArray<AWildlineCharacter*> Existing;
+    for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It)if(It->bBot&&!It->bPreviewHunter)Existing.Add(*It);
+    // Human joins/leaves retain existing bots and their carried food and health.
+    for(auto* B:Existing){const int32 Count=B->bSquirrel?C.SquirrelBots:C.DefenderBots;if(B->BotSlot<0||B->BotSlot>=Count){B->ReturnCarriedPeanuts();if(B->Controller)B->Controller->Destroy();B->Destroy();}}
+    for(bool Animal:{false,true})for(int32 I=0;I<(Animal?C.SquirrelBots:C.DefenderBots);I++){
+        const auto& Setup=Animal?C.Squirrels[I]:C.Defenders[I];
+        AWildlineCharacter* B=nullptr;for(auto* E:Existing)if(IsValid(E)&&E->bSquirrel==Animal&&E->BotSlot==I){B=E;break;}
+        if(!B){const FTransform T(FRotator::ZeroRotator,SpawnLocation(Animal,I+1));B=GetWorld()->SpawnActorDeferred<AWildlineCharacter>(AWildlineCharacter::StaticClass(),T,nullptr,nullptr,ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn);if(!B)continue;B->bSquirrel=Animal;B->bBot=true;B->BotSlot=I;B->AIDifficulty=Setup.Difficulty;UGameplayStatics::FinishSpawningActor(B,T);}
+        B->AIDifficulty=Setup.Difficulty;if(!Animal)B->SelectWeapon(Setup.Weapon);B->ForceNetUpdate();
+    }
 }
 FVector AWildlineGameMode::SpawnLocation(bool Animal,int32 Index) const{
     const auto* Forest=AWildlineWorld::Find(GetWorld());const bool Farm=Forest&&Forest->bFarm;
@@ -93,11 +100,11 @@ FVector AWildlineGameMode::SpawnLocation(bool Animal,int32 Index) const{
 void AWildlineGameMode::Logout(AController* Exiting){if(Exiting)if(auto* P=Cast<AWildlineCharacter>(Exiting->GetPawn()))P->ReturnCarriedPeanuts();Super::Logout(Exiting);RefreshBots();}
 void AWildlineGameMode::RecordKill(AWildlineCharacter* Victim,AController* Hunter){
     auto* S=GetGameState<AWildlineGameState>();if(!S||S->Winner)return;S->HunterKills++;if(S->HunterKills>=S->MatchConfig.DefenderGoal)S->Winner=1;
-    FTimerHandle Handle;const TWeakObjectPtr<AWildlineCharacter> Weak=Victim;GetWorldTimerManager().SetTimer(Handle,FTimerDelegate::CreateWeakLambda(this,[this,Weak](){RespawnAnimal(Weak);}),7.f,false);
+    FTimerHandle Handle;const TWeakObjectPtr<AWildlineCharacter> Weak=Victim;const float Expected=Victim->RespawnAt;GetWorldTimerManager().SetTimer(Handle,FTimerDelegate::CreateWeakLambda(this,[this,Weak,Expected](){if(Weak.IsValid()&&Weak->bDead&&FMath::IsNearlyEqual(Weak->RespawnAt,Expected))RespawnAnimal(Weak);}),S->MatchConfig.RespawnSeconds,false);
 }
-void AWildlineGameMode::RespawnAnimal(TWeakObjectPtr<AWildlineCharacter> Weak){auto* P=Weak.Get();if(!P)return;auto* S=GetGameState<AWildlineGameState>();if(S&&S->Winner)return;P->bDead=false;P->Health=40;P->Bag=0;P->CourseCheckpoint=0;P->CourseLane=-1;P->Stamina=100;P->RespawnAt=0;P->TreeIndex=INDEX_NONE;FVector Pos=SpawnLocation(true);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}
+void AWildlineGameMode::RespawnAnimal(TWeakObjectPtr<AWildlineCharacter> Weak){auto* P=Weak.Get();if(!P)return;auto* S=GetGameState<AWildlineGameState>();if(S&&S->Winner)return;P->bDead=false;P->Health=S?S->MatchConfig.SquirrelHealth:40;P->ProtectedUntil=P->ServerTime()+(S?S->MatchConfig.SpawnProtectionSeconds:0);P->Bag=0;P->CourseCheckpoint=0;P->CourseLane=-1;P->Stamina=100;P->RespawnAt=0;P->TreeIndex=INDEX_NONE;FVector Pos=SpawnLocation(true,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}
 void AWildlineGameMode::Deposit(int32 Count){auto* S=GetGameState<AWildlineGameState>();if(!S||S->Winner||!S->bRoundStarted)return;S->StoredAcorns+=Count;if(S->StoredAcorns>=S->MatchConfig.SquirrelGoal)S->Winner=2;}
-void AWildlineGameMode::RestartRound(){auto* S=GetGameState<AWildlineGameState>();if(!S||!S->Winner)return;if(auto* Settings=UWildlineUserSettings::Get())S->MatchConfig=Settings->ConfigForMode(S->ExpeditionMode);S->MatchConfig.Clamp();if(GameSession)GameSession->MaxPlayers=S->MatchConfig.MaxPlayers;S->HunterKills=0;S->StoredAcorns=0;S->TakenPeanuts.Empty();S->Winner=0;S->RoundStartedAt=S->GetServerWorldTimeSeconds();for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It){auto* P=*It;P->bDead=false;P->Health=P->bSquirrel?40:100;P->RifleAmmo=5;P->ShotgunAmmo=2;P->Ammo=WildlineRules::WeaponCapacity(P->SelectedWeapon);P->Bag=0;P->BagPeanuts.Empty();P->CourseCheckpoint=0;P->CourseLane=-1;P->FeederVisits=0;P->Collected.Empty();P->ThermalReadyAt=P->ThermalUntil=P->ReloadUntil=P->RespawnAt=0;P->TreeIndex=INDEX_NONE;P->Stamina=100;P->ResetBotAwareness();FVector Pos=SpawnLocation(P->bSquirrel);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();}}
+void AWildlineGameMode::RestartRound(){auto* S=GetGameState<AWildlineGameState>();if(!S||!S->Winner)return;if(auto* Settings=UWildlineUserSettings::Get())S->MatchConfig=Settings->ConfigForMode(S->ExpeditionMode);S->MatchConfig.Clamp();if(GameSession)GameSession->MaxPlayers=S->MatchConfig.MaxPlayers;S->HunterKills=0;S->StoredAcorns=0;S->TakenPeanuts.Empty();S->Winner=0;S->RoundStartedAt=S->GetServerWorldTimeSeconds();for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It){auto* P=*It;P->bDead=false;P->Health=P->bSquirrel?S->MatchConfig.SquirrelHealth:100;P->ProtectedUntil=P->bSquirrel?P->ServerTime()+S->MatchConfig.SpawnProtectionSeconds:0;P->RifleAmmo=5;P->ShotgunAmmo=2;P->Ammo=WildlineRules::WeaponCapacity(P->SelectedWeapon);P->Bag=0;P->BagPeanuts.Empty();P->CourseCheckpoint=0;P->CourseLane=-1;P->FeederVisits=0;P->Collected.Empty();P->ThermalReadyAt=P->ThermalUntil=P->ReloadUntil=P->RespawnAt=0;P->TreeIndex=INDEX_NONE;P->Stamina=100;P->ResetBotAwareness();FVector Pos=SpawnLocation(P->bSquirrel,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}RefreshBots();S->ForceNetUpdate();}
 
 AWildlineController::AWildlineController(){bShowMouseCursor=true;}
 void AWildlineController::BeginPlay(){
@@ -110,6 +117,9 @@ void AWildlineController::BeginPlay(){
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHillNetProbe")))RunHillNetworkProbe();
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHillSmoke"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunHillSmokeTest,2.f,false);}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineFarmSmoke"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunFarmSmokeTest,2.f,false);}
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineConfigSmoke"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[this](){RunConfigSmokeTest();}),2.f,false);}
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineConfigNetProbe")))RunConfigNetworkProbe();
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineConfigReview")))RunConfigReview();
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineFarmBotProbe"))){
         ChooseRole(false);
         FTimerHandle Probe;GetWorldTimerManager().SetTimer(Probe,FTimerDelegate::CreateWeakLambda(this,[this](){
@@ -330,25 +340,43 @@ void AWildlineController::BeginPlay(){
         auto PreviousFeet=MakeShared<TArray<FVector>>();PreviousFeet->SetNum(2);auto PreviousPlant=MakeShared<TArray<float>>();PreviousPlant->Init(0.f,2);
         auto PreviousSerial=MakeShared<TArray<int32>>();PreviousSerial->Init(-1,2);
         auto MovingPlants=MakeShared<int32>(0);
+        auto PreviousScale=MakeShared<float>(0);auto PlantWarmupUntil=MakeShared<float>(0);
         auto LastSampleFrame=MakeShared<uint64>(MAX_uint64);
         auto Check=[Passed](bool Ok,const TCHAR* Message){*Passed&=Ok;UE_LOG(LogTemp,Display,TEXT("HUNTER ANIMATION %s: %s"),Ok?TEXT("PASS"):TEXT("FAIL"),Message);};
         At(3,[this,Check](){
             ChooseRole(false);GetWorld()->GetGameState<AWildlineGameState>()->bRoundStarted=false;if(GetHUD())GetHUD()->bShowHUD=false;
             auto* P=Cast<AWildlineCharacter>(GetPawn());P->bThirdPerson=true;P->HunterProfile=FWildlineHunterProfile::Travis();P->bProfileSubmitted=true;P->ApplyHunterProfile();SetControlRotation(FRotator::ZeroRotator);
-            P->SetActorLocation(FVector(-900,1400,WildlineRules::Ground(-900,1400)+100));P->GetCharacterMovement()->StopMovementImmediately();
+            FString Preset;FParse::Value(FCommandLine::Get(),TEXT("WildlineHunterPreset="),Preset);
+            const float ExpectedHeight=Preset==TEXT("Ethan")?71.4f:Preset==TEXT("Greyson")?110.4f:174.5f;
+            if(Preset==TEXT("Ethan"))P->HunterProfile=FWildlineHunterProfile::Ethan();
+            if(Preset==TEXT("Greyson"))P->HunterProfile=FWildlineHunterProfile::Greyson();
+            const float FeetZ=P->GetActorLocation().Z-P->GetCapsuleComponent()->GetScaledCapsuleHalfHeight();P->ApplyHunterProfile();
+            const float Scale=P->HunterProfile.HeightScale();
+            Check(FMath::IsNearlyEqual(static_cast<float>(P->GetActorScale3D().Z)*174.5f,ExpectedHeight,.01f),TEXT("selected hunter uses its intended standing height"));
+            Check(FMath::IsNearlyEqual(P->GetCapsuleComponent()->GetScaledCapsuleHalfHeight(),96.f*Scale,.01f)&&FMath::IsNearlyEqual(P->GetActorLocation().Z-P->GetCapsuleComponent()->GetScaledCapsuleHalfHeight(),FeetZ,.01),TEXT("size changes scale collision and retain ground contact"));
+            Check(FMath::IsNearlyEqual(P->FirstCamera->GetComponentLocation().Z-P->GetActorLocation().Z,72.f*Scale,.01)&&FMath::IsNearlyEqual(static_cast<float>(P->ViewRifle->GetComponentScale().Z),Scale,.001f),TEXT("eye level and first-person equipment follow body height"));
+            P->SetActorLocation(FVector(-900,1400,WildlineRules::Ground(-900,1400)+P->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()+4));P->GetCharacterMovement()->StopMovementImmediately();
             auto* Cam=GetWorld()->SpawnActor<ACameraActor>();Cam->AttachToComponent(P->GetMesh(),FAttachmentTransformRules::KeepRelativeTransform);Cam->SetActorRelativeLocation(FVector(300,330,246));Cam->SetActorRelativeRotation((FVector(0,15,81)-FVector(300,330,246)).Rotation());Cam->GetCameraComponent()->FieldOfView=48;SetViewTarget(Cam);
             auto* A=Cast<UWildlineHunterAnim>(P->GetMesh()->GetAnimInstance());bool Assets=A&&A->bCapturedMotion&&A->CrouchDirections.Num()==8&&A->WalkStarts.Num()==8&&A->RunStops.Num()==8;
             if(A)for(const auto* Clips:{&A->WalkDirections,&A->RunDirections,&A->CrouchDirections,&A->WalkStarts,&A->WalkStops,&A->RunStarts,&A->RunStops})for(auto* Clip:*Clips)Assets&=Clip!=nullptr;
             Check(Assets,TEXT("captured locomotion, crouch, starts and stops loaded"));
         });
         auto PoseShot=[this,Render](const TCHAR* Name){if(Render)FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows/")+Name,false,false);};
-        At(6,[this,Check,PoseShot](){Check(GetPawn()->GetVelocity().Size2D()>200,TEXT("walking uses real character movement"));PoseShot(TEXT("HunterCaptureWalk.png"));});
-        At(7.5f,[this](){GetPawn()->SetActorLocation(FVector(-900,1400,WildlineRules::Ground(-900,1400)+100));});
+        At(6,[this,Check,PoseShot](){
+            Check(GetPawn()->GetVelocity().Size2D()>200,TEXT("walking uses real character movement"));
+            auto* P=Cast<AWildlineCharacter>(GetPawn());auto* M=P->GetMesh();bool Sizes=true;
+            for(const TCHAR* Bone:{TEXT("hand_l"),TEXT("hand_r"),TEXT("index_01_l"),TEXT("index_01_r")})Sizes&=M->GetBoneTransform(Bone,RTS_Component).GetScale3D().Equals(FVector(P->HunterProfile.HandScale()),.001);
+            for(const TCHAR* Bone:{TEXT("foot_l"),TEXT("foot_r"),TEXT("ball_l"),TEXT("ball_r")})Sizes&=M->GetBoneTransform(Bone,RTS_Component).GetScale3D().Equals(FVector(P->HunterProfile.FootScale()),.001);
+            Check(Sizes,TEXT("hands, fingers, feet and toes use the selected body proportions"));
+            PoseShot(TEXT("HunterCaptureWalk.png"));
+        });
+        // These authored teleports are scene resets, not stance-foot travel.
+        At(7.5f,[this,PreviousPlant](){PreviousPlant->Init(0.f,2);auto* P=Cast<AWildlineCharacter>(GetPawn());P->SetActorLocation(FVector(-900,1400,WildlineRules::Ground(-900,1400)+P->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()+4));});
         At(9,[this,Check,PoseShot](){Check(GetPawn()->GetVelocity().Size2D()>480,TEXT("sprint reaches full movement speed"));PoseShot(TEXT("HunterCaptureRun.png"));});
-        At(10.5f,[this](){GetPawn()->SetActorLocation(FVector(-500,800,WildlineRules::Ground(-500,800)+100));});
+        At(10.5f,[this,PreviousPlant](){PreviousPlant->Init(0.f,2);auto* P=Cast<AWildlineCharacter>(GetPawn());P->SetActorLocation(FVector(-500,800,WildlineRules::Ground(-500,800)+P->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()+4));});
         At(12,[this,Check,PoseShot](){Check(GetPawn()->GetVelocity().Size2D()>200,TEXT("strafe uses directional captured motion"));PoseShot(TEXT("HunterCaptureStrafe.png"));});
         At(14,[this](){SetControlRotation(FRotator(0,75,0));});At(14.3f,[PoseShot](){PoseShot(TEXT("HunterCaptureTurn.png"));});
-        At(15.5f,[this](){GetPawn()->SetActorLocation(FVector(-500,800,WildlineRules::Ground(-500,800)+100));});
+        At(15.5f,[this,PreviousPlant](){PreviousPlant->Init(0.f,2);auto* P=Cast<AWildlineCharacter>(GetPawn());P->SetActorLocation(FVector(-500,800,WildlineRules::Ground(-500,800)+P->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()+4));});
         At(16,[this](){Cast<AWildlineCharacter>(GetPawn())->DoCrouch();});
         At(18,[this,Check,PoseShot](){auto* P=Cast<AWildlineCharacter>(GetPawn());auto* A=Cast<UWildlineHunterAnim>(P->GetMesh()->GetAnimInstance());const float H=P->GetMesh()->GetBoneTransform(TEXT("pelvis"),RTS_Component).GetLocation().Z;UE_LOG(LogTemp,Display,TEXT("HUNTER CROUCH active=%d wants=%d pelvis=%.2f meshZ=%.2f speed=%.1f crouchBlend=%.3f moveBlend=%.3f ground=%.2f phase=%.2f"),P->bIsCrouched,P->GetCharacterMovement()->bWantsToCrouch,H,P->GetMesh()->GetRelativeLocation().Z,P->GetVelocity().Size2D(),A?A->CrouchBlend:0,A?A->MovementBlend:0,A?A->GroundOffset:0,A?A->GaitPhase:0);Check(P->bIsCrouched&&H<75,TEXT("crouching lowers the captured pelvis and articulates the legs"));PoseShot(TEXT("HunterCaptureCrouch.png"));});
         At(21,[this](){Cast<AWildlineCharacter>(GetPawn())->DoUnCrouch();});At(21.4f,[this](){Cast<AWildlineCharacter>(GetPawn())->DoJump();});
@@ -360,14 +388,16 @@ void AWildlineController::BeginPlay(){
         At(26,[this](){Cast<AWildlineCharacter>(GetPawn())->ServerFire(GetControlRotation().Vector());});
         At(28,[this](){auto* P=Cast<AWildlineCharacter>(GetPawn());P->StopAim();P->SelectWeapon(1);SetControlRotation(FRotator(0,75,0));});
         At(28.5f,[this](){Cast<AWildlineCharacter>(GetPawn())->ServerFire(GetControlRotation().Vector());});At(28.85f,[PoseShot](){PoseShot(TEXT("HunterCapturePump.png"));});
-        At(31,[this](){auto* P=Cast<AWildlineCharacter>(GetPawn());P->HunterProfile.Body=1;P->ApplyHunterProfile();});At(32,[PoseShot](){PoseShot(TEXT("HunterCaptureFemale.png"));});
+        At(31,[this,PreviousPlant](){PreviousPlant->Init(0.f,2);auto* P=Cast<AWildlineCharacter>(GetPawn());P->HunterProfile.Body=1;P->ApplyHunterProfile();});At(32,[PoseShot](){PoseShot(TEXT("HunterCaptureFemale.png"));});
         auto Frame=MakeShared<int32>(0);FTimerHandle Monitor;
         FTimerManagerTimerParameters ContactTimer;ContactTimer.bLoop=true;ContactTimer.bMaxOncePerFrame=true;
-        GetWorldTimerManager().SetTimer(Monitor,FTimerDelegate::CreateWeakLambda(this,[this,Render,Frame,Passed,MaxGrip,MaxShoulder,MaxFootDrift,PreviousFeet,PreviousPlant,PreviousSerial,MovingPlants,LastSampleFrame](){
+        GetWorldTimerManager().SetTimer(Monitor,FTimerDelegate::CreateWeakLambda(this,[this,Render,Frame,Passed,MaxGrip,MaxShoulder,MaxFootDrift,PreviousFeet,PreviousPlant,PreviousSerial,MovingPlants,LastSampleFrame,PreviousScale,PlantWarmupUntil](){
             const float Time=GetWorld()->GetTimeSeconds();if(Time<4||Time>33)return;
             if(*LastSampleFrame==GFrameCounter)return;*LastSampleFrame=GFrameCounter;
             auto* P=Cast<AWildlineCharacter>(GetPawn());auto* M=P->GetMesh();auto* A=Cast<UWildlineHunterAnim>(M->GetAnimInstance());const FTransform Gun=P->WorldRifle->GetComponentTransform();
-            const FVector Pocket=M->GetSocketLocation(TEXT("upperarm_r"))+P->GetActorForwardVector()*5-P->GetActorRightVector()*3-FVector::UpVector*6;
+            if(!FMath::IsNearlyEqual(*PreviousScale,P->HunterProfile.HeightScale())){*PreviousScale=P->HunterProfile.HeightScale();*PlantWarmupUntil=Time+.5f;}
+            if(Time<*PlantWarmupUntil)PreviousPlant->Init(0.f,2);
+            const FVector Pocket=M->GetSocketLocation(TEXT("upperarm_r"))+(P->GetActorForwardVector()*5-P->GetActorRightVector()*3-FVector::UpVector*6)*P->HunterProfile.HeightScale();
             const FVector Butt(P->SelectedWeapon==1?P->WorldRifle->GetStaticMesh()->GetBoundingBox().Min.X+1:-45.6f,0,P->SelectedWeapon==1?-4.8f:-4.f);
             if(A&&P->GetVelocity().Size2D()>100)for(int32 Side=0;Side<2;Side++)if(A->FootPlantWeight[Side]>.98f)(*MovingPlants)++;
             const float ShoulderError=FVector::Dist(Pocket,Gun.TransformPosition(Butt));
@@ -401,6 +431,68 @@ void AWildlineController::BeginPlay(){
         At(37,[Shot](){Shot(TEXT("HunterThermal.png"));});
         At(39,[](){FPlatformMisc::RequestExit(false);});
     }
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlinePhotoHuntersReview"))){
+        auto At=[this](float Seconds,TFunction<void()> Action){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Action](){Action();}),Seconds,false);};
+        auto Shot=[](const TCHAR* Name){FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows")/Name,true,false);};
+        At(3,[this](){Menu->CreateHunter();});
+        At(5,[this](){Menu->Creator->LoadTravisPreset();Menu->Creator->FaceView();});
+        At(10,[Shot](){Shot(TEXT("TravisFace.png"));});
+        At(12,[this](){Menu->Creator->TurnRight();Menu->Creator->TurnRight();});
+        At(16,[Shot](){Shot(TEXT("TravisThreeQuarter.png"));});
+        At(18,[this](){Menu->Creator->LoadEthanPreset();Menu->Creator->FaceView();});
+        At(23,[Shot](){Shot(TEXT("EthanFace.png"));});
+        At(25,[this](){Menu->Creator->TurnRight();Menu->Creator->TurnRight();});
+        At(30,[Shot](){Shot(TEXT("EthanThreeQuarter.png"));});
+        At(32,[this](){Menu->Creator->TurnRight();Menu->Creator->TurnRight();});
+        At(37,[Shot](){Shot(TEXT("EthanProfile.png"));});
+        At(39,[this](){Menu->Creator->PreviewAngle=0;Menu->Creator->FullBody();});
+        At(44,[Shot](){Shot(TEXT("EthanCreator.png"));});
+        At(46,[](){FPlatformMisc::RequestExit(false);});
+    }
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHunterHeightReview"))){
+        auto At=[this](float Seconds,TFunction<void()> Action){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Action](){Action();}),Seconds,false);};
+        auto Shot=[](const TCHAR* Name){FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows")/Name,true,false);};
+        At(3,[this](){Menu->CreateHunter();Menu->Creator->LoadTravisPreset();Menu->Creator->PreviewAngle=0;Menu->Creator->FullBody();});
+        At(8,[Shot](){Shot(TEXT("HunterHeightTravis.png"));});
+        At(10,[this](){Menu->Creator->LoadEthanPreset();});
+        At(15,[Shot](){Shot(TEXT("HunterHeightEthan.png"));});
+        At(17,[this](){Menu->Creator->LoadGreysonPreset();});
+        At(22,[Shot](){Shot(TEXT("HunterHeightGreyson.png"));});
+        At(24,[this](){Menu->Creator->FaceView();});
+        At(29,[Shot](){Shot(TEXT("HunterHeightGreysonFace.png"));});
+        At(31,[this](){Menu->Creator->LoadEthanPreset();Menu->Creator->FaceView();});
+        At(36,[Shot](){Shot(TEXT("HunterHeightEthanFace.png"));});
+        At(38,[](){FPlatformMisc::RequestExit(false);});
+    }
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineDropdownReview"))){
+        auto At=[this](float Seconds,TFunction<void()> Action){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Action](){Action();}),Seconds,false);};
+        auto Shot=[](const TCHAR* Name){FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows")/Name,true,false);};
+        At(3,[this](){Menu->CreateHunter();Menu->Creator->LoadGreysonPreset();Menu->Creator->PreviewAngle=0;Menu->Creator->FullBody();});
+        At(8,[Shot](){Shot(TEXT("GreysonShorterCreator.png"));});
+        At(10,[this](){Cast<UWildlineChoice>(Menu->Creator->PresetCombo)->SetMenuOpen(true);});
+        At(12,[Shot](){Shot(TEXT("HunterPresetDropdown.png"));});
+        At(14,[this](){Cast<UWildlineChoice>(Menu->Creator->PresetCombo)->SetMenuOpen(false);Cast<UWildlineChoice>(Menu->Creator->OutfitCombo)->SetMenuOpen(true);});
+        At(16,[Shot](){Shot(TEXT("HunterOutfitDropdown.png"));});
+        At(18,[this](){Cast<UWildlineChoice>(Menu->Creator->OutfitCombo)->SetMenuOpen(false);Menu->Creator->Cancel();Menu->SetWorkshop(false);});
+        At(20,[this](){Cast<UWildlineChoice>(Menu->Mode)->SetMenuOpen(true);});
+        At(22,[Shot](){Shot(TEXT("GameModeDropdown.png"));});
+        At(24,[this](){Cast<UWildlineChoice>(Menu->Mode)->SetMenuOpen(false);FPlatformMisc::RequestExit(false);});
+    }
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineGreysonReview"))){
+        auto At=[this](float Seconds,TFunction<void()> Action){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Action](){Action();}),Seconds,false);};
+        auto Shot=[](const TCHAR* Name){FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows")/Name,true,false);};
+        At(3,[this](){Menu->CreateHunter();Menu->Creator->LoadGreysonPreset();});
+        At(8,[Shot](){Shot(TEXT("GreysonCreator.png"));});
+        At(10,[this](){Menu->Creator->PreviewAngle=0;Menu->Creator->FaceView();});
+        At(15,[Shot](){Shot(TEXT("GreysonFace.png"));});
+        At(17,[this](){Menu->Creator->TurnRight();Menu->Creator->TurnRight();});
+        At(22,[Shot](){Shot(TEXT("GreysonThreeQuarter.png"));});
+        At(24,[this](){Menu->Creator->TurnRight();Menu->Creator->TurnRight();});
+        At(29,[Shot](){Shot(TEXT("GreysonProfile.png"));});
+        At(31,[this](){auto* C=Menu->Creator;C->Pending.Outfit=0;C->Pending.bCap=true;C->Pending.Slimness=.3f;C->SyncControls();C->RefreshPreview();C->FullBody();});
+        At(36,[Shot](){Shot(TEXT("GreysonCustomized.png"));});
+        At(38,[](){FPlatformMisc::RequestExit(false);});
+    }
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineTravisReview"))){
         auto At=[this](float Time,TFunction<void()> Work){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Work](){Work();}),Time,false);};
         auto Shot=[](const TCHAR* Name){FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows/")+Name,true,false);};
@@ -409,11 +501,15 @@ void AWildlineController::BeginPlay(){
         At(10,[Shot](){Shot(TEXT("TravisCreator.png"));});
         At(12,[this](){Menu->Creator->FaceView();});
         At(16,[Shot](){Shot(TEXT("TravisFace.png"));});
-        At(18,[this](){auto* C=Menu->Creator;C->Pending.Outfit=0;C->Pending.bCap=true;C->Pending.Slimness=.2f;C->SyncControls();C->RefreshPreview();C->FullBody();});
-        At(22,[Shot](){Shot(TEXT("TravisCustomized.png"));});
-        At(24,[this](){Menu->Creator->Cancel();ChooseRole(false);auto* P=Cast<AWildlineCharacter>(GetPawn());P->HunterProfile=FWildlineHunterProfile::Travis();P->bProfileSubmitted=true;P->ApplyHunterProfile();P->ToggleCamera();SetControlRotation(FRotator(-7,160,0));GetWorld()->GetGameState<AWildlineGameState>()->bRoundStarted=false;});
-        At(28,[Shot](){Shot(TEXT("TravisGameplay.png"));});
-        At(30,[](){FPlatformMisc::RequestExit(false);});
+        At(18,[this](){Menu->Creator->TurnRight();Menu->Creator->TurnRight();});
+        At(22,[Shot](){Shot(TEXT("TravisThreeQuarter.png"));});
+        At(24,[this](){Menu->Creator->TurnRight();Menu->Creator->TurnRight();});
+        At(28,[Shot](){Shot(TEXT("TravisProfile.png"));});
+        At(36,[this](){auto* C=Menu->Creator;C->LoadTravisPreset();C->Pending.Outfit=0;C->Pending.bCap=true;C->Pending.Slimness=.2f;C->SyncControls();C->RefreshPreview();C->FullBody();});
+        At(40,[Shot](){Shot(TEXT("TravisCustomized.png"));});
+        At(42,[this](){Menu->Creator->Cancel();ChooseRole(false);auto* P=Cast<AWildlineCharacter>(GetPawn());P->HunterProfile=FWildlineHunterProfile::Travis();P->bProfileSubmitted=true;P->ApplyHunterProfile();P->ToggleCamera();SetControlRotation(FRotator(-7,160,0));GetWorld()->GetGameState<AWildlineGameState>()->bRoundStarted=false;});
+        At(46,[Shot](){Shot(TEXT("TravisGameplay.png"));});
+        At(48,[](){FPlatformMisc::RequestExit(false);});
     }
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineForestCapture"))){
         FTimerHandle Enter,ShotA,Move,ShotB,Low,ShotC,Exit;
@@ -430,16 +526,30 @@ void AWildlineController::BeginPlay(){
         GetWorldTimerManager().SetTimer(ShotC,FTimerDelegate::CreateWeakLambda(this,[Shot](){Shot(TEXT("ForestFloor.png"));}),33.f,false);
         GetWorldTimerManager().SetTimer(Exit,FTimerDelegate::CreateWeakLambda(this,[](){FPlatformMisc::RequestExit(false);}),35.f,false);
     }
+    const bool ReviewIntro=FParse::Param(FCommandLine::Get(),TEXT("WildlineIntroReview"));
+    const bool StartupProbe=FParse::Param(FCommandLine::Get(),TEXT("WildlineIntroSmoke"));
+    const bool SkipIntro=FParse::Param(FCommandLine::Get(),TEXT("WildlineNoIntro"))||FParse::Param(FCommandLine::Get(),TEXT("WildlineAutoStart"))||(FParse::Param(FCommandLine::Get(),TEXT("unattended"))&&!ReviewIntro&&!StartupProbe);
+    if(bMenuOpen&&GI&&!GI->bIntroPlayed&&!SkipIntro){StartIntro();}
+    if(ReviewIntro){
+        auto At=[this](float Delay,TFunction<void()> Work){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Work](){Work();}),Delay,false);};
+        At(AWildlineIntro::Duration+2,[](){FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows/PresentationMenu.png"),true,false);});
+        At(AWildlineIntro::Duration+3,[this](){Menu->ShowSettings();});
+        At(AWildlineIntro::Duration+4,[](){FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows/PresentationSettings.png"),true,false);});
+        At(AWildlineIntro::Duration+6,[](){FPlatformMisc::RequestExit(false);});
+    }
+    if(StartupProbe)RunIntroSmokeTest();
 }
 void AWildlineController::SetupInputComponent(){Super::SetupInputComponent();InputComponent->BindAction(TEXT("Menu"),IE_Pressed,this,&AWildlineController::ToggleMenu);InputComponent->BindAction(TEXT("Restart"),IE_Pressed,this,&AWildlineController::RequestRestart);InputComponent->BindAction(TEXT("MapZoom"),IE_Pressed,this,&AWildlineController::ToggleMapZoom);}
 void AWildlineController::SetMenu(bool Open){
+    if(Intro){Intro->Finish();if(Open)return;}
     bMenuOpen=Open;bShowMouseCursor=Open;
+    if(Open)StartMenuMusic();
     if(Menu){if(Open)Menu->RefreshDifficulty();Menu->SetVisibility(Open?ESlateVisibility::Visible:ESlateVisibility::Collapsed);}
     if(Open){if(auto* P=Cast<AWildlineCharacter>(GetPawn())){P->bFiring=false;P->StopAim();P->StopSprint();}FInputModeGameAndUI Mode;if(Menu)Mode.SetWidgetToFocus(Menu->TakeWidget());Mode.SetHideCursorDuringCapture(false);Mode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);SetInputMode(Mode);}
     else {FInputModeGameOnly Mode;SetInputMode(Mode);SetIgnoreLookInput(false);SetIgnoreMoveInput(false);}
 }
-void AWildlineController::ToggleMapZoom(){if(!bMenuOpen)bMapZoomed=!bMapZoomed;}
-void AWildlineController::ToggleMenu(){SetMenu(!bMenuOpen);}
+void AWildlineController::ToggleMapZoom(){const auto* S=GetWorld()->GetGameState<AWildlineGameState>();if(!bMenuOpen&&S&&S->MatchConfig.bAllowMinimap)bMapZoomed=!bMapZoomed;}
+void AWildlineController::ToggleMenu(){if(Intro){Intro->Finish();return;}SetMenu(!bMenuOpen);}
 void AWildlineController::ChooseRole(bool bAnimal){auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI)GI->bPreferredSquirrel=bAnimal;if(Menu){if(bAnimal)Menu->Squirrel();else Menu->Hunter();}ServerPickRole(bAnimal);if(!bAnimal)if(const auto* Settings=UWildlineUserSettings::Get())ServerSelectWeapon(Settings->SelectedWeapon);SetMenu(false);}
 void AWildlineController::ServerPickRole_Implementation(bool bAnimal){if(auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>())GM->PickRole(this,bAnimal);}
 void AWildlineController::Host(bool bAnimal){auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI){GI->bPreferredSquirrel=bAnimal;GI->bStartAfterTravel=true;}UGameplayStatics::OpenLevel(this,FName(WildlineRules::ModeMap(GI?GI->PreferredMode:0)),true,TEXT("listen"));}
@@ -508,7 +618,7 @@ void AWildlineController::RunSmokeTest(){
         return Anim&&Anim->Idle&&Anim->Walk&&Anim->Run&&FVector::Dist(M->GetSocketLocation(TEXT("hand_r")),T.TransformPosition(FVector(-17,0,-2.8f)))<3&&FVector::Dist(M->GetSocketLocation(TEXT("hand_l")),T.TransformPosition(FVector(17,-1,-3)))<3;
     };
     Check(CheckGrip(),TEXT("both hunter wrists reach sporting rifle stock"));
-    auto CheckShoulder=[&](){auto* M=P->GetMesh();const FVector Pocket=M->GetSocketLocation(TEXT("upperarm_r"))+P->GetActorForwardVector()*5-P->GetActorRightVector()*3-FVector::UpVector*6;
+    auto CheckShoulder=[&](){auto* M=P->GetMesh();const FVector Pocket=M->GetSocketLocation(TEXT("upperarm_r"))+(P->GetActorForwardVector()*5-P->GetActorRightVector()*3-FVector::UpVector*6)*P->HunterProfile.HeightScale();
         return FVector::Dist(Pocket,P->WorldRifle->GetComponentTransform().TransformPosition(FVector(-45.6f,0,-4)))<.5f;
     };
     Check(CheckShoulder(),TEXT("rifle recoil pad contacts the animated shoulder pocket"));
@@ -529,11 +639,25 @@ void AWildlineController::RunSmokeTest(){
     const FString ValidPhoto=P->HunterFaceData;P->ServerSetHunterProfile(TestProfile,TEXT("invalid image"));Check(P->HunterFaceData==ValidPhoto,TEXT("invalid portrait data is rejected without replacing the face"));
     TestProfile.bUsePhoto=false;P->ServerSetHunterProfile(TestProfile,FString());
     const auto BeforeTravis=P->HunterProfile;P->ServerSetHunterProfile(FWildlineHunterProfile::Travis(),FString());
-    Check(P->GetMesh()->GetSkeletalMeshAsset()->GetName()==TEXT("SK_HunterTravis")&&P->HunterFaceTexture&&P->HunterMaterials.Num()==9,TEXT("Travis preset selects rigged mesh, bundled likeness and modern clothing"));
+    Check(P->GetMesh()->GetSkeletalMeshAsset()->GetName()==TEXT("SK_HunterTravis")&&!P->HunterFaceTexture&&P->HunterMaterials.Num()>=7,TEXT("Travis selects the featureless photo head without an upload"));
     Check(P->GetMesh()->GetSkeletalMeshAsset()->FindMorphTarget(TEXT("SlimBuild"))&&P->GetMesh()->GetMorphTarget(TEXT("SlimBuild"))>.7f,TEXT("Travis slim body uses a cooked customizable morph"));
     Check(CheckGrip(),TEXT("Travis hunter maintains both rifle grips"));
     auto EditedTravis=P->HunterProfile;EditedTravis.Outfit=2;EditedTravis.Slimness=.2f;EditedTravis.bCap=true;EditedTravis.bBeard=false;P->ServerSetHunterProfile(EditedTravis,FString());
-    Check(P->HunterProfile.Preset==1&&P->HunterProfile.Outfit==2&&FMath::IsNearlyEqual(P->GetMesh()->GetMorphTarget(TEXT("SlimBuild")),.2f)&&P->HunterFaceTexture,TEXT("customizing Travis retains preset mesh and likeness"));
+    Check(P->HunterProfile.Preset==1&&P->HunterProfile.Outfit==2&&FMath::IsNearlyEqual(P->GetMesh()->GetMorphTarget(TEXT("SlimBuild")),.2f)&&!P->HunterFaceTexture,TEXT("customizing Travis retains its built-in photo head"));
+    P->ServerSetHunterProfile(FWildlineHunterProfile::Ethan(),FString());
+    Check(P->GetMesh()->GetSkeletalMeshAsset()->GetName()==TEXT("SK_HunterEthan")&&!P->HunterFaceTexture&&!P->HunterProfile.bBeard,TEXT("Ethan selects its own featureless photo head without an upload"));
+    bool PhotoMaterial=false;for(auto* M:P->HunterMaterials)if(M&&M->GetBaseMaterial()->GetName()==TEXT("M_EthanPhoto"))PhotoMaterial=true;
+    Check(PhotoMaterial&&P->GetMesh()->GetSkeletalMeshAsset()->FindMorphTarget(TEXT("SlimBuild"))&&CheckGrip(),TEXT("Ethan retains its cooked photo material, build morph and rifle grips"));
+    P->ServerSetHunterProfile(FWildlineHunterProfile::Greyson(),FString());
+    Check(P->GetMesh()->GetSkeletalMeshAsset()->GetName()==TEXT("SK_HunterGreyson")&&!P->HunterFaceTexture&&!P->HunterProfile.bBeard,TEXT("Greyson selects its own featureless photo head without an upload"));
+    bool GreysonPhoto=false;for(auto* M:P->HunterMaterials)if(M&&M->GetBaseMaterial()->GetName()==TEXT("M_GreysonPhoto"))GreysonPhoto=true;
+    Check(GreysonPhoto&&P->GetMesh()->GetSkeletalMeshAsset()->FindMorphTarget(TEXT("SlimBuild"))&&CheckGrip(),TEXT("Greyson retains its cooked photo material, build morph and rifle grips"));
+    auto EditedGreyson=P->HunterProfile;EditedGreyson.Outfit=0;EditedGreyson.Slimness=.3f;EditedGreyson.bCap=true;P->ServerSetHunterProfile(EditedGreyson,FString());
+    Check(P->HunterProfile.Preset==4&&P->HunterProfile.Outfit==0&&FMath::IsNearlyEqual(P->GetMesh()->GetMorphTarget(TEXT("SlimBuild")),.3f),TEXT("customizing Greyson retains its built-in photo head"));
+    auto LegacyTravis=FWildlineHunterProfile::Travis();LegacyTravis.Preset=2;LegacyTravis.Outfit=2;P->ServerSetHunterProfile(LegacyTravis,FString());
+    Check(P->HunterProfile.Preset==1&&P->HunterProfile.Outfit==2&&P->GetMesh()->GetSkeletalMeshAsset()->GetName()==TEXT("SK_HunterTravis"),TEXT("saved Travis 2 migrates to Travis while retaining outfit"));
+    bool TravisPhoto=false;for(auto* M:P->HunterMaterials)if(M&&M->GetBaseMaterial()->GetName()==TEXT("M_TravisPhoto"))TravisPhoto=true;
+    Check(TravisPhoto,TEXT("Travis retains its cooked photo material after preset switching"));
     P->ServerSetHunterProfile(BeforeTravis,FString());
     Check(!P->bThirdPerson,TEXT("first-person default"));
     P->ToggleCamera();Check(P->bThirdPerson,TEXT("third-person toggle"));P->ToggleCamera();

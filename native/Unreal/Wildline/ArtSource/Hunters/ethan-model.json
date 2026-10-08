@@ -1,0 +1,19 @@
+{
+  "mesh": "SK_HunterEthan",
+  "vertices": 9410,
+  "polygons": 9012,
+  "faceVertices": 544,
+  "facePolygons": 512,
+  "photoOverlay": true,
+  "modeledFacialFeatures": false,
+  "sourcePhoto": "Textures/ethan_reference.png",
+  "vertexColorLayers": [
+    "PhotoMask"
+  ],
+  "morphs": [
+    "Basis",
+    "FaceWidth",
+    "NoseDepth",
+    "SlimBuild"
+  ]
+}

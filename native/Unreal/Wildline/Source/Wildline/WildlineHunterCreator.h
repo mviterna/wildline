@@ -46,6 +46,8 @@ public:
     bool ImportPortraitPath(const FString& Path);
     void SyncControls();
     void LoadTravisPreset();
+    void LoadEthanPreset();
+    void LoadGreysonPreset();
     UFUNCTION() void PresetChanged(FString Item,ESelectInfo::Type Type);
     UFUNCTION() void ResetPreset();
     UFUNCTION() void BeardChanged(bool Value);

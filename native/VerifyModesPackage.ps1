@@ -4,7 +4,8 @@ $taskGame=Join-Path $PSScriptRoot 'Build/Windows/Wildline/Binaries/Win64/Wildlin
 if(!(Test-Path -LiteralPath $taskGame)){throw 'Build the Windows game first.'}
 $taskProcesses=@()
 function Start-ModesProbe($taskFlags,$taskLog){
-    $taskArgs=$taskFlags+' -unattended -abslog="'+(Join-Path $PSScriptRoot $taskLog).Replace('\','/')+'"'
+    $taskProfile=Join-Path $PSScriptRoot ('Unreal/Wildline/Saved/ModesProbes/'+[IO.Path]::GetFileNameWithoutExtension($taskLog))
+    $taskArgs=$taskFlags+' -unattended -UserDir="'+$taskProfile+'" -abslog="'+(Join-Path $PSScriptRoot $taskLog).Replace('\','/')+'"'
     Start-Process -FilePath $taskGame -ArgumentList $taskArgs -WindowStyle Hidden -PassThru
 }
 try {
@@ -36,7 +37,7 @@ try {
         $taskReview=Get-Content (Join-Path $PSScriptRoot 'modes-hill-review.log') -Raw
         if($taskReview -match 'LogMaterial: Error|LogShaderCompilers: Error|Failed to compile Material|Fatal error'){throw 'Render review reported material errors.'}
         foreach($taskName in @('HillMenu.png','HillSquirrel.png','HillCourse.png','HillNeighborhood.png','HillSettings.png')){
-            $taskShot=Join-Path $PSScriptRoot "Build/Windows/Wildline/Saved/Screenshots/Windows/$taskName"
+            $taskShot=Join-Path $PSScriptRoot "Unreal/Wildline/Saved/ModesProbes/modes-hill-review/Saved/Screenshots/Windows/$taskName"
             if(!(Test-Path -LiteralPath $taskShot)){throw "Missing screenshot: $taskName"}
             Copy-Item -LiteralPath $taskShot -Destination (Join-Path $PSScriptRoot "Preview/$taskName") -Force
         }

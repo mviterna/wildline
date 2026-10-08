@@ -1,0 +1,66 @@
+{
+  "updated": "2026-10-08T10:16:33.5693392-04:00",
+  "characters": [
+    "Travis",
+    "Ethan"
+  ],
+  "approach": "Unchanged reference photo on a featureless low-poly curved head",
+  "detailedVariantRemoved": true,
+  "photoOverlay": true,
+  "modeledFacialFeatures": false,
+  "presetIds": {
+    "Custom": 0,
+    "Travis": 1,
+    "RetiredTravis2MigratesTo": 1,
+    "Ethan": 3
+  },
+  "photoSHA256": {
+    "Travis": "B9C0CBA2F23BAACC7AE10A0E764CAD9E711F5C1BF3C758DD2EC84FD53B453137",
+    "Ethan": "D615293E71AD66BC85EFB7A40B0E9BA27343FE389C3D0CD8D479308F3E72299C"
+  },
+  "editorBuild": "PASS",
+  "gameBuild": "PASS",
+  "windowsPackageBuild": "PASS",
+  "assetPersistence": "PASS",
+  "presetAutomation": "PASS: Wildline.Hunters.PhotoPresets",
+  "sourceGeometryAndWeights": "PASS: finite coordinates, normalized weights, single PhotoMask color layer",
+  "hunterRuntimeChecks": [
+    "Travis selects the featureless photo head without an upload",
+    "Travis slim body uses a cooked customizable morph",
+    "Travis hunter maintains both rifle grips",
+    "customizing Travis retains its built-in photo head",
+    "Ethan selects its own featureless photo head without an upload",
+    "Ethan retains its cooked photo material, build morph and rifle grips",
+    "saved Travis 2 migrates to Travis while retaining outfit",
+    "Travis retains its cooked photo material after preset switching"
+  ],
+  "fullGameplaySmoke": "FAIL",
+  "otherGameplaySmokeFailures": [
+    "squirrel climbs vertically",
+    "server collects an accessible acorn on approach",
+    "collected acorn body and cap disappear together locally",
+    "the same acorn cannot be collected twice",
+    "airborne squirrel cannot pick forage far below",
+    "ground-level den visit deposits the carried acorn",
+    "reserve edge removes outward velocity and contains player"
+  ],
+  "screenshots": [
+    "TravisFace",
+    "TravisThreeQuarter",
+    "TravisProfile",
+    "TravisCreator",
+    "TravisCustomized",
+    "TravisGameplay",
+    "EthanFace",
+    "EthanThreeQuarter",
+    "EthanProfile",
+    "EthanCreator"
+  ],
+  "executable": "C:/_git/wildline/native/Build/Windows/Wildline.exe",
+  "visualReview": [
+    "packaged front and three-quarter views for both photo hunters",
+    "Ethan full-body and profile",
+    "Travis profile, cap, outfit and body customization",
+    "Travis gameplay"
+  ]
+}

@@ -1,50 +1,67 @@
-# Travis hunter preset
+# Photo hunters: Travis, Ethan and Greyson
 
-Travis is an editable starting appearance in the native Unreal hunter creator.
-Choose **Create Hunter → Starting preset → Travis**, customize the look, and
-select **Save Hunter**. Reset selected preset restores the original Travis look;
-Cancel leaves the previously saved hunter untouched. Existing saved hunters
-continue to use their custom appearance.
+Updated 2026-10-08. The user selected the photo-superimposed approach and discarded
+the detailed MetaHuman variant. The former Travis 2 is now named **Travis**.
+**Ethan** is a separate selectable hunter using the newly supplied portrait.
+**Greyson** is the third named hunter, added with the supplied portrait on the same date.
 
-The starting look has a slim male body, receding hair, salt-and-pepper goatee,
-modern camouflage clothing, blaze-orange torso panels and hunting boots. It uses the
-game's existing sporting rifle, locomotion skeleton and animations. Body type,
-body slimness, clothing/vest color, hair color, cap, goatee, skin tone, face width,
-nose shape and facial-photo alignment remain editable. A user portrait can
-replace the bundled facial appearance. Selecting the female body uses the
-existing female hunter mesh; selecting the male body again restores Travis's
-head and field clothing while retaining edited settings.
+All three heads carry an unchanged source photograph on a 544-vertex, 512-quad curved
+shell. There are no modeled eyes, nose, mouth, teeth, eyebrows or beard beneath
+the image. Simple ears, scalp and neck complete each head. All use the existing
+hunter body, Manny skeleton, animations, clothing and build morph. Clothing, cap,
+skin tone and face width remain editable. Hair, beard and nose-depth controls are
+disabled for these photo heads because those features belong to the photo.
 
-Editable source: `SK_HunterTravis.blend`. Skeletal export:
-`Export/SK_HunterTravis.fbx`. Imported game asset:
-`/Game/Wildline/Hunters/Meshes/SK_HunterTravis`. Source and game meshes include
-`FaceWidth`, `NoseDepth` and `SlimBuild` morphs and nine material slots. The
-source also retains skinned goatee/vest shells attached to the same rig. Their
-runtime materials hide the coarse shells; the beard comes from the facial
-texture, and the smooth torso panels use the jacket's vertex colors.
+## Sources
 
-Rebuild the source hunters with `generate_hunters.py`, then run
-`generate_travis.py` using Blender with auto-execution disabled. In Unreal, run
-`import_hunter_assets.py`, followed by `finalize_travis.py`. Compile C++ after
-source changes. Skeletal imports use Interchange to preserve Blender's shape
-channels; static collision meshes use the legacy FBX factory. The authoring
-pipeline clears inherited deform layers before transferring normalized rig
-weights, and keeps the original UV map first and facial projection second.
-`Wildline.Hunters.TravisPreset` checks preset customization and
-bounds; the existing live smoke test also checks cooked Travis geometry,
-bundled face texture and edited body morphs. `-WildlineTravisReview` generates
-full-body, close-up, customized and in-game screenshots without saving over
-the user's profile.
+- `Textures/travis_reference.png`: original supplied smiling Travis photo.
+- `Textures/ethan_reference.png`: original supplied Ethan photo.
+- `SK_HunterTravis.blend`, `Export/SK_HunterTravis.fbx`: photo Travis.
+- `SK_HunterEthan.blend`, `Export/SK_HunterEthan.fbx`: photo Ethan.
+- `Textures/greyson_reference.png`: original supplied Greyson photo.
+- `SK_HunterGreyson.blend`, `Export/SK_HunterGreyson.fbx`: photo Greyson.
+- `travis-model.json`, `ethan-model.json`, `greyson-model.json`: geometry reports.
+- `travis-unreal.json`, `ethan-unreal.json`, `greyson-unreal.json`: persisted import reports.
 
-The supplied photos were used as likeness references. The facial projection
-textures were created using the built-in image tool, with prompts for a
-faithful neutral frontal face under diffuse light and an aligned clean-shaven
-variant. Files: `Textures/travis_face.png` and `Textures/travis_face_shaved.png`.
-The head is an adapted game mesh with photographic appearance projection,
-not a scanned reconstruction. Human/rig source licenses remain recorded in
-`PROVENANCE.md`. The character concept image is a visual reference; the
-actual runtime model uses the mesh, textures and materials described here.
+Photos are user-provided reference material, not CC0 or generated textures.
+No image is uploaded to an external reconstruction service. Built-in photo
+materials are cooked into the game and need no custom portrait upload.
 
-The preset identifier and independent appearance settings use the existing
-saved-profile and replicated co-op path. Bundled textures are cooked assets;
-they require no photo file on another player's computer.
+## Rebuild and check
+
+1. Run `Scripts/build_photo_hunters.py` in Blender with auto-execution disabled.
+2. Run `Scripts/import_photo_hunters.py` through Unreal's Python executor.
+3. Run `Scripts/verify_photo_hunters.py` in a fresh editor session.
+4. Compile and package. `-WildlinePhotoHuntersReview` captures both named hunters.
+   `-WildlineTravisReview` captures Travis's full body, customized appearance and
+   gameplay. `-WildlineGreysonReview` captures Greyson's face, turns and customized
+   full body. These review modes do not change the saved profile.
+5. `Wildline.Hunters.PhotoPresets` checks selection, edits, reset and migration.
+   `-WildlineSmoke` checks cooked meshes, materials, morphs and rifle grips.
+
+`render_travis_source.py -- --ethan` renders Ethan's actual source geometry;
+`-- --greyson` renders Greyson; without either option it renders Travis. Both photo UV channels intentionally use
+the same coordinates. The explicit Interchange importer replaces vertex masks
+and preserves authored normals. The only vertex-color layer is `PhotoMask`.
+
+Preset ID 1 is Travis. Retired ID 2 migrates to Travis so previously saved
+Travis 2 selections retain their identity and appearance edits. Ethan uses ID 3.
+Greyson uses ID 4. The visible options are Custom hunter, Travis, Ethan, Greyson. MetaHuman Creator is no
+longer required. Existing body and animation credits remain in `PROVENANCE.md`.
+
+Runtime height (uncapped): Travis retains the 174.5 cm source height, Ethan is
+71.4 cm (30% shorter than the previous 102 cm), and Greyson is 110.4 cm (20% shorter
+than the previous 138 cm). `FWildlineHunterProfile::HeightScale()` scales the
+complete actor, including collision and equipment. The original editable rig
+and animations remain at their authored size; gait and foot placement convert
+between rig and world distances. `-WildlineHunterAnimationProbe` with
+`-WildlineHunterPreset=Ethan` or `Greyson` verifies actual movement, crouch,
+jumps, foot planting and both weapon grips. `-WildlineHunterHeightReview`
+captures all three at the same full-body camera distance and both short heads
+in face close-up, without changing the saved profile.
+Runtime hand/foot scales relative to the body are .72/.75 for Ethan and .82/.84
+for Greyson. The animation scales the wrist/ankle bones and their descendants,
+preserving finger and toe articulation; ankle targets account for smaller soles.
+The creator evaluates the same proportions on its unarmed idle pose.
+Run `native/VerifyHunterAnimations.ps1 -Presets Ethan,Greyson -Rates 30,60`
+to check both heights with isolated standard settings at those frame rates.

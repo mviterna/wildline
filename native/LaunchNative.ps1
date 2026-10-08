@@ -7,7 +7,7 @@ if (!$Editor -and !$Build -and !$Test -and (Test-Path -LiteralPath $gamePath)) {
     Start-Process -FilePath $gamePath -ArgumentList '-preferNvidia' -WorkingDirectory $packageRoot -WindowStyle Normal
     exit
 }
-$engineCandidates = @('D:/Epic/UE_5.8', 'C:/Program Files/Epic Games/UE_5.8')
+$engineCandidates = @('D:/EpicEngine/UE_5.8', 'D:/Epic/UE_5.8', 'C:/Program Files/Epic Games/UE_5.8')
 $installManifest = Join-Path $env:ProgramData 'Epic/UnrealEngineLauncher/LauncherInstalled.dat'
 if (Test-Path -LiteralPath $installManifest) {
     $engineCandidates += (Get-Content -LiteralPath $installManifest -Raw | ConvertFrom-Json).InstallationList | Where-Object AppName -eq 'UE_5.8' | ForEach-Object InstallLocation

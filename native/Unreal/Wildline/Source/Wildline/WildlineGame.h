@@ -8,12 +8,15 @@
 #include "WildlineGame.generated.h"
 class AWildlineCharacter;
 class UWildlineMenu;
+class AWildlineIntro;
+class UAudioComponent;
 UCLASS()
 class WILDLINE_API UWildlineGameInstance : public UGameInstance {
     GENERATED_BODY()
 public:
     bool bPreferredSquirrel=false;
     bool bStartAfterTravel=false;
+    bool bIntroPlayed=false;
     int32 PreferredMode=0;
     FString JoinAddress=TEXT("127.0.0.1");
 };
@@ -58,6 +61,14 @@ public:
     AWildlineController();
     void BeginPlay() override;
     void SetupInputComponent() override;
+    void Tick(float Delta) override;
+    void EndPlay(const EEndPlayReason::Type Reason) override;
+    UPROPERTY() AWildlineIntro* Intro;
+    UPROPERTY() UAudioComponent* MenuMusic;
+    void StartIntro();
+    void StartMenuMusic();
+    float MenuRevealAt=-10;
+    float CurrentMusicVolume=0;
     UPROPERTY() UWildlineMenu* Menu;
     bool bMenuOpen=true;
     bool bMapZoomed=false;
@@ -78,4 +89,8 @@ public:
     void RunFarmSmokeTest();
     void RunHillSmokeTest();
     void RunHillNetworkProbe();
+    void RunConfigSmokeTest();
+    void RunConfigNetworkProbe();
+    void RunConfigReview();
+    void RunIntroSmokeTest();
 };

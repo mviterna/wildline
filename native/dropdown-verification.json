@@ -1,0 +1,21 @@
+{
+  "greysonHeightCm": 110.4,
+  "greysonHeightReduction": 0.2,
+  "dropdownStyle": "Light sage background, dark text and arrow, pale selected state; shared across hunter creator and camp menus",
+  "windowsPackageBuild": "PASS",
+  "profileAutomation": "PASS",
+  "greysonMovementRates": [
+    30,
+    60,
+    120
+  ],
+  "greysonMovement": "PASS",
+  "visualReview": "PASS",
+  "visualReviewCommand": "-WildlineDropdownReview",
+  "previews": [
+    "GreysonShorterCreator.png",
+    "HunterPresetDropdown.png",
+    "HunterOutfitDropdown.png",
+    "GameModeDropdown.png"
+  ]
+}

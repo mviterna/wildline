@@ -1,0 +1,101 @@
+{
+  "heightsCm": {
+    "Greyson": 110.4,
+    "Ethan": 71.4,
+    "Travis": 174.5
+  },
+  "method": "Uniform runtime actor scale derived from saved and replicated preset ID",
+  "scaledComponents": [
+    "skeletal rig",
+    "capsule collision",
+    "first-person eye height",
+    "third-person camera",
+    "weapons"
+  ],
+  "sourceBuild": "PASS",
+  "windowsPackageBuild": "PASS",
+  "profileAutomation": "PASS",
+  "packagedVisualReview": "PASS",
+  "movementConditions": "Standard settings, isolated profiles, fixed simulation steps",
+  "movementChecks": [
+    {
+      "character": "Ethan",
+      "fps": 30,
+      "result": "PASS",
+      "shoulderErrorCm": 0.0,
+      "gripErrorCm": 1.61,
+      "footDriftCm": 0.33,
+      "movingPlantSamples": 53,
+      "log": "native/test-results/hunter-animations/ethan-fps-30.log"
+    },
+    {
+      "character": "Ethan",
+      "fps": 60,
+      "result": "PASS",
+      "shoulderErrorCm": 0.0,
+      "gripErrorCm": 1.61,
+      "footDriftCm": 1.54,
+      "movingPlantSamples": 38,
+      "log": "native/test-results/hunter-animations/ethan-fps-60.log"
+    },
+    {
+      "character": "Ethan",
+      "fps": 120,
+      "result": "PASS",
+      "shoulderErrorCm": 0.0,
+      "gripErrorCm": 1.61,
+      "footDriftCm": 0.79,
+      "movingPlantSamples": 62,
+      "log": "native/test-results/hunter-animations/ethan-fps-120.log"
+    },
+    {
+      "character": "Greyson",
+      "fps": 30,
+      "result": "PASS",
+      "shoulderErrorCm": 0.0,
+      "gripErrorCm": 1.61,
+      "footDriftCm": 0.52,
+      "movingPlantSamples": 73,
+      "log": "native/test-results/hunter-animations/greyson-fps-30.log"
+    },
+    {
+      "character": "Greyson",
+      "fps": 60,
+      "result": "PASS",
+      "shoulderErrorCm": 0.0,
+      "gripErrorCm": 1.61,
+      "footDriftCm": 1.25,
+      "movingPlantSamples": 63,
+      "log": "native/test-results/hunter-animations/greyson-fps-60.log"
+    },
+    {
+      "character": "Greyson",
+      "fps": 120,
+      "result": "PASS",
+      "shoulderErrorCm": 0.0,
+      "gripErrorCm": 1.61,
+      "footDriftCm": 1.6,
+      "movingPlantSamples": 106,
+      "log": "native/test-results/hunter-animations/greyson-fps-120.log"
+    }
+  ],
+  "inheritedIssue": "Saved settings starting with the shotgun still trigger the existing strict grip check; adult Travis baseline grip error 4.55 cm, Greyson 3.67 cm before landing refinement.",
+  "previews": [
+    "HunterHeightTravis.png",
+    "HunterHeightEthan.png",
+    "HunterHeightGreyson.png",
+    "HunterHeightEthanFace.png",
+    "HunterHeightGreysonFace.png"
+  ],
+  "partScalesRelativeToBody": {
+    "Ethan": {
+      "hands": 0.72,
+      "feet": 0.75
+    },
+    "Greyson": {
+      "hands": 0.82,
+      "feet": 0.84
+    }
+  },
+  "animationProportions": "PASS: hand, finger, foot and toe bone scales checked in the packaged game; preview uses the same animation sizing"
+}

@@ -50,23 +50,23 @@
     },
     {
       "path": "Rifles/Previews/Pardner_410_detail.png",
-      "bytes": 1328581,
-      "sha256": "de7bcd3aa9178e0123d8a837e571918d82244cc4b27894c10c1b3de86ba8c508"
+      "bytes": 1292282,
+      "sha256": "e5a781470d4eeb8f9e9b5452baf0911eaee05da389a129526084d1e5e0624a11"
     },
     {
       "path": "Rifles/Previews/Pardner_410_detail_left.png",
-      "bytes": 1321624,
-      "sha256": "e2b03369cd619cdb02bc707434e709e77bc593f9e1a534d02ead56ede96c0471"
+      "bytes": 1295042,
+      "sha256": "cbacfb38f3123f59749e8e37626446b03373aa20a466982d528b25f25dff6b3f"
     },
     {
       "path": "Rifles/Previews/Pardner_410_left.png",
-      "bytes": 1194922,
-      "sha256": "1aa1a4748c96ba9f24b5e4936afdd57d9c480ffbbf12f3e7e48fbe2df9f6450d"
+      "bytes": 1188629,
+      "sha256": "0becdf051d938eb17eafaa1a25f9e0815ceedb73d2c6d30b3e0924d07d441549"
     },
     {
       "path": "Rifles/Previews/Pardner_410_right.png",
-      "bytes": 1194360,
-      "sha256": "b90a5f7e3d1977f7bc74e2a9549c685a55808794467ab3a63e06e31a3ab5cead"
+      "bytes": 1185832,
+      "sha256": "2fd0ba231ffa49f00ebabe03347a75a9b7bf0974987c43588da11a90889068f3"
     },
     {
       "path": "Rifles/Previews/Rascal_Blue_detail.png",
@@ -185,8 +185,8 @@
     },
     {
       "path": "Rifles/SM_Shotgun_Pardner_410.fbx",
-      "bytes": 16394924,
-      "sha256": "127f2e051d0e7275ca93170b83c0f0f40d961b0b13f6632c9b62bc945a7b6568"
+      "bytes": 15998588,
+      "sha256": "031502ea54c57ca8ab29cdb741c1c3d285395d48233be794230a8711a5dd56b0"
     },
     {
       "path": "Rifles/SM_Shotgun_Stevens_940D.fbx",
@@ -200,8 +200,8 @@
     },
     {
       "path": "Rifles/src/build_shotgun.py",
-      "bytes": 37166,
-      "sha256": "64e050b26b65583e39ea5c011b31287bb6efff548882079b070cb1a236c84ece"
+      "bytes": 38395,
+      "sha256": "8b4346f8bbc0556624c76eeb7d20ad5db91627cb81920b205116fe6a893e1b67"
     },
     {
       "path": "Rifles/src/make_camo.py",
@@ -225,8 +225,8 @@
     },
     {
       "path": "Rifles/src/Shotgun_Pardner_410.blend",
-      "bytes": 3682675,
-      "sha256": "0e720e0a9f4b4bbea09954f069e1ba86325b35297482cf28a869d99936739508"
+      "bytes": 3713671,
+      "sha256": "50eff758f7c9b45c31087c7cef991b2ed319afaa221ce2c928f5ebe0d3783956"
     },
     {
       "path": "Rifles/src/Shotgun_Stevens_940D.blend",
@@ -240,33 +240,33 @@
     },
     {
       "path": "Rifles/Textures/T_Pardner410_Metal_D.png",
-      "bytes": 9581705,
-      "sha256": "dd61d94256d416558c66559da1d2b74b27eae0e27848370b28475920b027fe4b"
+      "bytes": 8949610,
+      "sha256": "96e67f6c33ac91a73647065da6ddc7ed60d7a111050166a3ed6899ce165e42d5"
     },
     {
       "path": "Rifles/Textures/T_Pardner410_Metal_N.png",
-      "bytes": 2190045,
-      "sha256": "8715e9bc330bcd6944cd397cb1f77f813b7adf3fb578416a4cfde521bf76037f"
+      "bytes": 1992606,
+      "sha256": "49372a1b363bc4598702e71c6dbf00d47d9c57b2a8376ae2fbc8d22379e7ee24"
     },
     {
       "path": "Rifles/Textures/T_Pardner410_Metal_ORM.png",
-      "bytes": 10620337,
-      "sha256": "d6efe61bf1345e293f69fc8b46a5030dbab3bb5cf16c172ba69e7bcebd8612d1"
+      "bytes": 9356131,
+      "sha256": "5ec5a4e27f85789ffcea2ae1a743abaa44d813a00155f37bc591c0e73dce0e3e"
     },
     {
       "path": "Rifles/Textures/T_Pardner410_Wood_D.png",
-      "bytes": 5698300,
-      "sha256": "4dce3e0a2a8f879f0ff9744f194745ec73fcdc8632bf1e7f88139d7755e51f79"
+      "bytes": 5932787,
+      "sha256": "47802c02aeaa2e1042a30144c427e85e8a2177dd20894f022886a6bfdccb1d00"
     },
     {
       "path": "Rifles/Textures/T_Pardner410_Wood_N.png",
-      "bytes": 6282887,
-      "sha256": "8e02f7e0a202d3978fde3ac0e73a76307bd67f3b9bf12f6332613696132e7656"
+      "bytes": 6457685,
+      "sha256": "4dfc42e3dcbc315fb415fc5cb7c53fc8da2a2308e1853a1479545f690dc1e1d4"
     },
     {
       "path": "Rifles/Textures/T_Pardner410_Wood_ORM.png",
-      "bytes": 6653201,
-      "sha256": "339fd9dca7517fbf3ab17a2e46af3681824752f49442b2bd593d4c2f1f31bf23"
+      "bytes": 7026068,
+      "sha256": "e214c376f2305301e67261313844a1ca976270d57df77127ceb4279e7b69b0ba"
     },
     {
       "path": "Rifles/Textures/T_Stevens940D_Metal_D.png",

@@ -635,20 +635,28 @@ def slotted(screw, x0, x1, y0, y1, z0, z1):
 # ------------------------------------------------------------- NEF Pardner .410
 
 def build_pardner():
+	"""NEF/H&R Pardner SB1: long box frame whose rear top rounds down into the wrist, trigger guard wholly under
+	the frame, flat-bottomed forend flush with the frame, straight-comb stock with a shallow semi-pistol grip."""
 	reset()
 	zb = 0.040  # bore axis
 	xb = 0.028  # breech face against the standing breech
-	xr = -0.017  # frame rear / stock joint
+	xr = -0.042  # frame rear / stock joint
 	xm = xb + 0.660  # 26 in barrel
-	hx, hz, hr = 0.072, 0.0115, 0.016  # hinge pin and the knuckle radius around it
-	bottom = hz - hr  # frame underside
 	r_ch, r_mz, r_bore = 0.0125, 0.0076, 0.0052  # chamber OD, muzzle OD, .410 bore
+	hx, hr = 0.107, 0.011  # hinge pin and the knuckle radius around it (knuckle top meets the chamber underside)
+	hz = zb - r_ch - hr
+	bottom = hz - hr  # frame underside ahead of the trigger guard
 	spur = ((xb - 0.052, xb - 0.033), (-0.01, 0.01), (zb + 0.024, zb + 0.040))
 	P = gun_mats(('#7a4a2a', '#5a3218', '#2a1408'), wear=0.35, case_fade=0.15, checker=[spur])
 
-	# frame: standing breech, bar under the chamber, rounded knuckle around the hinge pin
+	# frame: rear top rounds down into the wrist, rises to the standing breech; bar under the chamber, rounded
+	# knuckle around the hinge pin; the underside steps down behind the trigger guard to meet the grip
 	knuckle = [(hx + hr * math.cos(math.radians(a)), hz + hr * math.sin(math.radians(a))) for a in range(90, -91, -15)]
-	profile_solid('Frame', [(xr, bottom), (xr, zb + 0.0105), (xb, zb + 0.0125), (xb, zb - r_ch)] + knuckle, [],
+	J = [(xr, -0.012), (xr, 0.027)]  # stock joint, bottom to top (shared with the stock)
+	top = [(xr + 0.0016, 0.033), (xr + 0.006, 0.0374), (xr + 0.012, 0.039), (-0.012, 0.041), (-0.006, 0.0445),
+		(0.0, 0.049), (0.006, 0.0515), (0.012, zb + r_ch), (xb, zb + r_ch)]
+	under = [(0.035, bottom - 0.001), (0.0, 0.002), (-0.014, 0.0), (-0.026, -0.0045), (-0.035, -0.010)]
+	profile_solid('Frame', J + top + [(xb, zb - r_ch)] + knuckle + under, [],
 		[(xr, 0.028), (xb, 0.027), (hx + hr, 0.026)], P['case'], 0.0025, 3, smooth_iters=0)
 	for nm, r, px, pz in (('HingePin', 0.0042, hx, hz), ('HammerPin', 0.0024, xb - 0.026, zb - 0.012),
 			('TriggerPin', 0.0022, -0.006, 0.008)):
@@ -665,9 +673,10 @@ def build_pardner():
 	lever.location.y = -0.0148
 	box('ReleaseTab', xb - 0.0405, xb - 0.031, -0.0185, -0.0140, zb - 0.0015, zb + 0.0085, P['blued'], bev=0.0012)
 	post('ReleasePivot', 0.0038, -0.0135, -0.0168, 'Y', xb - 0.006, 0, zb + 0.0005, P['blued'], seg=24)
-	tube('TriggerGuard', [(0.034, 0, bottom + 0.002), (0.033, 0, -0.020), (0.020, 0, -0.031), (-0.012, 0, -0.031),
-		(-0.027, 0, -0.023), (-0.036, 0, -0.012), (-0.042, 0, -0.008)], 0.0026, P['blued'], scale_y=2.5)
-	tube('Trigger', [(0.004, 0, bottom + 0.003), (0.006, 0, -0.010), (0.002, 0, -0.019), (-0.006, 0, -0.024)],
+	# trigger guard: loop entirely under the frame, rear end turning up into the frame ahead of the joint
+	tube('TriggerGuard', [(0.030, 0, bottom), (0.029, 0, -0.012), (0.020, 0, -0.025), (0.004, 0, -0.028),
+		(-0.010, 0, -0.025), (-0.018, 0, -0.014), (-0.021, 0, -0.001)], 0.0026, P['blued'], scale_y=2.5)
+	tube('Trigger', [(0.005, 0, 0.004), (0.007, 0, -0.008), (0.003, 0, -0.016), (-0.004, 0, -0.021)],
 		0.0017, P['blued'], scale_y=1.8)
 
 	# barrel: chamber section, taper, recessed bore, brass bead
@@ -677,30 +686,34 @@ def build_pardner():
 	cyl('Muzzle', r_bore, r_bore, xm - 0.0152, xm - 0.0148, P['bore'], z=zb, seg=24)
 	sphere('FrontBead', 0.0019, (xm - 0.008, 0, zb + r_mz + 0.0011), P['brass'])
 
-	# forend: concave rear wraps the knuckle, screwed to the barrel from underneath
+	# forend: concave rear wraps the knuckle, flat underside flush with the frame, rounded tip; screwed to the
+	# barrel from underneath
 	arc = [(hx + (hr + 0.0006) * math.cos(math.radians(a)), hz + (hr + 0.0006) * math.sin(math.radians(a)))
 		for a in range(-75, 91, 15)]
-	fore = [(hx + 0.0006, zb), (0.300, zb), (0.311, zb - 0.005), (0.316, zb - 0.015), (0.312, zb - 0.025),
-		(0.300, zb - 0.030), (0.20, zb - 0.036), (0.12, zb - 0.042), (0.09, bottom)]
+	fore = [(hx + 0.0006, zb), (0.302, zb), (0.313, zb - 0.005), (0.319, zb - 0.015), (0.316, zb - 0.024),
+		(0.305, zb - 0.030), (0.27, bottom + 0.0015), (0.18, bottom), (hx + 0.012, bottom)]
 	profile_solid('Forend', fore + arc, [0] + list(range(len(fore), len(fore) + len(arc))),
-		[(0.07, 0.040), (0.20, 0.038), (0.32, 0.033)], P['wood'], 0.008, 5)
-	screw = post('ForendScrew', 0.0034, 0.0022, 0.0046, 'Z', 0.19, 0, 0, P['blued'], seg=24)
-	slotted(screw, 0.185, 0.195, -0.00035, 0.00035, 0.0012, 0.0028)
+		[(0.10, 0.040), (0.20, 0.038), (0.32, 0.033)], P['wood'], 0.008, 5)
+	screw = post('ForendScrew', 0.0034, bottom - 0.0012, bottom + 0.0012, 'Z', 0.19, 0, 0, P['blued'], seg=24)
+	slotted(screw, 0.185, 0.195, -0.00035, 0.00035, bottom - 0.0022, bottom - 0.0006)
 
-	# buttstock: dropped comb, semi-pistol grip, 14.4 in length of pull
-	toe, heel = (-0.367, -0.142), (-0.360, -0.009)
-	prof = [toe, heel, (-0.30, 0.0005), (-0.22, 0.0095), (-0.16, 0.016), (-0.12, 0.019), (-0.085, 0.026),
-		(-0.055, 0.038), (-0.030, 0.0475), (xr, zb + 0.0105), (xr, bottom), (-0.030, -0.006), (-0.040, -0.012),
-		(-0.046, -0.022), (-0.054, -0.040), (-0.064, -0.058), (-0.076, -0.074), (-0.088, -0.085), (-0.100, -0.089),
-		(-0.116, -0.084), (-0.130, -0.074), (-0.145, -0.066), (-0.165, -0.065), (-0.21, -0.077), (-0.26, -0.095),
-		(-0.31, -0.115)]
-	profile_solid('Stock', prof, [0, 1, 9, 10], [(-0.37, 0.041), (-0.25, 0.038), (-0.13, 0.033),
-		(-0.08, 0.030), (-0.04, 0.0285), (xr, 0.028)], P['wood'], 0.0105, 6)
+	# buttstock: straight comb with a slight sag ahead of the wrist; underneath, the wrist runs back from the frame
+	# and turns down in one smooth sweep into a shallow semi-pistol grip that barely swells below the straight belly
+	# line running to the toe. 14.3 in length of pull, ~1.25 in drop at comb, ~2.2 in at heel.
+	toe, heel = (-0.366, -0.122), (-0.360, -0.004)
+	top = [(-0.30, 0.0018), (-0.24, 0.0075), (-0.18, 0.0125), (-0.14, 0.0155), (-0.11, 0.0180), (-0.08, 0.0215),
+		(-0.055, 0.0252)]
+	under = [(-0.052, -0.0145), (-0.064, -0.0182), (-0.076, -0.0230), (-0.086, -0.0285), (-0.094, -0.0345),
+		(-0.101, -0.0415), (-0.108, -0.0490), (-0.115, -0.0560), (-0.123, -0.0605), (-0.133, -0.0625),
+		(-0.145, -0.0628), (-0.160, -0.0645), (-0.20, -0.0760), (-0.26, -0.0935), (-0.32, -0.1105)]
+	joint = [2 + len(top), 3 + len(top)]
+	profile_solid('Stock', [toe, heel] + top + J[::-1] + under, [0, 1] + joint, [(-0.37, 0.041), (-0.25, 0.038),
+		(-0.13, 0.032), (-0.08, 0.030), (xr, 0.028)], P['wood'], 0.0105, 6)
 	buttplate(toe, heel, 0.041, P)
 
 	finish_photoreal('Shotgun_Pardner_410', 'Pardner_410', 'T_Pardner410', (0.157, -0.035, 1.25), {
-		'detail': ((0.30, -0.46, 0.19), (0.005, 0.0, 0.025)),
-		'detail_left': ((0.26, 0.44, 0.17), (0.005, 0.0, 0.025)),
+		'detail': ((0.30, -0.46, 0.19), (0.015, 0.0, 0.022)),
+		'detail_left': ((0.26, 0.44, 0.17), (0.015, 0.0, 0.022)),
 	})
 
 

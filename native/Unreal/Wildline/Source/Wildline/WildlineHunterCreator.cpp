@@ -37,7 +37,7 @@
 #include "HAL/FileManager.h"
 TSharedRef<SWidget> UWildlineHunterCreator::RebuildWidget(){
     if(WidgetTree->RootWidget)return Super::RebuildWidget();SetIsFocusable(true);
-    if(auto* S=UWildlineUserSettings::Get())Pending=S->HunterProfile;PhotoData=WildlinePortrait::LoadSavedPhoto();
+    if(auto* S=UWildlineUserSettings::Get())Pending=S->HunterProfile;Pending.Clamp();PhotoData=WildlinePortrait::LoadSavedPhoto();
     const FLinearColor Cream(.89f,.92f,.81f),Sage(.69f,.79f,.48f),Muted(.58f,.67f,.58f);
     auto* Root=WidgetTree->ConstructWidget<UCanvasPanel>();WidgetTree->RootWidget=Root;
     auto* Back=WidgetTree->ConstructWidget<UBorder>();Back->SetBrushColor(FLinearColor(.012f,.022f,.017f,1));auto* BS=Root->AddChildToCanvas(Back);BS->SetAnchors(FAnchors(0,0,1,1));BS->SetOffsets(FMargin(0));
@@ -51,16 +51,16 @@ TSharedRef<SWidget> UWildlineHunterCreator::RebuildWidget(){
     auto Add=[&](UWidget* W,float Space=9){auto* S=List->AddChildToVerticalBox(W);S->SetPadding(FMargin(0,0,0,Space));};
     Add(Text(TEXT("W  /  HUNTER CREATION"),12,Sage),12);Add(Text(TEXT("Make the hunt yours."),27,Cream),12);
     Add(Text(TEXT("Choose your look, then preview it in the field."),11,Muted),16);
-    auto Combo=[&](const FString& Label,const TArray<FString>& Options,int32 Index){Add(Text(Label,10,Sage),4);auto* C=WidgetTree->ConstructWidget<UComboBoxString>();for(const auto& O:Options)C->AddOption(O);C->SetSelectedIndex(Index);Add(C,10);return C;};
-    PresetCombo=Combo(TEXT("STARTING PRESET"),{TEXT("Custom hunter"),TEXT("Travis")},Pending.Preset);PresetCombo->OnSelectionChanged.AddDynamic(this,&UWildlineHunterCreator::PresetChanged);
-    Add(Text(TEXT("Travis is a starting look. Every control below remains editable."),11,Muted),10);
+    auto Combo=[&](const FString& Label,const TArray<FString>& Options,int32 Index){Add(Text(Label,10,Sage),4);auto* C=WidgetTree->ConstructWidget<UWildlineChoice>();for(const auto& O:Options)C->AddOption(O);C->SetSelectedIndex(Index);Add(C,10);return C;};
+    PresetCombo=Combo(TEXT("STARTING PRESET"),{TEXT("Custom hunter"),TEXT("Travis"),TEXT("Ethan"),TEXT("Greyson")},Pending.PresetOptionIndex());PresetCombo->OnSelectionChanged.AddDynamic(this,&UWildlineHunterCreator::PresetChanged);
+    Add(Text(TEXT("Choose Travis, Ethan or Greyson, then customize clothing and build."),11,Muted),10);
     auto* Reset=Button(TEXT("RESET SELECTED PRESET"));Reset->OnClicked.AddDynamic(this,&UWildlineHunterCreator::ResetPreset);Add(Reset);
     auto* Body=Combo(TEXT("BODY"),{TEXT("Male hunter"),TEXT("Female hunter")},Pending.Body);BodyCombo=Body;Body->OnSelectionChanged.AddDynamic(this,&UWildlineHunterCreator::BodyChanged);
     auto* Outfit=Combo(TEXT("FIELD CLOTHING"),{TEXT("Woodland olive"),TEXT("Blaze orange"),TEXT("Earth brown")},Pending.Outfit);OutfitCombo=Outfit;Outfit->OnSelectionChanged.AddDynamic(this,&UWildlineHunterCreator::OutfitChanged);
     auto* Hair=Combo(TEXT("HAIR"),{TEXT("Brown"),TEXT("Black"),TEXT("Silver")},Pending.Hair);HairCombo=Hair;Hair->OnSelectionChanged.AddDynamic(this,&UWildlineHunterCreator::HairChanged);
     auto* Cap=WidgetTree->ConstructWidget<UCheckBox>();Cap->AddChild(Text(TEXT("  Field cap"),12,Cream));Cap->SetIsChecked(Pending.bCap);Cap->OnCheckStateChanged.AddDynamic(this,&UWildlineHunterCreator::CapChanged);Add(Cap);
     CapCheck=Cap;
-    BeardCheck=WidgetTree->ConstructWidget<UCheckBox>();BeardCheck->AddChild(Text(TEXT("  Travis goatee"),12,Cream));BeardCheck->SetIsChecked(Pending.bBeard);BeardCheck->OnCheckStateChanged.AddDynamic(this,&UWildlineHunterCreator::BeardChanged);Add(BeardCheck);
+    BeardCheck=WidgetTree->ConstructWidget<UCheckBox>();BeardCheck->AddChild(Text(TEXT("  Facial hair"),12,Cream));BeardCheck->SetIsChecked(Pending.bBeard);BeardCheck->OnCheckStateChanged.AddDynamic(this,&UWildlineHunterCreator::BeardChanged);Add(BeardCheck);
     auto Slider=[&](const FString& Label,float Min,float Max,float Value){Add(Text(Label,10,Muted),4);auto* S=WidgetTree->ConstructWidget<USlider>();S->SetMinValue(Min);S->SetMaxValue(Max);S->SetValue(Value);AppearanceSliders.Add(S);Add(S,11);return S;};
     Slider(TEXT("BODY BUILD / SLIMNESS"),0,1,Pending.Slimness)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::SlimnessChanged);
     Slider(TEXT("SKIN TONE"),0,1,Pending.SkinTone)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::SkinChanged);
@@ -74,7 +74,7 @@ TSharedRef<SWidget> UWildlineHunterCreator::RebuildWidget(){
     Slider(TEXT("PHOTO HORIZONTAL ALIGNMENT"),-.5,.5,Pending.PhotoX)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::PhotoXChanged);
     Slider(TEXT("PHOTO VERTICAL ALIGNMENT"),-.5,.5,Pending.PhotoY)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::PhotoYChanged);
     Slider(TEXT("PHOTO CROP / ZOOM"),.5,4,Pending.PhotoZoom)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::PhotoZoomChanged);
-    Add(Text(TEXT("Photo appearance is mapped to the selected 3D head. Face width and nose controls adjust its shape. The photo is saved locally and shared with players in your co-op session."),10,Muted),10);
+    Add(Text(TEXT("Photo appearance is mapped to the selected 3D head. Face width adjusts its shape; custom hunters also support nose depth. The photo is saved locally and shared with players in your co-op session."),10,Muted),10);
     Message=Text(TEXT("Your saved hunter will be used when you enter an expedition."),11,Sage);Add(Message,12);
     auto* Actions=WidgetTree->ConstructWidget<UHorizontalBox>();auto* Save=Button(TEXT("SAVE HUNTER"));Save->OnClicked.AddDynamic(this,&UWildlineHunterCreator::SaveHunter);auto* Close=Button(TEXT("CANCEL"));Close->OnClicked.AddDynamic(this,&UWildlineHunterCreator::Cancel);Actions->AddChildToHorizontalBox(Save);Actions->AddChildToHorizontalBox(Close);Left->AddChildToVerticalBox(Actions)->SetPadding(FMargin(0,14,0,0));
     auto* Right=WidgetTree->ConstructWidget<UVerticalBox>();Panel->AddChildToHorizontalBox(Right)->SetSize(FSlateChildSize(ESlateSizeRule::Fill));
@@ -86,20 +86,37 @@ TSharedRef<SWidget> UWildlineHunterCreator::RebuildWidget(){
     Preview->SetReplicates(false);Preview->bPreviewHunter=true;Preview->bProfileSubmitted=true;Preview->bThirdPerson=true;Preview->HunterProfile=Pending;Preview->HunterFaceData=PhotoData;Preview->FinishSpawning(Transform);Preview->SetActorEnableCollision(false);Preview->GetCharacterMovement()->DisableMovement();Preview->GetMesh()->SetOwnerNoSee(false);Preview->WorldRifle->SetOwnerNoSee(false);Preview->WorldBolt->SetOwnerNoSee(false);Preview->ViewRifle->SetVisibility(false);Preview->ViewBolt->SetVisibility(false);
     Target=NewObject<UTextureRenderTarget2D>(this);Target->RenderTargetFormat=RTF_RGBA8;Target->ClearColor=FLinearColor(.025f,.04f,.03f);Target->InitAutoFormat(768,896);Target->TargetGamma=2.2f;FSlateBrush PortraitBrush;PortraitBrush.SetResourceObject(Target);PortraitBrush.ImageSize=FVector2D(768,896);PreviewImage->SetBrush(PortraitBrush);
     Capture=NewObject<USceneCaptureComponent2D>(Preview);Capture->SetupAttachment(Preview->GetRootComponent());Capture->TextureTarget=Target;Capture->CaptureSource=ESceneCaptureSource::SCS_FinalColorLDR;Capture->PrimitiveRenderMode=ESceneCapturePrimitiveRenderMode::PRM_UseShowOnlyList;Capture->ShowOnlyActors.Add(Preview);Capture->ShowFlags.SetAtmosphere(false);Capture->ShowFlags.SetDeferredAtmospherePass(false);Capture->ShowFlags.SetFog(false);Capture->ShowFlags.SetGlobalIllumination(false);Capture->ShowFlags.SetAmbientOcclusion(false);Capture->ShowFlags.SetReflectionEnvironment(false);Capture->FOVAngle=43;Capture->PostProcessSettings.bOverride_AutoExposureMinBrightness=true;Capture->PostProcessSettings.bOverride_AutoExposureMaxBrightness=true;Capture->PostProcessSettings.AutoExposureMinBrightness=9;Capture->PostProcessSettings.AutoExposureMaxBrightness=9;Capture->RegisterComponent();
-    for(int32 I=0;I<2;I++){auto* Light=NewObject<UPointLightComponent>(Preview);Light->SetupAttachment(Preview->GetRootComponent());Light->SetRelativeLocation(I==0?FVector(180,-120,150):FVector(70,130,110));Light->SetIntensity(I==0?50000:20000);Light->SetAttenuationRadius(800);Light->SetCastShadows(false);Light->RegisterComponent();}
+    // Isolate portrait lighting from the reserve's much brighter sun.
+    Preview->GetMesh()->SetLightingChannels(false,true,false);
+    for(int32 I=0;I<2;I++){auto* Light=NewObject<UPointLightComponent>(Preview);Light->SetMobility(EComponentMobility::Movable);Light->SetLightingChannels(false,true,false);Light->SetupAttachment(Preview->GetRootComponent());Light->SetRelativeLocation(I==0?FVector(180,-120,150):FVector(70,130,110));Light->SetIntensityUnits(ELightUnits::Candelas);Light->SetIntensity((I==0?3500:1800)*FMath::Square(Pending.HeightScale()));Light->SetSourceRadius(25);Light->SetAttenuationRadius(800);Light->SetCastShadows(false);Light->RegisterComponent();}
     auto* Background=NewObject<UStaticMeshComponent>(Preview);Background->SetupAttachment(Preview->GetRootComponent());Background->SetStaticMesh(LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Sphere.Sphere")));Background->SetMaterial(0,LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/Wildline/Hunters/Materials/M_PreviewBackdrop.M_PreviewBackdrop")));Background->SetRelativeScale3D(FVector(30));Background->SetCollisionEnabled(ECollisionEnabled::NoCollision);Background->SetCastShadow(false);Background->RegisterComponent();
     RefreshPreview();UpdateCamera();return Super::RebuildWidget();
 }
-void UWildlineHunterCreator::RefreshPreview(){Pending.Clamp();if(Preview){Preview->HunterProfile=Pending;Preview->HunterFaceData=PhotoData;Preview->ApplyHunterProfile();Preview->GetMesh()->PlayAnimation(LoadObject<UAnimSequence>(nullptr,TEXT("/Game/Characters/Mannequins/Anims/Unarmed/MM_Idle.MM_Idle")),true);Preview->WorldRifle->SetWorldRotation(FRotator(-35,Preview->GetActorRotation().Yaw,0));}PhotoTexture=Pending.bUsePhoto?WildlinePortrait::DecodePhoto(PhotoData):nullptr;if(PhotoTexture){PhotoImage->SetBrushFromTexture(PhotoTexture);PhotoFrame->SetVisibility(ESlateVisibility::Visible);}else if(PhotoFrame)PhotoFrame->SetVisibility(ESlateVisibility::Collapsed);}
-void UWildlineHunterCreator::UpdateCamera(){if(!Capture||!Preview)return;const float A=FMath::DegreesToRadians(PreviewAngle);float FaceHeight=66,BodyHeight=0;if(auto* Mesh=Preview->GetMesh()->GetSkeletalMeshAsset()){const auto B=Mesh->GetImportedBounds();FaceHeight=Preview->GetMesh()->GetRelativeLocation().Z+B.Origin.Z+B.BoxExtent.Z-12;BodyHeight=Preview->GetMesh()->GetRelativeLocation().Z+B.Origin.Z;}const FVector Pivot(0,0,bFaceView?FaceHeight:BodyHeight);const FVector Offset(FMath::Cos(A)*(bFaceView?72:275),FMath::Sin(A)*(bFaceView?72:275),bFaceView?2:28);Capture->SetRelativeLocation(Pivot+Offset);Capture->SetRelativeRotation((-Offset).Rotation());}
+void UWildlineHunterCreator::RefreshPreview(){
+    Pending.Clamp();const bool bPhotoPreset=Pending.IsPhotoPreset();BeardCheck->SetIsEnabled(!bPhotoPreset);HairCombo->SetIsEnabled(!bPhotoPreset);
+    if(AppearanceSliders.Num()>3)AppearanceSliders[3]->SetIsEnabled(!bPhotoPreset);
+    if(Preview){
+        const float OldScale=Preview->GetActorScale3D().Z;
+        Preview->HunterProfile=Pending;Preview->HunterFaceData=PhotoData;Preview->ApplyHunterProfile();
+        // Keep portrait exposure consistent as the lights move with the rig.
+        TArray<UPointLightComponent*> Lights;Preview->GetComponents(Lights);
+        for(auto* Light:Lights)Light->SetIntensity(Light->Intensity*FMath::Square(Pending.HeightScale()/OldScale));
+        Preview->WorldRifle->SetWorldRotation(FRotator(-35,Preview->GetActorRotation().Yaw,0));UpdateCamera();
+    }
+    PhotoTexture=Pending.bUsePhoto?WildlinePortrait::DecodePhoto(PhotoData):nullptr;
+    if(PhotoTexture){PhotoImage->SetBrushFromTexture(PhotoTexture);PhotoFrame->SetVisibility(ESlateVisibility::Visible);}else if(PhotoFrame)PhotoFrame->SetVisibility(ESlateVisibility::Collapsed);
+}
+void UWildlineHunterCreator::UpdateCamera(){if(!Capture||!Preview)return;const float A=FMath::DegreesToRadians(PreviewAngle);const float Scale=Pending.HeightScale();float BodyHeight=0;if(auto* Mesh=Preview->GetMesh()->GetSkeletalMeshAsset()){const auto B=Mesh->GetImportedBounds();BodyHeight=(Preview->GetMesh()->GetRelativeLocation().Z+B.Origin.Z)*Scale;}const FVector FacePivot=Preview->GetMesh()->GetSocketLocation(TEXT("head"))-Preview->GetActorLocation()+FVector(10,0,-3)*Scale;const FVector Pivot=bFaceView?FacePivot:FVector(0,0,BodyHeight);const float Distance=bFaceView?46*Scale:275;const FVector Offset(FMath::Cos(A)*Distance,FMath::Sin(A)*Distance,bFaceView?0:28);Capture->SetWorldLocation(Preview->GetActorLocation()+Pivot+Offset);Capture->SetWorldRotation((-Offset).Rotation());}
 void UWildlineHunterCreator::SyncControls(){
-    bSyncing=true;PresetCombo->SetSelectedIndex(Pending.Preset);BodyCombo->SetSelectedIndex(Pending.Body);OutfitCombo->SetSelectedIndex(Pending.Outfit);HairCombo->SetSelectedIndex(Pending.Hair);CapCheck->SetIsChecked(Pending.bCap);BeardCheck->SetIsChecked(Pending.bBeard);
+    bSyncing=true;PresetCombo->SetSelectedIndex(Pending.PresetOptionIndex());BodyCombo->SetSelectedIndex(Pending.Body);OutfitCombo->SetSelectedIndex(Pending.Outfit);HairCombo->SetSelectedIndex(Pending.Hair);CapCheck->SetIsChecked(Pending.bCap);BeardCheck->SetIsChecked(Pending.bBeard);
     const float Values[]={Pending.Slimness,Pending.SkinTone,Pending.FaceWidth,Pending.NoseDepth,Pending.PhotoX,Pending.PhotoY,Pending.PhotoZoom};
     for(int32 I=0;I<AppearanceSliders.Num()&&I<UE_ARRAY_COUNT(Values);I++)AppearanceSliders[I]->SetValue(Values[I]);bSyncing=false;
 }
-void UWildlineHunterCreator::LoadTravisPreset(){Pending=FWildlineHunterProfile::Travis();SyncControls();RefreshPreview();Message->SetText(FText::FromString(TEXT("Travis loaded. Customize any setting, then save your hunter.")));}
-void UWildlineHunterCreator::PresetChanged(FString I,ESelectInfo::Type){if(bSyncing)return;if(I==TEXT("Travis")){LoadTravisPreset();return;}Pending.Preset=0;Pending.bBeard=false;SyncControls();RefreshPreview();}
-void UWildlineHunterCreator::ResetPreset(){if(Pending.Preset==1){LoadTravisPreset();return;}Pending=FWildlineHunterProfile();SyncControls();RefreshPreview();}
+void UWildlineHunterCreator::LoadTravisPreset(){Pending=FWildlineHunterProfile::Travis();SyncControls();RefreshPreview();Message->SetText(FText::FromString(TEXT("Travis loaded. Customize clothing and build, then save your hunter.")));}
+void UWildlineHunterCreator::LoadEthanPreset(){Pending=FWildlineHunterProfile::Ethan();SyncControls();RefreshPreview();Message->SetText(FText::FromString(TEXT("Ethan loaded. Customize clothing and build, then save your hunter.")));}
+void UWildlineHunterCreator::LoadGreysonPreset(){Pending=FWildlineHunterProfile::Greyson();SyncControls();RefreshPreview();Message->SetText(FText::FromString(TEXT("Greyson loaded. Customize clothing and build, then save your hunter.")));}
+void UWildlineHunterCreator::PresetChanged(FString I,ESelectInfo::Type){if(bSyncing)return;if(I==TEXT("Travis")){LoadTravisPreset();return;}if(I==TEXT("Ethan")){LoadEthanPreset();return;}if(I==TEXT("Greyson")){LoadGreysonPreset();return;}Pending.Preset=0;Pending.bBeard=false;SyncControls();RefreshPreview();}
+void UWildlineHunterCreator::ResetPreset(){if(Pending.Preset==1){LoadTravisPreset();return;}if(Pending.Preset==3){LoadEthanPreset();return;}if(Pending.Preset==4){LoadGreysonPreset();return;}Pending=FWildlineHunterProfile();SyncControls();RefreshPreview();}
 void UWildlineHunterCreator::BeardChanged(bool V){if(bSyncing)return;Pending.bBeard=V;RefreshPreview();}
 void UWildlineHunterCreator::SlimnessChanged(float V){if(bSyncing)return;Pending.Slimness=V;RefreshPreview();}
 void UWildlineHunterCreator::BodyChanged(FString I,ESelectInfo::Type){if(bSyncing)return;Pending.Body=I.StartsWith(TEXT("Female"))?1:0;RefreshPreview();UpdateCamera();}

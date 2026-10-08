@@ -6,6 +6,28 @@ Native Windows co-op hunting prototype built in Unreal Engine 5.8.3. Play **Clas
 
 Double-click **Launch Game.cmd**. It launches the packaged Windows game in `native/Build/Windows`, with an engine-play fallback if the package is absent. **Open Unreal Editor.cmd** opens the editable project at `native/Unreal/Wildline/Wildline.uproject`.
 
+The game opens with a 6.6-second 2D squirrel short: an eight-frame running cycle
+toward an acorn, interrupted by a comic shot and backward tumble before he reaches
+it. The nut stays on the ground throughout; there is no pickup animation.
+A one-second pause precedes the **hot_turd**
+studio production ident. The logo combines turdmonkey's tabby and HoTsHoT's black
+rubber duck avatars with a flaming poo emoji, an animated reveal, drifting embers
+and a fade into the menu. The logo stays on screen for 3.07 seconds, 60% longer
+than the earlier version. A lighthearted
+woodland bluegrass instrumental fades in and loops over the menu. **Space**,
+**Enter**, **Esc**, or **Skip** go straight to camp. The intro runs once per
+application session, including across map changes. There is no replay menu item.
+
+The landing menu uses the supplied **Squirrel Hunters** poster, with the complete
+portrait fitted beside the expedition controls. **Match Rules / Bots / Settings**
+opens the existing workshop. Music has its own saved volume slider under **Your
+Settings**, eases down by 40% from the studio music level when the menu appears,
+and fades out when entering gameplay. The editable 2D animation is
+in `WildlineIntro.cpp`; presentation asset sources and
+reimport instructions are in `ArtSource/Presentation/PROVENANCE.md`. Use
+`native/VerifyPresentationPackage.ps1 -Capture` to verify the packaged sequence,
+duration/skip, cleanup and gameplay entry, and capture the studio logo and menu.
+
 ## Controls
 
 | Action | Hunter | Squirrel |
@@ -25,31 +47,48 @@ Double-click **Launch Game.cmd**. It launches the packaged Windows game in `nati
 | Minimap: reserve / nearby view | M | M |
 | Restart after a result | F5 | F5 |
 
-Both roles start in **first person**. Mouse Y starts **inverted**. Uncheck **Invert mouse Y** at camp to change it. Inversion, separate normal/scope sensitivity sliders, sound volume, blood, mode, weapon, each mode's match configuration, defender bot difficulty and graphics settings persist between sessions. Choose **Easy**, **Medium** or **Hard** at camp; the co-op host controls the shared difficulty.
+Both roles start in **first person**. Mouse Y starts **inverted**. Uncheck **Invert mouse Y** at camp to change it. Inversion, separate normal/scope sensitivity sliders, sound volume, blood, mode, weapon, each mode's complete match rules and bot roster, and graphics settings persist between sessions. The co-op host controls the match rules and each bot's difficulty.
 
 Graphics always use the high-quality configuration with 100% render resolution and dynamic resolution disabled. **Display resolution** is the only graphics option at camp; it applies immediately and persists between sessions. Existing lower quality presets are upgraded automatically.
 
 ## Create your hunter
 
-Choose **Create / Edit Hunter** at camp. Start with **Custom hunter** or the **Travis** preset, then select a male or female body, woodland olive/blaze orange/earth brown field clothing, hair color, cap, body slimness, skin tone, face width and nose shape. Travis starts with camouflage, blaze-orange torso panels, receding silver hair and an editable goatee. Every appearance control remains editable. Full-body and face close-up views update live, with buttons to turn the preview. **Save Hunter** keeps the appearance for your expeditions; **Cancel** keeps the previous saved hunter.
+Choose **Create / Edit Hunter** at camp. Start with **Custom hunter**, **Travis**, **Ethan**, or **Greyson**, then customize field clothing, cap, body slimness, skin tone and face width. Travis, Ethan and Greyson use their supplied photographs on simple curved heads with no modeled facial features underneath. Hair, facial-hair and nose controls are disabled for those photo heads. All three start with camouflage and blaze-orange torso panels. Custom hunters also offer male/female bodies, hair color and nose shape. Full-body and face close-up views update live, with buttons to turn the preview. **Save Hunter** keeps the appearance for your expeditions; **Cancel** keeps the previous saved hunter. Previously saved Travis 2 profiles now load Travis.
 
 **Choose PNG / JPEG** opens the native Windows image picker. Use a clear front-facing portrait, then align and crop it against the live face close-up. The image supplies photographic appearance on the selected 3D head; a single photo does not reconstruct an entire head. Portraits are resized locally and saved as a compact JPEG in the game's `Saved/Profiles/HunterFace.jpg`. Your appearance and face texture are shared with players in that co-op session, including late joiners. No external photo-processing service is used.
 
+Ethan is approximately **71.4 cm** tall (30% shorter than his previous 102 cm), and Greyson is
+approximately **110.4 cm** tall (20% shorter than his previous 138 cm), measured without a cap.
+Their collision, eye level and equipment scale with the body; locomotion uses
+shorter strides. Ethan's hands and feet are reduced by another 28% and 25%
+relative to his body; Greyson's by 18% and 16%. Fingers and toes follow the
+smaller proportions, including in the creator preview, with foot placement
+adjusted for the smaller boots. Existing saved selections automatically update.
+
 ## Native co-op
 
-Choose a role, then **Host Co-op Expedition**. Other players run the Windows game, choose either role, enter the host's IP address and select **Join Expedition**. Same-machine testing uses `127.0.0.1`; friends on the same network use the host's LAN address. Up to eight human players can join. AI fills the opposing side when playing alone.
+Choose a role, then **Host Co-op Expedition**. Other players run the Windows game, choose either role, enter the host's IP address and select **Join Expedition**. Same-machine testing uses `127.0.0.1`; friends on the same network use the host's LAN address. Up to eight human players can join. Configure exact bot counts on both teams; bots are added to human players, and human joins or role changes retain the existing bots.
 
 The native game uses Unreal's listen-server networking on **UDP port 7777**. Allow the game on your private network when Windows prompts. Internet play requires routing that port to the host or a suitable VPN. Matchmaking, accounts and automatic NAT traversal are not implemented.
 
 ## Game modes and weapons
 
-At camp, select **Classic / Blackwood**, **Farm Raid / Peanut Heist**, or **King of the Hill / Bird Feeder**, a role, and a defender weapon, then **Enter the Wild** or **Host Co-op Expedition**. The co-op host chooses the map and shared difficulty. Joined players can select their role and weapon. Rifle and shotgun are available in both modes; ammunition is retained separately when changing weapons at camp.
+At camp, select **Classic / Blackwood**, **Farm Raid / Peanut Heist**, or **King of the Hill / Bird Feeder**, a role, and a defender weapon, then **Enter the Wild** or **Host Co-op Expedition**. The co-op host chooses the map, match rules and bot roster. Joined players can select their role and weapon. Rifle and shotgun are available in both modes; ammunition is retained separately when changing weapons at camp.
 
-**Classic** preserves the woodland hunt: hunters need eight captures, while squirrels win with twelve stored acorns or by surviving six minutes.
+**Classic** preserves the woodland hunt: hunters need eight kills, while squirrels win with twelve stored acorns or by surviving six minutes.
 
-Each mode has its own saved configuration at camp: **human player limit (1–8)**, **round time (1–30 minutes)**, **squirrel points (1–30)**, and **defender captures (1–30)**. The host controls these rules, and clients receive them through replication. Entering with changed settings starts a fresh match; F5 after a result applies the saved rules to the next round. The player limit is enforced when accepting network connections. Solo play keeps opposing AI.
+The camp **Match Workshop** has three tabs: **Match Rules**, **Bot Roster**, and **Your Settings**. Changes save automatically and separately for Classic, Farm Raid and King of the Hill. Entering with changed rules starts a fresh match; F5 after a result applies the saved rules to the next round. Co-op clients see the host's replicated rules and roster, with match controls disabled.
 
-**King of the Hill** counts repeated completed squirrel trips to a bird feeder. The residential neighborhood has six houses, lawns, fenced yards, a street, curbs, sidewalks, driveways, overhead power lines and garden furniture. Choose either start pad, then land in order on a bin, garden bench, fence ledge and pergola before jumping onto the raised feeder. Every obstacle is paired across two routes. The smooth pole and metal baffle cannot be climbed; nearby trees are excluded from the course. Falling back to the lawn resets progress. A feeder visit scores once, and a new run requires returning to a start pad. The HUD shows the next checkpoint, personal trips and shared team score; the map shows both routes and the feeder. Squirrels win at the configured trip goal (default 10); defenders win at the capture goal or when time expires. Server-authoritative checkpoints, respawns and F5 resets work in co-op.
+- **Bots:** exact defender and squirrel counts, **0–8 per team**, in addition to human players. Every defender has its own sporting rifle or pump-action shotgun and Easy/Medium/Hard AI. Every squirrel has its own difficulty and uses unarmed forage/climb abilities. Squirrel difficulty changes danger awareness and reaction delay; course bots pause according to difficulty between jumps. Inactive slots keep their settings when you reduce a count. Human joins/leaves keep active bot state.
+- **Victory/session:** human player limit (1–8), round duration (1–30 minutes), squirrel objective and defender **kills** goals (1–30), and which side wins when time expires (mode default, defenders or squirrels).
+- **Survival:** squirrel health (10–200), respawn delay (1–30 seconds), spawn damage protection (0–10 seconds), food carrying capacity (1–12), movement/climb speed (50–150%) and unlimited stamina. Course launch strength stays fixed so the authored gaps remain reachable.
+- **Weapons/hazards:** reload duration (25–200%), infinite ammunition without magazine consumption, rifle thermal permission, thermal duration (5–60 seconds) and cooldown (0–300 seconds), and livestock damage in Farm Raid.
+- **Minimap:** an **Allow minimap** checkbox, enforced for all players, plus Full/Nearby/Limited intel independent of bot AI. M only changes zoom when the map is allowed.
+- **Schemes:** Standard, Casual, Hardcore and Playground populate a complete editable ruleset and roster for the selected mode. Choosing a scheme replaces that mode's current configuration. Custom edits remain saved for that mode.
+
+Counts of zero allow co-op without AI or solo practice. A match needs opponents for kills and enough food for the objective; carrying capacity and livestock controls are disabled in modes where they do not apply. The original health, ammo, thermal and match timings described below are the Standard scheme's values.
+
+**King of the Hill** counts repeated completed squirrel trips to a bird feeder. The residential neighborhood has six houses, lawns, fenced yards, a street, curbs, sidewalks, driveways, overhead power lines and garden furniture. Choose either start pad, then land in order on a bin, garden bench, fence ledge and pergola before jumping onto the raised feeder. Every obstacle is paired across two routes. The smooth pole and metal baffle cannot be climbed; nearby trees are excluded from the course. Falling back to the lawn resets progress. A feeder visit scores once, and a new run requires returning to a start pad. The HUD shows the next checkpoint, personal trips and shared team score; the map shows both routes and the feeder. Squirrels win at the configured trip goal (default 10); defenders win at the kill goal or when time expires. Server-authoritative checkpoints, respawns and F5 resets work in co-op.
 
 Sound effects cover rifle/shotgun reports, bolt/pump action, reloads, boots and paws, jumping/landing, trunk scratching, solid impacts, damage, pickups, deposits, thermal activation, course checkpoints, feeder trips and match results, with occasional ambient birds. Nearby actions use spatial attenuation; objective feedback for the local player is clear. The camp **Sound effects volume** slider includes mute. The synthesized sounds are original project audio and require no external downloads.
 
@@ -61,7 +100,7 @@ The **pump-action shotgun** uses the requested textured Sketchfab model by Super
 
 Both weapons now produce a brief muzzle flash, a local light burst and drifting smoke. Solid hits produce dust and chips on wood/stone/ground, sparks on metal, and individual impact marks that fade after 25 seconds. Shotgun dust clouds are grouped to keep a twelve-pellet shot readable. The co-op server sends accepted shot and impact events to each player; the cosmetic effects have no gameplay collision, and the world retains at most 96 impact marks.
 
-The Farm Raid minimap outlines the house, barn and crop rows and marks livestock; startled animals flash red. **Easy reveals every remaining peanut, the den and every farmer**, alongside teammates. Medium and Hard retain the Classic visibility rules. **M** switches between the 140-metre farm overview and a nearby 70-metre view. Squirrels have a health bar and collection/deposit feedback.
+The Farm Raid minimap outlines the house, barn and crop rows and marks livestock; startled animals flash red. **Full intel reveals every remaining peanut, the den and every farmer**, alongside teammates. Nearby and Limited intel retain the Classic visibility rules. **M** switches between the 140-metre farm overview and a nearby 70-metre view. Squirrels have a health bar and collection/deposit feedback.
 
 [Farm source credits](native/Unreal/Wildline/ArtSource/Farm/PROVENANCE.md) record the downloaded livestock, photographic textures, and attributed Sketchfab farmhouse and shotgun. The farmhouse preserves Raphael Escamilla's siding, roof, porch and textures, with an added playable ground floor, pantry furniture, front/rear openings and squirrel ramps. `Scripts/convert_sketchfab.py` rebuilds the adapted FBX files from the retained downloads; `Scripts/import_sketchfab.py` imports their PBR materials and faithful static triangle collision.
 
@@ -84,7 +123,7 @@ and download settings are recorded in
 - Squirrels can grab and climb trunks, orbit around them and launch between trees. Movement and long jumps use Unreal character physics and stamina.
 - Walk over acorns to collect up to four, then return to the den. Thirty larger, capped acorns sit in clear forage patches; twelve are within thirty metres of camp. Nearby acorns have small gold hints when visible. Pickups and deposits show brief feedback, and a full bag prompts you to return home. Collected bodies and caps disappear locally. Acorns and deposits require a ground-level approach.
 - **Hunter bot difficulty:** Easy has slower pursuit, a 2.5-second reaction and less accurate shots every 6.5 seconds. Medium balances pursuit, a 1.4-second reaction and shots every 3.8 seconds. Hard has faster pursuit, a 0.65-second reaction and precise shots every 1.65 seconds. All bots require line of sight, search a last known position briefly and steer around solid scenery.
-- The north-up minimap shows terrain relief, trails, trees, your heading and teammates. Press **M** to switch between the whole reserve and a nearby 70-metre view. In the reserve view, **Easy shows every remaining acorn, the den and all hunters**. Medium shows acorns within 45 metres and visible hunters within 25 metres. Hard shows acorns within 22 metres and hides hunters. The den remains marked at every difficulty; zoomed maps keep the den and revealed hunters at the edge when off-screen.
+- The north-up minimap shows terrain relief, trails, trees, your heading and teammates. Press **M** to switch between the whole reserve and a nearby 70-metre view. In the reserve view, **Full intel shows every remaining acorn, the den and all hunters**. Nearby intel shows acorns within 45 metres and visible hunters within 25 metres. Limited intel shows acorns within 22 metres and hides hunters. The den remains marked at every difficulty; zoomed maps keep the den and revealed hunters at the edge when off-screen.
 - The server owns damage, cooldowns, climbing, pickups and shared scores. Standard Unreal character movement supplies client prediction and server correction.
 
 ## Visual scope
@@ -120,13 +159,14 @@ the `ArtSource` provenance files identify the applicable licenses; inclusion in
 this repository does not grant unrestricted redistribution of those assets.
 
 - **Build Windows Game.cmd** compiles, cooks and packages the game using the installed Unreal 5.8 engine and C++ toolchain.
-- **Test Unreal Game.cmd** runs eight native automation suites followed by Classic, Farm Raid and King of the Hill live-world checks covering lethal projectiles, climbing, long launches, reload, thermal timing, squirrel anatomy/scale, fur, paw articulation, body motion, forest assets, log/tree collision, hunter appearance, portrait decoding, visible bolt cycling, planted roots, boundary collision and containment, scaled rock traces and capsule sweeps, difficulty/map visibility, forage pickup/deposit validation, rifle grip across body profiles and scoped/sideways movement, directional animation assets, full-orbit climbing visibility on every tree species at low/middle/upper heights and camera recovery after launch.
+- **Test Unreal Game.cmd** runs the native automation suites followed by Classic, Farm Raid and King of the Hill live-world checks covering lethal projectiles, climbing, long launches, reload, thermal timing, squirrel anatomy/scale, fur, paw articulation, body motion, forest assets, log/tree collision, hunter appearance, portrait decoding, visible bolt cycling, planted roots, boundary collision and containment, scaled rock traces and capsule sweeps, difficulty/map visibility, forage pickup/deposit validation, rifle grip across body profiles and scoped/sideways movement, directional animation assets, full-orbit climbing visibility on every tree species at low/middle/upper heights and camera recovery after launch.
 - `native/Unreal/Wildline/Scripts/build_content.py` rebuilds editable materials and the Blackwood map using Unreal's Python commandlet. It expects the photographed source textures in `ArtSource`.
 - `native/VerifyForagePackage.ps1 -Capture` verifies the packaged rock collision, pickups/deposits, late-join difficulty replication and captures the camp, Easy map, zoom and pickup feedback for review.
 - `native/Unreal/Wildline/Scripts/polish_foraging.py` cooks stone collision and refreshes the saved map with clear forage patches and larger capped acorns.
 - `native/Unreal/Wildline/Scripts/polish_reserve.py` refreshes the saved reserve and hair shading after C++ changes. `-WildlinePolishReview` captures hunter grip, actual third-person climbing/orbit and reserve boundary views.
 - `native/VerifyHunterAnimations.ps1` checks captured hunter movement at 30, 60 and 120 simulation fps, including crouch ledge falls, shoulder/grip contact and stance-foot stability. Add `-Capture` to record the same sequence at high graphics quality. Source FBX retarget/export and import scripts are in `native/Unreal/Wildline/Scripts`; measured timing and stride metadata are retained with the hunter art sources.
 - Diagnostic logs and native screenshots are under `native` and the project's `Saved` directory. Generated build folders are excluded from Git.
+- `native/VerifyConfigPackage.ps1 -Capture` checks custom rules in all three modes, exact bot counts and individual loadouts, pickup capacity, health, respawn/protection, movement, ammo/reload/thermal permissions, real menu save/reload and co-op rules/roster replication using isolated test profiles. It captures all three workshop tabs and advanced rules. Use `-Editor` to verify the editor build.
 - `native/VerifyGraphicsPackage.ps1` checks migration from saved low settings to fixed high quality, live resolution changes, persistence and restart using a separate test profile, and captures the graphics menu.
 
 ## TODO: integrate the new weapon assets

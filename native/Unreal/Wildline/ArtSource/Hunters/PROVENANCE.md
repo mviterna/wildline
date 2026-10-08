@@ -36,12 +36,7 @@ angle of eight sectors; otherwise all blend weights could decay to zero after
 a turn and expose the standing reference pose. Crouched ledge falls retain the
 compact captured squat, and the standing landing overlay respects crouch.
 
-Travis is a named, customizable hunter preset derived from these same human
-assets, with original receding hair edits, skinned vest/goatee shells and a
-slim-body morph. Its facial appearance is AI assisted using the user's supplied
-photos, not a third-party stock face. Both bearded and clean-shaven projection
-textures are shipped for the editable goatee setting. See `TRAVIS.md` for source
-files, authoring steps and the limits of the likeness workflow.
+On 2026-10-08 the user selected the photo-superimposed Travis variant and discarded the detailed MetaHuman version. The former Travis 2 is now Travis, and Ethan is a separate photo-based selectable hunter. Both retain the existing MakeHuman body, outfit, boots, cap, slim-body morph and Manny rig. See `TRAVIS.md`.
 
 - Human anatomy, skin, eyes, eyebrows, hair, work clothing and boots come from the [MakeHuman system asset pack](https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html), explicitly listed as **CC0**. The basemesh and anatomical targets come from [MPFB](https://github.com/makehumancommunity/mpfb2); its core generated assets are CC0, while the authoring software has its own GPL license. Only generated geometry and textures are used by the game. Copyright notices in the source asset files identify Data Collection AB, Joel Palmius and Jonas Hauquier.
 - Two adult human variants are generated with MPFB's anatomical system, dressed in field clothing and boots, with an original curved field cap. Skin, hair, eye and clothing textures are retained in `Textures`. Their original CC0 source pack is retained in the ignored authoring download directory.
@@ -58,3 +53,15 @@ Photos stay in memory while editing. Saving the hunter stores a compact JPEG in 
 UE 5.8 Interchange's runtime skeletal buffers place the portrait projection at UV0 and the original diffuse atlas at UV1, although exported source FBX retains the opposite order. The materials use the verified runtime order. Cloth and boots currently use mesh normals: their original normal textures remain in the source folder, but need tangents rebuilt against diffuse UV1 before being enabled again.
 
 Logs use twelve original convex collision wall segments, leaving their hollow tunnel open. The engine's legacy FBX importer imports the named UCX hulls; the Interchange path in this engine build skipped them.
+
+The three built-in photo presets use unchanged user-supplied images:
+`Textures/travis_reference.png` comes from
+`codex-clipboard-beb6573a-6c4f-41d8-aa30-ca42f8a949fe.png`, and
+`Textures/ethan_reference.png` comes from
+`codex-clipboard-b9766ea3-2551-4f5d-adfd-51417ac71a17.png`, and
+`Textures/greyson_reference.png` comes from
+`codex-clipboard-0ae6cb0e-1d1f-4209-bf4f-a8c7e808fa7e.png` (added 2026-10-08).
+These are personal reference photos, not CC0 assets or AI-generated textures.
+Original simple head and ear geometry carries each image without modeled
+facial features. Both face UV channels intentionally carry the same coordinates.
+The discarded MetaHuman head, textures, materials and authoring path are removed.

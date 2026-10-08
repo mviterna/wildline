@@ -1,0 +1,31 @@
+{
+  "character": "Greyson",
+  "presetId": 4,
+  "visibleOptionIndex": 3,
+  "referencePhoto": "ArtSource/Hunters/Textures/greyson_reference.png",
+  "referenceSHA256": "E69CF17E407412C1C96E0C2393305EC40683B5318BDA4DFBBD1AFE10C9395E32",
+  "sourceBuild": "PASS",
+  "editorBuild": "PASS",
+  "assetVerification": "PASS",
+  "profileAutomation": "PASS",
+  "windowsPackageBuild": "PASS",
+  "packagedGreysonChecks": "PASS",
+  "packagedVisualReview": "PASS",
+  "fullGameplaySmoke": "FAIL: identical pre-existing failures",
+  "existingSmokeFailures": [
+    "squirrel climbs vertically",
+    "server collects an accessible acorn on approach",
+    "collected acorn body and cap disappear together locally",
+    "the same acorn cannot be collected twice",
+    "airborne squirrel cannot pick forage far below",
+    "ground-level den visit deposits the carried acorn",
+    "reserve edge removes outward velocity and contains player"
+  ],
+  "previews": [
+    "GreysonCreator.png",
+    "GreysonFace.png",
+    "GreysonThreeQuarter.png",
+    "GreysonProfile.png",
+    "GreysonCustomized.png"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "skeleton": "/Game/Characters/Mannequins/Meshes/SK_Mannequin.SK_Mannequin",
+  "morphs": [
+    "FaceWidth",
+    "SlimBuild"
+  ],
+  "materials": {
+    "H_Cloth": "/Game/Wildline/Hunters/Materials/M_TravisCamo.M_TravisCamo",
+    "H_Boots": "/Game/Wildline/Hunters/Materials/M_Boots.M_Boots",
+    "H_Skin": "/Game/Wildline/Hunters/Materials/M_Skin_male.M_Skin_male",
+    "H_Cap": "/Game/Wildline/Hunters/Materials/M_Cap.M_Cap",
+    "H_EthanPhoto": "/Game/Wildline/Hunters/Materials/M_EthanPhoto.M_EthanPhoto",
+    "H_EthanSkin": "/Game/Wildline/Hunters/Materials/M_EthanSkin.M_EthanSkin",
+    "H_EthanHair": "/Game/Wildline/Hunters/Materials/M_EthanHair.M_EthanHair"
+  },
+  "photoOverlay": true,
+  "photoAsset": "/Game/Wildline/Hunters/Textures/T_EthanFace.T_EthanFace",
+  "modeledFacialFeatures": false
+}

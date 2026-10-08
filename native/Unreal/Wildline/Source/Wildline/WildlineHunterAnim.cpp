@@ -42,12 +42,29 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
     float FootAlpha[2]={0,0},FootFloorZ[2]={0,0},AnkleHeight[2]={13.5f,13.5f};
     bool FootLocked[2]={false,false},FootHit[2]={false,false};
     int32 FootSerial[2]={0,0};
+    float HandScale=1,FootScale=1;
+    bool bPreview=false;
+    void ApplyProportions(FCSPose<FCompactPose>& Space,const FBoneContainer& Bones){
+        const FName Parts[]={TEXT("hand_l"),TEXT("hand_r"),TEXT("foot_l"),TEXT("foot_r")};
+        for(int32 Part=0;Part<4;Part++){
+            const float Scale=Part<2?HandScale:FootScale;if(FMath::IsNearlyEqual(Scale,1.f))continue;
+            const int32 Index=Names.IndexOfByKey(Parts[Part]);if(Index==INDEX_NONE)continue;
+            const auto Compact=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(Index));if(Compact.GetInt()==INDEX_NONE)continue;
+            FTransform Bone=Space.GetComponentSpaceTransform(Compact);Bone.SetScale3D(Bone.GetScale3D()*Scale);
+            // Ground IK already lowers the ankle for the smaller sole. Apply
+            // the same offset in the studio and in airborne animation poses.
+            if(Part>=2&&(!FootHit[Part-2]||Air>=.1f))Bone.AddToTranslation(FVector::UpVector*AnkleHeight[Part-2]*(Scale-1.f));
+            TArray<FBoneTransform> Sized;Sized.Emplace(Compact,Bone);Space.SafeSetCSBoneTransforms(Sized);
+        }
+    }
     void PreUpdate(UAnimInstance* Instance,float Delta) override {
         FAnimInstanceProxy::PreUpdate(Instance,Delta);
         auto* Anim=Cast<UWildlineHunterAnim>(Instance);
         auto* Pawn=Cast<AWildlineCharacter>(Instance->GetOwningActor());
         auto* Mesh=Instance->GetSkelMeshComponent();if(!Anim||!Pawn||!Mesh)return;
-        Idle=Anim->Idle;Walk=Anim->Walk;Run=Anim->Run;RifleReady=Anim->RifleReady;CrouchIdle=Anim->CrouchIdle;
+        const float BodyScale=FMath::Max(static_cast<float>(Mesh->GetComponentScale().Z),.1f);
+        bPreview=Pawn->bPreviewHunter;HandScale=Pawn->HunterProfile.HandScale();FootScale=Pawn->HunterProfile.FootScale();
+        Idle=Anim->Idle;Walk=Anim->Walk;Run=Anim->Run;RifleReady=bPreview?nullptr:Anim->RifleReady;CrouchIdle=Anim->CrouchIdle;
         JumpStart=Anim->JumpStart;Land=Anim->Land;
         const auto* Movement=Pawn->GetCharacterMovement();
         const FVector LocalVelocity=Pawn->GetActorTransform().InverseTransformVectorNoScale(Pawn->GetVelocity());
@@ -90,7 +107,9 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
                 AnkleHeight[Side]=Rest.GetLocation().Z;
             }
         }
-        const float Speed=Pawn->GetVelocity().Size2D();
+        // Clips and strides are authored in rig centimetres, so normalize
+        // world travel for shorter bodies before advancing the gait.
+        const float Speed=Pawn->GetVelocity().Size2D()/BodyScale;
         Move=FMath::FInterpTo(Move,FMath::Clamp(Speed/100.f,0.f,1.f),Delta,10);
         Fast=FMath::FInterpTo(Fast,FMath::Clamp((Speed-220.f)/220.f,0.f,1.f),Delta,8);
         float Stride=0;
@@ -132,25 +151,27 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
         for(int32 Side=0;Side<2;Side++){
             const FVector Foot=Mesh->GetSocketLocation(Side==0?TEXT("foot_l"):TEXT("foot_r"));
             FHitResult Hit;FCollisionQueryParams Query(SCENE_QUERY_STAT(HunterFootPlacement),false,Pawn);
-            FootHit[Side]=bGrounded&&Pawn->GetWorld()->LineTraceSingleByChannel(Hit,Foot+FVector::UpVector*50,Foot-FVector::UpVector*75,ECC_Visibility,Query)&&Hit.ImpactNormal.Z>.55f;
+            FootHit[Side]=bGrounded&&Pawn->GetWorld()->LineTraceSingleByChannel(Hit,Foot+FVector::UpVector*(50*BodyScale),Foot-FVector::UpVector*(75*BodyScale),ECC_Visibility,Query)&&Hit.ImpactNormal.Z>.55f;
             if(!FootHit[Side]){FootLocked[Side]=false;FootAlpha[Side]=FMath::FInterpTo(FootAlpha[Side],0.f,Delta,18);continue;}
-            const FVector Floor=Hit.ImpactPoint+FVector::UpVector*AnkleHeight[Side];
+            const FVector Floor=Hit.ImpactPoint+FVector::UpVector*(AnkleHeight[Side]*FootScale*BodyScale);
             FootFloorZ[Side]=Body.InverseTransformPosition(Floor).Z;
             FootNormals[Side]=Body.InverseTransformVectorNoScale(Hit.ImpactNormal).GetSafeNormal();
             const float Phase=FMath::Fmod(Cycle+(Side==0?0.f:.5f),1.f);
             // Pin the heel contact, then release for the captured toe-off.
             // Holding the ankle through toe-off overextends the knee and drags
             // the foot; the last part of stance must be free to roll and lift.
-            const bool Stance=TransitionTime>=TransitionDuration&&(Speed<20?TurnTime>=.65f:Phase<.30f);
+            // Let the captured landing absorb impact before locking the heel.
+            // Pinning during that changing squat can overextend shorter legs.
+            const bool Stance=LandTime>=.4f&&TransitionTime>=TransitionDuration&&(Speed<20?TurnTime>=.65f:Phase<.30f);
             if(Stance&&!FootLocked[Side]){LockedFeet[Side]=Floor;FootSerial[Side]++;FootAlpha[Side]=0;}
             FootLocked[Side]=Stance;
-            if(FVector::Dist2D(LockedFeet[Side],Foot)>32)FootLocked[Side]=false;
+            if(FVector::Dist2D(LockedFeet[Side],Foot)>32*BodyScale){FootLocked[Side]=false;FootAlpha[Side]=0;}
             LockedFeet[Side].Z=Floor.Z;
             FootTargets[Side]=Body.InverseTransformPosition(LockedFeet[Side]);
             const float Plant=Speed<20?1.f:1-FMath::Clamp((Phase-.20f)/.10f,0.f,1.f);
             FootAlpha[Side]=FMath::FInterpConstantTo(FootAlpha[Side],FootLocked[Side]?Plant:0.f,Delta,15);
         }
-        const float FloorShift=FootHit[0]&&FootHit[1]?FMath::Clamp(FMath::Min(FootFloorZ[0]-AnkleHeight[0],FootFloorZ[1]-AnkleHeight[1]),-20.f,15.f):0;
+        const float FloorShift=FootHit[0]&&FootHit[1]?FMath::Clamp(FMath::Min(FootFloorZ[0]-AnkleHeight[0]*FootScale,FootFloorZ[1]-AnkleHeight[1]*FootScale),-20.f,15.f):0;
         PelvisAdjust=FMath::FInterpTo(PelvisAdjust,FloorShift,Delta,10);
         const float ControlPitch=Pawn->IsLocallyControlled()?Pawn->GetControlRotation().Pitch:Pawn->GetBaseAimRotation().Pitch;
         const float TargetPitch=Pawn->bAiming||Pawn->IsScoped()?FMath::Clamp(FRotator::NormalizeAxis(ControlPitch),-35.f,40.f):-6.f;
@@ -253,6 +274,11 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
             Foot.SetRotation(FQuat::Slerp(Foot.GetRotation(),Tilt*Foot.GetRotation(),Contact).GetNormalized());
             TArray<FBoneTransform> Solved;Solved.Emplace(Indices[0],Hip);Solved.Emplace(Indices[1],Knee);Solved.Emplace(Indices[2],Foot);Space.SafeSetCSBoneTransforms(Solved);
         }
+        if(bPreview){
+            ApplyProportions(Space,Bones);
+            FCSPose<FCompactPose>::ConvertComponentPosesToLocalPosesSafe(Space,Output.Pose);
+            return true;
+        }
         // Share vertical aiming across the chest, neck and head so the hunter
         // follows the sight instead of raising only the arms under a bowed head.
         const FName AimBones[]={TEXT("spine_02"),TEXT("spine_03"),TEXT("neck_01"),TEXT("head")};
@@ -295,6 +321,7 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
             TArray<FBoneTransform> Solved;Solved.Emplace(Indices[0],Upper);Solved.Emplace(Indices[1],Lower);Solved.Emplace(Indices[2],End);
             Space.SafeSetCSBoneTransforms(Solved);
         }
+        ApplyProportions(Space,Bones);
         FCSPose<FCompactPose>::ConvertComponentPosesToLocalPosesSafe(Space,Output.Pose);
         // Close the fingers around the narrow sporting stock instead of leaving
         // the mannequin's open support hands underneath it.

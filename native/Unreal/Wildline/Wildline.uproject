@@ -2,11 +2,32 @@
   "FileVersion": 3,
   "EngineAssociation": "5.8",
   "Category": "Games",
-  "Description": "WILDLINE — native hunters-versus-squirrels co-op",
-  "Modules": [{ "Name": "Wildline", "Type": "Runtime", "LoadingPhase": "Default" }],
+  "Description": "WILDLINE \u00e2\u20ac\u201d native hunters-versus-squirrels co-op",
+  "Modules": [
+    {
+      "Name": "Wildline",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
   "Plugins": [
-    {"Name":"ProceduralMeshComponent","Enabled":true},
-    {"Name":"PythonScriptPlugin","Enabled":true,"TargetAllowList":["Editor"]},
-    {"Name":"EditorScriptingUtilities","Enabled":true,"TargetAllowList":["Editor"]}
+    {
+      "Name": "ProceduralMeshComponent",
+      "Enabled": true
+    },
+    {
+      "Name": "PythonScriptPlugin",
+      "Enabled": true,
+      "TargetAllowList": [
+        "Editor"
+      ]
+    },
+    {
+      "Name": "EditorScriptingUtilities",
+      "Enabled": true,
+      "TargetAllowList": [
+        "Editor"
+      ]
+    }
   ]
 }

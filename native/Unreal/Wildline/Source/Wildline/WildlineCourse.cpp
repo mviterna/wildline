@@ -42,6 +42,9 @@ void AWildlineCharacter::CourseBotThink(float Delta){
         else if(Speed>0){M->Velocity.X=Dir.X*FMath::Min(Speed,600.f);M->Velocity.Y=Dir.Y*FMath::Min(Speed,600.f);}
         return;
     }
+    // Keep airborne steering continuous; difficulty adds a pause only on landing.
+    if(BotCourseStep!=CourseCheckpoint){BotCourseStep=CourseCheckpoint;BotDecisionAt=ServerTime()+(AIDifficulty==0?.8f:AIDifficulty==2?0.f:.2f);}
+    if(ServerTime()<BotDecisionAt){M->StopMovementImmediately();return;}
     if(CourseCheckpoint==0){
         if(GetActorLocation().Z>Forest->GroundHeight(GetActorLocation().X,GetActorLocation().Y)+30){AddMovementInput(Dir,1);return;}
         if(D.Size2D()>25)AddMovementInput(Dir,1);return;

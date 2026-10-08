@@ -57,6 +57,7 @@ skeleton=eal.load_asset('/Game/Characters/Mannequins/Meshes/SK_Mannequin')
 ue.SystemLibrary.execute_console_command(ue.EditorLevelLibrary.get_editor_world(),'Interchange.FeatureFlags.Import.FBX 0')
 report=[]
 for file in (source/'Export').glob('*.fbx'):
+    if file.stem in ['SK_HunterTravis','SK_HunterEthan']:continue # Named photo hunters have their own materials below.
     opts=ue.FbxImportUI();opts.automated_import_should_detect_type=False;opts.import_materials=False;opts.import_textures=False;opts.import_animations=False
     skeletal=file.stem.startswith('SK_');opts.import_as_skeletal=skeletal;opts.mesh_type_to_import=ue.FBXImportType.FBXIT_SKELETAL_MESH if skeletal else ue.FBXImportType.FBXIT_STATIC_MESH
     if skeletal:
@@ -91,4 +92,6 @@ opts=ue.FbxImportUI();opts.automated_import_should_detect_type=False;opts.import
 t=ue.AssetImportTask();t.factory=ue.FbxFactory();t.filename=str(root/'ArtSource/Forest/Export/SM_Log.fbx');t.destination_path='/Game/Wildline/Forest/Meshes';t.destination_name='SM_Log';t.options=opts;t.automated=True;t.replace_existing=True;t.save=True;assets.import_asset_tasks([t])
 log=eal.load_asset('/Game/Wildline/Forest/Meshes/SM_Log');log.set_material(0,eal.load_asset('/Game/Wildline/Forest/Materials/M_TreeBark'));log.set_material(1,eal.load_asset('/Game/Wildline/Forest/Materials/M_Heartwood'));eal.save_loaded_asset(log)
 eal.save_directory(base,only_if_is_dirty=True)
-(source/'unreal-import.json').write_text(json.dumps(report,indent=2));ue.log('HUNTER IMPORT COMPLETE '+json.dumps(report));ue.SystemLibrary.quit_editor()
+(source/'unreal-import.json').write_text(json.dumps(report,indent=2));ue.log('HUNTER IMPORT COMPLETE '+json.dumps(report))
+exec(compile((root/'Scripts/import_photo_hunters.py').read_text(), 'import_photo_hunters.py', 'exec'))
+ue.SystemLibrary.quit_editor()

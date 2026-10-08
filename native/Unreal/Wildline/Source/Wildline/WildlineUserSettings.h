@@ -16,6 +16,7 @@ public:
     UPROPERTY(Config, BlueprintReadWrite) float MouseSensitivity = .8f;
     UPROPERTY(Config, BlueprintReadWrite) float ScopeSensitivity = .256f;
     UPROPERTY(Config) float SoundVolume=.8f;
+    UPROPERTY(Config) float MusicVolume=.65f;
     UPROPERTY(Config) FWildlineMatchConfig ClassicConfig;
     UPROPERTY(Config) FWildlineMatchConfig FarmConfig;
     UPROPERTY(Config) FWildlineMatchConfig HillConfig;

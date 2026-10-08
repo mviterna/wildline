@@ -53,3 +53,12 @@ sources; copying them into the repository does not run them.
 
 `ASSET_MANIFEST.json` records each included source file's relative path, byte
 size and SHA-256 checksum. All copied files were compared with the originals.
+
+On 2026-10-07 the Pardner .410 was rebuilt here from a revised
+`build_shotgun.py`. Its frame, trigger guard, forend and stock profile now
+match photographs of an NEF Pardner SB1: a longer frame with the guard under it,
+a straight comb and a shallow semi-pistol grip instead of a deep knob. Its
+manifest entries describe the rebuilt files, which no longer match the copies
+in `C:/Work/GameAssets`. The script needs Blender 5 (it uses 5.x shader socket
+names); the Blender 4.5 under `native/AssetDownloads` fails on it. Rebuild with
+`blender -b -P build_shotgun.py -- <Rifles dir> pardner`.

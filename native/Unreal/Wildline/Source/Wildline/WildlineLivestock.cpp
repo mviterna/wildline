@@ -26,7 +26,7 @@ void AWildlineLivestock::Tick(float Delta){
     const auto* State=GetWorld()->GetGameState<AWildlineGameState>();if(!State||!State->bRoundStarted||State->Winner){WalkSpeed=0;return;}
     const float Now=ServerTime();
     auto Exposed=[&](AWildlineCharacter* P){
-        if(!P||!P->bSquirrel||P->bDead||FVector::Dist2D(P->GetActorLocation(),GetActorLocation())>180||P->GetActorLocation().Z-WildlineRules::FarmGround(P->GetActorLocation().X,P->GetActorLocation().Y)>70)return false;
+        if(!State->MatchConfig.bLivestockDamage||!P||!P->bSquirrel||P->bDead||FVector::Dist2D(P->GetActorLocation(),GetActorLocation())>180||P->GetActorLocation().Z-WildlineRules::FarmGround(P->GetActorLocation().X,P->GetActorLocation().Y)>70)return false;
         FHitResult Hit;FCollisionQueryParams Query(SCENE_QUERY_STAT(LivestockSight),false,this);
         return !GetWorld()->LineTraceSingleByChannel(Hit,GetActorLocation()-FVector(0,0,55),P->GetActorLocation(),ECC_Visibility,Query)||Hit.GetActor()==P;
     };

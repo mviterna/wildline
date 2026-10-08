@@ -28,23 +28,24 @@ void AWildlineHUD::DrawHUD(){
         Label(P->IsThermalActive()?TEXT("THERMAL IMAGING"):TEXT("BLACKWOOD OPTICS"),CX-85,CY-Radius+60,12,Cream);if(P->IsThermalActive())Label(FString::Printf(TEXT("%.1fs"),FMath::Max(0.f,P->ThermalUntil-P->ServerTime())),CX-20,CY-Radius+85,15,Sage);
     }else {DrawLine(CX-5,CY,CX+5,CY,Cream,1);DrawLine(CX,CY-5,CX,CY+5,Cream,1);}
     Label(Hill?TEXT("W  /  KING OF THE HILL"):Farm?TEXT("W  /  FARM RAID"):TEXT("W  /  BLACKWOOD RESERVE"),30,25,18,Cream);Label(P->bSquirrel?TEXT("SQUIRREL"):Farm?TEXT("FARMER"):Hill?TEXT("DEFENDER"):TEXT("HUNTER"),30,50,11,Sage);
-    Label(FString::Printf(TEXT("%d / %d CAPTURES    %s    %s %d / %d"),S->HunterKills,S->MatchConfig.DefenderGoal,*ClockText(S->RoundRemaining()),Hill?TEXT("FEEDER TRIPS"):TEXT("STORED"),S->StoredAcorns,S->MatchConfig.SquirrelGoal),CX-260,30,14,Cream);
+    Label(FString::Printf(TEXT("%d / %d KILLS    %s    %s %d / %d"),S->HunterKills,S->MatchConfig.DefenderGoal,*ClockText(S->RoundRemaining()),Hill?TEXT("FEEDER TRIPS"):TEXT("STORED"),S->StoredAcorns,S->MatchConfig.SquirrelGoal),CX-260,30,14,Cream);
     if(!P->IsScoped()){
         Label(TEXT("FIELD OBJECTIVE"),30,120,11,Sage);
-        const FString Goal=P->bSquirrel?(Hill?FString::Printf(TEXT("Complete %d trips through the course to the feeder."),S->MatchConfig.SquirrelGoal):FString::Printf(TEXT("Bring %d %ss back to the den."),S->MatchConfig.SquirrelGoal,Farm?TEXT("peanut"):TEXT("acorn"))):FString::Printf(TEXT("Stop %d squirrels%s."),S->MatchConfig.DefenderGoal,Hill||Farm?TEXT(" or defend until time expires"):TEXT(" with your team"));
+        const FString Goal=P->bSquirrel?(Hill?FString::Printf(TEXT("Complete %d trips through the course to the feeder."),S->MatchConfig.SquirrelGoal):FString::Printf(TEXT("Bring %d %ss back to the den."),S->MatchConfig.SquirrelGoal,Farm?TEXT("peanut"):TEXT("acorn"))):FString::Printf(TEXT("Kill %d squirrels%s."),S->MatchConfig.DefenderGoal,(S->MatchConfig.TimeWinner?S->MatchConfig.TimeWinner:WildlineRules::TimeoutWinner(S->ExpeditionMode))==1?TEXT(" or defend until time expires"):TEXT(" with your team"));
         Label(Goal,30,143,15,Cream);
         Label(Hill?TEXT("Two routes / land on every checkpoint / return to start after scoring"):P->bSquirrel?(Farm?TEXT("Use crop cover and low wall vents. Give livestock space."):TEXT("E: climb   W/S: ascend/descend   Space: long leap")):TEXT("Trees and solid scenery stop bullets."),30,167,11,Dim);
     }
     DrawRect(Panel,30,H-63,170,4);DrawRect(Sage,30,H-63,170*P->Stamina/100.f,4);Label(TEXT("STAMINA"),30,H-85,10,Cream);
     Label(TEXT("WASD Move     SHIFT Sprint     V First / third person     ESC Camp"),CX-250,H-35,11,Dim);
     if(P->GetActorLocation().Size2D()>WildlineRules::MapRadius-650.f)Label(TEXT("RESERVE BOUNDARY  /  RETURN TO THE WOODS"),CX-195,H-110,13,Sage);
-    if(P->bSquirrel){Label(Hill?FString::Printf(TEXT("%d FEEDER TRIPS"),P->FeederVisits):FString::Printf(TEXT("%02d / 04   %sS"),P->Bag,WildlineRules::FoodName(S->ExpeditionMode)),W-230,H-72,24,Cream);if(P->TreeIndex!=INDEX_NONE)Label(TEXT("CLIMBING  /  E RELEASE  /  SPACE LAUNCH"),CX-185,CY+90,14,Sage);else if(auto* F=AWildlineWorld::Find(GetWorld());F&&F->NearestTree(P->GetActorLocation(),30)!=INDEX_NONE)Label(TEXT("E  /  CLIMB TREE"),CX-70,CY+90,14,Sage);}
+    if(P->bSquirrel){Label(Hill?FString::Printf(TEXT("%d FEEDER TRIPS"),P->FeederVisits):FString::Printf(TEXT("%02d / %02d   %sS"),P->Bag,S->MatchConfig.CarryCapacity,WildlineRules::FoodName(S->ExpeditionMode)),W-230,H-72,24,Cream);if(P->TreeIndex!=INDEX_NONE)Label(TEXT("CLIMBING  /  E RELEASE  /  SPACE LAUNCH"),CX-185,CY+90,14,Sage);else if(auto* F=AWildlineWorld::Find(GetWorld());F&&F->NearestTree(P->GetActorLocation(),30)!=INDEX_NONE)Label(TEXT("E  /  CLIMB TREE"),CX-70,CY+90,14,Sage);}
     else {Label(FString::Printf(TEXT("%02d / %02d"),P->Ammo,WildlineRules::WeaponCapacity(P->SelectedWeapon)),W-140,H-84,30,Cream);Label(P->SelectedWeapon==1?TEXT("PUMP-ACTION SHOTGUN"):TEXT("BOLT-ACTION RIFLE"),W-180,H-48,10,Dim);const float CD=FMath::Max(0.f,P->ThermalReadyAt-P->ServerTime());if(P->SelectedWeapon==WildlineRules::RifleWeapon)Label(P->IsThermalActive()?TEXT("THERMAL ACTIVE  ")+ClockText(P->ThermalUntil-P->ServerTime()):CD>0?TEXT("THERMAL RECHARGING  ")+ClockText(CD):TEXT("T  THERMAL READY"),W-450,H-65,12,Sage);if(P->ReloadUntil>0)Label(TEXT("RELOADING"),CX-55,CY+90,14,Cream);}
-    if(P->bSquirrel&&!P->bDead){DrawRect(Panel,220,H-63,140,4);DrawRect(FLinearColor(.85f,.38f,.24f),220,H-63,140*P->Health/40.f,4);Label(FString::Printf(TEXT("HEALTH  %.0f / 40"),P->Health),220,H-85,10,Cream);}
-    if(Farm&&!P->bDead){for(TActorIterator<AWildlineLivestock> It(GetWorld());It;++It)if(It->StrikeAt>P->ServerTime()&&It->StrikeAt-P->ServerTime()<1&&FVector::Dist2D(P->GetActorLocation(),It->GetActorLocation())<300){Label(TEXT("LIVESTOCK STARTLED  /  MOVE AWAY!"),CX-160,CY+65,16,FLinearColor(1,.5f,.22f));break;}}
+    if(P->bSquirrel&&!P->bDead){DrawRect(Panel,220,H-63,140,4);DrawRect(FLinearColor(.85f,.38f,.24f),220,H-63,140*P->Health/S->MatchConfig.SquirrelHealth,4);Label(FString::Printf(TEXT("HEALTH  %.0f / %.0f"),P->Health,S->MatchConfig.SquirrelHealth),220,H-85,10,Cream);}
+    if(Farm&&S->MatchConfig.bLivestockDamage&&!P->bDead){for(TActorIterator<AWildlineLivestock> It(GetWorld());It;++It)if(It->StrikeAt>P->ServerTime()&&It->StrikeAt-P->ServerTime()<1&&FVector::Dist2D(P->GetActorLocation(),It->GetActorLocation())<300){Label(TEXT("LIVESTOCK STARTLED  /  MOVE AWAY!"),CX-160,CY+65,16,FLinearColor(1,.5f,.22f));break;}}
     if(P->bDead){DrawRect(FLinearColor(0,0,0,.55f),0,0,W,H);Label(TEXT("THE HUNT ENDS HERE."),CX-180,CY-30,30,Cream);Label(FString::Printf(TEXT("Returning to the den in %d seconds"),FMath::Max(0,FMath::CeilToInt(P->RespawnAt-P->ServerTime()))),CX-140,CY+20,15,Dim);}
     if(S->Winner){DrawRect(FLinearColor(.025f,.05f,.03f,.8f),0,0,W,H);Label(S->Winner==1?(Hill?TEXT("THE FEEDER IS SAFE."):Farm?TEXT("THE FARM IS SAFE."):TEXT("THE HUNTERS PREVAIL.")):(Hill?TEXT("THE SQUIRRELS REACH THE FEEDER!"):Farm?TEXT("THE PEANUT HEIST SUCCEEDS."):TEXT("THE CANOPY WINS.")),CX-200,CY-40,34,Cream);Label(TEXT("F5  /  NEW ROUND       ESC  /  CAMP"),CX-180,CY+30,15,Sage);}
-    if(!P->IsScoped()&&!P->bDead&&!S->Winner){if(auto* F=AWildlineWorld::Find(GetWorld())){DrawReserveMap(P,S,F);if(P->bSquirrel)DrawForageHints(P,F);}}
+    if(P->bSquirrel&&!P->bDead&&P->ProtectedUntil>P->ServerTime())Label(FString::Printf(TEXT("SPAWN PROTECTION  %.1fs"),P->ProtectedUntil-P->ServerTime()),CX-115,CY+115,12,Sage);
+    if(!P->IsScoped()&&!P->bDead&&!S->Winner){if(auto* F=AWildlineWorld::Find(GetWorld())){if(S->MatchConfig.bAllowMinimap)DrawReserveMap(P,S,F);if(P->bSquirrel)DrawForageHints(P,F);}}
 }
 
 void AWildlineHUD::DrawReserveMap(AWildlineCharacter* P,AWildlineGameState* S,AWildlineWorld* F){
@@ -53,7 +54,7 @@ void AWildlineHUD::DrawReserveMap(AWildlineCharacter* P,AWildlineGameState* S,AW
     const float Range=Zoom?3500.f:F->bResidential?5500.f:F->bFarm?7000.f:WildlineRules::MapRadius+400;const FVector Origin=Zoom?P->GetActorLocation():FVector::ZeroVector;
     const FLinearColor Cream(.94f,.96f,.84f),Gold(1.f,.72f,.25f),Home(.56f,.9f,.7f),Red(1.f,.28f,.21f),Muted(.53f,.64f,.56f);
     DrawRect(FLinearColor(.013f,.026f,.022f,.94f),30,H-367,248,267);
-    DrawLine(30,H-367,278,H-367,Home,.8f);Label(FString::Printf(TEXT("%s  /  %s"),F->bResidential?TEXT("NEIGHBORHOOD"):F->bFarm?TEXT("FARMSTEAD"):TEXT("BLACKWOOD"),WildlineRules::DifficultyName(S->HunterDifficulty)),42,H-356,10,Cream);
+    DrawLine(30,H-367,278,H-367,Home,.8f);Label(FString::Printf(TEXT("%s  /  %s"),F->bResidential?TEXT("NEIGHBORHOOD"):F->bFarm?TEXT("FARMSTEAD"):TEXT("BLACKWOOD"),S->MatchConfig.MapIntel==0?TEXT("FULL INTEL"):S->MatchConfig.MapIntel==2?TEXT("LIMITED INTEL"):TEXT("NEARBY INTEL")),42,H-356,10,Cream);
     Label(Zoom?TEXT("M: RESERVE MAP  /  70 m"):F->bFarm?TEXT("M: ZOOM IN  /  140 m"):TEXT("M: ZOOM IN  /  290 m"),42,H-344,8,Muted);
     auto Map=[&](FVector World){const FVector D=(World-Origin)*(Half/Range);return Centre+FVector2D(D.Y,-D.X);};
     auto Inside=[&](FVector2D Point,float Margin=3.f){return FMath::Abs(Point.X-Centre.X)<Half-Margin&&FMath::Abs(Point.Y-Centre.Y)<Half-Margin;};
@@ -89,7 +90,7 @@ void AWildlineHUD::DrawReserveMap(AWildlineCharacter* P,AWildlineGameState* S,AW
     auto Edge=[&](FVector2D Point){const FVector2D D=Point-Centre;const float Scale=FMath::Max(FMath::Abs(D.X),FMath::Abs(D.Y))/(Half-10);return Scale>1?Centre+D/Scale:Point;};
     if(P->bSquirrel){
         for(int32 I=0;I<F->AcornLocations.Num();I++){
-            if((F->bFarm?S->TakenPeanuts.Contains(I):P->Collected.Contains(I))||!WildlineRules::RevealAcorn(S->HunterDifficulty,FVector::Dist2D(P->GetActorLocation(),F->AcornLocations[I])))continue;
+            if((F->bFarm?S->TakenPeanuts.Contains(I):P->Collected.Contains(I))||!WildlineRules::RevealAcorn(S->MatchConfig.MapIntel,FVector::Dist2D(P->GetActorLocation(),F->AcornLocations[I])))continue;
             const auto A=Map(F->AcornLocations[I]);if(!Inside(A))continue;
             DrawRect(FLinearColor::Black,A.X-3,A.Y-3,6,6);DrawRect(Gold,A.X-2,A.Y-2,4,4);
         }
@@ -101,8 +102,8 @@ void AWildlineHUD::DrawReserveMap(AWildlineCharacter* P,AWildlineGameState* S,AW
         if(*It==P||It->bDead||It->bPreviewHunter)continue;
         const bool Enemy=It->bSquirrel!=P->bSquirrel;
         if(Enemy){if(!P->bSquirrel)continue;const float Distance=FVector::Dist2D(P->GetActorLocation(),It->GetActorLocation());bool Visible=false;
-            if(S->HunterDifficulty==1&&Distance<=2500){FHitResult Hit;FCollisionQueryParams Query(SCENE_QUERY_STAT(MapHunterSight),false,P);Visible=!GetWorld()->LineTraceSingleByChannel(Hit,P->GetActorLocation()+FVector(0,0,5),It->GetActorLocation(),ECC_Visibility,Query)||Hit.GetActor()==*It;}
-            if(!WildlineRules::RevealHunter(S->HunterDifficulty,Distance,Visible))continue;
+            if(S->MatchConfig.MapIntel==1&&Distance<=2500){FHitResult Hit;FCollisionQueryParams Query(SCENE_QUERY_STAT(MapHunterSight),false,P);Visible=!GetWorld()->LineTraceSingleByChannel(Hit,P->GetActorLocation()+FVector(0,0,5),It->GetActorLocation(),ECC_Visibility,Query)||Hit.GetActor()==*It;}
+            if(!WildlineRules::RevealHunter(S->MatchConfig.MapIntel,Distance,Visible))continue;
         }
         auto Marker=Map(It->GetActorLocation());if(!Inside(Marker)){if(!Enemy)continue;Marker=Edge(Marker);}
         if(Enemy){Ring(Marker,6+FMath::Sin(P->ServerTime()*3)*1.2f,FLinearColor(1.f,.25f,.15f,.4f));DrawRect(FLinearColor::Black,Marker.X-4,Marker.Y-4,8,8);DrawRect(Red,Marker.X-2.5f,Marker.Y-2.5f,5,5);}
@@ -126,13 +127,13 @@ void AWildlineHUD::DrawForageHints(AWildlineCharacter* P,AWildlineWorld* F){
         return;
     }
     if(FeedbackPlayer.Get()!=P){FeedbackPlayer=P;PreviousBag=P->Bag;PreviousCollected=P->Collected.Num();PreviousStored=State->StoredAcorns;FeedbackUntil=0;}
-    if(P->Collected.Num()>PreviousCollected){FeedbackText=FString::Printf(TEXT("+%d %s%s  /  %d OF 4 CARRIED"),P->Collected.Num()-PreviousCollected,WildlineRules::FoodName(State->ExpeditionMode),P->Collected.Num()-PreviousCollected==1?TEXT(""):TEXT("S"),P->Bag);FeedbackUntil=Now+2.3f;}
+    if(P->Collected.Num()>PreviousCollected){FeedbackText=FString::Printf(TEXT("+%d %s%s  /  %d OF %d CARRIED"),P->Collected.Num()-PreviousCollected,WildlineRules::FoodName(State->ExpeditionMode),P->Collected.Num()-PreviousCollected==1?TEXT(""):TEXT("S"),P->Bag,State->MatchConfig.CarryCapacity);FeedbackUntil=Now+2.3f;}
     if(PreviousBag>P->Bag&&State->StoredAcorns>PreviousStored){FeedbackText=FString::Printf(TEXT("%sS STORED  /  %d OF %d"),WildlineRules::FoodName(State->ExpeditionMode),State->StoredAcorns,State->MatchConfig.SquirrelGoal);FeedbackUntil=Now+3.f;}
     PreviousBag=P->Bag;PreviousCollected=P->Collected.Num();PreviousStored=State->StoredAcorns;
     if(Now<FeedbackUntil){const float Fade=FMath::Clamp(FeedbackUntil-Now,0.f,1.f);DrawRect(FLinearColor(.02f,.035f,.02f,.8f*Fade),W*.5f-185,H*.5f+130,370,36);Label(FeedbackText,W*.5f-164,H*.5f+140,14,FLinearColor(Home.R,Home.G,Home.B,Fade));}
     const float DenDistance=FVector::Dist2D(P->GetActorLocation(),F->DenLocation)/100;
-    Label(FString::Printf(TEXT("DEN  %.0f m   /   %s"),DenDistance,P->Bag>=4?TEXT("BAG FULL - RETURN HOME"):P->Bag>0?F->bFarm?TEXT("CARRYING PEANUTS"):TEXT("CARRYING ACORNS"):TEXT("FOLLOW THE GOLD MARKERS")),30,191,11,P->Bag>=4?Gold:Home);
-    if(P->Bag>=4)return;
+    Label(FString::Printf(TEXT("DEN  %.0f m   /   %s"),DenDistance,P->Bag>=State->MatchConfig.CarryCapacity?TEXT("BAG FULL - RETURN HOME"):P->Bag>0?F->bFarm?TEXT("CARRYING PEANUTS"):TEXT("CARRYING ACORNS"):TEXT("FOLLOW THE GOLD MARKERS")),30,191,11,P->Bag>=State->MatchConfig.CarryCapacity?Gold:Home);
+    if(P->Bag>=State->MatchConfig.CarryCapacity)return;
     int32 Shown=0;const FVector Eye=P->GetActorLocation()+FVector(0,0,5);
     for(int32 I=0;I<F->AcornLocations.Num()&&Shown<3;I++){
         const auto& A=F->AcornLocations[I];if((F->bFarm?State->TakenPeanuts.Contains(I):P->Collected.Contains(I))||FVector::Dist2D(P->GetActorLocation(),A)>1800)continue;

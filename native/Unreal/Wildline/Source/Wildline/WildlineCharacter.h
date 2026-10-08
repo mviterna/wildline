@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "WildlineHunterProfile.h"
+#include "WildlineMatchConfig.h"
 #include "WildlineWeaponFX.h"
 #include "WildlineCharacter.generated.h"
 class UCameraComponent;
@@ -23,6 +24,9 @@ public:
     UPROPERTY(ReplicatedUsing=OnRepRole) bool bSquirrel=false;
     UPROPERTY(ReplicatedUsing=OnRepDead) bool bDead=false;
     UPROPERTY(Replicated) bool bBot=false;
+    UPROPERTY(Replicated) int32 BotSlot=-1;
+    UPROPERTY(Replicated) int32 AIDifficulty=1;
+    UPROPERTY(Replicated) float ProtectedUntil=0;
     UPROPERTY(Replicated) bool bSprinting=false;
     UPROPERTY(Replicated) float Stamina=100.f;
     UPROPERTY(Replicated) float Health=100.f;
@@ -71,6 +75,7 @@ public:
     bool IsThermalActive() const;
     bool IsScoped() const;
     float ServerTime() const;
+    const FWildlineMatchConfig& MatchRules() const;
     void ResetBotAwareness();
     void ConfigureRole();
     void ToggleCamera();
@@ -121,6 +126,7 @@ private:
     FVector BotLastKnown=FVector::ZeroVector;
     float BotLastSeenAt=-100.f;
     int32 BotDifficultyLevel=-1;
+    int32 BotCourseStep=-1;
     int32 FarmPatrolIndex=0;
     bool bHeatApplied=false;
     AWildlineWorld* Forest=nullptr;
