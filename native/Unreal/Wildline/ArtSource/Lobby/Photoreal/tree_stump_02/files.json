@@ -1,0 +1,834 @@
+{
+  "Diffuse": {
+    "8k": {
+      "jpg": {
+        "size": 37011133,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_diff_8k.jpg",
+        "md5": "62912cabf829b2803d1634b412b1a1f8"
+      },
+      "png": {
+        "size": 223512122,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/tree_stump_02/tree_stump_02_diff_8k.png",
+        "md5": "97635a71c678d6d2c2aea16aed526449"
+      },
+      "exr": {
+        "size": 61761803,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_diff_8k.exr",
+        "md5": "eefea4bc3f7e7cdf5e80429d1ac55ed2"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 12099759,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_diff_4k.jpg",
+        "md5": "ed2f8f56808f6d645e946f70a7440fdc"
+      },
+      "png": {
+        "size": 73926887,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/tree_stump_02/tree_stump_02_diff_4k.png",
+        "md5": "b82e6371c7a41f95be955199ba457971"
+      },
+      "exr": {
+        "size": 20399615,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_diff_4k.exr",
+        "md5": "6de4e2560fef39b063c1d9ef31545947"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3435356,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_diff_2k.jpg",
+        "md5": "278b1dadd4a5dd61142e09f7c9139dd2"
+      },
+      "png": {
+        "size": 20443161,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_stump_02/tree_stump_02_diff_2k.png",
+        "md5": "74aa96c98aa221fd1abb018a3c998e59"
+      },
+      "exr": {
+        "size": 6082337,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_diff_2k.exr",
+        "md5": "4a70179346285ad0e31735b01530648c"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 901605,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_diff_1k.jpg",
+        "md5": "e791fc07d2f7a0c2c44a3fcc42b1313d"
+      },
+      "png": {
+        "size": 5397249,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/tree_stump_02/tree_stump_02_diff_1k.png",
+        "md5": "91da7bb1ed7f9f1f9be5b67ae155948f"
+      },
+      "exr": {
+        "size": 1705091,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_diff_1k.exr",
+        "md5": "e9332ceb91bc24c8c18091d69eee9a48"
+      }
+    }
+  },
+  "nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 72726101,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_nor_dx_8k.jpg",
+        "md5": "f2a233b6ffd821c0ae1907396205a9f5"
+      },
+      "png": {
+        "size": 306545837,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/tree_stump_02/tree_stump_02_nor_dx_8k.png",
+        "md5": "6860dced879e4029d1a61026b592a1d5"
+      },
+      "exr": {
+        "size": 140703599,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_nor_dx_8k.exr",
+        "md5": "35c59936d92dc9518f6e597a12aae0d5"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 20088497,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_nor_dx_4k.jpg",
+        "md5": "786f6ce4a0871504c7b7519b5fd4b2c1"
+      },
+      "png": {
+        "size": 82436710,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/tree_stump_02/tree_stump_02_nor_dx_4k.png",
+        "md5": "b96dc421b1226da290dd53639592e870"
+      },
+      "exr": {
+        "size": 38664376,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_nor_dx_4k.exr",
+        "md5": "e887451f53c62f3c3a79c177728f9ec1"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 5257661,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_nor_dx_2k.jpg",
+        "md5": "48df7b93f23c38ec634cf5c80aa11e67"
+      },
+      "png": {
+        "size": 21946841,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_stump_02/tree_stump_02_nor_dx_2k.png",
+        "md5": "7d5fda4b79cf3715240b5978f8932659"
+      },
+      "exr": {
+        "size": 10114948,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_nor_dx_2k.exr",
+        "md5": "4ac4eb4ed06f828f675c14288060e07d"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 1337368,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_nor_dx_1k.jpg",
+        "md5": "e21576713124998785e9c8609b420ed4"
+      },
+      "png": {
+        "size": 5723616,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/tree_stump_02/tree_stump_02_nor_dx_1k.png",
+        "md5": "62e1c22b4542f0ad8819b4c782dc1c6f"
+      },
+      "exr": {
+        "size": 2604693,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_nor_dx_1k.exr",
+        "md5": "9af04e844cc09de8ece46c6762398f8d"
+      }
+    }
+  },
+  "nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 69911339,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_nor_gl_8k.jpg",
+        "md5": "427d8242696f6ed479ccb820db903ff9"
+      },
+      "png": {
+        "size": 306546474,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/tree_stump_02/tree_stump_02_nor_gl_8k.png",
+        "md5": "ad55516195ebaaf7e918236002428eb1"
+      },
+      "exr": {
+        "size": 140664555,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_nor_gl_8k.exr",
+        "md5": "6d7230f285a32b11c00d2a1132f90086"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 19767095,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_nor_gl_4k.jpg",
+        "md5": "163c43dd7252eda4e368aa01d531f126"
+      },
+      "png": {
+        "size": 82437557,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/tree_stump_02/tree_stump_02_nor_gl_4k.png",
+        "md5": "52e5eda12cc73297d67f24af3330d8d9"
+      },
+      "exr": {
+        "size": 38670352,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_nor_gl_4k.exr",
+        "md5": "a83e45e2614e2af20d354edeb888a7b1"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 5232690,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_nor_gl_2k.jpg",
+        "md5": "6007d71cbbb30c4804766afe41150a9c"
+      },
+      "png": {
+        "size": 21949989,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_stump_02/tree_stump_02_nor_gl_2k.png",
+        "md5": "72be55a41d332839e2e646a22daf2f32"
+      },
+      "exr": {
+        "size": 10119788,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_nor_gl_2k.exr",
+        "md5": "6fd072f99da6450866c298bf89126ee8"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 1334839,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_nor_gl_1k.jpg",
+        "md5": "c9cd86ad90819ca7a60a6ef9c77424e4"
+      },
+      "png": {
+        "size": 5723314,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/tree_stump_02/tree_stump_02_nor_gl_1k.png",
+        "md5": "a815d8c4b7c1b7c0f2bbb22b3c98e9f4"
+      },
+      "exr": {
+        "size": 2605872,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_nor_gl_1k.exr",
+        "md5": "c9c883304603ca0b3e4b691f5642c2a8"
+      }
+    }
+  },
+  "blend": {
+    "8k": {
+      "blend": {
+        "include": {
+          "textures/tree_stump_02_diff_8k.jpg": {
+            "size": 37011133,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_diff_8k.jpg",
+            "md5": "62912cabf829b2803d1634b412b1a1f8"
+          },
+          "textures/tree_stump_02_rough_8k.exr": {
+            "size": 33195035,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_rough_8k.exr",
+            "md5": "0745354f0146313a8b22da32545aa939"
+          },
+          "textures/tree_stump_02_nor_gl_8k.exr": {
+            "size": 140664555,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_nor_gl_8k.exr",
+            "md5": "6d7230f285a32b11c00d2a1132f90086"
+          }
+        },
+        "size": 2851068,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/8k/tree_stump_02/tree_stump_02_8k.blend",
+        "md5": "e3b95e543639fc24259eb9f80251fc58"
+      }
+    },
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/tree_stump_02_nor_gl_4k.exr": {
+            "size": 38670352,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_nor_gl_4k.exr",
+            "md5": "a83e45e2614e2af20d354edeb888a7b1"
+          },
+          "textures/tree_stump_02_rough_4k.exr": {
+            "size": 13270123,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_rough_4k.exr",
+            "md5": "140ec11164cea9c8bac1f70f0bd59ec2"
+          },
+          "textures/tree_stump_02_diff_4k.jpg": {
+            "size": 12099759,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_diff_4k.jpg",
+            "md5": "ed2f8f56808f6d645e946f70a7440fdc"
+          }
+        },
+        "size": 2851165,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/tree_stump_02/tree_stump_02_4k.blend",
+        "md5": "4cdaa7067b8b1cc6a67608899562f342"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/tree_stump_02_diff_2k.jpg": {
+            "size": 3435356,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_diff_2k.jpg",
+            "md5": "278b1dadd4a5dd61142e09f7c9139dd2"
+          },
+          "textures/tree_stump_02_nor_gl_2k.exr": {
+            "size": 10119788,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_nor_gl_2k.exr",
+            "md5": "6fd072f99da6450866c298bf89126ee8"
+          },
+          "textures/tree_stump_02_rough_2k.exr": {
+            "size": 4119428,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_rough_2k.exr",
+            "md5": "3faa92ea0e10c0b93f27f02009ee2e44"
+          }
+        },
+        "size": 2851039,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/tree_stump_02/tree_stump_02_2k.blend",
+        "md5": "c5c08dfdea2077dcf5af1045483e5ff2"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/tree_stump_02_nor_gl_1k.exr": {
+            "size": 2605872,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_nor_gl_1k.exr",
+            "md5": "c9c883304603ca0b3e4b691f5642c2a8"
+          },
+          "textures/tree_stump_02_rough_1k.exr": {
+            "size": 1091734,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_rough_1k.exr",
+            "md5": "4a515bb917899dccb007814c87109b71"
+          },
+          "textures/tree_stump_02_diff_1k.jpg": {
+            "size": 901605,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_diff_1k.jpg",
+            "md5": "e791fc07d2f7a0c2c44a3fcc42b1313d"
+          }
+        },
+        "size": 2851018,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/tree_stump_02/tree_stump_02_1k.blend",
+        "md5": "98b322f692768f2fd1e7cd8fa3f8b608"
+      }
+    }
+  },
+  "gltf": {
+    "8k": {
+      "gltf": {
+        "include": {
+          "textures/tree_stump_02_arm_8k.jpg": {
+            "size": 29400230,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_arm_8k.jpg",
+            "md5": "54820066cbc3b262e7e88f6e3aff984d"
+          },
+          "textures/tree_stump_02_diff_8k.jpg": {
+            "size": 37011133,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_diff_8k.jpg",
+            "md5": "62912cabf829b2803d1634b412b1a1f8"
+          },
+          "tree_stump_02.bin": {
+            "size": 1433880,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/tree_stump_02/tree_stump_02.bin",
+            "md5": "87f18fe07707d421da70fa2f69b12366"
+          },
+          "textures/tree_stump_02_nor_gl_8k.jpg": {
+            "size": 69911339,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_nor_gl_8k.jpg",
+            "md5": "427d8242696f6ed479ccb820db903ff9"
+          }
+        },
+        "size": 2802,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/tree_stump_02/tree_stump_02_8k.gltf",
+        "md5": "5bd8102130635abca051fb52b87da0ba"
+      }
+    },
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/tree_stump_02_nor_gl_4k.jpg": {
+            "size": 19767095,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_nor_gl_4k.jpg",
+            "md5": "163c43dd7252eda4e368aa01d531f126"
+          },
+          "tree_stump_02.bin": {
+            "size": 1433880,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/tree_stump_02/tree_stump_02.bin",
+            "md5": "87f18fe07707d421da70fa2f69b12366"
+          },
+          "textures/tree_stump_02_diff_4k.jpg": {
+            "size": 12099759,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_diff_4k.jpg",
+            "md5": "ed2f8f56808f6d645e946f70a7440fdc"
+          },
+          "textures/tree_stump_02_arm_4k.jpg": {
+            "size": 9950257,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_arm_4k.jpg",
+            "md5": "0535f419bfb50200c6649931b9541271"
+          }
+        },
+        "size": 2802,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/tree_stump_02/tree_stump_02_4k.gltf",
+        "md5": "34b1835bbb88481593ed08584b2e68eb"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/tree_stump_02_diff_2k.jpg": {
+            "size": 3435356,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_diff_2k.jpg",
+            "md5": "278b1dadd4a5dd61142e09f7c9139dd2"
+          },
+          "textures/tree_stump_02_arm_2k.jpg": {
+            "size": 2924552,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_arm_2k.jpg",
+            "md5": "23acef106fdfcca65082578e632ceaeb"
+          },
+          "tree_stump_02.bin": {
+            "size": 1433880,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/tree_stump_02/tree_stump_02.bin",
+            "md5": "87f18fe07707d421da70fa2f69b12366"
+          },
+          "textures/tree_stump_02_nor_gl_2k.jpg": {
+            "size": 5232690,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_nor_gl_2k.jpg",
+            "md5": "6007d71cbbb30c4804766afe41150a9c"
+          }
+        },
+        "size": 2802,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/tree_stump_02/tree_stump_02_2k.gltf",
+        "md5": "353762f8e1f2f04da8bb9051fbccf46f"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/tree_stump_02_nor_gl_1k.jpg": {
+            "size": 1334839,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_nor_gl_1k.jpg",
+            "md5": "c9cd86ad90819ca7a60a6ef9c77424e4"
+          },
+          "tree_stump_02.bin": {
+            "size": 1433880,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/tree_stump_02/tree_stump_02.bin",
+            "md5": "87f18fe07707d421da70fa2f69b12366"
+          },
+          "textures/tree_stump_02_diff_1k.jpg": {
+            "size": 901605,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_diff_1k.jpg",
+            "md5": "e791fc07d2f7a0c2c44a3fcc42b1313d"
+          },
+          "textures/tree_stump_02_arm_1k.jpg": {
+            "size": 796214,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_arm_1k.jpg",
+            "md5": "0e3147e1cc44d37126fa2fb46ba425b1"
+          }
+        },
+        "size": 2802,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/tree_stump_02/tree_stump_02_1k.gltf",
+        "md5": "b2344d2dfc9f0a00d82cdea8aee84c7a"
+      }
+    }
+  },
+  "usd": {
+    "8k": {
+      "usd": {
+        "include": {
+          "textures/tree_stump_02_diff_8k.jpg": {
+            "size": 37011133,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_diff_8k.jpg",
+            "md5": "62912cabf829b2803d1634b412b1a1f8"
+          },
+          "textures/tree_stump_02_rough_8k.exr": {
+            "size": 33195035,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_rough_8k.exr",
+            "md5": "0745354f0146313a8b22da32545aa939"
+          },
+          "textures/tree_stump_02_nor_gl_8k.exr": {
+            "size": 140664555,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_nor_gl_8k.exr",
+            "md5": "6d7230f285a32b11c00d2a1132f90086"
+          }
+        },
+        "size": 4507573,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/8k/tree_stump_02/tree_stump_02_8k.usdc",
+        "md5": "038b1b21ecfa10254849167d8f59b011"
+      }
+    },
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/tree_stump_02_nor_gl_4k.exr": {
+            "size": 38670352,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_nor_gl_4k.exr",
+            "md5": "a83e45e2614e2af20d354edeb888a7b1"
+          },
+          "textures/tree_stump_02_rough_4k.exr": {
+            "size": 13270123,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_rough_4k.exr",
+            "md5": "140ec11164cea9c8bac1f70f0bd59ec2"
+          },
+          "textures/tree_stump_02_diff_4k.jpg": {
+            "size": 12099759,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_diff_4k.jpg",
+            "md5": "ed2f8f56808f6d645e946f70a7440fdc"
+          }
+        },
+        "size": 4507573,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/tree_stump_02/tree_stump_02_4k.usdc",
+        "md5": "27ecd18c0a0ede15c72481c51cd6fdcd"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/tree_stump_02_diff_2k.jpg": {
+            "size": 3435356,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_diff_2k.jpg",
+            "md5": "278b1dadd4a5dd61142e09f7c9139dd2"
+          },
+          "textures/tree_stump_02_nor_gl_2k.exr": {
+            "size": 10119788,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_nor_gl_2k.exr",
+            "md5": "6fd072f99da6450866c298bf89126ee8"
+          },
+          "textures/tree_stump_02_rough_2k.exr": {
+            "size": 4119428,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_rough_2k.exr",
+            "md5": "3faa92ea0e10c0b93f27f02009ee2e44"
+          }
+        },
+        "size": 4507573,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/tree_stump_02/tree_stump_02_2k.usdc",
+        "md5": "7b4180d7ff202e9502a8bdaffe4f1ae8"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/tree_stump_02_nor_gl_1k.exr": {
+            "size": 2605872,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_nor_gl_1k.exr",
+            "md5": "c9c883304603ca0b3e4b691f5642c2a8"
+          },
+          "textures/tree_stump_02_rough_1k.exr": {
+            "size": 1091734,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_rough_1k.exr",
+            "md5": "4a515bb917899dccb007814c87109b71"
+          },
+          "textures/tree_stump_02_diff_1k.jpg": {
+            "size": 901605,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_diff_1k.jpg",
+            "md5": "e791fc07d2f7a0c2c44a3fcc42b1313d"
+          }
+        },
+        "size": 4507573,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/tree_stump_02/tree_stump_02_1k.usdc",
+        "md5": "26df9a94e74438ae72a2f2ddb9ef8daa"
+      }
+    }
+  },
+  "arm": {
+    "8k": {
+      "jpg": {
+        "size": 29400230,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_arm_8k.jpg",
+        "md5": "54820066cbc3b262e7e88f6e3aff984d"
+      },
+      "png": {
+        "size": 72804175,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/tree_stump_02/tree_stump_02_arm_8k.png",
+        "md5": "7782f717995d9b0a0792e9b33fd4c4f4"
+      },
+      "exr": {
+        "size": 44462233,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_arm_8k.exr",
+        "md5": "8e554384cb96c89186a37a362e25a054"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 9950257,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_arm_4k.jpg",
+        "md5": "0535f419bfb50200c6649931b9541271"
+      },
+      "png": {
+        "size": 48583242,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/tree_stump_02/tree_stump_02_arm_4k.png",
+        "md5": "b7f68c606b9a99ba3c78c2c1c891e228"
+      },
+      "exr": {
+        "size": 17240299,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_arm_4k.exr",
+        "md5": "33d52cd8d241ff182b9b8330652be2a8"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2924552,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_arm_2k.jpg",
+        "md5": "23acef106fdfcca65082578e632ceaeb"
+      },
+      "png": {
+        "size": 15031905,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_stump_02/tree_stump_02_arm_2k.png",
+        "md5": "941f25dc120a62043ac76cb37c2e3c14"
+      },
+      "exr": {
+        "size": 5537446,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_arm_2k.exr",
+        "md5": "9f740dcf440b9731216b5eb61ca29ac1"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 796214,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_arm_1k.jpg",
+        "md5": "0e3147e1cc44d37126fa2fb46ba425b1"
+      },
+      "png": {
+        "size": 4085575,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/tree_stump_02/tree_stump_02_arm_1k.png",
+        "md5": "434ee85d8f16b5ae30b79dbb418d8742"
+      },
+      "exr": {
+        "size": 1598378,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_arm_1k.exr",
+        "md5": "17bcf7d7b20f7bf8a77adf88f34f1b2d"
+      }
+    }
+  },
+  "fbx": {
+    "8k": {
+      "fbx": {
+        "include": {
+          "textures/tree_stump_02_diff_8k.jpg": {
+            "size": 37011133,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_diff_8k.jpg",
+            "md5": "62912cabf829b2803d1634b412b1a1f8"
+          },
+          "textures/tree_stump_02_rough_8k.exr": {
+            "size": 33195035,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_rough_8k.exr",
+            "md5": "0745354f0146313a8b22da32545aa939"
+          },
+          "textures/tree_stump_02_nor_gl_8k.exr": {
+            "size": 140664555,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_nor_gl_8k.exr",
+            "md5": "6d7230f285a32b11c00d2a1132f90086"
+          }
+        },
+        "size": 4439660,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/8k/tree_stump_02/tree_stump_02_8k.fbx",
+        "md5": "ac9a5071804945fa906b7c829bdfe59f"
+      }
+    },
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/tree_stump_02_nor_gl_4k.exr": {
+            "size": 38670352,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_nor_gl_4k.exr",
+            "md5": "a83e45e2614e2af20d354edeb888a7b1"
+          },
+          "textures/tree_stump_02_rough_4k.exr": {
+            "size": 13270123,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_rough_4k.exr",
+            "md5": "140ec11164cea9c8bac1f70f0bd59ec2"
+          },
+          "textures/tree_stump_02_diff_4k.jpg": {
+            "size": 12099759,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_diff_4k.jpg",
+            "md5": "ed2f8f56808f6d645e946f70a7440fdc"
+          }
+        },
+        "size": 4439260,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/tree_stump_02/tree_stump_02_4k.fbx",
+        "md5": "4314ddcea92c50a1399c316e2ab3ceff"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/tree_stump_02_diff_2k.jpg": {
+            "size": 3435356,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_diff_2k.jpg",
+            "md5": "278b1dadd4a5dd61142e09f7c9139dd2"
+          },
+          "textures/tree_stump_02_nor_gl_2k.exr": {
+            "size": 10119788,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_nor_gl_2k.exr",
+            "md5": "6fd072f99da6450866c298bf89126ee8"
+          },
+          "textures/tree_stump_02_rough_2k.exr": {
+            "size": 4119428,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_rough_2k.exr",
+            "md5": "3faa92ea0e10c0b93f27f02009ee2e44"
+          }
+        },
+        "size": 4439452,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/tree_stump_02/tree_stump_02_2k.fbx",
+        "md5": "8bc5f57ef499939ef7affef2365d5722"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/tree_stump_02_nor_gl_1k.exr": {
+            "size": 2605872,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_nor_gl_1k.exr",
+            "md5": "c9c883304603ca0b3e4b691f5642c2a8"
+          },
+          "textures/tree_stump_02_rough_1k.exr": {
+            "size": 1091734,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_rough_1k.exr",
+            "md5": "4a515bb917899dccb007814c87109b71"
+          },
+          "textures/tree_stump_02_diff_1k.jpg": {
+            "size": 901605,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_diff_1k.jpg",
+            "md5": "e791fc07d2f7a0c2c44a3fcc42b1313d"
+          }
+        },
+        "size": 4439596,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/tree_stump_02/tree_stump_02_1k.fbx",
+        "md5": "ccb8d7f803cdf92165e51bccd0b245e7"
+      }
+    }
+  },
+  "AO": {
+    "8k": {
+      "jpg": {
+        "size": 22438764,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_ao_8k.jpg",
+        "md5": "58647c6f813890f5676c9a4d4309b5e7"
+      },
+      "png": {
+        "size": 33279149,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/tree_stump_02/tree_stump_02_ao_8k.png",
+        "md5": "4cfdda29aaa0e4c0e15f932464663049"
+      },
+      "exr": {
+        "size": 40825444,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_ao_8k.exr",
+        "md5": "6a94b69038cf6fa5e3907dc3941403d4"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 8936916,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_ao_4k.jpg",
+        "md5": "616e723caa83be71595ae6482bfc669d"
+      },
+      "png": {
+        "size": 22129631,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/tree_stump_02/tree_stump_02_ao_4k.png",
+        "md5": "c848fa93696baa13eec715f00d4276ba"
+      },
+      "exr": {
+        "size": 15504578,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_ao_4k.exr",
+        "md5": "8f464589616a4039d04f779bc68b1800"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2721284,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_ao_2k.jpg",
+        "md5": "3b1adca400f9004f0045c533ce896490"
+      },
+      "png": {
+        "size": 6476563,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_stump_02/tree_stump_02_ao_2k.png",
+        "md5": "0daf4006ae115c8bb93c4b55818f4481"
+      },
+      "exr": {
+        "size": 4456368,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_ao_2k.exr",
+        "md5": "76941a6bc093d8698a96ed4d9d1f7dc8"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 765664,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_ao_1k.jpg",
+        "md5": "d2297792e85f7fc8a7537ef84013065e"
+      },
+      "png": {
+        "size": 1731999,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/tree_stump_02/tree_stump_02_ao_1k.png",
+        "md5": "cafd24e483d6c2dec752f4c100440236"
+      },
+      "exr": {
+        "size": 1199347,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_ao_1k.exr",
+        "md5": "0f01df287ae0f16cd2c3e39311b43ff5"
+      }
+    }
+  },
+  "Rough": {
+    "8k": {
+      "jpg": {
+        "size": 19072781,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/tree_stump_02/tree_stump_02_rough_8k.jpg",
+        "md5": "02471abbced1e4d0f257153aad077b0c"
+      },
+      "png": {
+        "size": 25902064,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/tree_stump_02/tree_stump_02_rough_8k.png",
+        "md5": "fedd8c19ad02c8bff26d3d39235e1912"
+      },
+      "exr": {
+        "size": 33195035,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/tree_stump_02/tree_stump_02_rough_8k.exr",
+        "md5": "0745354f0146313a8b22da32545aa939"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 6419144,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_rough_4k.jpg",
+        "md5": "4e8b894884b40dc299324ff94ca05ea1"
+      },
+      "png": {
+        "size": 17513653,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/tree_stump_02/tree_stump_02_rough_4k.png",
+        "md5": "6461af84e4767c0d7ba611429c4d414c"
+      },
+      "exr": {
+        "size": 13270123,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/tree_stump_02/tree_stump_02_rough_4k.exr",
+        "md5": "140ec11164cea9c8bac1f70f0bd59ec2"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1853522,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/tree_stump_02/tree_stump_02_rough_2k.jpg",
+        "md5": "b5b16c2f36397180e16f3c1bdc3bce81"
+      },
+      "png": {
+        "size": 6073917,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/tree_stump_02/tree_stump_02_rough_2k.png",
+        "md5": "faad92892a235fca805642f489dc35ec"
+      },
+      "exr": {
+        "size": 4119428,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/tree_stump_02/tree_stump_02_rough_2k.exr",
+        "md5": "3faa92ea0e10c0b93f27f02009ee2e44"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 487269,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_stump_02/tree_stump_02_rough_1k.jpg",
+        "md5": "d45edf335c3409945bd83a1b949802c3"
+      },
+      "png": {
+        "size": 1684020,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/tree_stump_02/tree_stump_02_rough_1k.png",
+        "md5": "626440b73f62a58c85e41babe5e7eb2a"
+      },
+      "exr": {
+        "size": 1091734,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/tree_stump_02/tree_stump_02_rough_1k.exr",
+        "md5": "4a515bb917899dccb007814c87109b71"
+      }
+    }
+  }
+}

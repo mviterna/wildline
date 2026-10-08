@@ -1,0 +1,1494 @@
+{
+  "a_ao": {
+    "8k": {
+      "jpg": {
+        "size": 22859149,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_a_ao_8k.jpg",
+        "md5": "c87993b35cd4ac5bf0089e84cbc1f991"
+      },
+      "png": {
+        "size": 33736317,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_ao_8k.png",
+        "md5": "cc7f816bf71daa345ecc072df336c179"
+      },
+      "exr": {
+        "size": 44179024,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_a_ao_8k.exr",
+        "md5": "900eb8133a8a747a6ea96de33ba8040d"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 9069821,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_ao_4k.jpg",
+        "md5": "bd042bb4afd963e4bd55450703cb9e6e"
+      },
+      "png": {
+        "size": 22162123,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_ao_4k.png",
+        "md5": "a2f81cf2390d932f90e3f38dc7dc34eb"
+      },
+      "exr": {
+        "size": 16339077,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_a_ao_4k.exr",
+        "md5": "edac0028dd4979a99df6d14dd1391466"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2766017,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_a_ao_2k.jpg",
+        "md5": "74fac520e59fd4cb1dacc0331c7e2f2a"
+      },
+      "png": {
+        "size": 6553574,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_ao_2k.png",
+        "md5": "4a18c7b5b99d53ed75b4519037a55791"
+      },
+      "exr": {
+        "size": 4698403,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_a_ao_2k.exr",
+        "md5": "ed100727b3258e3f503cf2f5cec1f33a"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 791947,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_a_ao_1k.jpg",
+        "md5": "7fd8e643ace7a714c3b7fdabfff3b17b"
+      },
+      "png": {
+        "size": 1764522,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_ao_1k.png",
+        "md5": "3f0240f739ccdfb148efa9466e4770f8"
+      },
+      "exr": {
+        "size": 1270799,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_a_ao_1k.exr",
+        "md5": "647086539950d9898ac4f5df3f63d02f"
+      }
+    }
+  },
+  "b_rough": {
+    "8k": {
+      "jpg": {
+        "size": 25352444,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_b_rough_8k.jpg",
+        "md5": "60dc353d0092afbee247676bd3780930"
+      },
+      "png": {
+        "size": 33502940,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_rough_8k.png",
+        "md5": "d17596840f71b5a2b5dabe52e023918a"
+      },
+      "exr": {
+        "size": 40471181,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_b_rough_8k.exr",
+        "md5": "51f09d6b5d3aa2ab82bcd66ac45335c8"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 8599544,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_rough_4k.jpg",
+        "md5": "a635dfa25aa158addbdc5ce8d381f509"
+      },
+      "png": {
+        "size": 21918648,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_rough_4k.png",
+        "md5": "0b3cd7acd3f17df758938611b93cfe02"
+      },
+      "exr": {
+        "size": 15145049,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_b_rough_4k.exr",
+        "md5": "88efa94be3faab8a7c5d68c3be5be92a"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2469699,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_b_rough_2k.jpg",
+        "md5": "ac5fa010203e9db883241860c8260431"
+      },
+      "png": {
+        "size": 6670896,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_rough_2k.png",
+        "md5": "9ee0f4fcf19344cdb0cf7400ef8454ac"
+      },
+      "exr": {
+        "size": 4431640,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_b_rough_2k.exr",
+        "md5": "8307fcf19cdab4c06606f26556e42c9b"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 644361,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_b_rough_1k.jpg",
+        "md5": "e3ac32254dd036087a4bdf1e556ad491"
+      },
+      "png": {
+        "size": 1779048,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_rough_1k.png",
+        "md5": "75e4aea9c7876bef3ecd1efc6353c3ae"
+      },
+      "exr": {
+        "size": 1152332,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_b_rough_1k.exr",
+        "md5": "1cc7238e0293cf3ad12b59648570c81e"
+      }
+    }
+  },
+  "blend": {
+    "8k": {
+      "blend": {
+        "include": {
+          "textures/pine_roots_a_nor_gl_8k.png": {
+            "size": 307984309,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_nor_gl_8k.png",
+            "md5": "2037f03c0c7574f82a950151eaa5aae7"
+          },
+          "textures/pine_roots_b_rough_8k.png": {
+            "size": 33502940,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_rough_8k.png",
+            "md5": "d17596840f71b5a2b5dabe52e023918a"
+          },
+          "textures/pine_roots_b_nor_gl_8k.png": {
+            "size": 311768342,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_nor_gl_8k.png",
+            "md5": "06f16f290f992bb0ee53d42b33b94602"
+          },
+          "textures/pine_roots_a_diff_8k.png": {
+            "size": 188392729,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_diff_8k.png",
+            "md5": "73a5eaeb1593a2e7e51570d82a3874bb"
+          },
+          "textures/pine_roots_a_rough_8k.png": {
+            "size": 31113790,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_rough_8k.png",
+            "md5": "4926358a81907ef2fe0d4fd78164bbbd"
+          },
+          "textures/pine_roots_b_diff_8k.png": {
+            "size": 196918374,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_diff_8k.png",
+            "md5": "02609c3d74a5f46d339cab221d6a67ad"
+          }
+        },
+        "size": 8415553,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/8k/pine_roots/pine_roots_8k.blend",
+        "md5": "31098e9bcd7b9b1b61b704b7ec721ca5"
+      }
+    },
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/pine_roots_b_diff_4k.png": {
+            "size": 70031724,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_diff_4k.png",
+            "md5": "8c3d09028f76f67078daa52997c8d46f"
+          },
+          "textures/pine_roots_b_nor_gl_4k.png": {
+            "size": 83211864,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_nor_gl_4k.png",
+            "md5": "dd1d89535ffa370ef9df2dc984dba11a"
+          },
+          "textures/pine_roots_a_nor_gl_4k.png": {
+            "size": 82563358,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_nor_gl_4k.png",
+            "md5": "b53a001aaa48411d7704b79708d4410c"
+          },
+          "textures/pine_roots_b_rough_4k.png": {
+            "size": 21918648,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_rough_4k.png",
+            "md5": "0b3cd7acd3f17df758938611b93cfe02"
+          },
+          "textures/pine_roots_a_diff_4k.png": {
+            "size": 67903309,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_diff_4k.png",
+            "md5": "46bd42d4347071db73aa333f973cc0fe"
+          },
+          "textures/pine_roots_a_rough_4k.png": {
+            "size": 20549521,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_rough_4k.png",
+            "md5": "5e06a0e7794ce5c757593054229c5b7d"
+          }
+        },
+        "size": 8417530,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/pine_roots/pine_roots_4k.blend",
+        "md5": "c0195fa950881b1884ffdb9e563abc10"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/pine_roots_a_diff_2k.png": {
+            "size": 19685832,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_diff_2k.png",
+            "md5": "1f4628f4de03f36a871e429d8529453c"
+          },
+          "textures/pine_roots_a_nor_gl_2k.png": {
+            "size": 22104744,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_nor_gl_2k.png",
+            "md5": "45e5a3e9984e6c422c681bc22d168d28"
+          },
+          "textures/pine_roots_b_diff_2k.png": {
+            "size": 19911830,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_diff_2k.png",
+            "md5": "66fae1c5d2281832e122f0945abdedef"
+          },
+          "textures/pine_roots_a_rough_2k.png": {
+            "size": 6522326,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_rough_2k.png",
+            "md5": "77159ac5ac246e0c760fbe133c907164"
+          },
+          "textures/pine_roots_b_rough_2k.png": {
+            "size": 6670896,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_rough_2k.png",
+            "md5": "9ee0f4fcf19344cdb0cf7400ef8454ac"
+          },
+          "textures/pine_roots_b_nor_gl_2k.png": {
+            "size": 22079908,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_nor_gl_2k.png",
+            "md5": "1a23646d2b409f60d89416063370eabb"
+          }
+        },
+        "size": 8416952,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/pine_roots/pine_roots_2k.blend",
+        "md5": "7229d7fe663dab9b9bbaa5b366d25c29"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/pine_roots_b_nor_gl_1k.png": {
+            "size": 5727442,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_nor_gl_1k.png",
+            "md5": "643f3196e10b21fd0b6b2e40c952effb"
+          },
+          "textures/pine_roots_b_diff_1k.png": {
+            "size": 5258130,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_diff_1k.png",
+            "md5": "c8da412e07e3d0b1a8caa266eb101eed"
+          },
+          "textures/pine_roots_a_rough_1k.png": {
+            "size": 1766478,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_rough_1k.png",
+            "md5": "46b60e5db51062cdc47d4378aa16af21"
+          },
+          "textures/pine_roots_b_rough_1k.png": {
+            "size": 1779048,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_rough_1k.png",
+            "md5": "75e4aea9c7876bef3ecd1efc6353c3ae"
+          },
+          "textures/pine_roots_a_diff_1k.png": {
+            "size": 5270054,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_diff_1k.png",
+            "md5": "76c0444ff60a562610454d9e30d4a411"
+          },
+          "textures/pine_roots_a_nor_gl_1k.png": {
+            "size": 5768705,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_nor_gl_1k.png",
+            "md5": "d782aa1dc8276f8bce7552e4ae37bddb"
+          }
+        },
+        "size": 8417732,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/pine_roots/pine_roots_1k.blend",
+        "md5": "d220bc337da6758981fcbc6b6228619b"
+      }
+    }
+  },
+  "b_ao": {
+    "8k": {
+      "jpg": {
+        "size": 22191069,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_b_ao_8k.jpg",
+        "md5": "c5670c665bda28b952d0765a68c6b798"
+      },
+      "png": {
+        "size": 32709090,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_ao_8k.png",
+        "md5": "c01db9a8408f846db7b2852b9609a167"
+      },
+      "exr": {
+        "size": 41015565,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_b_ao_8k.exr",
+        "md5": "876b515bfb3f2b8ddf34e08558701193"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 8787998,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_ao_4k.jpg",
+        "md5": "8c933e448c183ac8de7312b9d1ac32dc"
+      },
+      "png": {
+        "size": 21936620,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_ao_4k.png",
+        "md5": "adfda5230b771d4db9c18fc7053e994d"
+      },
+      "exr": {
+        "size": 15598224,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_b_ao_4k.exr",
+        "md5": "92330c10219a9d0c74acf4493dbe47f0"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2656406,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_b_ao_2k.jpg",
+        "md5": "e44205a2b1b47a7851ee7833c7ff909a"
+      },
+      "png": {
+        "size": 6477798,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_ao_2k.png",
+        "md5": "33b4e08c02a3a8da4eb365b9002e7f04"
+      },
+      "exr": {
+        "size": 4523402,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_b_ao_2k.exr",
+        "md5": "008f1d63895028e8aeaa388923862941"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 751228,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_b_ao_1k.jpg",
+        "md5": "0fbc273fda387f84d78595758267c02f"
+      },
+      "png": {
+        "size": 1734549,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_ao_1k.png",
+        "md5": "1a36aed0046a9c9658134fabd202a0bb"
+      },
+      "exr": {
+        "size": 1223830,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_b_ao_1k.exr",
+        "md5": "811a71fa8db40d9774868585ed6dabaf"
+      }
+    }
+  },
+  "b_diff": {
+    "8k": {
+      "jpg": {
+        "size": 28833097,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_b_diff_8k.jpg",
+        "md5": "6570589975d1b5863cc84c13449f0a94"
+      },
+      "png": {
+        "size": 196918374,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_diff_8k.png",
+        "md5": "02609c3d74a5f46d339cab221d6a67ad"
+      },
+      "exr": {
+        "size": 52528692,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_b_diff_8k.exr",
+        "md5": "c1d70b88d85606fd68a03fbf35a4d71a"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 9881359,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_diff_4k.jpg",
+        "md5": "10c5edd23e0302364231283fa0c65c71"
+      },
+      "png": {
+        "size": 70031724,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_diff_4k.png",
+        "md5": "8c3d09028f76f67078daa52997c8d46f"
+      },
+      "exr": {
+        "size": 16658775,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_b_diff_4k.exr",
+        "md5": "c48e52406ff259d0b6c70d0f347e5f55"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2855036,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_b_diff_2k.jpg",
+        "md5": "2f7c187bed5d0547bcc7bb6caee1f386"
+      },
+      "png": {
+        "size": 19911830,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_diff_2k.png",
+        "md5": "66fae1c5d2281832e122f0945abdedef"
+      },
+      "exr": {
+        "size": 4904707,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_b_diff_2k.exr",
+        "md5": "35d2c60b06eca6057e2e6862b454b8bf"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 751988,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_b_diff_1k.jpg",
+        "md5": "32572ea4ae4ba1a474f2e77763af825a"
+      },
+      "png": {
+        "size": 5258130,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_diff_1k.png",
+        "md5": "c8da412e07e3d0b1a8caa266eb101eed"
+      },
+      "exr": {
+        "size": 1383960,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_b_diff_1k.exr",
+        "md5": "bc5c92ea9a8d913dfaa130732f282765"
+      }
+    }
+  },
+  "gltf": {
+    "8k": {
+      "gltf": {
+        "include": {
+          "textures/pine_roots_a_arm_8k.jpg": {
+            "size": 33243657,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_a_arm_8k.jpg",
+            "md5": "ddf5d6515ab3fd60ae5e6f699654a8ee"
+          },
+          "textures/pine_roots_b_arm_8k.jpg": {
+            "size": 34537146,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_b_arm_8k.jpg",
+            "md5": "6a4415a17739623abe115581a00eb833"
+          },
+          "textures/pine_roots_a_diff_8k.jpg": {
+            "size": 28920988,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_a_diff_8k.jpg",
+            "md5": "94ba79688a2f079db474651b58784355"
+          },
+          "textures/pine_roots_b_diff_8k.jpg": {
+            "size": 28833097,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_b_diff_8k.jpg",
+            "md5": "6570589975d1b5863cc84c13449f0a94"
+          },
+          "pine_roots.bin": {
+            "size": 3753376,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/pine_roots/pine_roots.bin",
+            "md5": "55ca478cc9135baa10be976931ee57a7"
+          },
+          "textures/pine_roots_a_nor_gl_8k.jpg": {
+            "size": 74429338,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_a_nor_gl_8k.jpg",
+            "md5": "57c740d9687b931104581118d12340dc"
+          },
+          "textures/pine_roots_b_nor_gl_8k.jpg": {
+            "size": 72728387,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_b_nor_gl_8k.jpg",
+            "md5": "73a00396bf58a98bb5148bd9db831d87"
+          }
+        },
+        "size": 5161,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/pine_roots/pine_roots_8k.gltf",
+        "md5": "3ee79c8365165bc47d249c3fd0864e37"
+      }
+    },
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/pine_roots_a_nor_gl_4k.jpg": {
+            "size": 20565984,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_nor_gl_4k.jpg",
+            "md5": "e7bd282dcfb24e3170d5f399282b2d99"
+          },
+          "textures/pine_roots_a_diff_4k.jpg": {
+            "size": 9776217,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_diff_4k.jpg",
+            "md5": "f7d808040db2f276538aadc99e580c30"
+          },
+          "textures/pine_roots_a_arm_4k.jpg": {
+            "size": 11106572,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_arm_4k.jpg",
+            "md5": "9469f337fe857c7eed8a961512e0b621"
+          },
+          "pine_roots.bin": {
+            "size": 3753376,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/pine_roots/pine_roots.bin",
+            "md5": "55ca478cc9135baa10be976931ee57a7"
+          },
+          "textures/pine_roots_b_diff_4k.jpg": {
+            "size": 9881359,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_diff_4k.jpg",
+            "md5": "10c5edd23e0302364231283fa0c65c71"
+          },
+          "textures/pine_roots_b_arm_4k.jpg": {
+            "size": 11466988,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_arm_4k.jpg",
+            "md5": "5a4a1f611dfeadf3cd16ab6069d57768"
+          },
+          "textures/pine_roots_b_nor_gl_4k.jpg": {
+            "size": 20437122,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_nor_gl_4k.jpg",
+            "md5": "987d2a74e9e3b69cbc0b4aca587d5ff0"
+          }
+        },
+        "size": 5161,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/pine_roots/pine_roots_4k.gltf",
+        "md5": "87a7ec4a2dcb5348cc278a084f3092ca"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/pine_roots_b_arm_2k.jpg": {
+            "size": 3282054,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_b_arm_2k.jpg",
+            "md5": "18ce29a75cb83825f403fe0d25ed58e5"
+          },
+          "textures/pine_roots_b_nor_gl_2k.jpg": {
+            "size": 5333614,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_b_nor_gl_2k.jpg",
+            "md5": "1f44897be53be2c1b493d477db6eb55b"
+          },
+          "pine_roots.bin": {
+            "size": 3753376,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/pine_roots/pine_roots.bin",
+            "md5": "55ca478cc9135baa10be976931ee57a7"
+          },
+          "textures/pine_roots_a_diff_2k.jpg": {
+            "size": 2866543,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_a_diff_2k.jpg",
+            "md5": "83873e50eb9e2259a11c8301767c3e78"
+          },
+          "textures/pine_roots_a_nor_gl_2k.jpg": {
+            "size": 5376324,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_a_nor_gl_2k.jpg",
+            "md5": "6e305cdaa55bd180fb0d0f0077957bb0"
+          },
+          "textures/pine_roots_a_arm_2k.jpg": {
+            "size": 3248573,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_a_arm_2k.jpg",
+            "md5": "3ece65dc9f02287832fab66b0b628c53"
+          },
+          "textures/pine_roots_b_diff_2k.jpg": {
+            "size": 2855036,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_b_diff_2k.jpg",
+            "md5": "2f7c187bed5d0547bcc7bb6caee1f386"
+          }
+        },
+        "size": 5161,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/pine_roots/pine_roots_2k.gltf",
+        "md5": "1e01e390309f32319d4f0fc4be4be93b"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/pine_roots_a_diff_1k.jpg": {
+            "size": 770614,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_a_diff_1k.jpg",
+            "md5": "141db64c5f7f3ff0b4332e79e3b92e63"
+          },
+          "textures/pine_roots_a_nor_gl_1k.jpg": {
+            "size": 1345180,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_a_nor_gl_1k.jpg",
+            "md5": "a1d72f057d2187c1fd5e28e1c2071373"
+          },
+          "pine_roots.bin": {
+            "size": 3753376,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/pine_roots/pine_roots.bin",
+            "md5": "55ca478cc9135baa10be976931ee57a7"
+          },
+          "textures/pine_roots_b_nor_gl_1k.jpg": {
+            "size": 1324029,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_b_nor_gl_1k.jpg",
+            "md5": "ab9eb3f7e5f91a6cc86a5dbc5bbab364"
+          },
+          "textures/pine_roots_b_diff_1k.jpg": {
+            "size": 751988,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_b_diff_1k.jpg",
+            "md5": "32572ea4ae4ba1a474f2e77763af825a"
+          },
+          "textures/pine_roots_a_arm_1k.jpg": {
+            "size": 883065,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_a_arm_1k.jpg",
+            "md5": "831947b9e8113966e6a3fe1b7d8d8871"
+          },
+          "textures/pine_roots_b_arm_1k.jpg": {
+            "size": 869488,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_b_arm_1k.jpg",
+            "md5": "34af145b82e8ab78b4b5f499d3ca5a00"
+          }
+        },
+        "size": 5161,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/pine_roots/pine_roots_1k.gltf",
+        "md5": "d03fc8f8b617a1f82ee91c55ffb8eac7"
+      }
+    }
+  },
+  "usd": {
+    "8k": {
+      "usd": {
+        "include": {
+          "textures/pine_roots_a_nor_gl_8k.png": {
+            "size": 307984309,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_nor_gl_8k.png",
+            "md5": "2037f03c0c7574f82a950151eaa5aae7"
+          },
+          "textures/pine_roots_b_rough_8k.png": {
+            "size": 33502940,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_rough_8k.png",
+            "md5": "d17596840f71b5a2b5dabe52e023918a"
+          },
+          "textures/pine_roots_b_nor_gl_8k.png": {
+            "size": 311768342,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_nor_gl_8k.png",
+            "md5": "06f16f290f992bb0ee53d42b33b94602"
+          },
+          "textures/pine_roots_a_diff_8k.png": {
+            "size": 188392729,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_diff_8k.png",
+            "md5": "73a5eaeb1593a2e7e51570d82a3874bb"
+          },
+          "textures/pine_roots_a_rough_8k.png": {
+            "size": 31113790,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_rough_8k.png",
+            "md5": "4926358a81907ef2fe0d4fd78164bbbd"
+          },
+          "textures/pine_roots_b_diff_8k.png": {
+            "size": 196918374,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_diff_8k.png",
+            "md5": "02609c3d74a5f46d339cab221d6a67ad"
+          }
+        },
+        "size": 11664024,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/8k/pine_roots/pine_roots_8k.usdc",
+        "md5": "8d183f1dbbb330a5d223a18b5729d690"
+      }
+    },
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/pine_roots_b_diff_4k.png": {
+            "size": 70031724,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_diff_4k.png",
+            "md5": "8c3d09028f76f67078daa52997c8d46f"
+          },
+          "textures/pine_roots_b_nor_gl_4k.png": {
+            "size": 83211864,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_nor_gl_4k.png",
+            "md5": "dd1d89535ffa370ef9df2dc984dba11a"
+          },
+          "textures/pine_roots_a_nor_gl_4k.png": {
+            "size": 82563358,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_nor_gl_4k.png",
+            "md5": "b53a001aaa48411d7704b79708d4410c"
+          },
+          "textures/pine_roots_b_rough_4k.png": {
+            "size": 21918648,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_rough_4k.png",
+            "md5": "0b3cd7acd3f17df758938611b93cfe02"
+          },
+          "textures/pine_roots_a_diff_4k.png": {
+            "size": 67903309,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_diff_4k.png",
+            "md5": "46bd42d4347071db73aa333f973cc0fe"
+          },
+          "textures/pine_roots_a_rough_4k.png": {
+            "size": 20549521,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_rough_4k.png",
+            "md5": "5e06a0e7794ce5c757593054229c5b7d"
+          }
+        },
+        "size": 11664024,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/pine_roots/pine_roots_4k.usdc",
+        "md5": "8453c0357f619c3bc728692e877c4d00"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/pine_roots_a_diff_2k.png": {
+            "size": 19685832,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_diff_2k.png",
+            "md5": "1f4628f4de03f36a871e429d8529453c"
+          },
+          "textures/pine_roots_a_nor_gl_2k.png": {
+            "size": 22104744,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_nor_gl_2k.png",
+            "md5": "45e5a3e9984e6c422c681bc22d168d28"
+          },
+          "textures/pine_roots_b_diff_2k.png": {
+            "size": 19911830,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_diff_2k.png",
+            "md5": "66fae1c5d2281832e122f0945abdedef"
+          },
+          "textures/pine_roots_a_rough_2k.png": {
+            "size": 6522326,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_rough_2k.png",
+            "md5": "77159ac5ac246e0c760fbe133c907164"
+          },
+          "textures/pine_roots_b_rough_2k.png": {
+            "size": 6670896,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_rough_2k.png",
+            "md5": "9ee0f4fcf19344cdb0cf7400ef8454ac"
+          },
+          "textures/pine_roots_b_nor_gl_2k.png": {
+            "size": 22079908,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_nor_gl_2k.png",
+            "md5": "1a23646d2b409f60d89416063370eabb"
+          }
+        },
+        "size": 11664024,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/pine_roots/pine_roots_2k.usdc",
+        "md5": "311735ab718454d63e4b70c28874486d"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/pine_roots_b_nor_gl_1k.png": {
+            "size": 5727442,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_nor_gl_1k.png",
+            "md5": "643f3196e10b21fd0b6b2e40c952effb"
+          },
+          "textures/pine_roots_b_diff_1k.png": {
+            "size": 5258130,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_diff_1k.png",
+            "md5": "c8da412e07e3d0b1a8caa266eb101eed"
+          },
+          "textures/pine_roots_a_rough_1k.png": {
+            "size": 1766478,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_rough_1k.png",
+            "md5": "46b60e5db51062cdc47d4378aa16af21"
+          },
+          "textures/pine_roots_b_rough_1k.png": {
+            "size": 1779048,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_rough_1k.png",
+            "md5": "75e4aea9c7876bef3ecd1efc6353c3ae"
+          },
+          "textures/pine_roots_a_diff_1k.png": {
+            "size": 5270054,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_diff_1k.png",
+            "md5": "76c0444ff60a562610454d9e30d4a411"
+          },
+          "textures/pine_roots_a_nor_gl_1k.png": {
+            "size": 5768705,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_nor_gl_1k.png",
+            "md5": "d782aa1dc8276f8bce7552e4ae37bddb"
+          }
+        },
+        "size": 11664090,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/pine_roots/pine_roots_1k.usdc",
+        "md5": "5ce7710f3a5e71e1341fff369eb161ea"
+      }
+    }
+  },
+  "a_nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 77643828,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_a_nor_dx_8k.jpg",
+        "md5": "e54d072d5a30b10764fabb19627dd3bc"
+      },
+      "png": {
+        "size": 307983452,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_nor_dx_8k.png",
+        "md5": "664d21010c30cfbefeebf910eb1061da"
+      },
+      "exr": {
+        "size": 147654508,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_a_nor_dx_8k.exr",
+        "md5": "b7bbe1006bf20fc3d6dcd98bd3b93276"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 20959919,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_nor_dx_4k.jpg",
+        "md5": "2b13e3a8512ca04da711f36116ddb82a"
+      },
+      "png": {
+        "size": 82566754,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_nor_dx_4k.png",
+        "md5": "097b566ff8e733eb145de4e52da87d11"
+      },
+      "exr": {
+        "size": 39877724,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_a_nor_dx_4k.exr",
+        "md5": "aaff48c3af7dc2d44fab67888a93495d"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 5423403,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_a_nor_dx_2k.jpg",
+        "md5": "5f7876d339e9dc21542d9e3bbbf9f317"
+      },
+      "png": {
+        "size": 22106222,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_nor_dx_2k.png",
+        "md5": "b125899396ab4891fa8db4c56570baab"
+      },
+      "exr": {
+        "size": 10370100,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_a_nor_dx_2k.exr",
+        "md5": "a2194d2c84338281b30e04a209a96dce"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 1351935,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_a_nor_dx_1k.jpg",
+        "md5": "e235d52bc7180c15b864e8af6e09fd67"
+      },
+      "png": {
+        "size": 5768678,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_nor_dx_1k.png",
+        "md5": "6debaf4c318325e8d3013ba5be5485e5"
+      },
+      "exr": {
+        "size": 2629971,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_a_nor_dx_1k.exr",
+        "md5": "0dcf7bb10049ef13d595447897e73c2d"
+      }
+    }
+  },
+  "a_rough": {
+    "8k": {
+      "jpg": {
+        "size": 23615621,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_a_rough_8k.jpg",
+        "md5": "524225a1b34486cbefba9fed8c604478"
+      },
+      "png": {
+        "size": 31113790,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_rough_8k.png",
+        "md5": "4926358a81907ef2fe0d4fd78164bbbd"
+      },
+      "exr": {
+        "size": 37811963,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_a_rough_8k.exr",
+        "md5": "3dbcf6b74d647063ce67a1295a21c993"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 7919564,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_rough_4k.jpg",
+        "md5": "216a7cb723a49cca60bb543753fafa37"
+      },
+      "png": {
+        "size": 20549521,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_rough_4k.png",
+        "md5": "5e06a0e7794ce5c757593054229c5b7d"
+      },
+      "exr": {
+        "size": 14467683,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_a_rough_4k.exr",
+        "md5": "536688df3950cf85aa5305fd2122e787"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2318883,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_a_rough_2k.jpg",
+        "md5": "86fe0253ade8164ff453c67444b16197"
+      },
+      "png": {
+        "size": 6522326,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_rough_2k.png",
+        "md5": "77159ac5ac246e0c760fbe133c907164"
+      },
+      "exr": {
+        "size": 4367884,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_a_rough_2k.exr",
+        "md5": "0bf9fb895739815a436bf5855631cc79"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 620026,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_a_rough_1k.jpg",
+        "md5": "f2c20fb8dae0c6788b6a014ffb7fc5dd"
+      },
+      "png": {
+        "size": 1766478,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_rough_1k.png",
+        "md5": "46b60e5db51062cdc47d4378aa16af21"
+      },
+      "exr": {
+        "size": 1164604,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_a_rough_1k.exr",
+        "md5": "89dc13e82ffd3a1458b5630ac0698a25"
+      }
+    }
+  },
+  "a_diff": {
+    "8k": {
+      "jpg": {
+        "size": 28920988,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_a_diff_8k.jpg",
+        "md5": "94ba79688a2f079db474651b58784355"
+      },
+      "png": {
+        "size": 188392729,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_diff_8k.png",
+        "md5": "73a5eaeb1593a2e7e51570d82a3874bb"
+      },
+      "exr": {
+        "size": 54731182,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_a_diff_8k.exr",
+        "md5": "fe8f311dc1c9aed260ef2ab3e212ca1e"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 9776217,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_diff_4k.jpg",
+        "md5": "f7d808040db2f276538aadc99e580c30"
+      },
+      "png": {
+        "size": 67903309,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_diff_4k.png",
+        "md5": "46bd42d4347071db73aa333f973cc0fe"
+      },
+      "exr": {
+        "size": 17090960,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_a_diff_4k.exr",
+        "md5": "618bb0fa525f6a9ef5a486ea5acdcf12"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2866543,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_a_diff_2k.jpg",
+        "md5": "83873e50eb9e2259a11c8301767c3e78"
+      },
+      "png": {
+        "size": 19685832,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_diff_2k.png",
+        "md5": "1f4628f4de03f36a871e429d8529453c"
+      },
+      "exr": {
+        "size": 5079828,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_a_diff_2k.exr",
+        "md5": "40a02edffb29c1fc1f79036e1c27247f"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 770614,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_a_diff_1k.jpg",
+        "md5": "141db64c5f7f3ff0b4332e79e3b92e63"
+      },
+      "png": {
+        "size": 5270054,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_diff_1k.png",
+        "md5": "76c0444ff60a562610454d9e30d4a411"
+      },
+      "exr": {
+        "size": 1450717,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_a_diff_1k.exr",
+        "md5": "678a5362523ad51abd5e0d5b279aec59"
+      }
+    }
+  },
+  "b_arm": {
+    "8k": {
+      "jpg": {
+        "size": 34537146,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_b_arm_8k.jpg",
+        "md5": "6a4415a17739623abe115581a00eb833"
+      },
+      "png": {
+        "size": 81082306,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_arm_8k.png",
+        "md5": "343a34354de42570ef07e16e6ec0d2cc"
+      },
+      "exr": {
+        "size": 55829247,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_b_arm_8k.exr",
+        "md5": "536fb72d34d8505d67674cd6e39a84fa"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 11466988,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_arm_4k.jpg",
+        "md5": "5a4a1f611dfeadf3cd16ab6069d57768"
+      },
+      "png": {
+        "size": 52008963,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_arm_4k.png",
+        "md5": "1e301564cf8d1c0ccdfa2d44e541a672"
+      },
+      "exr": {
+        "size": 21331881,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_b_arm_4k.exr",
+        "md5": "d7a617185819bf3aadf86cce9b75be54"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3282054,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_b_arm_2k.jpg",
+        "md5": "18ce29a75cb83825f403fe0d25ed58e5"
+      },
+      "png": {
+        "size": 15562302,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_arm_2k.png",
+        "md5": "677650719a89dd820093b9f1ceea4425"
+      },
+      "exr": {
+        "size": 6554821,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_b_arm_2k.exr",
+        "md5": "742f7a98093dcd1e580bdfc9cd9cff9b"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 869488,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_b_arm_1k.jpg",
+        "md5": "34af145b82e8ab78b4b5f499d3ca5a00"
+      },
+      "png": {
+        "size": 4204645,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_arm_1k.png",
+        "md5": "1cd857e0ebb1715f6cb2a808afd597e7"
+      },
+      "exr": {
+        "size": 1814289,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_b_arm_1k.exr",
+        "md5": "1ebd4d62a9565149338227679b725b15"
+      }
+    }
+  },
+  "b_nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 75674163,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_b_nor_dx_8k.jpg",
+        "md5": "7445dae803a47891186ed8ecb4c4c004"
+      },
+      "png": {
+        "size": 311766715,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_nor_dx_8k.png",
+        "md5": "9cdcfb767b84bb3ebc7473212b2be933"
+      },
+      "exr": {
+        "size": 144736988,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_b_nor_dx_8k.exr",
+        "md5": "0ce45a2e56c9f81d12412a3aeae884eb"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 20768740,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_nor_dx_4k.jpg",
+        "md5": "1480e30a8b9cc86113d3b31700f1cdec"
+      },
+      "png": {
+        "size": 83203748,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_nor_dx_4k.png",
+        "md5": "49a04e16a8c40112a04b94e651524f2a"
+      },
+      "exr": {
+        "size": 39629412,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_b_nor_dx_4k.exr",
+        "md5": "39fcbe2891319d2d5a7354a44ce38328"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 5370402,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_b_nor_dx_2k.jpg",
+        "md5": "94f3b1fae62525e36aa1f96ed7a6edf6"
+      },
+      "png": {
+        "size": 22080026,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_nor_dx_2k.png",
+        "md5": "6d6d2a0e3b736d1df0ac8d6e09f0ffc2"
+      },
+      "exr": {
+        "size": 10299661,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_b_nor_dx_2k.exr",
+        "md5": "bc0d892c80fef8583c311203df59a590"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 1331310,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_b_nor_dx_1k.jpg",
+        "md5": "06222581aa45d9a2514aded1a926d68d"
+      },
+      "png": {
+        "size": 5727182,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_nor_dx_1k.png",
+        "md5": "9e3e7f063bd1051d7ad4bbb4b26fafb4"
+      },
+      "exr": {
+        "size": 2601931,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_b_nor_dx_1k.exr",
+        "md5": "e81909e5f97bf401fac5717729725ee1"
+      }
+    }
+  },
+  "a_nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 74429338,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_a_nor_gl_8k.jpg",
+        "md5": "57c740d9687b931104581118d12340dc"
+      },
+      "png": {
+        "size": 307984309,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_nor_gl_8k.png",
+        "md5": "2037f03c0c7574f82a950151eaa5aae7"
+      },
+      "exr": {
+        "size": 147777023,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_a_nor_gl_8k.exr",
+        "md5": "ac757f926a12aa6a7709588f6315edb9"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 20565984,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_nor_gl_4k.jpg",
+        "md5": "e7bd282dcfb24e3170d5f399282b2d99"
+      },
+      "png": {
+        "size": 82563358,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_nor_gl_4k.png",
+        "md5": "b53a001aaa48411d7704b79708d4410c"
+      },
+      "exr": {
+        "size": 39872812,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_a_nor_gl_4k.exr",
+        "md5": "13d8439941e14f78df6e641c5e0ad795"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 5376324,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_a_nor_gl_2k.jpg",
+        "md5": "6e305cdaa55bd180fb0d0f0077957bb0"
+      },
+      "png": {
+        "size": 22104744,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_nor_gl_2k.png",
+        "md5": "45e5a3e9984e6c422c681bc22d168d28"
+      },
+      "exr": {
+        "size": 10373497,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_a_nor_gl_2k.exr",
+        "md5": "d07c885127068fed1b3316548e25b54e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 1345180,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_a_nor_gl_1k.jpg",
+        "md5": "a1d72f057d2187c1fd5e28e1c2071373"
+      },
+      "png": {
+        "size": 5768705,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_nor_gl_1k.png",
+        "md5": "d782aa1dc8276f8bce7552e4ae37bddb"
+      },
+      "exr": {
+        "size": 2629099,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_a_nor_gl_1k.exr",
+        "md5": "6176b70c2d82c126e2ec3f5dfb189a3f"
+      }
+    }
+  },
+  "b_nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 72728387,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_b_nor_gl_8k.jpg",
+        "md5": "73a00396bf58a98bb5148bd9db831d87"
+      },
+      "png": {
+        "size": 311768342,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_nor_gl_8k.png",
+        "md5": "06f16f290f992bb0ee53d42b33b94602"
+      },
+      "exr": {
+        "size": 144835713,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_b_nor_gl_8k.exr",
+        "md5": "85f7a9c580effb220cb5c1df507efca6"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 20437122,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_nor_gl_4k.jpg",
+        "md5": "987d2a74e9e3b69cbc0b4aca587d5ff0"
+      },
+      "png": {
+        "size": 83211864,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_nor_gl_4k.png",
+        "md5": "dd1d89535ffa370ef9df2dc984dba11a"
+      },
+      "exr": {
+        "size": 39640698,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_b_nor_gl_4k.exr",
+        "md5": "c136f007ab11d037f5399bf4bb3c2712"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 5333614,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_b_nor_gl_2k.jpg",
+        "md5": "1f44897be53be2c1b493d477db6eb55b"
+      },
+      "png": {
+        "size": 22079908,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_nor_gl_2k.png",
+        "md5": "1a23646d2b409f60d89416063370eabb"
+      },
+      "exr": {
+        "size": 10306629,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_b_nor_gl_2k.exr",
+        "md5": "520be89b022d2ddd196cd05b45a5cb53"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 1324029,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_b_nor_gl_1k.jpg",
+        "md5": "ab9eb3f7e5f91a6cc86a5dbc5bbab364"
+      },
+      "png": {
+        "size": 5727442,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_nor_gl_1k.png",
+        "md5": "643f3196e10b21fd0b6b2e40c952effb"
+      },
+      "exr": {
+        "size": 2603975,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_b_nor_gl_1k.exr",
+        "md5": "a23fe428dcae048afa269c450a8dba26"
+      }
+    }
+  },
+  "a_arm": {
+    "8k": {
+      "jpg": {
+        "size": 33243657,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/pine_roots/pine_roots_a_arm_8k.jpg",
+        "md5": "ddf5d6515ab3fd60ae5e6f699654a8ee"
+      },
+      "png": {
+        "size": 79532889,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_arm_8k.png",
+        "md5": "d819b7528bfcc903672690f30f632642"
+      },
+      "exr": {
+        "size": 53505726,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/pine_roots/pine_roots_a_arm_8k.exr",
+        "md5": "d6dccb7ed8fe7345c3bff83ed2447e63"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 11106572,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_arm_4k.jpg",
+        "md5": "9469f337fe857c7eed8a961512e0b621"
+      },
+      "png": {
+        "size": 51345206,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_arm_4k.png",
+        "md5": "eaed16f711763b9b40f0572bccc4ad27"
+      },
+      "exr": {
+        "size": 20501262,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/pine_roots/pine_roots_a_arm_4k.exr",
+        "md5": "ddbc8edecc25f07042396b7624a2439c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3248573,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/pine_roots/pine_roots_a_arm_2k.jpg",
+        "md5": "3ece65dc9f02287832fab66b0b628c53"
+      },
+      "png": {
+        "size": 15587876,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_arm_2k.png",
+        "md5": "1d415e88848c586ee7cb46e2df01fe61"
+      },
+      "exr": {
+        "size": 6437511,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/pine_roots/pine_roots_a_arm_2k.exr",
+        "md5": "cbe12f2f6cc77892ee90129276c2b54a"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 883065,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_roots/pine_roots_a_arm_1k.jpg",
+        "md5": "831947b9e8113966e6a3fe1b7d8d8871"
+      },
+      "png": {
+        "size": 4227431,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_arm_1k.png",
+        "md5": "30ba5df2939ac85701cc90d9abb06e03"
+      },
+      "exr": {
+        "size": 1834953,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/pine_roots/pine_roots_a_arm_1k.exr",
+        "md5": "c7900b11445a434b051039eba5e6e394"
+      }
+    }
+  },
+  "fbx": {
+    "8k": {
+      "fbx": {
+        "include": {
+          "textures/pine_roots_a_nor_gl_8k.png": {
+            "size": 307984309,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_nor_gl_8k.png",
+            "md5": "2037f03c0c7574f82a950151eaa5aae7"
+          },
+          "textures/pine_roots_b_rough_8k.png": {
+            "size": 33502940,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_rough_8k.png",
+            "md5": "d17596840f71b5a2b5dabe52e023918a"
+          },
+          "textures/pine_roots_b_nor_gl_8k.png": {
+            "size": 311768342,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_nor_gl_8k.png",
+            "md5": "06f16f290f992bb0ee53d42b33b94602"
+          },
+          "textures/pine_roots_a_diff_8k.png": {
+            "size": 188392729,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_diff_8k.png",
+            "md5": "73a5eaeb1593a2e7e51570d82a3874bb"
+          },
+          "textures/pine_roots_a_rough_8k.png": {
+            "size": 31113790,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_a_rough_8k.png",
+            "md5": "4926358a81907ef2fe0d4fd78164bbbd"
+          },
+          "textures/pine_roots_b_diff_8k.png": {
+            "size": 196918374,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/pine_roots/pine_roots_b_diff_8k.png",
+            "md5": "02609c3d74a5f46d339cab221d6a67ad"
+          }
+        },
+        "size": 11175356,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/8k/pine_roots/pine_roots_8k.fbx",
+        "md5": "80df9b14344be494ce72786cfed9c207"
+      }
+    },
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/pine_roots_b_diff_4k.png": {
+            "size": 70031724,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_diff_4k.png",
+            "md5": "8c3d09028f76f67078daa52997c8d46f"
+          },
+          "textures/pine_roots_b_nor_gl_4k.png": {
+            "size": 83211864,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_nor_gl_4k.png",
+            "md5": "dd1d89535ffa370ef9df2dc984dba11a"
+          },
+          "textures/pine_roots_a_nor_gl_4k.png": {
+            "size": 82563358,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_nor_gl_4k.png",
+            "md5": "b53a001aaa48411d7704b79708d4410c"
+          },
+          "textures/pine_roots_b_rough_4k.png": {
+            "size": 21918648,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_b_rough_4k.png",
+            "md5": "0b3cd7acd3f17df758938611b93cfe02"
+          },
+          "textures/pine_roots_a_diff_4k.png": {
+            "size": 67903309,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_diff_4k.png",
+            "md5": "46bd42d4347071db73aa333f973cc0fe"
+          },
+          "textures/pine_roots_a_rough_4k.png": {
+            "size": 20549521,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/pine_roots/pine_roots_a_rough_4k.png",
+            "md5": "5e06a0e7794ce5c757593054229c5b7d"
+          }
+        },
+        "size": 11175660,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/pine_roots/pine_roots_4k.fbx",
+        "md5": "eeddecfa558958203144186ff2944a18"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/pine_roots_a_diff_2k.png": {
+            "size": 19685832,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_diff_2k.png",
+            "md5": "1f4628f4de03f36a871e429d8529453c"
+          },
+          "textures/pine_roots_a_nor_gl_2k.png": {
+            "size": 22104744,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_nor_gl_2k.png",
+            "md5": "45e5a3e9984e6c422c681bc22d168d28"
+          },
+          "textures/pine_roots_b_diff_2k.png": {
+            "size": 19911830,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_diff_2k.png",
+            "md5": "66fae1c5d2281832e122f0945abdedef"
+          },
+          "textures/pine_roots_a_rough_2k.png": {
+            "size": 6522326,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_a_rough_2k.png",
+            "md5": "77159ac5ac246e0c760fbe133c907164"
+          },
+          "textures/pine_roots_b_rough_2k.png": {
+            "size": 6670896,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_rough_2k.png",
+            "md5": "9ee0f4fcf19344cdb0cf7400ef8454ac"
+          },
+          "textures/pine_roots_b_nor_gl_2k.png": {
+            "size": 22079908,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/pine_roots/pine_roots_b_nor_gl_2k.png",
+            "md5": "1a23646d2b409f60d89416063370eabb"
+          }
+        },
+        "size": 11175852,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/pine_roots/pine_roots_2k.fbx",
+        "md5": "0be3484d0d5b202f6d10105880c259f0"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/pine_roots_b_nor_gl_1k.png": {
+            "size": 5727442,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_nor_gl_1k.png",
+            "md5": "643f3196e10b21fd0b6b2e40c952effb"
+          },
+          "textures/pine_roots_b_diff_1k.png": {
+            "size": 5258130,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_diff_1k.png",
+            "md5": "c8da412e07e3d0b1a8caa266eb101eed"
+          },
+          "textures/pine_roots_a_rough_1k.png": {
+            "size": 1766478,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_rough_1k.png",
+            "md5": "46b60e5db51062cdc47d4378aa16af21"
+          },
+          "textures/pine_roots_b_rough_1k.png": {
+            "size": 1779048,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_b_rough_1k.png",
+            "md5": "75e4aea9c7876bef3ecd1efc6353c3ae"
+          },
+          "textures/pine_roots_a_diff_1k.png": {
+            "size": 5270054,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_diff_1k.png",
+            "md5": "76c0444ff60a562610454d9e30d4a411"
+          },
+          "textures/pine_roots_a_nor_gl_1k.png": {
+            "size": 5768705,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_roots/pine_roots_a_nor_gl_1k.png",
+            "md5": "d782aa1dc8276f8bce7552e4ae37bddb"
+          }
+        },
+        "size": 11175692,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/pine_roots/pine_roots_1k.fbx",
+        "md5": "b54c1e34c799f1c5d64bf513329586b5"
+      }
+    }
+  }
+}

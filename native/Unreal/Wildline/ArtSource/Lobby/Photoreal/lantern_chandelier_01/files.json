@@ -1,0 +1,1904 @@
+{
+  "Diffuse": {
+    "8k": {
+      "jpg": {
+        "size": 5059523,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_diff_8k.jpg",
+        "md5": "bd5f239675715bd27fe3d7d434115d42"
+      },
+      "png": {
+        "size": 41068181,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_diff_8k.png",
+        "md5": "98cad65b5c95c608a63a264fb0172086"
+      },
+      "exr": {
+        "size": 43360263,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_diff_8k.exr",
+        "md5": "cf05ed465f24e5eac9996738011bc2ba"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1592776,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_diff_4k.jpg",
+        "md5": "30ef4e08e5446ac3767a85f460281e85"
+      },
+      "png": {
+        "size": 12397858,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_diff_4k.png",
+        "md5": "060c6ea48871edeed1e95011aaa34942"
+      },
+      "exr": {
+        "size": 12217182,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_diff_4k.exr",
+        "md5": "207b256d9b49e1b46b6708cd8bd829d0"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 513844,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_diff_2k.jpg",
+        "md5": "c2381687746b4eb909ed8a0bd06a53ce"
+      },
+      "png": {
+        "size": 3721288,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_diff_2k.png",
+        "md5": "602fdae61204ba18c8aa488f87ce3c9a"
+      },
+      "exr": {
+        "size": 3830938,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_diff_2k.exr",
+        "md5": "94a3a48525cd37db112e56a4d58598a0"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 166693,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_diff_1k.jpg",
+        "md5": "37d15a3440e919c20a6dfb4f8a9e68c9"
+      },
+      "png": {
+        "size": 1160748,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_diff_1k.png",
+        "md5": "017e18eea5f835589092fe7ec7651d92"
+      },
+      "exr": {
+        "size": 1215587,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_diff_1k.exr",
+        "md5": "29e60cea25d665836d8434e67c628f5f"
+      }
+    }
+  },
+  "glass_nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 15354998,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_8k.jpg",
+        "md5": "6551bbde1fe50b773dc0994ef595da14"
+      },
+      "png": {
+        "size": 84967981,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_8k.png",
+        "md5": "fb21c8fe337cfb783f1912f518529a3b"
+      },
+      "exr": {
+        "size": 78645996,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_8k.exr",
+        "md5": "1c57236aa5bfb690f2c7e4b269ac7a18"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 5472643,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_4k.jpg",
+        "md5": "fe369ef6b1a43b327bc2b211755ae587"
+      },
+      "png": {
+        "size": 27468948,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_4k.png",
+        "md5": "2c6c8b828fea299282434c1080f5beb0"
+      },
+      "exr": {
+        "size": 26925114,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_4k.exr",
+        "md5": "9b3c2f186de7a7c77a1478222c1247a5"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1741172,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_2k.jpg",
+        "md5": "cf493e9eca7fbf24f1b1a9d5d93376ef"
+      },
+      "png": {
+        "size": 7836979,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_2k.png",
+        "md5": "c793d535bde7971392ce05744f2a0456"
+      },
+      "exr": {
+        "size": 8465320,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_2k.exr",
+        "md5": "3a4826d5f0e42bd78f5e8c5f8bd30e23"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 501955,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_1k.jpg",
+        "md5": "68d40531ec866751e60463622804bca4"
+      },
+      "png": {
+        "size": 2058777,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_1k.png",
+        "md5": "d2be0327c791d223d7af823079854b6b"
+      },
+      "exr": {
+        "size": 2328103,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_dx_1k.exr",
+        "md5": "a24d3f3c70be05a4451a04f0de75019e"
+      }
+    }
+  },
+  "nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 4762899,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_8k.jpg",
+        "md5": "329b86d8c0e65ebd874e5dfd2edd1cd3"
+      },
+      "png": {
+        "size": 43738087,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_8k.png",
+        "md5": "8f58b8f9f9b5ae86c8b7b5b5e86e6449"
+      },
+      "exr": {
+        "size": 38233246,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_8k.exr",
+        "md5": "0f9cd7d3a2488f0db7f0bfa5bc8bee61"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1535934,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_4k.jpg",
+        "md5": "80d401fbaa7723a09a81c552fae15be3"
+      },
+      "png": {
+        "size": 15316389,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_4k.png",
+        "md5": "ef1e1ff48168d9e18991da86f6bdf1c3"
+      },
+      "exr": {
+        "size": 12664140,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_4k.exr",
+        "md5": "815c3c710e5c6d80ceec18b31da2ef8f"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 484415,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_2k.jpg",
+        "md5": "a0b7b7fd50c529bc63ca1d572fa024d6"
+      },
+      "png": {
+        "size": 4739466,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_2k.png",
+        "md5": "eb407f7d6d0019757f19ff624d8d3821"
+      },
+      "exr": {
+        "size": 4091153,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_2k.exr",
+        "md5": "3c0a51abdd418babd835569914b353f0"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 162400,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_1k.jpg",
+        "md5": "94e48df7a69bd92e9a3acb6328590a66"
+      },
+      "png": {
+        "size": 1388567,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_1k.png",
+        "md5": "dedb56e8925877779d919c0c45a2aff5"
+      },
+      "exr": {
+        "size": 1249719,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_nor_dx_1k.exr",
+        "md5": "21b22df8a9710e9161844f62aeaacf26"
+      }
+    }
+  },
+  "blend": {
+    "8k": {
+      "blend": {
+        "include": {
+          "textures/lantern_chandelier_01_metal_8k.exr": {
+            "size": 31708871,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_metal_8k.exr",
+            "md5": "9e0b8ee0707e74b9f880c205e590efc8"
+          },
+          "textures/lantern_chandelier_01_diff_8k.jpg": {
+            "size": 5059523,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_diff_8k.jpg",
+            "md5": "bd5f239675715bd27fe3d7d434115d42"
+          },
+          "textures/lantern_chandelier_01_nor_gl_8k.exr": {
+            "size": 38081708,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_8k.exr",
+            "md5": "ef1c700d8253a9c6863b5009347c85d6"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_8k.png": {
+            "size": 85029885,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_8k.png",
+            "md5": "f24d1eab4e945e92a3d529c9a7c99ef1"
+          },
+          "textures/lantern_chandelier_01_glass_metal_8k.png": {
+            "size": 65408,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_8k.png",
+            "md5": "202c765cf53ae1b04635a5ec99af69c7"
+          },
+          "textures/lantern_chandelier_01_glass_rough_8k.png": {
+            "size": 542840,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_8k.png",
+            "md5": "62bcc8a68529faa7704ab3d7afd43477"
+          },
+          "textures/lantern_chandelier_01_rough_8k.jpg": {
+            "size": 11479500,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_rough_8k.jpg",
+            "md5": "80836286acabf04d677956e6f81c9f5f"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_8k.png": {
+            "size": 1233137,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_8k.png",
+            "md5": "4931edfd990f8bb2c55a80bdfd4e708d"
+          },
+          "textures/lantern_chandelier_01_glass_diff_8k.png": {
+            "size": 8563787,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_8k.png",
+            "md5": "0b5a1e272d87b00e499c8dda61aaf37a"
+          }
+        },
+        "size": 350578,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/8k/lantern_chandelier_01/lantern_chandelier_01_8k.blend",
+        "md5": "4f211fe35f3f2127888b56c6c46c1ae3"
+      }
+    },
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/lantern_chandelier_01_glass_diff_4k.png": {
+            "size": 1954757,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_4k.png",
+            "md5": "d3c8032a8e64962290b936c2cc183b6e"
+          },
+          "textures/lantern_chandelier_01_glass_rough_4k.png": {
+            "size": 202578,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_4k.png",
+            "md5": "4565830ba273f09bb318a9b0cbd2628c"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_4k.png": {
+            "size": 318793,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_4k.png",
+            "md5": "86dc3ff771ca13d923d5d836e01af1a4"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_4k.png": {
+            "size": 27481288,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_4k.png",
+            "md5": "03c0373a130b226d611847ff410c87c0"
+          },
+          "textures/lantern_chandelier_01_glass_metal_4k.png": {
+            "size": 16432,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_4k.png",
+            "md5": "df8ab9679c470bb69b185cfc565b2bef"
+          },
+          "textures/lantern_chandelier_01_rough_4k.jpg": {
+            "size": 3247784,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_rough_4k.jpg",
+            "md5": "c009640fbaf08981903a865b4ca7b62d"
+          },
+          "textures/lantern_chandelier_01_metal_4k.exr": {
+            "size": 9732543,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_metal_4k.exr",
+            "md5": "85d4308b4940d15b69e9ec6cba019405"
+          },
+          "textures/lantern_chandelier_01_diff_4k.jpg": {
+            "size": 1592776,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_diff_4k.jpg",
+            "md5": "30ef4e08e5446ac3767a85f460281e85"
+          },
+          "textures/lantern_chandelier_01_nor_gl_4k.exr": {
+            "size": 12620541,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_4k.exr",
+            "md5": "9d7f729e9325d0df811914c30a32947f"
+          }
+        },
+        "size": 350574,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/lantern_chandelier_01/lantern_chandelier_01_4k.blend",
+        "md5": "3e5523d37d6d20576387b0ee130d4449"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/lantern_chandelier_01_nor_gl_2k.exr": {
+            "size": 4079968,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_2k.exr",
+            "md5": "e04266211689d44c16138e9c472c1c5d"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_2k.png": {
+            "size": 7840203,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_2k.png",
+            "md5": "ecaa7e6a7876551609b2ee9c6d193a47"
+          },
+          "textures/lantern_chandelier_01_glass_rough_2k.png": {
+            "size": 73258,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_2k.png",
+            "md5": "2c6c2c353f6b8030df3dc19c376ddad7"
+          },
+          "textures/lantern_chandelier_01_diff_2k.jpg": {
+            "size": 513844,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_diff_2k.jpg",
+            "md5": "c2381687746b4eb909ed8a0bd06a53ce"
+          },
+          "textures/lantern_chandelier_01_metal_2k.exr": {
+            "size": 3008432,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_metal_2k.exr",
+            "md5": "7793acb366dcabc63757ccf9f6754fc7"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_2k.png": {
+            "size": 92752,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_2k.png",
+            "md5": "64510732f5e86ed25ebbb09812c77c82"
+          },
+          "textures/lantern_chandelier_01_glass_metal_2k.png": {
+            "size": 4187,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_2k.png",
+            "md5": "12f0d8cf69c8a3427fbdfaaffe7978a5"
+          },
+          "textures/lantern_chandelier_01_glass_diff_2k.png": {
+            "size": 500732,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_2k.png",
+            "md5": "cda65322052fe27c3a5a7bbba961e5b0"
+          },
+          "textures/lantern_chandelier_01_rough_2k.jpg": {
+            "size": 984393,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_rough_2k.jpg",
+            "md5": "5af424b9e32ac1a9e33bdeba7e5206f2"
+          }
+        },
+        "size": 350535,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/lantern_chandelier_01/lantern_chandelier_01_2k.blend",
+        "md5": "c9b27a3571cb2e829b8d9d67b5fd5e14"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/lantern_chandelier_01_glass_diff_1k.png": {
+            "size": 147984,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_1k.png",
+            "md5": "bcaaa26c252a600285eba055748cffaf"
+          },
+          "textures/lantern_chandelier_01_glass_metal_1k.png": {
+            "size": 1139,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_1k.png",
+            "md5": "14c604b27ea726bc5b38e48671f77ce0"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_1k.png": {
+            "size": 31244,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_1k.png",
+            "md5": "54317a1e4552a3988dc297a962ad5896"
+          },
+          "textures/lantern_chandelier_01_rough_1k.jpg": {
+            "size": 299492,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_rough_1k.jpg",
+            "md5": "516bdf6a90b5b70579d3d933d909a7d8"
+          },
+          "textures/lantern_chandelier_01_diff_1k.jpg": {
+            "size": 166693,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_diff_1k.jpg",
+            "md5": "37d15a3440e919c20a6dfb4f8a9e68c9"
+          },
+          "textures/lantern_chandelier_01_metal_1k.exr": {
+            "size": 917313,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_metal_1k.exr",
+            "md5": "88253ca5235a2d46a38f6529cad1da5e"
+          },
+          "textures/lantern_chandelier_01_nor_gl_1k.exr": {
+            "size": 1248541,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_1k.exr",
+            "md5": "f0698702f93010d2946f0774654eb9dc"
+          },
+          "textures/lantern_chandelier_01_glass_rough_1k.png": {
+            "size": 27793,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_1k.png",
+            "md5": "7731e9060b910dbb1dee592479fa7578"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_1k.png": {
+            "size": 2059003,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_1k.png",
+            "md5": "081c1965fb840d7979438d7b43489553"
+          }
+        },
+        "size": 350616,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/lantern_chandelier_01/lantern_chandelier_01_1k.blend",
+        "md5": "3f3ed6b9a3c171d64b8b24aaa0240dea"
+      }
+    }
+  },
+  "gltf": {
+    "8k": {
+      "gltf": {
+        "include": {
+          "textures/lantern_chandelier_01_diff_8k.jpg": {
+            "size": 5059523,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_diff_8k.jpg",
+            "md5": "bd5f239675715bd27fe3d7d434115d42"
+          },
+          "textures/lantern_chandelier_01_glass_arm_8k.jpg": {
+            "size": 1125488,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_8k.jpg",
+            "md5": "8b32c945168d9f4efe03ff3838f00105"
+          },
+          "textures/lantern_chandelier_01_glass_diff_8k.jpg": {
+            "size": 1111256,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_8k.jpg",
+            "md5": "8d8fed87dfbb574ac1fc6d173e333ad4"
+          },
+          "textures/lantern_chandelier_01_arm_8k.jpg": {
+            "size": 11049170,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_arm_8k.jpg",
+            "md5": "c9db2203c5e99b07085af17352bc5dd5"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_8k.jpg": {
+            "size": 14989460,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_8k.jpg",
+            "md5": "672f312f74cc3ae76437d37f3a0f64ca"
+          },
+          "textures/lantern_chandelier_01_nor_gl_8k.jpg": {
+            "size": 4744099,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_8k.jpg",
+            "md5": "d83bcf23481f8097155fa972d81bba94"
+          },
+          "lantern_chandelier_01.bin": {
+            "size": 264348,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/lantern_chandelier_01/lantern_chandelier_01.bin",
+            "md5": "5a341ffae56b0f2defcad4c3f37bb35d"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_8k.jpg": {
+            "size": 880307,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_8k.jpg",
+            "md5": "8b7c2c8d997eb8f24b94befa8a9a2021"
+          }
+        },
+        "size": 7774,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/lantern_chandelier_01/lantern_chandelier_01_8k.gltf",
+        "md5": "68241bd3b882253b0e22075a6c4d41c4"
+      }
+    },
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/lantern_chandelier_01_arm_4k.jpg": {
+            "size": 3260623,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_arm_4k.jpg",
+            "md5": "bcf1d18d7996a31806925f23899738b9"
+          },
+          "textures/lantern_chandelier_01_glass_diff_4k.jpg": {
+            "size": 287697,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_4k.jpg",
+            "md5": "607a21356a772b33c509a516ddc97c97"
+          },
+          "textures/lantern_chandelier_01_diff_4k.jpg": {
+            "size": 1592776,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_diff_4k.jpg",
+            "md5": "30ef4e08e5446ac3767a85f460281e85"
+          },
+          "textures/lantern_chandelier_01_glass_arm_4k.jpg": {
+            "size": 298263,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_4k.jpg",
+            "md5": "7e3239027f17b45f0344d826836742f1"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_4k.jpg": {
+            "size": 236730,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_4k.jpg",
+            "md5": "cfbf188722923fb25ae31eb0f72ef955"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_4k.jpg": {
+            "size": 5346335,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_4k.jpg",
+            "md5": "d775ad3a73cca68a2a9f890ee7382954"
+          },
+          "lantern_chandelier_01.bin": {
+            "size": 264348,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/lantern_chandelier_01/lantern_chandelier_01.bin",
+            "md5": "5a341ffae56b0f2defcad4c3f37bb35d"
+          },
+          "textures/lantern_chandelier_01_nor_gl_4k.jpg": {
+            "size": 1535951,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_4k.jpg",
+            "md5": "0625a9394595ab2420010de2c8b651e3"
+          }
+        },
+        "size": 7774,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/lantern_chandelier_01/lantern_chandelier_01_4k.gltf",
+        "md5": "b30e010c913cf60de1d899d54cc6966d"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/lantern_chandelier_01_glass_alpha_2k.jpg": {
+            "size": 66813,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_2k.jpg",
+            "md5": "9c445770f2df013bf64f2418de804201"
+          },
+          "textures/lantern_chandelier_01_glass_diff_2k.jpg": {
+            "size": 77954,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_2k.jpg",
+            "md5": "1a71253a57a483a70cf418b3abd434cb"
+          },
+          "textures/lantern_chandelier_01_diff_2k.jpg": {
+            "size": 513844,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_diff_2k.jpg",
+            "md5": "c2381687746b4eb909ed8a0bd06a53ce"
+          },
+          "textures/lantern_chandelier_01_glass_arm_2k.jpg": {
+            "size": 82629,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_2k.jpg",
+            "md5": "658ed4d7036ee879640ed1eb79a94aff"
+          },
+          "textures/lantern_chandelier_01_nor_gl_2k.jpg": {
+            "size": 487018,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_2k.jpg",
+            "md5": "9c08ab92bec9d829f07521cdc4ecf831"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_2k.jpg": {
+            "size": 1737851,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_2k.jpg",
+            "md5": "a19d4e59f2688d9655b7e2fc2843591d"
+          },
+          "textures/lantern_chandelier_01_arm_2k.jpg": {
+            "size": 999694,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_arm_2k.jpg",
+            "md5": "52e2a7e7d55c54ccdae530d187e09cfd"
+          },
+          "lantern_chandelier_01.bin": {
+            "size": 264348,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/lantern_chandelier_01/lantern_chandelier_01.bin",
+            "md5": "5a341ffae56b0f2defcad4c3f37bb35d"
+          }
+        },
+        "size": 7774,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/lantern_chandelier_01/lantern_chandelier_01_2k.gltf",
+        "md5": "9189a23a1d4349dbce51a05b0c7b1549"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/lantern_chandelier_01_glass_arm_1k.jpg": {
+            "size": 23669,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_1k.jpg",
+            "md5": "034728b008419f7e58c3100519d42c77"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_1k.jpg": {
+            "size": 504041,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_1k.jpg",
+            "md5": "ae5f7fddd9b158f308e092216fcce457"
+          },
+          "textures/lantern_chandelier_01_arm_1k.jpg": {
+            "size": 307956,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_arm_1k.jpg",
+            "md5": "c3f81f516235c19f5529db8eeed82967"
+          },
+          "textures/lantern_chandelier_01_diff_1k.jpg": {
+            "size": 166693,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_diff_1k.jpg",
+            "md5": "37d15a3440e919c20a6dfb4f8a9e68c9"
+          },
+          "textures/lantern_chandelier_01_glass_diff_1k.jpg": {
+            "size": 22100,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_1k.jpg",
+            "md5": "3d1c653ffd71bad4cd59ac3c7b323faa"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_1k.jpg": {
+            "size": 19893,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_1k.jpg",
+            "md5": "4baa22e6d91bdfc1784828914bb99410"
+          },
+          "textures/lantern_chandelier_01_nor_gl_1k.jpg": {
+            "size": 163651,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_1k.jpg",
+            "md5": "dc586af8f1abf9950241eac67e5a6ba5"
+          },
+          "lantern_chandelier_01.bin": {
+            "size": 264348,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/lantern_chandelier_01/lantern_chandelier_01.bin",
+            "md5": "5a341ffae56b0f2defcad4c3f37bb35d"
+          }
+        },
+        "size": 7774,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/lantern_chandelier_01/lantern_chandelier_01_1k.gltf",
+        "md5": "1692aed50765a13f631d65cb64bf9a4f"
+      }
+    }
+  },
+  "usd": {
+    "8k": {
+      "usd": {
+        "include": {
+          "textures/lantern_chandelier_01_metal_8k.exr": {
+            "size": 31708871,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_metal_8k.exr",
+            "md5": "9e0b8ee0707e74b9f880c205e590efc8"
+          },
+          "textures/lantern_chandelier_01_diff_8k.jpg": {
+            "size": 5059523,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_diff_8k.jpg",
+            "md5": "bd5f239675715bd27fe3d7d434115d42"
+          },
+          "textures/lantern_chandelier_01_nor_gl_8k.exr": {
+            "size": 38081708,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_8k.exr",
+            "md5": "ef1c700d8253a9c6863b5009347c85d6"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_8k.png": {
+            "size": 85029885,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_8k.png",
+            "md5": "f24d1eab4e945e92a3d529c9a7c99ef1"
+          },
+          "textures/lantern_chandelier_01_glass_metal_8k.png": {
+            "size": 65408,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_8k.png",
+            "md5": "202c765cf53ae1b04635a5ec99af69c7"
+          },
+          "textures/lantern_chandelier_01_glass_rough_8k.png": {
+            "size": 542840,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_8k.png",
+            "md5": "62bcc8a68529faa7704ab3d7afd43477"
+          },
+          "textures/lantern_chandelier_01_rough_8k.jpg": {
+            "size": 11479500,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_rough_8k.jpg",
+            "md5": "80836286acabf04d677956e6f81c9f5f"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_8k.png": {
+            "size": 1233137,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_8k.png",
+            "md5": "4931edfd990f8bb2c55a80bdfd4e708d"
+          },
+          "textures/lantern_chandelier_01_glass_diff_8k.png": {
+            "size": 8563787,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_8k.png",
+            "md5": "0b5a1e272d87b00e499c8dda61aaf37a"
+          }
+        },
+        "size": 552765,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/8k/lantern_chandelier_01/lantern_chandelier_01_8k.usdc",
+        "md5": "55734faeba6180ddabd39f34789297ad"
+      }
+    },
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/lantern_chandelier_01_glass_diff_4k.png": {
+            "size": 1954757,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_4k.png",
+            "md5": "d3c8032a8e64962290b936c2cc183b6e"
+          },
+          "textures/lantern_chandelier_01_glass_rough_4k.png": {
+            "size": 202578,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_4k.png",
+            "md5": "4565830ba273f09bb318a9b0cbd2628c"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_4k.png": {
+            "size": 318793,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_4k.png",
+            "md5": "86dc3ff771ca13d923d5d836e01af1a4"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_4k.png": {
+            "size": 27481288,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_4k.png",
+            "md5": "03c0373a130b226d611847ff410c87c0"
+          },
+          "textures/lantern_chandelier_01_glass_metal_4k.png": {
+            "size": 16432,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_4k.png",
+            "md5": "df8ab9679c470bb69b185cfc565b2bef"
+          },
+          "textures/lantern_chandelier_01_rough_4k.jpg": {
+            "size": 3247784,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_rough_4k.jpg",
+            "md5": "c009640fbaf08981903a865b4ca7b62d"
+          },
+          "textures/lantern_chandelier_01_metal_4k.exr": {
+            "size": 9732543,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_metal_4k.exr",
+            "md5": "85d4308b4940d15b69e9ec6cba019405"
+          },
+          "textures/lantern_chandelier_01_diff_4k.jpg": {
+            "size": 1592776,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_diff_4k.jpg",
+            "md5": "30ef4e08e5446ac3767a85f460281e85"
+          },
+          "textures/lantern_chandelier_01_nor_gl_4k.exr": {
+            "size": 12620541,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_4k.exr",
+            "md5": "9d7f729e9325d0df811914c30a32947f"
+          }
+        },
+        "size": 552765,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/lantern_chandelier_01/lantern_chandelier_01_4k.usdc",
+        "md5": "6e61544a0a37698ba336aa86d587b632"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/lantern_chandelier_01_nor_gl_2k.exr": {
+            "size": 4079968,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_2k.exr",
+            "md5": "e04266211689d44c16138e9c472c1c5d"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_2k.png": {
+            "size": 7840203,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_2k.png",
+            "md5": "ecaa7e6a7876551609b2ee9c6d193a47"
+          },
+          "textures/lantern_chandelier_01_glass_rough_2k.png": {
+            "size": 73258,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_2k.png",
+            "md5": "2c6c2c353f6b8030df3dc19c376ddad7"
+          },
+          "textures/lantern_chandelier_01_diff_2k.jpg": {
+            "size": 513844,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_diff_2k.jpg",
+            "md5": "c2381687746b4eb909ed8a0bd06a53ce"
+          },
+          "textures/lantern_chandelier_01_metal_2k.exr": {
+            "size": 3008432,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_metal_2k.exr",
+            "md5": "7793acb366dcabc63757ccf9f6754fc7"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_2k.png": {
+            "size": 92752,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_2k.png",
+            "md5": "64510732f5e86ed25ebbb09812c77c82"
+          },
+          "textures/lantern_chandelier_01_glass_metal_2k.png": {
+            "size": 4187,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_2k.png",
+            "md5": "12f0d8cf69c8a3427fbdfaaffe7978a5"
+          },
+          "textures/lantern_chandelier_01_glass_diff_2k.png": {
+            "size": 500732,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_2k.png",
+            "md5": "cda65322052fe27c3a5a7bbba961e5b0"
+          },
+          "textures/lantern_chandelier_01_rough_2k.jpg": {
+            "size": 984393,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_rough_2k.jpg",
+            "md5": "5af424b9e32ac1a9e33bdeba7e5206f2"
+          }
+        },
+        "size": 552765,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/lantern_chandelier_01/lantern_chandelier_01_2k.usdc",
+        "md5": "76db362df6c13cdec0dacb6c9c1665a7"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/lantern_chandelier_01_glass_diff_1k.png": {
+            "size": 147984,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_1k.png",
+            "md5": "bcaaa26c252a600285eba055748cffaf"
+          },
+          "textures/lantern_chandelier_01_glass_metal_1k.png": {
+            "size": 1139,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_1k.png",
+            "md5": "14c604b27ea726bc5b38e48671f77ce0"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_1k.png": {
+            "size": 31244,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_1k.png",
+            "md5": "54317a1e4552a3988dc297a962ad5896"
+          },
+          "textures/lantern_chandelier_01_rough_1k.jpg": {
+            "size": 299492,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_rough_1k.jpg",
+            "md5": "516bdf6a90b5b70579d3d933d909a7d8"
+          },
+          "textures/lantern_chandelier_01_diff_1k.jpg": {
+            "size": 166693,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_diff_1k.jpg",
+            "md5": "37d15a3440e919c20a6dfb4f8a9e68c9"
+          },
+          "textures/lantern_chandelier_01_metal_1k.exr": {
+            "size": 917313,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_metal_1k.exr",
+            "md5": "88253ca5235a2d46a38f6529cad1da5e"
+          },
+          "textures/lantern_chandelier_01_nor_gl_1k.exr": {
+            "size": 1248541,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_1k.exr",
+            "md5": "f0698702f93010d2946f0774654eb9dc"
+          },
+          "textures/lantern_chandelier_01_glass_rough_1k.png": {
+            "size": 27793,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_1k.png",
+            "md5": "7731e9060b910dbb1dee592479fa7578"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_1k.png": {
+            "size": 2059003,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_1k.png",
+            "md5": "081c1965fb840d7979438d7b43489553"
+          }
+        },
+        "size": 552765,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/lantern_chandelier_01/lantern_chandelier_01_1k.usdc",
+        "md5": "6a6c9731944be613e801c74bcb58a8b1"
+      }
+    }
+  },
+  "glass_metal": {
+    "8k": {
+      "jpg": {
+        "size": 786828,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_8k.jpg",
+        "md5": "5f26c2cf9864f606a385079105582ab9"
+      },
+      "png": {
+        "size": 65408,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_8k.png",
+        "md5": "202c765cf53ae1b04635a5ec99af69c7"
+      },
+      "exr": {
+        "size": 150384,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_8k.exr",
+        "md5": "f0e62082dfe29cd6f83860fc5c5dbbf1"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 197004,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_4k.jpg",
+        "md5": "921d904a81bd79b20edf344db2775b2c"
+      },
+      "png": {
+        "size": 16432,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_4k.png",
+        "md5": "df8ab9679c470bb69b185cfc565b2bef"
+      },
+      "exr": {
+        "size": 42864,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_4k.exr",
+        "md5": "6b0ae80c616ea83784d45ae76e7ba63f"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 49548,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_2k.jpg",
+        "md5": "55a2f4c6c290ccc7dca012bae0d5413e"
+      },
+      "png": {
+        "size": 4187,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_2k.png",
+        "md5": "12f0d8cf69c8a3427fbdfaaffe7978a5"
+      },
+      "exr": {
+        "size": 13296,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_2k.exr",
+        "md5": "1476900bd55146934ac777737193aa3d"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 12684,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_1k.jpg",
+        "md5": "e8c0e6464de97eac1caa382a44a2682f"
+      },
+      "png": {
+        "size": 1139,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_1k.png",
+        "md5": "14c604b27ea726bc5b38e48671f77ce0"
+      },
+      "exr": {
+        "size": 4784,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_1k.exr",
+        "md5": "cd9c790cb3000737ea983fc550d959d6"
+      }
+    }
+  },
+  "Metal": {
+    "8k": {
+      "jpg": {
+        "size": 9515459,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_metal_8k.jpg",
+        "md5": "716ca335599fd33fedc9dcb1845ff4ae"
+      },
+      "png": {
+        "size": 21156631,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_metal_8k.png",
+        "md5": "6e152359aa4d2637303833df22b92fca"
+      },
+      "exr": {
+        "size": 31708871,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_metal_8k.exr",
+        "md5": "9e0b8ee0707e74b9f880c205e590efc8"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 2940983,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_metal_4k.jpg",
+        "md5": "8efd6f5bccb640a26cdf04459f2cfb08"
+      },
+      "png": {
+        "size": 6564624,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_metal_4k.png",
+        "md5": "ac0bbddb5b1932e1fa3f320a3aa5d020"
+      },
+      "exr": {
+        "size": 9732543,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_metal_4k.exr",
+        "md5": "85d4308b4940d15b69e9ec6cba019405"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 922698,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_metal_2k.jpg",
+        "md5": "a654e7f6ea830b387dea0e55a58093f0"
+      },
+      "png": {
+        "size": 2016857,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_metal_2k.png",
+        "md5": "bd8bf1353a17369730c21df4459fd65d"
+      },
+      "exr": {
+        "size": 3008432,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_metal_2k.exr",
+        "md5": "7793acb366dcabc63757ccf9f6754fc7"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 284373,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_metal_1k.jpg",
+        "md5": "4bbfdb75d829338f7091a5844fb19561"
+      },
+      "png": {
+        "size": 604740,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_metal_1k.png",
+        "md5": "8e7c38dd3873bb5313bcea167f70e693"
+      },
+      "exr": {
+        "size": 917313,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_metal_1k.exr",
+        "md5": "88253ca5235a2d46a38f6529cad1da5e"
+      }
+    }
+  },
+  "AO": {
+    "8k": {
+      "jpg": {
+        "size": 1747299,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_ao_8k.jpg",
+        "md5": "e1e747c74194a525b6508e1ec6143618"
+      },
+      "png": {
+        "size": 7172615,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_ao_8k.png",
+        "md5": "3bf3696652656bef83517ac85644b807"
+      },
+      "exr": {
+        "size": 10178655,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_ao_8k.exr",
+        "md5": "febf41b42b0650a0f953f8bddf96d680"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 602318,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_ao_4k.jpg",
+        "md5": "4a8996c82f69ad99e336554dbafb8a80"
+      },
+      "png": {
+        "size": 2595938,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_ao_4k.png",
+        "md5": "d16a6217e0bed9b13979b503ee5e1fc6"
+      },
+      "exr": {
+        "size": 3671230,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_ao_4k.exr",
+        "md5": "e6ad53392abce982bc7ad68c4c96d0a3"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 206929,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_ao_2k.jpg",
+        "md5": "0d21da886f4bde64f194509ec60b439a"
+      },
+      "png": {
+        "size": 939371,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_ao_2k.png",
+        "md5": "a4ddd327b25d08673a15c6d1ac14e0f1"
+      },
+      "exr": {
+        "size": 1294774,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_ao_2k.exr",
+        "md5": "6b8398e4900bcd1a65f6c71c5e23b052"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 77179,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_ao_1k.jpg",
+        "md5": "431ea65258710f353e6918b027d76ecd"
+      },
+      "png": {
+        "size": 290457,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_ao_1k.png",
+        "md5": "6fea8c666e5025253a01607961fb2337"
+      },
+      "exr": {
+        "size": 412011,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_ao_1k.exr",
+        "md5": "79167ef90949b2449a4733f0b812ab8c"
+      }
+    }
+  },
+  "Rough": {
+    "8k": {
+      "jpg": {
+        "size": 11479500,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_rough_8k.jpg",
+        "md5": "80836286acabf04d677956e6f81c9f5f"
+      },
+      "png": {
+        "size": 24154901,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_rough_8k.png",
+        "md5": "02826a0b3e960116b99a27bf0fdcba4f"
+      },
+      "exr": {
+        "size": 38329516,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_rough_8k.exr",
+        "md5": "3e563cdb58aeabd500deb9c74bb120af"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 3247784,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_rough_4k.jpg",
+        "md5": "c009640fbaf08981903a865b4ca7b62d"
+      },
+      "png": {
+        "size": 6887468,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_rough_4k.png",
+        "md5": "2c527ffdca9ef8ec7d78099659886490"
+      },
+      "exr": {
+        "size": 11071663,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_rough_4k.exr",
+        "md5": "eebcb0da5428c07d5d93caaa21d96480"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 984393,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_rough_2k.jpg",
+        "md5": "5af424b9e32ac1a9e33bdeba7e5206f2"
+      },
+      "png": {
+        "size": 2067704,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_rough_2k.png",
+        "md5": "6098f5e3881d06fd50a54aea00d238ae"
+      },
+      "exr": {
+        "size": 3336034,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_rough_2k.exr",
+        "md5": "e8f72a419aa20a51d873695da6003599"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 299492,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_rough_1k.jpg",
+        "md5": "516bdf6a90b5b70579d3d933d909a7d8"
+      },
+      "png": {
+        "size": 618360,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_rough_1k.png",
+        "md5": "7be203a22415c59a1fa5213ced8408c8"
+      },
+      "exr": {
+        "size": 1013154,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_rough_1k.exr",
+        "md5": "f7718c9ca48ec14ee97616141e066e2b"
+      }
+    }
+  },
+  "glass_rough": {
+    "8k": {
+      "jpg": {
+        "size": 868280,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_8k.jpg",
+        "md5": "6ad6a18e9c217be4a921f799741758f5"
+      },
+      "png": {
+        "size": 542840,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_8k.png",
+        "md5": "62bcc8a68529faa7704ab3d7afd43477"
+      },
+      "exr": {
+        "size": 916409,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_8k.exr",
+        "md5": "0f1bbbfa5c4318cae96c3149eb97a4ff"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 232452,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_4k.jpg",
+        "md5": "dfc446311e979d5fa0a04bd76b99bfa4"
+      },
+      "png": {
+        "size": 202578,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_4k.png",
+        "md5": "4565830ba273f09bb318a9b0cbd2628c"
+      },
+      "exr": {
+        "size": 317559,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_4k.exr",
+        "md5": "3d21838a7115321381b109024ff29d1f"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 65537,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_2k.jpg",
+        "md5": "c0e47c8f227b9d005ee6a4e6c97163c2"
+      },
+      "png": {
+        "size": 73258,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_2k.png",
+        "md5": "2c6c2c353f6b8030df3dc19c376ddad7"
+      },
+      "exr": {
+        "size": 116026,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_2k.exr",
+        "md5": "84d8110aee0632229671eda596f70143"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 19148,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_1k.jpg",
+        "md5": "a821347288e22ecde0297cf87893a563"
+      },
+      "png": {
+        "size": 27793,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_1k.png",
+        "md5": "7731e9060b910dbb1dee592479fa7578"
+      },
+      "exr": {
+        "size": 43192,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_1k.exr",
+        "md5": "42e756076195886d2278e2f388b470c0"
+      }
+    }
+  },
+  "glass_nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 14989460,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_8k.jpg",
+        "md5": "672f312f74cc3ae76437d37f3a0f64ca"
+      },
+      "png": {
+        "size": 85029885,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_8k.png",
+        "md5": "f24d1eab4e945e92a3d529c9a7c99ef1"
+      },
+      "exr": {
+        "size": 78942193,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_8k.exr",
+        "md5": "2ddb6a2540257efc65cb3d4ee23ad051"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 5346335,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_4k.jpg",
+        "md5": "d775ad3a73cca68a2a9f890ee7382954"
+      },
+      "png": {
+        "size": 27481288,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_4k.png",
+        "md5": "03c0373a130b226d611847ff410c87c0"
+      },
+      "exr": {
+        "size": 27059834,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_4k.exr",
+        "md5": "b329b979817d926f8660440f77774eca"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1737851,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_2k.jpg",
+        "md5": "a19d4e59f2688d9655b7e2fc2843591d"
+      },
+      "png": {
+        "size": 7840203,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_2k.png",
+        "md5": "ecaa7e6a7876551609b2ee9c6d193a47"
+      },
+      "exr": {
+        "size": 8513995,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_2k.exr",
+        "md5": "6401185479a6ba5fc67579997da52e7f"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 504041,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_1k.jpg",
+        "md5": "ae5f7fddd9b158f308e092216fcce457"
+      },
+      "png": {
+        "size": 2059003,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_1k.png",
+        "md5": "081c1965fb840d7979438d7b43489553"
+      },
+      "exr": {
+        "size": 2326740,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_1k.exr",
+        "md5": "5f40007f060becf827785b23b0933b65"
+      }
+    }
+  },
+  "nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 4744099,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_8k.jpg",
+        "md5": "d83bcf23481f8097155fa972d81bba94"
+      },
+      "png": {
+        "size": 43754852,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_8k.png",
+        "md5": "b69fe22a947be36fbf73db7c827f3fe3"
+      },
+      "exr": {
+        "size": 38081708,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_8k.exr",
+        "md5": "ef1c700d8253a9c6863b5009347c85d6"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1535951,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_4k.jpg",
+        "md5": "0625a9394595ab2420010de2c8b651e3"
+      },
+      "png": {
+        "size": 15321399,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_4k.png",
+        "md5": "6104bfb0103300d8fdec61a4c12e11e2"
+      },
+      "exr": {
+        "size": 12620541,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_4k.exr",
+        "md5": "9d7f729e9325d0df811914c30a32947f"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 487018,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_2k.jpg",
+        "md5": "9c08ab92bec9d829f07521cdc4ecf831"
+      },
+      "png": {
+        "size": 4741493,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_2k.png",
+        "md5": "3612c486d705d54147a916ebf59c7e7a"
+      },
+      "exr": {
+        "size": 4079968,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_2k.exr",
+        "md5": "e04266211689d44c16138e9c472c1c5d"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 163651,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_1k.jpg",
+        "md5": "dc586af8f1abf9950241eac67e5a6ba5"
+      },
+      "png": {
+        "size": 1389324,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_1k.png",
+        "md5": "5b4f5717c9dbcaf73738aaf1e19ea765"
+      },
+      "exr": {
+        "size": 1248541,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_1k.exr",
+        "md5": "f0698702f93010d2946f0774654eb9dc"
+      }
+    }
+  },
+  "glass_diff": {
+    "8k": {
+      "jpg": {
+        "size": 1111256,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_8k.jpg",
+        "md5": "8d8fed87dfbb574ac1fc6d173e333ad4"
+      },
+      "png": {
+        "size": 8563787,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_8k.png",
+        "md5": "0b5a1e272d87b00e499c8dda61aaf37a"
+      },
+      "exr": {
+        "size": 6330443,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_8k.exr",
+        "md5": "34f2580737232e4700da37bb0e0521a6"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 287697,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_4k.jpg",
+        "md5": "607a21356a772b33c509a516ddc97c97"
+      },
+      "png": {
+        "size": 1954757,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_4k.png",
+        "md5": "d3c8032a8e64962290b936c2cc183b6e"
+      },
+      "exr": {
+        "size": 1721377,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_4k.exr",
+        "md5": "f83eb4f4abe1b2bdb6f8694e1ad0076b"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 77954,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_2k.jpg",
+        "md5": "1a71253a57a483a70cf418b3abd434cb"
+      },
+      "png": {
+        "size": 500732,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_2k.png",
+        "md5": "cda65322052fe27c3a5a7bbba961e5b0"
+      },
+      "exr": {
+        "size": 562002,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_2k.exr",
+        "md5": "f4b50f4349102a36e7e388245c8c7a27"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 22100,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_1k.jpg",
+        "md5": "3d1c653ffd71bad4cd59ac3c7b323faa"
+      },
+      "png": {
+        "size": 147984,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_1k.png",
+        "md5": "bcaaa26c252a600285eba055748cffaf"
+      },
+      "exr": {
+        "size": 205990,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_1k.exr",
+        "md5": "aceebd85faa25b80eaa7b91251598efb"
+      }
+    }
+  },
+  "glass_arm": {
+    "8k": {
+      "jpg": {
+        "size": 1125488,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_8k.jpg",
+        "md5": "8b32c945168d9f4efe03ff3838f00105"
+      },
+      "png": {
+        "size": 768027,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_8k.png",
+        "md5": "d131e35f4d736467c78e1772a45bdcf8"
+      },
+      "exr": {
+        "size": 1373439,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_8k.exr",
+        "md5": "8fa529b616c88b0879fe4c513506fdca"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 298263,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_4k.jpg",
+        "md5": "7e3239027f17b45f0344d826836742f1"
+      },
+      "png": {
+        "size": 298565,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_4k.png",
+        "md5": "c1c0f90b0bbd79e9b9493e2a0f1a7643"
+      },
+      "exr": {
+        "size": 509370,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_4k.exr",
+        "md5": "0ddecc4f1fa3e30cc8bbce9d6efca673"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 82629,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_2k.jpg",
+        "md5": "658ed4d7036ee879640ed1eb79a94aff"
+      },
+      "png": {
+        "size": 110891,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_2k.png",
+        "md5": "096cb724ecdd7a3276f6f7ce09b3d662"
+      },
+      "exr": {
+        "size": 207382,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_2k.exr",
+        "md5": "fda15bf8457001abf5f251b513b4e0b4"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 23669,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_1k.jpg",
+        "md5": "034728b008419f7e58c3100519d42c77"
+      },
+      "png": {
+        "size": 40274,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_1k.png",
+        "md5": "383fa5d6897299016a75515c7eee4c6a"
+      },
+      "exr": {
+        "size": 83261,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_1k.exr",
+        "md5": "f242c4c58f53b301d4d922c7a6645a88"
+      }
+    }
+  },
+  "glass_ao": {
+    "8k": {
+      "jpg": {
+        "size": 786828,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_8k.jpg",
+        "md5": "5f26c2cf9864f606a385079105582ab9"
+      },
+      "png": {
+        "size": 65408,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_8k.png",
+        "md5": "202c765cf53ae1b04635a5ec99af69c7"
+      },
+      "exr": {
+        "size": 150384,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_8k.exr",
+        "md5": "056538b42e8a034ddac727ae15f9236d"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 197004,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_4k.jpg",
+        "md5": "921d904a81bd79b20edf344db2775b2c"
+      },
+      "png": {
+        "size": 16432,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_4k.png",
+        "md5": "df8ab9679c470bb69b185cfc565b2bef"
+      },
+      "exr": {
+        "size": 42864,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_4k.exr",
+        "md5": "80d6be5d28a09d6e840d84c1fbd87918"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 49548,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_2k.jpg",
+        "md5": "55a2f4c6c290ccc7dca012bae0d5413e"
+      },
+      "png": {
+        "size": 4187,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_2k.png",
+        "md5": "12f0d8cf69c8a3427fbdfaaffe7978a5"
+      },
+      "exr": {
+        "size": 13296,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_2k.exr",
+        "md5": "69aa33528679a26da1d7296e7efa18b7"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 12684,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_1k.jpg",
+        "md5": "e8c0e6464de97eac1caa382a44a2682f"
+      },
+      "png": {
+        "size": 1139,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_1k.png",
+        "md5": "14c604b27ea726bc5b38e48671f77ce0"
+      },
+      "exr": {
+        "size": 4784,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_glass_ao_1k.exr",
+        "md5": "f01d80daa3112f646092472b70060f16"
+      }
+    }
+  },
+  "glass_alpha": {
+    "8k": {
+      "jpg": {
+        "size": 880307,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_8k.jpg",
+        "md5": "8b7c2c8d997eb8f24b94befa8a9a2021"
+      },
+      "png": {
+        "size": 1233137,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_8k.png",
+        "md5": "4931edfd990f8bb2c55a80bdfd4e708d"
+      },
+      "exr": {
+        "size": 1696850,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_8k.exr",
+        "md5": "22b74576720fb8ad196bb9747763d43e"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 236730,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_4k.jpg",
+        "md5": "cfbf188722923fb25ae31eb0f72ef955"
+      },
+      "png": {
+        "size": 318793,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_4k.png",
+        "md5": "86dc3ff771ca13d923d5d836e01af1a4"
+      },
+      "exr": {
+        "size": 471645,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_4k.exr",
+        "md5": "eb53eaae36c79580bd4ee3bf45195a58"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 66813,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_2k.jpg",
+        "md5": "9c445770f2df013bf64f2418de804201"
+      },
+      "png": {
+        "size": 92752,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_2k.png",
+        "md5": "64510732f5e86ed25ebbb09812c77c82"
+      },
+      "exr": {
+        "size": 143567,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_2k.exr",
+        "md5": "de11b28a29d2513796cce381db608f11"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 19893,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_1k.jpg",
+        "md5": "4baa22e6d91bdfc1784828914bb99410"
+      },
+      "png": {
+        "size": 31244,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_1k.png",
+        "md5": "54317a1e4552a3988dc297a962ad5896"
+      },
+      "exr": {
+        "size": 51594,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_1k.exr",
+        "md5": "89ff52cbf218835071897da292ddc310"
+      }
+    }
+  },
+  "arm": {
+    "8k": {
+      "jpg": {
+        "size": 11049170,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_arm_8k.jpg",
+        "md5": "c9db2203c5e99b07085af17352bc5dd5"
+      },
+      "png": {
+        "size": 59115608,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_arm_8k.png",
+        "md5": "e7da98df8f9d3daf2957c162814cf015"
+      },
+      "exr": {
+        "size": 94384001,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_arm_8k.exr",
+        "md5": "af4805cbeba83bb22560ee7d91b36e61"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 3260623,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_arm_4k.jpg",
+        "md5": "bcf1d18d7996a31806925f23899738b9"
+      },
+      "png": {
+        "size": 18612758,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_arm_4k.png",
+        "md5": "616c0d7d5ee7e45e0b9578dfd9411feb"
+      },
+      "exr": {
+        "size": 25636744,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_arm_4k.exr",
+        "md5": "799d537df665e180823847df2bb87763"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 999694,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_arm_2k.jpg",
+        "md5": "52e2a7e7d55c54ccdae530d187e09cfd"
+      },
+      "png": {
+        "size": 5527054,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_arm_2k.png",
+        "md5": "7b75d4e0d4706a398ef5c559e4db8c3d"
+      },
+      "exr": {
+        "size": 7222135,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_arm_2k.exr",
+        "md5": "de6ae62e37ca9747b13d261501ab2ecb"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 307956,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_arm_1k.jpg",
+        "md5": "c3f81f516235c19f5529db8eeed82967"
+      },
+      "png": {
+        "size": 1628045,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_arm_1k.png",
+        "md5": "bcdb661b571887f9e4b668ef2378807d"
+      },
+      "exr": {
+        "size": 2064909,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_arm_1k.exr",
+        "md5": "3006d1d2a647d2c5426ca78ea5bd4de9"
+      }
+    }
+  },
+  "fbx": {
+    "8k": {
+      "fbx": {
+        "include": {
+          "textures/lantern_chandelier_01_metal_8k.exr": {
+            "size": 31708871,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_metal_8k.exr",
+            "md5": "9e0b8ee0707e74b9f880c205e590efc8"
+          },
+          "textures/lantern_chandelier_01_diff_8k.jpg": {
+            "size": 5059523,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_diff_8k.jpg",
+            "md5": "bd5f239675715bd27fe3d7d434115d42"
+          },
+          "textures/lantern_chandelier_01_nor_gl_8k.exr": {
+            "size": 38081708,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_8k.exr",
+            "md5": "ef1c700d8253a9c6863b5009347c85d6"
+          },
+          "textures/lantern_chandelier_01_glass_metal_8k.png": {
+            "size": 65408,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_8k.png",
+            "md5": "202c765cf53ae1b04635a5ec99af69c7"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_8k.png": {
+            "size": 85029885,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_8k.png",
+            "md5": "f24d1eab4e945e92a3d529c9a7c99ef1"
+          },
+          "textures/lantern_chandelier_01_glass_rough_8k.png": {
+            "size": 542840,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_8k.png",
+            "md5": "62bcc8a68529faa7704ab3d7afd43477"
+          },
+          "textures/lantern_chandelier_01_rough_8k.jpg": {
+            "size": 11479500,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/lantern_chandelier_01/lantern_chandelier_01_rough_8k.jpg",
+            "md5": "80836286acabf04d677956e6f81c9f5f"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_8k.png": {
+            "size": 1233137,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_8k.png",
+            "md5": "4931edfd990f8bb2c55a80bdfd4e708d"
+          },
+          "textures/lantern_chandelier_01_glass_diff_8k.png": {
+            "size": 8563787,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_8k.png",
+            "md5": "0b5a1e272d87b00e499c8dda61aaf37a"
+          }
+        },
+        "size": 274412,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/8k/lantern_chandelier_01/lantern_chandelier_01_8k.fbx",
+        "md5": "bcd69b4ba4bf1196dcb8c7f6fe3bc159"
+      }
+    },
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/lantern_chandelier_01_glass_diff_4k.png": {
+            "size": 1954757,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_4k.png",
+            "md5": "d3c8032a8e64962290b936c2cc183b6e"
+          },
+          "textures/lantern_chandelier_01_glass_rough_4k.png": {
+            "size": 202578,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_4k.png",
+            "md5": "4565830ba273f09bb318a9b0cbd2628c"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_4k.png": {
+            "size": 27481288,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_4k.png",
+            "md5": "03c0373a130b226d611847ff410c87c0"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_4k.png": {
+            "size": 318793,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_4k.png",
+            "md5": "86dc3ff771ca13d923d5d836e01af1a4"
+          },
+          "textures/lantern_chandelier_01_glass_metal_4k.png": {
+            "size": 16432,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_4k.png",
+            "md5": "df8ab9679c470bb69b185cfc565b2bef"
+          },
+          "textures/lantern_chandelier_01_rough_4k.jpg": {
+            "size": 3247784,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_rough_4k.jpg",
+            "md5": "c009640fbaf08981903a865b4ca7b62d"
+          },
+          "textures/lantern_chandelier_01_metal_4k.exr": {
+            "size": 9732543,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_metal_4k.exr",
+            "md5": "85d4308b4940d15b69e9ec6cba019405"
+          },
+          "textures/lantern_chandelier_01_diff_4k.jpg": {
+            "size": 1592776,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_diff_4k.jpg",
+            "md5": "30ef4e08e5446ac3767a85f460281e85"
+          },
+          "textures/lantern_chandelier_01_nor_gl_4k.exr": {
+            "size": 12620541,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_4k.exr",
+            "md5": "9d7f729e9325d0df811914c30a32947f"
+          }
+        },
+        "size": 274412,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/lantern_chandelier_01/lantern_chandelier_01_4k.fbx",
+        "md5": "919a8d80e1a1b01c2b038fba58439c45"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/lantern_chandelier_01_nor_gl_2k.exr": {
+            "size": 4079968,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_2k.exr",
+            "md5": "e04266211689d44c16138e9c472c1c5d"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_2k.png": {
+            "size": 7840203,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_2k.png",
+            "md5": "ecaa7e6a7876551609b2ee9c6d193a47"
+          },
+          "textures/lantern_chandelier_01_glass_rough_2k.png": {
+            "size": 73258,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_2k.png",
+            "md5": "2c6c2c353f6b8030df3dc19c376ddad7"
+          },
+          "textures/lantern_chandelier_01_diff_2k.jpg": {
+            "size": 513844,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_diff_2k.jpg",
+            "md5": "c2381687746b4eb909ed8a0bd06a53ce"
+          },
+          "textures/lantern_chandelier_01_metal_2k.exr": {
+            "size": 3008432,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/lantern_chandelier_01/lantern_chandelier_01_metal_2k.exr",
+            "md5": "7793acb366dcabc63757ccf9f6754fc7"
+          },
+          "textures/lantern_chandelier_01_glass_metal_2k.png": {
+            "size": 4187,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_2k.png",
+            "md5": "12f0d8cf69c8a3427fbdfaaffe7978a5"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_2k.png": {
+            "size": 92752,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_2k.png",
+            "md5": "64510732f5e86ed25ebbb09812c77c82"
+          },
+          "textures/lantern_chandelier_01_glass_diff_2k.png": {
+            "size": 500732,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_2k.png",
+            "md5": "cda65322052fe27c3a5a7bbba961e5b0"
+          },
+          "textures/lantern_chandelier_01_rough_2k.jpg": {
+            "size": 984393,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/lantern_chandelier_01/lantern_chandelier_01_rough_2k.jpg",
+            "md5": "5af424b9e32ac1a9e33bdeba7e5206f2"
+          }
+        },
+        "size": 274412,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/lantern_chandelier_01/lantern_chandelier_01_2k.fbx",
+        "md5": "28696ecd6ea28a391fc52b44fad24754"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/lantern_chandelier_01_glass_diff_1k.png": {
+            "size": 147984,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_1k.png",
+            "md5": "bcaaa26c252a600285eba055748cffaf"
+          },
+          "textures/lantern_chandelier_01_glass_metal_1k.png": {
+            "size": 1139,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_metal_1k.png",
+            "md5": "14c604b27ea726bc5b38e48671f77ce0"
+          },
+          "textures/lantern_chandelier_01_glass_alpha_1k.png": {
+            "size": 31244,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_1k.png",
+            "md5": "54317a1e4552a3988dc297a962ad5896"
+          },
+          "textures/lantern_chandelier_01_rough_1k.jpg": {
+            "size": 299492,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_rough_1k.jpg",
+            "md5": "516bdf6a90b5b70579d3d933d909a7d8"
+          },
+          "textures/lantern_chandelier_01_diff_1k.jpg": {
+            "size": 166693,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/lantern_chandelier_01/lantern_chandelier_01_diff_1k.jpg",
+            "md5": "37d15a3440e919c20a6dfb4f8a9e68c9"
+          },
+          "textures/lantern_chandelier_01_metal_1k.exr": {
+            "size": 917313,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_metal_1k.exr",
+            "md5": "88253ca5235a2d46a38f6529cad1da5e"
+          },
+          "textures/lantern_chandelier_01_nor_gl_1k.exr": {
+            "size": 1248541,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_1k.exr",
+            "md5": "f0698702f93010d2946f0774654eb9dc"
+          },
+          "textures/lantern_chandelier_01_glass_nor_gl_1k.png": {
+            "size": 2059003,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_1k.png",
+            "md5": "081c1965fb840d7979438d7b43489553"
+          },
+          "textures/lantern_chandelier_01_glass_rough_1k.png": {
+            "size": 27793,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/lantern_chandelier_01/lantern_chandelier_01_glass_rough_1k.png",
+            "md5": "7731e9060b910dbb1dee592479fa7578"
+          }
+        },
+        "size": 274412,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/lantern_chandelier_01/lantern_chandelier_01_1k.fbx",
+        "md5": "bb26384925a900c1f0698388c2f259f3"
+      }
+    }
+  }
+}

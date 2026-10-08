@@ -1,0 +1,1634 @@
+{
+  "Diffuse": {
+    "4k": {
+      "jpg": {
+        "size": 7190953,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_diff_4k.jpg",
+        "md5": "ed6ebe016ebab8b1097348873644fb70"
+      },
+      "png": {
+        "size": 15150342,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_diff_4k.png",
+        "md5": "fd084d0776892bcccc58d2b8aaf29ee9"
+      },
+      "exr": {
+        "size": 14843537,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_diff_4k.exr",
+        "md5": "3210f8740f49be26c3dceb0f33a7d08b"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1882113,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_diff_2k.jpg",
+        "md5": "782becf1c0e02eefaa5100eb55812f7b"
+      },
+      "png": {
+        "size": 3918244,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_diff_2k.png",
+        "md5": "0fccbb925e2dd852da23edbabc2239de"
+      },
+      "exr": {
+        "size": 3821927,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_diff_2k.exr",
+        "md5": "74f31f2ff75083378c70fbca4b2a893a"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 536650,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_diff_1k.jpg",
+        "md5": "fd73c81fc05f116ca4f908badb5b8974"
+      },
+      "png": {
+        "size": 1070439,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_diff_1k.png",
+        "md5": "d64b708c1a857d28ad500dc9c287d097"
+      },
+      "exr": {
+        "size": 1073944,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_diff_1k.exr",
+        "md5": "b7512f89734dd66acad228959010a6ad"
+      }
+    }
+  },
+  "glass_nor_dx": {
+    "4k": {
+      "jpg": {
+        "size": 526903,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_dx_4k.jpg",
+        "md5": "1998a01a6e4280d8cad3b524b6824c45"
+      },
+      "png": {
+        "size": 232306,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_dx_4k.png",
+        "md5": "d43b06b89c4890d1874947b6c86eb4b4"
+      },
+      "exr": {
+        "size": 657546,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_dx_4k.exr",
+        "md5": "8da5fbd2b6c7d1b9d04ae145d0af7557"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 148494,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_dx_2k.jpg",
+        "md5": "059b7955f3ccf3d4f5c4f29112f867cc"
+      },
+      "png": {
+        "size": 81105,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_dx_2k.png",
+        "md5": "56445cee9f86d6130ad24ddc8c587f94"
+      },
+      "exr": {
+        "size": 216538,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_dx_2k.exr",
+        "md5": "7dfb99719dcdb887097aee933608de28"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 42016,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_dx_1k.jpg",
+        "md5": "888b619b155531133e6b0ac4754d58d2"
+      },
+      "png": {
+        "size": 26353,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_dx_1k.png",
+        "md5": "4251a63688d5362cf487ea43b9475ff0"
+      },
+      "exr": {
+        "size": 73897,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_dx_1k.exr",
+        "md5": "fdd53670577af1a23fb1f34d9ccef66b"
+      }
+    }
+  },
+  "nor_dx": {
+    "4k": {
+      "jpg": {
+        "size": 1959183,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_nor_dx_4k.jpg",
+        "md5": "6717cc81f0826a8281c445b54f3777ea"
+      },
+      "png": {
+        "size": 3207371,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_nor_dx_4k.png",
+        "md5": "d47863648540269654b90fe0aaf3ed4b"
+      },
+      "exr": {
+        "size": 3824497,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_nor_dx_4k.exr",
+        "md5": "5792b714df830a049e812c605f157e09"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 666232,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_nor_dx_2k.jpg",
+        "md5": "caf33f7a039f3de24a36580370d92b59"
+      },
+      "png": {
+        "size": 1201936,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_nor_dx_2k.png",
+        "md5": "ff53f0ec634d9a01ecf38bf31003cd1c"
+      },
+      "exr": {
+        "size": 1341007,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_nor_dx_2k.exr",
+        "md5": "0b9c31a4840fd979fcbb71c44e0f8289"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 229899,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_nor_dx_1k.jpg",
+        "md5": "29a28d2a2d9f5ddadadaa1dc7a977d7f"
+      },
+      "png": {
+        "size": 433828,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_nor_dx_1k.png",
+        "md5": "343568e7b03f2cb050d552f0945df49e"
+      },
+      "exr": {
+        "size": 487301,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_nor_dx_1k.exr",
+        "md5": "1e9e03c00f2f192c27c1b185d0fef0c4"
+      }
+    }
+  },
+  "blend": {
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/vintage_oil_lamp_flame_alpha_4k.png": {
+            "size": 555118,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_4k.png",
+            "md5": "aca63849fbf7b45c9a000548854e8086"
+          },
+          "textures/vintage_oil_lamp_glass_metal_4k.png": {
+            "size": 21999,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_4k.png",
+            "md5": "be2b3c565b49acdeb6f950b6316aa08f"
+          },
+          "textures/vintage_oil_lamp_rough_4k.exr": {
+            "size": 10323403,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_rough_4k.exr",
+            "md5": "6304a0bb51d13a11ad7f24a7cdd86122"
+          },
+          "textures/vintage_oil_lamp_diff_4k.jpg": {
+            "size": 7190953,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_diff_4k.jpg",
+            "md5": "ed6ebe016ebab8b1097348873644fb70"
+          },
+          "textures/vintage_oil_lamp_flame_diff_4k.png": {
+            "size": 2081588,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_4k.png",
+            "md5": "79992552a410a4d28a4b613176be46d8"
+          },
+          "textures/vintage_oil_lamp_glass_nor_gl_4k.png": {
+            "size": 237157,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_4k.png",
+            "md5": "3acfb59d5635b522fab6359f3091105a"
+          },
+          "textures/vintage_oil_lamp_glass_diff_4k.png": {
+            "size": 1343770,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_4k.png",
+            "md5": "ef12faee984a8026e1dbcc2ead78e1f7"
+          },
+          "textures/vintage_oil_lamp_nor_gl_4k.exr": {
+            "size": 3822685,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_4k.exr",
+            "md5": "c404f6c51f74e9e6bae69c601e3fccbe"
+          },
+          "textures/vintage_oil_lamp_glass_rough_4k.png": {
+            "size": 1310631,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_4k.png",
+            "md5": "3a1882e14aa9cce0b206cd080e273317"
+          },
+          "textures/vintage_oil_lamp_metal_4k.exr": {
+            "size": 2578733,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_metal_4k.exr",
+            "md5": "8c3f89edae1b0881b7bd0b2954d21b81"
+          },
+          "textures/vintage_oil_lamp_glass_alpha_4k.png": {
+            "size": 115966,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_4k.png",
+            "md5": "16b954a822351a049bcaa2a114c8a74b"
+          }
+        },
+        "size": 331898,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/vintage_oil_lamp/vintage_oil_lamp_4k.blend",
+        "md5": "a39b74e5f177b40503a02c97d2b74c84"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/vintage_oil_lamp_flame_diff_2k.png": {
+            "size": 652928,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_2k.png",
+            "md5": "9fa06ca1b271855e19204202e144fbe9"
+          },
+          "textures/vintage_oil_lamp_diff_2k.jpg": {
+            "size": 1882113,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_diff_2k.jpg",
+            "md5": "782becf1c0e02eefaa5100eb55812f7b"
+          },
+          "textures/vintage_oil_lamp_glass_alpha_2k.png": {
+            "size": 40666,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_2k.png",
+            "md5": "ee17f554e443c4d8c6a14ae8aba063f8"
+          },
+          "textures/vintage_oil_lamp_glass_rough_2k.png": {
+            "size": 332824,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_2k.png",
+            "md5": "6a51de29c542e33810990a7e554b4bc9"
+          },
+          "textures/vintage_oil_lamp_flame_alpha_2k.png": {
+            "size": 129191,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_2k.png",
+            "md5": "db19e9e353396b0ee488a48e3dab237c"
+          },
+          "textures/vintage_oil_lamp_glass_metal_2k.png": {
+            "size": 8073,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_2k.png",
+            "md5": "2588baac0d7865ae44273207382b8621"
+          },
+          "textures/vintage_oil_lamp_metal_2k.exr": {
+            "size": 923570,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_metal_2k.exr",
+            "md5": "baf0ff18f3c5919b136961d7f3f1e816"
+          },
+          "textures/vintage_oil_lamp_glass_nor_gl_2k.png": {
+            "size": 81486,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_2k.png",
+            "md5": "e598cd7693419b629458b5fc4cf43849"
+          },
+          "textures/vintage_oil_lamp_rough_2k.exr": {
+            "size": 2868893,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_rough_2k.exr",
+            "md5": "762709c39f430a02d381f6730e54cd34"
+          },
+          "textures/vintage_oil_lamp_glass_diff_2k.png": {
+            "size": 111877,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_2k.png",
+            "md5": "b80040180f43a6bfbccc518f323f501c"
+          },
+          "textures/vintage_oil_lamp_nor_gl_2k.exr": {
+            "size": 1340287,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_2k.exr",
+            "md5": "becbf0338339b6b03f6e2a3a41a74342"
+          }
+        },
+        "size": 334424,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/vintage_oil_lamp/vintage_oil_lamp_2k.blend",
+        "md5": "c527c2b9a59dd43866236e5d66518693"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/vintage_oil_lamp_rough_1k.exr": {
+            "size": 822305,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_rough_1k.exr",
+            "md5": "e7488f3591ab742d269f9a878b8def46"
+          },
+          "textures/vintage_oil_lamp_glass_alpha_1k.png": {
+            "size": 14020,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_1k.png",
+            "md5": "7ea627d44af3277fc3247b9049ef190d"
+          },
+          "textures/vintage_oil_lamp_glass_nor_gl_1k.png": {
+            "size": 26788,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_1k.png",
+            "md5": "31501e760ef8f29a156db7dcd0b039de"
+          },
+          "textures/vintage_oil_lamp_nor_gl_1k.exr": {
+            "size": 487807,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_1k.exr",
+            "md5": "53373236b6e90007896d159d56d2f97c"
+          },
+          "textures/vintage_oil_lamp_flame_alpha_1k.png": {
+            "size": 60878,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_1k.png",
+            "md5": "8bdcaa2e6429b2936b7768afa889086e"
+          },
+          "textures/vintage_oil_lamp_glass_rough_1k.png": {
+            "size": 89200,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_1k.png",
+            "md5": "a31601ccc17604ef5361d141dd7b59ef"
+          },
+          "textures/vintage_oil_lamp_diff_1k.jpg": {
+            "size": 536650,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_diff_1k.jpg",
+            "md5": "fd73c81fc05f116ca4f908badb5b8974"
+          },
+          "textures/vintage_oil_lamp_glass_diff_1k.png": {
+            "size": 34863,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_1k.png",
+            "md5": "74b65b8eaca29de3edd8a92e59b4ce83"
+          },
+          "textures/vintage_oil_lamp_metal_1k.exr": {
+            "size": 332057,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_metal_1k.exr",
+            "md5": "41fe348f9970dfeca7ddfc2fca7e1b77"
+          },
+          "textures/vintage_oil_lamp_flame_diff_1k.png": {
+            "size": 263546,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_1k.png",
+            "md5": "d80a801f8ea113b1a084b616f9894e52"
+          },
+          "textures/vintage_oil_lamp_glass_metal_1k.png": {
+            "size": 3467,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_1k.png",
+            "md5": "13f90ea3621b4c8d20ead18ca4858725"
+          }
+        },
+        "size": 334127,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/vintage_oil_lamp/vintage_oil_lamp_1k.blend",
+        "md5": "286f425d82f61bc24a8ce83173c2c663"
+      }
+    }
+  },
+  "gltf": {
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/vintage_oil_lamp_nor_gl_4k.jpg": {
+            "size": 1934165,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_4k.jpg",
+            "md5": "701bb24743931abfdf764f2346811420"
+          },
+          "textures/vintage_oil_lamp_diff_4k.jpg": {
+            "size": 7190953,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_diff_4k.jpg",
+            "md5": "ed6ebe016ebab8b1097348873644fb70"
+          },
+          "vintage_oil_lamp.bin": {
+            "size": 186096,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_oil_lamp/vintage_oil_lamp.bin",
+            "md5": "b43f17a0f09d6c14d45eb1099eb1077f"
+          },
+          "textures/vintage_oil_lamp_arm_4k.jpg": {
+            "size": 8364329,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_arm_4k.jpg",
+            "md5": "8a4112fceca29692cbd17a8b9fe73ed0"
+          },
+          "textures/vintage_oil_lamp_glass_arm_4k.jpg": {
+            "size": 3679346,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_4k.jpg",
+            "md5": "30b3f2f2499374df8567d5a1b5fef3e9"
+          },
+          "textures/vintage_oil_lamp_glass_nor_gl_4k.jpg": {
+            "size": 503939,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_4k.jpg",
+            "md5": "f814e4ac8413ef4079e16096fd90c2c8"
+          },
+          "textures/vintage_oil_lamp_flame_diff_4k.jpg": {
+            "size": 869191,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_4k.jpg",
+            "md5": "d25a1bd4322f3859045596162b0b0b88"
+          },
+          "textures/vintage_oil_lamp_glass_diff_4k.jpg": {
+            "size": 542003,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_4k.jpg",
+            "md5": "cb7fa1f3ac445e5c79400e01735649cd"
+          }
+        },
+        "size": 7786,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_oil_lamp/vintage_oil_lamp_4k.gltf",
+        "md5": "2f0d6a5a2929aaba4834e6edde3e01df"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/vintage_oil_lamp_glass_nor_gl_2k.jpg": {
+            "size": 144781,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_2k.jpg",
+            "md5": "88858367d570c2a7cc5a63ae8d3cefc8"
+          },
+          "textures/vintage_oil_lamp_diff_2k.jpg": {
+            "size": 1882113,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_diff_2k.jpg",
+            "md5": "782becf1c0e02eefaa5100eb55812f7b"
+          },
+          "textures/vintage_oil_lamp_glass_diff_2k.jpg": {
+            "size": 139929,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_2k.jpg",
+            "md5": "fcdff02d655355a97c1053c0da3705ab"
+          },
+          "vintage_oil_lamp.bin": {
+            "size": 186096,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_oil_lamp/vintage_oil_lamp.bin",
+            "md5": "b43f17a0f09d6c14d45eb1099eb1077f"
+          },
+          "textures/vintage_oil_lamp_flame_diff_2k.jpg": {
+            "size": 289813,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_2k.jpg",
+            "md5": "b7db352b49b678f56307099825fcf642"
+          },
+          "textures/vintage_oil_lamp_glass_arm_2k.jpg": {
+            "size": 1011826,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_2k.jpg",
+            "md5": "9dcf760938e1e91808e9c34fb4fcb639"
+          },
+          "textures/vintage_oil_lamp_arm_2k.jpg": {
+            "size": 2316286,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_arm_2k.jpg",
+            "md5": "7b80444e19174c328d4ba5d483668190"
+          },
+          "textures/vintage_oil_lamp_nor_gl_2k.jpg": {
+            "size": 658966,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_2k.jpg",
+            "md5": "bc32ddffafdd1de886f30f85f3c64d69"
+          }
+        },
+        "size": 7786,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/vintage_oil_lamp/vintage_oil_lamp_2k.gltf",
+        "md5": "0c6e5be1ae83ea8e9c3ecf50743b77ce"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/vintage_oil_lamp_glass_diff_1k.jpg": {
+            "size": 39058,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_1k.jpg",
+            "md5": "3f2ed8af86381524fb7c02a023950309"
+          },
+          "textures/vintage_oil_lamp_nor_gl_1k.jpg": {
+            "size": 227296,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_1k.jpg",
+            "md5": "09ac342783f48e29152415890215c3b7"
+          },
+          "textures/vintage_oil_lamp_flame_diff_1k.jpg": {
+            "size": 92425,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_1k.jpg",
+            "md5": "b37858e7969def84f786a54f8e952904"
+          },
+          "textures/vintage_oil_lamp_diff_1k.jpg": {
+            "size": 536650,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_diff_1k.jpg",
+            "md5": "fd73c81fc05f116ca4f908badb5b8974"
+          },
+          "vintage_oil_lamp.bin": {
+            "size": 186096,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_oil_lamp/vintage_oil_lamp.bin",
+            "md5": "b43f17a0f09d6c14d45eb1099eb1077f"
+          },
+          "textures/vintage_oil_lamp_glass_nor_gl_1k.jpg": {
+            "size": 42123,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_1k.jpg",
+            "md5": "40b084dae82420f972a3399e04cea91f"
+          },
+          "textures/vintage_oil_lamp_arm_1k.jpg": {
+            "size": 655961,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_arm_1k.jpg",
+            "md5": "5a385b1f8bea13f7d8ce47a1f6583db1"
+          },
+          "textures/vintage_oil_lamp_glass_arm_1k.jpg": {
+            "size": 282607,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_1k.jpg",
+            "md5": "35280190a34ca941710131a51e4c8d2a"
+          }
+        },
+        "size": 7786,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/vintage_oil_lamp/vintage_oil_lamp_1k.gltf",
+        "md5": "95aefcb2ccfad1f5e10dd69522ec09ed"
+      }
+    }
+  },
+  "usd": {
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/vintage_oil_lamp_flame_alpha_4k.png": {
+            "size": 555118,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_4k.png",
+            "md5": "aca63849fbf7b45c9a000548854e8086"
+          },
+          "textures/vintage_oil_lamp_glass_metal_4k.png": {
+            "size": 21999,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_4k.png",
+            "md5": "be2b3c565b49acdeb6f950b6316aa08f"
+          },
+          "textures/vintage_oil_lamp_rough_4k.exr": {
+            "size": 10323403,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_rough_4k.exr",
+            "md5": "6304a0bb51d13a11ad7f24a7cdd86122"
+          },
+          "textures/vintage_oil_lamp_diff_4k.jpg": {
+            "size": 7190953,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_diff_4k.jpg",
+            "md5": "ed6ebe016ebab8b1097348873644fb70"
+          },
+          "textures/vintage_oil_lamp_flame_diff_4k.png": {
+            "size": 2081588,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_4k.png",
+            "md5": "79992552a410a4d28a4b613176be46d8"
+          },
+          "textures/vintage_oil_lamp_glass_nor_gl_4k.png": {
+            "size": 237157,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_4k.png",
+            "md5": "3acfb59d5635b522fab6359f3091105a"
+          },
+          "textures/vintage_oil_lamp_glass_diff_4k.png": {
+            "size": 1343770,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_4k.png",
+            "md5": "ef12faee984a8026e1dbcc2ead78e1f7"
+          },
+          "textures/vintage_oil_lamp_nor_gl_4k.exr": {
+            "size": 3822685,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_4k.exr",
+            "md5": "c404f6c51f74e9e6bae69c601e3fccbe"
+          },
+          "textures/vintage_oil_lamp_glass_rough_4k.png": {
+            "size": 1310631,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_4k.png",
+            "md5": "3a1882e14aa9cce0b206cd080e273317"
+          },
+          "textures/vintage_oil_lamp_metal_4k.exr": {
+            "size": 2578733,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_metal_4k.exr",
+            "md5": "8c3f89edae1b0881b7bd0b2954d21b81"
+          },
+          "textures/vintage_oil_lamp_glass_alpha_4k.png": {
+            "size": 115966,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_4k.png",
+            "md5": "16b954a822351a049bcaa2a114c8a74b"
+          }
+        },
+        "size": 365895,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/vintage_oil_lamp/vintage_oil_lamp_4k.usdc",
+        "md5": "26b6714f5088adda854d4d9e4edc900c"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/vintage_oil_lamp_flame_diff_2k.png": {
+            "size": 652928,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_2k.png",
+            "md5": "9fa06ca1b271855e19204202e144fbe9"
+          },
+          "textures/vintage_oil_lamp_diff_2k.jpg": {
+            "size": 1882113,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_diff_2k.jpg",
+            "md5": "782becf1c0e02eefaa5100eb55812f7b"
+          },
+          "textures/vintage_oil_lamp_glass_alpha_2k.png": {
+            "size": 40666,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_2k.png",
+            "md5": "ee17f554e443c4d8c6a14ae8aba063f8"
+          },
+          "textures/vintage_oil_lamp_glass_rough_2k.png": {
+            "size": 332824,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_2k.png",
+            "md5": "6a51de29c542e33810990a7e554b4bc9"
+          },
+          "textures/vintage_oil_lamp_flame_alpha_2k.png": {
+            "size": 129191,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_2k.png",
+            "md5": "db19e9e353396b0ee488a48e3dab237c"
+          },
+          "textures/vintage_oil_lamp_glass_metal_2k.png": {
+            "size": 8073,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_2k.png",
+            "md5": "2588baac0d7865ae44273207382b8621"
+          },
+          "textures/vintage_oil_lamp_metal_2k.exr": {
+            "size": 923570,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_metal_2k.exr",
+            "md5": "baf0ff18f3c5919b136961d7f3f1e816"
+          },
+          "textures/vintage_oil_lamp_glass_nor_gl_2k.png": {
+            "size": 81486,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_2k.png",
+            "md5": "e598cd7693419b629458b5fc4cf43849"
+          },
+          "textures/vintage_oil_lamp_rough_2k.exr": {
+            "size": 2868893,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_rough_2k.exr",
+            "md5": "762709c39f430a02d381f6730e54cd34"
+          },
+          "textures/vintage_oil_lamp_glass_diff_2k.png": {
+            "size": 111877,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_2k.png",
+            "md5": "b80040180f43a6bfbccc518f323f501c"
+          },
+          "textures/vintage_oil_lamp_nor_gl_2k.exr": {
+            "size": 1340287,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_2k.exr",
+            "md5": "becbf0338339b6b03f6e2a3a41a74342"
+          }
+        },
+        "size": 365918,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/vintage_oil_lamp/vintage_oil_lamp_2k.usdc",
+        "md5": "90404890ed7ac64e7cd298c6698ee53c"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/vintage_oil_lamp_rough_1k.exr": {
+            "size": 822305,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_rough_1k.exr",
+            "md5": "e7488f3591ab742d269f9a878b8def46"
+          },
+          "textures/vintage_oil_lamp_glass_alpha_1k.png": {
+            "size": 14020,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_1k.png",
+            "md5": "7ea627d44af3277fc3247b9049ef190d"
+          },
+          "textures/vintage_oil_lamp_glass_nor_gl_1k.png": {
+            "size": 26788,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_1k.png",
+            "md5": "31501e760ef8f29a156db7dcd0b039de"
+          },
+          "textures/vintage_oil_lamp_nor_gl_1k.exr": {
+            "size": 487807,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_1k.exr",
+            "md5": "53373236b6e90007896d159d56d2f97c"
+          },
+          "textures/vintage_oil_lamp_flame_alpha_1k.png": {
+            "size": 60878,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_1k.png",
+            "md5": "8bdcaa2e6429b2936b7768afa889086e"
+          },
+          "textures/vintage_oil_lamp_glass_rough_1k.png": {
+            "size": 89200,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_1k.png",
+            "md5": "a31601ccc17604ef5361d141dd7b59ef"
+          },
+          "textures/vintage_oil_lamp_diff_1k.jpg": {
+            "size": 536650,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_diff_1k.jpg",
+            "md5": "fd73c81fc05f116ca4f908badb5b8974"
+          },
+          "textures/vintage_oil_lamp_glass_diff_1k.png": {
+            "size": 34863,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_1k.png",
+            "md5": "74b65b8eaca29de3edd8a92e59b4ce83"
+          },
+          "textures/vintage_oil_lamp_metal_1k.exr": {
+            "size": 332057,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_metal_1k.exr",
+            "md5": "41fe348f9970dfeca7ddfc2fca7e1b77"
+          },
+          "textures/vintage_oil_lamp_flame_diff_1k.png": {
+            "size": 263546,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_1k.png",
+            "md5": "d80a801f8ea113b1a084b616f9894e52"
+          },
+          "textures/vintage_oil_lamp_glass_metal_1k.png": {
+            "size": 3467,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_1k.png",
+            "md5": "13f90ea3621b4c8d20ead18ca4858725"
+          }
+        },
+        "size": 365895,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/vintage_oil_lamp/vintage_oil_lamp_1k.usdc",
+        "md5": "3383215b47480cbf139eb463ad539202"
+      }
+    }
+  },
+  "glass_metal": {
+    "4k": {
+      "jpg": {
+        "size": 219342,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_4k.jpg",
+        "md5": "180a91fe41bc672857670a493c7f281c"
+      },
+      "png": {
+        "size": 21999,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_4k.png",
+        "md5": "be2b3c565b49acdeb6f950b6316aa08f"
+      },
+      "exr": {
+        "size": 52717,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_4k.exr",
+        "md5": "7918c20fcdcf42dd979b19a0243cf695"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 59867,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_2k.jpg",
+        "md5": "80b08e16f8fe21ec5888ed162bba42e8"
+      },
+      "png": {
+        "size": 8073,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_2k.png",
+        "md5": "2588baac0d7865ae44273207382b8621"
+      },
+      "exr": {
+        "size": 21043,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_2k.exr",
+        "md5": "02c0b6c330289ec8685b0aa19af86a65"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 17691,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_1k.jpg",
+        "md5": "d1a55bbe297485b8a1fcbc9b9764be93"
+      },
+      "png": {
+        "size": 3467,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_1k.png",
+        "md5": "13f90ea3621b4c8d20ead18ca4858725"
+      },
+      "exr": {
+        "size": 9339,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_1k.exr",
+        "md5": "b6ec0fab5122e94b23def2a3864a731b"
+      }
+    }
+  },
+  "Metal": {
+    "4k": {
+      "jpg": {
+        "size": 2927685,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_metal_4k.jpg",
+        "md5": "f9c9b57518fc6d7b41395d3d7c5bfd9e"
+      },
+      "png": {
+        "size": 1512820,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_metal_4k.png",
+        "md5": "015a721de4b4ddb3f82daba1901c0b70"
+      },
+      "exr": {
+        "size": 2578733,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_metal_4k.exr",
+        "md5": "8c3f89edae1b0881b7bd0b2954d21b81"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 842651,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_metal_2k.jpg",
+        "md5": "7f5adc988c426fd88bc4dc5bbab29b15"
+      },
+      "png": {
+        "size": 533349,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_metal_2k.png",
+        "md5": "a72964af0a95d12ca8e858b8acbfcdd5"
+      },
+      "exr": {
+        "size": 923570,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_metal_2k.exr",
+        "md5": "baf0ff18f3c5919b136961d7f3f1e816"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 269495,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_metal_1k.jpg",
+        "md5": "22c0d056732dcb3b254b605ec0984cc3"
+      },
+      "png": {
+        "size": 187885,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_metal_1k.png",
+        "md5": "a557110a2fdf08a355d8559b8256c2ad"
+      },
+      "exr": {
+        "size": 332057,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_metal_1k.exr",
+        "md5": "41fe348f9970dfeca7ddfc2fca7e1b77"
+      }
+    }
+  },
+  "AO": {
+    "4k": {
+      "jpg": {
+        "size": 3075215,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_ao_4k.jpg",
+        "md5": "dbb7f3dc50b059346ab4e89d23ade85f"
+      },
+      "png": {
+        "size": 3524015,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_ao_4k.png",
+        "md5": "3a47ffcc0852bc6f5423663fe5431577"
+      },
+      "exr": {
+        "size": 4897084,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_ao_4k.exr",
+        "md5": "a70798bcd49c8ac65559845705bdac33"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 720070,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_ao_2k.jpg",
+        "md5": "b116af86bb5e8b21cc278c685b8b4f11"
+      },
+      "png": {
+        "size": 755997,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_ao_2k.png",
+        "md5": "8a2dac58829d5c1bb4824ce601c2f6b7"
+      },
+      "exr": {
+        "size": 1159542,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_ao_2k.exr",
+        "md5": "40fbf6ccb91bcc2265958a86e253ef44"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 206510,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_ao_1k.jpg",
+        "md5": "94f1eda68b9cd4f59e6f3806cefc7af7"
+      },
+      "png": {
+        "size": 192402,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_ao_1k.png",
+        "md5": "e067d63f5be1f27c0637f108a60b2744"
+      },
+      "exr": {
+        "size": 326336,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_ao_1k.exr",
+        "md5": "a1d96b9bd0804af4955fcc74ee4a5fc3"
+      }
+    }
+  },
+  "glass_rough": {
+    "4k": {
+      "jpg": {
+        "size": 2933804,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_4k.jpg",
+        "md5": "45dba193c69f27f76bb12b65a1811f95"
+      },
+      "png": {
+        "size": 1310631,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_4k.png",
+        "md5": "3a1882e14aa9cce0b206cd080e273317"
+      },
+      "exr": {
+        "size": 2689461,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_4k.exr",
+        "md5": "521bb84bc99053b2dc267ab89ab91046"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 787904,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_2k.jpg",
+        "md5": "04d45295903a8f7fa0da6d91c92854c4"
+      },
+      "png": {
+        "size": 332824,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_2k.png",
+        "md5": "6a51de29c542e33810990a7e554b4bc9"
+      },
+      "exr": {
+        "size": 664824,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_2k.exr",
+        "md5": "fd5cae03afa2b307b90de8feb58940b2"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 213162,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_1k.jpg",
+        "md5": "5976973d06e98e3ca86c71d3de296ac1"
+      },
+      "png": {
+        "size": 89200,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_1k.png",
+        "md5": "a31601ccc17604ef5361d141dd7b59ef"
+      },
+      "exr": {
+        "size": 181252,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_1k.exr",
+        "md5": "5e1d6fe0c981e9a155edebe4361da508"
+      }
+    }
+  },
+  "Rough": {
+    "4k": {
+      "jpg": {
+        "size": 6962565,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_rough_4k.jpg",
+        "md5": "571b4753d6aaf238ef74f03f0b83c465"
+      },
+      "png": {
+        "size": 6112613,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_rough_4k.png",
+        "md5": "6a21aa754a4bafd4f6980564c8eefa13"
+      },
+      "exr": {
+        "size": 10323403,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_rough_4k.exr",
+        "md5": "6304a0bb51d13a11ad7f24a7cdd86122"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1894203,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_rough_2k.jpg",
+        "md5": "0960712e04fa47feadff36231830e226"
+      },
+      "png": {
+        "size": 1720558,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_rough_2k.png",
+        "md5": "59d16a469afa44ea84412c0d5a3f0256"
+      },
+      "exr": {
+        "size": 2868893,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_rough_2k.exr",
+        "md5": "762709c39f430a02d381f6730e54cd34"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 517426,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_rough_1k.jpg",
+        "md5": "ec2b426b642a78082897b3fecec5b4ba"
+      },
+      "png": {
+        "size": 479239,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_rough_1k.png",
+        "md5": "ebc7cd4f3cf3028f893b23910f9a1cd4"
+      },
+      "exr": {
+        "size": 822305,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_rough_1k.exr",
+        "md5": "e7488f3591ab742d269f9a878b8def46"
+      }
+    }
+  },
+  "flame_diff": {
+    "4k": {
+      "jpg": {
+        "size": 869191,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_4k.jpg",
+        "md5": "d25a1bd4322f3859045596162b0b0b88"
+      },
+      "png": {
+        "size": 2081588,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_4k.png",
+        "md5": "79992552a410a4d28a4b613176be46d8"
+      },
+      "exr": {
+        "size": 2735294,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_4k.exr",
+        "md5": "d805d63e07172d3eb9c0c3b9b4f76bee"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 289813,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_2k.jpg",
+        "md5": "b7db352b49b678f56307099825fcf642"
+      },
+      "png": {
+        "size": 652928,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_2k.png",
+        "md5": "9fa06ca1b271855e19204202e144fbe9"
+      },
+      "exr": {
+        "size": 1131565,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_2k.exr",
+        "md5": "bb4ec081dc8ad9420a961079f00700f4"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 92425,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_1k.jpg",
+        "md5": "b37858e7969def84f786a54f8e952904"
+      },
+      "png": {
+        "size": 263546,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_1k.png",
+        "md5": "d80a801f8ea113b1a084b616f9894e52"
+      },
+      "exr": {
+        "size": 413783,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_1k.exr",
+        "md5": "f6de806eb8b586756785d63d455498ac"
+      }
+    }
+  },
+  "glass_nor_gl": {
+    "4k": {
+      "jpg": {
+        "size": 503939,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_4k.jpg",
+        "md5": "f814e4ac8413ef4079e16096fd90c2c8"
+      },
+      "png": {
+        "size": 237157,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_4k.png",
+        "md5": "3acfb59d5635b522fab6359f3091105a"
+      },
+      "exr": {
+        "size": 653705,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_4k.exr",
+        "md5": "e74c06efb1bac91ca25ef14c43f801aa"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 144781,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_2k.jpg",
+        "md5": "88858367d570c2a7cc5a63ae8d3cefc8"
+      },
+      "png": {
+        "size": 81486,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_2k.png",
+        "md5": "e598cd7693419b629458b5fc4cf43849"
+      },
+      "exr": {
+        "size": 215807,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_2k.exr",
+        "md5": "e15cb5051e0fc8cbee8ac21a24a85e2b"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 42123,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_1k.jpg",
+        "md5": "40b084dae82420f972a3399e04cea91f"
+      },
+      "png": {
+        "size": 26788,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_1k.png",
+        "md5": "31501e760ef8f29a156db7dcd0b039de"
+      },
+      "exr": {
+        "size": 74734,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_1k.exr",
+        "md5": "7aae06fceb807dc1a9ab2206e0214cfd"
+      }
+    }
+  },
+  "nor_gl": {
+    "4k": {
+      "jpg": {
+        "size": 1934165,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_4k.jpg",
+        "md5": "701bb24743931abfdf764f2346811420"
+      },
+      "png": {
+        "size": 3285397,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_4k.png",
+        "md5": "a5e9d882e02a05b732d11a8525f2ba0a"
+      },
+      "exr": {
+        "size": 3822685,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_4k.exr",
+        "md5": "c404f6c51f74e9e6bae69c601e3fccbe"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 658966,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_2k.jpg",
+        "md5": "bc32ddffafdd1de886f30f85f3c64d69"
+      },
+      "png": {
+        "size": 1202444,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_2k.png",
+        "md5": "833fcc11af0f35fbfaa8d99f55e3821d"
+      },
+      "exr": {
+        "size": 1340287,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_2k.exr",
+        "md5": "becbf0338339b6b03f6e2a3a41a74342"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 227296,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_1k.jpg",
+        "md5": "09ac342783f48e29152415890215c3b7"
+      },
+      "png": {
+        "size": 435265,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_1k.png",
+        "md5": "d4d68a27b6b99b5db0dd9a085bee1d94"
+      },
+      "exr": {
+        "size": 487807,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_1k.exr",
+        "md5": "53373236b6e90007896d159d56d2f97c"
+      }
+    }
+  },
+  "flame_alpha": {
+    "4k": {
+      "jpg": {
+        "size": 593026,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_4k.jpg",
+        "md5": "8dd8a2aa4b79788c143e7531ab4fa75c"
+      },
+      "png": {
+        "size": 555118,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_4k.png",
+        "md5": "aca63849fbf7b45c9a000548854e8086"
+      },
+      "exr": {
+        "size": 782459,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_4k.exr",
+        "md5": "ca5d7ee2e6adc63e089403465816de15"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 197758,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_2k.jpg",
+        "md5": "09655114e13c58586a1092ce46abb8bd"
+      },
+      "png": {
+        "size": 129191,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_2k.png",
+        "md5": "db19e9e353396b0ee488a48e3dab237c"
+      },
+      "exr": {
+        "size": 291163,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_2k.exr",
+        "md5": "242c8bd66745700dacc44259ff30e881"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 64179,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_1k.jpg",
+        "md5": "bae57f763a3fa99673899c45332bbf9d"
+      },
+      "png": {
+        "size": 60878,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_1k.png",
+        "md5": "8bdcaa2e6429b2936b7768afa889086e"
+      },
+      "exr": {
+        "size": 117172,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_1k.exr",
+        "md5": "5fe0c040a5e40d77abd4249f71b2dd3e"
+      }
+    }
+  },
+  "glass_diff": {
+    "4k": {
+      "jpg": {
+        "size": 542003,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_4k.jpg",
+        "md5": "cb7fa1f3ac445e5c79400e01735649cd"
+      },
+      "png": {
+        "size": 1343770,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_4k.png",
+        "md5": "ef12faee984a8026e1dbcc2ead78e1f7"
+      },
+      "exr": {
+        "size": 1000209,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_4k.exr",
+        "md5": "60612744af077500d6fcf8e3444a7f73"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 139929,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_2k.jpg",
+        "md5": "fcdff02d655355a97c1053c0da3705ab"
+      },
+      "png": {
+        "size": 111877,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_2k.png",
+        "md5": "b80040180f43a6bfbccc518f323f501c"
+      },
+      "exr": {
+        "size": 305230,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_2k.exr",
+        "md5": "9e7da57c9e4ff4c7a1bb5846c417262e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 39058,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_1k.jpg",
+        "md5": "3f2ed8af86381524fb7c02a023950309"
+      },
+      "png": {
+        "size": 34863,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_1k.png",
+        "md5": "74b65b8eaca29de3edd8a92e59b4ce83"
+      },
+      "exr": {
+        "size": 115583,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_1k.exr",
+        "md5": "9f2e2a29c08a50df3f215ec8384e9e45"
+      }
+    }
+  },
+  "glass_ao": {
+    "4k": {
+      "jpg": {
+        "size": 614864,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_ao_4k.jpg",
+        "md5": "f0cc5405cbf89379422f736bbf397325"
+      },
+      "png": {
+        "size": 608604,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_ao_4k.png",
+        "md5": "571adb8c45b4af89eafd169484d5466d"
+      },
+      "exr": {
+        "size": 746745,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_glass_ao_4k.exr",
+        "md5": "89cc786be3dee45ff55bc68c7a43ea6e"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 137183,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_glass_ao_2k.jpg",
+        "md5": "abf8253811588a1b80f3ad9876893d45"
+      },
+      "png": {
+        "size": 122088,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_ao_2k.png",
+        "md5": "be756145a363061e6e8c3f0f18f0cbc3"
+      },
+      "exr": {
+        "size": 164106,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_glass_ao_2k.exr",
+        "md5": "608ec120c08fd89d2d88641f35bad7a0"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 34039,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_glass_ao_1k.jpg",
+        "md5": "ce1d22b1c0109485982ee901eb8d9ea2"
+      },
+      "png": {
+        "size": 24286,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_ao_1k.png",
+        "md5": "78dce2547cabb13a54400bd8975da3a2"
+      },
+      "exr": {
+        "size": 39154,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_glass_ao_1k.exr",
+        "md5": "036ecdd734e69809f7cbc843ff4186e7"
+      }
+    }
+  },
+  "glass_arm": {
+    "4k": {
+      "jpg": {
+        "size": 3679346,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_4k.jpg",
+        "md5": "30b3f2f2499374df8567d5a1b5fef3e9"
+      },
+      "png": {
+        "size": 2364101,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_4k.png",
+        "md5": "fa7a6e33cdf2a25e513ef712fb95f31a"
+      },
+      "exr": {
+        "size": 7300223,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_4k.exr",
+        "md5": "0f8520c8e974c36cc011010848e5229c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1011826,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_2k.jpg",
+        "md5": "9dcf760938e1e91808e9c34fb4fcb639"
+      },
+      "png": {
+        "size": 582193,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_2k.png",
+        "md5": "31b5cf4c97f0794aabd5a8154d7c1dd9"
+      },
+      "exr": {
+        "size": 2006048,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_2k.exr",
+        "md5": "0ed72bd7d58eecfafab993ed9b9f9144"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 282607,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_1k.jpg",
+        "md5": "35280190a34ca941710131a51e4c8d2a"
+      },
+      "png": {
+        "size": 147056,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_1k.png",
+        "md5": "e12c86b53a8c3a94fbc7557c56661fc8"
+      },
+      "exr": {
+        "size": 571598,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_1k.exr",
+        "md5": "4b2729bf0122d07f67f65a6fbca8ca3f"
+      }
+    }
+  },
+  "glass_alpha": {
+    "4k": {
+      "jpg": {
+        "size": 316091,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_4k.jpg",
+        "md5": "0bd0d75463c1c9c26bac375a62452c34"
+      },
+      "png": {
+        "size": 115966,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_4k.png",
+        "md5": "16b954a822351a049bcaa2a114c8a74b"
+      },
+      "exr": {
+        "size": 210504,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_4k.exr",
+        "md5": "ed49708124c04b241eb167a090212b99"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 97203,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_2k.jpg",
+        "md5": "7ec83bb4506fdefba93f71970a94a864"
+      },
+      "png": {
+        "size": 40666,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_2k.png",
+        "md5": "ee17f554e443c4d8c6a14ae8aba063f8"
+      },
+      "exr": {
+        "size": 86535,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_2k.exr",
+        "md5": "4c248e13e1cec2182c2bcae47ce76431"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 30112,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_1k.jpg",
+        "md5": "af666affbeb68a307cde4623529e5d66"
+      },
+      "png": {
+        "size": 14020,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_1k.png",
+        "md5": "7ea627d44af3277fc3247b9049ef190d"
+      },
+      "exr": {
+        "size": 37446,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_1k.exr",
+        "md5": "a9ceffe0d57ca777716dc933ac00fe20"
+      }
+    }
+  },
+  "arm": {
+    "4k": {
+      "jpg": {
+        "size": 8364329,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_arm_4k.jpg",
+        "md5": "8a4112fceca29692cbd17a8b9fe73ed0"
+      },
+      "png": {
+        "size": 12799509,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_arm_4k.png",
+        "md5": "7d6630782b765bfcf07f9be0f7b222d1"
+      },
+      "exr": {
+        "size": 20207284,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_arm_4k.exr",
+        "md5": "bd18d3ec48c0f7022284419e67aeee91"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2316286,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_arm_2k.jpg",
+        "md5": "7b80444e19174c328d4ba5d483668190"
+      },
+      "png": {
+        "size": 3589120,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_arm_2k.png",
+        "md5": "1f5b08b02f874fa9f28085b23aaa4242"
+      },
+      "exr": {
+        "size": 5678628,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_arm_2k.exr",
+        "md5": "2b3e98c96cd0e1b66d38a31baaa72d04"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 655961,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_arm_1k.jpg",
+        "md5": "5a385b1f8bea13f7d8ce47a1f6583db1"
+      },
+      "png": {
+        "size": 1000156,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_arm_1k.png",
+        "md5": "b29890fc42a839e7260b2c5d9ebd01f2"
+      },
+      "exr": {
+        "size": 1612300,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_arm_1k.exr",
+        "md5": "408e0436dc4d6e5bd3162bb0d7d6d209"
+      }
+    }
+  },
+  "fbx": {
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/vintage_oil_lamp_flame_alpha_4k.png": {
+            "size": 555118,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_4k.png",
+            "md5": "aca63849fbf7b45c9a000548854e8086"
+          },
+          "textures/vintage_oil_lamp_glass_metal_4k.png": {
+            "size": 21999,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_4k.png",
+            "md5": "be2b3c565b49acdeb6f950b6316aa08f"
+          },
+          "textures/vintage_oil_lamp_rough_4k.exr": {
+            "size": 10323403,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_rough_4k.exr",
+            "md5": "6304a0bb51d13a11ad7f24a7cdd86122"
+          },
+          "textures/vintage_oil_lamp_diff_4k.jpg": {
+            "size": 7190953,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_diff_4k.jpg",
+            "md5": "ed6ebe016ebab8b1097348873644fb70"
+          },
+          "textures/vintage_oil_lamp_flame_diff_4k.png": {
+            "size": 2081588,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_4k.png",
+            "md5": "79992552a410a4d28a4b613176be46d8"
+          },
+          "textures/vintage_oil_lamp_glass_nor_gl_4k.png": {
+            "size": 237157,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_4k.png",
+            "md5": "3acfb59d5635b522fab6359f3091105a"
+          },
+          "textures/vintage_oil_lamp_glass_diff_4k.png": {
+            "size": 1343770,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_4k.png",
+            "md5": "ef12faee984a8026e1dbcc2ead78e1f7"
+          },
+          "textures/vintage_oil_lamp_nor_gl_4k.exr": {
+            "size": 3822685,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_4k.exr",
+            "md5": "c404f6c51f74e9e6bae69c601e3fccbe"
+          },
+          "textures/vintage_oil_lamp_glass_rough_4k.png": {
+            "size": 1310631,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_4k.png",
+            "md5": "3a1882e14aa9cce0b206cd080e273317"
+          },
+          "textures/vintage_oil_lamp_metal_4k.exr": {
+            "size": 2578733,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_oil_lamp/vintage_oil_lamp_metal_4k.exr",
+            "md5": "8c3f89edae1b0881b7bd0b2954d21b81"
+          },
+          "textures/vintage_oil_lamp_glass_alpha_4k.png": {
+            "size": 115966,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_4k.png",
+            "md5": "16b954a822351a049bcaa2a114c8a74b"
+          }
+        },
+        "size": 262604,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/vintage_oil_lamp/vintage_oil_lamp_4k.fbx",
+        "md5": "896fe1b8e119a2c4006de0fda800cb63"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/vintage_oil_lamp_flame_diff_2k.png": {
+            "size": 652928,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_2k.png",
+            "md5": "9fa06ca1b271855e19204202e144fbe9"
+          },
+          "textures/vintage_oil_lamp_diff_2k.jpg": {
+            "size": 1882113,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_oil_lamp/vintage_oil_lamp_diff_2k.jpg",
+            "md5": "782becf1c0e02eefaa5100eb55812f7b"
+          },
+          "textures/vintage_oil_lamp_glass_alpha_2k.png": {
+            "size": 40666,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_2k.png",
+            "md5": "ee17f554e443c4d8c6a14ae8aba063f8"
+          },
+          "textures/vintage_oil_lamp_glass_rough_2k.png": {
+            "size": 332824,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_2k.png",
+            "md5": "6a51de29c542e33810990a7e554b4bc9"
+          },
+          "textures/vintage_oil_lamp_flame_alpha_2k.png": {
+            "size": 129191,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_2k.png",
+            "md5": "db19e9e353396b0ee488a48e3dab237c"
+          },
+          "textures/vintage_oil_lamp_glass_metal_2k.png": {
+            "size": 8073,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_2k.png",
+            "md5": "2588baac0d7865ae44273207382b8621"
+          },
+          "textures/vintage_oil_lamp_metal_2k.exr": {
+            "size": 923570,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_metal_2k.exr",
+            "md5": "baf0ff18f3c5919b136961d7f3f1e816"
+          },
+          "textures/vintage_oil_lamp_glass_nor_gl_2k.png": {
+            "size": 81486,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_2k.png",
+            "md5": "e598cd7693419b629458b5fc4cf43849"
+          },
+          "textures/vintage_oil_lamp_rough_2k.exr": {
+            "size": 2868893,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_rough_2k.exr",
+            "md5": "762709c39f430a02d381f6730e54cd34"
+          },
+          "textures/vintage_oil_lamp_glass_diff_2k.png": {
+            "size": 111877,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_2k.png",
+            "md5": "b80040180f43a6bfbccc518f323f501c"
+          },
+          "textures/vintage_oil_lamp_nor_gl_2k.exr": {
+            "size": 1340287,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_2k.exr",
+            "md5": "becbf0338339b6b03f6e2a3a41a74342"
+          }
+        },
+        "size": 262604,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/vintage_oil_lamp/vintage_oil_lamp_2k.fbx",
+        "md5": "514493eb8384a2d4971bf62cd26f3ac9"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/vintage_oil_lamp_rough_1k.exr": {
+            "size": 822305,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_rough_1k.exr",
+            "md5": "e7488f3591ab742d269f9a878b8def46"
+          },
+          "textures/vintage_oil_lamp_glass_alpha_1k.png": {
+            "size": 14020,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_alpha_1k.png",
+            "md5": "7ea627d44af3277fc3247b9049ef190d"
+          },
+          "textures/vintage_oil_lamp_glass_nor_gl_1k.png": {
+            "size": 26788,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_1k.png",
+            "md5": "31501e760ef8f29a156db7dcd0b039de"
+          },
+          "textures/vintage_oil_lamp_nor_gl_1k.exr": {
+            "size": 487807,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_1k.exr",
+            "md5": "53373236b6e90007896d159d56d2f97c"
+          },
+          "textures/vintage_oil_lamp_flame_alpha_1k.png": {
+            "size": 60878,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_flame_alpha_1k.png",
+            "md5": "8bdcaa2e6429b2936b7768afa889086e"
+          },
+          "textures/vintage_oil_lamp_glass_rough_1k.png": {
+            "size": 89200,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_rough_1k.png",
+            "md5": "a31601ccc17604ef5361d141dd7b59ef"
+          },
+          "textures/vintage_oil_lamp_diff_1k.jpg": {
+            "size": 536650,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_oil_lamp/vintage_oil_lamp_diff_1k.jpg",
+            "md5": "fd73c81fc05f116ca4f908badb5b8974"
+          },
+          "textures/vintage_oil_lamp_glass_diff_1k.png": {
+            "size": 34863,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_1k.png",
+            "md5": "74b65b8eaca29de3edd8a92e59b4ce83"
+          },
+          "textures/vintage_oil_lamp_metal_1k.exr": {
+            "size": 332057,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_oil_lamp/vintage_oil_lamp_metal_1k.exr",
+            "md5": "41fe348f9970dfeca7ddfc2fca7e1b77"
+          },
+          "textures/vintage_oil_lamp_flame_diff_1k.png": {
+            "size": 263546,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_1k.png",
+            "md5": "d80a801f8ea113b1a084b616f9894e52"
+          },
+          "textures/vintage_oil_lamp_glass_metal_1k.png": {
+            "size": 3467,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_oil_lamp/vintage_oil_lamp_glass_metal_1k.png",
+            "md5": "13f90ea3621b4c8d20ead18ca4858725"
+          }
+        },
+        "size": 262652,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/vintage_oil_lamp/vintage_oil_lamp_1k.fbx",
+        "md5": "d03efbae5696e791b0906bfacc0ed813"
+      }
+    }
+  }
+}

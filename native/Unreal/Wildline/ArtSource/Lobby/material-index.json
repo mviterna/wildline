@@ -1,0 +1,742 @@
+{
+  "M_PH_wooden_picnic_table_0": {
+    "color": "Photoreal\\wooden_picnic_table\\textures\\wooden_picnic_table_bottom_diff_4k.jpg",
+    "normal": "Photoreal\\wooden_picnic_table\\textures\\wooden_picnic_table_bottom_nor_gl_4k.jpg",
+    "arm": "Photoreal\\wooden_picnic_table\\textures\\wooden_picnic_table_bottom_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/wooden_picnic_table"
+  },
+  "M_PH_wooden_picnic_table_1": {
+    "color": "Photoreal\\wooden_picnic_table\\textures\\wooden_picnic_table_top_diff_4k.jpg",
+    "normal": "Photoreal\\wooden_picnic_table\\textures\\wooden_picnic_table_top_nor_gl_4k.jpg",
+    "arm": "Photoreal\\wooden_picnic_table\\textures\\wooden_picnic_table_top_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/wooden_picnic_table"
+  },
+  "M_PH_Rockingchair_01_0": {
+    "color": "Photoreal\\Rockingchair_01\\textures\\Rockingchair_01_diff_4k.jpg",
+    "normal": "Photoreal\\Rockingchair_01\\textures\\Rockingchair_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\Rockingchair_01\\textures\\Rockingchair_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/Rockingchair_01"
+  },
+  "M_PH_wooden_bookshelf_worn_0": {
+    "color": "Photoreal\\wooden_bookshelf_worn\\textures\\wooden_bookshelf_worn_diff_4k.jpg",
+    "normal": "Photoreal\\wooden_bookshelf_worn\\textures\\wooden_bookshelf_worn_nor_gl_4k.jpg",
+    "arm": "Photoreal\\wooden_bookshelf_worn\\textures\\wooden_bookshelf_worn_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/wooden_bookshelf_worn"
+  },
+  "M_PH_Lantern_01_0": {
+    "color": "Photoreal\\Lantern_01\\textures\\Lantern_01_brass_diff_4k.jpg",
+    "normal": "Photoreal\\Lantern_01\\textures\\Lantern_01_brass_nor_gl_4k.jpg",
+    "arm": "Photoreal\\Lantern_01\\textures\\Lantern_01_brass_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/Lantern_01"
+  },
+  "M_PH_Lantern_01_1": {
+    "color": "Photoreal\\Lantern_01\\textures\\Lantern_01_brass_diff_4k.jpg",
+    "normal": "Photoreal\\Lantern_01\\textures\\Lantern_01_brass_nor_gl_4k.jpg",
+    "arm": "Photoreal\\Lantern_01\\textures\\Lantern_01_brass_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "BLEND",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/Lantern_01"
+  },
+  "M_PH_vintage_oil_lamp_0": {
+    "color": "Photoreal\\vintage_oil_lamp\\textures\\vintage_oil_lamp_glass_diff_4k.jpg",
+    "normal": "Photoreal\\vintage_oil_lamp\\textures\\vintage_oil_lamp_glass_nor_gl_4k.jpg",
+    "arm": "Photoreal\\vintage_oil_lamp\\textures\\vintage_oil_lamp_glass_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "BLEND",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/vintage_oil_lamp"
+  },
+  "M_PH_vintage_oil_lamp_1": {
+    "color": "Photoreal\\vintage_oil_lamp\\textures\\vintage_oil_lamp_diff_4k.jpg",
+    "normal": "Photoreal\\vintage_oil_lamp\\textures\\vintage_oil_lamp_nor_gl_4k.jpg",
+    "arm": "Photoreal\\vintage_oil_lamp\\textures\\vintage_oil_lamp_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/vintage_oil_lamp"
+  },
+  "M_PH_vintage_oil_lamp_2": {
+    "color": "Photoreal\\vintage_oil_lamp\\textures\\vintage_oil_lamp_flame_diff_4k.jpg",
+    "normal": null,
+    "arm": null,
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0,
+    "metallic": 0,
+    "alpha": "BLEND",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/vintage_oil_lamp"
+  },
+  "M_PH_wooden_axe_03_0": {
+    "color": "Photoreal\\wooden_axe_03\\textures\\wooden_axe_03_diff_4k.jpg",
+    "normal": "Photoreal\\wooden_axe_03\\textures\\wooden_axe_03_nor_gl_4k.jpg",
+    "arm": "Photoreal\\wooden_axe_03\\textures\\wooden_axe_03_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/wooden_axe_03"
+  },
+  "M_PH_tree_stump_02_0": {
+    "color": "Photoreal\\tree_stump_02\\textures\\tree_stump_02_diff_4k.jpg",
+    "normal": "Photoreal\\tree_stump_02\\textures\\tree_stump_02_nor_gl_4k.jpg",
+    "arm": "Photoreal\\tree_stump_02\\textures\\tree_stump_02_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/tree_stump_02"
+  },
+  "M_PH_dead_tree_trunk_0": {
+    "color": "Photoreal\\dead_tree_trunk\\textures\\dead_tree_trunk_diff_4k.jpg",
+    "normal": "Photoreal\\dead_tree_trunk\\textures\\dead_tree_trunk_nor_gl_4k.jpg",
+    "arm": "Photoreal\\dead_tree_trunk\\textures\\dead_tree_trunk_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/dead_tree_trunk"
+  },
+  "M_PH_root_cluster_01_0": {
+    "color": "Photoreal\\root_cluster_01\\textures\\root_cluster_01_diff_4k.jpg",
+    "normal": "Photoreal\\root_cluster_01\\textures\\root_cluster_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\root_cluster_01\\textures\\root_cluster_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/root_cluster_01"
+  },
+  "M_PH_pine_roots_0": {
+    "color": "Photoreal\\pine_roots\\textures\\pine_roots_a_diff_4k.jpg",
+    "normal": "Photoreal\\pine_roots\\textures\\pine_roots_a_nor_gl_4k.jpg",
+    "arm": "Photoreal\\pine_roots\\textures\\pine_roots_a_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/pine_roots"
+  },
+  "M_PH_pine_roots_1": {
+    "color": "Photoreal\\pine_roots\\textures\\pine_roots_b_diff_4k.jpg",
+    "normal": "Photoreal\\pine_roots\\textures\\pine_roots_b_nor_gl_4k.jpg",
+    "arm": "Photoreal\\pine_roots\\textures\\pine_roots_b_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/pine_roots"
+  },
+  "M_PH_moss_01_0": {
+    "color": "Photoreal\\moss_01\\textures\\moss_01_diff_4k.jpg",
+    "normal": "Photoreal\\moss_01\\textures\\moss_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\moss_01\\textures\\moss_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "BLEND",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/moss_01"
+  },
+  "M_PH_bark_debris_01_0": {
+    "color": "Photoreal\\bark_debris_01\\textures\\bark_debris_01_diff_4k.jpg",
+    "normal": "Photoreal\\bark_debris_01\\textures\\bark_debris_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\bark_debris_01\\textures\\bark_debris_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/bark_debris_01"
+  },
+  "M_PH_wooden_bucket_01_0": {
+    "color": "Photoreal\\wooden_bucket_01\\textures\\wooden_bucket_01_diff_4k.jpg",
+    "normal": "Photoreal\\wooden_bucket_01\\textures\\wooden_bucket_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\wooden_bucket_01\\textures\\wooden_bucket_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/wooden_bucket_01"
+  },
+  "M_PH_wicker_basket_01_0": {
+    "color": "Photoreal\\wicker_basket_01\\textures\\wicker_basket_01_diff_4k.jpg",
+    "normal": "Photoreal\\wicker_basket_01\\textures\\wicker_basket_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\wicker_basket_01\\textures\\wicker_basket_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/wicker_basket_01"
+  },
+  "M_PH_book_encyclopedia_set_01_0": {
+    "color": "Photoreal\\book_encyclopedia_set_01\\textures\\book_encyclopedia_set_01_cover_diff_4k.jpg",
+    "normal": "Photoreal\\book_encyclopedia_set_01\\textures\\book_encyclopedia_set_01_cover_nor_gl_4k.jpg",
+    "arm": "Photoreal\\book_encyclopedia_set_01\\textures\\book_encyclopedia_set_01_cover_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/book_encyclopedia_set_01"
+  },
+  "M_PH_book_encyclopedia_set_01_1": {
+    "color": "Photoreal\\book_encyclopedia_set_01\\textures\\book_encyclopedia_set_01_paper_diff_4k.jpg",
+    "normal": "Photoreal\\book_encyclopedia_set_01\\textures\\book_encyclopedia_set_01_paper_nor_gl_4k.jpg",
+    "arm": "Photoreal\\book_encyclopedia_set_01\\textures\\book_encyclopedia_set_01_paper_roughness_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/book_encyclopedia_set_01"
+  },
+  "M_PH_pot_enamel_01_0": {
+    "color": "Photoreal\\pot_enamel_01\\textures\\pot_enamel_01_diff_4k.jpg",
+    "normal": "Photoreal\\pot_enamel_01\\textures\\pot_enamel_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\pot_enamel_01\\textures\\pot_enamel_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/pot_enamel_01"
+  },
+  "M_PH_wooden_bowl_01_0": {
+    "color": "Photoreal\\wooden_bowl_01\\textures\\wooden_bowl_01_diff_4k.jpg",
+    "normal": "Photoreal\\wooden_bowl_01\\textures\\wooden_bowl_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\wooden_bowl_01\\textures\\wooden_bowl_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/wooden_bowl_01"
+  },
+  "M_PH_katana_stand_01_0": {
+    "color": "Photoreal\\katana_stand_01\\textures\\katana_stand_01_diff_4k.jpg",
+    "normal": "Photoreal\\katana_stand_01\\textures\\katana_stand_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\katana_stand_01\\textures\\katana_stand_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/katana_stand_01"
+  },
+  "M_PH_hanging_picture_frame_01_0": {
+    "color": "Photoreal\\hanging_picture_frame_01\\textures\\hanging_picture_frame_01_diff_4k.jpg",
+    "normal": "Photoreal\\hanging_picture_frame_01\\textures\\hanging_picture_frame_01_artwork_nor_gl_4k.jpg",
+    "arm": "Photoreal\\hanging_picture_frame_01\\textures\\hanging_picture_frame_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "BLEND",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/hanging_picture_frame_01"
+  },
+  "M_PH_hanging_picture_frame_01_1": {
+    "color": "Photoreal\\hanging_picture_frame_01\\textures\\hanging_picture_frame_01_artwork_diff_4k.jpg",
+    "normal": null,
+    "arm": "Photoreal\\hanging_picture_frame_01\\textures\\hanging_picture_frame_01_artwork_roughness_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/hanging_picture_frame_01"
+  },
+  "M_PH_hanging_picture_frame_01_2": {
+    "color": "Photoreal\\hanging_picture_frame_01\\textures\\hanging_picture_frame_01_diff_4k.jpg",
+    "normal": "Photoreal\\hanging_picture_frame_01\\textures\\hanging_picture_frame_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\hanging_picture_frame_01\\textures\\hanging_picture_frame_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/hanging_picture_frame_01"
+  },
+  "M_PH_brass_goblets_0": {
+    "color": "Photoreal\\brass_goblets\\textures\\brass_goblet_01_diff_4k.jpg",
+    "normal": "Photoreal\\brass_goblets\\textures\\brass_goblet_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\brass_goblets\\textures\\brass_goblet_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/brass_goblets"
+  },
+  "M_PH_brass_goblets_1": {
+    "color": "Photoreal\\brass_goblets\\textures\\brass_goblet_02_diff_4k.jpg",
+    "normal": "Photoreal\\brass_goblets\\textures\\brass_goblet_02_nor_gl_4k.jpg",
+    "arm": "Photoreal\\brass_goblets\\textures\\brass_goblet_02_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/brass_goblets"
+  },
+  "M_PH_brass_goblets_2": {
+    "color": "Photoreal\\brass_goblets\\textures\\brass_goblet_03_diff_4k.jpg",
+    "normal": "Photoreal\\brass_goblets\\textures\\brass_goblet_03_nor_gl_4k.jpg",
+    "arm": "Photoreal\\brass_goblets\\textures\\brass_goblet_03_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/brass_goblets"
+  },
+  "M_PH_lantern_chandelier_01_0": {
+    "color": "Photoreal\\lantern_chandelier_01\\textures\\lantern_chandelier_01_diff_4k.jpg",
+    "normal": "Photoreal\\lantern_chandelier_01\\textures\\lantern_chandelier_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\lantern_chandelier_01\\textures\\lantern_chandelier_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/lantern_chandelier_01"
+  },
+  "M_PH_lantern_chandelier_01_1": {
+    "color": "Photoreal\\lantern_chandelier_01\\textures\\lantern_chandelier_01_glass_diff_4k.jpg",
+    "normal": "Photoreal\\lantern_chandelier_01\\textures\\lantern_chandelier_01_glass_nor_gl_4k.jpg",
+    "arm": "Photoreal\\lantern_chandelier_01\\textures\\lantern_chandelier_01_glass_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "BLEND",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/lantern_chandelier_01"
+  },
+  "M_PH_lantern_chandelier_01_2": {
+    "color": null,
+    "normal": null,
+    "arm": null,
+    "ao": null,
+    "factor": [
+      0.8000000715255737,
+      0.7333472371101379,
+      0.5533292889595032,
+      1
+    ],
+    "roughness": 0.1664227843284607,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/lantern_chandelier_01"
+  },
+  "M_PH_stone_fire_pit_0": {
+    "color": "Photoreal\\stone_fire_pit\\textures\\stone_fire_pit_diff_4k.jpg",
+    "normal": "Photoreal\\stone_fire_pit\\textures\\stone_fire_pit_nor_gl_4k.jpg",
+    "arm": "Photoreal\\stone_fire_pit\\textures\\stone_fire_pit_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/stone_fire_pit"
+  },
+  "M_LodgeTimber": {
+    "color": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_diff_4k.jpg",
+    "normal": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_rough_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/dark_wooden_planks"
+  },
+  "M_LodgeFloor": {
+    "color": "Photoreal\\wood_floor_worn\\wood_floor_worn_diff_4k.jpg",
+    "normal": "Photoreal\\wood_floor_worn\\wood_floor_worn_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\wood_floor_worn\\wood_floor_worn_rough_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/wood_floor_worn"
+  },
+  "M_HearthStone": {
+    "color": "Photoreal\\rustic_stone_wall\\rustic_stone_wall_diff_4k.jpg",
+    "normal": "Photoreal\\rustic_stone_wall\\rustic_stone_wall_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\rustic_stone_wall\\rustic_stone_wall_rough_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/rustic_stone_wall"
+  },
+  "M_HollowBark": {
+    "color": "Photoreal\\jolcham_oak_bark_01\\jolcham_oak_bark_01_diff_4k.jpg",
+    "normal": "Photoreal\\jolcham_oak_bark_01\\jolcham_oak_bark_01_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\jolcham_oak_bark_01\\jolcham_oak_bark_01_rough_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/jolcham_oak_bark_01"
+  },
+  "M_HollowFloor": {
+    "color": "Photoreal\\forest_leaves_03\\forest_leaves_03_diff_4k.jpg",
+    "normal": "Photoreal\\forest_leaves_03\\forest_leaves_03_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\forest_leaves_03\\forest_leaves_03_rough_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/forest_leaves_03"
+  },
+  "M_LodgeFabric": {
+    "color": "Photoreal\\quatrefoil_jacquard_fabric\\quatrefoil_jacquard_fabric_diff_4k.jpg",
+    "normal": "Photoreal\\quatrefoil_jacquard_fabric\\quatrefoil_jacquard_fabric_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\quatrefoil_jacquard_fabric\\quatrefoil_jacquard_fabric_rough_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/quatrefoil_jacquard_fabric"
+  },
+  "M_AcornShell": {
+    "color": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_diff_4k.jpg",
+    "normal": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_rough_4k.jpg",
+    "factor": [
+      1.35,
+      0.78,
+      0.34,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/dark_wooden_planks"
+  },
+  "M_AcornCupule": {
+    "color": "Photoreal\\jolcham_oak_bark_01\\jolcham_oak_bark_01_diff_4k.jpg",
+    "normal": "Photoreal\\jolcham_oak_bark_01\\jolcham_oak_bark_01_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\jolcham_oak_bark_01\\jolcham_oak_bark_01_rough_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/jolcham_oak_bark_01"
+  }
+}

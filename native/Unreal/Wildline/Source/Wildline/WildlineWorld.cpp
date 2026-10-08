@@ -1,4 +1,5 @@
 #include "WildlineWorld.h"
+#include "WildlineLobby.h"
 #include "WildlineRules.h"
 #include "WildlineTrunkProfiles.h"
 #include "Components/HierarchicalInstancedStaticMeshComponent.h"
@@ -55,7 +56,7 @@ FVector AWildlineWorld::TrunkCentre(int32 Index,float WorldZ,float& Radius) cons
     FVector Centre=T.MeshTransform.TransformPosition(FVector(Ring.X,Ring.Y,Ring.Z));Centre.Z=WorldZ;return Centre;
 }
 int32 AWildlineWorld::NearestTree(FVector P,float Max) const {int32 Result=INDEX_NONE;for(int32 I=0;I<Trees.Num();I++){float Radius;const auto Centre=TrunkCentre(I,P.Z,Radius);const float D=FVector::Dist2D(P,Centre)-Radius;if(D<Max&&P.Z<Trees[I].ClimbTop){Max=D;Result=I;}}return Result;}
-void AWildlineWorld::BeginPlay(){Super::BeginPlay();if(Trees.Num()==0)Rebuild();}
+void AWildlineWorld::BeginPlay(){Super::BeginPlay();if(Trees.Num()==0)Rebuild();if(!AWildlineLobby::Find(GetWorld()))GetWorld()->SpawnActor<AWildlineLobby>();}
 void AWildlineWorld::Rebuild(){Trunks->ClearInstances();Foliage->ClearInstances();Branches->ClearInstances();Rocks->ClearInstances();Grass->ClearInstances();Acorns->ClearInstances();AcornCaps->ClearInstances();ReserveFence->ClearInstances();for(auto* Layer:ForestLayers)Layer->ClearInstances();Terrain->ClearAllMeshSections();Trees.Empty();AcornLocations.Empty();Farmhouse->ClearInstances();for(auto* Prop:FarmProps)Prop->ClearInstances();for(auto* Prop:ResidentialProps)if(Prop)Prop->DestroyComponent();ResidentialProps.Empty();for(auto* Gable:ResidentialGables)if(Gable)Gable->DestroyComponent();ResidentialGables.Empty();CoursePlatforms.Empty();DenMesh->SetVisibility(true);if(bResidential)GenerateResidential();else if(bFarm)GenerateFarm();else Generate();}
 void AWildlineWorld::ShowLocalAcorns(const TArray<int32>& Collected){
     for(int32 I=0;I<AcornLocations.Num();I++){

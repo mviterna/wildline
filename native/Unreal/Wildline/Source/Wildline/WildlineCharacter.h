@@ -24,6 +24,8 @@ public:
     UPROPERTY(ReplicatedUsing=OnRepRole) bool bSquirrel=false;
     UPROPERTY(ReplicatedUsing=OnRepDead) bool bDead=false;
     UPROPERTY(Replicated) bool bBot=false;
+    UPROPERTY(Replicated) bool bInLobby=false;
+    UPROPERTY(Replicated) bool bLobbyReady=false;
     UPROPERTY(Replicated) int32 BotSlot=-1;
     UPROPERTY(Replicated) int32 AIDifficulty=1;
     UPROPERTY(Replicated) float ProtectedUntil=0;

@@ -105,11 +105,9 @@ public:
     UPROPERTY() UTextBlock* RoleDescription;
     UPROPERTY() UTextBlock* Status;
     UPROPERTY() UComboBoxString* Mode;
-    UPROPERTY() UComboBoxString* Weapon;
     UPROPERTY() UTextBlock* ModeDescription;
     UPROPERTY() UTextBlock* DefenderLabel;
     UFUNCTION() void ModeChanged(FString Value,ESelectInfo::Type SelectionType);
-    UFUNCTION() void WeaponChanged(FString Value,ESelectInfo::Type SelectionType);
     void RefreshMode();
     void RefreshDifficulty();
     UPROPERTY() UWildlineHunterCreator* Creator;

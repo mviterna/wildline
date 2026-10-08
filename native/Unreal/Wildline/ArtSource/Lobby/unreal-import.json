@@ -1,0 +1,355 @@
+[
+  {
+    "name": "SM_wooden_picnic_table",
+    "slots": [
+      "M_PH_wooden_picnic_table_0",
+      "M_PH_wooden_picnic_table_1"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      112.04879379272461,
+      151.11648559570312,
+      37.299346923828125
+    ]
+  },
+  {
+    "name": "SM_Rockingchair_01",
+    "slots": [
+      "M_PH_Rockingchair_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      35.40640449523926,
+      41.67409896850586,
+      49.74642562866211
+    ]
+  },
+  {
+    "name": "SM_wooden_bookshelf_worn",
+    "slots": [
+      "M_PH_wooden_bookshelf_worn_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      68.69759368896484,
+      29.06510639190674,
+      103.17209923267365
+    ]
+  },
+  {
+    "name": "SM_Lantern_01",
+    "slots": [
+      "M_PH_Lantern_01_0",
+      "M_PH_Lantern_01_1"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      6.104284763336182,
+      4.8591554164886475,
+      14.71233081817627
+    ]
+  },
+  {
+    "name": "SM_vintage_oil_lamp",
+    "slots": [
+      "M_PH_vintage_oil_lamp_1",
+      "M_PH_vintage_oil_lamp_2",
+      "M_PH_vintage_oil_lamp_0"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      11.0,
+      10.999999523162842,
+      40.08186050005702
+    ]
+  },
+  {
+    "name": "SM_wooden_axe_03",
+    "slots": [
+      "M_PH_wooden_axe_03_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      2.5234583616256714,
+      7.917230606079102,
+      31.589996337890625
+    ]
+  },
+  {
+    "name": "SM_tree_stump_02",
+    "slots": [
+      "M_PH_tree_stump_02_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      76.08488464355469,
+      69.62665176391602,
+      26.1046085357666
+    ]
+  },
+  {
+    "name": "SM_dead_tree_trunk",
+    "slots": [
+      "M_PH_dead_tree_trunk_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      152.55075073242188,
+      13.876369953155518,
+      14.521577835083008
+    ]
+  },
+  {
+    "name": "SM_root_cluster_01",
+    "slots": [
+      "M_PH_root_cluster_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      206.13540649414062,
+      134.13883209228516,
+      75.46400451660156
+    ]
+  },
+  {
+    "name": "SM_pine_roots",
+    "slots": [
+      "M_PH_pine_roots_0",
+      "M_PH_pine_roots_1"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      88.60379028320312,
+      94.65446472167969,
+      7.740002155303955
+    ]
+  },
+  {
+    "name": "SM_moss_01",
+    "slots": [
+      "M_PH_moss_01_0"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      10.762999534606934,
+      1.4710421562194824,
+      2.0183987617492676
+    ]
+  },
+  {
+    "name": "SM_bark_debris_01",
+    "slots": [
+      "M_PH_bark_debris_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      60.499528884887695,
+      33.725399017333984,
+      5.608001708984375
+    ]
+  },
+  {
+    "name": "SM_wooden_bucket_01",
+    "slots": [
+      "M_PH_wooden_bucket_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      18.348541259765625,
+      17.111059188842773,
+      27.493118286132812
+    ]
+  },
+  {
+    "name": "SM_wicker_basket_01",
+    "slots": [
+      "M_PH_wicker_basket_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      19.161211013793945,
+      14.75075912475586,
+      5.8711466789245605
+    ]
+  },
+  {
+    "name": "SM_book_encyclopedia_set_01",
+    "slots": [
+      "M_PH_book_encyclopedia_set_01_0",
+      "M_PH_book_encyclopedia_set_01_1"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      27.564871788024902,
+      8.153119087219238,
+      11.870909690856934
+    ]
+  },
+  {
+    "name": "SM_pot_enamel_01",
+    "slots": [
+      "M_PH_pot_enamel_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      13.146506309509277,
+      9.023720741271973,
+      8.913139343261719
+    ]
+  },
+  {
+    "name": "SM_wooden_bowl_01",
+    "slots": [
+      "M_PH_wooden_bowl_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      15.654081344604492,
+      15.45711898803711,
+      4.684628009796143
+    ]
+  },
+  {
+    "name": "SM_katana_stand_01",
+    "slots": [
+      "M_PH_katana_stand_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      14.791372299194336,
+      2.6734997034072876,
+      9.097299575805664
+    ]
+  },
+  {
+    "name": "SM_hanging_picture_frame_01",
+    "slots": [
+      "M_PH_hanging_picture_frame_01_0",
+      "M_PH_hanging_picture_frame_01_1",
+      "M_PH_hanging_picture_frame_01_2"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      29.69999885559082,
+      0.7874679565429688,
+      42.04999923706055
+    ]
+  },
+  {
+    "name": "SM_brass_goblets",
+    "slots": [
+      "M_PH_brass_goblets_0",
+      "M_PH_brass_goblets_1",
+      "M_PH_brass_goblets_2"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      22.669732093811035,
+      14.880699634552002,
+      13.668892860412598
+    ]
+  },
+  {
+    "name": "SM_lantern_chandelier_01",
+    "slots": [
+      "M_PH_lantern_chandelier_01_0",
+      "M_PH_lantern_chandelier_01_1",
+      "M_PH_lantern_chandelier_01_2"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      28.958515167236328,
+      28.73183536529541,
+      43.87939453125
+    ]
+  },
+  {
+    "name": "SM_stone_fire_pit",
+    "slots": [
+      "M_PH_stone_fire_pit_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      72.42481231689453,
+      71.6617202758789,
+      19.416303634643555
+    ]
+  },
+  {
+    "name": "SM_AcornDetailed",
+    "slots": [
+      "M_AcornShell",
+      "M_AcornCupule"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      1.9218825101852417,
+      1.9218825101852417,
+      3.200000047683716
+    ]
+  },
+  {
+    "name": "SM_ReadyArch",
+    "slots": [
+      "M_HearthStone"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      11.600001811981201,
+      137.8000030517578,
+      148.5
+    ]
+  },
+  {
+    "name": "SM_LodgeArchitecture",
+    "slots": [
+      "M_LodgeTimber",
+      "M_LodgeFloor",
+      "M_HearthStone"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      720.6030578613281,
+      720.59228515625,
+      252.37153887748718
+    ]
+  },
+  {
+    "name": "SM_HollowArchitecture",
+    "slots": [
+      "M_HollowBark",
+      "M_HollowFloor",
+      "M_LodgeTimber"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      500.0000305175781,
+      500.0000305175781,
+      229.49998474121094
+    ]
+  },
+  {
+    "name": "SM_LodgeRug",
+    "slots": [
+      "M_LodgeFabric"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      210.0,
+      162.50001525878906,
+      1.5
+    ]
+  },
+  {
+    "name": "SM_TrophyPlaque",
+    "slots": [
+      "M_LodgeTimber"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      2.250003733223366,
+      42.90796661376953,
+      51.813271686434746
+    ]
+  }
+]

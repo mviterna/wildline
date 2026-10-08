@@ -1,0 +1,355 @@
+[
+  {
+    "name": "SM_wooden_picnic_table",
+    "dimensions_m": [
+      2.240975856781006,
+      3.022329568862915,
+      0.7459869384765625
+    ],
+    "triangles": 10210,
+    "materials": [
+      "M_PH_wooden_picnic_table_0",
+      "M_PH_wooden_picnic_table_1"
+    ]
+  },
+  {
+    "name": "SM_Rockingchair_01",
+    "dimensions_m": [
+      0.7081280946731567,
+      0.833482027053833,
+      0.9949284791946411
+    ],
+    "triangles": 11866,
+    "materials": [
+      "M_PH_Rockingchair_01_0"
+    ]
+  },
+  {
+    "name": "SM_wooden_bookshelf_worn",
+    "dimensions_m": [
+      1.37395179271698,
+      0.5813020467758179,
+      2.0634419918060303
+    ],
+    "triangles": 10106,
+    "materials": [
+      "M_PH_wooden_bookshelf_worn_0"
+    ]
+  },
+  {
+    "name": "SM_Lantern_01",
+    "dimensions_m": [
+      0.12208569049835205,
+      0.09718310832977295,
+      0.2942466139793396
+    ],
+    "triangles": 33902,
+    "materials": [
+      "M_PH_Lantern_01_0",
+      "M_PH_Lantern_01_1"
+    ]
+  },
+  {
+    "name": "SM_vintage_oil_lamp",
+    "dimensions_m": [
+      0.2199999988079071,
+      0.2199999988079071,
+      0.8016371726989746
+    ],
+    "triangles": 7208,
+    "materials": [
+      "M_PH_vintage_oil_lamp_0",
+      "M_PH_vintage_oil_lamp_1",
+      "M_PH_vintage_oil_lamp_2"
+    ]
+  },
+  {
+    "name": "SM_wooden_axe_03",
+    "dimensions_m": [
+      0.05046916753053665,
+      0.15834461152553558,
+      0.6317999362945557
+    ],
+    "triangles": 3886,
+    "materials": [
+      "M_PH_wooden_axe_03_0"
+    ]
+  },
+  {
+    "name": "SM_tree_stump_02",
+    "dimensions_m": [
+      1.5216976404190063,
+      1.3925330638885498,
+      0.5220921635627747
+    ],
+    "triangles": 62345,
+    "materials": [
+      "M_PH_tree_stump_02_0"
+    ]
+  },
+  {
+    "name": "SM_dead_tree_trunk",
+    "dimensions_m": [
+      3.0510149002075195,
+      0.27752751111984253,
+      0.29043155908584595
+    ],
+    "triangles": 101802,
+    "materials": [
+      "M_PH_dead_tree_trunk_0"
+    ]
+  },
+  {
+    "name": "SM_root_cluster_01",
+    "dimensions_m": [
+      4.122708320617676,
+      2.682776689529419,
+      1.5092800855636597
+    ],
+    "triangles": 225261,
+    "materials": [
+      "M_PH_root_cluster_01_0"
+    ]
+  },
+  {
+    "name": "SM_pine_roots",
+    "dimensions_m": [
+      1.772075891494751,
+      1.8930891752243042,
+      0.15480004251003265
+    ],
+    "triangles": 162693,
+    "materials": [
+      "M_PH_pine_roots_0",
+      "M_PH_pine_roots_1"
+    ]
+  },
+  {
+    "name": "SM_moss_01",
+    "dimensions_m": [
+      0.21525999903678894,
+      0.02942086011171341,
+      0.0403679758310318
+    ],
+    "triangles": 204,
+    "materials": [
+      "M_PH_moss_01_0"
+    ]
+  },
+  {
+    "name": "SM_bark_debris_01",
+    "dimensions_m": [
+      1.2099905014038086,
+      0.6745079755783081,
+      0.11216003447771072
+    ],
+    "triangles": 193406,
+    "materials": [
+      "M_PH_bark_debris_01_0"
+    ]
+  },
+  {
+    "name": "SM_wooden_bucket_01",
+    "dimensions_m": [
+      0.36697083711624146,
+      0.342221200466156,
+      0.5498623847961426
+    ],
+    "triangles": 5116,
+    "materials": [
+      "M_PH_wooden_bucket_01_0"
+    ]
+  },
+  {
+    "name": "SM_wicker_basket_01",
+    "dimensions_m": [
+      0.3832242488861084,
+      0.29501521587371826,
+      0.1174229308962822
+    ],
+    "triangles": 22276,
+    "materials": [
+      "M_PH_wicker_basket_01_0"
+    ]
+  },
+  {
+    "name": "SM_book_encyclopedia_set_01",
+    "dimensions_m": [
+      0.5512974262237549,
+      0.16306233406066895,
+      0.23741818964481354
+    ],
+    "triangles": 67306,
+    "materials": [
+      "M_PH_book_encyclopedia_set_01_0",
+      "M_PH_book_encyclopedia_set_01_1"
+    ]
+  },
+  {
+    "name": "SM_pot_enamel_01",
+    "dimensions_m": [
+      0.26293012499809265,
+      0.1804744154214859,
+      0.17826278507709503
+    ],
+    "triangles": 11416,
+    "materials": [
+      "M_PH_pot_enamel_01_0"
+    ]
+  },
+  {
+    "name": "SM_wooden_bowl_01",
+    "dimensions_m": [
+      0.31308162212371826,
+      0.3091423809528351,
+      0.09369255602359772
+    ],
+    "triangles": 14122,
+    "materials": [
+      "M_PH_wooden_bowl_01_0"
+    ]
+  },
+  {
+    "name": "SM_katana_stand_01",
+    "dimensions_m": [
+      0.2958274483680725,
+      0.053469981998205185,
+      0.18194599449634552
+    ],
+    "triangles": 3780,
+    "materials": [
+      "M_PH_katana_stand_01_0"
+    ]
+  },
+  {
+    "name": "SM_hanging_picture_frame_01",
+    "dimensions_m": [
+      0.593999981880188,
+      0.015749314799904823,
+      0.840999960899353
+    ],
+    "triangles": 2586,
+    "materials": [
+      "M_PH_hanging_picture_frame_01_0",
+      "M_PH_hanging_picture_frame_01_1",
+      "M_PH_hanging_picture_frame_01_2"
+    ]
+  },
+  {
+    "name": "SM_brass_goblets",
+    "dimensions_m": [
+      0.45339465141296387,
+      0.2976139783859253,
+      0.27337783575057983
+    ],
+    "triangles": 9600,
+    "materials": [
+      "M_PH_brass_goblets_0",
+      "M_PH_brass_goblets_1",
+      "M_PH_brass_goblets_2"
+    ]
+  },
+  {
+    "name": "SM_lantern_chandelier_01",
+    "dimensions_m": [
+      0.579170286655426,
+      0.574636697769165,
+      0.8775878548622131
+    ],
+    "triangles": 5971,
+    "materials": [
+      "M_PH_lantern_chandelier_01_0",
+      "M_PH_lantern_chandelier_01_1",
+      "M_PH_lantern_chandelier_01_2"
+    ]
+  },
+  {
+    "name": "SM_stone_fire_pit",
+    "dimensions_m": [
+      1.4484962224960327,
+      1.433234453201294,
+      0.38832607865333557
+    ],
+    "triangles": 3887,
+    "materials": [
+      "M_PH_stone_fire_pit_0"
+    ]
+  },
+  {
+    "name": "SM_AcornDetailed",
+    "dimensions_m": [
+      0.038437649607658386,
+      0.038437649607658386,
+      0.06400000303983688
+    ],
+    "triangles": 38076,
+    "materials": [
+      "M_AcornCupule",
+      "M_AcornShell"
+    ]
+  },
+  {
+    "name": "SM_ReadyArch",
+    "dimensions_m": [
+      0.23200000822544098,
+      2.75600004196167,
+      2.9700000286102295
+    ],
+    "triangles": 3604,
+    "materials": [
+      "M_HearthStone"
+    ]
+  },
+  {
+    "name": "SM_LodgeArchitecture",
+    "dimensions_m": [
+      14.412060737609863,
+      14.411846160888672,
+      5.047430515289307
+    ],
+    "triangles": 373944,
+    "materials": [
+      "M_HearthStone",
+      "M_LodgeFloor",
+      "M_LodgeTimber"
+    ]
+  },
+  {
+    "name": "SM_HollowArchitecture",
+    "dimensions_m": [
+      10.0,
+      10.0,
+      4.589999675750732
+    ],
+    "triangles": 51576,
+    "materials": [
+      "M_HollowBark",
+      "M_HollowFloor",
+      "M_LodgeTimber"
+    ]
+  },
+  {
+    "name": "SM_LodgeRug",
+    "dimensions_m": [
+      4.199999809265137,
+      3.25,
+      0.029999999329447746
+    ],
+    "triangles": 188,
+    "materials": [
+      "M_LodgeFabric"
+    ]
+  },
+  {
+    "name": "SM_TrophyPlaque",
+    "dimensions_m": [
+      0.04500000178813934,
+      0.8581593036651611,
+      1.0362653732299805
+    ],
+    "triangles": 568,
+    "materials": [
+      "M_LodgeTimber"
+    ]
+  }
+]

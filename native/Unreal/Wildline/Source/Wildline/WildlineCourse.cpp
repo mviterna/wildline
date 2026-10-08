@@ -6,7 +6,7 @@
 
 void AWildlineCharacter::UpdateCourse(){
     const auto* S=GetWorld()->GetGameState<AWildlineGameState>();
-    if(!HasAuthority()||!Forest||!Forest->bResidential||!bSquirrel||bDead||TreeIndex!=INDEX_NONE||!S||!S->bRoundStarted||S->Winner)return;
+    if(bInLobby||!HasAuthority()||!Forest||!Forest->bResidential||!bSquirrel||bDead||TreeIndex!=INDEX_NONE||!S||!S->bRoundStarted||S->Winner)return;
     auto* Move=GetCharacterMovement();if(!Move->IsMovingOnGround())return;
     // A run begins on a ground-level start pad. Every elevated checkpoint requires
     // a real landing. Staying at the feeder never produces additional points.

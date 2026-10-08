@@ -53,7 +53,7 @@ AWildlineCharacter::AWildlineCharacter(){
 void AWildlineCharacter::BeginPlay(){Super::BeginPlay();Forest=AWildlineWorld::Find(GetWorld());ConfigureRole();AWildlineWeaponFX::Warmup(GetWorld());if(bBot&&HasAuthority()){BotDecisionAt=ServerTime()+6.f;SpawnDefaultController();}}
 void AWildlineCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps)const{
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    DOREPLIFETIME(AWildlineCharacter,CourseCheckpoint);DOREPLIFETIME(AWildlineCharacter,CourseLane);DOREPLIFETIME(AWildlineCharacter,FeederVisits);DOREPLIFETIME(AWildlineCharacter,bSquirrel);DOREPLIFETIME(AWildlineCharacter,bDead);DOREPLIFETIME(AWildlineCharacter,bBot);DOREPLIFETIME(AWildlineCharacter,BotSlot);DOREPLIFETIME(AWildlineCharacter,AIDifficulty);DOREPLIFETIME(AWildlineCharacter,ProtectedUntil);DOREPLIFETIME(AWildlineCharacter,bSprinting);DOREPLIFETIME(AWildlineCharacter,Stamina);DOREPLIFETIME(AWildlineCharacter,Health);DOREPLIFETIME(AWildlineCharacter,Ammo);DOREPLIFETIME(AWildlineCharacter,Bag);DOREPLIFETIME(AWildlineCharacter,ThermalUntil);DOREPLIFETIME(AWildlineCharacter,ThermalReadyAt);DOREPLIFETIME(AWildlineCharacter,ReloadUntil);DOREPLIFETIME(AWildlineCharacter,RespawnAt);DOREPLIFETIME(AWildlineCharacter,TreeIndex);DOREPLIFETIME(AWildlineCharacter,Collected);DOREPLIFETIME(AWildlineCharacter,BagPeanuts);DOREPLIFETIME(AWildlineCharacter,SelectedWeapon);
+    DOREPLIFETIME(AWildlineCharacter,bInLobby);DOREPLIFETIME(AWildlineCharacter,bLobbyReady);DOREPLIFETIME(AWildlineCharacter,CourseCheckpoint);DOREPLIFETIME(AWildlineCharacter,CourseLane);DOREPLIFETIME(AWildlineCharacter,FeederVisits);DOREPLIFETIME(AWildlineCharacter,bSquirrel);DOREPLIFETIME(AWildlineCharacter,bDead);DOREPLIFETIME(AWildlineCharacter,bBot);DOREPLIFETIME(AWildlineCharacter,BotSlot);DOREPLIFETIME(AWildlineCharacter,AIDifficulty);DOREPLIFETIME(AWildlineCharacter,ProtectedUntil);DOREPLIFETIME(AWildlineCharacter,bSprinting);DOREPLIFETIME(AWildlineCharacter,Stamina);DOREPLIFETIME(AWildlineCharacter,Health);DOREPLIFETIME(AWildlineCharacter,Ammo);DOREPLIFETIME(AWildlineCharacter,Bag);DOREPLIFETIME(AWildlineCharacter,ThermalUntil);DOREPLIFETIME(AWildlineCharacter,ThermalReadyAt);DOREPLIFETIME(AWildlineCharacter,ReloadUntil);DOREPLIFETIME(AWildlineCharacter,RespawnAt);DOREPLIFETIME(AWildlineCharacter,TreeIndex);DOREPLIFETIME(AWildlineCharacter,Collected);DOREPLIFETIME(AWildlineCharacter,BagPeanuts);DOREPLIFETIME(AWildlineCharacter,SelectedWeapon);
     DOREPLIFETIME(AWildlineCharacter,HunterProfile);DOREPLIFETIME(AWildlineCharacter,HunterFaceData);
     DOREPLIFETIME_CONDITION(AWildlineCharacter,bAiming,COND_SkipOwner);
 }
@@ -183,7 +183,7 @@ void AWildlineCharacter::StartFire(){if(CanControl()&&!bSquirrel){bFiring=true;L
 void AWildlineCharacter::StartSprint(){if(CanControl()){bSprinting=true;ServerSprint(true);}}void AWildlineCharacter::StopSprint(){bSprinting=false;ServerSprint(false);}
 void AWildlineCharacter::ServerSprint_Implementation(bool V){bSprinting=V&&!bDead&&Stamina>4;}
 void AWildlineCharacter::DoCrouch(){if(CanControl()&&!bSquirrel)Crouch();}void AWildlineCharacter::DoUnCrouch(){UnCrouch();}
-void AWildlineCharacter::DoJump(){if(CanControl())ServerJump();}void AWildlineCharacter::Climb(){if(CanControl())ServerClimb();}void AWildlineCharacter::Thermal(){if(CanControl())ServerThermal();}void AWildlineCharacter::Reload(){if(CanControl())ServerReload();}
+void AWildlineCharacter::DoJump(){if(CanControl())ServerJump();}void AWildlineCharacter::Climb(){if(!CanControl())return;if(bInLobby){if(auto* PC=Cast<AWildlineController>(Controller))PC->ServerLobbyInteract();}else ServerClimb();}void AWildlineCharacter::Thermal(){if(CanControl())ServerThermal();}void AWildlineCharacter::Reload(){if(CanControl())ServerReload();}
 void AWildlineCharacter::ServerJump_Implementation(){
     if(bDead||Stamina<15)return;
     if(bSquirrel){if(TreeIndex==INDEX_NONE&&GetCharacterMovement()->IsFalling())return;const bool FromTree=TreeIndex!=INDEX_NONE;TreeIndex=INDEX_NONE;GetCharacterMovement()->SetMovementMode(MOVE_Falling);FRotator R=GetControlRotation();R.Pitch=0;R.Roll=0;LaunchCharacter(R.Vector()*(FromTree?900:600)+FVector(0,0,FromTree?450:360),true,true);if(!MatchRules().bUnlimitedStamina)Stamina-=18;}
@@ -191,7 +191,7 @@ void AWildlineCharacter::ServerJump_Implementation(){
     MulticastSound(WildlineAudio::Jump);
 }
 void AWildlineCharacter::ServerClimb_Implementation(){
-    if(!bSquirrel||bDead)return;
+    if(bInLobby||!bSquirrel||bDead)return;
     if(TreeIndex!=INDEX_NONE){TreeIndex=INDEX_NONE;GetCharacterMovement()->SetMovementMode(MOVE_Falling);return;}
     if(!Forest)Forest=AWildlineWorld::Find(GetWorld());if(!Forest)return;
     const int32 I=Forest->NearestTree(GetActorLocation(),30);if(I==INDEX_NONE)return;
@@ -201,11 +201,11 @@ void AWildlineCharacter::ServerClimbInput_Implementation(float F,float S){Forwar
 void AWildlineCharacter::UpdateClimb(float Delta){
     if(!Forest||!Forest->Trees.IsValidIndex(TreeIndex))return;const auto& T=Forest->Trees[TreeIndex];TreeAngle+=SideInput*Delta*1.7f*MatchRules().MovementScale;const float H=FMath::Clamp(GetActorLocation().Z+ForwardInput*200.f*Delta*MatchRules().MovementScale,T.Base.Z+18,T.ClimbTop-12);float Radius;const FVector Centre=Forest->TrunkCentre(TreeIndex,H,Radius);const FVector Target=Centre+FVector(FMath::Cos(TreeAngle)*(Radius+13),FMath::Sin(TreeAngle)*(Radius+13),0);SetActorLocation(Target,false);
 }
-void AWildlineCharacter::ServerThermal_Implementation(){const float Now=ServerTime();if(!WildlineRules::CanThermal(!bSquirrel&&SelectedWeapon==WildlineRules::RifleWeapon,!bDead,Now,ThermalReadyAt))return;if(!MatchRules().bAllowThermal)return;ThermalUntil=Now+MatchRules().ThermalSeconds;ThermalReadyAt=ThermalUntil+MatchRules().ThermalCooldownSeconds;MulticastSound(WildlineAudio::Thermal);}
+void AWildlineCharacter::ServerThermal_Implementation(){if(bInLobby)return;const float Now=ServerTime();if(!WildlineRules::CanThermal(!bSquirrel&&SelectedWeapon==WildlineRules::RifleWeapon,!bDead,Now,ThermalReadyAt))return;if(!MatchRules().bAllowThermal)return;ThermalUntil=Now+MatchRules().ThermalSeconds;ThermalReadyAt=ThermalUntil+MatchRules().ThermalCooldownSeconds;MulticastSound(WildlineAudio::Thermal);}
 void AWildlineCharacter::ServerReload_Implementation(){if(!bSquirrel&&!bDead&&Ammo<WildlineRules::WeaponCapacity(SelectedWeapon)&&ReloadUntil==0){ReloadUntil=ServerTime()+WildlineRules::WeaponReload(SelectedWeapon)*MatchRules().ReloadScale;MulticastSound(WildlineAudio::Reload);}}
 void AWildlineCharacter::ServerFire_Implementation(FVector_NetQuantizeNormal Direction){
     using namespace WildlineRules;const float Now=ServerTime();const auto* State=GetWorld()->GetGameState<AWildlineGameState>();
-    if(bSquirrel||bDead||Ammo<=0||ReloadUntil>0||Now-LastShot<WeaponInterval(SelectedWeapon)||(State&&State->Winner))return;
+    if(bInLobby||bSquirrel||bDead||Ammo<=0||ReloadUntil>0||Now-LastShot<WeaponInterval(SelectedWeapon)||(State&&State->Winner))return;
     const FVector Aim=FVector(Direction).GetSafeNormal();if(Aim.IsNearlyZero())return;
     // The server owns the muzzle, ammo, ballistic flight, hit detection and death.
     const float Scale=HunterProfile.HeightScale();
@@ -263,7 +263,7 @@ void AWildlineCharacter::MulticastImpacts_Implementation(const TArray<FWildlineI
     }
 }
 float AWildlineCharacter::TakeDamage(float Damage,const FDamageEvent& Event,AController* DamageInstigator,AActor* Causer){
-    if(!HasAuthority()||!bSquirrel||bDead||ServerTime()<ProtectedUntil)return 0;
+    if(bInLobby||!HasAuthority()||!bSquirrel||bDead||ServerTime()<ProtectedUntil)return 0;
     Health=FMath::Max(0,Health-Damage);MulticastSound(Health<=0?WildlineAudio::Death:WildlineAudio::Hit);
     if(Health<=0){ReturnCarriedPeanuts();bDead=true;RespawnAt=ServerTime()+MatchRules().RespawnSeconds;Bag=0;bSprinting=false;TreeIndex=INDEX_NONE;OnRepDead();if(auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>())GM->RecordKill(this,DamageInstigator);}
     return Damage;
@@ -273,7 +273,7 @@ void AWildlineCharacter::MulticastBlood_Implementation(FVector_NetQuantize Impac
     auto* Effect=GetWorld()->SpawnActor<AWildlineBlood>(AWildlineBlood::StaticClass(),Impact,FRotator::ZeroRotator);if(Effect)Effect->Direction=Dir;
 }
 void AWildlineCharacter::Forage(){
-    if(!Forest||!bSquirrel||bDead)return;
+    if(bInLobby||!Forest||!bSquirrel||bDead)return;
     if(Forest->bResidential){UpdateCourse();return;}
     const auto* State=GetWorld()->GetGameState<AWildlineGameState>();if(!State||!State->bRoundStarted||State->Winner)return;
     auto* Shared=GetWorld()->GetGameState<AWildlineGameState>();
@@ -326,7 +326,7 @@ void AWildlineCharacter::UpdateCamera(float Delta){
 void AWildlineCharacter::ResetBotAwareness(){BotTarget.Reset();BotLastSeenAt=-100;BotDecisionAt=ServerTime()+6.f;BotCourseStep=-1;bAiming=false;}
 void AWildlineCharacter::BotThink(float Delta){
     if(!Forest||bDead)return;
-    AWildlineCharacter* Foe=nullptr;float Nearest=MAX_flt;for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It)if(It->bSquirrel!=bSquirrel&&!It->bDead&&!It->bPreviewHunter){float D=FVector::Dist2D(GetActorLocation(),It->GetActorLocation());if(D<Nearest){Nearest=D;Foe=*It;}}
+    AWildlineCharacter* Foe=nullptr;float Nearest=MAX_flt;for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It)if(It->bSquirrel!=bSquirrel&&!It->bInLobby&&!It->bDead&&!It->bPreviewHunter){float D=FVector::Dist2D(GetActorLocation(),It->GetActorLocation());if(D<Nearest){Nearest=D;Foe=*It;}}
     FVector Target=GetActorLocation();
     if(bSquirrel){
         if(Forest->bResidential){CourseBotThink(Delta);return;}

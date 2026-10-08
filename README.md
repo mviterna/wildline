@@ -73,7 +73,34 @@ The native game uses Unreal's listen-server networking on **UDP port 7777**. All
 
 ## Game modes and weapons
 
-At camp, select **Classic / Blackwood**, **Farm Raid / Peanut Heist**, or **King of the Hill / Bird Feeder**, a role, and a defender weapon, then **Enter the Wild** or **Host Co-op Expedition**. The co-op host chooses the map, match rules and bot roster. Joined players can select their role and weapon. Rifle and shotgun are available in both modes; ammunition is retained separately when changing weapons at camp.
+At camp, select **Classic / Blackwood**, **Farm Raid / Peanut Heist**, or **King of the Hill / Bird Feeder** and a role, then **Enter Waiting Room** or **Host Co-op Expedition**. The co-op host chooses the map, match rules and bot roster. Joined players enter the waiting room for their chosen role.
+
+Hunters gather in a log lodge with a recessed stone fireplace, exposed beams,
+a woven rug, weathered picnic table, rocking chairs, bookcase, enamel cookware,
+antique lanterns, scanned firewood and four mounted squirrel trophies on carved
+oak shields. Walk to either weapon rack
+and press **E** to equip the sporting rifle or pump-action shotgun. The selected
+weapon saves locally and carries into the round; ammunition stays separate.
+Weapon selection is no longer on the menu, and cannot change during a round.
+
+Squirrels gather inside **The Acorn Hollow**, a continuous sculpted hollow tree
+with scanned bark, roots, moss, forest leaf litter, deadwood, a woven acorn
+basket, detailed acorn cupules and antique lanterns. Squirrels retain their unarmed forage,
+climb and leap abilities. Both waiting rooms have a glowing **READY portal**.
+Walk onto it when ready; step off to cancel. All connected humans must enter
+a room and stand on their portal before the timer and configured bots start.
+Late joiners choose equipment in their room, then enter the active round via
+their portal. **Esc / Resume** returns to the current room or round. **F5** after
+a result returns everyone to their waiting room for the next round.
+
+Waiting-room players cannot fire, activate thermal, collect objectives or take
+damage. The rooms use 22 downloaded CC0 Poly Haven models, six full 4K PBR
+texture sets and original bevelled/sculpted architecture. Opaque detailed meshes
+use Nanite; local lights add soft shadows and contact detail. Sources, author
+metadata and file hashes are in `ArtSource/Lobby/Photoreal/sources.json`. Run
+`native/VerifyLobbyPackage.ps1 -Capture` after building to check all three modes,
+weapon interaction, portal readiness, late entry, restarts and host/client
+replication, and capture both interiors.
 
 **Classic** preserves the woodland hunt: hunters need eight kills, while squirrels win with twelve stored acorns or by surviving six minutes.
 

@@ -21,6 +21,10 @@ if ($Build) {
         Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Hunters/PROVENANCE.md') -Destination (Join-Path $packageRoot 'HunterAssetCredits.md') -Force
         Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Hunters/UPGRADE_CANDIDATES.md') -Destination (Join-Path $packageRoot 'FreeHunterAssets.md') -Force
     }
+    if ($LASTEXITCODE -eq 0) {
+        Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Lobby/PROVENANCE.md') -Destination (Join-Path $packageRoot 'LobbyAssetCredits.md') -Force
+        Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Squirrel/PROVENANCE.md') -Destination (Join-Path $packageRoot 'SquirrelAssetCredits.md') -Force
+    }
     exit $LASTEXITCODE
 }
 if ($Test) {

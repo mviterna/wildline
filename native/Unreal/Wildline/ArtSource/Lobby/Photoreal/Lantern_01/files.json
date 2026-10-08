@@ -1,0 +1,1145 @@
+{
+  "blend": {
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/Lantern_01_brass_diff_4k.png": {
+            "size": 57224703,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_diff_4k.png",
+            "md5": "174677b1efadef909afac9c587ad1834"
+          },
+          "textures/Lantern_01_brass_nor_gl_4k.png": {
+            "size": 74670690,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_nor_gl_4k.png",
+            "md5": "fcac1f06b70b0bd0d216eaf0ec06dde8"
+          },
+          "textures/Lantern_01_brass_opacity_4k.png": {
+            "size": 298663,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_opacity_4k.png",
+            "md5": "a2e3ac599753c0284ea588d75fd61afd"
+          },
+          "textures/Lantern_01_brass_metallic_4k.png": {
+            "size": 16457261,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_metallic_4k.png",
+            "md5": "8d39d99d15f7faae1a20bb451aa55b62"
+          },
+          "textures/Lantern_01_brass_roughness_4k.png": {
+            "size": 15911574,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_roughness_4k.png",
+            "md5": "b141037412586a452e40ee5f76708b12"
+          }
+        },
+        "size": 940114,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/Lantern_01/Lantern_01_4k.blend",
+        "md5": "ebac3116624948ffd48b6612c14908c3"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/Lantern_01_brass_roughness_2k.png": {
+            "size": 5594736,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_roughness_2k.png",
+            "md5": "dd89b790f88e142104e20d48109e51df"
+          },
+          "textures/Lantern_01_brass_diff_2k.png": {
+            "size": 18057584,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_diff_2k.png",
+            "md5": "4851e167d15230058cc0bd2068bc7972"
+          },
+          "textures/Lantern_01_brass_nor_gl_2k.png": {
+            "size": 20193805,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_nor_gl_2k.png",
+            "md5": "1f44b36959d5a9b272faf36f9bd22cfa"
+          },
+          "textures/Lantern_01_brass_opacity_2k.png": {
+            "size": 162005,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_opacity_2k.png",
+            "md5": "4184a6a2abbd8c21fa7429d70df1c9ba"
+          },
+          "textures/Lantern_01_brass_metallic_2k.png": {
+            "size": 5442040,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_metallic_2k.png",
+            "md5": "4d4adad121ec1372a2c27246a2dc3dd9"
+          }
+        },
+        "size": 940114,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/Lantern_01/Lantern_01_2k.blend",
+        "md5": "02c5d9321055f6d4543ee1223dbf3b1e"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/Lantern_01_brass_opacity_1k.png": {
+            "size": 66270,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_opacity_1k.png",
+            "md5": "73bddf036172862be950af79daa647f2"
+          },
+          "textures/Lantern_01_brass_diff_1k.png": {
+            "size": 4924804,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_diff_1k.png",
+            "md5": "9578cbaaf8782088fbb04cea035969af"
+          },
+          "textures/Lantern_01_brass_nor_gl_1k.png": {
+            "size": 5228457,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_nor_gl_1k.png",
+            "md5": "3952748e6550094468d423ab991816d4"
+          },
+          "textures/Lantern_01_brass_roughness_1k.png": {
+            "size": 1535937,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_roughness_1k.png",
+            "md5": "d2be51622bf0e158019b9cf9ae2b0697"
+          },
+          "textures/Lantern_01_brass_metallic_1k.png": {
+            "size": 1492221,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_metallic_1k.png",
+            "md5": "be4b1c8db70e90b694eb36797090fa4d"
+          }
+        },
+        "size": 940090,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/Lantern_01/Lantern_01_1k.blend",
+        "md5": "b75ec7bd564f62bbe883eab1efe3a27a"
+      }
+    }
+  },
+  "painted_nor_dx": {
+    "4k": {
+      "jpg": {
+        "size": 5495414,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_painted_nor_dx_4k.jpg",
+        "md5": "05556ac0e3dbd53bf3f5e5630d4a0777"
+      },
+      "png": {
+        "size": 79263566,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_painted_nor_dx_4k.png",
+        "md5": "e0e7d274d97aa1138e70317a516992e6"
+      },
+      "exr": {
+        "size": 32199812,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_painted_nor_dx_4k.exr",
+        "md5": "1a8b664dcfa3b61e8e44e3595b7bad31"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1330101,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_painted_nor_dx_2k.jpg",
+        "md5": "4865bcb79f782c17ccab8d899230c343"
+      },
+      "png": {
+        "size": 21256619,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_painted_nor_dx_2k.png",
+        "md5": "36af74b0d44a4d5cb18f12198e5429e0"
+      },
+      "exr": {
+        "size": 8778838,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_painted_nor_dx_2k.exr",
+        "md5": "872845d9a5d445f304fd285a0fb466ac"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 267691,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_painted_nor_dx_1k.jpg",
+        "md5": "7f24db83bd11e66e288aa7534a1f8eba"
+      },
+      "png": {
+        "size": 5497464,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_painted_nor_dx_1k.png",
+        "md5": "74c354c365c63733439a3a5b79b648d7"
+      },
+      "exr": {
+        "size": 2151220,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_painted_nor_dx_1k.exr",
+        "md5": "c6a590deed656ff305020276d7859f37"
+      }
+    }
+  },
+  "gltf": {
+    "4k": {
+      "gltf": {
+        "include": {
+          "Lantern_01.bin": {
+            "size": 864852,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Lantern_01/Lantern_01.bin",
+            "md5": "857a868798e7e5f40d78c2d09e6f8ea0"
+          },
+          "textures/Lantern_01_brass_nor_gl_4k.jpg": {
+            "size": 3293998,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_nor_gl_4k.jpg",
+            "md5": "0dbd7434fb57bac251d2bf320becbb45"
+          },
+          "textures/Lantern_01_brass_diff_4k.jpg": {
+            "size": 2110267,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_diff_4k.jpg",
+            "md5": "2d009b0c3b98df1b1719c24a73b3c3c3"
+          },
+          "textures/Lantern_01_brass_arm_4k.jpg": {
+            "size": 3527913,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_arm_4k.jpg",
+            "md5": "e6275673461540d4f8f6e3ca48bb346a"
+          }
+        },
+        "size": 4866,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Lantern_01/Lantern_01_4k.gltf",
+        "md5": "fd4b5f7f930a2aff5add1f5bccf46c76"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/Lantern_01_brass_diff_2k.jpg": {
+            "size": 519828,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_brass_diff_2k.jpg",
+            "md5": "e28d5e3c524040c2910bd9d19ce45a35"
+          },
+          "textures/Lantern_01_brass_nor_gl_2k.jpg": {
+            "size": 805944,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_brass_nor_gl_2k.jpg",
+            "md5": "ddf52226353a7329997c143d5c26a79b"
+          },
+          "textures/Lantern_01_brass_arm_2k.jpg": {
+            "size": 847840,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_brass_arm_2k.jpg",
+            "md5": "10a5d10c22dca0ededd3b65e65f70107"
+          },
+          "Lantern_01.bin": {
+            "size": 864852,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Lantern_01/Lantern_01.bin",
+            "md5": "857a868798e7e5f40d78c2d09e6f8ea0"
+          }
+        },
+        "size": 4866,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/Lantern_01/Lantern_01_2k.gltf",
+        "md5": "547ce8bced853073ef9d9367f0ee1930"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/Lantern_01_brass_arm_1k.jpg": {
+            "size": 229054,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_brass_arm_1k.jpg",
+            "md5": "cad411a300663678f546ed8b1c9b97f1"
+          },
+          "Lantern_01.bin": {
+            "size": 864852,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Lantern_01/Lantern_01.bin",
+            "md5": "857a868798e7e5f40d78c2d09e6f8ea0"
+          },
+          "textures/Lantern_01_brass_nor_gl_1k.jpg": {
+            "size": 180646,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_brass_nor_gl_1k.jpg",
+            "md5": "6d6805ac7932d9927f7ec817db77b5d5"
+          },
+          "textures/Lantern_01_brass_diff_1k.jpg": {
+            "size": 140998,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_brass_diff_1k.jpg",
+            "md5": "e8abf88b7ac60649c54c8d0a639f0713"
+          }
+        },
+        "size": 4866,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/Lantern_01/Lantern_01_1k.gltf",
+        "md5": "61fbf9f6e215ab4ff1123d6cbfd337a6"
+      }
+    }
+  },
+  "usd": {
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/Lantern_01_brass_diff_4k.png": {
+            "size": 57224703,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_diff_4k.png",
+            "md5": "174677b1efadef909afac9c587ad1834"
+          },
+          "textures/Lantern_01_brass_nor_gl_4k.png": {
+            "size": 74670690,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_nor_gl_4k.png",
+            "md5": "fcac1f06b70b0bd0d216eaf0ec06dde8"
+          },
+          "textures/Lantern_01_brass_opacity_4k.png": {
+            "size": 298663,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_opacity_4k.png",
+            "md5": "a2e3ac599753c0284ea588d75fd61afd"
+          },
+          "textures/Lantern_01_brass_metallic_4k.png": {
+            "size": 16457261,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_metallic_4k.png",
+            "md5": "8d39d99d15f7faae1a20bb451aa55b62"
+          },
+          "textures/Lantern_01_brass_roughness_4k.png": {
+            "size": 15911574,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_roughness_4k.png",
+            "md5": "b141037412586a452e40ee5f76708b12"
+          }
+        },
+        "size": 1628327,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/Lantern_01/Lantern_01_4k.usdc",
+        "md5": "75bf77b669d583aa6110f338b22ee683"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/Lantern_01_brass_roughness_2k.png": {
+            "size": 5594736,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_roughness_2k.png",
+            "md5": "dd89b790f88e142104e20d48109e51df"
+          },
+          "textures/Lantern_01_brass_diff_2k.png": {
+            "size": 18057584,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_diff_2k.png",
+            "md5": "4851e167d15230058cc0bd2068bc7972"
+          },
+          "textures/Lantern_01_brass_nor_gl_2k.png": {
+            "size": 20193805,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_nor_gl_2k.png",
+            "md5": "1f44b36959d5a9b272faf36f9bd22cfa"
+          },
+          "textures/Lantern_01_brass_opacity_2k.png": {
+            "size": 162005,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_opacity_2k.png",
+            "md5": "4184a6a2abbd8c21fa7429d70df1c9ba"
+          },
+          "textures/Lantern_01_brass_metallic_2k.png": {
+            "size": 5442040,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_metallic_2k.png",
+            "md5": "4d4adad121ec1372a2c27246a2dc3dd9"
+          }
+        },
+        "size": 1628321,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/Lantern_01/Lantern_01_2k.usdc",
+        "md5": "a50506b2f84b18eed8844f616b8154f3"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/Lantern_01_brass_opacity_1k.png": {
+            "size": 66270,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_opacity_1k.png",
+            "md5": "73bddf036172862be950af79daa647f2"
+          },
+          "textures/Lantern_01_brass_diff_1k.png": {
+            "size": 4924804,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_diff_1k.png",
+            "md5": "9578cbaaf8782088fbb04cea035969af"
+          },
+          "textures/Lantern_01_brass_nor_gl_1k.png": {
+            "size": 5228457,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_nor_gl_1k.png",
+            "md5": "3952748e6550094468d423ab991816d4"
+          },
+          "textures/Lantern_01_brass_roughness_1k.png": {
+            "size": 1535937,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_roughness_1k.png",
+            "md5": "d2be51622bf0e158019b9cf9ae2b0697"
+          },
+          "textures/Lantern_01_brass_metallic_1k.png": {
+            "size": 1492221,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_metallic_1k.png",
+            "md5": "be4b1c8db70e90b694eb36797090fa4d"
+          }
+        },
+        "size": 1628327,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/Lantern_01/Lantern_01_1k.usdc",
+        "md5": "f2bb6b7d1dee88fa235a5b4f791a02a0"
+      }
+    }
+  },
+  "brass_nor_gl": {
+    "4k": {
+      "jpg": {
+        "size": 3293998,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_nor_gl_4k.jpg",
+        "md5": "0dbd7434fb57bac251d2bf320becbb45"
+      },
+      "png": {
+        "size": 74670690,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_nor_gl_4k.png",
+        "md5": "fcac1f06b70b0bd0d216eaf0ec06dde8"
+      },
+      "exr": {
+        "size": 25551675,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_brass_nor_gl_4k.exr",
+        "md5": "179cb9914dab247858c2ba8ac5065258"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 805944,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_brass_nor_gl_2k.jpg",
+        "md5": "ddf52226353a7329997c143d5c26a79b"
+      },
+      "png": {
+        "size": 20193805,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_nor_gl_2k.png",
+        "md5": "1f44b36959d5a9b272faf36f9bd22cfa"
+      },
+      "exr": {
+        "size": 7287976,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_brass_nor_gl_2k.exr",
+        "md5": "8c3cd18e9c7152d40749cd2910941017"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 180646,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_brass_nor_gl_1k.jpg",
+        "md5": "6d6805ac7932d9927f7ec817db77b5d5"
+      },
+      "png": {
+        "size": 5228457,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_nor_gl_1k.png",
+        "md5": "3952748e6550094468d423ab991816d4"
+      },
+      "exr": {
+        "size": 1810505,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_brass_nor_gl_1k.exr",
+        "md5": "952798c97745a9b2bff028b0d2560219"
+      }
+    }
+  },
+  "brass_metallic": {
+    "4k": {
+      "jpg": {
+        "size": 4551969,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_metallic_4k.jpg",
+        "md5": "0c60c8b41a54b0e5708287f417369623"
+      },
+      "png": {
+        "size": 16457261,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_metallic_4k.png",
+        "md5": "8d39d99d15f7faae1a20bb451aa55b62"
+      },
+      "exr": {
+        "size": 13678230,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_brass_metallic_4k.exr",
+        "md5": "48346aecd2ea666b8ccbe9db678cf05f"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1112773,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_brass_metallic_2k.jpg",
+        "md5": "6bf05eb8f954b2f785b91d10a1cbdb26"
+      },
+      "png": {
+        "size": 5442040,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_metallic_2k.png",
+        "md5": "4d4adad121ec1372a2c27246a2dc3dd9"
+      },
+      "exr": {
+        "size": 3975658,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_brass_metallic_2k.exr",
+        "md5": "28271992cd274304197d0841515618dd"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 290512,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_brass_metallic_1k.jpg",
+        "md5": "7fe15437247dc9d78eb9e19406da53c0"
+      },
+      "png": {
+        "size": 1492221,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_metallic_1k.png",
+        "md5": "be4b1c8db70e90b694eb36797090fa4d"
+      },
+      "exr": {
+        "size": 1067178,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_brass_metallic_1k.exr",
+        "md5": "dd2693b482c57c19de3b7f01722ed68c"
+      }
+    }
+  },
+  "brass_diff": {
+    "4k": {
+      "jpg": {
+        "size": 2110267,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_diff_4k.jpg",
+        "md5": "2d009b0c3b98df1b1719c24a73b3c3c3"
+      },
+      "png": {
+        "size": 57224703,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_diff_4k.png",
+        "md5": "174677b1efadef909afac9c587ad1834"
+      },
+      "exr": {
+        "size": 17626712,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_brass_diff_4k.exr",
+        "md5": "a76c2d018c15ebb16d2169327783d4c2"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 519828,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_brass_diff_2k.jpg",
+        "md5": "e28d5e3c524040c2910bd9d19ce45a35"
+      },
+      "png": {
+        "size": 18057584,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_diff_2k.png",
+        "md5": "4851e167d15230058cc0bd2068bc7972"
+      },
+      "exr": {
+        "size": 4214826,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_brass_diff_2k.exr",
+        "md5": "8e633785c8bf8905ec8951a827c69572"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 140998,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_brass_diff_1k.jpg",
+        "md5": "e8abf88b7ac60649c54c8d0a639f0713"
+      },
+      "png": {
+        "size": 4924804,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_diff_1k.png",
+        "md5": "9578cbaaf8782088fbb04cea035969af"
+      },
+      "exr": {
+        "size": 1108278,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_brass_diff_1k.exr",
+        "md5": "f0ab9930a1c2844286930e7c62fd742d"
+      }
+    }
+  },
+  "painted_opacity": {
+    "4k": {
+      "jpg": {
+        "size": 279625,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_painted_opacity_4k.jpg",
+        "md5": "4830a4471cd09e707b2dd7cc5dabf451"
+      },
+      "png": {
+        "size": 298663,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_painted_opacity_4k.png",
+        "md5": "a2e3ac599753c0284ea588d75fd61afd"
+      },
+      "exr": {
+        "size": 308012,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_painted_opacity_4k.exr",
+        "md5": "0cb36378b99c91f92449d3b45374c0d0"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 76403,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_painted_opacity_2k.jpg",
+        "md5": "9cf77402745afa023678c5fc5993d82c"
+      },
+      "png": {
+        "size": 162005,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_painted_opacity_2k.png",
+        "md5": "4184a6a2abbd8c21fa7429d70df1c9ba"
+      },
+      "exr": {
+        "size": 131243,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_painted_opacity_2k.exr",
+        "md5": "296e6bc979761d350c977952f46a08db"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 23053,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_painted_opacity_1k.jpg",
+        "md5": "c6e220ca2029ae148752a8a6bd0aa506"
+      },
+      "png": {
+        "size": 66270,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_painted_opacity_1k.png",
+        "md5": "73bddf036172862be950af79daa647f2"
+      },
+      "exr": {
+        "size": 49755,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_painted_opacity_1k.exr",
+        "md5": "be7340e5004d8a9fce5c91ae386c2826"
+      }
+    }
+  },
+  "brass_opacity": {
+    "4k": {
+      "jpg": {
+        "size": 279625,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_opacity_4k.jpg",
+        "md5": "4830a4471cd09e707b2dd7cc5dabf451"
+      },
+      "png": {
+        "size": 298663,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_opacity_4k.png",
+        "md5": "a2e3ac599753c0284ea588d75fd61afd"
+      },
+      "exr": {
+        "size": 308012,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_brass_opacity_4k.exr",
+        "md5": "b8bf162894ccf137a087c37904ddd179"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 76403,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_brass_opacity_2k.jpg",
+        "md5": "9cf77402745afa023678c5fc5993d82c"
+      },
+      "png": {
+        "size": 162005,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_opacity_2k.png",
+        "md5": "4184a6a2abbd8c21fa7429d70df1c9ba"
+      },
+      "exr": {
+        "size": 131243,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_brass_opacity_2k.exr",
+        "md5": "3b0169e1d1d3c0c110cdaf58c831f1a4"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 23053,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_brass_opacity_1k.jpg",
+        "md5": "c6e220ca2029ae148752a8a6bd0aa506"
+      },
+      "png": {
+        "size": 66270,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_opacity_1k.png",
+        "md5": "73bddf036172862be950af79daa647f2"
+      },
+      "exr": {
+        "size": 49755,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_brass_opacity_1k.exr",
+        "md5": "31151fa6fd5ab1a6dda1b8abc2575bed"
+      }
+    }
+  },
+  "painted_diff": {
+    "4k": {
+      "jpg": {
+        "size": 1818613,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_painted_diff_4k.jpg",
+        "md5": "d13e3f6ef3aeb5b1ab77dccd174a2c75"
+      },
+      "png": {
+        "size": 45382009,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_painted_diff_4k.png",
+        "md5": "fdcb2d267938f737f10984a71dde1b66"
+      },
+      "exr": {
+        "size": 26597842,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_painted_diff_4k.exr",
+        "md5": "6bc7220bb16f11f48ab9bd32c819abe5"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 415252,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_painted_diff_2k.jpg",
+        "md5": "8892edecf2903d4f3bc9aba4d7db709f"
+      },
+      "png": {
+        "size": 16985675,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_painted_diff_2k.png",
+        "md5": "8304c7f23706ee3c001f9a07a743d52a"
+      },
+      "exr": {
+        "size": 6320591,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_painted_diff_2k.exr",
+        "md5": "8ff9b6ed4cd31a3858434f2e90cb299a"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 107050,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_painted_diff_1k.jpg",
+        "md5": "d5b39f7dc8e96b578e73108328682d77"
+      },
+      "png": {
+        "size": 4909873,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_painted_diff_1k.png",
+        "md5": "d50cf8af4b5f9938e9c90da3a9281abf"
+      },
+      "exr": {
+        "size": 1604282,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_painted_diff_1k.exr",
+        "md5": "e2314ec53657aeb0a18149a677aa2eaa"
+      }
+    }
+  },
+  "brass_roughness": {
+    "4k": {
+      "jpg": {
+        "size": 3876014,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_roughness_4k.jpg",
+        "md5": "65bd7d5294b7ffa8eff3bcd360dd7759"
+      },
+      "png": {
+        "size": 15911574,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_roughness_4k.png",
+        "md5": "b141037412586a452e40ee5f76708b12"
+      },
+      "exr": {
+        "size": 14357327,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_brass_roughness_4k.exr",
+        "md5": "2eb335041e79df85081b42f6a45ecb76"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 880041,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_brass_roughness_2k.jpg",
+        "md5": "e144561af50d0ba97271c600fad7577c"
+      },
+      "png": {
+        "size": 5594736,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_roughness_2k.png",
+        "md5": "dd89b790f88e142104e20d48109e51df"
+      },
+      "exr": {
+        "size": 4101167,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_brass_roughness_2k.exr",
+        "md5": "cb5a05a72b2dc151ef8e8479d3829f74"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 215976,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_brass_roughness_1k.jpg",
+        "md5": "8748badcc3ba10600926968e8afef15c"
+      },
+      "png": {
+        "size": 1535937,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_roughness_1k.png",
+        "md5": "d2be51622bf0e158019b9cf9ae2b0697"
+      },
+      "exr": {
+        "size": 1107622,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_brass_roughness_1k.exr",
+        "md5": "0f19266ff6ce114055f84a6ba55ebdbd"
+      }
+    }
+  },
+  "painted_arm": {
+    "4k": {
+      "jpg": {
+        "size": 4550497,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_painted_arm_4k.jpg",
+        "md5": "3de22e9a6cc8191b8cc4e757e8ea0619"
+      },
+      "png": {
+        "size": 21499156,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_painted_arm_4k.png",
+        "md5": "ac284dcd579772d1c83701767f792375"
+      },
+      "exr": {
+        "size": 29135289,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_painted_arm_4k.exr",
+        "md5": "e43750351122f0e09fb9ec60b85ab6eb"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1052706,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_painted_arm_2k.jpg",
+        "md5": "38e4a450aea36ae054e3a37f92bd940d"
+      },
+      "png": {
+        "size": 9385073,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_painted_arm_2k.png",
+        "md5": "a57f5c79c1d910177131cd8f908d0c23"
+      },
+      "exr": {
+        "size": 7254661,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_painted_arm_2k.exr",
+        "md5": "5f45e96ff873d668b0cc9a232fb8af84"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 267165,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_painted_arm_1k.jpg",
+        "md5": "49f4029edfce7d3f782518a1f532ae27"
+      },
+      "png": {
+        "size": 2973861,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_painted_arm_1k.png",
+        "md5": "08394765d7802d493cc463544a7b4ab9"
+      },
+      "exr": {
+        "size": 1886418,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_painted_arm_1k.exr",
+        "md5": "55fc7b5e3b05fd6dd4c523966df48859"
+      }
+    }
+  },
+  "painted_nor_gl": {
+    "4k": {
+      "jpg": {
+        "size": 3293998,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_painted_nor_gl_4k.jpg",
+        "md5": "0dbd7434fb57bac251d2bf320becbb45"
+      },
+      "png": {
+        "size": 74670690,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_painted_nor_gl_4k.png",
+        "md5": "fcac1f06b70b0bd0d216eaf0ec06dde8"
+      },
+      "exr": {
+        "size": 25551675,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_painted_nor_gl_4k.exr",
+        "md5": "150a70577743c2e52370148898bdd897"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 805944,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_painted_nor_gl_2k.jpg",
+        "md5": "ddf52226353a7329997c143d5c26a79b"
+      },
+      "png": {
+        "size": 20193805,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_painted_nor_gl_2k.png",
+        "md5": "1f44b36959d5a9b272faf36f9bd22cfa"
+      },
+      "exr": {
+        "size": 7287976,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_painted_nor_gl_2k.exr",
+        "md5": "9ce746119cd5ed69f0c7003e17163117"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 180646,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_painted_nor_gl_1k.jpg",
+        "md5": "6d6805ac7932d9927f7ec817db77b5d5"
+      },
+      "png": {
+        "size": 5228457,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_painted_nor_gl_1k.png",
+        "md5": "3952748e6550094468d423ab991816d4"
+      },
+      "exr": {
+        "size": 1810505,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_painted_nor_gl_1k.exr",
+        "md5": "fe55a181b85a6a5e3c02d9d8ab2d8afd"
+      }
+    }
+  },
+  "brass_nor_dx": {
+    "4k": {
+      "jpg": {
+        "size": 3295831,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_nor_dx_4k.jpg",
+        "md5": "ebb365fee2bb569477e9c2f50986febc"
+      },
+      "png": {
+        "size": 74671209,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_nor_dx_4k.png",
+        "md5": "239b25f986a2bbee8518747fb9c403b2"
+      },
+      "exr": {
+        "size": 25566821,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_brass_nor_dx_4k.exr",
+        "md5": "c7957083cd353d7a82805f44dbec4617"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 807417,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_brass_nor_dx_2k.jpg",
+        "md5": "31f587038c2b3d933a158b8443bb12e5"
+      },
+      "png": {
+        "size": 20192921,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_nor_dx_2k.png",
+        "md5": "ae6b2aff8e454538d4e48f7f8a021d8f"
+      },
+      "exr": {
+        "size": 7289467,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_brass_nor_dx_2k.exr",
+        "md5": "099f0f3ecc09c8e7d1c3c1e00025295a"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 180679,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_brass_nor_dx_1k.jpg",
+        "md5": "f478b7fb151d77c04e5762b706131cdb"
+      },
+      "png": {
+        "size": 5228373,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_nor_dx_1k.png",
+        "md5": "6c7a2298be38918d777b392befd9f13c"
+      },
+      "exr": {
+        "size": 1808926,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_brass_nor_dx_1k.exr",
+        "md5": "916951dfb2d1d64f596450a2d979897a"
+      }
+    }
+  },
+  "painted_metallic": {
+    "4k": {
+      "jpg": {
+        "size": 4551969,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_painted_metallic_4k.jpg",
+        "md5": "0c60c8b41a54b0e5708287f417369623"
+      },
+      "png": {
+        "size": 16457261,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_painted_metallic_4k.png",
+        "md5": "8d39d99d15f7faae1a20bb451aa55b62"
+      },
+      "exr": {
+        "size": 13678230,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_painted_metallic_4k.exr",
+        "md5": "b25705366b91c2f1df0a07b328860db0"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1112773,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_painted_metallic_2k.jpg",
+        "md5": "6bf05eb8f954b2f785b91d10a1cbdb26"
+      },
+      "png": {
+        "size": 5442040,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_painted_metallic_2k.png",
+        "md5": "4d4adad121ec1372a2c27246a2dc3dd9"
+      },
+      "exr": {
+        "size": 3975658,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_painted_metallic_2k.exr",
+        "md5": "a34ea2ad2e36a6e3e8405c5aaca683af"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 290512,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_painted_metallic_1k.jpg",
+        "md5": "7fe15437247dc9d78eb9e19406da53c0"
+      },
+      "png": {
+        "size": 1492221,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_painted_metallic_1k.png",
+        "md5": "be4b1c8db70e90b694eb36797090fa4d"
+      },
+      "exr": {
+        "size": 1067178,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_painted_metallic_1k.exr",
+        "md5": "0724159a85780e8d27e838c5574a43b0"
+      }
+    }
+  },
+  "painted_roughness": {
+    "4k": {
+      "jpg": {
+        "size": 3876014,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_painted_roughness_4k.jpg",
+        "md5": "65bd7d5294b7ffa8eff3bcd360dd7759"
+      },
+      "png": {
+        "size": 15911574,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_painted_roughness_4k.png",
+        "md5": "b141037412586a452e40ee5f76708b12"
+      },
+      "exr": {
+        "size": 14357327,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_painted_roughness_4k.exr",
+        "md5": "20f5f5313df72640d0b9f8bc4be4010c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 880041,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_painted_roughness_2k.jpg",
+        "md5": "e144561af50d0ba97271c600fad7577c"
+      },
+      "png": {
+        "size": 5594736,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_painted_roughness_2k.png",
+        "md5": "dd89b790f88e142104e20d48109e51df"
+      },
+      "exr": {
+        "size": 4101167,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_painted_roughness_2k.exr",
+        "md5": "c80616466c29b87cd9dc587310ab468d"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 215976,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_painted_roughness_1k.jpg",
+        "md5": "8748badcc3ba10600926968e8afef15c"
+      },
+      "png": {
+        "size": 1535937,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_painted_roughness_1k.png",
+        "md5": "d2be51622bf0e158019b9cf9ae2b0697"
+      },
+      "exr": {
+        "size": 1107622,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_painted_roughness_1k.exr",
+        "md5": "1785ab119abc605ea4ed9c59230a1f14"
+      }
+    }
+  },
+  "fbx": {
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/Lantern_01_brass_diff_4k.png": {
+            "size": 57224703,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_diff_4k.png",
+            "md5": "174677b1efadef909afac9c587ad1834"
+          },
+          "textures/Lantern_01_brass_nor_gl_4k.png": {
+            "size": 74670690,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_nor_gl_4k.png",
+            "md5": "fcac1f06b70b0bd0d216eaf0ec06dde8"
+          },
+          "textures/Lantern_01_brass_metallic_4k.png": {
+            "size": 16457261,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_metallic_4k.png",
+            "md5": "8d39d99d15f7faae1a20bb451aa55b62"
+          },
+          "textures/Lantern_01_brass_opacity_4k.png": {
+            "size": 298663,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_opacity_4k.png",
+            "md5": "a2e3ac599753c0284ea588d75fd61afd"
+          },
+          "textures/Lantern_01_brass_roughness_4k.png": {
+            "size": 15911574,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_roughness_4k.png",
+            "md5": "b141037412586a452e40ee5f76708b12"
+          }
+        },
+        "size": 974236,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/Lantern_01/Lantern_01_4k.fbx",
+        "md5": "a5650dfc73eef10aea1b8552a5d328d5"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/Lantern_01_brass_roughness_2k.png": {
+            "size": 5594736,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_roughness_2k.png",
+            "md5": "dd89b790f88e142104e20d48109e51df"
+          },
+          "textures/Lantern_01_brass_diff_2k.png": {
+            "size": 18057584,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_diff_2k.png",
+            "md5": "4851e167d15230058cc0bd2068bc7972"
+          },
+          "textures/Lantern_01_brass_nor_gl_2k.png": {
+            "size": 20193805,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_nor_gl_2k.png",
+            "md5": "1f44b36959d5a9b272faf36f9bd22cfa"
+          },
+          "textures/Lantern_01_brass_metallic_2k.png": {
+            "size": 5442040,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_metallic_2k.png",
+            "md5": "4d4adad121ec1372a2c27246a2dc3dd9"
+          },
+          "textures/Lantern_01_brass_opacity_2k.png": {
+            "size": 162005,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_opacity_2k.png",
+            "md5": "4184a6a2abbd8c21fa7429d70df1c9ba"
+          }
+        },
+        "size": 974236,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/Lantern_01/Lantern_01_2k.fbx",
+        "md5": "9e0e810d3b1ef3b31bfd9b15c52f7671"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/Lantern_01_brass_opacity_1k.png": {
+            "size": 66270,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_opacity_1k.png",
+            "md5": "73bddf036172862be950af79daa647f2"
+          },
+          "textures/Lantern_01_brass_diff_1k.png": {
+            "size": 4924804,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_diff_1k.png",
+            "md5": "9578cbaaf8782088fbb04cea035969af"
+          },
+          "textures/Lantern_01_brass_nor_gl_1k.png": {
+            "size": 5228457,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_nor_gl_1k.png",
+            "md5": "3952748e6550094468d423ab991816d4"
+          },
+          "textures/Lantern_01_brass_roughness_1k.png": {
+            "size": 1535937,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_roughness_1k.png",
+            "md5": "d2be51622bf0e158019b9cf9ae2b0697"
+          },
+          "textures/Lantern_01_brass_metallic_1k.png": {
+            "size": 1492221,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_metallic_1k.png",
+            "md5": "be4b1c8db70e90b694eb36797090fa4d"
+          }
+        },
+        "size": 974236,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/Lantern_01/Lantern_01_1k.fbx",
+        "md5": "07502b4a20ddeb4266d3f022a3c61a6e"
+      }
+    }
+  },
+  "brass_arm": {
+    "4k": {
+      "jpg": {
+        "size": 3527913,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_arm_4k.jpg",
+        "md5": "e6275673461540d4f8f6e3ca48bb346a"
+      },
+      "png": {
+        "size": 35309336,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Lantern_01/Lantern_01_brass_arm_4k.png",
+        "md5": "518146b9638722fe24245d86542ef737"
+      },
+      "exr": {
+        "size": 29372092,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Lantern_01/Lantern_01_brass_arm_4k.exr",
+        "md5": "80df3c883a6cafa3d120658063167a0c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 847840,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Lantern_01/Lantern_01_brass_arm_2k.jpg",
+        "md5": "10a5d10c22dca0ededd3b65e65f70107"
+      },
+      "png": {
+        "size": 13901282,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Lantern_01/Lantern_01_brass_arm_2k.png",
+        "md5": "ba7c74722796787611130b80add28d0c"
+      },
+      "exr": {
+        "size": 7325263,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Lantern_01/Lantern_01_brass_arm_2k.exr",
+        "md5": "54bd85bbeecf467e479aa216e4402beb"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 229054,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Lantern_01/Lantern_01_brass_arm_1k.jpg",
+        "md5": "cad411a300663678f546ed8b1c9b97f1"
+      },
+      "png": {
+        "size": 4025711,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Lantern_01/Lantern_01_brass_arm_1k.png",
+        "md5": "77ee5de01908c219481900eaa7a27c65"
+      },
+      "exr": {
+        "size": 1922939,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Lantern_01/Lantern_01_brass_arm_1k.exr",
+        "md5": "68481f2ec98ba1b0e0a586b51c710918"
+      }
+    }
+  }
+}

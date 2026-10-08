@@ -1,0 +1,834 @@
+{
+  "Diffuse": {
+    "8k": {
+      "jpg": {
+        "size": 10226650,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_diff_8k.jpg",
+        "md5": "bcfea41cac4293be607c2bcc706f71fb"
+      },
+      "png": {
+        "size": 163358687,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/katana_stand_01/katana_stand_01_diff_8k.png",
+        "md5": "6e764fa40c1b7578ca537fb8724a8c49"
+      },
+      "exr": {
+        "size": 88243395,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/katana_stand_01/katana_stand_01_diff_8k.exr",
+        "md5": "b63fdf9884494424c5d76319421e5064"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 2358151,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_diff_4k.jpg",
+        "md5": "5acf1c0e4f0d068355eb1529ac5b47e9"
+      },
+      "png": {
+        "size": 52234314,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/katana_stand_01/katana_stand_01_diff_4k.png",
+        "md5": "9f563844b857a84381459d5685f22ccd"
+      },
+      "exr": {
+        "size": 20597554,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/katana_stand_01/katana_stand_01_diff_4k.exr",
+        "md5": "1c8a7d05602485ee24ccda4bf1fe6810"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 562334,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_diff_2k.jpg",
+        "md5": "fc90ffb217b329382722d4582baa87a0"
+      },
+      "png": {
+        "size": 14744608,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/katana_stand_01/katana_stand_01_diff_2k.png",
+        "md5": "ab519ae369306a3618a128102a92d60d"
+      },
+      "exr": {
+        "size": 4714779,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/katana_stand_01/katana_stand_01_diff_2k.exr",
+        "md5": "f2e1b3af3660c8cb519dbd52fee935eb"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 147585,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_diff_1k.jpg",
+        "md5": "b372de0ea536ffa9ce554012d4e99678"
+      },
+      "png": {
+        "size": 3899597,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/katana_stand_01/katana_stand_01_diff_1k.png",
+        "md5": "2bb47e6c93a6ae2b15f37ca217d9554a"
+      },
+      "exr": {
+        "size": 1175822,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/katana_stand_01/katana_stand_01_diff_1k.exr",
+        "md5": "3086a55eba67b94e3b8dfb544f3acb39"
+      }
+    }
+  },
+  "nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 8765283,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_nor_dx_8k.jpg",
+        "md5": "56afbf454c57998ee00c36d404b5678c"
+      },
+      "png": {
+        "size": 198546114,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/katana_stand_01/katana_stand_01_nor_dx_8k.png",
+        "md5": "791287f64860e35fb6a43b692d324e7c"
+      },
+      "exr": {
+        "size": 76167979,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/katana_stand_01/katana_stand_01_nor_dx_8k.exr",
+        "md5": "696bfdb087545cddb5954b1ec5b71d6f"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 2203946,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_nor_dx_4k.jpg",
+        "md5": "15cfcd6f90bc7d6610a8be7eb254b735"
+      },
+      "png": {
+        "size": 54720022,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/katana_stand_01/katana_stand_01_nor_dx_4k.png",
+        "md5": "3ec5235884d1170c17bbdb8e1de72c47"
+      },
+      "exr": {
+        "size": 20401183,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/katana_stand_01/katana_stand_01_nor_dx_4k.exr",
+        "md5": "36c60f79b9dbc44189d21ae898a3bb67"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 536045,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_nor_dx_2k.jpg",
+        "md5": "b1d00d1457b60a8d0fbd48d6b2b61392"
+      },
+      "png": {
+        "size": 14569638,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/katana_stand_01/katana_stand_01_nor_dx_2k.png",
+        "md5": "659fad0a984ffde599a3bce40cfea97a"
+      },
+      "exr": {
+        "size": 5063026,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/katana_stand_01/katana_stand_01_nor_dx_2k.exr",
+        "md5": "978713f379c563fe5ba222a99851d1a2"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 139057,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_nor_dx_1k.jpg",
+        "md5": "50eca0ec475b2dc8230235231c9024d6"
+      },
+      "png": {
+        "size": 3813994,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/katana_stand_01/katana_stand_01_nor_dx_1k.png",
+        "md5": "3bb01045e047d9b2291977ea1345cc04"
+      },
+      "exr": {
+        "size": 1245281,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/katana_stand_01/katana_stand_01_nor_dx_1k.exr",
+        "md5": "b63bc610f49c5da175e052170643b546"
+      }
+    }
+  },
+  "nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 8736533,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_nor_gl_8k.jpg",
+        "md5": "6c6cdff20801217491985cc9dafd1c6b"
+      },
+      "png": {
+        "size": 198549329,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/katana_stand_01/katana_stand_01_nor_gl_8k.png",
+        "md5": "6773a7927a0206dab14324b439c9e917"
+      },
+      "exr": {
+        "size": 76022040,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/katana_stand_01/katana_stand_01_nor_gl_8k.exr",
+        "md5": "29d04a1128f8b52e97d1024d586ff5c4"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 2195369,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_nor_gl_4k.jpg",
+        "md5": "734f4d9cd2f3689f28df62b28b0fe15f"
+      },
+      "png": {
+        "size": 54719552,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/katana_stand_01/katana_stand_01_nor_gl_4k.png",
+        "md5": "320f668b7f645a823935cfc843cda2b8"
+      },
+      "exr": {
+        "size": 20385346,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/katana_stand_01/katana_stand_01_nor_gl_4k.exr",
+        "md5": "497d14b28fabd262390094b3bccf694d"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 532720,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_nor_gl_2k.jpg",
+        "md5": "eb538d3e0715ed0e697bca7c39366b79"
+      },
+      "png": {
+        "size": 14569058,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/katana_stand_01/katana_stand_01_nor_gl_2k.png",
+        "md5": "151ad615ced69cd2261280c790f09e9d"
+      },
+      "exr": {
+        "size": 5065277,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/katana_stand_01/katana_stand_01_nor_gl_2k.exr",
+        "md5": "f4948f765ebe74362cc8233513ea30cc"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 137816,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_nor_gl_1k.jpg",
+        "md5": "d973a530f16df00631dab68b9e2216af"
+      },
+      "png": {
+        "size": 3813870,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/katana_stand_01/katana_stand_01_nor_gl_1k.png",
+        "md5": "df269495155a603d8a5c2751a561ce95"
+      },
+      "exr": {
+        "size": 1248248,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/katana_stand_01/katana_stand_01_nor_gl_1k.exr",
+        "md5": "c3c3300f151e9f9385aee99d17876198"
+      }
+    }
+  },
+  "blend": {
+    "8k": {
+      "blend": {
+        "include": {
+          "textures/katana_stand_01_diff_8k.jpg": {
+            "size": 10226650,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_diff_8k.jpg",
+            "md5": "bcfea41cac4293be607c2bcc706f71fb"
+          },
+          "textures/katana_stand_01_rough_8k.jpg": {
+            "size": 10284390,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_rough_8k.jpg",
+            "md5": "a1850cf1ddc96d96a690eb92c4df00d4"
+          },
+          "textures/katana_stand_01_nor_gl_8k.exr": {
+            "size": 76022040,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/katana_stand_01/katana_stand_01_nor_gl_8k.exr",
+            "md5": "29d04a1128f8b52e97d1024d586ff5c4"
+          }
+        },
+        "size": 226424,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/8k/katana_stand_01/katana_stand_01_8k.blend",
+        "md5": "7b7bc0f6b872398e33da00864653df39"
+      }
+    },
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/katana_stand_01_rough_4k.jpg": {
+            "size": 3040572,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_rough_4k.jpg",
+            "md5": "35f90bd1bba1d870f2608f3a4347ab60"
+          },
+          "textures/katana_stand_01_nor_gl_4k.exr": {
+            "size": 20385346,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/katana_stand_01/katana_stand_01_nor_gl_4k.exr",
+            "md5": "497d14b28fabd262390094b3bccf694d"
+          },
+          "textures/katana_stand_01_diff_4k.jpg": {
+            "size": 2358151,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_diff_4k.jpg",
+            "md5": "5acf1c0e4f0d068355eb1529ac5b47e9"
+          }
+        },
+        "size": 226477,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/katana_stand_01/katana_stand_01_4k.blend",
+        "md5": "00b7045628b58b78959ebc767772e2f2"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/katana_stand_01_diff_2k.jpg": {
+            "size": 562334,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_diff_2k.jpg",
+            "md5": "fc90ffb217b329382722d4582baa87a0"
+          },
+          "textures/katana_stand_01_nor_gl_2k.exr": {
+            "size": 5065277,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/katana_stand_01/katana_stand_01_nor_gl_2k.exr",
+            "md5": "f4948f765ebe74362cc8233513ea30cc"
+          },
+          "textures/katana_stand_01_rough_2k.jpg": {
+            "size": 782887,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_rough_2k.jpg",
+            "md5": "4fb33fe3ca8facde6602182255c5bb4f"
+          }
+        },
+        "size": 226449,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/katana_stand_01/katana_stand_01_2k.blend",
+        "md5": "d6e4bdbf83921de23c34b3b2aa469abf"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/katana_stand_01_rough_1k.jpg": {
+            "size": 178158,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_rough_1k.jpg",
+            "md5": "f5874516d8defd0299dedc4c0b3b866a"
+          },
+          "textures/katana_stand_01_nor_gl_1k.exr": {
+            "size": 1248248,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/katana_stand_01/katana_stand_01_nor_gl_1k.exr",
+            "md5": "c3c3300f151e9f9385aee99d17876198"
+          },
+          "textures/katana_stand_01_diff_1k.jpg": {
+            "size": 147585,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_diff_1k.jpg",
+            "md5": "b372de0ea536ffa9ce554012d4e99678"
+          }
+        },
+        "size": 226350,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/katana_stand_01/katana_stand_01_1k.blend",
+        "md5": "ef08c747e629e5c1534fd46f235b89d2"
+      }
+    }
+  },
+  "gltf": {
+    "8k": {
+      "gltf": {
+        "include": {
+          "katana_stand_01.bin": {
+            "size": 104152,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/katana_stand_01/katana_stand_01.bin",
+            "md5": "36f6a863e368799c86bb28d6874a0b37"
+          },
+          "textures/katana_stand_01_diff_8k.jpg": {
+            "size": 10226650,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_diff_8k.jpg",
+            "md5": "bcfea41cac4293be607c2bcc706f71fb"
+          },
+          "textures/katana_stand_01_nor_gl_8k.jpg": {
+            "size": 8736533,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_nor_gl_8k.jpg",
+            "md5": "6c6cdff20801217491985cc9dafd1c6b"
+          },
+          "textures/katana_stand_01_arm_8k.jpg": {
+            "size": 9508568,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_arm_8k.jpg",
+            "md5": "97118b3c1265c11ac81ccedfb2dd2734"
+          }
+        },
+        "size": 2730,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/katana_stand_01/katana_stand_01_8k.gltf",
+        "md5": "a2c53a045c6d24624543bc09d1d9af6a"
+      }
+    },
+    "4k": {
+      "gltf": {
+        "include": {
+          "katana_stand_01.bin": {
+            "size": 104152,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/katana_stand_01/katana_stand_01.bin",
+            "md5": "36f6a863e368799c86bb28d6874a0b37"
+          },
+          "textures/katana_stand_01_nor_gl_4k.jpg": {
+            "size": 2195369,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_nor_gl_4k.jpg",
+            "md5": "734f4d9cd2f3689f28df62b28b0fe15f"
+          },
+          "textures/katana_stand_01_arm_4k.jpg": {
+            "size": 2673610,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_arm_4k.jpg",
+            "md5": "0ee6b6cd20a5f417d94cbbc3f51e92f8"
+          },
+          "textures/katana_stand_01_diff_4k.jpg": {
+            "size": 2358151,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_diff_4k.jpg",
+            "md5": "5acf1c0e4f0d068355eb1529ac5b47e9"
+          }
+        },
+        "size": 2730,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/katana_stand_01/katana_stand_01_4k.gltf",
+        "md5": "f97c18c2c202c74a9b3d176c66ac59f9"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "katana_stand_01.bin": {
+            "size": 104152,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/katana_stand_01/katana_stand_01.bin",
+            "md5": "36f6a863e368799c86bb28d6874a0b37"
+          },
+          "textures/katana_stand_01_diff_2k.jpg": {
+            "size": 562334,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_diff_2k.jpg",
+            "md5": "fc90ffb217b329382722d4582baa87a0"
+          },
+          "textures/katana_stand_01_nor_gl_2k.jpg": {
+            "size": 532720,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_nor_gl_2k.jpg",
+            "md5": "eb538d3e0715ed0e697bca7c39366b79"
+          },
+          "textures/katana_stand_01_arm_2k.jpg": {
+            "size": 674690,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_arm_2k.jpg",
+            "md5": "10a78bf4050b2c63eea7fea5f1c2dd1a"
+          }
+        },
+        "size": 2730,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/katana_stand_01/katana_stand_01_2k.gltf",
+        "md5": "7a6ea1d7bcbeb6b9132d59d069248ab7"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "katana_stand_01.bin": {
+            "size": 104152,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/katana_stand_01/katana_stand_01.bin",
+            "md5": "36f6a863e368799c86bb28d6874a0b37"
+          },
+          "textures/katana_stand_01_nor_gl_1k.jpg": {
+            "size": 137816,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_nor_gl_1k.jpg",
+            "md5": "d973a530f16df00631dab68b9e2216af"
+          },
+          "textures/katana_stand_01_arm_1k.jpg": {
+            "size": 164709,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_arm_1k.jpg",
+            "md5": "e90b3ebc305a8059c308d7c467e2f70f"
+          },
+          "textures/katana_stand_01_diff_1k.jpg": {
+            "size": 147585,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_diff_1k.jpg",
+            "md5": "b372de0ea536ffa9ce554012d4e99678"
+          }
+        },
+        "size": 2730,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/katana_stand_01/katana_stand_01_1k.gltf",
+        "md5": "0da8b2f5ebb71b8e36343ebcb7b5d9a1"
+      }
+    }
+  },
+  "usd": {
+    "8k": {
+      "usd": {
+        "include": {
+          "textures/katana_stand_01_diff_8k.jpg": {
+            "size": 10226650,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_diff_8k.jpg",
+            "md5": "bcfea41cac4293be607c2bcc706f71fb"
+          },
+          "textures/katana_stand_01_rough_8k.jpg": {
+            "size": 10284390,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_rough_8k.jpg",
+            "md5": "a1850cf1ddc96d96a690eb92c4df00d4"
+          },
+          "textures/katana_stand_01_nor_gl_8k.exr": {
+            "size": 76022040,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/katana_stand_01/katana_stand_01_nor_gl_8k.exr",
+            "md5": "29d04a1128f8b52e97d1024d586ff5c4"
+          }
+        },
+        "size": 191183,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/8k/katana_stand_01/katana_stand_01_8k.usdc",
+        "md5": "d1e2e8b3a5beaefc90478cf6d9afb33e"
+      }
+    },
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/katana_stand_01_rough_4k.jpg": {
+            "size": 3040572,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_rough_4k.jpg",
+            "md5": "35f90bd1bba1d870f2608f3a4347ab60"
+          },
+          "textures/katana_stand_01_nor_gl_4k.exr": {
+            "size": 20385346,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/katana_stand_01/katana_stand_01_nor_gl_4k.exr",
+            "md5": "497d14b28fabd262390094b3bccf694d"
+          },
+          "textures/katana_stand_01_diff_4k.jpg": {
+            "size": 2358151,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_diff_4k.jpg",
+            "md5": "5acf1c0e4f0d068355eb1529ac5b47e9"
+          }
+        },
+        "size": 191183,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/katana_stand_01/katana_stand_01_4k.usdc",
+        "md5": "2e7c059f8cb9afde95576498ade91e8f"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/katana_stand_01_diff_2k.jpg": {
+            "size": 562334,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_diff_2k.jpg",
+            "md5": "fc90ffb217b329382722d4582baa87a0"
+          },
+          "textures/katana_stand_01_nor_gl_2k.exr": {
+            "size": 5065277,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/katana_stand_01/katana_stand_01_nor_gl_2k.exr",
+            "md5": "f4948f765ebe74362cc8233513ea30cc"
+          },
+          "textures/katana_stand_01_rough_2k.jpg": {
+            "size": 782887,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_rough_2k.jpg",
+            "md5": "4fb33fe3ca8facde6602182255c5bb4f"
+          }
+        },
+        "size": 191183,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/katana_stand_01/katana_stand_01_2k.usdc",
+        "md5": "6e9c2ec8c62167f612cf6c7a0bb671ae"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/katana_stand_01_rough_1k.jpg": {
+            "size": 178158,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_rough_1k.jpg",
+            "md5": "f5874516d8defd0299dedc4c0b3b866a"
+          },
+          "textures/katana_stand_01_nor_gl_1k.exr": {
+            "size": 1248248,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/katana_stand_01/katana_stand_01_nor_gl_1k.exr",
+            "md5": "c3c3300f151e9f9385aee99d17876198"
+          },
+          "textures/katana_stand_01_diff_1k.jpg": {
+            "size": 147585,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_diff_1k.jpg",
+            "md5": "b372de0ea536ffa9ce554012d4e99678"
+          }
+        },
+        "size": 191183,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/katana_stand_01/katana_stand_01_1k.usdc",
+        "md5": "157bfb53724f68f515bdc1f64daaf3b0"
+      }
+    }
+  },
+  "fbx": {
+    "8k": {
+      "fbx": {
+        "include": {
+          "textures/katana_stand_01_diff_8k.jpg": {
+            "size": 10226650,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_diff_8k.jpg",
+            "md5": "bcfea41cac4293be607c2bcc706f71fb"
+          },
+          "textures/katana_stand_01_rough_8k.jpg": {
+            "size": 10284390,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_rough_8k.jpg",
+            "md5": "a1850cf1ddc96d96a690eb92c4df00d4"
+          },
+          "textures/katana_stand_01_nor_gl_8k.exr": {
+            "size": 76022040,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/katana_stand_01/katana_stand_01_nor_gl_8k.exr",
+            "md5": "29d04a1128f8b52e97d1024d586ff5c4"
+          }
+        },
+        "size": 132988,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/8k/katana_stand_01/katana_stand_01_8k.fbx",
+        "md5": "4084f208fe813efea097fcfe0440378f"
+      }
+    },
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/katana_stand_01_rough_4k.jpg": {
+            "size": 3040572,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_rough_4k.jpg",
+            "md5": "35f90bd1bba1d870f2608f3a4347ab60"
+          },
+          "textures/katana_stand_01_nor_gl_4k.exr": {
+            "size": 20385346,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/katana_stand_01/katana_stand_01_nor_gl_4k.exr",
+            "md5": "497d14b28fabd262390094b3bccf694d"
+          },
+          "textures/katana_stand_01_diff_4k.jpg": {
+            "size": 2358151,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_diff_4k.jpg",
+            "md5": "5acf1c0e4f0d068355eb1529ac5b47e9"
+          }
+        },
+        "size": 132988,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/katana_stand_01/katana_stand_01_4k.fbx",
+        "md5": "ff326cbff63d871a855fb1a605dac4c9"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/katana_stand_01_diff_2k.jpg": {
+            "size": 562334,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_diff_2k.jpg",
+            "md5": "fc90ffb217b329382722d4582baa87a0"
+          },
+          "textures/katana_stand_01_nor_gl_2k.exr": {
+            "size": 5065277,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/katana_stand_01/katana_stand_01_nor_gl_2k.exr",
+            "md5": "f4948f765ebe74362cc8233513ea30cc"
+          },
+          "textures/katana_stand_01_rough_2k.jpg": {
+            "size": 782887,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_rough_2k.jpg",
+            "md5": "4fb33fe3ca8facde6602182255c5bb4f"
+          }
+        },
+        "size": 132988,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/katana_stand_01/katana_stand_01_2k.fbx",
+        "md5": "0c606420843faeda58838bc5d82d8df6"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/katana_stand_01_rough_1k.jpg": {
+            "size": 178158,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_rough_1k.jpg",
+            "md5": "f5874516d8defd0299dedc4c0b3b866a"
+          },
+          "textures/katana_stand_01_nor_gl_1k.exr": {
+            "size": 1248248,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/katana_stand_01/katana_stand_01_nor_gl_1k.exr",
+            "md5": "c3c3300f151e9f9385aee99d17876198"
+          },
+          "textures/katana_stand_01_diff_1k.jpg": {
+            "size": 147585,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_diff_1k.jpg",
+            "md5": "b372de0ea536ffa9ce554012d4e99678"
+          }
+        },
+        "size": 132988,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/katana_stand_01/katana_stand_01_1k.fbx",
+        "md5": "4495cf8cce7222d8fadace1181f6a734"
+      }
+    }
+  },
+  "arm": {
+    "8k": {
+      "jpg": {
+        "size": 9508568,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_arm_8k.jpg",
+        "md5": "97118b3c1265c11ac81ccedfb2dd2734"
+      },
+      "png": {
+        "size": 47514345,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/katana_stand_01/katana_stand_01_arm_8k.png",
+        "md5": "dc9866d6c9b09b819d5325a75daf2326"
+      },
+      "exr": {
+        "size": 78880345,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/katana_stand_01/katana_stand_01_arm_8k.exr",
+        "md5": "6d88aba2bbf0162e5e51e78566eb8cac"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 2673610,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_arm_4k.jpg",
+        "md5": "0ee6b6cd20a5f417d94cbbc3f51e92f8"
+      },
+      "png": {
+        "size": 12860299,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/katana_stand_01/katana_stand_01_arm_4k.png",
+        "md5": "470e77fc953713f2fff29df05897ebaa"
+      },
+      "exr": {
+        "size": 22539409,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/katana_stand_01/katana_stand_01_arm_4k.exr",
+        "md5": "1855c577241bef96ddb878f4135f3c7b"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 674690,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_arm_2k.jpg",
+        "md5": "10a78bf4050b2c63eea7fea5f1c2dd1a"
+      },
+      "png": {
+        "size": 3289864,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/katana_stand_01/katana_stand_01_arm_2k.png",
+        "md5": "eba5e2c2cfae9831784bf65bf8a06d84"
+      },
+      "exr": {
+        "size": 5994665,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/katana_stand_01/katana_stand_01_arm_2k.exr",
+        "md5": "ac0cbf512e3e3ada2982edf1eb35f688"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 164709,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_arm_1k.jpg",
+        "md5": "e90b3ebc305a8059c308d7c467e2f70f"
+      },
+      "png": {
+        "size": 843858,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/katana_stand_01/katana_stand_01_arm_1k.png",
+        "md5": "89f2f8d9c167e57bcb94e1521da8ec27"
+      },
+      "exr": {
+        "size": 1540629,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/katana_stand_01/katana_stand_01_arm_1k.exr",
+        "md5": "55483da155bcc69c2ec4d01bc92f1f61"
+      }
+    }
+  },
+  "AO": {
+    "8k": {
+      "jpg": {
+        "size": 2245991,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_ao_8k.jpg",
+        "md5": "a88b7f59aae553655e8dbec3a9204464"
+      },
+      "png": {
+        "size": 15954277,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/katana_stand_01/katana_stand_01_ao_8k.png",
+        "md5": "119054be4735d8503781266a2a0c351f"
+      },
+      "exr": {
+        "size": 17633690,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/katana_stand_01/katana_stand_01_ao_8k.exr",
+        "md5": "23aaffe9829aa502f01058ab5bf412ad"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 547395,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_ao_4k.jpg",
+        "md5": "1c00cef773872977542398e056bad625"
+      },
+      "png": {
+        "size": 7549051,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/katana_stand_01/katana_stand_01_ao_4k.png",
+        "md5": "e0b1ae39fab86e168791575b41630d2b"
+      },
+      "exr": {
+        "size": 5912522,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/katana_stand_01/katana_stand_01_ao_4k.exr",
+        "md5": "33e8a937588102d5d5dbe72bd1e925bc"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 179451,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_ao_2k.jpg",
+        "md5": "bea160d0806c3cf3021d7b145c73c473"
+      },
+      "png": {
+        "size": 2570262,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/katana_stand_01/katana_stand_01_ao_2k.png",
+        "md5": "e3c98b9055baa7cf6e1dbefbe8d38da5"
+      },
+      "exr": {
+        "size": 1743168,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/katana_stand_01/katana_stand_01_ao_2k.exr",
+        "md5": "ca7e0f568f7962ee4fc0f0751569acf1"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 64936,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_ao_1k.jpg",
+        "md5": "6965e9f6c384810e82becf0d91aa54a3"
+      },
+      "png": {
+        "size": 845027,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/katana_stand_01/katana_stand_01_ao_1k.png",
+        "md5": "c4fe071786e91fc3765205eb8cbfd4b5"
+      },
+      "exr": {
+        "size": 491182,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/katana_stand_01/katana_stand_01_ao_1k.exr",
+        "md5": "b5389b58b1adcf841d30b275a4d5fe9a"
+      }
+    }
+  },
+  "Rough": {
+    "8k": {
+      "jpg": {
+        "size": 10284390,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/katana_stand_01/katana_stand_01_rough_8k.jpg",
+        "md5": "a1850cf1ddc96d96a690eb92c4df00d4"
+      },
+      "png": {
+        "size": 34532767,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/katana_stand_01/katana_stand_01_rough_8k.png",
+        "md5": "257cdfeb5e6c40bb52fe6552346d52a1"
+      },
+      "exr": {
+        "size": 40572081,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/katana_stand_01/katana_stand_01_rough_8k.exr",
+        "md5": "34d4cbfc7ab5dd18bf889127712a049e"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 3040572,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_rough_4k.jpg",
+        "md5": "35f90bd1bba1d870f2608f3a4347ab60"
+      },
+      "png": {
+        "size": 17996623,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/katana_stand_01/katana_stand_01_rough_4k.png",
+        "md5": "601a90a2dcd9c7b7c041ddd59005c59a"
+      },
+      "exr": {
+        "size": 13344480,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/katana_stand_01/katana_stand_01_rough_4k.exr",
+        "md5": "45584ed99cc7f5f9a3cf195c64a50e65"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 782887,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/katana_stand_01/katana_stand_01_rough_2k.jpg",
+        "md5": "4fb33fe3ca8facde6602182255c5bb4f"
+      },
+      "png": {
+        "size": 5234454,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/katana_stand_01/katana_stand_01_rough_2k.png",
+        "md5": "5c8b1b5f68b7c567f3625a339995cbe0"
+      },
+      "exr": {
+        "size": 3792941,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/katana_stand_01/katana_stand_01_rough_2k.exr",
+        "md5": "a9f34ea45b928fcbb5b3570e96348b5b"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 178158,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/katana_stand_01/katana_stand_01_rough_1k.jpg",
+        "md5": "f5874516d8defd0299dedc4c0b3b866a"
+      },
+      "png": {
+        "size": 1396077,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/katana_stand_01/katana_stand_01_rough_1k.png",
+        "md5": "3533110e1ef543422e696f3de43a2fa6"
+      },
+      "exr": {
+        "size": 1002088,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/katana_stand_01/katana_stand_01_rough_1k.exr",
+        "md5": "66db8c7a9d5782b5dc155267fcd0cd63"
+      }
+    }
+  }
+}

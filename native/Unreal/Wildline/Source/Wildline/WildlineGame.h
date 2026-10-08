@@ -30,6 +30,8 @@ public:
     UPROPERTY(Replicated) int32 Winner=0;
     UPROPERTY(Replicated) float RoundStartedAt=0;
     UPROPERTY(Replicated) bool bRoundStarted=false;
+    UPROPERTY(Replicated) int32 LobbyPlayers=0;
+    UPROPERTY(Replicated) int32 LobbyReadyPlayers=0;
     UPROPERTY(Replicated) int32 HunterDifficulty=1;
     UPROPERTY(Replicated) int32 ExpeditionMode=0;
     UPROPERTY(Replicated) TArray<int32> TakenPeanuts;
@@ -46,6 +48,10 @@ public:
     void Tick(float Delta) override;
     void Logout(AController* Exiting) override;
     void PickRole(APlayerController* PC,bool bSquirrel);
+    void EnterWaitingRoom(APlayerController* PC,bool bSquirrel,int32 Weapon);
+    void UpdateWaitingRooms();
+    void ResetWaitingRooms();
+    bool bWaitingRoomsEnabled=false;
     void RecordKill(AWildlineCharacter* Victim, AController* Hunter);
     void Deposit(int32 Count);
     void RestartRound();
@@ -82,6 +88,14 @@ public:
     void MenuClick();
     void RequestRestart();
     void PlaySelected(bool bSquirrel);
+    void EnterWaitingRoom(bool bSquirrel);
+    UFUNCTION(Server,Reliable) void ServerEnterWaitingRoom(bool bSquirrel,int32 Weapon);
+    UFUNCTION(Server,Reliable) void ServerLobbyInteract();
+    UFUNCTION(Client,Reliable) void ClientLobbyWeaponEquipped(int32 Weapon);
+    void RunLobbySmokeTest();
+    void RunLobbyReview();
+    void RunLobbyNetworkProbe();
+    float LobbyProbeWalkAt=0;
     UFUNCTION(Server,Reliable) void ServerSelectWeapon(int32 Weapon);
     UFUNCTION(Server,Reliable) void ServerPickRole(bool bSquirrel);
     UFUNCTION(Server,Reliable) void ServerRestartRound();

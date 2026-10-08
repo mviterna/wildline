@@ -1,4 +1,5 @@
 #include "WildlineGame.h"
+#include "WildlineLobby.h"
 #include "WildlineRules.h"
 #include "WildlineWorld.h"
 #include "WildlineLivestock.h"
@@ -47,7 +48,7 @@
 #include "Rendering/SkeletalMeshLODRenderData.h"
 #endif
 
-void AWildlineGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps)const{Super::GetLifetimeReplicatedProps(OutLifetimeProps);DOREPLIFETIME(AWildlineGameState,MatchConfig);DOREPLIFETIME(AWildlineGameState,HunterKills);DOREPLIFETIME(AWildlineGameState,StoredAcorns);DOREPLIFETIME(AWildlineGameState,Winner);DOREPLIFETIME(AWildlineGameState,RoundStartedAt);DOREPLIFETIME(AWildlineGameState,bRoundStarted);DOREPLIFETIME(AWildlineGameState,HunterDifficulty);DOREPLIFETIME(AWildlineGameState,ExpeditionMode);DOREPLIFETIME(AWildlineGameState,TakenPeanuts);}
+void AWildlineGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps)const{Super::GetLifetimeReplicatedProps(OutLifetimeProps);DOREPLIFETIME(AWildlineGameState,MatchConfig);DOREPLIFETIME(AWildlineGameState,HunterKills);DOREPLIFETIME(AWildlineGameState,StoredAcorns);DOREPLIFETIME(AWildlineGameState,Winner);DOREPLIFETIME(AWildlineGameState,RoundStartedAt);DOREPLIFETIME(AWildlineGameState,bRoundStarted);DOREPLIFETIME(AWildlineGameState,LobbyPlayers);DOREPLIFETIME(AWildlineGameState,LobbyReadyPlayers);DOREPLIFETIME(AWildlineGameState,HunterDifficulty);DOREPLIFETIME(AWildlineGameState,ExpeditionMode);DOREPLIFETIME(AWildlineGameState,TakenPeanuts);}
 float AWildlineGameState::RoundRemaining()const{return bRoundStarted?FMath::Max(0.f,MatchConfig.DurationSeconds-(GetServerWorldTimeSeconds()-RoundStartedAt)):MatchConfig.DurationSeconds;}
 AWildlineGameMode::AWildlineGameMode(){PrimaryActorTick.bCanEverTick=true;DefaultPawnClass=AWildlineCharacter::StaticClass();PlayerControllerClass=AWildlineController::StaticClass();HUDClass=AWildlineHUD::StaticClass();GameStateClass=AWildlineGameState::StaticClass();}
 void AWildlineGameMode::InitGame(const FString& MapName,const FString& Options,FString& ErrorMessage){
@@ -68,17 +69,17 @@ void AWildlineGameMode::BeginPlay(){Super::BeginPlay();
         }
     }
 }
-void AWildlineGameMode::Tick(float Delta){Super::Tick(Delta);auto* S=GetGameState<AWildlineGameState>();if(S&&S->bRoundStarted&&!S->Winner&&S->RoundRemaining()<=0)S->Winner=S->MatchConfig.TimeWinner?S->MatchConfig.TimeWinner:WildlineRules::TimeoutWinner(S->ExpeditionMode);}
+void AWildlineGameMode::Tick(float Delta){Super::Tick(Delta);UpdateWaitingRooms();auto* S=GetGameState<AWildlineGameState>();if(S&&S->bRoundStarted&&!S->Winner&&S->RoundRemaining()<=0)S->Winner=S->MatchConfig.TimeWinner?S->MatchConfig.TimeWinner:WildlineRules::TimeoutWinner(S->ExpeditionMode);}
 void AWildlineGameMode::PickRole(APlayerController* PC,bool bAnimal){
     if(!PC)return;
-    if(auto* P=Cast<AWildlineCharacter>(PC->GetPawn());P&&P->bSquirrel==bAnimal&&GetGameState<AWildlineGameState>()->bRoundStarted)return;
+    if(auto* P=Cast<AWildlineCharacter>(PC->GetPawn());P&&!P->bInLobby&&P->bSquirrel==bAnimal&&GetGameState<AWildlineGameState>()->bRoundStarted)return;
     APawn* Old=PC->GetPawn();if(auto* OldAnimal=Cast<AWildlineCharacter>(Old))OldAnimal->ReturnCarriedPeanuts();FVector P=SpawnLocation(bAnimal,GetNumPlayers());
     auto* New=GetWorld()->SpawnActorDeferred<AWildlineCharacter>(AWildlineCharacter::StaticClass(),FTransform(FRotator::ZeroRotator,P),PC,nullptr,ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn);
     if(!New)return;New->bSquirrel=bAnimal;UGameplayStatics::FinishSpawningActor(New,FTransform(FRotator::ZeroRotator,P));PC->Possess(New);if(Old)Old->Destroy();
     auto* S=GetGameState<AWildlineGameState>();if(S&&!S->bRoundStarted){S->bRoundStarted=true;S->RoundStartedAt=S->GetServerWorldTimeSeconds();}RefreshBots();
 }
 void AWildlineGameMode::RefreshBots(){
-    if(GetWorld()->bIsTearingDown)return;const auto* State=GetGameState<AWildlineGameState>();if(!State)return;
+    if(GetWorld()->bIsTearingDown)return;const auto* State=GetGameState<AWildlineGameState>();if(!State||!State->bRoundStarted)return;
     const auto& C=State->MatchConfig;
     TArray<AWildlineCharacter*> Existing;
     for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It)if(It->bBot&&!It->bPreviewHunter)Existing.Add(*It);
@@ -104,7 +105,7 @@ void AWildlineGameMode::RecordKill(AWildlineCharacter* Victim,AController* Hunte
 }
 void AWildlineGameMode::RespawnAnimal(TWeakObjectPtr<AWildlineCharacter> Weak){auto* P=Weak.Get();if(!P)return;auto* S=GetGameState<AWildlineGameState>();if(S&&S->Winner)return;P->bDead=false;P->Health=S?S->MatchConfig.SquirrelHealth:40;P->ProtectedUntil=P->ServerTime()+(S?S->MatchConfig.SpawnProtectionSeconds:0);P->Bag=0;P->CourseCheckpoint=0;P->CourseLane=-1;P->Stamina=100;P->RespawnAt=0;P->TreeIndex=INDEX_NONE;FVector Pos=SpawnLocation(true,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}
 void AWildlineGameMode::Deposit(int32 Count){auto* S=GetGameState<AWildlineGameState>();if(!S||S->Winner||!S->bRoundStarted)return;S->StoredAcorns+=Count;if(S->StoredAcorns>=S->MatchConfig.SquirrelGoal)S->Winner=2;}
-void AWildlineGameMode::RestartRound(){auto* S=GetGameState<AWildlineGameState>();if(!S||!S->Winner)return;if(auto* Settings=UWildlineUserSettings::Get())S->MatchConfig=Settings->ConfigForMode(S->ExpeditionMode);S->MatchConfig.Clamp();if(GameSession)GameSession->MaxPlayers=S->MatchConfig.MaxPlayers;S->HunterKills=0;S->StoredAcorns=0;S->TakenPeanuts.Empty();S->Winner=0;S->RoundStartedAt=S->GetServerWorldTimeSeconds();for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It){auto* P=*It;P->bDead=false;P->Health=P->bSquirrel?S->MatchConfig.SquirrelHealth:100;P->ProtectedUntil=P->bSquirrel?P->ServerTime()+S->MatchConfig.SpawnProtectionSeconds:0;P->RifleAmmo=5;P->ShotgunAmmo=2;P->Ammo=WildlineRules::WeaponCapacity(P->SelectedWeapon);P->Bag=0;P->BagPeanuts.Empty();P->CourseCheckpoint=0;P->CourseLane=-1;P->FeederVisits=0;P->Collected.Empty();P->ThermalReadyAt=P->ThermalUntil=P->ReloadUntil=P->RespawnAt=0;P->TreeIndex=INDEX_NONE;P->Stamina=100;P->ResetBotAwareness();FVector Pos=SpawnLocation(P->bSquirrel,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}RefreshBots();S->ForceNetUpdate();}
+void AWildlineGameMode::RestartRound(){auto* S=GetGameState<AWildlineGameState>();if(!S||!S->Winner)return;if(auto* Settings=UWildlineUserSettings::Get())S->MatchConfig=Settings->ConfigForMode(S->ExpeditionMode);S->MatchConfig.Clamp();if(GameSession)GameSession->MaxPlayers=S->MatchConfig.MaxPlayers;S->HunterKills=0;S->StoredAcorns=0;S->TakenPeanuts.Empty();S->Winner=0;S->RoundStartedAt=S->GetServerWorldTimeSeconds();for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It){auto* P=*It;P->bDead=false;P->Health=P->bSquirrel?S->MatchConfig.SquirrelHealth:100;P->ProtectedUntil=P->bSquirrel?P->ServerTime()+S->MatchConfig.SpawnProtectionSeconds:0;P->RifleAmmo=5;P->ShotgunAmmo=2;P->Ammo=WildlineRules::WeaponCapacity(P->SelectedWeapon);P->Bag=0;P->BagPeanuts.Empty();P->CourseCheckpoint=0;P->CourseLane=-1;P->FeederVisits=0;P->Collected.Empty();P->ThermalReadyAt=P->ThermalUntil=P->ReloadUntil=P->RespawnAt=0;P->TreeIndex=INDEX_NONE;P->Stamina=100;P->ResetBotAwareness();FVector Pos=SpawnLocation(P->bSquirrel,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}if(bWaitingRoomsEnabled)ResetWaitingRooms();else RefreshBots();S->ForceNetUpdate();}
 
 AWildlineController::AWildlineController(){bShowMouseCursor=true;}
 void AWildlineController::BeginPlay(){
@@ -112,7 +113,10 @@ void AWildlineController::BeginPlay(){
     if(auto* S=UWildlineUserSettings::Get()){S->LoadSettings(false);S->ApplyNonResolutionSettings();S->Persist();}
     PlayerCameraManager->ViewPitchMin=-80;PlayerCameraManager->ViewPitchMax=80;
     Menu=CreateWidget<UWildlineMenu>(this,UWildlineMenu::StaticClass());if(Menu)Menu->AddToViewport();
-    auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI&&GI->bStartAfterTravel){GI->bStartAfterTravel=false;ChooseRole(GI->bPreferredSquirrel);}else SetMenu(true);
+    auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI&&GI->bStartAfterTravel){GI->bStartAfterTravel=false;EnterWaitingRoom(GI->bPreferredSquirrel);}else SetMenu(true);
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLobbySmoke"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunLobbySmokeTest,2.f,false);}
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLobbyReview")))RunLobbyReview();
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLobbyNetProbe")))RunLobbyNetworkProbe();
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineAutoStart"))){ChooseRole(FParse::Param(FCommandLine::Get(),TEXT("WildlineSquirrel")));}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHillNetProbe")))RunHillNetworkProbe();
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHillSmoke"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunHillSmokeTest,2.f,false);}
@@ -554,12 +558,12 @@ void AWildlineController::ChooseRole(bool bAnimal){auto* GI=GetGameInstance<UWil
 void AWildlineController::ServerPickRole_Implementation(bool bAnimal){if(auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>())GM->PickRole(this,bAnimal);}
 void AWildlineController::Host(bool bAnimal){auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI){GI->bPreferredSquirrel=bAnimal;GI->bStartAfterTravel=true;}UGameplayStatics::OpenLevel(this,FName(WildlineRules::ModeMap(GI?GI->PreferredMode:0)),true,TEXT("listen"));}
 void AWildlineController::Join(FString Address,bool bAnimal){Address=Address.TrimStartAndEnd();if(Address.IsEmpty())return;auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI){GI->bPreferredSquirrel=bAnimal;GI->bStartAfterTravel=true;GI->JoinAddress=Address;}ClientTravel(Address,TRAVEL_Absolute);}
-void AWildlineController::ServerSelectWeapon_Implementation(int32 Weapon){if(auto* P=Cast<AWildlineCharacter>(GetPawn()))P->SelectWeapon(Weapon);}
+void AWildlineController::ServerSelectWeapon_Implementation(int32 Weapon){const auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>();if(GM&&GM->bWaitingRoomsEnabled)return;if(auto* P=Cast<AWildlineCharacter>(GetPawn()))P->SelectWeapon(Weapon);}
 void AWildlineController::PlaySelected(bool Animal){
     auto* GI=GetGameInstance<UWildlineGameInstance>();const auto* State=GetWorld()->GetGameState<AWildlineGameState>();
     if(HasAuthority()&&GI&&State&&(GI->PreferredMode!=State->ExpeditionMode||(UWildlineUserSettings::Get()&&UWildlineUserSettings::Get()->ConfigForMode(GI->PreferredMode)!=State->MatchConfig))){GI->bPreferredSquirrel=Animal;GI->bStartAfterTravel=true;UGameplayStatics::OpenLevel(this,FName(WildlineRules::ModeMap(GI->PreferredMode)),true,GetNetMode()==NM_ListenServer?TEXT("listen"):TEXT(""));return;}
-    if(auto* P=Cast<AWildlineCharacter>(GetPawn());P&&P->bSquirrel==Animal&&State&&State->bRoundStarted){if(!Animal)if(const auto* Settings=UWildlineUserSettings::Get())ServerSelectWeapon(Settings->SelectedWeapon);SetMenu(false);}
-    else ChooseRole(Animal);
+    if(auto* P=Cast<AWildlineCharacter>(GetPawn());P&&P->bSquirrel==Animal&&(P->bInLobby||(State&&State->bRoundStarted)))SetMenu(false);
+    else EnterWaitingRoom(Animal);
 }
 void AWildlineController::MenuClick(){}
 void AWildlineController::RequestRestart(){ServerRestartRound();}

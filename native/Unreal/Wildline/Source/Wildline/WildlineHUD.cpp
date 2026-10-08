@@ -1,4 +1,5 @@
 #include "WildlineHUD.h"
+#include "WildlineLobby.h"
 #include "WildlineCharacter.h"
 #include "WildlineGame.h"
 #include "WildlineWorld.h"
@@ -14,6 +15,17 @@ void AWildlineHUD::Label(const FString& Text,float X,float Y,float Size,FLinearC
 void AWildlineHUD::DrawHUD(){
     Super::DrawHUD();auto* PC=Cast<AWildlineController>(GetOwningPlayerController());auto* P=PC?Cast<AWildlineCharacter>(PC->GetPawn()):nullptr;auto* S=GetWorld()->GetGameState<AWildlineGameState>();if(!Canvas||!P||!S||PC->bMenuOpen)return;
     const bool Hill=S->ExpeditionMode==WildlineRules::HillMode,Farm=S->ExpeditionMode==WildlineRules::FarmMode;const float W=Canvas->SizeX,H=Canvas->SizeY,CX=W*.5f,CY=H*.5f;const FLinearColor Cream(.88f,.91f,.78f),Sage(.70f,.79f,.51f),Dim(.63f,.70f,.60f),Panel(.025f,.04f,.032f,.65f);
+    if(P->bInLobby){
+        DrawRect(Panel,20,18,W-40,111);
+        Label(P->bSquirrel?TEXT("THE ACORN HOLLOW"):TEXT("BLACKWOOD HUNTING LODGE"),38,30,23,Cream);
+        Label(P->bSquirrel?TEXT("SQUIRREL / Forage, climb and leap"):P->SelectedWeapon==1?TEXT("EQUIPPED / Pump-action shotgun"):TEXT("EQUIPPED / Sporting rifle"),38,65,14,Sage);
+        Label(S->Winner?TEXT("ROUND FINISHED / Press F5 for the next round"):S->bRoundStarted?TEXT("ROUND IN PROGRESS / Step onto your portal to join"):FString::Printf(TEXT("%d / %d READY / The round starts when everyone is on a portal"),S->LobbyReadyPlayers,S->LobbyPlayers),38,96,12,Dim);
+        DrawRect(Panel,20,H-110,W-40,90);
+        Label(S->Winner?TEXT("F5 / RETURN EVERYONE TO THE WAITING ROOMS"):P->bLobbyReady?TEXT("READY / Waiting for the other players. Step off to cancel."):TEXT("WHEN READY / Walk onto the glowing portal"),38,H-91,17,Sage);
+        Label(P->bSquirrel?TEXT("WASD Move   SPACE Leap   V Camera   ESC Menu"):TEXT("WASD Move   E Equip at weapon rack   SPACE Jump   V Camera   ESC Menu"),38,H-55,12,Cream);
+        if(!P->bSquirrel){const int32 Weapon=AWildlineLobby::WeaponAt(P->GetActorLocation());if(Weapon!=INDEX_NONE)Label(Weapon==1?TEXT("E / EQUIP SHOTGUN"):TEXT("E / EQUIP RIFLE"),CX-100,CY+65,18,Cream);}
+        DrawLine(CX-4,CY,CX+4,CY,Cream,1);DrawLine(CX,CY-4,CX,CY+4,Cream,1);return;
+    }
     if(P->IsScoped()){
         const float Radius=H*.31f;DrawRect(FLinearColor::Black,0,0,CX-Radius,H);DrawRect(FLinearColor::Black,CX+Radius,0,W-CX-Radius,H);DrawRect(FLinearColor::Black,CX-Radius,0,Radius*2,CY-Radius);DrawRect(FLinearColor::Black,CX-Radius,CY+Radius,Radius*2,H-CY-Radius);
         for(float Y=-Radius;Y<Radius;Y+=2){const float Span=FMath::Sqrt(FMath::Max(0.f,Radius*Radius-Y*Y));DrawRect(FLinearColor::Black,CX-Radius,CY+Y,Radius-Span,2);DrawRect(FLinearColor::Black,CX+Span,CY+Y,Radius-Span,2);}

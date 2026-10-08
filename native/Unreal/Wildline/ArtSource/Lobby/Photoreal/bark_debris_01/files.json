@@ -1,0 +1,1124 @@
+{
+  "Diffuse": {
+    "8k": {
+      "jpg": {
+        "size": 45155139,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_diff_8k.jpg",
+        "md5": "e219d8438cea03731ffc1fe1b255dd4f"
+      },
+      "png": {
+        "size": 287733240,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/bark_debris_01/bark_debris_01_diff_8k.png",
+        "md5": "990c90c27000db01023351b2095e5081"
+      },
+      "exr": {
+        "size": 76413318,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_diff_8k.exr",
+        "md5": "6392984d37f9dfe125303afceb9643b4"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 157338725,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_diff_16k.jpg",
+        "md5": "ae5ee363fbf13fed723c23276e554dfa"
+      },
+      "png": {
+        "size": 882187287,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/16k/bark_debris_01/bark_debris_01_diff_16k.png",
+        "md5": "d363eb95429745d58c207e88e1969a98"
+      },
+      "exr": {
+        "size": 293951175,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_diff_16k.exr",
+        "md5": "e3e8cad599ddbf23662310cea68a5892"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 13049455,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_diff_4k.jpg",
+        "md5": "255c7757b60d5e8b5ce034a744378833"
+      },
+      "png": {
+        "size": 80651265,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/bark_debris_01/bark_debris_01_diff_4k.png",
+        "md5": "c7e74f97536846ab580518804debd167"
+      },
+      "exr": {
+        "size": 22696911,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_diff_4k.exr",
+        "md5": "f7db195f7550cec7129b8cc95dabdacd"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3606750,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_diff_2k.jpg",
+        "md5": "068955d8c070acd9d3bd818675a4ff68"
+      },
+      "png": {
+        "size": 21854800,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/bark_debris_01/bark_debris_01_diff_2k.png",
+        "md5": "64169a96d27abcc67cf80b37a19d46e7"
+      },
+      "exr": {
+        "size": 6561296,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_diff_2k.exr",
+        "md5": "3c2371f8057f2f969221766be99ca498"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 967420,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_diff_1k.jpg",
+        "md5": "35ede1acf485d0b70bee810829ea977e"
+      },
+      "png": {
+        "size": 5694197,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/bark_debris_01/bark_debris_01_diff_1k.png",
+        "md5": "d8803bc6acd3035f58af0bc915564519"
+      },
+      "exr": {
+        "size": 1836762,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_diff_1k.exr",
+        "md5": "d70af3f6d4a3aa52e6fbc622f41eee7b"
+      }
+    }
+  },
+  "nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 53414849,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_nor_dx_8k.jpg",
+        "md5": "cf88910db38219c03e82029fe9a3874f"
+      },
+      "png": {
+        "size": 262887666,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/bark_debris_01/bark_debris_01_nor_dx_8k.png",
+        "md5": "01601a8c0efa63927d097e3aa47eb0ac"
+      },
+      "exr": {
+        "size": 106036025,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_nor_dx_8k.exr",
+        "md5": "adc6771838fba69068b153fcc422372d"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 165211146,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_nor_dx_16k.jpg",
+        "md5": "d88da5acd91c299eb6954b980409e721"
+      },
+      "png": {
+        "size": 673552162,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/16k/bark_debris_01/bark_debris_01_nor_dx_16k.png",
+        "md5": "22eafe5e2400f0760f718ce2b8194583"
+      },
+      "exr": {
+        "size": 318239752,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_nor_dx_16k.exr",
+        "md5": "2f11d32aecf50c706e07f66e0b65d520"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 16244175,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_nor_dx_4k.jpg",
+        "md5": "bab0bd538b8c1361af2c427c2dca3762"
+      },
+      "png": {
+        "size": 80156918,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/bark_debris_01/bark_debris_01_nor_dx_4k.png",
+        "md5": "0f0585b9a2e25164ef52317ec17b69eb"
+      },
+      "exr": {
+        "size": 32819926,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_nor_dx_4k.exr",
+        "md5": "d50b811dfa056851b70581f52ee44dc9"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 4568199,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_nor_dx_2k.jpg",
+        "md5": "1e2c27965a1056b2d8b3189c4716bde7"
+      },
+      "png": {
+        "size": 22139200,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/bark_debris_01/bark_debris_01_nor_dx_2k.png",
+        "md5": "04e03d387c38029691598bf28c6da012"
+      },
+      "exr": {
+        "size": 9245955,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_nor_dx_2k.exr",
+        "md5": "9c65157bb65814f50951b88bde7cc42f"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 1207025,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_nor_dx_1k.jpg",
+        "md5": "ffc526461aac379f264ed016b380e8ec"
+      },
+      "png": {
+        "size": 5807672,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/bark_debris_01/bark_debris_01_nor_dx_1k.png",
+        "md5": "17ac0fa3d6285cf1c4318ec2f1ab36c5"
+      },
+      "exr": {
+        "size": 2459899,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_nor_dx_1k.exr",
+        "md5": "bfa7119156f0d6374df56ad1fbdb557d"
+      }
+    }
+  },
+  "nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 53547567,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_nor_gl_8k.jpg",
+        "md5": "ea7e8a1800318279e9aea70b6ad1c2c9"
+      },
+      "png": {
+        "size": 262905141,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/bark_debris_01/bark_debris_01_nor_gl_8k.png",
+        "md5": "26ab39db866625a147e4e0403c09f1c9"
+      },
+      "exr": {
+        "size": 106065901,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_nor_gl_8k.exr",
+        "md5": "8fe47a6b7a3e1cdeda0910ca9bd06b1d"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 165500047,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_nor_gl_16k.jpg",
+        "md5": "37b81b17d76cb0249a0047e52615bbb3"
+      },
+      "png": {
+        "size": 677227198,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/16k/bark_debris_01/bark_debris_01_nor_gl_16k.png",
+        "md5": "bfa5dc5111aee75623db1b483166ac1c"
+      },
+      "exr": {
+        "size": 318313624,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_nor_gl_16k.exr",
+        "md5": "25674b1f970aef1be6f5eb2493d1da23"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 16307494,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_nor_gl_4k.jpg",
+        "md5": "0541205735feee84f90263a8415e0fbe"
+      },
+      "png": {
+        "size": 80164941,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/bark_debris_01/bark_debris_01_nor_gl_4k.png",
+        "md5": "1ccdaca483460bf02be85b502f8875ac"
+      },
+      "exr": {
+        "size": 32830378,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_nor_gl_4k.exr",
+        "md5": "91da3367a93e70e97e368e631c1f8bac"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 4595313,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_nor_gl_2k.jpg",
+        "md5": "8f82c03787c8e7f11d217306266756dc"
+      },
+      "png": {
+        "size": 22139309,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/bark_debris_01/bark_debris_01_nor_gl_2k.png",
+        "md5": "93f44592724cbcf4678b88dadccd05a3"
+      },
+      "exr": {
+        "size": 9248158,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_nor_gl_2k.exr",
+        "md5": "400deeb15047f49be26ad4f2b054dff7"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 1216990,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_nor_gl_1k.jpg",
+        "md5": "466940d4520a89476211446a451e9271"
+      },
+      "png": {
+        "size": 5807811,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/bark_debris_01/bark_debris_01_nor_gl_1k.png",
+        "md5": "a8aea2fbb792b2fee81d683c881ba4dc"
+      },
+      "exr": {
+        "size": 2459886,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_nor_gl_1k.exr",
+        "md5": "ac0efcee92947f655d3b6c976561b071"
+      }
+    }
+  },
+  "blend": {
+    "8k": {
+      "blend": {
+        "include": {
+          "textures/bark_debris_01_diff_8k.jpg": {
+            "size": 45155139,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_diff_8k.jpg",
+            "md5": "e219d8438cea03731ffc1fe1b255dd4f"
+          },
+          "textures/bark_debris_01_nor_gl_8k.exr": {
+            "size": 106065901,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_nor_gl_8k.exr",
+            "md5": "8fe47a6b7a3e1cdeda0910ca9bd06b1d"
+          },
+          "textures/bark_debris_01_rough_8k.exr": {
+            "size": 26615337,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_rough_8k.exr",
+            "md5": "a84105ef948cde537273ca7ddadcb166"
+          }
+        },
+        "size": 12538352,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/8k/bark_debris_01/bark_debris_01_8k.blend",
+        "md5": "d2c8ad085b6870e9cfaf0c7a3d02405c"
+      }
+    },
+    "16k": {
+      "blend": {
+        "include": {
+          "textures/bark_debris_01_diff_16k.jpg": {
+            "size": 157338725,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_diff_16k.jpg",
+            "md5": "ae5ee363fbf13fed723c23276e554dfa"
+          },
+          "textures/bark_debris_01_nor_gl_16k.exr": {
+            "size": 318313624,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_nor_gl_16k.exr",
+            "md5": "25674b1f970aef1be6f5eb2493d1da23"
+          },
+          "textures/bark_debris_01_rough_16k.exr": {
+            "size": 94752196,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_rough_16k.exr",
+            "md5": "4e1aa6c061e52013657eb052abc6c033"
+          }
+        },
+        "size": 12538417,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/16k/bark_debris_01/bark_debris_01_16k.blend",
+        "md5": "8cc9b1747bcb6b7141d2689739a2c779"
+      }
+    },
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/bark_debris_01_rough_4k.exr": {
+            "size": 8004711,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_rough_4k.exr",
+            "md5": "45110bf2636bdff3eb89badeb6d7eaa5"
+          },
+          "textures/bark_debris_01_nor_gl_4k.exr": {
+            "size": 32830378,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_nor_gl_4k.exr",
+            "md5": "91da3367a93e70e97e368e631c1f8bac"
+          },
+          "textures/bark_debris_01_diff_4k.jpg": {
+            "size": 13049455,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_diff_4k.jpg",
+            "md5": "255c7757b60d5e8b5ce034a744378833"
+          }
+        },
+        "size": 12538322,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/bark_debris_01/bark_debris_01_4k.blend",
+        "md5": "b27937cbc19574930047bf6f9d23ee7a"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/bark_debris_01_nor_gl_2k.exr": {
+            "size": 9248158,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_nor_gl_2k.exr",
+            "md5": "400deeb15047f49be26ad4f2b054dff7"
+          },
+          "textures/bark_debris_01_diff_2k.jpg": {
+            "size": 3606750,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_diff_2k.jpg",
+            "md5": "068955d8c070acd9d3bd818675a4ff68"
+          },
+          "textures/bark_debris_01_rough_2k.exr": {
+            "size": 2262519,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_rough_2k.exr",
+            "md5": "e42ad608e8ad4768aaa6b73eed1a6a4f"
+          }
+        },
+        "size": 12538149,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/bark_debris_01/bark_debris_01_2k.blend",
+        "md5": "57fe12ab97136225af831c9d4379cb05"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/bark_debris_01_diff_1k.jpg": {
+            "size": 967420,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_diff_1k.jpg",
+            "md5": "35ede1acf485d0b70bee810829ea977e"
+          },
+          "textures/bark_debris_01_rough_1k.exr": {
+            "size": 618119,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_rough_1k.exr",
+            "md5": "5f90f1c85f7b751962fc8347f2ebfb8a"
+          },
+          "textures/bark_debris_01_nor_gl_1k.exr": {
+            "size": 2459886,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_nor_gl_1k.exr",
+            "md5": "ac0efcee92947f655d3b6c976561b071"
+          }
+        },
+        "size": 12538390,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/bark_debris_01/bark_debris_01_1k.blend",
+        "md5": "58d112a7d6b866c6214708e6c71ad5b5"
+      }
+    }
+  },
+  "gltf": {
+    "8k": {
+      "gltf": {
+        "include": {
+          "textures/bark_debris_01_diff_8k.jpg": {
+            "size": 45155139,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_diff_8k.jpg",
+            "md5": "e219d8438cea03731ffc1fe1b255dd4f"
+          },
+          "bark_debris_01.bin": {
+            "size": 4869268,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/bark_debris_01/bark_debris_01.bin",
+            "md5": "2ccb9e30747a8e33b354b0e242386e96"
+          },
+          "textures/bark_debris_01_nor_gl_8k.jpg": {
+            "size": 53547567,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_nor_gl_8k.jpg",
+            "md5": "ea7e8a1800318279e9aea70b6ad1c2c9"
+          },
+          "textures/bark_debris_01_arm_8k.jpg": {
+            "size": 43872871,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_arm_8k.jpg",
+            "md5": "4820e7eff5ba355f20e641011516f53c"
+          }
+        },
+        "size": 7646,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/bark_debris_01/bark_debris_01_8k.gltf",
+        "md5": "0840cd1524ccfc645ebf2fef3ff4bd8a"
+      }
+    },
+    "16k": {
+      "gltf": {
+        "include": {
+          "textures/bark_debris_01_nor_gl_16k.jpg": {
+            "size": 165500047,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_nor_gl_16k.jpg",
+            "md5": "37b81b17d76cb0249a0047e52615bbb3"
+          },
+          "textures/bark_debris_01_arm_16k.jpg": {
+            "size": 164543234,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_arm_16k.jpg",
+            "md5": "9ea6f00e4e86e9f8b0a9036c75d4d769"
+          },
+          "textures/bark_debris_01_diff_16k.jpg": {
+            "size": 157338725,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_diff_16k.jpg",
+            "md5": "ae5ee363fbf13fed723c23276e554dfa"
+          },
+          "bark_debris_01.bin": {
+            "size": 4869268,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/bark_debris_01/bark_debris_01.bin",
+            "md5": "2ccb9e30747a8e33b354b0e242386e96"
+          }
+        },
+        "size": 7649,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/16k/bark_debris_01/bark_debris_01_16k.gltf",
+        "md5": "26834268765de6456f9f632f56674e22"
+      }
+    },
+    "4k": {
+      "gltf": {
+        "include": {
+          "bark_debris_01.bin": {
+            "size": 4869268,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/bark_debris_01/bark_debris_01.bin",
+            "md5": "2ccb9e30747a8e33b354b0e242386e96"
+          },
+          "textures/bark_debris_01_nor_gl_4k.jpg": {
+            "size": 16307494,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_nor_gl_4k.jpg",
+            "md5": "0541205735feee84f90263a8415e0fbe"
+          },
+          "textures/bark_debris_01_diff_4k.jpg": {
+            "size": 13049455,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_diff_4k.jpg",
+            "md5": "255c7757b60d5e8b5ce034a744378833"
+          },
+          "textures/bark_debris_01_arm_4k.jpg": {
+            "size": 12623758,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_arm_4k.jpg",
+            "md5": "587d8028865ed697cd8f4b42ef36f428"
+          }
+        },
+        "size": 7646,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/bark_debris_01/bark_debris_01_4k.gltf",
+        "md5": "9850dd32acce70d1a05b37be6bc0ae09"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/bark_debris_01_nor_gl_2k.jpg": {
+            "size": 4595313,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_nor_gl_2k.jpg",
+            "md5": "8f82c03787c8e7f11d217306266756dc"
+          },
+          "textures/bark_debris_01_diff_2k.jpg": {
+            "size": 3606750,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_diff_2k.jpg",
+            "md5": "068955d8c070acd9d3bd818675a4ff68"
+          },
+          "textures/bark_debris_01_arm_2k.jpg": {
+            "size": 3592125,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_arm_2k.jpg",
+            "md5": "c9b378ff08c416014a261ef20852b750"
+          },
+          "bark_debris_01.bin": {
+            "size": 4869268,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/bark_debris_01/bark_debris_01.bin",
+            "md5": "2ccb9e30747a8e33b354b0e242386e96"
+          }
+        },
+        "size": 7646,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/bark_debris_01/bark_debris_01_2k.gltf",
+        "md5": "aa7f9fc9b8db9974bdf2921ff9377990"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/bark_debris_01_arm_1k.jpg": {
+            "size": 1006457,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_arm_1k.jpg",
+            "md5": "6eaf9f99f8e4c9f8d7a5424c1ad276ee"
+          },
+          "bark_debris_01.bin": {
+            "size": 4869268,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/bark_debris_01/bark_debris_01.bin",
+            "md5": "2ccb9e30747a8e33b354b0e242386e96"
+          },
+          "textures/bark_debris_01_diff_1k.jpg": {
+            "size": 967420,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_diff_1k.jpg",
+            "md5": "35ede1acf485d0b70bee810829ea977e"
+          },
+          "textures/bark_debris_01_nor_gl_1k.jpg": {
+            "size": 1216990,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_nor_gl_1k.jpg",
+            "md5": "466940d4520a89476211446a451e9271"
+          }
+        },
+        "size": 7646,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/bark_debris_01/bark_debris_01_1k.gltf",
+        "md5": "fb8033c97ecda56330815ca1e8d944ae"
+      }
+    }
+  },
+  "usd": {
+    "8k": {
+      "usd": {
+        "include": {
+          "textures/bark_debris_01_diff_8k.jpg": {
+            "size": 45155139,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_diff_8k.jpg",
+            "md5": "e219d8438cea03731ffc1fe1b255dd4f"
+          },
+          "textures/bark_debris_01_nor_gl_8k.exr": {
+            "size": 106065901,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_nor_gl_8k.exr",
+            "md5": "8fe47a6b7a3e1cdeda0910ca9bd06b1d"
+          },
+          "textures/bark_debris_01_rough_8k.exr": {
+            "size": 26615337,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_rough_8k.exr",
+            "md5": "a84105ef948cde537273ca7ddadcb166"
+          }
+        },
+        "size": 13628037,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/8k/bark_debris_01/bark_debris_01_8k.usdc",
+        "md5": "043dca3944104449766c1314a22c8c42"
+      }
+    },
+    "16k": {
+      "usd": {
+        "include": {
+          "textures/bark_debris_01_diff_16k.jpg": {
+            "size": 157338725,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_diff_16k.jpg",
+            "md5": "ae5ee363fbf13fed723c23276e554dfa"
+          },
+          "textures/bark_debris_01_nor_gl_16k.exr": {
+            "size": 318313624,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_nor_gl_16k.exr",
+            "md5": "25674b1f970aef1be6f5eb2493d1da23"
+          },
+          "textures/bark_debris_01_rough_16k.exr": {
+            "size": 94752196,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_rough_16k.exr",
+            "md5": "4e1aa6c061e52013657eb052abc6c033"
+          }
+        },
+        "size": 13628038,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/16k/bark_debris_01/bark_debris_01_16k.usdc",
+        "md5": "76d4e573c43e86b5cd0fcc591f41e419"
+      }
+    },
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/bark_debris_01_rough_4k.exr": {
+            "size": 8004711,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_rough_4k.exr",
+            "md5": "45110bf2636bdff3eb89badeb6d7eaa5"
+          },
+          "textures/bark_debris_01_nor_gl_4k.exr": {
+            "size": 32830378,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_nor_gl_4k.exr",
+            "md5": "91da3367a93e70e97e368e631c1f8bac"
+          },
+          "textures/bark_debris_01_diff_4k.jpg": {
+            "size": 13049455,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_diff_4k.jpg",
+            "md5": "255c7757b60d5e8b5ce034a744378833"
+          }
+        },
+        "size": 13628034,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/bark_debris_01/bark_debris_01_4k.usdc",
+        "md5": "4b2f24621eaaf743b2253771f5ddfceb"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/bark_debris_01_nor_gl_2k.exr": {
+            "size": 9248158,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_nor_gl_2k.exr",
+            "md5": "400deeb15047f49be26ad4f2b054dff7"
+          },
+          "textures/bark_debris_01_diff_2k.jpg": {
+            "size": 3606750,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_diff_2k.jpg",
+            "md5": "068955d8c070acd9d3bd818675a4ff68"
+          },
+          "textures/bark_debris_01_rough_2k.exr": {
+            "size": 2262519,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_rough_2k.exr",
+            "md5": "e42ad608e8ad4768aaa6b73eed1a6a4f"
+          }
+        },
+        "size": 13628037,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/bark_debris_01/bark_debris_01_2k.usdc",
+        "md5": "8170132302a468ffd9b7fbbfb2c8b143"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/bark_debris_01_diff_1k.jpg": {
+            "size": 967420,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_diff_1k.jpg",
+            "md5": "35ede1acf485d0b70bee810829ea977e"
+          },
+          "textures/bark_debris_01_rough_1k.exr": {
+            "size": 618119,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_rough_1k.exr",
+            "md5": "5f90f1c85f7b751962fc8347f2ebfb8a"
+          },
+          "textures/bark_debris_01_nor_gl_1k.exr": {
+            "size": 2459886,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_nor_gl_1k.exr",
+            "md5": "ac0efcee92947f655d3b6c976561b071"
+          }
+        },
+        "size": 13628037,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/bark_debris_01/bark_debris_01_1k.usdc",
+        "md5": "115fa3e39faa9e53234ef10341c45e11"
+      }
+    }
+  },
+  "arm": {
+    "8k": {
+      "jpg": {
+        "size": 43872871,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_arm_8k.jpg",
+        "md5": "4820e7eff5ba355f20e641011516f53c"
+      },
+      "png": {
+        "size": 80973988,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/bark_debris_01/bark_debris_01_arm_8k.png",
+        "md5": "6fe3ac28cd56d031dd0318c9c428efd9"
+      },
+      "exr": {
+        "size": 86499154,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_arm_8k.exr",
+        "md5": "c55a33c6d5fffc67d06d7fa28fa043df"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 164543234,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_arm_16k.jpg",
+        "md5": "9ea6f00e4e86e9f8b0a9036c75d4d769"
+      },
+      "png": {
+        "size": 301473176,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/16k/bark_debris_01/bark_debris_01_arm_16k.png",
+        "md5": "9d0140de97ef9877f4b13c48cc7b2d71"
+      },
+      "exr": {
+        "size": 347148134,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_arm_16k.exr",
+        "md5": "13a63ccb4b5cb952584c85430fdde8ed"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 12623758,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_arm_4k.jpg",
+        "md5": "587d8028865ed697cd8f4b42ef36f428"
+      },
+      "png": {
+        "size": 23093877,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/bark_debris_01/bark_debris_01_arm_4k.png",
+        "md5": "06fc8230a355ad087538dffb4940569f"
+      },
+      "exr": {
+        "size": 25175396,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_arm_4k.exr",
+        "md5": "0d2becde63817fafda5a8a077fa0717c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3592125,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_arm_2k.jpg",
+        "md5": "c9b378ff08c416014a261ef20852b750"
+      },
+      "png": {
+        "size": 6461405,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/bark_debris_01/bark_debris_01_arm_2k.png",
+        "md5": "ed5be63d633c30a700168670fa5cc654"
+      },
+      "exr": {
+        "size": 7309943,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_arm_2k.exr",
+        "md5": "7a03069b8bcab21dbc7b826363d10ba7"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 1006457,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_arm_1k.jpg",
+        "md5": "6eaf9f99f8e4c9f8d7a5424c1ad276ee"
+      },
+      "png": {
+        "size": 1766589,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/bark_debris_01/bark_debris_01_arm_1k.png",
+        "md5": "5e5dd6e6f8c8fd188b8e9e8c0648f9df"
+      },
+      "exr": {
+        "size": 2064894,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_arm_1k.exr",
+        "md5": "19b5dae0febf03fb145c46cbf2baaf4b"
+      }
+    }
+  },
+  "fbx": {
+    "8k": {
+      "fbx": {
+        "include": {
+          "textures/bark_debris_01_diff_8k.jpg": {
+            "size": 45155139,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_diff_8k.jpg",
+            "md5": "e219d8438cea03731ffc1fe1b255dd4f"
+          },
+          "textures/bark_debris_01_nor_gl_8k.exr": {
+            "size": 106065901,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_nor_gl_8k.exr",
+            "md5": "8fe47a6b7a3e1cdeda0910ca9bd06b1d"
+          },
+          "textures/bark_debris_01_rough_8k.exr": {
+            "size": 26615337,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_rough_8k.exr",
+            "md5": "a84105ef948cde537273ca7ddadcb166"
+          }
+        },
+        "size": 6057900,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/8k/bark_debris_01/bark_debris_01_8k.fbx",
+        "md5": "1976bb4854f3a5ae10fb393cbb56bcc0"
+      }
+    },
+    "16k": {
+      "fbx": {
+        "include": {
+          "textures/bark_debris_01_diff_16k.jpg": {
+            "size": 157338725,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_diff_16k.jpg",
+            "md5": "ae5ee363fbf13fed723c23276e554dfa"
+          },
+          "textures/bark_debris_01_nor_gl_16k.exr": {
+            "size": 318313624,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_nor_gl_16k.exr",
+            "md5": "25674b1f970aef1be6f5eb2493d1da23"
+          },
+          "textures/bark_debris_01_rough_16k.exr": {
+            "size": 94752196,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_rough_16k.exr",
+            "md5": "4e1aa6c061e52013657eb052abc6c033"
+          }
+        },
+        "size": 6057932,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/16k/bark_debris_01/bark_debris_01_16k.fbx",
+        "md5": "0060ecce71f6fb64e16440fedbd66d68"
+      }
+    },
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/bark_debris_01_rough_4k.exr": {
+            "size": 8004711,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_rough_4k.exr",
+            "md5": "45110bf2636bdff3eb89badeb6d7eaa5"
+          },
+          "textures/bark_debris_01_nor_gl_4k.exr": {
+            "size": 32830378,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_nor_gl_4k.exr",
+            "md5": "91da3367a93e70e97e368e631c1f8bac"
+          },
+          "textures/bark_debris_01_diff_4k.jpg": {
+            "size": 13049455,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_diff_4k.jpg",
+            "md5": "255c7757b60d5e8b5ce034a744378833"
+          }
+        },
+        "size": 6057900,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/bark_debris_01/bark_debris_01_4k.fbx",
+        "md5": "9b729ec7020897d1bc142e0bc079f385"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/bark_debris_01_nor_gl_2k.exr": {
+            "size": 9248158,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_nor_gl_2k.exr",
+            "md5": "400deeb15047f49be26ad4f2b054dff7"
+          },
+          "textures/bark_debris_01_diff_2k.jpg": {
+            "size": 3606750,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_diff_2k.jpg",
+            "md5": "068955d8c070acd9d3bd818675a4ff68"
+          },
+          "textures/bark_debris_01_rough_2k.exr": {
+            "size": 2262519,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_rough_2k.exr",
+            "md5": "e42ad608e8ad4768aaa6b73eed1a6a4f"
+          }
+        },
+        "size": 6057900,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/bark_debris_01/bark_debris_01_2k.fbx",
+        "md5": "0941a78e5e4c120f3c4b1a6a8c6a0db0"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/bark_debris_01_diff_1k.jpg": {
+            "size": 967420,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_diff_1k.jpg",
+            "md5": "35ede1acf485d0b70bee810829ea977e"
+          },
+          "textures/bark_debris_01_rough_1k.exr": {
+            "size": 618119,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_rough_1k.exr",
+            "md5": "5f90f1c85f7b751962fc8347f2ebfb8a"
+          },
+          "textures/bark_debris_01_nor_gl_1k.exr": {
+            "size": 2459886,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_nor_gl_1k.exr",
+            "md5": "ac0efcee92947f655d3b6c976561b071"
+          }
+        },
+        "size": 6057900,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/bark_debris_01/bark_debris_01_1k.fbx",
+        "md5": "b03c9459d035ebcd26f1d759ee007eae"
+      }
+    }
+  },
+  "AO": {
+    "8k": {
+      "jpg": {
+        "size": 39436234,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_ao_8k.jpg",
+        "md5": "93644d6c78ef33a8b84d3847bd44131a"
+      },
+      "png": {
+        "size": 89711318,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/bark_debris_01/bark_debris_01_ao_8k.png",
+        "md5": "a4ebfe0e745dc53b4ac5034d8f025b7f"
+      },
+      "exr": {
+        "size": 43086723,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_ao_8k.exr",
+        "md5": "6c7e786a3b9e6fbf370786e650b5e054"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 161406211,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_ao_16k.jpg",
+        "md5": "e6c692c227193dc654def2cc94e9c058"
+      },
+      "png": {
+        "size": 238275038,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/16k/bark_debris_01/bark_debris_01_ao_16k.png",
+        "md5": "87d05d008285af104c3e3c367303b574"
+      },
+      "exr": {
+        "size": 172693913,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_ao_16k.exr",
+        "md5": "add8e3bff2d4098447326a8a77cf1531"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 11158727,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_ao_4k.jpg",
+        "md5": "b03fb03c40c63d45d84b79eff36c36cb"
+      },
+      "png": {
+        "size": 26923213,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/bark_debris_01/bark_debris_01_ao_4k.png",
+        "md5": "e61150f2918b325d80bee4ce7dafb4b5"
+      },
+      "exr": {
+        "size": 12052856,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_ao_4k.exr",
+        "md5": "2bf45514729e9f21539fdb90be54e302"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3276309,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_ao_2k.jpg",
+        "md5": "7a13a8e9d277da1448e1c738dc5dde2d"
+      },
+      "png": {
+        "size": 7346732,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/bark_debris_01/bark_debris_01_ao_2k.png",
+        "md5": "8d8bd43e7eb9879230dc5fef78674a9e"
+      },
+      "exr": {
+        "size": 3500015,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_ao_2k.exr",
+        "md5": "dced8c4e81dfdebc93d3afbb78743fa2"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 951576,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_ao_1k.jpg",
+        "md5": "f72cca6b4c55d2a0972329d755dd39be"
+      },
+      "png": {
+        "size": 1935473,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/bark_debris_01/bark_debris_01_ao_1k.png",
+        "md5": "04a4334f05b4bb749c15c0bc8767e414"
+      },
+      "exr": {
+        "size": 1007934,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_ao_1k.exr",
+        "md5": "0cff9ddbed99a0987a061cb12e3f141a"
+      }
+    }
+  },
+  "Displacement": {
+    "8k": {
+      "jpg": {
+        "size": 10840998,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_disp_8k.jpg",
+        "md5": "e0807ea3d12206903479cd6a1a5d2603"
+      },
+      "png": {
+        "size": 70842827,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/bark_debris_01/bark_debris_01_disp_8k.png",
+        "md5": "adbdd54ccdb3000c7457bb7187575942"
+      },
+      "exr": {
+        "size": 9482923,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_disp_8k.exr",
+        "md5": "25023fea530ebcff5da208b6ad135556"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 32155165,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_disp_16k.jpg",
+        "md5": "aa89911cbb07ceb748dbdd883cc83280"
+      },
+      "png": {
+        "size": 167193922,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/16k/bark_debris_01/bark_debris_01_disp_16k.png",
+        "md5": "0fb9512a2b540056011ac7537592a705"
+      },
+      "exr": {
+        "size": 25756201,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_disp_16k.exr",
+        "md5": "60dc833f7c86aa392264298ba26251a8"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 3651596,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_disp_4k.jpg",
+        "md5": "b092519325bf8b0a405711a86c05583d"
+      },
+      "png": {
+        "size": 22578361,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/bark_debris_01/bark_debris_01_disp_4k.png",
+        "md5": "c4e8efdf6052496fcd7d7a966b8fcf00"
+      },
+      "exr": {
+        "size": 3343253,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_disp_4k.exr",
+        "md5": "2be5717c8d644129476d456abcf2d30a"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1182995,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_disp_2k.jpg",
+        "md5": "3d84017d145872d9258bed8bac0f8761"
+      },
+      "png": {
+        "size": 6300675,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/bark_debris_01/bark_debris_01_disp_2k.png",
+        "md5": "d03fa1976f83aea1344a2a2a03e4ee9b"
+      },
+      "exr": {
+        "size": 1114689,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_disp_2k.exr",
+        "md5": "22e98917c1e63b8d13f6cee7b3420444"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 348175,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_disp_1k.jpg",
+        "md5": "3c8252fcf493e82ee70e9dc8d97fed84"
+      },
+      "png": {
+        "size": 1656383,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/bark_debris_01/bark_debris_01_disp_1k.png",
+        "md5": "2dc04a3ad02e23d1d62d51972614dc8c"
+      },
+      "exr": {
+        "size": 338445,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_disp_1k.exr",
+        "md5": "b28d32778d16683df112ae13b9a85005"
+      }
+    }
+  },
+  "Rough": {
+    "8k": {
+      "jpg": {
+        "size": 27947590,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/bark_debris_01/bark_debris_01_rough_8k.jpg",
+        "md5": "0eab126c89088739577885e22ffdea5b"
+      },
+      "png": {
+        "size": 72387266,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/bark_debris_01/bark_debris_01_rough_8k.png",
+        "md5": "a5e48c8bf84a87a00cfcc1ee48e3005f"
+      },
+      "exr": {
+        "size": 26615337,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/bark_debris_01/bark_debris_01_rough_8k.exr",
+        "md5": "a84105ef948cde537273ca7ddadcb166"
+      }
+    },
+    "16k": {
+      "jpg": {
+        "size": 100211424,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/16k/bark_debris_01/bark_debris_01_rough_16k.jpg",
+        "md5": "bdd32b34c8d691da0f4e3a41e4aa70ee"
+      },
+      "png": {
+        "size": 128643000,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/16k/bark_debris_01/bark_debris_01_rough_16k.png",
+        "md5": "3ab6548b8f13ddc4ed57544d91c4df0d"
+      },
+      "exr": {
+        "size": 94752196,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/16k/bark_debris_01/bark_debris_01_rough_16k.exr",
+        "md5": "4e1aa6c061e52013657eb052abc6c033"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 8123918,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_rough_4k.jpg",
+        "md5": "b1ce6c1c8cf8e773150449bfe995eb88"
+      },
+      "png": {
+        "size": 25246873,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/bark_debris_01/bark_debris_01_rough_4k.png",
+        "md5": "f7c1f8cc6ed22b5698f0543b595d8118"
+      },
+      "exr": {
+        "size": 8004711,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/bark_debris_01/bark_debris_01_rough_4k.exr",
+        "md5": "45110bf2636bdff3eb89badeb6d7eaa5"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2244926,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/bark_debris_01/bark_debris_01_rough_2k.jpg",
+        "md5": "9e79d36d704ce7f7f468369ad029276c"
+      },
+      "png": {
+        "size": 7021246,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/bark_debris_01/bark_debris_01_rough_2k.png",
+        "md5": "d6b0cb1ca56af85fa3e1bb559cb4bfe7"
+      },
+      "exr": {
+        "size": 2262519,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/bark_debris_01/bark_debris_01_rough_2k.exr",
+        "md5": "e42ad608e8ad4768aaa6b73eed1a6a4f"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 596369,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bark_debris_01/bark_debris_01_rough_1k.jpg",
+        "md5": "0d6798e2976bce4cbf909ec0bbe893ab"
+      },
+      "png": {
+        "size": 1821631,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/bark_debris_01/bark_debris_01_rough_1k.png",
+        "md5": "e5e0269bd55b1da6b140d4b526616fac"
+      },
+      "exr": {
+        "size": 618119,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/bark_debris_01/bark_debris_01_rough_1k.exr",
+        "md5": "5f90f1c85f7b751962fc8347f2ebfb8a"
+      }
+    }
+  }
+}

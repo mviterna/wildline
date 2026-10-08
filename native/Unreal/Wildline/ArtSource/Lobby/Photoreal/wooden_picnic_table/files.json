@@ -1,0 +1,1325 @@
+{
+  "top_arm": {
+    "4k": {
+      "jpg": {
+        "size": 14161920,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_arm_4k.jpg",
+        "md5": "214711772b533d51b3a3eddc694dd619"
+      },
+      "png": {
+        "size": 45988834,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_arm_4k.png",
+        "md5": "372fe0f5538e56d20472726885077e89"
+      },
+      "exr": {
+        "size": 30620838,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_top_arm_4k.exr",
+        "md5": "4ca34784f2cf4752539c8b75198e5e74"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3118298,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_top_arm_2k.jpg",
+        "md5": "2d15a3d29e030399e103b281cd5d3ade"
+      },
+      "png": {
+        "size": 12922525,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_arm_2k.png",
+        "md5": "6b5a117be0ffbdc4b411d5b6d02a93e4"
+      },
+      "exr": {
+        "size": 6854920,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_top_arm_2k.exr",
+        "md5": "fc7d099fbfd35661e831955773fafb2e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 747432,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_top_arm_1k.jpg",
+        "md5": "7455dbd1d31d365961ff55b7a2a67186"
+      },
+      "png": {
+        "size": 3406145,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_arm_1k.png",
+        "md5": "c343a9e74e03bad6e3abf4bd873dacc3"
+      },
+      "exr": {
+        "size": 1649994,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_top_arm_1k.exr",
+        "md5": "96862e3a862c134af153d921e0d06910"
+      }
+    }
+  },
+  "top_nor_dx": {
+    "4k": {
+      "jpg": {
+        "size": 14298676,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_nor_dx_4k.jpg",
+        "md5": "070d7b97784ae6e1c4f79cf2490c0067"
+      },
+      "png": {
+        "size": 76514980,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_nor_dx_4k.png",
+        "md5": "3e20d7dd6442ab386bf320df0bca1416"
+      },
+      "exr": {
+        "size": 30417732,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_top_nor_dx_4k.exr",
+        "md5": "d202769f4e533d9b5934e03e06ad8865"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3081379,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_top_nor_dx_2k.jpg",
+        "md5": "d41285b2edd755a0322600a0e06fff23"
+      },
+      "png": {
+        "size": 19718136,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_nor_dx_2k.png",
+        "md5": "da945f4050fbfc2045729601e4709fcc"
+      },
+      "exr": {
+        "size": 7066715,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_top_nor_dx_2k.exr",
+        "md5": "247514f79e196b90183b5a6c14042fd3"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 630395,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_top_nor_dx_1k.jpg",
+        "md5": "5b58e652b99c184bd59d7cbd9f70dc26"
+      },
+      "png": {
+        "size": 5011159,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_nor_dx_1k.png",
+        "md5": "519246c5de84d96f138866d65482ac46"
+      },
+      "exr": {
+        "size": 1535260,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_top_nor_dx_1k.exr",
+        "md5": "eeee4cfb0b7a1015152787883c056cce"
+      }
+    }
+  },
+  "blend": {
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/wooden_picnic_table_top_rough_4k.png": {
+            "size": 20713009,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_rough_4k.png",
+            "md5": "5182b4fb4981d0e95676001d9ec0147b"
+          },
+          "textures/wooden_picnic_table_bottom_diff_4k.png": {
+            "size": 57746852,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_diff_4k.png",
+            "md5": "e5e3241027b6439ec2bb7ee6aa801fb1"
+          },
+          "textures/wooden_picnic_table_bottom_rough_4k.png": {
+            "size": 16114247,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_rough_4k.png",
+            "md5": "3ef420325fa76f4090c2818f57121902"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_4k.png": {
+            "size": 58790233,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_4k.png",
+            "md5": "a991e8c306c5ebde5a30f3477effeee2"
+          },
+          "textures/wooden_picnic_table_top_metal_4k.png": {
+            "size": 374983,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_metal_4k.png",
+            "md5": "b02db0f94d85b110271c7a30f3256fd3"
+          },
+          "textures/wooden_picnic_table_top_nor_gl_4k.png": {
+            "size": 76515611,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_4k.png",
+            "md5": "f8f0c1d2b81b926005b19d2478879357"
+          },
+          "textures/wooden_picnic_table_bottom_metal_4k.png": {
+            "size": 32742,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_metal_4k.png",
+            "md5": "b0f303826984180760dd56907d0440e9"
+          },
+          "textures/wooden_picnic_table_top_diff_4k.png": {
+            "size": 70460465,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_diff_4k.png",
+            "md5": "39366f20074dd38a9d04278493fed35a"
+          }
+        },
+        "size": 355838,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/wooden_picnic_table/wooden_picnic_table_4k.blend",
+        "md5": "d6b8d16aa3e3c8b1dd18561951a8f6de"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/wooden_picnic_table_top_metal_2k.png": {
+            "size": 139867,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_metal_2k.png",
+            "md5": "56b37eea501158842e24e564833cc555"
+          },
+          "textures/wooden_picnic_table_top_nor_gl_2k.png": {
+            "size": 19719938,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_2k.png",
+            "md5": "35af972152a6ce8b9f057b266e9118c0"
+          },
+          "textures/wooden_picnic_table_top_diff_2k.png": {
+            "size": 19721219,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_diff_2k.png",
+            "md5": "dc90926b2aa7d1926f7906549fd467fa"
+          },
+          "textures/wooden_picnic_table_bottom_metal_2k.png": {
+            "size": 8435,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_metal_2k.png",
+            "md5": "868380ed5b0ca0a3abb40170d90de5f4"
+          },
+          "textures/wooden_picnic_table_top_rough_2k.png": {
+            "size": 6296245,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_rough_2k.png",
+            "md5": "f1349f4e25740236443b2d7f96520143"
+          },
+          "textures/wooden_picnic_table_bottom_diff_2k.png": {
+            "size": 16306847,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_diff_2k.png",
+            "md5": "7f6ab244409da47706751d7db17e880e"
+          },
+          "textures/wooden_picnic_table_bottom_rough_2k.png": {
+            "size": 5214967,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_rough_2k.png",
+            "md5": "de933e230aa9ed135a8b816ebeb10eee"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_2k.png": {
+            "size": 15859689,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_2k.png",
+            "md5": "6ce3837168e2b6314c4574ed9a4942a9"
+          }
+        },
+        "size": 355903,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/wooden_picnic_table/wooden_picnic_table_2k.blend",
+        "md5": "83e73cb3b20a9420d763ed7df50b7527"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/wooden_picnic_table_top_rough_1k.png": {
+            "size": 1711618,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_rough_1k.png",
+            "md5": "df08d560d7fb5ce0686dc565ae7b5e77"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_1k.png": {
+            "size": 4214018,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_1k.png",
+            "md5": "551417cbc9a152548c4544beb6e088f7"
+          },
+          "textures/wooden_picnic_table_bottom_diff_1k.png": {
+            "size": 4426683,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_diff_1k.png",
+            "md5": "8e183b6c6ed796a111cfd8226e4aad38"
+          },
+          "textures/wooden_picnic_table_bottom_metal_1k.png": {
+            "size": 2326,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_metal_1k.png",
+            "md5": "d52941fc0f9796596d828b89f304155b"
+          },
+          "textures/wooden_picnic_table_bottom_rough_1k.png": {
+            "size": 1516865,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_rough_1k.png",
+            "md5": "f6745a78c8b526e8df60eab0e6b96ac5"
+          },
+          "textures/wooden_picnic_table_top_nor_gl_1k.png": {
+            "size": 5011454,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_1k.png",
+            "md5": "a538d3a42cf656932d776bd6b2fdc8f2"
+          },
+          "textures/wooden_picnic_table_top_diff_1k.png": {
+            "size": 5125404,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_diff_1k.png",
+            "md5": "2a4497a4207fc1b672de45b4debe2af0"
+          },
+          "textures/wooden_picnic_table_top_metal_1k.png": {
+            "size": 50547,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_metal_1k.png",
+            "md5": "447d009e80903b13333feddb66b73c46"
+          }
+        },
+        "size": 356157,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/wooden_picnic_table/wooden_picnic_table_1k.blend",
+        "md5": "09183939c50beebf274a2c0f681dc3e0"
+      }
+    }
+  },
+  "gltf": {
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/wooden_picnic_table_top_nor_gl_4k.jpg": {
+            "size": 13810165,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_4k.jpg",
+            "md5": "e0f446ba0996a3641f4d616e1897aa0d"
+          },
+          "wooden_picnic_table.bin": {
+            "size": 279116,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_picnic_table/wooden_picnic_table.bin",
+            "md5": "5d52db76187b9990c328f79612eafe5b"
+          },
+          "textures/wooden_picnic_table_bottom_arm_4k.jpg": {
+            "size": 11944112,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_arm_4k.jpg",
+            "md5": "345fba0d11f34a023ce451d1d9cde030"
+          },
+          "textures/wooden_picnic_table_top_diff_4k.jpg": {
+            "size": 14403736,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_diff_4k.jpg",
+            "md5": "f939475561fdfc8677e3739a2c359464"
+          },
+          "textures/wooden_picnic_table_bottom_diff_4k.jpg": {
+            "size": 12469787,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_diff_4k.jpg",
+            "md5": "390fc2fce7f475f2587b63bde05c65d6"
+          },
+          "textures/wooden_picnic_table_top_arm_4k.jpg": {
+            "size": 14161920,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_arm_4k.jpg",
+            "md5": "214711772b533d51b3a3eddc694dd619"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_4k.jpg": {
+            "size": 11204445,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_4k.jpg",
+            "md5": "6f7c96328bbd75bac8abff2617452226"
+          }
+        },
+        "size": 5099,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_picnic_table/wooden_picnic_table_4k.gltf",
+        "md5": "26cd175aadaafe38c7edb09933911df0"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "wooden_picnic_table.bin": {
+            "size": 279116,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_picnic_table/wooden_picnic_table.bin",
+            "md5": "5d52db76187b9990c328f79612eafe5b"
+          },
+          "textures/wooden_picnic_table_bottom_diff_2k.jpg": {
+            "size": 2779459,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_bottom_diff_2k.jpg",
+            "md5": "1b7f3fc4cd25d3bd3f70fbc3d79abcda"
+          },
+          "textures/wooden_picnic_table_top_arm_2k.jpg": {
+            "size": 3118298,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_top_arm_2k.jpg",
+            "md5": "2d15a3d29e030399e103b281cd5d3ade"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_2k.jpg": {
+            "size": 2513966,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_2k.jpg",
+            "md5": "fefd4371897586469d15c90e61bf2636"
+          },
+          "textures/wooden_picnic_table_top_nor_gl_2k.jpg": {
+            "size": 3037855,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_2k.jpg",
+            "md5": "3b39af73bd852ee53836ea8decb2ab12"
+          },
+          "textures/wooden_picnic_table_bottom_arm_2k.jpg": {
+            "size": 2774038,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_bottom_arm_2k.jpg",
+            "md5": "1d2d2b4aabb1de0081fa3ab46ca332fb"
+          },
+          "textures/wooden_picnic_table_top_diff_2k.jpg": {
+            "size": 3135590,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_top_diff_2k.jpg",
+            "md5": "95fc5e6a6ebc1c9f6ce36689bf748403"
+          }
+        },
+        "size": 5099,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/wooden_picnic_table/wooden_picnic_table_2k.gltf",
+        "md5": "9421ec959f6447e5edbf2551b5cc6754"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/wooden_picnic_table_top_arm_1k.jpg": {
+            "size": 747432,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_top_arm_1k.jpg",
+            "md5": "7455dbd1d31d365961ff55b7a2a67186"
+          },
+          "textures/wooden_picnic_table_top_nor_gl_1k.jpg": {
+            "size": 625681,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_1k.jpg",
+            "md5": "cab70a224d5b87bcb6c0595e14565626"
+          },
+          "wooden_picnic_table.bin": {
+            "size": 279116,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_picnic_table/wooden_picnic_table.bin",
+            "md5": "5d52db76187b9990c328f79612eafe5b"
+          },
+          "textures/wooden_picnic_table_bottom_arm_1k.jpg": {
+            "size": 699984,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_bottom_arm_1k.jpg",
+            "md5": "11af6815971a16983c1e70103cd8300e"
+          },
+          "textures/wooden_picnic_table_top_diff_1k.jpg": {
+            "size": 722582,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_top_diff_1k.jpg",
+            "md5": "5ad2a2cb0ff9f55602ea0ad23096116f"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_1k.jpg": {
+            "size": 548315,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_1k.jpg",
+            "md5": "6b9ad57ca60a3dc5bc5e6e57acfd6cc9"
+          },
+          "textures/wooden_picnic_table_bottom_diff_1k.jpg": {
+            "size": 680087,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_bottom_diff_1k.jpg",
+            "md5": "496b544a3dded845915431cef92e2f7d"
+          }
+        },
+        "size": 5099,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/wooden_picnic_table/wooden_picnic_table_1k.gltf",
+        "md5": "6da01f8a75e559f356b494059f7b0eda"
+      }
+    }
+  },
+  "usd": {
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/wooden_picnic_table_top_rough_4k.png": {
+            "size": 20713009,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_rough_4k.png",
+            "md5": "5182b4fb4981d0e95676001d9ec0147b"
+          },
+          "textures/wooden_picnic_table_bottom_diff_4k.png": {
+            "size": 57746852,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_diff_4k.png",
+            "md5": "e5e3241027b6439ec2bb7ee6aa801fb1"
+          },
+          "textures/wooden_picnic_table_bottom_rough_4k.png": {
+            "size": 16114247,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_rough_4k.png",
+            "md5": "3ef420325fa76f4090c2818f57121902"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_4k.png": {
+            "size": 58790233,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_4k.png",
+            "md5": "a991e8c306c5ebde5a30f3477effeee2"
+          },
+          "textures/wooden_picnic_table_top_metal_4k.png": {
+            "size": 374983,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_metal_4k.png",
+            "md5": "b02db0f94d85b110271c7a30f3256fd3"
+          },
+          "textures/wooden_picnic_table_top_nor_gl_4k.png": {
+            "size": 76515611,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_4k.png",
+            "md5": "f8f0c1d2b81b926005b19d2478879357"
+          },
+          "textures/wooden_picnic_table_bottom_metal_4k.png": {
+            "size": 32742,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_metal_4k.png",
+            "md5": "b0f303826984180760dd56907d0440e9"
+          },
+          "textures/wooden_picnic_table_top_diff_4k.png": {
+            "size": 70460465,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_diff_4k.png",
+            "md5": "39366f20074dd38a9d04278493fed35a"
+          }
+        },
+        "size": 518049,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/wooden_picnic_table/wooden_picnic_table_4k.usdc",
+        "md5": "f5c222a1988170b69b4e110c5a8ff839"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/wooden_picnic_table_top_metal_2k.png": {
+            "size": 139867,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_metal_2k.png",
+            "md5": "56b37eea501158842e24e564833cc555"
+          },
+          "textures/wooden_picnic_table_top_nor_gl_2k.png": {
+            "size": 19719938,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_2k.png",
+            "md5": "35af972152a6ce8b9f057b266e9118c0"
+          },
+          "textures/wooden_picnic_table_top_diff_2k.png": {
+            "size": 19721219,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_diff_2k.png",
+            "md5": "dc90926b2aa7d1926f7906549fd467fa"
+          },
+          "textures/wooden_picnic_table_bottom_metal_2k.png": {
+            "size": 8435,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_metal_2k.png",
+            "md5": "868380ed5b0ca0a3abb40170d90de5f4"
+          },
+          "textures/wooden_picnic_table_top_rough_2k.png": {
+            "size": 6296245,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_rough_2k.png",
+            "md5": "f1349f4e25740236443b2d7f96520143"
+          },
+          "textures/wooden_picnic_table_bottom_diff_2k.png": {
+            "size": 16306847,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_diff_2k.png",
+            "md5": "7f6ab244409da47706751d7db17e880e"
+          },
+          "textures/wooden_picnic_table_bottom_rough_2k.png": {
+            "size": 5214967,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_rough_2k.png",
+            "md5": "de933e230aa9ed135a8b816ebeb10eee"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_2k.png": {
+            "size": 15859689,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_2k.png",
+            "md5": "6ce3837168e2b6314c4574ed9a4942a9"
+          }
+        },
+        "size": 518049,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/wooden_picnic_table/wooden_picnic_table_2k.usdc",
+        "md5": "03c99e163adcdc59ca191119ada62996"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/wooden_picnic_table_top_rough_1k.png": {
+            "size": 1711618,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_rough_1k.png",
+            "md5": "df08d560d7fb5ce0686dc565ae7b5e77"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_1k.png": {
+            "size": 4214018,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_1k.png",
+            "md5": "551417cbc9a152548c4544beb6e088f7"
+          },
+          "textures/wooden_picnic_table_bottom_diff_1k.png": {
+            "size": 4426683,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_diff_1k.png",
+            "md5": "8e183b6c6ed796a111cfd8226e4aad38"
+          },
+          "textures/wooden_picnic_table_bottom_metal_1k.png": {
+            "size": 2326,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_metal_1k.png",
+            "md5": "d52941fc0f9796596d828b89f304155b"
+          },
+          "textures/wooden_picnic_table_bottom_rough_1k.png": {
+            "size": 1516865,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_rough_1k.png",
+            "md5": "f6745a78c8b526e8df60eab0e6b96ac5"
+          },
+          "textures/wooden_picnic_table_top_nor_gl_1k.png": {
+            "size": 5011454,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_1k.png",
+            "md5": "a538d3a42cf656932d776bd6b2fdc8f2"
+          },
+          "textures/wooden_picnic_table_top_diff_1k.png": {
+            "size": 5125404,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_diff_1k.png",
+            "md5": "2a4497a4207fc1b672de45b4debe2af0"
+          },
+          "textures/wooden_picnic_table_top_metal_1k.png": {
+            "size": 50547,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_metal_1k.png",
+            "md5": "447d009e80903b13333feddb66b73c46"
+          }
+        },
+        "size": 518049,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/wooden_picnic_table/wooden_picnic_table_1k.usdc",
+        "md5": "01e8c8017c473be2c505537678630802"
+      }
+    }
+  },
+  "bottom_ao": {
+    "4k": {
+      "jpg": {
+        "size": 4316796,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_ao_4k.jpg",
+        "md5": "71455a3a2a106953ec6747c35dfa0609"
+      },
+      "png": {
+        "size": 20990574,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_ao_4k.png",
+        "md5": "763f7d4468533d67374e8ae71efd69a0"
+      },
+      "exr": {
+        "size": 4352193,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_bottom_ao_4k.exr",
+        "md5": "58719738504388db676368ac3b516d3d"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1053363,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_bottom_ao_2k.jpg",
+        "md5": "48ac5cf7b7b709e3736c6fce3b6d6a4e"
+      },
+      "png": {
+        "size": 5549225,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_ao_2k.png",
+        "md5": "d844b72730a63f972bac981d6665f9de"
+      },
+      "exr": {
+        "size": 1061781,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_bottom_ao_2k.exr",
+        "md5": "3e7d18f6bcecc87af2dfc08de9e58608"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 303180,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_bottom_ao_1k.jpg",
+        "md5": "654fe3d9477d55f80139c9f0aca7c494"
+      },
+      "png": {
+        "size": 1433937,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_ao_1k.png",
+        "md5": "23b5104ca4627f904cef976408b94f33"
+      },
+      "exr": {
+        "size": 346738,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_bottom_ao_1k.exr",
+        "md5": "7cea1ed918488f0a8d1167924cac596a"
+      }
+    }
+  },
+  "top_diff": {
+    "4k": {
+      "jpg": {
+        "size": 14403736,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_diff_4k.jpg",
+        "md5": "f939475561fdfc8677e3739a2c359464"
+      },
+      "png": {
+        "size": 70460465,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_diff_4k.png",
+        "md5": "39366f20074dd38a9d04278493fed35a"
+      },
+      "exr": {
+        "size": 30668029,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_top_diff_4k.exr",
+        "md5": "32869b481b38400da39438b352ccf332"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3135590,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_top_diff_2k.jpg",
+        "md5": "95fc5e6a6ebc1c9f6ce36689bf748403"
+      },
+      "png": {
+        "size": 19721219,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_diff_2k.png",
+        "md5": "dc90926b2aa7d1926f7906549fd467fa"
+      },
+      "exr": {
+        "size": 6708684,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_top_diff_2k.exr",
+        "md5": "dcb11f7bc7f896681fecc1d6bbd769ac"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 722582,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_top_diff_1k.jpg",
+        "md5": "5ad2a2cb0ff9f55602ea0ad23096116f"
+      },
+      "png": {
+        "size": 5125404,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_diff_1k.png",
+        "md5": "2a4497a4207fc1b672de45b4debe2af0"
+      },
+      "exr": {
+        "size": 1529320,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_top_diff_1k.exr",
+        "md5": "d3dcbb1e37f425d2fc3897fbe3fd2d9c"
+      }
+    }
+  },
+  "bottom_nor_dx": {
+    "4k": {
+      "jpg": {
+        "size": 11595950,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_nor_dx_4k.jpg",
+        "md5": "f6df65f798a65ba8e4379d35c2c08baf"
+      },
+      "png": {
+        "size": 58786285,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_nor_dx_4k.png",
+        "md5": "7451e1bdeb0f83645e1c2961a9c348c4"
+      },
+      "exr": {
+        "size": 25190815,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_bottom_nor_dx_4k.exr",
+        "md5": "0bbc658530de33e3badb3f018d483803"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2556747,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_bottom_nor_dx_2k.jpg",
+        "md5": "5a3f14664f352f6e0d5bf225d5cda604"
+      },
+      "png": {
+        "size": 15858327,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_nor_dx_2k.png",
+        "md5": "43df38f06ec4d47a75a9c0bc8bb34e4e"
+      },
+      "exr": {
+        "size": 5949875,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_bottom_nor_dx_2k.exr",
+        "md5": "ed664694aa7908a73e1fd5111a16c0ed"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 556288,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_bottom_nor_dx_1k.jpg",
+        "md5": "5451063750d695313c5c2aa5d5e485f9"
+      },
+      "png": {
+        "size": 4213586,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_nor_dx_1k.png",
+        "md5": "29248fdcbd769cedb79e776a7756901d"
+      },
+      "exr": {
+        "size": 1329197,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_bottom_nor_dx_1k.exr",
+        "md5": "362a017060d0eb3c57833f2d1bbac911"
+      }
+    }
+  },
+  "bottom_rough": {
+    "4k": {
+      "jpg": {
+        "size": 10320651,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_rough_4k.jpg",
+        "md5": "f90f48d17477405b164ee0056d66e39a"
+      },
+      "png": {
+        "size": 16114247,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_rough_4k.png",
+        "md5": "3ef420325fa76f4090c2818f57121902"
+      },
+      "exr": {
+        "size": 10156594,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_bottom_rough_4k.exr",
+        "md5": "eb25d3af9a812a125dc3bacdfa30efaf"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2337795,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_bottom_rough_2k.jpg",
+        "md5": "2887173bf2910f3a24411a09b7e4949f"
+      },
+      "png": {
+        "size": 5214967,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_rough_2k.png",
+        "md5": "de933e230aa9ed135a8b816ebeb10eee"
+      },
+      "exr": {
+        "size": 2439295,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_bottom_rough_2k.exr",
+        "md5": "61022da86ba0e4389f0770f08566c56c"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 564304,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_bottom_rough_1k.jpg",
+        "md5": "4fad6b8940caedbc92cf970bbf6ab9d4"
+      },
+      "png": {
+        "size": 1516865,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_rough_1k.png",
+        "md5": "f6745a78c8b526e8df60eab0e6b96ac5"
+      },
+      "exr": {
+        "size": 613645,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_bottom_rough_1k.exr",
+        "md5": "334cdeca55aa3502a3e623011b29bd46"
+      }
+    }
+  },
+  "top_nor_gl": {
+    "4k": {
+      "jpg": {
+        "size": 13810165,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_4k.jpg",
+        "md5": "e0f446ba0996a3641f4d616e1897aa0d"
+      },
+      "png": {
+        "size": 76515611,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_4k.png",
+        "md5": "f8f0c1d2b81b926005b19d2478879357"
+      },
+      "exr": {
+        "size": 30411677,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_4k.exr",
+        "md5": "a403d13daf052bb4da998f27c1e1460f"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3037855,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_2k.jpg",
+        "md5": "3b39af73bd852ee53836ea8decb2ab12"
+      },
+      "png": {
+        "size": 19719938,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_2k.png",
+        "md5": "35af972152a6ce8b9f057b266e9118c0"
+      },
+      "exr": {
+        "size": 7061951,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_2k.exr",
+        "md5": "c0c9b839178db0bf3f3b8242560a3111"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 625681,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_1k.jpg",
+        "md5": "cab70a224d5b87bcb6c0595e14565626"
+      },
+      "png": {
+        "size": 5011454,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_1k.png",
+        "md5": "a538d3a42cf656932d776bd6b2fdc8f2"
+      },
+      "exr": {
+        "size": 1532279,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_1k.exr",
+        "md5": "48630c38c43e13f201afc917e478e8bc"
+      }
+    }
+  },
+  "bottom_arm": {
+    "4k": {
+      "jpg": {
+        "size": 11944112,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_arm_4k.jpg",
+        "md5": "345fba0d11f34a023ce451d1d9cde030"
+      },
+      "png": {
+        "size": 47379425,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_arm_4k.png",
+        "md5": "a61a5133d57a625010bbbaa6c5e36ee2"
+      },
+      "exr": {
+        "size": 25507272,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_bottom_arm_4k.exr",
+        "md5": "3109cbd76eb6fb7821725ab63fd28fe5"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2774038,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_bottom_arm_2k.jpg",
+        "md5": "1d2d2b4aabb1de0081fa3ab46ca332fb"
+      },
+      "png": {
+        "size": 12524220,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_arm_2k.png",
+        "md5": "fb43ba333f87d3b9754e9e0cf1c2dcf0"
+      },
+      "exr": {
+        "size": 5999350,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_bottom_arm_2k.exr",
+        "md5": "7d589577f1202cd921dceb5a78c7b98c"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 699984,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_bottom_arm_1k.jpg",
+        "md5": "11af6815971a16983c1e70103cd8300e"
+      },
+      "png": {
+        "size": 3410798,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_arm_1k.png",
+        "md5": "8e88032851e3fea1d51d2a6ce965d370"
+      },
+      "exr": {
+        "size": 1519429,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_bottom_arm_1k.exr",
+        "md5": "c8eb5ef847e837b011283100517caa9c"
+      }
+    }
+  },
+  "bottom_diff": {
+    "4k": {
+      "jpg": {
+        "size": 12469787,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_diff_4k.jpg",
+        "md5": "390fc2fce7f475f2587b63bde05c65d6"
+      },
+      "png": {
+        "size": 57746852,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_diff_4k.png",
+        "md5": "e5e3241027b6439ec2bb7ee6aa801fb1"
+      },
+      "exr": {
+        "size": 26053463,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_bottom_diff_4k.exr",
+        "md5": "7296d56e5b4011462a232dd93f750e51"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2779459,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_bottom_diff_2k.jpg",
+        "md5": "1b7f3fc4cd25d3bd3f70fbc3d79abcda"
+      },
+      "png": {
+        "size": 16306847,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_diff_2k.png",
+        "md5": "7f6ab244409da47706751d7db17e880e"
+      },
+      "exr": {
+        "size": 5866188,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_bottom_diff_2k.exr",
+        "md5": "ccbf24971843ff65b14684f32498a32f"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 680087,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_bottom_diff_1k.jpg",
+        "md5": "496b544a3dded845915431cef92e2f7d"
+      },
+      "png": {
+        "size": 4426683,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_diff_1k.png",
+        "md5": "8e183b6c6ed796a111cfd8226e4aad38"
+      },
+      "exr": {
+        "size": 1353587,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_bottom_diff_1k.exr",
+        "md5": "43c0639683f2717af57d7fe924ebeeb4"
+      }
+    }
+  },
+  "top_metal": {
+    "4k": {
+      "jpg": {
+        "size": 476699,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_metal_4k.jpg",
+        "md5": "70a76093e3b52e276303e2cb2b8a89be"
+      },
+      "png": {
+        "size": 374983,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_metal_4k.png",
+        "md5": "b02db0f94d85b110271c7a30f3256fd3"
+      },
+      "exr": {
+        "size": 521268,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_top_metal_4k.exr",
+        "md5": "9cb4be2c5fec5168585f91da3b7c7834"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 127917,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_top_metal_2k.jpg",
+        "md5": "bd391adeab62c6c0b78c98374e57e209"
+      },
+      "png": {
+        "size": 139867,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_metal_2k.png",
+        "md5": "56b37eea501158842e24e564833cc555"
+      },
+      "exr": {
+        "size": 168379,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_top_metal_2k.exr",
+        "md5": "e874ab8eb011bbc8f547d03f4d05d0ca"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 36075,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_top_metal_1k.jpg",
+        "md5": "d04412204c8d9ebc0b27ae6e6fc879c7"
+      },
+      "png": {
+        "size": 50547,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_metal_1k.png",
+        "md5": "447d009e80903b13333feddb66b73c46"
+      },
+      "exr": {
+        "size": 55717,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_top_metal_1k.exr",
+        "md5": "f971a484580d3fce078639467eaeeee1"
+      }
+    }
+  },
+  "bottom_metal": {
+    "4k": {
+      "jpg": {
+        "size": 197072,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_metal_4k.jpg",
+        "md5": "73e9c27faeff9c7ec866d1e1fc2bd288"
+      },
+      "png": {
+        "size": 32742,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_metal_4k.png",
+        "md5": "b0f303826984180760dd56907d0440e9"
+      },
+      "exr": {
+        "size": 22034,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_bottom_metal_4k.exr",
+        "md5": "db2cee3578d464615d1f896673859d5e"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 49616,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_bottom_metal_2k.jpg",
+        "md5": "ccb41a7dca781ab0bc7150f2781c8806"
+      },
+      "png": {
+        "size": 8435,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_metal_2k.png",
+        "md5": "868380ed5b0ca0a3abb40170d90de5f4"
+      },
+      "exr": {
+        "size": 10642,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_bottom_metal_2k.exr",
+        "md5": "59b67aeb9f52aa01a7211fd4de2b45ca"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 12752,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_bottom_metal_1k.jpg",
+        "md5": "cddf12431865d7b7b9bd366acf36b575"
+      },
+      "png": {
+        "size": 2326,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_metal_1k.png",
+        "md5": "d52941fc0f9796596d828b89f304155b"
+      },
+      "exr": {
+        "size": 5266,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_bottom_metal_1k.exr",
+        "md5": "32890effcae0c767ca80ed3e2281012a"
+      }
+    }
+  },
+  "top_ao": {
+    "4k": {
+      "jpg": {
+        "size": 3929957,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_ao_4k.jpg",
+        "md5": "50df429ecb7ddb248e2d9a372914d8af"
+      },
+      "png": {
+        "size": 16165582,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_ao_4k.png",
+        "md5": "c52172976edd51822c40dc9ee46e6898"
+      },
+      "exr": {
+        "size": 4785087,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_top_ao_4k.exr",
+        "md5": "61c9ec587885c318adb61364a04c096c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 941133,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_top_ao_2k.jpg",
+        "md5": "b7393f7e34e31fe1d6f095bf58a510ae"
+      },
+      "png": {
+        "size": 4342677,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_ao_2k.png",
+        "md5": "440833f22e1978ca95129c94c438f03b"
+      },
+      "exr": {
+        "size": 1114376,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_top_ao_2k.exr",
+        "md5": "a4c6ae916e1a7ad77e5424c454087a67"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 251610,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_top_ao_1k.jpg",
+        "md5": "9f112f5d49cf4bda97025fbff21c7222"
+      },
+      "png": {
+        "size": 1100330,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_ao_1k.png",
+        "md5": "3a02c9bf02b0ba735f630db07eb59eb7"
+      },
+      "exr": {
+        "size": 311354,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_top_ao_1k.exr",
+        "md5": "59a3297e88527a0406f99984790041da"
+      }
+    }
+  },
+  "top_rough": {
+    "4k": {
+      "jpg": {
+        "size": 12379904,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_rough_4k.jpg",
+        "md5": "4bd4a4708ef37318348b4b24b090c7bb"
+      },
+      "png": {
+        "size": 20713009,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_rough_4k.png",
+        "md5": "5182b4fb4981d0e95676001d9ec0147b"
+      },
+      "exr": {
+        "size": 11846742,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_top_rough_4k.exr",
+        "md5": "b723d217a23a5b6cc35b7f9c4542378c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2675479,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_top_rough_2k.jpg",
+        "md5": "49d8ad9ba97f2273a689bf5ba1de32a5"
+      },
+      "png": {
+        "size": 6296245,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_rough_2k.png",
+        "md5": "f1349f4e25740236443b2d7f96520143"
+      },
+      "exr": {
+        "size": 2733329,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_top_rough_2k.exr",
+        "md5": "ceb9084d4537864164cda9f40b6980da"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 614376,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_top_rough_1k.jpg",
+        "md5": "1276bb5d2a0ba94c69543d95073d4a36"
+      },
+      "png": {
+        "size": 1711618,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_rough_1k.png",
+        "md5": "df08d560d7fb5ce0686dc565ae7b5e77"
+      },
+      "exr": {
+        "size": 659704,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_top_rough_1k.exr",
+        "md5": "c0a22ff5556eb33eb62b27721d696ff8"
+      }
+    }
+  },
+  "bottom_nor_gl": {
+    "4k": {
+      "jpg": {
+        "size": 11204445,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_4k.jpg",
+        "md5": "6f7c96328bbd75bac8abff2617452226"
+      },
+      "png": {
+        "size": 58790233,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_4k.png",
+        "md5": "a991e8c306c5ebde5a30f3477effeee2"
+      },
+      "exr": {
+        "size": 25157054,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_4k.exr",
+        "md5": "01665436c121ef964d76847e17944e01"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2513966,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_2k.jpg",
+        "md5": "fefd4371897586469d15c90e61bf2636"
+      },
+      "png": {
+        "size": 15859689,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_2k.png",
+        "md5": "6ce3837168e2b6314c4574ed9a4942a9"
+      },
+      "exr": {
+        "size": 5934446,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_2k.exr",
+        "md5": "a5dcbad0863e1cbd26caeddb710904bf"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 548315,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_1k.jpg",
+        "md5": "6b9ad57ca60a3dc5bc5e6e57acfd6cc9"
+      },
+      "png": {
+        "size": 4214018,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_1k.png",
+        "md5": "551417cbc9a152548c4544beb6e088f7"
+      },
+      "exr": {
+        "size": 1322872,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_1k.exr",
+        "md5": "88e7b4fa2ddfe24c31e1483e2c07642d"
+      }
+    }
+  },
+  "fbx": {
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/wooden_picnic_table_top_rough_4k.png": {
+            "size": 20713009,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_rough_4k.png",
+            "md5": "5182b4fb4981d0e95676001d9ec0147b"
+          },
+          "textures/wooden_picnic_table_bottom_diff_4k.png": {
+            "size": 57746852,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_diff_4k.png",
+            "md5": "e5e3241027b6439ec2bb7ee6aa801fb1"
+          },
+          "textures/wooden_picnic_table_bottom_rough_4k.png": {
+            "size": 16114247,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_rough_4k.png",
+            "md5": "3ef420325fa76f4090c2818f57121902"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_4k.png": {
+            "size": 58790233,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_4k.png",
+            "md5": "a991e8c306c5ebde5a30f3477effeee2"
+          },
+          "textures/wooden_picnic_table_top_metal_4k.png": {
+            "size": 374983,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_metal_4k.png",
+            "md5": "b02db0f94d85b110271c7a30f3256fd3"
+          },
+          "textures/wooden_picnic_table_top_nor_gl_4k.png": {
+            "size": 76515611,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_4k.png",
+            "md5": "f8f0c1d2b81b926005b19d2478879357"
+          },
+          "textures/wooden_picnic_table_bottom_metal_4k.png": {
+            "size": 32742,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_bottom_metal_4k.png",
+            "md5": "b0f303826984180760dd56907d0440e9"
+          },
+          "textures/wooden_picnic_table_top_diff_4k.png": {
+            "size": 70460465,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/wooden_picnic_table/wooden_picnic_table_top_diff_4k.png",
+            "md5": "39366f20074dd38a9d04278493fed35a"
+          }
+        },
+        "size": 338956,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/wooden_picnic_table/wooden_picnic_table_4k.fbx",
+        "md5": "17bd42fdb8759d47f6da0c38127ced40"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/wooden_picnic_table_top_metal_2k.png": {
+            "size": 139867,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_metal_2k.png",
+            "md5": "56b37eea501158842e24e564833cc555"
+          },
+          "textures/wooden_picnic_table_top_nor_gl_2k.png": {
+            "size": 19719938,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_2k.png",
+            "md5": "35af972152a6ce8b9f057b266e9118c0"
+          },
+          "textures/wooden_picnic_table_top_diff_2k.png": {
+            "size": 19721219,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_diff_2k.png",
+            "md5": "dc90926b2aa7d1926f7906549fd467fa"
+          },
+          "textures/wooden_picnic_table_bottom_metal_2k.png": {
+            "size": 8435,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_metal_2k.png",
+            "md5": "868380ed5b0ca0a3abb40170d90de5f4"
+          },
+          "textures/wooden_picnic_table_top_rough_2k.png": {
+            "size": 6296245,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_top_rough_2k.png",
+            "md5": "f1349f4e25740236443b2d7f96520143"
+          },
+          "textures/wooden_picnic_table_bottom_diff_2k.png": {
+            "size": 16306847,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_diff_2k.png",
+            "md5": "7f6ab244409da47706751d7db17e880e"
+          },
+          "textures/wooden_picnic_table_bottom_rough_2k.png": {
+            "size": 5214967,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_rough_2k.png",
+            "md5": "de933e230aa9ed135a8b816ebeb10eee"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_2k.png": {
+            "size": 15859689,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_2k.png",
+            "md5": "6ce3837168e2b6314c4574ed9a4942a9"
+          }
+        },
+        "size": 338956,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/wooden_picnic_table/wooden_picnic_table_2k.fbx",
+        "md5": "3615cc3448dbc0b283669b9dcccdba56"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/wooden_picnic_table_top_rough_1k.png": {
+            "size": 1711618,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_rough_1k.png",
+            "md5": "df08d560d7fb5ce0686dc565ae7b5e77"
+          },
+          "textures/wooden_picnic_table_bottom_nor_gl_1k.png": {
+            "size": 4214018,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_1k.png",
+            "md5": "551417cbc9a152548c4544beb6e088f7"
+          },
+          "textures/wooden_picnic_table_bottom_diff_1k.png": {
+            "size": 4426683,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_diff_1k.png",
+            "md5": "8e183b6c6ed796a111cfd8226e4aad38"
+          },
+          "textures/wooden_picnic_table_bottom_metal_1k.png": {
+            "size": 2326,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_metal_1k.png",
+            "md5": "d52941fc0f9796596d828b89f304155b"
+          },
+          "textures/wooden_picnic_table_bottom_rough_1k.png": {
+            "size": 1516865,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_bottom_rough_1k.png",
+            "md5": "f6745a78c8b526e8df60eab0e6b96ac5"
+          },
+          "textures/wooden_picnic_table_top_nor_gl_1k.png": {
+            "size": 5011454,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_1k.png",
+            "md5": "a538d3a42cf656932d776bd6b2fdc8f2"
+          },
+          "textures/wooden_picnic_table_top_diff_1k.png": {
+            "size": 5125404,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_diff_1k.png",
+            "md5": "2a4497a4207fc1b672de45b4debe2af0"
+          },
+          "textures/wooden_picnic_table_top_metal_1k.png": {
+            "size": 50547,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/wooden_picnic_table/wooden_picnic_table_top_metal_1k.png",
+            "md5": "447d009e80903b13333feddb66b73c46"
+          }
+        },
+        "size": 338956,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/wooden_picnic_table/wooden_picnic_table_1k.fbx",
+        "md5": "46dd2cceaacc33db7a0c0e2bf90a8c56"
+      }
+    }
+  }
+}

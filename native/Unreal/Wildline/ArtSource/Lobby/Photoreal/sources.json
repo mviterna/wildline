@@ -1,0 +1,2854 @@
+[
+  {
+    "id": "wooden_picnic_table",
+    "type": "model",
+    "page": "https://polyhaven.com/a/wooden_picnic_table",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "name": "Wooden Picnic Table",
+      "categories": [
+        "furniture",
+        "seating",
+        "table"
+      ],
+      "type": 2,
+      "tags": [
+        "vintage",
+        "old",
+        "worn",
+        "park",
+        "bench",
+        "outdoor",
+        "weathered",
+        "countryside",
+        "outdoor seating"
+      ],
+      "authors": {
+        "Ulan Cabanilla": "All"
+      },
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 10210,
+      "texel_density": 1156.5982859911464,
+      "dimensions": [
+        2240.9759759902954,
+        3022.329568862915,
+        745.9869086742401
+      ],
+      "date_published": 1715558400,
+      "staging": null,
+      "sponsors": [
+        "26820710"
+      ],
+      "files_hash": "56962f92a441625ad0afd4cc2e1ae405035a86ea",
+      "description": "Free 4K model of a weathered wooden picnic table with attached benches, vintage worn planks, visible nail heads and rustic countryside patina.",
+      "category_id": "c87c74dd-a53f-58b7-a4f0-a2b27042c226",
+      "category": "Furniture/Tables/Outdoor Tables",
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "wood",
+          "metal"
+        ]
+      },
+      "img_version": "d0b52d80",
+      "download_count": 30349,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/wooden_picnic_table.png?width=256&height=256&format=webp&v=d0b52d80"
+    },
+    "files": [
+      {
+        "path": "wooden_picnic_table_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_picnic_table/wooden_picnic_table_4k.gltf",
+        "md5": "26cd175aadaafe38c7edb09933911df0",
+        "size": 5099
+      },
+      {
+        "path": "textures/wooden_picnic_table_top_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_nor_gl_4k.jpg",
+        "md5": "e0f446ba0996a3641f4d616e1897aa0d",
+        "size": 13810165
+      },
+      {
+        "path": "wooden_picnic_table.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_picnic_table/wooden_picnic_table.bin",
+        "md5": "5d52db76187b9990c328f79612eafe5b",
+        "size": 279116
+      },
+      {
+        "path": "textures/wooden_picnic_table_bottom_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_arm_4k.jpg",
+        "md5": "345fba0d11f34a023ce451d1d9cde030",
+        "size": 11944112
+      },
+      {
+        "path": "textures/wooden_picnic_table_top_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_diff_4k.jpg",
+        "md5": "f939475561fdfc8677e3739a2c359464",
+        "size": 14403736
+      },
+      {
+        "path": "textures/wooden_picnic_table_bottom_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_diff_4k.jpg",
+        "md5": "390fc2fce7f475f2587b63bde05c65d6",
+        "size": 12469787
+      },
+      {
+        "path": "textures/wooden_picnic_table_top_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_top_arm_4k.jpg",
+        "md5": "214711772b533d51b3a3eddc694dd619",
+        "size": 14161920
+      },
+      {
+        "path": "textures/wooden_picnic_table_bottom_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_picnic_table/wooden_picnic_table_bottom_nor_gl_4k.jpg",
+        "md5": "6f7c96328bbd75bac8abff2617452226",
+        "size": 11204445
+      }
+    ]
+  },
+  {
+    "id": "Rockingchair_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/Rockingchair_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 2,
+      "date_published": 1588208147,
+      "name": "Rockingchair 01",
+      "old_id": 42,
+      "categories": [
+        "furniture",
+        "seating"
+      ],
+      "authors": {
+        "Jorge Camacho": "All"
+      },
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 11866,
+      "texel_density": 2936.8192993983985,
+      "dimensions": [
+        708.1280946731567,
+        833.482027053833,
+        994.9284568428993
+      ],
+      "files_hash": "cad30a6e8f6569971447bd4d7c4d9064ca17aec3",
+      "tags": [
+        "chair",
+        "vintage",
+        "prop",
+        "wood",
+        "furniture",
+        "rocking chair",
+        "rocking",
+        "decorative",
+        "curved legs",
+        "traditional",
+        "solid wood",
+        "armrest",
+        "slatted backrest",
+        "antique style"
+      ],
+      "description": "Free 4K model, solid wood vintage rocking chair with slatted back, curved legs, armrests, turned spindles and an antique worn finish.",
+      "category_id": "11261ec6-df2b-5150-9904-684d2558070d",
+      "category": "Furniture/Seating/Chairs",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "img_version": "738ac8ea",
+      "download_count": 31279,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/Rockingchair_01.png?width=256&height=256&format=webp&v=738ac8ea"
+    },
+    "files": [
+      {
+        "path": "Rockingchair_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Rockingchair_01/Rockingchair_01_4k.gltf",
+        "md5": "80b068d8699041c583677c1890730c15",
+        "size": 2712
+      },
+      {
+        "path": "textures/Rockingchair_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_diff_4k.jpg",
+        "md5": "c4c2bc647f7cba14ac683a309777fc80",
+        "size": 1690269
+      },
+      {
+        "path": "textures/Rockingchair_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_nor_gl_4k.jpg",
+        "md5": "238df170b7f9dfcc56650a6e823649da",
+        "size": 1857090
+      },
+      {
+        "path": "Rockingchair_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Rockingchair_01/Rockingchair_01.bin",
+        "md5": "cd7cd396a8acd87802321d51cbe79725",
+        "size": 391740
+      },
+      {
+        "path": "textures/Rockingchair_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_arm_4k.jpg",
+        "md5": "bbc1e5c210c8d44f18c90cf84db6a6cd",
+        "size": 1413745
+      }
+    ]
+  },
+  {
+    "id": "wooden_bookshelf_worn",
+    "type": "model",
+    "page": "https://polyhaven.com/a/wooden_bookshelf_worn",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "type": 2,
+      "date_published": 1684108800,
+      "name": "Wooden Bookshelf Worn",
+      "staging": null,
+      "authors": {
+        "Ulan Cabanilla": "All"
+      },
+      "info": null,
+      "categories": [
+        "furniture",
+        "shelves",
+        "collection: the_shed"
+      ],
+      "tags": [
+        "old",
+        "wooden",
+        "wood",
+        "worn",
+        "garage",
+        "shed",
+        "rustic",
+        "antique",
+        "distressed",
+        "aged",
+        "weathered",
+        "bookcase",
+        "shelves",
+        "carpentry",
+        "vintage",
+        "storage"
+      ],
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 10106,
+      "texel_density": 761.2948053157476,
+      "dimensions": [
+        1373.95179271698,
+        581.3020169734955,
+        2063.442051410675
+      ],
+      "files_hash": "7db4a47cb5d2cf4dccb714c4ada6008321217fcb",
+      "description": "Free 4K model of a worn wooden bookshelf with multiple shelves, distressed weathered grain, layered plywood edges, visible nail holes and rustic vintage finish.",
+      "sponsors": [
+        "11167855",
+        "26820710"
+      ],
+      "category_id": "306ba141-9b10-54f2-8d06-09031cea8318",
+      "category": "Furniture/Storage Furniture/Shelving & Bookcases",
+      "collections": [
+        "the_shed"
+      ],
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "wood",
+          "metal"
+        ]
+      },
+      "img_version": "47d9afff",
+      "download_count": 10396,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/wooden_bookshelf_worn.png?width=256&height=256&format=webp&v=47d9afff"
+    },
+    "files": [
+      {
+        "path": "wooden_bookshelf_worn_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_bookshelf_worn/wooden_bookshelf_worn_4k.gltf",
+        "md5": "1a84b009325aaeb5b6053040796411a1",
+        "size": 2849
+      },
+      {
+        "path": "textures/wooden_bookshelf_worn_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_bookshelf_worn/wooden_bookshelf_worn_arm_4k.jpg",
+        "md5": "2e0ac8d654e6ead7709010926dced3c5",
+        "size": 11063827
+      },
+      {
+        "path": "textures/wooden_bookshelf_worn_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_bookshelf_worn/wooden_bookshelf_worn_nor_gl_4k.jpg",
+        "md5": "e815fc22a6c92af268779cf9494baf78",
+        "size": 17160655
+      },
+      {
+        "path": "wooden_bookshelf_worn.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_bookshelf_worn/wooden_bookshelf_worn.bin",
+        "md5": "3842de1943f58cdafb3a25d384b2400f",
+        "size": 267964
+      },
+      {
+        "path": "textures/wooden_bookshelf_worn_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_bookshelf_worn/wooden_bookshelf_worn_diff_4k.jpg",
+        "md5": "4be53e9ae4659f07d13362efe0f61c0c",
+        "size": 13459731
+      }
+    ]
+  },
+  {
+    "id": "Lantern_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/Lantern_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "date_published": 1590680464,
+      "name": "Lantern 01",
+      "old_id": 43,
+      "categories": [
+        "props",
+        "lighting"
+      ],
+      "type": 2,
+      "tags": [
+        "prop",
+        "metal",
+        "glass",
+        "lantern",
+        "antique",
+        "vintage",
+        "hurricane",
+        "lamp",
+        "bronze",
+        "oldfashioned",
+        "brass",
+        "copper"
+      ],
+      "authors": {
+        "Rajil Jose Macatangay": "All"
+      },
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 33902,
+      "texel_density": 10425.298212954804,
+      "dimensions": [
+        122.08568677306175,
+        97.18310832977295,
+        294.2466139793396
+      ],
+      "files_hash": "e8a56bd66bee21140aa3272268bd207bac37a7e1",
+      "description": "Free 4K model of an antique brass/bronze hurricane lantern with textured glass globe, worn patina, metal handle and detailed rivets for vintage character.",
+      "sponsors": [
+        "11109006",
+        "84390067"
+      ],
+      "category_id": "96b36a4f-e094-52da-912e-e51ca9eb7aa0",
+      "category": "Lighting/Portable/Lanterns",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "brass",
+          "glass"
+        ]
+      },
+      "img_version": "0b1827f5",
+      "download_count": 65710,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/Lantern_01.png?width=256&height=256&format=webp&v=0b1827f5"
+    },
+    "files": [
+      {
+        "path": "Lantern_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Lantern_01/Lantern_01_4k.gltf",
+        "md5": "fd4b5f7f930a2aff5add1f5bccf46c76",
+        "size": 4866
+      },
+      {
+        "path": "Lantern_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Lantern_01/Lantern_01.bin",
+        "md5": "857a868798e7e5f40d78c2d09e6f8ea0",
+        "size": 864852
+      },
+      {
+        "path": "textures/Lantern_01_brass_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_nor_gl_4k.jpg",
+        "md5": "0dbd7434fb57bac251d2bf320becbb45",
+        "size": 3293998
+      },
+      {
+        "path": "textures/Lantern_01_brass_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_diff_4k.jpg",
+        "md5": "2d009b0c3b98df1b1719c24a73b3c3c3",
+        "size": 2110267
+      },
+      {
+        "path": "textures/Lantern_01_brass_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Lantern_01/Lantern_01_brass_arm_4k.jpg",
+        "md5": "e6275673461540d4f8f6e3ca48bb346a",
+        "size": 3527913
+      }
+    ]
+  },
+  {
+    "id": "vintage_oil_lamp",
+    "type": "model",
+    "page": "https://polyhaven.com/a/vintage_oil_lamp",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "name": "Vintage Oil Lamp",
+      "categories": [
+        "lighting",
+        "decorative"
+      ],
+      "type": 2,
+      "tags": [
+        "lamp",
+        "oil",
+        "antique",
+        "victorian",
+        "manor",
+        "historic"
+      ],
+      "authors": {
+        "Monsta3D": "All"
+      },
+      "info": null,
+      "date_published": 1685318400,
+      "staging": null,
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 7208,
+      "texel_density": 14281.103682416018,
+      "dimensions": [
+        219.9999988079071,
+        219.9999913573265,
+        801.6371909276536
+      ],
+      "sponsors": [
+        "77433244",
+        "3237733"
+      ],
+      "files_hash": "b086de19794124868b2979b794d8a659e6451f1c",
+      "description": "Free 4K model, ornate Victorian oil lamp with brass base, floral porcelain globe, tall glass chimney and lit wick - detailed antique decorative charm.",
+      "category_id": "68f93037-d68a-5cb0-b10f-920243f9adbe",
+      "category": "Lighting/Portable/Oil Lamps",
+      "attributes": {
+        "condition": [
+          "clean"
+        ],
+        "material": [
+          "brass",
+          "ceramic",
+          "glass"
+        ]
+      },
+      "img_version": "8bc88754",
+      "download_count": 5957,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/vintage_oil_lamp.png?width=256&height=256&format=webp&v=8bc88754"
+    },
+    "files": [
+      {
+        "path": "vintage_oil_lamp_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_oil_lamp/vintage_oil_lamp_4k.gltf",
+        "md5": "2f0d6a5a2929aaba4834e6edde3e01df",
+        "size": 7786
+      },
+      {
+        "path": "textures/vintage_oil_lamp_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_nor_gl_4k.jpg",
+        "md5": "701bb24743931abfdf764f2346811420",
+        "size": 1934165
+      },
+      {
+        "path": "textures/vintage_oil_lamp_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_diff_4k.jpg",
+        "md5": "ed6ebe016ebab8b1097348873644fb70",
+        "size": 7190953
+      },
+      {
+        "path": "vintage_oil_lamp.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_oil_lamp/vintage_oil_lamp.bin",
+        "md5": "b43f17a0f09d6c14d45eb1099eb1077f",
+        "size": 186096
+      },
+      {
+        "path": "textures/vintage_oil_lamp_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_arm_4k.jpg",
+        "md5": "8a4112fceca29692cbd17a8b9fe73ed0",
+        "size": 8364329
+      },
+      {
+        "path": "textures/vintage_oil_lamp_glass_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_arm_4k.jpg",
+        "md5": "30b3f2f2499374df8567d5a1b5fef3e9",
+        "size": 3679346
+      },
+      {
+        "path": "textures/vintage_oil_lamp_glass_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_nor_gl_4k.jpg",
+        "md5": "f814e4ac8413ef4079e16096fd90c2c8",
+        "size": 503939
+      },
+      {
+        "path": "textures/vintage_oil_lamp_flame_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_flame_diff_4k.jpg",
+        "md5": "d25a1bd4322f3859045596162b0b0b88",
+        "size": 869191
+      },
+      {
+        "path": "textures/vintage_oil_lamp_glass_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_oil_lamp/vintage_oil_lamp_glass_diff_4k.jpg",
+        "md5": "cb7fa1f3ac445e5c79400e01735649cd",
+        "size": 542003
+      }
+    ]
+  },
+  {
+    "id": "wooden_axe_03",
+    "type": "model",
+    "page": "https://polyhaven.com/a/wooden_axe_03",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 2,
+      "name": "Wooden Axe 03",
+      "categories": [
+        "props",
+        "tools"
+      ],
+      "tags": [
+        "forest",
+        "gardening",
+        "garden",
+        "lumberjack",
+        "woodwork",
+        "firewood",
+        "fireman",
+        "saw",
+        "cutting",
+        "chopping"
+      ],
+      "authors": {
+        "Ulan Cabanilla": "All"
+      },
+      "donated": true,
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 3886,
+      "texel_density": 9526.733089851039,
+      "dimensions": [
+        50.4691693931818,
+        158.34461152553558,
+        631.799966096878
+      ],
+      "date_published": 1741564800,
+      "staging": null,
+      "files_hash": "52cd656cc63e22e23288b047d961ff6a8edbb82a",
+      "description": "Free 4K model of a rugged, weathered axe with a pitted iron head and scuffed wooden handle, detailed grain and worn patina.",
+      "category_id": "dcc84150-95a1-5bf9-bf5c-342d07b342e4",
+      "category": "Tools & Equipment/Hand Tools/Axes & Hatchets",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "wood",
+          "metal"
+        ]
+      },
+      "img_version": "2a6aebc5",
+      "download_count": 4278,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/wooden_axe_03.png?width=256&height=256&format=webp&v=2a6aebc5"
+    },
+    "files": [
+      {
+        "path": "wooden_axe_03_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_axe_03/wooden_axe_03_4k.gltf",
+        "md5": "e704f43c3fd42bf3a696fb4be6fc60a2",
+        "size": 2766
+      },
+      {
+        "path": "textures/wooden_axe_03_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_axe_03/wooden_axe_03_nor_gl_4k.jpg",
+        "md5": "c1daf7e6eabff24aa79eaaf011b3a9be",
+        "size": 13384839
+      },
+      {
+        "path": "textures/wooden_axe_03_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_axe_03/wooden_axe_03_diff_4k.jpg",
+        "md5": "b95a310b716f22dc0028bd3f9ebb1429",
+        "size": 9050309
+      },
+      {
+        "path": "textures/wooden_axe_03_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_axe_03/wooden_axe_03_arm_4k.jpg",
+        "md5": "1f500408c7cf6f2c083b5cb806ac55e2",
+        "size": 10463050
+      },
+      {
+        "path": "wooden_axe_03.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_axe_03/wooden_axe_03.bin",
+        "md5": "148d86f05e1a05d76475fcd8d97d33a9",
+        "size": 106900
+      }
+    ]
+  },
+  {
+    "id": "tree_stump_02",
+    "type": "model",
+    "page": "https://polyhaven.com/a/tree_stump_02",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "name": "Tree Stump 02",
+      "type": 2,
+      "staging": null,
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "info": null,
+      "date_published": 1691366400,
+      "categories": [
+        "nature",
+        "plants",
+        "ground cover",
+        "trees",
+        "collection: pine_forest"
+      ],
+      "tags": [
+        "woodland",
+        "tree",
+        "stump",
+        "dead",
+        "environment",
+        "trunk",
+        "bark",
+        "forest",
+        "natural",
+        "forest floor",
+        "dry",
+        "dead tree",
+        "decayed",
+        "mossy",
+        "moss",
+        "rough texture",
+        "roots",
+        "leaf",
+        "leaves"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 62345,
+      "texel_density": 4423.628795560961,
+      "dimensions": [
+        1521.6976404190063,
+        1392.5331234931946,
+        522.0921486616135
+      ],
+      "sponsors": [
+        "3237733"
+      ],
+      "files_hash": "014e407e84af210a9ec49adba0505c7581706544",
+      "description": "Free 8K model of a decayed, mossy tree stump with rough bark, exposed roots and leaf-littered forest floor - detailed, dry textures and natural irregular shape.",
+      "category_id": "a690b075-9aa9-5ad2-a35e-3e247d1fce4b",
+      "category": "Nature/Logs, Branches & Roots/Fallen Logs & Stumps",
+      "collections": [
+        "pine_forest"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "img_version": "411e14f0",
+      "download_count": 8503,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/tree_stump_02.png?width=256&height=256&format=webp&v=411e14f0"
+    },
+    "files": [
+      {
+        "path": "tree_stump_02_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/tree_stump_02/tree_stump_02_4k.gltf",
+        "md5": "34b1835bbb88481593ed08584b2e68eb",
+        "size": 2802
+      },
+      {
+        "path": "textures/tree_stump_02_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_nor_gl_4k.jpg",
+        "md5": "163c43dd7252eda4e368aa01d531f126",
+        "size": 19767095
+      },
+      {
+        "path": "tree_stump_02.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/tree_stump_02/tree_stump_02.bin",
+        "md5": "87f18fe07707d421da70fa2f69b12366",
+        "size": 1433880
+      },
+      {
+        "path": "textures/tree_stump_02_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_diff_4k.jpg",
+        "md5": "ed2f8f56808f6d645e946f70a7440fdc",
+        "size": 12099759
+      },
+      {
+        "path": "textures/tree_stump_02_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/tree_stump_02/tree_stump_02_arm_4k.jpg",
+        "md5": "0535f419bfb50200c6649931b9541271",
+        "size": 9950257
+      }
+    ]
+  },
+  {
+    "id": "dead_tree_trunk",
+    "type": "model",
+    "page": "https://polyhaven.com/a/dead_tree_trunk",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "date_published": 1685664000,
+      "name": "Dead Tree Trunk",
+      "type": 2,
+      "staging": null,
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "info": null,
+      "tags": [
+        "log",
+        "dead tree",
+        "tree",
+        "trunk",
+        "bark",
+        "natural",
+        "foliage",
+        "nature",
+        "forest",
+        "plant",
+        "dead",
+        "dry",
+        "woodland",
+        "decayed",
+        "rough texture",
+        "forest floor"
+      ],
+      "categories": [
+        "nature",
+        "plants",
+        "ground cover",
+        "collection: pine_forest",
+        "collection: verdant_trail"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 101802,
+      "texel_density": 5227.11070900053,
+      "dimensions": [
+        3051.015019416809,
+        277.52751111984253,
+        290.43155536055565
+      ],
+      "sponsors": [
+        "95481047"
+      ],
+      "files_hash": "1e56e4393417d157e43e26bd8b7b019189d313ed",
+      "description": "Free 8K dead tree trunk model, a long weathered log with cracked, decayed bark, pronounced wood grain, broken ends and subtle mossy-green patches.",
+      "category_id": "a690b075-9aa9-5ad2-a35e-3e247d1fce4b",
+      "category": "Nature/Logs, Branches & Roots/Fallen Logs & Stumps",
+      "collections": [
+        "pine_forest",
+        "verdant_trail"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "img_version": "ed7326b9",
+      "download_count": 17322,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/dead_tree_trunk.png?width=256&height=256&format=webp&v=ed7326b9"
+    },
+    "files": [
+      {
+        "path": "dead_tree_trunk_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/dead_tree_trunk/dead_tree_trunk_4k.gltf",
+        "md5": "018385329d497fe4319c284218d1933a",
+        "size": 2812
+      },
+      {
+        "path": "textures/dead_tree_trunk_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/dead_tree_trunk/dead_tree_trunk_arm_4k.jpg",
+        "md5": "d3b45a0466bc2758c77809a89d09daa6",
+        "size": 8796469
+      },
+      {
+        "path": "textures/dead_tree_trunk_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/dead_tree_trunk/dead_tree_trunk_nor_gl_4k.jpg",
+        "md5": "d6c6aeb0b1d291d4ca7b37f761fb0ff2",
+        "size": 12570581
+      },
+      {
+        "path": "textures/dead_tree_trunk_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/dead_tree_trunk/dead_tree_trunk_diff_4k.jpg",
+        "md5": "6b2658241d41fa84b9e04242125fdb80",
+        "size": 8678984
+      },
+      {
+        "path": "dead_tree_trunk.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/dead_tree_trunk/dead_tree_trunk.bin",
+        "md5": "2a2b05e67a5c51fba5fc7591a7857957",
+        "size": 2293788
+      }
+    ]
+  },
+  {
+    "id": "root_cluster_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/root_cluster_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "name": "Root Cluster 01",
+      "categories": [
+        "nature",
+        "collection: verdant_trail",
+        "plants",
+        "ground cover"
+      ],
+      "type": 2,
+      "version_required": {
+        "blend": "4.0.1"
+      },
+      "tags": [
+        "root",
+        "tree",
+        "forest",
+        "foliage",
+        "bark",
+        "nature",
+        "plant",
+        "leaves",
+        "environment"
+      ],
+      "info": null,
+      "date_published": 1707177600,
+      "staging": null,
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 225261,
+      "texel_density": 1777.881109151483,
+      "dimensions": [
+        4122.708559036255,
+        2682.776689529419,
+        1509.2801377177238
+      ],
+      "authors": {
+        "Jenelle van Heerden": "Photography",
+        "Rico Cilliers": "photography, processing"
+      },
+      "files_hash": "f3dbd608c7a1d3447a8cb33bac5e53a812f628bb",
+      "description": "Free 8K root cluster model with high-detail bark, tangled roots and forest-floor foliage; natural, layered ground cover ideal for realistic woodland environments.",
+      "category_id": "177d78d5-2c9b-5c88-a3f9-751d49114c15",
+      "category": "Nature/Logs, Branches & Roots/Root Clusters",
+      "collections": [
+        "verdant_trail"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "img_version": "e8bad11e",
+      "download_count": 4693,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/root_cluster_01.png?width=256&height=256&format=webp&v=e8bad11e"
+    },
+    "files": [
+      {
+        "path": "root_cluster_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/root_cluster_01/root_cluster_01_4k.gltf",
+        "md5": "5c537c43a7d7ce1595c82b985c6ce5af",
+        "size": 2827
+      },
+      {
+        "path": "textures/root_cluster_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/root_cluster_01/root_cluster_01_arm_4k.jpg",
+        "md5": "a3b62d2c2a0756a0890ccca09bf1bb16",
+        "size": 12474013
+      },
+      {
+        "path": "textures/root_cluster_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/root_cluster_01/root_cluster_01_nor_gl_4k.jpg",
+        "md5": "2b5962448b2e4d1ec9d7c8e6e5d38bd4",
+        "size": 20758647
+      },
+      {
+        "path": "textures/root_cluster_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/root_cluster_01/root_cluster_01_diff_4k.jpg",
+        "md5": "e6e0abae5327390b8fd9dbd26d7d5e0e",
+        "size": 11840519
+      },
+      {
+        "path": "root_cluster_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/root_cluster_01/root_cluster_01.bin",
+        "md5": "0e64cb42ea471829b95151e08888d8e1",
+        "size": 6464764
+      }
+    ]
+  },
+  {
+    "id": "pine_roots",
+    "type": "model",
+    "page": "https://polyhaven.com/a/pine_roots",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "name": "Pine Roots",
+      "type": 2,
+      "staging": null,
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "info": null,
+      "date_published": 1686528000,
+      "categories": [
+        "plants",
+        "nature",
+        "ground cover",
+        "collection: pine_forest"
+      ],
+      "tags": [
+        "pine",
+        "roots",
+        "tree",
+        "forest",
+        "needles",
+        "leaf",
+        "nature",
+        "natural",
+        "plant",
+        "jungle",
+        "foliage",
+        "outdoor",
+        "branches",
+        "dry",
+        "dead",
+        "ground",
+        "dirt",
+        "woodland"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 162693,
+      "texel_density": 5881.445155990671,
+      "dimensions": [
+        1772.075891494751,
+        1893.0891752243042,
+        154.80004251003265
+      ],
+      "files_hash": "8a16347883d31284122bea6c1638f4feca7966ef",
+      "description": "Free 8K model of exposed pine roots and forest floor - gnarled, weathered root network, scattered needles, mossy patches and rich, compacted soil detail.",
+      "category_id": "177d78d5-2c9b-5c88-a3f9-751d49114c15",
+      "category": "Nature/Logs, Branches & Roots/Root Clusters",
+      "collections": [
+        "pine_forest"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "img_version": "105c2686",
+      "download_count": 16441,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/pine_roots.png?width=256&height=256&format=webp&v=105c2686"
+    },
+    "files": [
+      {
+        "path": "pine_roots_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/pine_roots/pine_roots_4k.gltf",
+        "md5": "87a7ec4a2dcb5348cc278a084f3092ca",
+        "size": 5161
+      },
+      {
+        "path": "textures/pine_roots_a_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_nor_gl_4k.jpg",
+        "md5": "e7bd282dcfb24e3170d5f399282b2d99",
+        "size": 20565984
+      },
+      {
+        "path": "textures/pine_roots_a_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_diff_4k.jpg",
+        "md5": "f7d808040db2f276538aadc99e580c30",
+        "size": 9776217
+      },
+      {
+        "path": "textures/pine_roots_a_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_a_arm_4k.jpg",
+        "md5": "9469f337fe857c7eed8a961512e0b621",
+        "size": 11106572
+      },
+      {
+        "path": "pine_roots.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/pine_roots/pine_roots.bin",
+        "md5": "55ca478cc9135baa10be976931ee57a7",
+        "size": 3753376
+      },
+      {
+        "path": "textures/pine_roots_b_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_diff_4k.jpg",
+        "md5": "10c5edd23e0302364231283fa0c65c71",
+        "size": 9881359
+      },
+      {
+        "path": "textures/pine_roots_b_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_arm_4k.jpg",
+        "md5": "5a4a1f611dfeadf3cd16ab6069d57768",
+        "size": 11466988
+      },
+      {
+        "path": "textures/pine_roots_b_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pine_roots/pine_roots_b_nor_gl_4k.jpg",
+        "md5": "987d2a74e9e3b69cbc0b4aca587d5ff0",
+        "size": 20437122
+      }
+    ]
+  },
+  {
+    "id": "moss_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/moss_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "lods": true,
+      "name": "Moss 01",
+      "type": 2,
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "info": null,
+      "date_published": 1687305600,
+      "staging": null,
+      "geonodes": true,
+      "categories": [
+        "nature",
+        "plants",
+        "ground cover",
+        "collection: pine_forest"
+      ],
+      "sponsors": [
+        "42579608"
+      ],
+      "tags": [
+        "moss",
+        "ground cover",
+        "forest",
+        "woodland",
+        "foliage",
+        "nature",
+        "plant",
+        "natural",
+        "botany",
+        "small",
+        "geometry nodes",
+        "outdoor",
+        "undergrowth",
+        "vegetation",
+        "shrubs"
+      ],
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 246170,
+      "texel_density": 17465.478013898166,
+      "dimensions": [
+        838.9523178339005,
+        300.28730630874634,
+        298.94982278347015
+      ],
+      "files_hash": "2b55f8db1e0e00e0aa2681ef0bccc7d1aec5bfab",
+      "description": "Free 4K model - dense, lush ground-cover moss clump with fine fronds, varied green tones and realistic undergrowth geometry.",
+      "category_id": "91b3ed2b-c651-5e0f-aa38-96ec64d9c8e1",
+      "category": "Nature/Ground Cover & Moss/Moss",
+      "collections": [
+        "pine_forest"
+      ],
+      "attributes": {
+        "lods": true,
+        "geonodes": true,
+        "condition": [
+          "clean"
+        ],
+        "material": [
+          "plant"
+        ]
+      },
+      "img_version": "5f65cb0e",
+      "download_count": 38831,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/moss_01.png?width=256&height=256&format=webp&v=5f65cb0e"
+    },
+    "files": [
+      {
+        "path": "moss_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/moss_01/moss_01_4k.gltf",
+        "md5": "840f3d9f2417f6154b5c0d7345a73f24",
+        "size": 18481
+      },
+      {
+        "path": "textures/moss_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/moss_01/moss_01_nor_gl_4k.jpg",
+        "md5": "c0924ee9fc1365a0d0510748e6f15628",
+        "size": 6643244
+      },
+      {
+        "path": "textures/moss_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/moss_01/moss_01_diff_4k.jpg",
+        "md5": "f5e3cb94fddab99ad6fd840eff617bfc",
+        "size": 1562699
+      },
+      {
+        "path": "textures/moss_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/moss_01/moss_01_arm_4k.jpg",
+        "md5": "e58801aaf4f23793247bd5e35396fa27",
+        "size": 3365305
+      },
+      {
+        "path": "moss_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/moss_01/moss_01.bin",
+        "md5": "cdb092878a81b3208a162d79546892fe",
+        "size": 7260
+      }
+    ]
+  },
+  {
+    "id": "bark_debris_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/bark_debris_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "lods": true,
+      "name": "Bark Debris 01",
+      "type": 2,
+      "categories": [
+        "nature",
+        "ground cover",
+        "plants",
+        "collection: namaqualand"
+      ],
+      "tags": [
+        "karoo",
+        "desert",
+        "dry",
+        "dead tree",
+        "stick"
+      ],
+      "max_resolution": [
+        16384,
+        16384
+      ],
+      "polycount": 362632,
+      "texel_density": 14717.094809778973,
+      "dimensions": [
+        1209.9905610084534,
+        674.5080053806305,
+        112.16003447771072
+      ],
+      "staging": null,
+      "date_published": 1728345600,
+      "files_hash": "f63fd327bdc06de60bb9599ec203ebd9b299fb42",
+      "description": "Free 16K model of photoreal bark debris. Weathered Karoo sticks with cracked, dry surfaces - ideal for desert ground cover and dead-tree scenes (Namaqualand).",
+      "authors": {
+        "Greg Zaal": "photography",
+        "Jenelle van Heerden": "modeling"
+      },
+      "category_id": "147b8f30-6670-5cad-a864-a19cd8f3a44f",
+      "category": "Nature/Logs, Branches & Roots/Deadwood & Debris",
+      "collections": [
+        "namaqualand"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "wood"
+        ],
+        "lods": true
+      },
+      "img_version": "cc5715ac",
+      "download_count": 6461,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/bark_debris_01.png?width=256&height=256&format=webp&v=cc5715ac"
+    },
+    "files": [
+      {
+        "path": "bark_debris_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/bark_debris_01/bark_debris_01_4k.gltf",
+        "md5": "9850dd32acce70d1a05b37be6bc0ae09",
+        "size": 7646
+      },
+      {
+        "path": "bark_debris_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/bark_debris_01/bark_debris_01.bin",
+        "md5": "2ccb9e30747a8e33b354b0e242386e96",
+        "size": 4869268
+      },
+      {
+        "path": "textures/bark_debris_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_nor_gl_4k.jpg",
+        "md5": "0541205735feee84f90263a8415e0fbe",
+        "size": 16307494
+      },
+      {
+        "path": "textures/bark_debris_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_diff_4k.jpg",
+        "md5": "255c7757b60d5e8b5ce034a744378833",
+        "size": 13049455
+      },
+      {
+        "path": "textures/bark_debris_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/bark_debris_01/bark_debris_01_arm_4k.jpg",
+        "md5": "587d8028865ed697cd8f4b42ef36f428",
+        "size": 12623758
+      }
+    ]
+  },
+  {
+    "id": "wooden_bucket_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/wooden_bucket_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 2,
+      "name": "Wooden Bucket 01",
+      "authors": {
+        "James Ray Cock": "All"
+      },
+      "date_published": 1648598400,
+      "staging": null,
+      "categories": [
+        "props",
+        "containers",
+        "collection: smugglers_cove"
+      ],
+      "tags": [
+        "wooden",
+        "bucket",
+        "old",
+        "worn",
+        "wood",
+        "prop",
+        "container"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 5116,
+      "texel_density": 7673.335509768572,
+      "dimensions": [
+        366.97085201740265,
+        342.2211855649948,
+        549.862340092659
+      ],
+      "files_hash": "8d260ae5188bca1ef50676560a2c7a4160c82100",
+      "description": "Free 8K model of a worn wooden bucket with metal bands and an iron handle - rustic, weathered prop container. Vintage farmhouse/colonial maritime prop from the Smugglers Cove collection.",
+      "sponsors": [
+        "9910225",
+        "26820710"
+      ],
+      "category_id": "1d2ebe30-8c69-5f58-bc61-fcf2e6a03cba",
+      "category": "Containers & Storage/Baskets & Buckets/Buckets",
+      "collections": [
+        "smugglers_cove"
+      ],
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "wood",
+          "metal"
+        ]
+      },
+      "img_version": "e3a59ddb",
+      "download_count": 13629,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/wooden_bucket_01.png?width=256&height=256&format=webp&v=e3a59ddb"
+    },
+    "files": [
+      {
+        "path": "wooden_bucket_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_bucket_01/wooden_bucket_01_4k.gltf",
+        "md5": "d351cd90752496fc09b3da36ca47ea8e",
+        "size": 4248
+      },
+      {
+        "path": "textures/wooden_bucket_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_bucket_01/wooden_bucket_01_nor_gl_4k.jpg",
+        "md5": "855af0072bc70403c9d960af7584de9b",
+        "size": 11347909
+      },
+      {
+        "path": "wooden_bucket_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/wooden_bucket_01/wooden_bucket_01.bin",
+        "md5": "a93114e5fadd149de908464de7b42550",
+        "size": 158408
+      },
+      {
+        "path": "textures/wooden_bucket_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_bucket_01/wooden_bucket_01_arm_4k.jpg",
+        "md5": "eb56d73f04db54667fee1b4efe17904b",
+        "size": 9654838
+      },
+      {
+        "path": "textures/wooden_bucket_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_bucket_01/wooden_bucket_01_diff_4k.jpg",
+        "md5": "38d387c02853de3ebff246f4192eb3d4",
+        "size": 9975619
+      }
+    ]
+  },
+  {
+    "id": "wicker_basket_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/wicker_basket_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "date_published": 1672963200,
+      "name": "Wicker Basket 01",
+      "type": 2,
+      "staging": null,
+      "info": null,
+      "authors": {
+        "Kuutti Siitonen": "All"
+      },
+      "categories": [
+        "containers",
+        "decorative",
+        "collection: the_shed"
+      ],
+      "tags": [
+        "wood",
+        "wicker",
+        "twine",
+        "basket",
+        "picnic",
+        "outdoor",
+        "kitchen",
+        "dining",
+        "table",
+        "shed",
+        "farm"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 22276,
+      "texel_density": 7264.531424070384,
+      "dimensions": [
+        383.2242637872696,
+        295.01520097255707,
+        117.42293369024992
+      ],
+      "sponsors": [
+        "3237733"
+      ],
+      "files_hash": "49f624a285b5e5dc8fe4b75ad18cf5d18d8cdca1",
+      "description": "Free 8K wicker basket model with hand-woven twine, dark weathered wood tones, tight rectangular weave, braided rim and realistic grain with subtle wear.",
+      "category_id": "a7259375-6f0a-5f0d-99ff-ee1751ea792e",
+      "category": "Containers & Storage/Baskets & Buckets/Baskets",
+      "collections": [
+        "the_shed"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "img_version": "a8ab4dd6",
+      "download_count": 16325,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/wicker_basket_01.png?width=256&height=256&format=webp&v=a8ab4dd6"
+    },
+    "files": [
+      {
+        "path": "wicker_basket_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wicker_basket_01/wicker_basket_01_4k.gltf",
+        "md5": "071566122ac7de80f1b515e7d72cd1ab",
+        "size": 2792
+      },
+      {
+        "path": "textures/wicker_basket_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wicker_basket_01/wicker_basket_01_arm_4k.jpg",
+        "md5": "9066a0feab402501ad30ec24e9597785",
+        "size": 9742801
+      },
+      {
+        "path": "textures/wicker_basket_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wicker_basket_01/wicker_basket_01_diff_4k.jpg",
+        "md5": "66d1056bdf6e3417077706aca56eb50b",
+        "size": 10258445
+      },
+      {
+        "path": "textures/wicker_basket_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wicker_basket_01/wicker_basket_01_nor_gl_4k.jpg",
+        "md5": "a55dea05e6dfa9dcc79af76219fc32f8",
+        "size": 9118184
+      },
+      {
+        "path": "wicker_basket_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/wicker_basket_01/wicker_basket_01.bin",
+        "md5": "154e2cd9157175591e3585e706925fa9",
+        "size": 624920
+      }
+    ]
+  },
+  {
+    "id": "book_encyclopedia_set_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/book_encyclopedia_set_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "date_published": 1623767600,
+      "sponsors": [
+        "44302755"
+      ],
+      "name": "Book Encyclopedia Set 01",
+      "categories": [
+        "props",
+        "decorative",
+        "books"
+      ],
+      "type": 2,
+      "staging": null,
+      "tags": [
+        "bookshelf",
+        "books",
+        "library",
+        "reading",
+        "encyclopedia",
+        "set"
+      ],
+      "authors": {
+        "John Malcolm": "All"
+      },
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 67306,
+      "texel_density": 15321.204426492131,
+      "dimensions": [
+        551.2974057346582,
+        163.06233406066895,
+        237.41818653931634
+      ],
+      "files_hash": "e9912207a0e5af455662c910d23d34ccbabb26ac",
+      "description": "Free 8K set of vintage leather-bound encyclopedia volumes with gold-embossed spines, alphabetic labels and realistic wear, warm brown tones.",
+      "category_id": "69489d99-3ce8-5187-8be1-9a7ef5cdaa94",
+      "category": "Office & Stationery/Books & Documents/Books",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "leather",
+          "paper"
+        ]
+      },
+      "img_version": "81c5e12b",
+      "download_count": 47404,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/book_encyclopedia_set_01.png?width=256&height=256&format=webp&v=81c5e12b"
+    },
+    "files": [
+      {
+        "path": "book_encyclopedia_set_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/book_encyclopedia_set_01/book_encyclopedia_set_01_4k.gltf",
+        "md5": "78b6d3eb0bcf75dbf388ca748a4a4a84",
+        "size": 55011
+      },
+      {
+        "path": "textures/book_encyclopedia_set_01_paper_roughness_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_roughness_4k.jpg",
+        "md5": "28556eed5d54f652d69fa68f3a2e7e28",
+        "size": 197004
+      },
+      {
+        "path": "book_encyclopedia_set_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/book_encyclopedia_set_01/book_encyclopedia_set_01.bin",
+        "md5": "ac617be6503e537c5d1a16a94313e866",
+        "size": 2547932
+      },
+      {
+        "path": "textures/book_encyclopedia_set_01_cover_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_nor_gl_4k.jpg",
+        "md5": "6c7263465726b5908920c5094432f56c",
+        "size": 288538
+      },
+      {
+        "path": "textures/book_encyclopedia_set_01_cover_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_diff_4k.jpg",
+        "md5": "cd8030479c94310e332094388ba6aa79",
+        "size": 1599619
+      },
+      {
+        "path": "textures/book_encyclopedia_set_01_cover_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_arm_4k.jpg",
+        "md5": "5363c79f80aa6fa59d89e9ff30e796ee",
+        "size": 2573723
+      },
+      {
+        "path": "textures/book_encyclopedia_set_01_paper_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_nor_gl_4k.jpg",
+        "md5": "c92ad17916a495c162539848a8b39816",
+        "size": 1701764
+      },
+      {
+        "path": "textures/book_encyclopedia_set_01_paper_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_diff_4k.jpg",
+        "md5": "a3ed446313310ed3a13f8add209bc352",
+        "size": 958756
+      }
+    ]
+  },
+  {
+    "id": "pot_enamel_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/pot_enamel_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "date_published": 1662681600,
+      "name": "Pot Enamel 01",
+      "categories": [
+        "props",
+        "decorative",
+        "dishes"
+      ],
+      "type": 2,
+      "staging": null,
+      "authors": {
+        "Kuutti Siitonen": "All"
+      },
+      "tags": [
+        "pot",
+        "container",
+        "cooking",
+        "cookware",
+        "kitchen",
+        "enamel",
+        "crockery",
+        "cuisine"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "sponsors": [
+        "77433244"
+      ],
+      "polycount": 11416,
+      "texel_density": 14474.246184477663,
+      "dimensions": [
+        262.93012499809265,
+        180.4744154214859,
+        178.26278507709503
+      ],
+      "files_hash": "2332da616c0701d4556f6e272426f8459611c7f3",
+      "description": "Free 8K enamel pot model, dark brown with worn scuffs, lid and rounded handles, decorated with bold red-orange flame-like pattern around the base.",
+      "category_id": "e6058a1a-0864-52d4-a70b-596d5f08ce64",
+      "category": "Food & Kitchen/Cookware/Pots & Pans",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "metal"
+        ]
+      },
+      "img_version": "159e0103",
+      "download_count": 5046,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/pot_enamel_01.png?width=256&height=256&format=webp&v=159e0103"
+    },
+    "files": [
+      {
+        "path": "pot_enamel_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/pot_enamel_01/pot_enamel_01_4k.gltf",
+        "md5": "5e8f08d97ca20890a3b8540a66affec8",
+        "size": 4018
+      },
+      {
+        "path": "textures/pot_enamel_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pot_enamel_01/pot_enamel_01_arm_4k.jpg",
+        "md5": "c356ef7bf7b6f0b5c5221154293669f4",
+        "size": 6785303
+      },
+      {
+        "path": "textures/pot_enamel_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pot_enamel_01/pot_enamel_01_diff_4k.jpg",
+        "md5": "6bb52e2c0853ed3722700e04b450889f",
+        "size": 7227766
+      },
+      {
+        "path": "pot_enamel_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/pot_enamel_01/pot_enamel_01.bin",
+        "md5": "d8845287663697c274192b8ba35cb7a1",
+        "size": 270448
+      },
+      {
+        "path": "textures/pot_enamel_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/pot_enamel_01/pot_enamel_01_nor_gl_4k.jpg",
+        "md5": "817887fafa7034a92b071fb72fee8630",
+        "size": 8246935
+      }
+    ]
+  },
+  {
+    "id": "wooden_bowl_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/wooden_bowl_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "type": 2,
+      "tags": [
+        "bowl",
+        "wooden",
+        "carved",
+        "fruit",
+        "fruitbowl",
+        "decoration"
+      ],
+      "name": "Wooden Bowl 01",
+      "categories": [
+        "props",
+        "decorative",
+        "dishes"
+      ],
+      "authors": {
+        "Oliver Harries": "All"
+      },
+      "date_published": 1628553600,
+      "staging": null,
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 14122,
+      "texel_density": 14009.285372655248,
+      "dimensions": [
+        313.08163702487946,
+        309.1423809528351,
+        93.69255532510579
+      ],
+      "files_hash": "ff38f8071c92479217e80fabee05cb78ca6ef1a0",
+      "description": "Free 8K model - hand-carved, rustic wooden bowl with irregular, worn rim, smooth shallow interior and rich aged grain and patina.",
+      "category_id": "2e20c653-c7cf-5e53-bb6b-378fa9ad5722",
+      "category": "Food & Kitchen/Tableware/Bowls",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "img_version": "8229abc8",
+      "download_count": 14815,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/wooden_bowl_01.png?width=256&height=256&format=webp&v=8229abc8"
+    },
+    "files": [
+      {
+        "path": "wooden_bowl_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_bowl_01/wooden_bowl_01_4k.gltf",
+        "md5": "967d1774850699a9fe9506bfeaa96a23",
+        "size": 2811
+      },
+      {
+        "path": "textures/wooden_bowl_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_bowl_01/wooden_bowl_01_diff_4k.jpg",
+        "md5": "1355e5bae214b3f55b1f66f521c81eb8",
+        "size": 6632473
+      },
+      {
+        "path": "wooden_bowl_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/wooden_bowl_01/wooden_bowl_01.bin",
+        "md5": "ab8f522a5b859d901de1eed742f275bd",
+        "size": 321052
+      },
+      {
+        "path": "textures/wooden_bowl_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_bowl_01/wooden_bowl_01_nor_gl_4k.jpg",
+        "md5": "3e27d92b119cf2632e1bec6824b6f2e7",
+        "size": 10210628
+      },
+      {
+        "path": "textures/wooden_bowl_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/wooden_bowl_01/wooden_bowl_01_arm_4k.jpg",
+        "md5": "a5d9e9a9970e3af2d075217f5f4b834a",
+        "size": 8755222
+      }
+    ]
+  },
+  {
+    "id": "katana_stand_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/katana_stand_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 2,
+      "tags": [
+        "katana",
+        "stand",
+        "wooden",
+        "painted",
+        "worn",
+        "simple",
+        "display"
+      ],
+      "name": "Katana Stand 01",
+      "categories": [
+        "props",
+        "decorative"
+      ],
+      "authors": {
+        "Rico Cilliers": "All"
+      },
+      "date_published": 1636675200,
+      "staging": null,
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 3780,
+      "texel_density": 21347.983359184276,
+      "dimensions": [
+        295.8274483680725,
+        53.46998375171097,
+        181.94599867638317
+      ],
+      "files_hash": "001350ae4d6dbccca937aa2358f2210959d92121",
+      "description": "Free 8K model of a simple painted wooden katana stand with worn brown finish, curved base, slotted uprights and a small decorative central crest.",
+      "category_id": "e0c1bab2-d150-5501-ae35-0c401c54f7a9",
+      "category": "Decor & Art/Ornaments/Display Pieces",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "img_version": "f4a2b0a9",
+      "download_count": 5465,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/katana_stand_01.png?width=256&height=256&format=webp&v=f4a2b0a9"
+    },
+    "files": [
+      {
+        "path": "katana_stand_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/katana_stand_01/katana_stand_01_4k.gltf",
+        "md5": "f97c18c2c202c74a9b3d176c66ac59f9",
+        "size": 2730
+      },
+      {
+        "path": "katana_stand_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/katana_stand_01/katana_stand_01.bin",
+        "md5": "36f6a863e368799c86bb28d6874a0b37",
+        "size": 104152
+      },
+      {
+        "path": "textures/katana_stand_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_nor_gl_4k.jpg",
+        "md5": "734f4d9cd2f3689f28df62b28b0fe15f",
+        "size": 2195369
+      },
+      {
+        "path": "textures/katana_stand_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_arm_4k.jpg",
+        "md5": "0ee6b6cd20a5f417d94cbbc3f51e92f8",
+        "size": 2673610
+      },
+      {
+        "path": "textures/katana_stand_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/katana_stand_01/katana_stand_01_diff_4k.jpg",
+        "md5": "5acf1c0e4f0d068355eb1529ac5b47e9",
+        "size": 2358151
+      }
+    ]
+  },
+  {
+    "id": "hanging_picture_frame_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/hanging_picture_frame_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 2,
+      "tags": [
+        "modern",
+        "minimalist",
+        "clean",
+        "frame",
+        "simple",
+        "art"
+      ],
+      "name": "Hanging Picture Frame 01",
+      "categories": [
+        "decorative",
+        "wall decoration"
+      ],
+      "authors": {
+        "James Ray Cock": "All"
+      },
+      "date_published": 1623767612,
+      "staging": null,
+      "sponsors": [
+        "4714267",
+        "11109006"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 2586,
+      "texel_density": 7692.936474522403,
+      "dimensions": [
+        593.999981880188,
+        15.749315607536118,
+        840.999960899353
+      ],
+      "files_hash": "ac600318c079d4548e7cd0cc0f9b7c3a5183a93b",
+      "description": "Free, 8K modern minimalist hanging picture frame with slim black metal frame, white mat and subtle patterned inlay - clean, simple wall decoration model.",
+      "category_id": "120bc7c7-4121-53e5-848a-89f3cb7cbf51",
+      "category": "Decor & Art/Wall Decor/Picture Frames & Art",
+      "attributes": {
+        "condition": [
+          "clean"
+        ],
+        "material": [
+          "metal"
+        ]
+      },
+      "img_version": "15c36923",
+      "download_count": 8214,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/hanging_picture_frame_01.png?width=256&height=256&format=webp&v=15c36923"
+    },
+    "files": [
+      {
+        "path": "hanging_picture_frame_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/hanging_picture_frame_01/hanging_picture_frame_01_4k.gltf",
+        "md5": "bf1459433a76756555e1f3af6d52ec8d",
+        "size": 6495
+      },
+      {
+        "path": "textures/hanging_picture_frame_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/hanging_picture_frame_01/hanging_picture_frame_01_diff_4k.jpg",
+        "md5": "37460c5698d7153f8c05144323bc6bb5",
+        "size": 1386469
+      },
+      {
+        "path": "textures/hanging_picture_frame_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/hanging_picture_frame_01/hanging_picture_frame_01_arm_4k.jpg",
+        "md5": "09cc5cbfefd9deaf0bba1c61b036aca4",
+        "size": 1326098
+      },
+      {
+        "path": "hanging_picture_frame_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/hanging_picture_frame_01/hanging_picture_frame_01.bin",
+        "md5": "ed2c512ea5e3dcdcfc70c53b4de24099",
+        "size": 86448
+      },
+      {
+        "path": "textures/hanging_picture_frame_01_artwork_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/hanging_picture_frame_01/hanging_picture_frame_01_artwork_nor_gl_4k.jpg",
+        "md5": "405cbb23f2b47116e17e83357dc9005f",
+        "size": 265177
+      },
+      {
+        "path": "textures/hanging_picture_frame_01_artwork_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/hanging_picture_frame_01/hanging_picture_frame_01_artwork_diff_4k.jpg",
+        "md5": "5ad81f57ccc5c4426d701822aa00a0d8",
+        "size": 369686
+      },
+      {
+        "path": "textures/hanging_picture_frame_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/hanging_picture_frame_01/hanging_picture_frame_01_nor_gl_4k.jpg",
+        "md5": "67d8f1897054f23029f02a6d3962afc0",
+        "size": 768956
+      },
+      {
+        "path": "textures/hanging_picture_frame_01_artwork_roughness_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/hanging_picture_frame_01/hanging_picture_frame_01_artwork_roughness_4k.jpg",
+        "md5": "28556eed5d54f652d69fa68f3a2e7e28",
+        "size": 197004
+      }
+    ]
+  },
+  {
+    "id": "brass_goblets",
+    "type": "model",
+    "page": "https://polyhaven.com/a/brass_goblets",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "name": "Brass Goblets",
+      "categories": [
+        "props",
+        "dishes",
+        "decorative",
+        "containers"
+      ],
+      "type": 2,
+      "tags": [
+        "vintage",
+        "old",
+        "antique",
+        "fancy",
+        "brass",
+        "cup",
+        "chalice",
+        "goblet",
+        "engraved",
+        "ornate",
+        "container"
+      ],
+      "authors": {
+        "Tina": "All"
+      },
+      "info": null,
+      "date_published": 1702684800,
+      "staging": null,
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 9600,
+      "texel_density": 8079.6515249966915,
+      "dimensions": [
+        453.39466631412506,
+        297.6139709353447,
+        273.377850651741
+      ],
+      "files_hash": "5b9625f91aafb878f745d78543e395020b35b8ca",
+      "description": "Free 4K model of three ornate vintage brass goblets, engraved rims and bases, warm aged patina and polished golden interiors.",
+      "category_id": "c90b2e84-08ee-5258-8f59-b525a1db7022",
+      "category": "Food & Kitchen/Tableware/Cups & Goblets",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "brass"
+        ]
+      },
+      "img_version": "d186073b",
+      "download_count": 26729,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/brass_goblets.png?width=256&height=256&format=webp&v=d186073b"
+    },
+    "files": [
+      {
+        "path": "brass_goblets_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/brass_goblets/brass_goblets_4k.gltf",
+        "md5": "0d96f1096eeab9a194fcc7113288a4d5",
+        "size": 7782
+      },
+      {
+        "path": "brass_goblets.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/brass_goblets/brass_goblets.bin",
+        "md5": "56e8be5f54fa2f3567abc1ea7d0f3fbc",
+        "size": 261728
+      },
+      {
+        "path": "textures/brass_goblet_02_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/brass_goblets/brass_goblet_02_diff_4k.jpg",
+        "md5": "ea99e0a5c79a41944277578e7e70385f",
+        "size": 8997671
+      },
+      {
+        "path": "textures/brass_goblet_03_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/brass_goblets/brass_goblet_03_nor_gl_4k.jpg",
+        "md5": "087b05fc74715f0190122d87899ece7a",
+        "size": 3747827
+      },
+      {
+        "path": "textures/brass_goblet_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/brass_goblets/brass_goblet_01_arm_4k.jpg",
+        "md5": "4e3651562964a9e4d439b1af5835cd1d",
+        "size": 11221377
+      },
+      {
+        "path": "textures/brass_goblet_02_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/brass_goblets/brass_goblet_02_arm_4k.jpg",
+        "md5": "9f0a8deb9c1f8a07054466c023cd343b",
+        "size": 9291715
+      },
+      {
+        "path": "textures/brass_goblet_02_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/brass_goblets/brass_goblet_02_nor_gl_4k.jpg",
+        "md5": "74c2e0bf884d71f8076ae00365c9d1c3",
+        "size": 4519755
+      },
+      {
+        "path": "textures/brass_goblet_03_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/brass_goblets/brass_goblet_03_diff_4k.jpg",
+        "md5": "e105b5ebb0f85d0d8001f34bf1fcd96c",
+        "size": 9365114
+      },
+      {
+        "path": "textures/brass_goblet_03_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/brass_goblets/brass_goblet_03_arm_4k.jpg",
+        "md5": "7533e897ddaf8a4024b3ad9abcd5591b",
+        "size": 4800982
+      },
+      {
+        "path": "textures/brass_goblet_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/brass_goblets/brass_goblet_01_diff_4k.jpg",
+        "md5": "1b982f026bc479f934870dc0d2c33b91",
+        "size": 9505877
+      },
+      {
+        "path": "textures/brass_goblet_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/brass_goblets/brass_goblet_01_nor_gl_4k.jpg",
+        "md5": "c560f3da0fe01234ecd6214630f8bfcf",
+        "size": 5496557
+      }
+    ]
+  },
+  {
+    "id": "lantern_chandelier_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/lantern_chandelier_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 2,
+      "name": "Lantern Chandelier 01",
+      "categories": [
+        "lighting"
+      ],
+      "authors": {
+        "Kirill Sannikov": "All"
+      },
+      "date_published": 1623767622,
+      "staging": null,
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 5971,
+      "texel_density": 6701.141128634447,
+      "dimensions": [
+        579.170286655426,
+        574.6368169784546,
+        877.587977796793
+      ],
+      "sponsors": [
+        "68131842",
+        "4714267"
+      ],
+      "files_hash": "9fa2671b82fa607b5060f188595686ad50572bce",
+      "tags": [
+        "lighting",
+        "old",
+        "victorian",
+        "metal",
+        "antique",
+        "ornate",
+        "vintage",
+        "brass",
+        "fancy",
+        "ornamental",
+        "chandelier",
+        "light",
+        "indoor light",
+        "light fixture"
+      ],
+      "description": "Free 8K model - ornate Victorian brass lantern chandelier with aged metal, decorative panels and single bulb; antique ornamental indoor light fixture.",
+      "category_id": "f0e24a22-b694-5cc0-8624-dd68b862c9ef",
+      "category": "Lighting/Ceiling/Chandeliers",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "brass",
+          "glass"
+        ]
+      },
+      "img_version": "316ffada",
+      "download_count": 12983,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/lantern_chandelier_01.png?width=256&height=256&format=webp&v=316ffada"
+    },
+    "files": [
+      {
+        "path": "lantern_chandelier_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/lantern_chandelier_01/lantern_chandelier_01_4k.gltf",
+        "md5": "b30e010c913cf60de1d899d54cc6966d",
+        "size": 7774
+      },
+      {
+        "path": "textures/lantern_chandelier_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_arm_4k.jpg",
+        "md5": "bcf1d18d7996a31806925f23899738b9",
+        "size": 3260623
+      },
+      {
+        "path": "textures/lantern_chandelier_01_glass_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_diff_4k.jpg",
+        "md5": "607a21356a772b33c509a516ddc97c97",
+        "size": 287697
+      },
+      {
+        "path": "textures/lantern_chandelier_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_diff_4k.jpg",
+        "md5": "30ef4e08e5446ac3767a85f460281e85",
+        "size": 1592776
+      },
+      {
+        "path": "textures/lantern_chandelier_01_glass_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_arm_4k.jpg",
+        "md5": "7e3239027f17b45f0344d826836742f1",
+        "size": 298263
+      },
+      {
+        "path": "textures/lantern_chandelier_01_glass_alpha_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_alpha_4k.jpg",
+        "md5": "cfbf188722923fb25ae31eb0f72ef955",
+        "size": 236730
+      },
+      {
+        "path": "textures/lantern_chandelier_01_glass_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_glass_nor_gl_4k.jpg",
+        "md5": "d775ad3a73cca68a2a9f890ee7382954",
+        "size": 5346335
+      },
+      {
+        "path": "lantern_chandelier_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/lantern_chandelier_01/lantern_chandelier_01.bin",
+        "md5": "5a341ffae56b0f2defcad4c3f37bb35d",
+        "size": 264348
+      },
+      {
+        "path": "textures/lantern_chandelier_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/lantern_chandelier_01/lantern_chandelier_01_nor_gl_4k.jpg",
+        "md5": "0625a9394595ab2420010de2c8b651e3",
+        "size": 1535951
+      }
+    ]
+  },
+  {
+    "id": "stone_fire_pit",
+    "type": "model",
+    "page": "https://polyhaven.com/a/stone_fire_pit",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "date_published": 1679270400,
+      "name": "Stone Fire Pit",
+      "type": 2,
+      "staging": null,
+      "authors": {
+        "Sebastian Platen": "All"
+      },
+      "info": null,
+      "sponsors": [
+        "78546118"
+      ],
+      "categories": [
+        "structures",
+        "buildings",
+        "furniture",
+        "collection: the_shed"
+      ],
+      "tags": [
+        "outdoor",
+        "garden",
+        "fire",
+        "bbq",
+        "farm",
+        "farmhouse",
+        "landscaping",
+        "patio",
+        "backyard",
+        "entertainment",
+        "relaxation",
+        "stone"
+      ],
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 3887,
+      "texel_density": 1923.8261944355422,
+      "dimensions": [
+        1448.4962224960327,
+        1433.234453201294,
+        388.32607865333557
+      ],
+      "files_hash": "db8f04edd02bcfd3bae277fe17f585be17f7c7d9",
+      "description": "Free 4K model of a rustic, hand-assembled stone fire pit with irregular boulders, soot-darkened basin and lichen-dusted, weathered surfaces.",
+      "category_id": "0b5cf7f5-7af9-5ed4-a6d3-4b94ae801c19",
+      "category": "Architecture/Outdoor Structures/Fire Pits",
+      "collections": [
+        "the_shed"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "stone"
+        ]
+      },
+      "img_version": "0ef34eba",
+      "download_count": 23745,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/stone_fire_pit.png?width=256&height=256&format=webp&v=0ef34eba"
+    },
+    "files": [
+      {
+        "path": "stone_fire_pit_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/stone_fire_pit/stone_fire_pit_4k.gltf",
+        "md5": "c000d7177e45414782994c537431d5a1",
+        "size": 2792
+      },
+      {
+        "path": "textures/stone_fire_pit_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/stone_fire_pit/stone_fire_pit_diff_4k.jpg",
+        "md5": "4fcde8b1d9919d237a2367af97f6c570",
+        "size": 13201065
+      },
+      {
+        "path": "stone_fire_pit.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/stone_fire_pit/stone_fire_pit.bin",
+        "md5": "1652ba5fb374b6c15cddb64445a0bb5b",
+        "size": 96220
+      },
+      {
+        "path": "textures/stone_fire_pit_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/stone_fire_pit/stone_fire_pit_nor_gl_4k.jpg",
+        "md5": "1156ce47865e6c6932371343b121dfba",
+        "size": 15648047
+      },
+      {
+        "path": "textures/stone_fire_pit_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/stone_fire_pit/stone_fire_pit_arm_4k.jpg",
+        "md5": "bec51618c5b9e4228c10cf1ef118505c",
+        "size": 9734418
+      }
+    ]
+  },
+  {
+    "id": "wood_floor_worn",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/wood_floor_worn",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "name": "Wood Floor Worn",
+      "categories": [
+        "floor",
+        "wood",
+        "man made"
+      ],
+      "type": 1,
+      "tags": [
+        "old",
+        "weathered",
+        "rough",
+        "worn",
+        "discolored",
+        "flat",
+        "pine",
+        "wood",
+        "planks",
+        "wooden flooring ",
+        "wooden planks",
+        "aged",
+        "antique",
+        "timber",
+        "rustic"
+      ],
+      "authors": {
+        "Dimitrios Savva": "All"
+      },
+      "info": null,
+      "dimensions": [
+        1999.9996423721313,
+        1999.9996423721313
+      ],
+      "date_published": 1701734400,
+      "staging": null,
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "files_hash": "275a525261d4c4d1f488b870ee610448a96201cc",
+      "description": "Free 8K texture of worn pine floor planks - aged, weathered surface with knots, nail holes, discoloration, scratches and a subtle varnish sheen.",
+      "sponsors": [
+        "3237733",
+        "7934315"
+      ],
+      "category_id": "30ac2613-5076-5364-b4da-130117ad592d",
+      "category": "Wood/Boards & Planks/Weathered Planks",
+      "attributes": {
+        "surface_use": "floor",
+        "condition": [
+          "weathered",
+          "worn"
+        ],
+        "origin": "man_made"
+      },
+      "img_version": "6f2a13b1",
+      "download_count": 118707,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/wood_floor_worn.png?width=256&height=256&format=webp&v=6f2a13b1"
+    },
+    "files": [
+      {
+        "path": "wood_floor_worn_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/wood_floor_worn/wood_floor_worn_diff_4k.jpg",
+        "md5": "91e3f8b4f0176ab4dc266321c5bdcbe6",
+        "size": 9365971
+      },
+      {
+        "path": "wood_floor_worn_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/wood_floor_worn/wood_floor_worn_nor_gl_4k.jpg",
+        "md5": "3379c9d860cb3edd03cd2bf64689e0d1",
+        "size": 12054332
+      },
+      {
+        "path": "wood_floor_worn_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/wood_floor_worn/wood_floor_worn_rough_4k.jpg",
+        "md5": "1a0c26d7aca182f6642ca9b284b81e19",
+        "size": 4998786
+      },
+      {
+        "path": "wood_floor_worn_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/wood_floor_worn/wood_floor_worn_disp_4k.jpg",
+        "md5": "1c1adad1bf74149f6d4cba69db7f89a1",
+        "size": 2092274
+      }
+    ]
+  },
+  {
+    "id": "dark_wooden_planks",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/dark_wooden_planks",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 1,
+      "tags": [
+        "rough",
+        "old",
+        "weathered",
+        "cracked",
+        "damaged",
+        "brown",
+        "wood",
+        "wooden",
+        "floor",
+        "planks",
+        "scratched",
+        "worn",
+        "chipped"
+      ],
+      "date_published": 1680566400,
+      "name": "Dark Wooden Planks",
+      "categories": [
+        "floor",
+        "man made",
+        "indoor",
+        "wood",
+        "raw wood"
+      ],
+      "staging": null,
+      "dimensions": [
+        2000,
+        2000
+      ],
+      "info": null,
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "sponsors": [
+        "3267566"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "files_hash": "42512df3eee6d0b71aa081d3f64ba6497b7f60d7",
+      "description": "Free 8K texture of dark, weathered wooden planks - rough, scratched and cracked surfaces with chipping, visible seams and a worn dusty sheen.",
+      "category_id": "30ac2613-5076-5364-b4da-130117ad592d",
+      "category": "Wood/Boards & Planks/Weathered Planks",
+      "attributes": {
+        "surface_use": "floor",
+        "condition": [
+          "weathered",
+          "cracked",
+          "damaged",
+          "worn"
+        ],
+        "origin": "man_made",
+        "setting": "indoor"
+      },
+      "img_version": "21ce8d38",
+      "download_count": 91460,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/dark_wooden_planks.png?width=256&height=256&format=webp&v=21ce8d38"
+    },
+    "files": [
+      {
+        "path": "dark_wooden_planks_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/dark_wooden_planks/dark_wooden_planks_diff_4k.jpg",
+        "md5": "70d434b2df3799476a2c5c716d673c73",
+        "size": 11518252
+      },
+      {
+        "path": "dark_wooden_planks_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/dark_wooden_planks/dark_wooden_planks_nor_gl_4k.jpg",
+        "md5": "59fc4e21ab56d37552aa1c7a787f7cdd",
+        "size": 12180374
+      },
+      {
+        "path": "dark_wooden_planks_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/dark_wooden_planks/dark_wooden_planks_rough_4k.jpg",
+        "md5": "688101610f2554b47c8ee3dc93854296",
+        "size": 10826212
+      },
+      {
+        "path": "dark_wooden_planks_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/dark_wooden_planks/dark_wooden_planks_disp_4k.jpg",
+        "md5": "331df6b57a39ffe1f6d0690a4afaec85",
+        "size": 1475020
+      }
+    ]
+  },
+  {
+    "id": "jolcham_oak_bark_01",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/jolcham_oak_bark_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 1,
+      "name": "Jolcham Oak Bark 01",
+      "categories": [
+        "outdoor",
+        "natural",
+        "bark"
+      ],
+      "description": "Free 8k texture of Jolcham oak bark: rough, weathered, uneven bark with mossy, lichen-covered patches, deep fissures and coarse organic brown-green tones.",
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "max_resolution": [
+        8192,
+        16384
+      ],
+      "date_published": 1777334400,
+      "staging": null,
+      "tags": [
+        "rough",
+        "weathered",
+        "uneven",
+        "moss",
+        "mossy",
+        "mosscovered",
+        "bark",
+        "tree",
+        "tree bark",
+        "organic",
+        "fissured",
+        "bark texture",
+        "tree trunk",
+        "trunk",
+        "tree texture",
+        "non square"
+      ],
+      "dimensions": [
+        1000,
+        2000
+      ],
+      "files_hash": "0a79f73d58cae8285349ccab52becc63ba56456e",
+      "category_id": "fc8dd00d-a670-5b83-af7f-2281cb9ca987",
+      "category": "Wood/Bark/Fissured Bark",
+      "attributes": {
+        "surface_use": "object",
+        "condition": [
+          "weathered",
+          "mossy"
+        ],
+        "origin": "natural",
+        "setting": "outdoor"
+      },
+      "img_version": "0f99fd59",
+      "download_count": 5186,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/jolcham_oak_bark_01.png?width=256&height=256&format=webp&v=0f99fd59"
+    },
+    "files": [
+      {
+        "path": "jolcham_oak_bark_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/jolcham_oak_bark_01/jolcham_oak_bark_01_diff_4k.jpg",
+        "md5": "6eb170f2ae0c20040570522b3cbb2933",
+        "size": 28356845
+      },
+      {
+        "path": "jolcham_oak_bark_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/jolcham_oak_bark_01/jolcham_oak_bark_01_nor_gl_4k.jpg",
+        "md5": "f36904392858c5673e51b5215d2bdab2",
+        "size": 37209709
+      },
+      {
+        "path": "jolcham_oak_bark_01_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/jolcham_oak_bark_01/jolcham_oak_bark_01_rough_4k.jpg",
+        "md5": "02bdeb2e63c7a99f84f7ae7bc58a7f84",
+        "size": 12642405
+      },
+      {
+        "path": "jolcham_oak_bark_01_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/jolcham_oak_bark_01/jolcham_oak_bark_01_disp_4k.jpg",
+        "md5": "3f161c3ff32887883fb43bb8168aef8c",
+        "size": 7764398
+      }
+    ]
+  },
+  {
+    "id": "rustic_stone_wall",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/rustic_stone_wall",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "date_published": 1680393600,
+      "name": "Rustic Stone Wall",
+      "categories": [
+        "outdoor",
+        "wall",
+        "rock",
+        "man made"
+      ],
+      "type": 1,
+      "staging": null,
+      "authors": {
+        "Dimitrios Savva": "All"
+      },
+      "dimensions": [
+        1519.9998617172241,
+        1519.9998617172241
+      ],
+      "tags": [
+        "weathered",
+        "old",
+        "uneven",
+        "wall",
+        "rock",
+        "rocks"
+      ],
+      "info": null,
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "files_hash": "d9b74fbcd80b78bdae576ecdc60b239f2168d408",
+      "description": "Free 8K texture of a rustic stone wall, weathered uneven blocks with rough, chiseled surfaces, deep mortar joints and warm tan-to-red tones.",
+      "sponsors": [
+        "128081732"
+      ],
+      "category_id": "6b87bb89-210e-5f4c-a78b-3a4bdfac7fe0",
+      "category": "Stone/Walls & Rubble/Rubble & Random Stone",
+      "attributes": {
+        "surface_use": "wall",
+        "condition": [
+          "weathered"
+        ],
+        "origin": "man_made",
+        "setting": "outdoor"
+      },
+      "img_version": "c141d732",
+      "download_count": 32207,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/rustic_stone_wall.png?width=256&height=256&format=webp&v=c141d732"
+    },
+    "files": [
+      {
+        "path": "rustic_stone_wall_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/rustic_stone_wall/rustic_stone_wall_diff_4k.jpg",
+        "md5": "6f733bd4b4c02f8d2bb3da357480a13f",
+        "size": 13527604
+      },
+      {
+        "path": "rustic_stone_wall_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/rustic_stone_wall/rustic_stone_wall_nor_gl_4k.jpg",
+        "md5": "87243069fb1388f2695e21489801da70",
+        "size": 18153700
+      },
+      {
+        "path": "rustic_stone_wall_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/rustic_stone_wall/rustic_stone_wall_rough_4k.jpg",
+        "md5": "e0ffe26a1c380443b9e96fadbae71d93",
+        "size": 10284894
+      },
+      {
+        "path": "rustic_stone_wall_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/rustic_stone_wall/rustic_stone_wall_disp_4k.jpg",
+        "md5": "35bc46e2cfa84bcfe509b271ae402b9a",
+        "size": 2492054
+      }
+    ]
+  },
+  {
+    "id": "forest_leaves_03",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/forest_leaves_03",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 1,
+      "tags": [
+        "leaves",
+        "autumn",
+        "dry",
+        "nature",
+        "forest",
+        "ground",
+        "cover",
+        "dirt",
+        "debris",
+        "brown",
+        "yellow",
+        "green"
+      ],
+      "name": "Forest Leaves 03",
+      "categories": [
+        "outdoor",
+        "natural",
+        "terrain"
+      ],
+      "authors": {
+        "Rob Tuytel": "Processing",
+        "Dimitrios Savva": "Photography"
+      },
+      "date_published": 1636588800,
+      "staging": null,
+      "dimensions": [
+        2299.999952316284,
+        2300.0001907348633
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "files_hash": "253f3191fdc71b9bb20e4e4e1d96130ae95222f8",
+      "description": "Free 8K texture of dense dry forest leaf litter - brown, yellow and green curled leaves with dirt and debris, rough matte surface and pronounced depth.",
+      "category_id": "b9a51c27-1499-5f4d-b28f-0d96ef8e0319",
+      "category": "Ground & Terrain/Forest Floor/Leaf Litter",
+      "attributes": {
+        "surface_use": "ground",
+        "origin": "natural",
+        "setting": "outdoor",
+        "condition": [
+          "dirty"
+        ]
+      },
+      "img_version": "e50be952",
+      "download_count": 43854,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/forest_leaves_03.png?width=256&height=256&format=webp&v=e50be952"
+    },
+    "files": [
+      {
+        "path": "forest_leaves_03_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/forest_leaves_03/forest_leaves_03_diff_4k.jpg",
+        "md5": "4244dc0abe8de35e7e9f85d2a0949736",
+        "size": 10948936
+      },
+      {
+        "path": "forest_leaves_03_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/forest_leaves_03/forest_leaves_03_nor_gl_4k.jpg",
+        "md5": "5872af927b204a6f7537d7c1b624f285",
+        "size": 19432532
+      },
+      {
+        "path": "forest_leaves_03_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/forest_leaves_03/forest_leaves_03_rough_4k.jpg",
+        "md5": "46f22d2ab80f1e15efe2aeed3571a054",
+        "size": 8837696
+      },
+      {
+        "path": "forest_leaves_03_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/forest_leaves_03/forest_leaves_03_disp_4k.jpg",
+        "md5": "9cbc7cba6b47f1da2d4eee2109c1e497",
+        "size": 3347235
+      }
+    ]
+  },
+  {
+    "id": "quatrefoil_jacquard_fabric",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/quatrefoil_jacquard_fabric",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 1,
+      "name": "Quatrefoil Jacquard Fabric",
+      "authors": {
+        "colormass": "Photography",
+        "Rico Cilliers": "Processing"
+      },
+      "max_resolution": [
+        8522,
+        8634
+      ],
+      "dimensions": [
+        280.11855714681565,
+        283.80000591278076
+      ],
+      "staging": null,
+      "files_hash": "289ec1d471e918d27f469f0247b40cc6894f7204",
+      "tags": [
+        "red",
+        "patterned",
+        "floral",
+        "jacquard",
+        "quatrefoil pattern",
+        "red fabric",
+        "burgundy",
+        "material",
+        "fabric",
+        "woven",
+        "brocade",
+        "damask",
+        "matelasse",
+        "complex weave"
+      ],
+      "description": "Free 8K material - burgundy jacquard fabric with woven quatrefoil brocade pattern, subtle sheen, raised weave; ideal for upholstery, drapery and interiors.",
+      "date_published": 1757078158,
+      "categories": [
+        "fabric",
+        "jacquard"
+      ],
+      "category_id": "674fd9ef-3222-5c95-a057-d92a8404acfd",
+      "category": "Textiles & Leather/Patterned & Jacquard/Jacquard & Brocade",
+      "attributes": {
+        "surface_use": "object",
+        "origin": "man_made",
+        "condition": [
+          "clean"
+        ]
+      },
+      "vault": "fabric",
+      "img_version": "6938622a",
+      "download_count": 19806,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/quatrefoil_jacquard_fabric.png?width=256&height=256&format=webp&v=6938622a"
+    },
+    "files": [
+      {
+        "path": "quatrefoil_jacquard_fabric_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/quatrefoil_jacquard_fabric/quatrefoil_jacquard_fabric_diff_4k.jpg",
+        "md5": "b3e5e4e2eba27d10f6cc6d4ae183d1c4",
+        "size": 10588474
+      },
+      {
+        "path": "quatrefoil_jacquard_fabric_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/quatrefoil_jacquard_fabric/quatrefoil_jacquard_fabric_nor_gl_4k.jpg",
+        "md5": "8f9f81b6ecaabf3eb7f09ca8a4a2e117",
+        "size": 14411639
+      },
+      {
+        "path": "quatrefoil_jacquard_fabric_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/quatrefoil_jacquard_fabric/quatrefoil_jacquard_fabric_rough_4k.jpg",
+        "md5": "e2b8f172bdb7b35cb4c1ff6dc99f356f",
+        "size": 16540680
+      },
+      {
+        "path": "quatrefoil_jacquard_fabric_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/quatrefoil_jacquard_fabric/quatrefoil_jacquard_fabric_disp_4k.jpg",
+        "md5": "60745251ac86a4c074dd2cc15c5e7ea0",
+        "size": 7282876
+      }
+    ]
+  }
+]

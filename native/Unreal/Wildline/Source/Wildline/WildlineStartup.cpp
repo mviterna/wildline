@@ -1,4 +1,5 @@
 #include "WildlineGame.h"
+#include "WildlineLobby.h"
 #include "WildlineIntro.h"
 #include "WildlineMenu.h"
 #include "WildlineCharacter.h"
@@ -35,6 +36,7 @@ void AWildlineController::StartMenuMusic(){
 }
 void AWildlineController::Tick(float Delta){
     Super::Tick(Delta);if(!IsLocalController())return;
+    if(LobbyProbeWalkAt>0&&GetWorld()->GetTimeSeconds()>=LobbyProbeWalkAt){if(auto* P=Cast<AWildlineCharacter>(GetPawn());P&&P->bInLobby)P->AddMovementInput((AWildlineLobby::Portal(P->bSquirrel)-P->GetActorLocation()).GetSafeNormal2D(),1);else LobbyProbeWalkAt=0;}
     if(Menu&&!Intro&&MenuRevealAt>=0){const float U=bMenuOpen?FMath::Clamp((GetWorld()->GetTimeSeconds()-MenuRevealAt)/.45f,0.f,1.f):1.f;Menu->SetRenderOpacity(U*U*(3-2*U));if(U>=1){MenuRevealAt=-10;PlayerCameraManager->StopCameraFade();}}
     const auto* Settings=UWildlineUserSettings::Get();const bool Audible=Intro?Intro->bMusic:bMenuOpen;
     // Keep the saved slider unchanged; ease down another 40% as the main menu appears.

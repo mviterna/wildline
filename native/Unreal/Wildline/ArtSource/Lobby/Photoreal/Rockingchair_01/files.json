@@ -1,0 +1,676 @@
+{
+  "Diffuse": {
+    "4k": {
+      "jpg": {
+        "size": 1690269,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_diff_4k.jpg",
+        "md5": "c4c2bc647f7cba14ac683a309777fc80"
+      },
+      "png": {
+        "size": 30529502,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Rockingchair_01/Rockingchair_01_diff_4k.png",
+        "md5": "0f531ca30c1d31d40bd435ca111ff69a"
+      },
+      "exr": {
+        "size": 17161093,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_diff_4k.exr",
+        "md5": "ccd0c367a282407b02dc63fb666d49b7"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 476830,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_diff_2k.jpg",
+        "md5": "4b19506dd91d8a4acb7395d673754e78"
+      },
+      "png": {
+        "size": 12792167,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Rockingchair_01/Rockingchair_01_diff_2k.png",
+        "md5": "d2d03913f65022adc68b0b45e279fe14"
+      },
+      "exr": {
+        "size": 4649602,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_diff_2k.exr",
+        "md5": "a19827bdce5c097339e1cee22039125d"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 138197,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_diff_1k.jpg",
+        "md5": "39a5b09e0349f2dc6892d4c827c1cc45"
+      },
+      "png": {
+        "size": 3954041,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Rockingchair_01/Rockingchair_01_diff_1k.png",
+        "md5": "ba5aa7fb461ca02648fe92f3bfbacef0"
+      },
+      "exr": {
+        "size": 1354300,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_diff_1k.exr",
+        "md5": "d346c1db0e312c0e0c5d3e66d0ba3f1f"
+      }
+    }
+  },
+  "nor_dx": {
+    "4k": {
+      "jpg": {
+        "size": 1844460,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_nor_dx_4k.jpg",
+        "md5": "d3e14a46798147084b5d56d198310e2b"
+      },
+      "png": {
+        "size": 37480896,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Rockingchair_01/Rockingchair_01_nor_dx_4k.png",
+        "md5": "c0a3afe625a2f286650c885130d390f3"
+      },
+      "exr": {
+        "size": 14893182,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_nor_dx_4k.exr",
+        "md5": "4653711139e07467046e6c461f893a82"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 517173,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_nor_dx_2k.jpg",
+        "md5": "95550ddb2064ab52773239a0afcc1af1"
+      },
+      "png": {
+        "size": 12627287,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Rockingchair_01/Rockingchair_01_nor_dx_2k.png",
+        "md5": "f168d28b1de30ea3601d573613da0372"
+      },
+      "exr": {
+        "size": 4453734,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_nor_dx_2k.exr",
+        "md5": "c604b10a24d19aa30b18deef140c994e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 146917,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_nor_dx_1k.jpg",
+        "md5": "81b8bb692194251806521ec9dfb57e1f"
+      },
+      "png": {
+        "size": 3760700,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Rockingchair_01/Rockingchair_01_nor_dx_1k.png",
+        "md5": "7a510bbf0d03465a3c00180f65007d9d"
+      },
+      "exr": {
+        "size": 1261892,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_nor_dx_1k.exr",
+        "md5": "8453905c358090b611a5d5567947f313"
+      }
+    }
+  },
+  "nor_gl": {
+    "4k": {
+      "jpg": {
+        "size": 1857090,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_nor_gl_4k.jpg",
+        "md5": "238df170b7f9dfcc56650a6e823649da"
+      },
+      "png": {
+        "size": 37493218,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Rockingchair_01/Rockingchair_01_nor_gl_4k.png",
+        "md5": "5d7f354fd955626f3fa14aeb071dd508"
+      },
+      "exr": {
+        "size": 14924142,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_nor_gl_4k.exr",
+        "md5": "9c89e36ce5162c5e69516369f92b0aee"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 517877,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_nor_gl_2k.jpg",
+        "md5": "50231604b3a713d07c8ea5d8098d15e0"
+      },
+      "png": {
+        "size": 12628682,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Rockingchair_01/Rockingchair_01_nor_gl_2k.png",
+        "md5": "1ddee5328f4c9e2f9e90cff7b017cbd7"
+      },
+      "exr": {
+        "size": 4462304,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_nor_gl_2k.exr",
+        "md5": "0f7fc764655f733026519b6a7ea23863"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 146964,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_nor_gl_1k.jpg",
+        "md5": "35bb8e3e3395cd6e189110b1c04caf59"
+      },
+      "png": {
+        "size": 3760601,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Rockingchair_01/Rockingchair_01_nor_gl_1k.png",
+        "md5": "34d52f8a8e7fef0240b4742385ce1bf4"
+      },
+      "exr": {
+        "size": 1264205,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_nor_gl_1k.exr",
+        "md5": "48992b63d544c4818bdd790aab9e856b"
+      }
+    }
+  },
+  "blend": {
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/Rockingchair_01_diff_4k.jpg": {
+            "size": 1690269,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_diff_4k.jpg",
+            "md5": "c4c2bc647f7cba14ac683a309777fc80"
+          },
+          "textures/Rockingchair_01_roughness_4k.jpg": {
+            "size": 1372219,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_roughness_4k.jpg",
+            "md5": "a8e34621d882cf5c1ded0d16ff4542c6"
+          },
+          "textures/Rockingchair_01_nor_gl_4k.exr": {
+            "size": 14924142,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_nor_gl_4k.exr",
+            "md5": "9c89e36ce5162c5e69516369f92b0aee"
+          },
+          "textures/Rockingchair_01_metallic_4k.exr": {
+            "size": 42864,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_metallic_4k.exr",
+            "md5": "9105c0232383947c2428b401fbdf1360"
+          }
+        },
+        "size": 443304,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/Rockingchair_01/Rockingchair_01_4k.blend",
+        "md5": "dbcb414691faaa7e19359ff672aeb781"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/Rockingchair_01_diff_2k.jpg": {
+            "size": 476830,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_diff_2k.jpg",
+            "md5": "4b19506dd91d8a4acb7395d673754e78"
+          },
+          "textures/Rockingchair_01_metallic_2k.exr": {
+            "size": 13296,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_metallic_2k.exr",
+            "md5": "aee7d031f92dd108a3d713d091589875"
+          },
+          "textures/Rockingchair_01_nor_gl_2k.exr": {
+            "size": 4462304,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_nor_gl_2k.exr",
+            "md5": "0f7fc764655f733026519b6a7ea23863"
+          },
+          "textures/Rockingchair_01_roughness_2k.jpg": {
+            "size": 418902,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_roughness_2k.jpg",
+            "md5": "2c0b0f1bc5821ed29b1a4943f48b43a7"
+          }
+        },
+        "size": 443318,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/Rockingchair_01/Rockingchair_01_2k.blend",
+        "md5": "0e2a2046feda8f6dc9a4abce7aeaa9ce"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/Rockingchair_01_diff_1k.jpg": {
+            "size": 138197,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_diff_1k.jpg",
+            "md5": "39a5b09e0349f2dc6892d4c827c1cc45"
+          },
+          "textures/Rockingchair_01_nor_gl_1k.exr": {
+            "size": 1264205,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_nor_gl_1k.exr",
+            "md5": "48992b63d544c4818bdd790aab9e856b"
+          },
+          "textures/Rockingchair_01_roughness_1k.jpg": {
+            "size": 124453,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_roughness_1k.jpg",
+            "md5": "0c0122dec24cad62de51e4316855686f"
+          },
+          "textures/Rockingchair_01_metallic_1k.exr": {
+            "size": 4784,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_metallic_1k.exr",
+            "md5": "e3851b383c74342c210f7fcb273a0664"
+          }
+        },
+        "size": 443343,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/Rockingchair_01/Rockingchair_01_1k.blend",
+        "md5": "2c5474e14d0346e93e50518f67484161"
+      }
+    }
+  },
+  "gltf": {
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/Rockingchair_01_diff_4k.jpg": {
+            "size": 1690269,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_diff_4k.jpg",
+            "md5": "c4c2bc647f7cba14ac683a309777fc80"
+          },
+          "textures/Rockingchair_01_nor_gl_4k.jpg": {
+            "size": 1857090,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_nor_gl_4k.jpg",
+            "md5": "238df170b7f9dfcc56650a6e823649da"
+          },
+          "Rockingchair_01.bin": {
+            "size": 391740,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Rockingchair_01/Rockingchair_01.bin",
+            "md5": "cd7cd396a8acd87802321d51cbe79725"
+          },
+          "textures/Rockingchair_01_arm_4k.jpg": {
+            "size": 1413745,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_arm_4k.jpg",
+            "md5": "bbc1e5c210c8d44f18c90cf84db6a6cd"
+          }
+        },
+        "size": 2712,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Rockingchair_01/Rockingchair_01_4k.gltf",
+        "md5": "80b068d8699041c583677c1890730c15"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/Rockingchair_01_diff_2k.jpg": {
+            "size": 476830,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_diff_2k.jpg",
+            "md5": "4b19506dd91d8a4acb7395d673754e78"
+          },
+          "textures/Rockingchair_01_arm_2k.jpg": {
+            "size": 421071,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_arm_2k.jpg",
+            "md5": "2c950f3be283d933098dd9d3c1585790"
+          },
+          "textures/Rockingchair_01_nor_gl_2k.jpg": {
+            "size": 517877,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_nor_gl_2k.jpg",
+            "md5": "50231604b3a713d07c8ea5d8098d15e0"
+          },
+          "Rockingchair_01.bin": {
+            "size": 391740,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Rockingchair_01/Rockingchair_01.bin",
+            "md5": "cd7cd396a8acd87802321d51cbe79725"
+          }
+        },
+        "size": 2712,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/Rockingchair_01/Rockingchair_01_2k.gltf",
+        "md5": "a5f129f2a3ab5aa330a9e413975c8b78"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/Rockingchair_01_diff_1k.jpg": {
+            "size": 138197,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_diff_1k.jpg",
+            "md5": "39a5b09e0349f2dc6892d4c827c1cc45"
+          },
+          "textures/Rockingchair_01_nor_gl_1k.jpg": {
+            "size": 146964,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_nor_gl_1k.jpg",
+            "md5": "35bb8e3e3395cd6e189110b1c04caf59"
+          },
+          "textures/Rockingchair_01_arm_1k.jpg": {
+            "size": 125152,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_arm_1k.jpg",
+            "md5": "a3c5ee77580f0d833d643394baa00716"
+          },
+          "Rockingchair_01.bin": {
+            "size": 391740,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Rockingchair_01/Rockingchair_01.bin",
+            "md5": "cd7cd396a8acd87802321d51cbe79725"
+          }
+        },
+        "size": 2712,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/Rockingchair_01/Rockingchair_01_1k.gltf",
+        "md5": "be16c0788ccab5a881425e8b2857439d"
+      }
+    }
+  },
+  "usd": {
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/Rockingchair_01_diff_4k.jpg": {
+            "size": 1690269,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_diff_4k.jpg",
+            "md5": "c4c2bc647f7cba14ac683a309777fc80"
+          },
+          "textures/Rockingchair_01_roughness_4k.jpg": {
+            "size": 1372219,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_roughness_4k.jpg",
+            "md5": "a8e34621d882cf5c1ded0d16ff4542c6"
+          },
+          "textures/Rockingchair_01_nor_gl_4k.exr": {
+            "size": 14924142,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_nor_gl_4k.exr",
+            "md5": "9c89e36ce5162c5e69516369f92b0aee"
+          },
+          "textures/Rockingchair_01_metallic_4k.exr": {
+            "size": 42864,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_metallic_4k.exr",
+            "md5": "9105c0232383947c2428b401fbdf1360"
+          }
+        },
+        "size": 578079,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/Rockingchair_01/Rockingchair_01_4k.usdc",
+        "md5": "fbde8a7ce8cf5d4f5affffba53477b4d"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/Rockingchair_01_diff_2k.jpg": {
+            "size": 476830,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_diff_2k.jpg",
+            "md5": "4b19506dd91d8a4acb7395d673754e78"
+          },
+          "textures/Rockingchair_01_metallic_2k.exr": {
+            "size": 13296,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_metallic_2k.exr",
+            "md5": "aee7d031f92dd108a3d713d091589875"
+          },
+          "textures/Rockingchair_01_nor_gl_2k.exr": {
+            "size": 4462304,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_nor_gl_2k.exr",
+            "md5": "0f7fc764655f733026519b6a7ea23863"
+          },
+          "textures/Rockingchair_01_roughness_2k.jpg": {
+            "size": 418902,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_roughness_2k.jpg",
+            "md5": "2c0b0f1bc5821ed29b1a4943f48b43a7"
+          }
+        },
+        "size": 578079,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/Rockingchair_01/Rockingchair_01_2k.usdc",
+        "md5": "09adeca03091f2b9c8f6613588467f70"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/Rockingchair_01_diff_1k.jpg": {
+            "size": 138197,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_diff_1k.jpg",
+            "md5": "39a5b09e0349f2dc6892d4c827c1cc45"
+          },
+          "textures/Rockingchair_01_nor_gl_1k.exr": {
+            "size": 1264205,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_nor_gl_1k.exr",
+            "md5": "48992b63d544c4818bdd790aab9e856b"
+          },
+          "textures/Rockingchair_01_roughness_1k.jpg": {
+            "size": 124453,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_roughness_1k.jpg",
+            "md5": "0c0122dec24cad62de51e4316855686f"
+          },
+          "textures/Rockingchair_01_metallic_1k.exr": {
+            "size": 4784,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_metallic_1k.exr",
+            "md5": "e3851b383c74342c210f7fcb273a0664"
+          }
+        },
+        "size": 578079,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/Rockingchair_01/Rockingchair_01_1k.usdc",
+        "md5": "4ca9b517394bc15590a9f20bb4f20c5f"
+      }
+    }
+  },
+  "Metal": {
+    "4k": {
+      "jpg": {
+        "size": 197004,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_metallic_4k.jpg",
+        "md5": "921d904a81bd79b20edf344db2775b2c"
+      },
+      "png": {
+        "size": 32742,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Rockingchair_01/Rockingchair_01_metallic_4k.png",
+        "md5": "b0f303826984180760dd56907d0440e9"
+      },
+      "exr": {
+        "size": 42864,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_metallic_4k.exr",
+        "md5": "9105c0232383947c2428b401fbdf1360"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 49548,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_metallic_2k.jpg",
+        "md5": "55a2f4c6c290ccc7dca012bae0d5413e"
+      },
+      "png": {
+        "size": 8264,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Rockingchair_01/Rockingchair_01_metallic_2k.png",
+        "md5": "d1b4236811cde253fe1d58c79386c101"
+      },
+      "exr": {
+        "size": 13296,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_metallic_2k.exr",
+        "md5": "aee7d031f92dd108a3d713d091589875"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 12684,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_metallic_1k.jpg",
+        "md5": "e8c0e6464de97eac1caa382a44a2682f"
+      },
+      "png": {
+        "size": 2155,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Rockingchair_01/Rockingchair_01_metallic_1k.png",
+        "md5": "3984ebd3e0aff11d149c2c40985d22f3"
+      },
+      "exr": {
+        "size": 4784,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_metallic_1k.exr",
+        "md5": "e3851b383c74342c210f7fcb273a0664"
+      }
+    }
+  },
+  "arm": {
+    "4k": {
+      "jpg": {
+        "size": 1413745,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_arm_4k.jpg",
+        "md5": "bbc1e5c210c8d44f18c90cf84db6a6cd"
+      },
+      "png": {
+        "size": 9877287,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Rockingchair_01/Rockingchair_01_arm_4k.png",
+        "md5": "37ebee078e9ecdb515ad7668fe0aa8d6"
+      },
+      "exr": {
+        "size": 12055428,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_arm_4k.exr",
+        "md5": "9834e725ec6cf6b3de10be5aee12aff6"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 421071,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_arm_2k.jpg",
+        "md5": "2c950f3be283d933098dd9d3c1585790"
+      },
+      "png": {
+        "size": 6611683,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Rockingchair_01/Rockingchair_01_arm_2k.png",
+        "md5": "943876fda5405c6a4d66a664cb853ecf"
+      },
+      "exr": {
+        "size": 3457730,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_arm_2k.exr",
+        "md5": "b23f296d9ead5500e40195f68381a788"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 125152,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_arm_1k.jpg",
+        "md5": "a3c5ee77580f0d833d643394baa00716"
+      },
+      "png": {
+        "size": 2310893,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Rockingchair_01/Rockingchair_01_arm_1k.png",
+        "md5": "20548734d680ab2527ade1ec9ef55e41"
+      },
+      "exr": {
+        "size": 1063118,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_arm_1k.exr",
+        "md5": "ec126da893e1f41ebee5487c3c536bb3"
+      }
+    }
+  },
+  "fbx": {
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/Rockingchair_01_diff_4k.jpg": {
+            "size": 1690269,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_diff_4k.jpg",
+            "md5": "c4c2bc647f7cba14ac683a309777fc80"
+          },
+          "textures/Rockingchair_01_roughness_4k.jpg": {
+            "size": 1372219,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_roughness_4k.jpg",
+            "md5": "a8e34621d882cf5c1ded0d16ff4542c6"
+          },
+          "textures/Rockingchair_01_nor_gl_4k.exr": {
+            "size": 14924142,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_nor_gl_4k.exr",
+            "md5": "9c89e36ce5162c5e69516369f92b0aee"
+          },
+          "textures/Rockingchair_01_metallic_4k.exr": {
+            "size": 42864,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_metallic_4k.exr",
+            "md5": "9105c0232383947c2428b401fbdf1360"
+          }
+        },
+        "size": 411884,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/Rockingchair_01/Rockingchair_01_4k.fbx",
+        "md5": "737fed7500c65184486d43103457484d"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/Rockingchair_01_diff_2k.jpg": {
+            "size": 476830,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_diff_2k.jpg",
+            "md5": "4b19506dd91d8a4acb7395d673754e78"
+          },
+          "textures/Rockingchair_01_metallic_2k.exr": {
+            "size": 13296,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_metallic_2k.exr",
+            "md5": "aee7d031f92dd108a3d713d091589875"
+          },
+          "textures/Rockingchair_01_nor_gl_2k.exr": {
+            "size": 4462304,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_nor_gl_2k.exr",
+            "md5": "0f7fc764655f733026519b6a7ea23863"
+          },
+          "textures/Rockingchair_01_roughness_2k.jpg": {
+            "size": 418902,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_roughness_2k.jpg",
+            "md5": "2c0b0f1bc5821ed29b1a4943f48b43a7"
+          }
+        },
+        "size": 411884,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/Rockingchair_01/Rockingchair_01_2k.fbx",
+        "md5": "20ef6f76d6d017dea89678139967c7de"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/Rockingchair_01_diff_1k.jpg": {
+            "size": 138197,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_diff_1k.jpg",
+            "md5": "39a5b09e0349f2dc6892d4c827c1cc45"
+          },
+          "textures/Rockingchair_01_nor_gl_1k.exr": {
+            "size": 1264205,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_nor_gl_1k.exr",
+            "md5": "48992b63d544c4818bdd790aab9e856b"
+          },
+          "textures/Rockingchair_01_roughness_1k.jpg": {
+            "size": 124453,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_roughness_1k.jpg",
+            "md5": "0c0122dec24cad62de51e4316855686f"
+          },
+          "textures/Rockingchair_01_metallic_1k.exr": {
+            "size": 4784,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_metallic_1k.exr",
+            "md5": "e3851b383c74342c210f7fcb273a0664"
+          }
+        },
+        "size": 411884,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/Rockingchair_01/Rockingchair_01_1k.fbx",
+        "md5": "517f4b4992fb369cb4818e5078fc7c72"
+      }
+    }
+  },
+  "Rough": {
+    "4k": {
+      "jpg": {
+        "size": 1372219,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/Rockingchair_01/Rockingchair_01_roughness_4k.jpg",
+        "md5": "a8e34621d882cf5c1ded0d16ff4542c6"
+      },
+      "png": {
+        "size": 4884619,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/Rockingchair_01/Rockingchair_01_roughness_4k.png",
+        "md5": "c7a47b6cf59d6d90ae7454283910f329"
+      },
+      "exr": {
+        "size": 7795608,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/Rockingchair_01/Rockingchair_01_roughness_4k.exr",
+        "md5": "bf294ae4c055a1d96f9d0d9b6156a33e"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 418902,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/Rockingchair_01/Rockingchair_01_roughness_2k.jpg",
+        "md5": "2c0b0f1bc5821ed29b1a4943f48b43a7"
+      },
+      "png": {
+        "size": 3673054,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/Rockingchair_01/Rockingchair_01_roughness_2k.png",
+        "md5": "f99dffdd00cdee6de0fa39ea1226a2b7"
+      },
+      "exr": {
+        "size": 2953782,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/Rockingchair_01/Rockingchair_01_roughness_2k.exr",
+        "md5": "9245068dd8ce95f29c634ee0f48eb4ba"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 124453,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Rockingchair_01/Rockingchair_01_roughness_1k.jpg",
+        "md5": "0c0122dec24cad62de51e4316855686f"
+      },
+      "png": {
+        "size": 1337953,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/Rockingchair_01/Rockingchair_01_roughness_1k.png",
+        "md5": "7a411a97aa02867e26be9f99dd3370f9"
+      },
+      "exr": {
+        "size": 978545,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/Rockingchair_01/Rockingchair_01_roughness_1k.exr",
+        "md5": "f2fa1df56143468b0a364d490d185df4"
+      }
+    }
+  }
+}
