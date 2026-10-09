@@ -1,0 +1,1703 @@
+[
+  {
+    "id": "modular_electricity_poles",
+    "type": "model",
+    "page": "https://polyhaven.com/a/modular_electricity_poles",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "name": "Modular Electricity Poles",
+      "type": 2,
+      "authors": {
+        "James Ray Cock": "All"
+      },
+      "info": null,
+      "date_published": 1701043200,
+      "staging": null,
+      "categories": [
+        "industrial",
+        "structures",
+        "collection: hidden_alley"
+      ],
+      "tags": [
+        "urban",
+        "infrastructure",
+        "city",
+        "road",
+        "utility",
+        "street",
+        "electrical",
+        "power",
+        "circuit",
+        "transformer",
+        "junction box",
+        "cables"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 200610,
+      "texel_density": 2986.237337749837,
+      "dimensions": [
+        13119.13776397705,
+        1957.2706818580627,
+        7000.0002812594175
+      ],
+      "sponsors": [
+        "146648879"
+      ],
+      "files_hash": "e40d56f04b77c4357252d49fa63051edce4f92f7",
+      "description": "Free 8K modular electricity poles: realistic weathered wooden utility poles with transformers, crossarms, insulators, junction boxes and cable segments - perfect for urban scenes.",
+      "category_id": "2c4aaaa3-f2c4-54fa-98a9-b63afa1a1205",
+      "category": "Industrial & Infrastructure/Electrical/Utility Poles",
+      "collections": [
+        "hidden_alley"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "wood",
+          "metal",
+          "ceramic"
+        ]
+      },
+      "img_version": "86e72891",
+      "download_count": 23730,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/modular_electricity_poles.png?width=256&height=256&format=webp&v=86e72891"
+    },
+    "files": [
+      {
+        "path": "modular_electricity_poles_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/modular_electricity_poles/modular_electricity_poles_4k.gltf",
+        "md5": "b2808506d5a37f409d60c470a715abee",
+        "size": 149324
+      },
+      {
+        "path": "textures/modular_electricity_poles_pieces_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_diff_4k.jpg",
+        "md5": "883b1cadd262eb08057e7dedd5a1e928",
+        "size": 8482227
+      },
+      {
+        "path": "modular_electricity_poles.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/modular_electricity_poles/modular_electricity_poles.bin",
+        "md5": "c6214884e3bd6ea4a2ea20b795c648f4",
+        "size": 7215652
+      },
+      {
+        "path": "textures/modular_electricity_poles_pieces_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_arm_4k.jpg",
+        "md5": "fb84ff035cdde937eba865dfa25b72ad",
+        "size": 11183966
+      },
+      {
+        "path": "textures/modular_electricity_poles_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_diff_4k.jpg",
+        "md5": "a5f04134008bc8617a36c8741ca06373",
+        "size": 10066538
+      },
+      {
+        "path": "textures/modular_electricity_poles_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_nor_gl_4k.jpg",
+        "md5": "47a7cea771b89f19e9d05038382ecc79",
+        "size": 14567934
+      },
+      {
+        "path": "textures/modular_electricity_poles_pieces_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_4k.jpg",
+        "md5": "fbc104e5205ff983c9c8c184f6f7bc01",
+        "size": 9531579
+      },
+      {
+        "path": "textures/modular_electricity_poles_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_arm_4k.jpg",
+        "md5": "82563a13deb04d7ace973f7b18d0d973",
+        "size": 10141508
+      }
+    ]
+  },
+  {
+    "id": "painted_wooden_bench",
+    "type": "model",
+    "page": "https://polyhaven.com/a/painted_wooden_bench",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "name": "Painted Wooden Bench",
+      "categories": [
+        "furniture",
+        "seating"
+      ],
+      "type": 2,
+      "tags": [
+        "vintage",
+        "old",
+        "wooden",
+        "worn",
+        "antique",
+        "farmhouse",
+        "aged",
+        "rustic",
+        "small",
+        "seat",
+        "stool"
+      ],
+      "authors": {
+        "Kirill Sannikov": "All"
+      },
+      "info": null,
+      "date_published": 1712707200,
+      "staging": null,
+      "polycount": 630,
+      "dimensions": [
+        1164.9435758590698,
+        496.5430945158005,
+        889.2914750613272
+      ],
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "texel_density": 1621.0608929808423,
+      "files_hash": "6784218e3b57df8750c5aa76ece84edfdd53b797",
+      "description": "Free 4K painted wooden bench model with worn, antique red finish, rustic farmhouse charm, compact seating and lower shelf - great aged prop for interiors.",
+      "category_id": "c7642d58-13d1-5289-844b-dd12b1455a27",
+      "category": "Furniture/Seating/Benches",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "img_version": "68ce259c",
+      "download_count": 3672,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/painted_wooden_bench.png?width=256&height=256&format=webp&v=68ce259c"
+    },
+    "files": [
+      {
+        "path": "painted_wooden_bench_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/painted_wooden_bench/painted_wooden_bench_4k.gltf",
+        "md5": "d03d7774e696a1e8879caf5390acd4ff",
+        "size": 2835
+      },
+      {
+        "path": "textures/painted_wooden_bench_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/painted_wooden_bench/painted_wooden_bench_nor_gl_4k.jpg",
+        "md5": "d5fa248b3e27e0dccf5d5eb8630c2462",
+        "size": 12407403
+      },
+      {
+        "path": "textures/painted_wooden_bench_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/painted_wooden_bench/painted_wooden_bench_diff_4k.jpg",
+        "md5": "ecc44929e734180015f1c73b536c27e6",
+        "size": 9372299
+      },
+      {
+        "path": "textures/painted_wooden_bench_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/painted_wooden_bench/painted_wooden_bench_arm_4k.jpg",
+        "md5": "7db36486afdce5b72e2d8b4fd34c70a1",
+        "size": 8575011
+      },
+      {
+        "path": "painted_wooden_bench.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/painted_wooden_bench/painted_wooden_bench.bin",
+        "md5": "ed331b50f955852f007313c1a75c2e2d",
+        "size": 25444
+      }
+    ]
+  },
+  {
+    "id": "metal_trash_can",
+    "type": "model",
+    "page": "https://polyhaven.com/a/metal_trash_can",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "name": "Metal Trash Can",
+      "type": 2,
+      "authors": {
+        "GurJas Studios": "All"
+      },
+      "info": null,
+      "date_published": 1695772800,
+      "staging": null,
+      "categories": [
+        "industrial",
+        "containers",
+        "collection: hidden_alley"
+      ],
+      "tags": [
+        "bin",
+        "rubbish",
+        "garbage",
+        "disposal",
+        "litter",
+        "dumpster",
+        "outdoor trash can",
+        " urban",
+        "utility"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 13960,
+      "texel_density": 3549.006764417269,
+      "dimensions": [
+        1846.9352722167969,
+        556.2898814678192,
+        906.1697272554738
+      ],
+      "files_hash": "3ecbee3adbcc53b4af3c8f010e76e10c5b7558a2",
+      "description": "Free 8K model of a weathered metal trash can with removable lid, ribbed cylindrical body, dents, heavy rust, grime and realistic industrial wear.",
+      "category_id": "9fa7d8d0-1c7b-567d-a382-9dac692c8bbd",
+      "category": "Containers & Storage/Cans, Tins & Bottles/Trash Cans",
+      "collections": [
+        "hidden_alley"
+      ],
+      "attributes": {
+        "condition": [
+          "rusted"
+        ],
+        "material": [
+          "metal"
+        ]
+      },
+      "img_version": "8a394a6d",
+      "download_count": 26477,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/metal_trash_can.png?width=256&height=256&format=webp&v=8a394a6d"
+    },
+    "files": [
+      {
+        "path": "metal_trash_can_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/metal_trash_can/metal_trash_can_4k.gltf",
+        "md5": "ce4d9bead44175c901a992f39e18da6e",
+        "size": 15481
+      },
+      {
+        "path": "textures/metal_trash_can_rust_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/metal_trash_can/metal_trash_can_rust_diff_4k.jpg",
+        "md5": "e5ffd8634c8c59cf4eb39e3f3fe87be4",
+        "size": 9665224
+      },
+      {
+        "path": "textures/metal_trash_can_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/metal_trash_can/metal_trash_can_arm_4k.jpg",
+        "md5": "6de1c8a79a445267f1db83d7fa2117e0",
+        "size": 10324265
+      },
+      {
+        "path": "textures/metal_trash_can_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/metal_trash_can/metal_trash_can_nor_gl_4k.jpg",
+        "md5": "0da0e8b05647b7ff3e0ff6d084773ea3",
+        "size": 10536273
+      },
+      {
+        "path": "textures/metal_trash_can_rust_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/metal_trash_can/metal_trash_can_rust_nor_gl_4k.jpg",
+        "md5": "85bc3547e12c7e741cc62f4edbabf7c1",
+        "size": 16516076
+      },
+      {
+        "path": "textures/metal_trash_can_rust_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/metal_trash_can/metal_trash_can_rust_arm_4k.jpg",
+        "md5": "b8b3422dc7735bdb6690f3d3ef07f594",
+        "size": 8379244
+      },
+      {
+        "path": "metal_trash_can.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/metal_trash_can/metal_trash_can.bin",
+        "md5": "fbde1679a66ea644223b97ebc8336a77",
+        "size": 378288
+      },
+      {
+        "path": "textures/metal_trash_can_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/metal_trash_can/metal_trash_can_diff_4k.jpg",
+        "md5": "b6da971398b20331a7ff8edf1f628f9e",
+        "size": 7465489
+      }
+    ]
+  },
+  {
+    "id": "fire_hydrant",
+    "type": "model",
+    "page": "https://polyhaven.com/a/fire_hydrant",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "name": "Fire Hydrant",
+      "type": 2,
+      "authors": {
+        "Gon\u00e7alo Fel\u00edcio": "All"
+      },
+      "info": null,
+      "date_published": 1698364800,
+      "staging": null,
+      "categories": [
+        "industrial",
+        "structures",
+        "collection: hidden_alley"
+      ],
+      "tags": [
+        "city",
+        "urban",
+        "street",
+        "road",
+        "emergency",
+        "valve",
+        "extinguisher",
+        "utility",
+        "municipal",
+        "infrastructure"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 86316,
+      "texel_density": 6126.643205564119,
+      "dimensions": [
+        874.623566865921,
+        317.74356961250305,
+        799.4560238003032
+      ],
+      "files_hash": "392eed954362d55b55022af83c0b7150bf977853",
+      "description": "Free 8K model: red street fire hydrant with clean and worn variants. Chipped paint, rusted metal caps and chain, realistic urban wear and detailed base.",
+      "category_id": "63c978b5-4c95-544b-864b-64dbd89ba09a",
+      "category": "Industrial & Infrastructure/Traffic & Safety/Hydrants & Fire Safety",
+      "collections": [
+        "hidden_alley"
+      ],
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "metal"
+        ]
+      },
+      "img_version": "8923912c",
+      "download_count": 11506,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/fire_hydrant.png?width=256&height=256&format=webp&v=8923912c"
+    },
+    "files": [
+      {
+        "path": "fire_hydrant_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/fire_hydrant/fire_hydrant_4k.gltf",
+        "md5": "208eb3821132a19b9ecfc27fbbf1ff33",
+        "size": 20926
+      },
+      {
+        "path": "textures/fire_hydrant_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/fire_hydrant/fire_hydrant_arm_4k.jpg",
+        "md5": "197a7499742dafdaa3c19d1abfd30d9c",
+        "size": 8221118
+      },
+      {
+        "path": "textures/fire_hydrant_aged_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/fire_hydrant/fire_hydrant_aged_diff_4k.jpg",
+        "md5": "d074ab9e9e643e50b9c112d9847b9b4f",
+        "size": 7850678
+      },
+      {
+        "path": "fire_hydrant.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/fire_hydrant/fire_hydrant.bin",
+        "md5": "636cd237cd1c9a793e3fc3edbf7f6a15",
+        "size": 1928772
+      },
+      {
+        "path": "textures/fire_hydrant_aged_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/fire_hydrant/fire_hydrant_aged_nor_gl_4k.jpg",
+        "md5": "cef39c692f881a0085fe25ea4dc14519",
+        "size": 8555275
+      },
+      {
+        "path": "textures/fire_hydrant_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/fire_hydrant/fire_hydrant_diff_4k.jpg",
+        "md5": "d7cd89602e26663db098a1fdb90d8e1d",
+        "size": 7268387
+      },
+      {
+        "path": "textures/fire_hydrant_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/fire_hydrant/fire_hydrant_nor_gl_4k.jpg",
+        "md5": "c7c5a75944eb2fe0ab2366d6729fce50",
+        "size": 7399392
+      },
+      {
+        "path": "textures/fire_hydrant_aged_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/fire_hydrant/fire_hydrant_aged_arm_4k.jpg",
+        "md5": "913d55a668cbae051723f95bd064de8a",
+        "size": 7943306
+      }
+    ]
+  },
+  {
+    "id": "garden_hose_wall_mounted_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/garden_hose_wall_mounted_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "date_published": 1670803200,
+      "name": "Garden Hose Wall Mounted 01",
+      "type": 2,
+      "staging": null,
+      "authors": {
+        "Kuutti Siitonen": "All"
+      },
+      "info": null,
+      "categories": [
+        "wall decoration",
+        "plants",
+        "collection: the_shed"
+      ],
+      "tags": [
+        "garden",
+        "gardening",
+        "landscaping",
+        "pipes",
+        "cable",
+        "valve",
+        "hose",
+        "water",
+        "tap",
+        "outdoor",
+        "green",
+        "shed",
+        "irrigation",
+        "greenhouse",
+        "farm",
+        "farmhouse"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 11684,
+      "texel_density": 5646.868515034338,
+      "dimensions": [
+        466.7283743619919,
+        250.3091422840953,
+        557.001918554306
+      ],
+      "files_hash": "95609e400f4f61d64639a230e801439fb09a43c3",
+      "description": "Free 8K model of a coiled green garden hose on a metal wall bracket, textured rubber weave, brass fitting, chipped paint and light grime.",
+      "sponsors": [
+        "26820710"
+      ],
+      "category_id": "89c2f708-dc8b-552c-a8a9-9ab8af094c3f",
+      "category": "Tools & Equipment/Garden Tools/Watering & Irrigation",
+      "collections": [
+        "the_shed"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "rubber",
+          "metal",
+          "brass"
+        ]
+      },
+      "img_version": "60f0a7c7",
+      "download_count": 11882,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/garden_hose_wall_mounted_01.png?width=256&height=256&format=webp&v=60f0a7c7"
+    },
+    "files": [
+      {
+        "path": "garden_hose_wall_mounted_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_4k.gltf",
+        "md5": "a7bc20b2eacf2df5de909e820869d27e",
+        "size": 4432
+      },
+      {
+        "path": "textures/garden_hose_wall_mounted_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_4k.jpg",
+        "md5": "df887a191e8aaf61b73188a47a193ff3",
+        "size": 11856496
+      },
+      {
+        "path": "textures/garden_hose_wall_mounted_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_4k.jpg",
+        "md5": "2a9ec784b3a018c413f891f9275c8f5c",
+        "size": 10508050
+      },
+      {
+        "path": "garden_hose_wall_mounted_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01.bin",
+        "md5": "ad482237273f1d551176350f324ea8e7",
+        "size": 301688
+      },
+      {
+        "path": "textures/garden_hose_wall_mounted_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_4k.jpg",
+        "md5": "7d5914af016d362bfea5f996766cf30b",
+        "size": 10995563
+      }
+    ]
+  },
+  {
+    "id": "garden_sprinkler_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/garden_sprinkler_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "date_published": 1674432000,
+      "name": "Garden Sprinkler 01",
+      "type": 2,
+      "staging": null,
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "info": null,
+      "categories": [
+        "tools",
+        "appliances",
+        "collection: the_shed"
+      ],
+      "tags": [
+        "garden",
+        "gardening",
+        "shed",
+        "outdoor",
+        "garage",
+        "landscaping",
+        "water",
+        "tap",
+        "valve",
+        "hose",
+        "sprinkler",
+        "irrigation",
+        "greenhouse",
+        "farm"
+      ],
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 8192,
+      "texel_density": 7640.510170986014,
+      "dimensions": [
+        359.59315299987793,
+        249.06833469867706,
+        215.6235035508871
+      ],
+      "files_hash": "3dfbbc58ed8f575c82e68d35b24379633fd5c955",
+      "description": "Free 4K model of a weathered yellow garden sprinkler with dual nozzles, metal swivel, ribbed hose connector and scuffed wheeled base.",
+      "category_id": "89c2f708-dc8b-552c-a8a9-9ab8af094c3f",
+      "category": "Tools & Equipment/Garden Tools/Watering & Irrigation",
+      "collections": [
+        "the_shed"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "plastic",
+          "metal"
+        ]
+      },
+      "img_version": "42b1fc1c",
+      "download_count": 2704,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/garden_sprinkler_01.png?width=256&height=256&format=webp&v=42b1fc1c"
+    },
+    "files": [
+      {
+        "path": "garden_sprinkler_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_sprinkler_01/garden_sprinkler_01_4k.gltf",
+        "md5": "19359616edd00179e3c4fb55b561491e",
+        "size": 9574
+      },
+      {
+        "path": "garden_sprinkler_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_sprinkler_01/garden_sprinkler_01.bin",
+        "md5": "8e42e466e2c0dc00146c2e066477e130",
+        "size": 307520
+      },
+      {
+        "path": "textures/garden_sprinkler_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_4k.jpg",
+        "md5": "6150883ea38aa107e4dc916167e08869",
+        "size": 13158569
+      },
+      {
+        "path": "textures/garden_sprinkler_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_diff_4k.jpg",
+        "md5": "ec02fc42011faf61dbfa2c52a97fad42",
+        "size": 9720695
+      },
+      {
+        "path": "textures/garden_sprinkler_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_arm_4k.jpg",
+        "md5": "591185c2d6bf2b0ae81da63815843968",
+        "size": 13290088
+      }
+    ]
+  },
+  {
+    "id": "planter_box_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/planter_box_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "date_published": 1683244800,
+      "name": "Planter Box 01",
+      "type": 2,
+      "staging": null,
+      "authors": {
+        "James Ray Cock": "All"
+      },
+      "info": null,
+      "categories": [
+        "decorative",
+        "containers",
+        "potted plants",
+        "collection: the_shed"
+      ],
+      "tags": [
+        "old",
+        "wooden",
+        "wood",
+        "farmhouse",
+        "shed",
+        "outdoor",
+        "gardening",
+        "greenhouse",
+        "landscaping",
+        "garden",
+        "farm",
+        "planter",
+        "flower box",
+        "planters"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 8094,
+      "texel_density": 2884.9625300931693,
+      "dimensions": [
+        912.6113951206207,
+        413.6679768562317,
+        424.96823612600565
+      ],
+      "files_hash": "e3e14427dcd99e4141916fa2a581509036657015",
+      "description": "Free 8K model of an old farmhouse wooden planter box - weathered planks, interior liner, rustic shed/garden charm for landscaping, greenhouses, and decor.",
+      "category_id": "4e0d72d4-befe-5e09-a7a1-2d82c3484e29",
+      "category": "Containers & Storage/Boxes & Crates/Planter Boxes",
+      "collections": [
+        "the_shed"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "img_version": "bdec6d07",
+      "download_count": 8924,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/planter_box_01.png?width=256&height=256&format=webp&v=bdec6d07"
+    },
+    "files": [
+      {
+        "path": "planter_box_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/planter_box_01/planter_box_01_4k.gltf",
+        "md5": "96a137cfce4e99dfeb9afac79e357ab9",
+        "size": 2787
+      },
+      {
+        "path": "textures/planter_box_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_box_01/planter_box_01_arm_4k.jpg",
+        "md5": "cf5089ee424a352ff1aab878c1c9b684",
+        "size": 9066666
+      },
+      {
+        "path": "textures/planter_box_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_box_01/planter_box_01_nor_gl_4k.jpg",
+        "md5": "1044d7f41a5fc0b86b55913895493cdd",
+        "size": 10492870
+      },
+      {
+        "path": "planter_box_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/planter_box_01/planter_box_01.bin",
+        "md5": "644c9dedd7c8b090a10fa2be597d36bb",
+        "size": 250580
+      },
+      {
+        "path": "textures/planter_box_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_box_01/planter_box_01_diff_4k.jpg",
+        "md5": "0580a8114e49f5ab4462914a505315c9",
+        "size": 8800336
+      }
+    ]
+  },
+  {
+    "id": "planter_pot_clay",
+    "type": "model",
+    "page": "https://polyhaven.com/a/planter_pot_clay",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "name": "Planter Pot Clay",
+      "type": 2,
+      "info": null,
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "date_published": 1675641600,
+      "staging": null,
+      "categories": [
+        "containers",
+        "vases",
+        "collection: the_shed"
+      ],
+      "tags": [
+        "outdoor",
+        "mossy",
+        "dirty",
+        "used",
+        "worn",
+        "shed",
+        "garden",
+        "gardening",
+        "farmhouse",
+        "greenhouse",
+        "landscaping"
+      ],
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 3080,
+      "texel_density": 6950.3651147291475,
+      "dimensions": [
+        265.9967243671417,
+        263.4630501270294,
+        221.87034250237048
+      ],
+      "sponsors": [
+        "20953239",
+        "95481047"
+      ],
+      "files_hash": "9add1027ddc7f4f0bcc83024d2bdf7715dea8b5d",
+      "description": "Free 4K model of a weathered terracotta planter: worn rim, chipped paint, mossy stains and gritty dirt with rough, aged clay surface.",
+      "category_id": "f7e11f2d-8cca-599d-b6b6-62c0ea0980ce",
+      "category": "Decor & Art/Vases & Vessels/Terracotta Pots",
+      "collections": [
+        "the_shed"
+      ],
+      "attributes": {
+        "condition": [
+          "weathered"
+        ],
+        "material": [
+          "ceramic"
+        ]
+      },
+      "img_version": "f6d6a277",
+      "download_count": 7951,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/planter_pot_clay.png?width=256&height=256&format=webp&v=f6d6a277"
+    },
+    "files": [
+      {
+        "path": "planter_pot_clay_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/planter_pot_clay/planter_pot_clay_4k.gltf",
+        "md5": "724e0186633416fa8b7a8e24ca995f52",
+        "size": 2813
+      },
+      {
+        "path": "planter_pot_clay.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/planter_pot_clay/planter_pot_clay.bin",
+        "md5": "93aa55f6378a47c3e2d03eb5b98da8b0",
+        "size": 78096
+      },
+      {
+        "path": "textures/planter_pot_clay_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_nor_gl_4k.jpg",
+        "md5": "3f10c3160dad77fac6d78558f891299e",
+        "size": 4123130
+      },
+      {
+        "path": "textures/planter_pot_clay_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_arm_4k.jpg",
+        "md5": "f00ded24d56d765000ab47fde9585ff5",
+        "size": 7779239
+      },
+      {
+        "path": "textures/planter_pot_clay_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_diff_4k.jpg",
+        "md5": "e72e67a9bdb921639d2ec4ce2514cb02",
+        "size": 6216730
+      }
+    ]
+  },
+  {
+    "id": "plastic_monobloc_chair_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/plastic_monobloc_chair_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "date_published": 1668384000,
+      "name": "Plastic Monobloc Chair 01",
+      "type": 2,
+      "staging": null,
+      "authors": {
+        "Kuutti Siitonen": "All"
+      },
+      "info": null,
+      "sponsors": [
+        "26820710"
+      ],
+      "categories": [
+        "furniture",
+        "seating",
+        "collection: the_shed"
+      ],
+      "tags": [
+        "plastic",
+        "dirty",
+        "old",
+        "monobloc",
+        "outdoor",
+        "cheap",
+        "shed"
+      ],
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 3356,
+      "texel_density": 2690.4013569013064,
+      "dimensions": [
+        641.8611407279968,
+        627.5919079780579,
+        879.8411972820759
+      ],
+      "files_hash": "fc7be38d51f2483fd3194fdbc6321cf5873742ae",
+      "description": "Free 4K model: weathered white plastic monobloc chair with scuffs, dirt and faded finish, classic cheap outdoor stacking design showing age and wear.",
+      "category_id": "11261ec6-df2b-5150-9904-684d2558070d",
+      "category": "Furniture/Seating/Chairs",
+      "collections": [
+        "the_shed"
+      ],
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "plastic"
+        ]
+      },
+      "img_version": "cb7077d8",
+      "download_count": 32951,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/plastic_monobloc_chair_01.png?width=256&height=256&format=webp&v=cb7077d8"
+    },
+    "files": [
+      {
+        "path": "plastic_monobloc_chair_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/plastic_monobloc_chair_01/plastic_monobloc_chair_01_4k.gltf",
+        "md5": "2096a110aa7496d512a742c5f6a8e9bd",
+        "size": 2892
+      },
+      {
+        "path": "plastic_monobloc_chair_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/plastic_monobloc_chair_01/plastic_monobloc_chair_01.bin",
+        "md5": "cff97136a9c4bb57c62937cbb7d33a79",
+        "size": 124808
+      },
+      {
+        "path": "textures/plastic_monobloc_chair_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/plastic_monobloc_chair_01/plastic_monobloc_chair_01_diff_4k.jpg",
+        "md5": "32b9a65edc30b298a0c7ff6fd47e23c0",
+        "size": 7856344
+      },
+      {
+        "path": "textures/plastic_monobloc_chair_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/plastic_monobloc_chair_01/plastic_monobloc_chair_01_nor_gl_4k.jpg",
+        "md5": "fc857496c94d55b4d950d94b48f01a2a",
+        "size": 10196124
+      },
+      {
+        "path": "textures/plastic_monobloc_chair_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/plastic_monobloc_chair_01/plastic_monobloc_chair_01_arm_4k.jpg",
+        "md5": "61e548ba34175c06173635f52e45b4f4",
+        "size": 7827007
+      }
+    ]
+  },
+  {
+    "id": "outdoor_table_chair_set_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/outdoor_table_chair_set_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 2,
+      "tags": [
+        "outdoor",
+        "foldable",
+        "folding",
+        "seating",
+        "coffee",
+        "diner",
+        "street",
+        "urban",
+        "deli",
+        "wood",
+        "city",
+        "cafe"
+      ],
+      "name": "Outdoor Table Chair Set 01",
+      "categories": [
+        "furniture",
+        "seating"
+      ],
+      "authors": {
+        "James Ray Cock": "All"
+      },
+      "date_published": 1634083200,
+      "staging": null,
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 9828,
+      "texel_density": 3205.4733996309574,
+      "dimensions": [
+        776.0046124458313,
+        1831.0473561286926,
+        858.5816156119108
+      ],
+      "files_hash": "6e1e83970732c6c4e9f2056f37cec189cc80adc5",
+      "description": "Free 4K model: compact outdoor foldable table & two chairs with wood slats and metal frame; perfect for city cafes, diners, patios and street seating.",
+      "category_id": "ef6056e6-580d-59e6-b916-a0f766d42fe8",
+      "category": "Furniture/Seating/Outdoor Seating",
+      "attributes": {
+        "condition": [
+          "clean"
+        ],
+        "material": [
+          "wood",
+          "metal"
+        ]
+      },
+      "sponsors": [
+        "20953239",
+        "26820710"
+      ],
+      "img_version": "9a071b1e",
+      "download_count": 43014,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/outdoor_table_chair_set_01.png?width=256&height=256&format=webp&v=9a071b1e"
+    },
+    "files": [
+      {
+        "path": "outdoor_table_chair_set_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/outdoor_table_chair_set_01/outdoor_table_chair_set_01_4k.gltf",
+        "md5": "657860569211e8b2701224a2e2de0c89",
+        "size": 6826
+      },
+      {
+        "path": "textures/outdoor_table_chair_set_01_table_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/outdoor_table_chair_set_01/outdoor_table_chair_set_01_table_diff_4k.jpg",
+        "md5": "21d930c6d4fb569e836a3c60b54b9491",
+        "size": 1818404
+      },
+      {
+        "path": "textures/outdoor_table_chair_set_01_table_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/outdoor_table_chair_set_01/outdoor_table_chair_set_01_table_nor_gl_4k.jpg",
+        "md5": "1e3f039d1ea41a16a5635a03ab3cfb88",
+        "size": 992742
+      },
+      {
+        "path": "textures/outdoor_table_chair_set_01_chair_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/outdoor_table_chair_set_01/outdoor_table_chair_set_01_chair_diff_4k.jpg",
+        "md5": "e60c5e80dd1c150638625b60fc833839",
+        "size": 1669103
+      },
+      {
+        "path": "textures/outdoor_table_chair_set_01_chair_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/outdoor_table_chair_set_01/outdoor_table_chair_set_01_chair_arm_4k.jpg",
+        "md5": "4974685bf767249557197b65556ea5d0",
+        "size": 1989967
+      },
+      {
+        "path": "textures/outdoor_table_chair_set_01_chair_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/outdoor_table_chair_set_01/outdoor_table_chair_set_01_chair_nor_gl_4k.jpg",
+        "md5": "7c921a11a2132868e96bf6adf1837703",
+        "size": 1101092
+      },
+      {
+        "path": "textures/outdoor_table_chair_set_01_table_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/outdoor_table_chair_set_01/outdoor_table_chair_set_01_table_arm_4k.jpg",
+        "md5": "4d70eb107cbc6ee48254e2157cd857bb",
+        "size": 2491484
+      },
+      {
+        "path": "outdoor_table_chair_set_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/outdoor_table_chair_set_01/outdoor_table_chair_set_01.bin",
+        "md5": "8596ca40855bc417ac5248a54bd85990",
+        "size": 456856
+      }
+    ]
+  },
+  {
+    "id": "garden_gnome",
+    "type": "model",
+    "page": "https://polyhaven.com/a/garden_gnome",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "name": "Garden Gnome",
+      "type": 2,
+      "info": null,
+      "authors": {
+        "Bhargav Kubal": "All"
+      },
+      "date_published": 1678406400,
+      "staging": null,
+      "categories": [
+        "decorative",
+        "collection: the_shed"
+      ],
+      "tags": [
+        "shed",
+        "outdoor",
+        "garage",
+        "garden",
+        "gardening",
+        "farmhouse",
+        "greenhouse"
+      ],
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 28858,
+      "texel_density": 5463.545670141323,
+      "dimensions": [
+        257.918581366539,
+        209.71597731113434,
+        599.08585294761
+      ],
+      "files_hash": "d9916cd986eeec9226772870af437dea0fdf8366",
+      "description": "Free 4K model of a whimsical garden gnome with red pointy hat, white beard, green coat and handheld lantern; glossy, painted ceramic look and charming details.",
+      "sponsors": [
+        "26820710"
+      ],
+      "category_id": "a5145169-a370-5fab-aa0e-04a2a97e546b",
+      "category": "Decor & Art/Sculptures & Figurines/Ornamental Sculptures",
+      "collections": [
+        "the_shed"
+      ],
+      "attributes": {
+        "condition": [
+          "clean"
+        ],
+        "material": [
+          "ceramic"
+        ]
+      },
+      "img_version": "0fce71ad",
+      "download_count": 16144,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/garden_gnome.png?width=256&height=256&format=webp&v=0fce71ad"
+    },
+    "files": [
+      {
+        "path": "garden_gnome_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_gnome/garden_gnome_4k.gltf",
+        "md5": "08989c6ce8488b65222c43b373288118",
+        "size": 2784
+      },
+      {
+        "path": "textures/garden_gnome_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_arm_4k.jpg",
+        "md5": "b4ee9c71ad46f89f10ec064ed9018d78",
+        "size": 5870304
+      },
+      {
+        "path": "textures/garden_gnome_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_diff_4k.jpg",
+        "md5": "d27c5a5633463525104882c58186121e",
+        "size": 4755750
+      },
+      {
+        "path": "textures/garden_gnome_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_nor_gl_4k.jpg",
+        "md5": "c6737b3851e102dacf2f012c6baf94c2",
+        "size": 6816487
+      },
+      {
+        "path": "garden_gnome.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_gnome/garden_gnome.bin",
+        "md5": "c445c52a1360d6ccc01aed0c04ada5c4",
+        "size": 683068
+      }
+    ]
+  },
+  {
+    "id": "weathered_plank_siding",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/weathered_plank_siding",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 1,
+      "name": "Weathered Plank Siding",
+      "categories": [
+        "outdoor",
+        "wall",
+        "wood"
+      ],
+      "tags": [
+        "rough",
+        "wood",
+        "wooden planks",
+        "exterior",
+        "rustic",
+        "plank siding",
+        "weathered",
+        "weatherbeaten",
+        "horizontal planks",
+        "cladding",
+        "lap siding",
+        "lumber",
+        "timber",
+        "plank"
+      ],
+      "description": "Free 8K weathered plank siding texture: dark brown wood with layered boards, worn edges, nail marks, subtle grain and roughness, slight sheen and seams.",
+      "authors": {
+        "Dimitrios Savva": "All"
+      },
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "dimensions": [
+        1570.0000524520874,
+        1570.0000524520874
+      ],
+      "files_hash": "2abcb76d5b6adf54f2e033d181740d82c0585376",
+      "staging": null,
+      "date_published": 1784246400,
+      "category_id": "04edc771-9ea5-5eb3-903f-94d1a6aa5641",
+      "category": "Wood/Boards & Planks/Clapboard & Siding",
+      "attributes": {
+        "surface_use": "wall",
+        "condition": [
+          "weathered",
+          "worn"
+        ],
+        "origin": "man_made",
+        "setting": "outdoor"
+      },
+      "img_version": "ed01a128",
+      "download_count": 3468,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/weathered_plank_siding.png?width=256&height=256&format=webp&v=ed01a128"
+    },
+    "files": [
+      {
+        "path": "weathered_plank_siding_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/weathered_plank_siding/weathered_plank_siding_diff_4k.jpg",
+        "md5": "1d618c5da652241e5e2e3f8a8d6b5e51",
+        "size": 9416348
+      },
+      {
+        "path": "weathered_plank_siding_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/weathered_plank_siding/weathered_plank_siding_nor_gl_4k.jpg",
+        "md5": "f9d23625637f53cb37e9681abda077cb",
+        "size": 9867161
+      },
+      {
+        "path": "weathered_plank_siding_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/weathered_plank_siding/weathered_plank_siding_rough_4k.jpg",
+        "md5": "f150de06f23b3dc18305d5de99e431dd",
+        "size": 6310402
+      },
+      {
+        "path": "weathered_plank_siding_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/weathered_plank_siding/weathered_plank_siding_disp_4k.jpg",
+        "md5": "5d03d719570e8aa89ef71d198cb1b090",
+        "size": 2087553
+      }
+    ]
+  },
+  {
+    "id": "roof_07",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/roof_07",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 1,
+      "date_published": 1529359200,
+      "name": "Roof 07",
+      "old_id": 107,
+      "categories": [
+        "roofing",
+        "man made",
+        "outdoor",
+        "dirty"
+      ],
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "dimensions": [
+        2000,
+        2000
+      ],
+      "sponsors": [
+        "77433244"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "files_hash": "82a641040fa1751c01910adf60e6f3cf6728c4db",
+      "tags": [
+        "ceramic",
+        "tiles",
+        "old",
+        "worn",
+        "damaged",
+        "discolored",
+        "roofing material",
+        "roof",
+        "roofing",
+        "tile roofing",
+        "clay tiles",
+        "weathered",
+        "mossy",
+        "rustic",
+        "overlapping tiles"
+      ],
+      "description": "Free 8K texture of weathered clay roof tiles, overlapping and rustic with chipped, discolored ceramic surfaces, moss, dirt and damaged/peeling areas.",
+      "category_id": "6165a492-c53c-5b5f-96df-20c96a7763df",
+      "category": "Ceramic/Terracotta",
+      "attributes": {
+        "surface_use": "roof",
+        "condition": [
+          "weathered",
+          "mossy",
+          "damaged"
+        ],
+        "origin": "man_made",
+        "setting": "outdoor"
+      },
+      "img_version": "767f9b61",
+      "download_count": 37177,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/roof_07.png?width=256&height=256&format=webp&v=767f9b61"
+    },
+    "files": [
+      {
+        "path": "roof_07_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/roof_07/roof_07_diff_4k.jpg",
+        "md5": "2bf3376d8ab86e9655b1a388b8c506b8",
+        "size": 5842364
+      },
+      {
+        "path": "roof_07_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/roof_07/roof_07_nor_gl_4k.jpg",
+        "md5": "70205f02f3fbdf39b0237896ab3385e9",
+        "size": 3765726
+      },
+      {
+        "path": "roof_07_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/roof_07/roof_07_rough_4k.jpg",
+        "md5": "6498beafb720268d2de607bab1ba805d",
+        "size": 5241135
+      },
+      {
+        "path": "roof_07_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/roof_07/roof_07_disp_4k.jpg",
+        "md5": "1a5a78ded2c0865367481594bf59b817",
+        "size": 1155104
+      }
+    ]
+  },
+  {
+    "id": "aerial_asphalt_01",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/aerial_asphalt_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "scale": "15x15 M",
+      "type": 1,
+      "tags": [
+        "road",
+        "flat",
+        "cracked"
+      ],
+      "date_published": 1597061145,
+      "name": "Aerial Asphalt 01",
+      "old_id": 277,
+      "categories": [
+        "asphalt",
+        "outdoor",
+        "floor",
+        "road",
+        "man made",
+        "aerial"
+      ],
+      "dimensions": [
+        30000,
+        30000
+      ],
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "files_hash": "cdf3c8f091b3589407bdf0697a2deb2c6b40650d",
+      "description": "Free 8K asphalt texture of a flat, worn road with subtle cracks, faint tire marks and gritty surface - ideal for aerial, outdoor, road and floor scenes.",
+      "category_id": "8871debe-40cf-5e4d-a5e5-1ddfe979f14f",
+      "category": "Asphalt & Bitumen/Asphalt/Worn Road Surface",
+      "attributes": {
+        "surface_use": "floor",
+        "condition": [
+          "weathered",
+          "cracked",
+          "worn"
+        ],
+        "origin": "man_made",
+        "setting": "outdoor",
+        "aerial": true
+      },
+      "img_version": "151f24f1",
+      "download_count": 147477,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/aerial_asphalt_01.png?width=256&height=256&format=webp&v=151f24f1"
+    },
+    "files": [
+      {
+        "path": "aerial_asphalt_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/aerial_asphalt_01/aerial_asphalt_01_diff_4k.jpg",
+        "md5": "18381eef4142d7cc6a3598e9b42c3758",
+        "size": 9782694
+      },
+      {
+        "path": "aerial_asphalt_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/aerial_asphalt_01/aerial_asphalt_01_nor_gl_4k.jpg",
+        "md5": "0fab4121714208ec2fe6fb3db1834032",
+        "size": 11297448
+      },
+      {
+        "path": "aerial_asphalt_01_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/aerial_asphalt_01/aerial_asphalt_01_rough_4k.jpg",
+        "md5": "530bd68a085f14cd49b4d63ee3d09b39",
+        "size": 4604684
+      },
+      {
+        "path": "aerial_asphalt_01_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/aerial_asphalt_01/aerial_asphalt_01_disp_4k.jpg",
+        "md5": "adcc5900f0fcd9b4f968264647599e79",
+        "size": 1691612
+      }
+    ]
+  },
+  {
+    "id": "concrete_pavement",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/concrete_pavement",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "name": "Concrete Pavement",
+      "type": 1,
+      "tags": [
+        "rough",
+        "urban",
+        "concrete",
+        "floor",
+        "rough  ",
+        "exterior",
+        "pavers",
+        "outdoor flooring",
+        "cement",
+        "flat",
+        "coarse",
+        "pavement",
+        "sidewalk"
+      ],
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "info": null,
+      "dimensions": [
+        1800.0000715255737,
+        1800.0000715255737
+      ],
+      "staging": null,
+      "date_published": 1708387200,
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "files_hash": "13659c72c1314d12b0c5cd809f89ccc9fec09cbf",
+      "description": "Free 8K concrete texture of rough, coarse rectangular pavement pavers with sandy aggregate, subtle wear and flat matte finish in warm gray-beige tones.",
+      "categories": [
+        "floor",
+        "man made",
+        "concrete",
+        "plaster-concrete"
+      ],
+      "category_id": "3d66fbeb-75a0-5a98-97b4-d2630544da3f",
+      "category": "Brick & Block/Concrete Block & Paver",
+      "attributes": {
+        "surface_use": "paving",
+        "condition": [
+          "worn"
+        ],
+        "origin": "man_made",
+        "setting": "outdoor"
+      },
+      "img_version": "5ab61f2c",
+      "download_count": 52589,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/concrete_pavement.png?width=256&height=256&format=webp&v=5ab61f2c"
+    },
+    "files": [
+      {
+        "path": "concrete_pavement_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavement/concrete_pavement_diff_4k.jpg",
+        "md5": "6810da2676a6c7acfbb71580e6751e36",
+        "size": 14704410
+      },
+      {
+        "path": "concrete_pavement_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavement/concrete_pavement_nor_gl_4k.jpg",
+        "md5": "d8c6afa0b3fc9dcc871a5e45e1227f5a",
+        "size": 19450705
+      },
+      {
+        "path": "concrete_pavement_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavement/concrete_pavement_rough_4k.jpg",
+        "md5": "2bd5c18b2b7259219862bb06a5aeb094",
+        "size": 8489706
+      },
+      {
+        "path": "concrete_pavement_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/concrete_pavement/concrete_pavement_disp_4k.jpg",
+        "md5": "d2fa89d46d1fcad425b57aa6bb2b76af",
+        "size": 7233170
+      }
+    ]
+  },
+  {
+    "id": "grass_path_2",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/grass_path_2",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 1,
+      "tags": [
+        "grass",
+        "pathway",
+        "path",
+        "ground",
+        "stones",
+        "sidewalk",
+        "rural",
+        "farm"
+      ],
+      "date_published": 1529359200,
+      "name": "Grass Path 2",
+      "old_id": 97,
+      "categories": [
+        "terrain",
+        "natural",
+        "outdoor"
+      ],
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "dimensions": [
+        1000,
+        1000
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "files_hash": "b4f12e39d7b91eb602717bd76dc4ed8a0ab34185",
+      "description": "Free 8K texture of a compacted dirt path with scattered stones and small grass tufts, rough, grainy earth with subtle displacement and worn, patchy areas.",
+      "category_id": "dd06ef8e-5807-534b-b7ac-19fb07264599",
+      "category": "Ground & Terrain/Rocky Ground/Rocky Paths & Trails",
+      "attributes": {
+        "surface_use": "ground",
+        "condition": [
+          "worn"
+        ],
+        "origin": "natural",
+        "setting": "outdoor"
+      },
+      "img_version": "7dd04a04",
+      "download_count": 80094,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/grass_path_2.png?width=256&height=256&format=webp&v=7dd04a04"
+    },
+    "files": [
+      {
+        "path": "grass_path_2_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/grass_path_2/grass_path_2_diff_4k.jpg",
+        "md5": "0392a5e8071037dcb2627b935a75fcb3",
+        "size": 9931730
+      },
+      {
+        "path": "grass_path_2_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/grass_path_2/grass_path_2_nor_gl_4k.jpg",
+        "md5": "02050d14d68cdd5af204a494372308b7",
+        "size": 7664873
+      },
+      {
+        "path": "grass_path_2_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/grass_path_2/grass_path_2_rough_4k.jpg",
+        "md5": "259ca2e48f69c1ec105bc9d12c22a85e",
+        "size": 4871432
+      },
+      {
+        "path": "grass_path_2_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/grass_path_2/grass_path_2_disp_4k.jpg",
+        "md5": "76741b5cbe87302fcbd3813a4b5fbd41",
+        "size": 1660537
+      }
+    ]
+  },
+  {
+    "id": "wood_peeling_paint_weathered",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/wood_peeling_paint_weathered",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 1,
+      "tags": [
+        "rough",
+        "old",
+        "weathered",
+        "wood",
+        "planks",
+        "painted",
+        "chipped",
+        "flaked",
+        "paint",
+        "worn",
+        "faded",
+        "dry",
+        "damaged",
+        "peeling",
+        "discolored",
+        "cracked",
+        "stained",
+        "wall"
+      ],
+      "name": "Wood Peeling Paint Weathered",
+      "categories": [
+        "outdoor",
+        "man made",
+        "wall",
+        "wood",
+        "dirty"
+      ],
+      "authors": {
+        "Rob Tuytel": "Processing",
+        "Dimitrios Savva": "Photography"
+      },
+      "date_published": 1649894400,
+      "staging": null,
+      "dimensions": [
+        761.9999647140503,
+        762.0000243186951
+      ],
+      "sponsors": [
+        "540619",
+        "3237733"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "files_hash": "477efc13ced9f70916939064f880c9a610979f80",
+      "description": "Free 8K texture of weathered painted wood: rough, cracked planks with chipped, flaking dark paint exposing warm, stained wood grain.",
+      "category_id": "26eb2cbb-558a-5357-ae3f-9519f081f247",
+      "category": "Wood/Boards & Planks/Painted Planks",
+      "attributes": {
+        "surface_use": "wall",
+        "condition": [
+          "weathered",
+          "damaged",
+          "painted",
+          "worn",
+          "cracked"
+        ],
+        "origin": "man_made",
+        "setting": "outdoor"
+      },
+      "img_version": "b08bff7c",
+      "download_count": 103764,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/wood_peeling_paint_weathered.png?width=256&height=256&format=webp&v=b08bff7c"
+    },
+    "files": [
+      {
+        "path": "wood_peeling_paint_weathered_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/wood_peeling_paint_weathered/wood_peeling_paint_weathered_diff_4k.jpg",
+        "md5": "c260b60163b88afe44a406657a74c10c",
+        "size": 11390523
+      },
+      {
+        "path": "wood_peeling_paint_weathered_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/wood_peeling_paint_weathered/wood_peeling_paint_weathered_nor_gl_4k.jpg",
+        "md5": "e26c6f1382589a17173815b3b78c0f6d",
+        "size": 15071576
+      },
+      {
+        "path": "wood_peeling_paint_weathered_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/wood_peeling_paint_weathered/wood_peeling_paint_weathered_rough_4k.jpg",
+        "md5": "23df1a1e6d74f079263d4137c84f29f2",
+        "size": 4421216
+      },
+      {
+        "path": "wood_peeling_paint_weathered_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/wood_peeling_paint_weathered/wood_peeling_paint_weathered_disp_4k.jpg",
+        "md5": "50d8861e6a630d41a1e68f8ea39f0c84",
+        "size": 1574422
+      }
+    ]
+  }
+]

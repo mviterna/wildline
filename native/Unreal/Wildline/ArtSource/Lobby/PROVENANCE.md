@@ -58,7 +58,7 @@ reuse the retained CC0 timber/fabric maps; the curtain pigment is desaturated
 and recolored green. `WildlineLodgeDetails.cpp` arranges these with a specimen
 shelf and pinned field notes. The outside clearing reuses the project's existing
 licensed forest trees and leaf-litter materials, plus CC0 deadwood/moss. It is
-actual 3D geometry with view parallax, shared by all three map waiting rooms.
+actual 3D geometry with view parallax, shared by all map waiting rooms.
 Exterior scenery is visible only to a local camera inside the lodge, so the
 elevated waiting-room clearing cannot appear in the outdoor match sky.
 Room collision stays continuous behind the windows. To refresh only this
@@ -68,3 +68,19 @@ work, convert with `--lodge-only`, regenerate lodge details, then run
 The stone fire-pit source is retained as an alternate hearth detail; the built
 interior uses the authored recessed fireplace. Provider thumbnails or example
 renders are not imported or redistributed as game art.
+
+Acorn Hollow's three hunter trophies are static neck-and-head derivatives of
+the existing selectable Travis, Ethan and Greyson meshes, retaining the supplied
+reference photographs and face UVs. `Scripts/prepare_hunter_trophies.py` crops the
+unposed models; `Scripts/import_world_upgrade.py` assigns their existing hunter
+materials. No new third-party portrait imagery was acquired. The trophy shields,
+nameplates, keepsake shelf and lookout perch are authored in the lobby builder;
+the bowls, books, moss, stumps and other scanned objects retain the licenses above.
+
+The lodge's exterior clearing now extends 140 m in each direction, with a ring
+of rising wooded ridges and 144 trees at several depths. These are derivatives
+of the existing licensed reserve trees. Exterior components appear only while
+the local camera is inside the lodge, keeping the elevated scenery out of matches.
+
+Bounded room grades explicitly set exposure method, compensation and physical
+camera behavior so lantern lighting remains consistent across the outdoor maps.

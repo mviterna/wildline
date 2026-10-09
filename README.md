@@ -1,10 +1,14 @@
 # WILDLINE â€” Unreal Engine
 
-Native Windows co-op hunting prototype built in Unreal Engine 5.8.3. Play **Classic** in Blackwood, **Farm Raid** at the homestead, or **King of the Hill** in the neighborhood. Choose a hunter/farmer or squirrel. The browser version is preserved in `BROWSER-PROTOTYPE.md` and `Launch Browser Prototype.cmd`.
+Native Windows co-op hunting prototype built in Unreal Engine 5.8.3. Play **Classic** in autumn Blackwood or snowy Frostwood, **Farm Raid** at the homestead, or **King of the Hill** in the neighborhood. Choose a hunter/farmer or squirrel. The browser version is preserved in `BROWSER-PROTOTYPE.md` and `Launch Browser Prototype.cmd`.
 
 ## Launch
 
-Double-click **Launch Game.cmd**. It launches the packaged Windows game in `native/Build/Windows`, with an engine-play fallback if the package is absent. **Open Unreal Editor.cmd** opens the editable project at `native/Unreal/Wildline/Wildline.uproject`.
+Double-click **Launch Game.cmd** or the **WILDLINE** desktop shortcut. Both launch the newest successfully packaged Windows build under `native/Build`, including neighborhood review builds. Completion records validate the packaged files so incomplete or failed rebuilds are skipped. If no completed package is available, the launcher falls back to engine play. **Open Unreal Editor.cmd** opens the editable project at `native/Unreal/Wildline/Wildline.uproject`.
+
+**Build Windows Game.cmd** and **Build Beta Installer.cmd** publish the game after successful packaging, before building the installer, and automatically create or repair the **WILDLINE** desktop shortcut. For a separate review build, use `powershell -NoProfile -ExecutionPolicy Bypass -File native/LaunchNative.ps1 -Build -ArchiveRoot native/Build/YourReview -SkipInstaller`; it publishes to the same desktop launcher automatically. For a custom archive made directly with Unreal's packaging tools, run `powershell -NoProfile -ExecutionPolicy Bypass -File native/RegisterPackagedBuild.ps1 -PackageRoot native/Build/YourReview/Windows` after packaging succeeds. The launcher selects by completion time, including content-only builds whose EXE timestamp has not changed.
+
+For Fab asset downloads, select **Wildline** in the Epic launcher's **Add to Project** dialog. Its project search folder is `C:/_git/wildline/native/Unreal`, registered under `[Launcher]` as `CreatedProjectPaths` in `%LOCALAPPDATA%/EpicGamesLauncher/Saved/Config/WindowsEditor/GameUserSettings.ini`. If an older asset pack hides the UE 5.8 project, check **Show all projects**, select **Wildline**, then choose the newest asset version available in **Select Version**. This selects the asset package version; it does not change WILDLINE's engine version. Asset compatibility still needs checking after import.
 
 The game opens with a 6.6-second 2D squirrel short: an eight-frame running cycle
 toward an acorn, interrupted by a comic shot and backward tumble before he reaches
@@ -27,6 +31,56 @@ in `WildlineIntro.cpp`; presentation asset sources and
 reimport instructions are in `ArtSource/Presentation/PROVENANCE.md`. Use
 `native/VerifyPresentationPackage.ps1 -Capture` to verify the packaged sequence,
 duration/skip, cleanup and gameplay entry, and capture the studio logo and menu.
+
+## Send a Windows beta to a friend
+
+Double-click **Build Windows Game.cmd** or **Build Beta Installer.cmd**. Both
+rebuild/cook the current native game and produce a single
+`Wildline-<version>-Setup.exe` in `native/Build/Beta`,
+alongside a SHA-256 checksum and `BetaReadme.txt`. Send the setup EXE; the runtimes
+and testing guide are embedded. This is a Development beta with diagnostic logs.
+
+Every Windows packaged build includes this installer; installer failure fails
+the build. Run a newer setup EXE to update: it detects the previous installation,
+reuses its folder and overwrites the game files, even for the same version.
+Old packaged engine/binary/content/config files are removed before replacement
+so obsolete cooked archives cannot survive. Saved settings and hunter portraits
+are preserved; no manual uninstall is needed.
+
+Setup checks 64-bit Intel/AMD Windows, Windows updates, DirectX 12 availability
+and free disk space. It compares installed Visual C++ x64 and GameInput DLL
+versions against Unreal's minimums, installs bundled Microsoft-signed runtimes
+when needed, stops on prerequisite failure and handles required restarts.
+It installs for the current Windows account with Start menu shortcuts, an optional
+desktop shortcut and a Windows uninstaller. It requests administrator permission
+only to install missing runtimes. Your friend does not need Unreal, Epic Launcher
+or developer tools.
+GPU Shader Model 6 support is checked by the game at launch; use current drivers.
+
+The build machine needs Unreal 5.8, its C++ toolchain and
+[Inno Setup 6.3+](https://jrsoftware.org/isdl.php). For a package you just built,
+run `powershell -NoProfile -ExecutionPolicy Bypass -File native/BuildBeta.ps1
+-SkipGameBuild`. Optional `-EngineRoot` and `-CompilerPath` select local tools.
+The staging pass excludes PDBs, caches, saved settings/portraits and packaging
+manifests. `BetaBuild.json` records the version, source commit, working-tree
+status, minimum runtime versions and payload hashes. Local setup/staging outputs
+are ignored by Git.
+
+Beta setup is unsigned, so Windows may show an unknown-publisher/SmartScreen
+prompt. The bundled Microsoft runtime installers retain their Microsoft signatures.
+Prerequisite logs are retained under
+`%LOCALAPPDATA%\Wildline\InstallerLogs`. Game logs/crashes/settings live
+under `%LOCALAPPDATA%\Wildline\Saved`; uninstall preserves personal data.
+For internet co-op, the host still needs UDP 7777 forwarding or a shared VPN.
+
+`native/VerifyBetaInstaller.ps1 -SetupPath <setup.exe>` verifies installation into
+a path with spaces, all payload hashes, exclusion of saved/debug files, shortcuts,
+the installed bootstrap and all three modes/intro, automatic upgrade discovery,
+obsolete file cleanup, save preservation, same-version repair and uninstall.
+Add `-PreviousSetupPath <older-setup.exe>` to test upgrading an older build.
+Run it in a Windows account without an existing WILDLINE Beta installation.
+Missing-runtime installation and reboot behavior also need clean-machine testing;
+the local verification machine already has the required Microsoft runtimes.
 
 ## Controls
 
@@ -119,7 +173,9 @@ The camp **Match Workshop** has three tabs: **Match Rules**, **Bot Roster**, and
 
 Counts of zero allow co-op without AI or solo practice. A match needs opponents for kills and enough food for the objective; carrying capacity and livestock controls are disabled in modes where they do not apply. The original health, ammo, thermal and match timings described below are the Standard scheme's values.
 
-**King of the Hill** counts repeated completed squirrel trips to a bird feeder. The residential neighborhood has six houses, lawns, fenced yards, a street, curbs, sidewalks, driveways, overhead power lines and garden furniture. Choose either start pad, then land in order on a bin, garden bench, fence ledge and pergola before jumping onto the raised feeder. Every obstacle is paired across two routes. The smooth pole and metal baffle cannot be climbed; nearby trees are excluded from the course. Falling back to the lawn resets progress. A feeder visit scores once, and a new run requires returning to a start pad. The HUD shows the next checkpoint, personal trips and shared team score; the map shows both routes and the feeder. Squirrels win at the configured trip goal (default 10); defenders win at the kill goal or when time expires. Server-authoritative checkpoints, respawns and F5 resets work in co-op.
+**King of the Hill** counts repeated completed squirrel trips to a cedar hopper bird feeder. Choose **Maple Crescent** or **Cedar Backyards** under Match Rules / Bird Feeder Neighborhood, then enter a fresh waiting room to load that layout. Each has six houses mixing Colonial/Cape Cod architecture and the licensed suburban kit, porches, fenced yards, street trees, sidewalks, utility poles and garden furniture. Two organic approaches replace the mirrored platform ladders: climb the utility pole with **E**, launch onto the telephone line, cross an oak limb and cedar fence, or cross a raised planter, potting bench and garden fence. Both end with a real sprung trampoline: press **Space** on its fabric bed for the higher launch to the feeder. Land on every checkpoint in order; falling to the lawn resets progress. The smooth feeder pole and baffle cannot be climbed. A feeder visit scores once; return to a yard entrance before another trip. The HUD and minimap follow the selected configuration, and the host controls the shared match rules.
+
+The neighborhood integrates 11 downloaded CC0 models, six 4K PBR surface sets and burnedhrum's licensed CC-BY suburban house kit with original feeder, trampoline and fence geometry. Both layouts also use selected Epic City Sample cars, pickup and van, plus SilverTm City Park benches, bins, lamps and a drinking fountain. Selected meshes live under `Content/Wildline/Fab`, with their source materials and texture dependencies retained. Editable placement and route data live in `ArtSource/Neighborhood/Configs`; their cooked Unreal DataAssets are assigned to each map. [Neighborhood sources and acquisition blockers](native/Unreal/Wildline/ArtSource/Neighborhood/PROVENANCE.md) record licenses and rebuild commands. Run `native/VerifyNeighborhood.ps1 -Editor -Capture` to check all four physical routes and capture both layouts. The desktop icon and `Launch Game.cmd` select the newest successful package.
 
 Sound effects cover rifle/shotgun reports, bolt/pump action, reloads, boots and paws, jumping/landing, trunk scratching, solid impacts, damage, pickups, deposits, thermal activation, course checkpoints, feeder trips and match results, with occasional ambient birds. Nearby actions use spatial attenuation; objective feedback for the local player is clear. The camp **Sound effects volume** slider includes mute. The synthesized sounds are original project audio and require no external downloads.
 
@@ -161,7 +217,9 @@ and download settings are recorded in
 
 Rocks have cooked convex collision that blocks characters, bullets and cameras. The native reserve has a collidable split-rail perimeter backed by wooded slopes and surrounding ridges. A boundary notice appears near the edge, and outward velocity is removed at the reserve limit. Root collars are buried on slopes, including the pine asset's long below-ground root geometry. The native reserve uses licensed BlendSwap oak and pine geometry, curved grass clumps, clover, weeds and four photographic fern shapes. Small fallen leaves and weathered hollow logs sit on a scanned leaf-litter floor. Vegetation grows in irregular patches around clear paths, with saplings beneath varied crowns, subtle wind, two-sided leaf shading and four mesh LODs. A physical sky, woodland haze, Lumen lighting and virtual shadow maps light the reserve. All added forest geometry and shipped textures use CC0 sources; [forest source credits](native/Unreal/Wildline/ArtSource/Forest/PROVENANCE.md) record each asset and conversion. The hunters use detailed CC0 MakeHuman anatomy, textured padded jackets, boots and configurable caps on the engine's locomotion skeleton. The sporting rifle is original project geometry. Hollow logs have twelve convex collision wall segments, retaining open tunnels. [Hunter source credits](native/Unreal/Wildline/ArtSource/Hunters/PROVENANCE.md) document the new assets and portrait workflow. The squirrel uses WildMesh3D's textured skeletal model, sized to **48.9 cm nose to tail**, with tapered silhouette fur, matte coat shading and reflective eyes.
 
-Third-person climbing keeps the camera on the animal's side of the trunk. Climb paths and segmented collision follow the actual bent and tapered stems; each species stops at its continuous main branches. The squirrel minimap now shows the selected launch heading. The squirrel has travel-driven walking/bounding gaits, four-paw IK, slope alignment, breathing, head/ear movement, blinking and a balancing segmented tail. Jump poses tuck the limbs and extend on descent. Its 24 cm collision capsule and roughly 13 cm eye height fit the animal rather than the old enlarged placeholder. Ground jumps travel roughly 3.7 m on level ground and trunk launches roughly 6.9 m; elevation and obstacles change that distance. Corpses fall from trees. First person, third person, configurable inversion and co-op remain available.
+Third-person climbing keeps the camera outside the bark. Every gameplay oak and pine, including neighborhood yard trees, has collision on its actual wooden limbs. Press **E** near a trunk or branch to grip it; **W/S** climb vertical bark or move along a flatter limb in the look direction, and **A/D** move sideways. **Space** launches from either surface; **E** releases the grip. Foliage has no collision. The squirrel minimap shows the selected launch heading. The squirrel has travel-driven walking/bounding gaits, four-paw IK, slope alignment, breathing, head/ear movement, blinking and a balancing segmented tail. Jump poses tuck the limbs and extend on descent. Its 24 cm collision capsule and roughly 13 cm eye height fit the animal rather than the old enlarged placeholder. Ground jumps travel roughly 3.7 m on level ground and tree launches roughly 6.9 m; elevation and obstacles change that distance. Corpses fall from trees. First person, third person, configurable inversion and co-op remain available.
+
+Choose **Frostwood / leafless winter** under Match Rules / Classic Reserve before entering a fresh waiting room. It preserves Classic's acorn collection, den deposits, perimeter and victory rules, with bare trees, frost on upward bark surfaces, granular snow, cold sunlight and winter haze. Blackwood uses approximately 28% fewer canopy leaf cards and fewer scattered ground leaves. The hunter lodge looks onto a deep wooded clearing and rising forest ridge. Acorn Hollow has mounted hunter busts, keepsakes, a lookout perch and a small raid-planning table. `native/VerifyWorldUpgrade.ps1 -Capture` checks limbs and trunks across all five maps and captures these additions from the latest package.
 
 This is a playable native prototype moving toward realism. Cinematic fur, captured/authored animal animation, finished landscape composition and recorded environmental audio still need production work. Photo faces use adjustable texture projection; higher-end head reconstruction, authored reload/bolt-hand interaction and more refined character art remain production work. Hunter locomotion now uses captured movement and transitions, with both hands solved to the shouldered stock and closed finger poses. Aiming raises the stock and replicates to co-op players; firing adds recoil and the shotgun support hand follows its pump.
 
@@ -189,7 +247,7 @@ personal hunter likeness. Keep access private. The asset credits below and
 the `ArtSource` provenance files identify the applicable licenses; inclusion in
 this repository does not grant unrestricted redistribution of those assets.
 
-- **Build Windows Game.cmd** compiles, cooks and packages the game using the installed Unreal 5.8 engine and C++ toolchain.
+- **Build Windows Game.cmd** compiles, cooks and packages the game using the installed Unreal 5.8 engine and C++ toolchain, then creates the installer in `native/Build/Beta`.
 - **Test Unreal Game.cmd** runs the native automation suites followed by Classic, Farm Raid and King of the Hill live-world checks covering lethal projectiles, climbing, long launches, reload, thermal timing, squirrel anatomy/scale, fur, paw articulation, body motion, forest assets, log/tree collision, hunter appearance, portrait decoding, visible bolt cycling, planted roots, boundary collision and containment, scaled rock traces and capsule sweeps, difficulty/map visibility, forage pickup/deposit validation, rifle grip across body profiles and scoped/sideways movement, directional animation assets, full-orbit climbing visibility on every tree species at low/middle/upper heights and camera recovery after launch.
 - `native/Unreal/Wildline/Scripts/build_content.py` rebuilds editable materials and the Blackwood map using Unreal's Python commandlet. It expects the photographed source textures in `ArtSource`.
 - `native/VerifyForagePackage.ps1 -Capture` verifies the packaged rock collision, pickups/deposits, late-join difficulty replication and captures the camp, Easy map, zoom and pickup feedback for review.

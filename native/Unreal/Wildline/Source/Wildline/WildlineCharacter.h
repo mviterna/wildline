@@ -39,6 +39,12 @@ public:
     UPROPERTY(Replicated) float ReloadUntil=0;
     UPROPERTY(Replicated) float RespawnAt=0;
     UPROPERTY(Replicated) int32 TreeIndex=INDEX_NONE;
+    UPROPERTY(Replicated) bool bWoodClimbing=false;
+    UPROPERTY(Replicated) bool bBranchClimbing=false;
+    UPROPERTY(Replicated) FVector_NetQuantizeNormal ClimbNormal=FVector::UpVector;
+    UPROPERTY(Replicated) FVector_NetQuantizeNormal ClimbHeading=FVector::UpVector;
+    UPROPERTY(ReplicatedUsing=OnRepClimbPosition) FVector_NetQuantize10 ClimbPosition=FVector::ZeroVector;
+    UFUNCTION() void OnRepClimbPosition();
     UPROPERTY(Replicated) TArray<int32> Collected;
     UPROPERTY(Replicated) TArray<int32> BagPeanuts;
     UPROPERTY(ReplicatedUsing=OnRepWeapon) int32 SelectedWeapon=0;

@@ -65,3 +65,10 @@ These are personal reference photos, not CC0 assets or AI-generated textures.
 Original simple head and ear geometry carries each image without modeled
 facial features. Both face UV channels intentionally carry the same coordinates.
 The discarded MetaHuman head, textures, materials and authoring path are removed.
+
+Acorn Hollow's mounted Travis, Ethan and Greyson busts are static derivatives of
+these existing player models. `prepare_hunter_trophies.py` crops below the collar
+and retains the original face UVs, cap, skin and cloth materials. No additional
+portrait source or license is introduced. `import_world_upgrade.py` imports the
+busts into `Content/Wildline/Hunters/Meshes`; the room supplies oak shields,
+brass nameplates, warm display lighting and the squirrels' rivalry captions.

@@ -361,6 +361,6 @@ void UWildlineHunterAnim::NativePostEvaluateAnimation(){
     auto* Pawn=Cast<AWildlineCharacter>(GetOwningActor());
     if(Pawn&&!Pawn->bSquirrel&&!Pawn->bPreviewHunter&&Proxy.bWeaponPoseValid){
         Pawn->WorldRifle->SetWorldTransform(Proxy.WeaponPose*GetSkelMeshComponent()->GetComponentTransform());
-        if(Proxy.bStep&&!Pawn->bDead)WildlineAudio::Play(Pawn,WildlineAudio::Footstep,GetSkelMeshComponent()->GetSocketLocation(Proxy.StepSide==0?TEXT("foot_l"):TEXT("foot_r")));
+        if(Proxy.bStep&&!Pawn->bDead)WildlineAudio::Play(Pawn,WildlineAudio::Footstep,GetSkelMeshComponent()->GetSocketLocation(Proxy.StepSide==0?TEXT("foot_l"):TEXT("foot_r")),false,Pawn->bSprinting?WildlineAudio::RunningFootstepRate:1.f);
     }
 }

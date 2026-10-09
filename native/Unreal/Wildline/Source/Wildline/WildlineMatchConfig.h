@@ -26,6 +26,8 @@ struct FWildlineMatchConfig {
     UPROPERTY() TArray<FWildlineBotConfig> Squirrels;
     UPROPERTY() bool bAllowMinimap=true;
     UPROPERTY() int32 MapIntel=1;
+    UPROPERTY() int32 NeighborhoodLayout=0;
+    UPROPERTY() int32 ClassicLayout=0;
     UPROPERTY() float SquirrelHealth=40.f;
     UPROPERTY() float RespawnSeconds=7.f;
     UPROPERTY() float SpawnProtectionSeconds=0.f;
@@ -48,7 +50,7 @@ struct FWildlineMatchConfig {
         DefenderBots=FMath::Clamp(DefenderBots,0,MaxBotsPerTeam);SquirrelBots=FMath::Clamp(SquirrelBots,0,MaxBotsPerTeam);
         Defenders.SetNum(MaxBotsPerTeam);Squirrels.SetNum(MaxBotsPerTeam);
         for(auto& Bot:Defenders)Bot.Clamp();for(auto& Bot:Squirrels)Bot.Clamp();
-        MapIntel=FMath::Clamp(MapIntel,0,2);TimeWinner=FMath::Clamp(TimeWinner,0,2);
+        MapIntel=FMath::Clamp(MapIntel,0,2);TimeWinner=FMath::Clamp(TimeWinner,0,2);NeighborhoodLayout=FMath::Clamp(NeighborhoodLayout,0,1);ClassicLayout=FMath::Clamp(ClassicLayout,0,1);
         SquirrelHealth=FMath::Clamp(SquirrelHealth,10.f,200.f);RespawnSeconds=FMath::Clamp(RespawnSeconds,1.f,30.f);
         SpawnProtectionSeconds=FMath::Clamp(SpawnProtectionSeconds,0.f,10.f);CarryCapacity=FMath::Clamp(CarryCapacity,1,12);
         MovementScale=FMath::Clamp(MovementScale,.5f,1.5f);ReloadScale=FMath::Clamp(ReloadScale,.25f,2.f);
@@ -73,7 +75,7 @@ struct FWildlineMatchConfig {
     bool operator==(const FWildlineMatchConfig& O)const{
         return MaxPlayers==O.MaxPlayers&&DurationSeconds==O.DurationSeconds&&SquirrelGoal==O.SquirrelGoal&&DefenderGoal==O.DefenderGoal
             &&DefenderBots==O.DefenderBots&&SquirrelBots==O.SquirrelBots&&Defenders==O.Defenders&&Squirrels==O.Squirrels
-            &&bAllowMinimap==O.bAllowMinimap&&MapIntel==O.MapIntel&&SquirrelHealth==O.SquirrelHealth&&RespawnSeconds==O.RespawnSeconds
+            &&bAllowMinimap==O.bAllowMinimap&&MapIntel==O.MapIntel&&ClassicLayout==O.ClassicLayout&&NeighborhoodLayout==O.NeighborhoodLayout&&SquirrelHealth==O.SquirrelHealth&&RespawnSeconds==O.RespawnSeconds
             &&SpawnProtectionSeconds==O.SpawnProtectionSeconds&&CarryCapacity==O.CarryCapacity&&MovementScale==O.MovementScale&&ReloadScale==O.ReloadScale
             &&bUnlimitedStamina==O.bUnlimitedStamina&&bInfiniteAmmo==O.bInfiniteAmmo&&bAllowThermal==O.bAllowThermal
             &&ThermalSeconds==O.ThermalSeconds&&ThermalCooldownSeconds==O.ThermalCooldownSeconds&&bLivestockDamage==O.bLivestockDamage&&TimeWinner==O.TimeWinner;

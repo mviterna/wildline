@@ -5,6 +5,7 @@
 class UHierarchicalInstancedStaticMeshComponent;
 class UProceduralMeshComponent;
 class UStaticMeshComponent;
+class UWildlineNeighborhoodConfig;
 USTRUCT()
 struct FWildlineTree {
     GENERATED_BODY()
@@ -14,6 +15,7 @@ struct FWildlineTree {
     UPROPERTY() int32 Species=0;
     UPROPERTY() FTransform MeshTransform;
     UPROPERTY() float ClimbTop=1500.f;
+    UPROPERTY() bool bStraightTrunk=false;
 };
 UCLASS()
 class WILDLINE_API AWildlineWorld : public AActor {
@@ -21,14 +23,21 @@ class WILDLINE_API AWildlineWorld : public AActor {
 public:
     AWildlineWorld();
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bFarm=false;
+    UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bWinter=false;
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bResidential=false;
+    UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Neighborhood") UWildlineNeighborhoodConfig* NeighborhoodConfig=nullptr;
     UPROPERTY() FVector CourseStart=FVector(-950,0,210);
     UPROPERTY() FVector FeederLocation=FVector(350,0,450);
     UPROPERTY() TArray<FVector> CoursePlatforms;
     UPROPERTY() TArray<UStaticMeshComponent*> ResidentialProps;
+    UPROPERTY() TArray<FBox> ResidentialPoolBasins;
     UPROPERTY() TArray<UProceduralMeshComponent*> ResidentialGables;
     FVector CourseTarget(int32 Lane,int32 Checkpoint)const;
     bool OnCourseTarget(FVector Position,int32 Lane,int32 Checkpoint)const;
+    FString CourseLabel(int32 Lane,int32 Checkpoint)const;
+    float CourseLaunchZ(FVector Position)const;
+    int32 CourseEntryTree(int32 Lane)const;
+    UPROPERTY() TArray<int32> CourseEntryTrees;
     void BeginPlay() override;
     UPROPERTY() UProceduralMeshComponent* Terrain;
     UPROPERTY() UHierarchicalInstancedStaticMeshComponent* Trunks;
@@ -39,6 +48,7 @@ public:
     UPROPERTY() UHierarchicalInstancedStaticMeshComponent* Acorns;
     UPROPERTY() UHierarchicalInstancedStaticMeshComponent* AcornCaps;
     UPROPERTY() TArray<UHierarchicalInstancedStaticMeshComponent*> ForestLayers;
+    UPROPERTY() TArray<UHierarchicalInstancedStaticMeshComponent*> ClimbWood;
     UPROPERTY() UStaticMeshComponent* DenMesh;
     UPROPERTY() UHierarchicalInstancedStaticMeshComponent* ReserveFence;
     UPROPERTY() UHierarchicalInstancedStaticMeshComponent* Farmhouse;
@@ -56,9 +66,13 @@ public:
     UFUNCTION(BlueprintCallable,CallInEditor,Category="Blackwood") void Rebuild();
     int32 NearestTree(FVector Point, float MaxDistance) const;
     FVector TrunkCentre(int32 Index,float WorldZ,float& Radius) const;
+    bool TraceWood(FVector Start,FVector End,FHitResult& Hit,int32& Tree,float SweepRadius=0) const;
+    void AddClimbWood(int32 Tree);
+    bool IsLimbSurface(int32 Tree,FVector Point,FVector Normal) const;
     static AWildlineWorld* Find(UWorld* World);
 private:
     void Generate();
     void GenerateFarm();
     void GenerateResidential();
+    bool GenerateConfiguredNeighborhood();
 };

@@ -100,6 +100,9 @@ public:
     UFUNCTION(Server,Reliable) void ServerPickRole(bool bSquirrel);
     UFUNCTION(Server,Reliable) void ServerRestartRound();
     void RunSmokeTest();
+    void RunTraversalSmokeTest();
+    void RunWorldUpgradeReview();
+    void RunTraversalNetProbe();
     void RunFarmSmokeTest();
     void RunHillSmokeTest();
     void RunHillNetworkProbe();

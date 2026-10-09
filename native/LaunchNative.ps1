@@ -1,13 +1,29 @@
-param([switch]$Editor,[switch]$Build,[switch]$Test)
+param([switch]$Editor,[switch]$Build,[switch]$Test,[string]$EngineRoot,[string]$InstallerCompilerPath,[string]$ArchiveRoot,[switch]$SkipInstaller,[switch]$SkipEditorBuild)
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'PackagedBuilds.ps1')
 $projectPath = Join-Path $PSScriptRoot 'Unreal/Wildline/Wildline.uproject'
-$packageRoot = Join-Path $PSScriptRoot 'Build/Windows'
-$gamePath = Join-Path $packageRoot 'Wildline.exe'
-if (!$Editor -and !$Build -and !$Test -and (Test-Path -LiteralPath $gamePath)) {
-    Start-Process -FilePath $gamePath -ArgumentList '-preferNvidia' -WorkingDirectory $packageRoot -WindowStyle Normal
-    exit
+$buildRoot = Join-Path $PSScriptRoot 'Build'
+if (!$ArchiveRoot) { $ArchiveRoot = $buildRoot }
+$ArchiveRoot = [IO.Path]::GetFullPath($ArchiveRoot)
+if ($Build) {
+    $buildPrefix = [IO.Path]::GetFullPath($buildRoot).TrimEnd('\', '/') + '\'
+    if ($ArchiveRoot -ne $buildPrefix.TrimEnd('\') -and !$ArchiveRoot.StartsWith($buildPrefix, [StringComparison]::OrdinalIgnoreCase)) {
+        throw 'ArchiveRoot must be inside native/Build so the desktop launcher can discover it.'
+    }
+    $archiveRelative = $ArchiveRoot.Substring($buildPrefix.TrimEnd('\').Length)
+    if ($archiveRelative -match '(^|[\\/])(InstallerStage|InstallerVerification|Beta)([\\/]|$)') {
+        throw 'ArchiveRoot cannot use an installer output directory.'
+    }
 }
-$engineCandidates = @('D:/EpicEngine/UE_5.8', 'D:/Epic/UE_5.8', 'C:/Program Files/Epic Games/UE_5.8')
+$packageRoot = Join-Path $ArchiveRoot 'Windows'
+if (!$Editor -and !$Build -and !$Test) {
+    $latestBuild = Get-LatestWildlineBuild -BuildRoot (Join-Path $PSScriptRoot 'Build')
+    if ($latestBuild) {
+        Start-Process -FilePath $latestBuild.GamePath -ArgumentList '-preferNvidia' -WorkingDirectory $latestBuild.PackageRoot -WindowStyle Normal
+        exit
+    }
+}
+$engineCandidates = @($EngineRoot, 'D:/EpicEngine/UE_5.8', 'D:/Epic/UE_5.8', 'C:/Program Files/Epic Games/UE_5.8') | Where-Object { $_ }
 $installManifest = Join-Path $env:ProgramData 'Epic/UnrealEngineLauncher/LauncherInstalled.dat'
 if (Test-Path -LiteralPath $installManifest) {
     $engineCandidates += (Get-Content -LiteralPath $installManifest -Raw | ConvertFrom-Json).InstallationList | Where-Object AppName -eq 'UE_5.8' | ForEach-Object InstallLocation
@@ -15,16 +31,31 @@ if (Test-Path -LiteralPath $installManifest) {
 $engineRoot = $engineCandidates | Where-Object { Test-Path -LiteralPath (Join-Path $_ 'Engine/Binaries/Win64/UnrealEditor.exe') } | Select-Object -First 1
 if (!$engineRoot) { throw 'Unreal Engine 5.8 was not found. Install it through Epic Games Launcher, or add its path to native/LaunchNative.ps1.' }
 if ($Build) {
-    & (Join-Path $engineRoot 'Engine/Build/BatchFiles/RunUAT.bat') BuildCookRun "-project=$projectPath" -noP4 -platform=Win64 -clientconfig=Development -build -cook -stage -pak -iostore -archive "-archivedirectory=$(Join-Path $PSScriptRoot 'Build')" '-UbtArgs=-MaxParallelActions=4' -unattended
-    if($LASTEXITCODE -eq 0){Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Farm/PROVENANCE.md') -Destination (Join-Path $packageRoot 'FarmAssetCredits.md') -Force}
-    if($LASTEXITCODE -eq 0){
-        Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Hunters/PROVENANCE.md') -Destination (Join-Path $packageRoot 'HunterAssetCredits.md') -Force
-        Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Hunters/UPGRADE_CANDIDATES.md') -Destination (Join-Path $packageRoot 'FreeHunterAssets.md') -Force
-    }
-    if ($LASTEXITCODE -eq 0) {
-        Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Lobby/PROVENANCE.md') -Destination (Join-Path $packageRoot 'LobbyAssetCredits.md') -Force
-        Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Squirrel/PROVENANCE.md') -Destination (Join-Path $packageRoot 'SquirrelAssetCredits.md') -Force
-    }
+    # Retire the previous completion record before updating this archive in place.
+    $completionRecord = Join-Path $packageRoot 'WildlineBuild.json'
+    if (Test-Path -LiteralPath $completionRecord) { Remove-Item -LiteralPath $completionRecord }
+    # Opt in only after compiling the current editor module separately. This
+    # lets packaging proceed while another editor has Live Coding enabled.
+    $editorBuildArguments = @()
+    if ($SkipEditorBuild) { $editorBuildArguments += '-nocompileeditor' }
+    & (Join-Path $engineRoot 'Engine/Build/BatchFiles/RunUAT.bat') BuildCookRun "-project=$projectPath" -noP4 -platform=Win64 -clientconfig=Development -build -cook -stage -pak -iostore -prereqs -archive "-archivedirectory=$ArchiveRoot" '-UbtArgs=-MaxParallelActions=4' -unattended @editorBuildArguments
+    $buildExitCode = $LASTEXITCODE
+    if ($buildExitCode -ne 0) { exit $buildExitCode }
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Farm/PROVENANCE.md') -Destination (Join-Path $packageRoot 'FarmAssetCredits.md') -Force
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Hunters/PROVENANCE.md') -Destination (Join-Path $packageRoot 'HunterAssetCredits.md') -Force
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Hunters/UPGRADE_CANDIDATES.md') -Destination (Join-Path $packageRoot 'FreeHunterAssets.md') -Force
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Presentation/PROVENANCE.md') -Destination (Join-Path $packageRoot 'PresentationCredits.md') -Force
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Lobby/PROVENANCE.md') -Destination (Join-Path $packageRoot 'LobbyAssetCredits.md') -Force
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Neighborhood/PROVENANCE.md') -Destination (Join-Path $packageRoot 'NeighborhoodAssetCredits.md') -Force
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Squirrel/PROVENANCE.md') -Destination (Join-Path $packageRoot 'SquirrelAssetCredits.md') -Force
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Audio/PROVENANCE.md') -Destination (Join-Path $packageRoot 'AudioCredits.md') -Force
+    Publish-WildlineBuild -PackageRoot $packageRoot | Out-Null
+    if ($SkipInstaller) { exit 0 }
+    # Every packaged build also produces the distributable installer. The
+    # staging-only switch prevents BuildBeta from starting another game build.
+    $installerArguments = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', (Join-Path $PSScriptRoot 'BuildBeta.ps1'), '-SkipGameBuild', '-EngineRoot', $engineRoot, '-PackageRoot', $packageRoot)
+    if ($InstallerCompilerPath) { $installerArguments += @('-CompilerPath', $InstallerCompilerPath) }
+    & powershell.exe @installerArguments
     exit $LASTEXITCODE
 }
 if ($Test) {

@@ -53,7 +53,7 @@ AWildlineCharacter::AWildlineCharacter(){
 void AWildlineCharacter::BeginPlay(){Super::BeginPlay();Forest=AWildlineWorld::Find(GetWorld());ConfigureRole();AWildlineWeaponFX::Warmup(GetWorld());if(bBot&&HasAuthority()){BotDecisionAt=ServerTime()+6.f;SpawnDefaultController();}}
 void AWildlineCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps)const{
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    DOREPLIFETIME(AWildlineCharacter,bInLobby);DOREPLIFETIME(AWildlineCharacter,bLobbyReady);DOREPLIFETIME(AWildlineCharacter,CourseCheckpoint);DOREPLIFETIME(AWildlineCharacter,CourseLane);DOREPLIFETIME(AWildlineCharacter,FeederVisits);DOREPLIFETIME(AWildlineCharacter,bSquirrel);DOREPLIFETIME(AWildlineCharacter,bDead);DOREPLIFETIME(AWildlineCharacter,bBot);DOREPLIFETIME(AWildlineCharacter,BotSlot);DOREPLIFETIME(AWildlineCharacter,AIDifficulty);DOREPLIFETIME(AWildlineCharacter,ProtectedUntil);DOREPLIFETIME(AWildlineCharacter,bSprinting);DOREPLIFETIME(AWildlineCharacter,Stamina);DOREPLIFETIME(AWildlineCharacter,Health);DOREPLIFETIME(AWildlineCharacter,Ammo);DOREPLIFETIME(AWildlineCharacter,Bag);DOREPLIFETIME(AWildlineCharacter,ThermalUntil);DOREPLIFETIME(AWildlineCharacter,ThermalReadyAt);DOREPLIFETIME(AWildlineCharacter,ReloadUntil);DOREPLIFETIME(AWildlineCharacter,RespawnAt);DOREPLIFETIME(AWildlineCharacter,TreeIndex);DOREPLIFETIME(AWildlineCharacter,Collected);DOREPLIFETIME(AWildlineCharacter,BagPeanuts);DOREPLIFETIME(AWildlineCharacter,SelectedWeapon);
+    DOREPLIFETIME(AWildlineCharacter,bInLobby);DOREPLIFETIME(AWildlineCharacter,bLobbyReady);DOREPLIFETIME(AWildlineCharacter,CourseCheckpoint);DOREPLIFETIME(AWildlineCharacter,CourseLane);DOREPLIFETIME(AWildlineCharacter,FeederVisits);DOREPLIFETIME(AWildlineCharacter,bSquirrel);DOREPLIFETIME(AWildlineCharacter,bDead);DOREPLIFETIME(AWildlineCharacter,bBot);DOREPLIFETIME(AWildlineCharacter,BotSlot);DOREPLIFETIME(AWildlineCharacter,AIDifficulty);DOREPLIFETIME(AWildlineCharacter,ProtectedUntil);DOREPLIFETIME(AWildlineCharacter,bSprinting);DOREPLIFETIME(AWildlineCharacter,Stamina);DOREPLIFETIME(AWildlineCharacter,Health);DOREPLIFETIME(AWildlineCharacter,Ammo);DOREPLIFETIME(AWildlineCharacter,Bag);DOREPLIFETIME(AWildlineCharacter,ThermalUntil);DOREPLIFETIME(AWildlineCharacter,ThermalReadyAt);DOREPLIFETIME(AWildlineCharacter,ReloadUntil);DOREPLIFETIME(AWildlineCharacter,RespawnAt);DOREPLIFETIME(AWildlineCharacter,TreeIndex);DOREPLIFETIME(AWildlineCharacter,bWoodClimbing);DOREPLIFETIME(AWildlineCharacter,bBranchClimbing);DOREPLIFETIME(AWildlineCharacter,ClimbNormal);DOREPLIFETIME(AWildlineCharacter,ClimbHeading);DOREPLIFETIME(AWildlineCharacter,ClimbPosition);DOREPLIFETIME(AWildlineCharacter,Collected);DOREPLIFETIME(AWildlineCharacter,BagPeanuts);DOREPLIFETIME(AWildlineCharacter,SelectedWeapon);
     DOREPLIFETIME(AWildlineCharacter,HunterProfile);DOREPLIFETIME(AWildlineCharacter,HunterFaceData);
     DOREPLIFETIME_CONDITION(AWildlineCharacter,bAiming,COND_SkipOwner);
 }
@@ -186,7 +186,7 @@ void AWildlineCharacter::DoCrouch(){if(CanControl()&&!bSquirrel)Crouch();}void A
 void AWildlineCharacter::DoJump(){if(CanControl())ServerJump();}void AWildlineCharacter::Climb(){if(!CanControl())return;if(bInLobby){if(auto* PC=Cast<AWildlineController>(Controller))PC->ServerLobbyInteract();}else ServerClimb();}void AWildlineCharacter::Thermal(){if(CanControl())ServerThermal();}void AWildlineCharacter::Reload(){if(CanControl())ServerReload();}
 void AWildlineCharacter::ServerJump_Implementation(){
     if(bDead||Stamina<15)return;
-    if(bSquirrel){if(TreeIndex==INDEX_NONE&&GetCharacterMovement()->IsFalling())return;const bool FromTree=TreeIndex!=INDEX_NONE;TreeIndex=INDEX_NONE;GetCharacterMovement()->SetMovementMode(MOVE_Falling);FRotator R=GetControlRotation();R.Pitch=0;R.Roll=0;LaunchCharacter(R.Vector()*(FromTree?900:600)+FVector(0,0,FromTree?450:360),true,true);if(!MatchRules().bUnlimitedStamina)Stamina-=18;}
+    if(bSquirrel){if(TreeIndex==INDEX_NONE&&GetCharacterMovement()->IsFalling())return;const bool FromTree=TreeIndex!=INDEX_NONE;const float LaunchZ=FromTree?450:Forest&&Forest->bResidential?Forest->CourseLaunchZ(GetActorLocation()):360;TreeIndex=INDEX_NONE;GetCharacterMovement()->SetMovementMode(MOVE_Falling);FRotator R=GetControlRotation();R.Pitch=0;R.Roll=0;LaunchCharacter(R.Vector()*(FromTree?900:600)+FVector(0,0,LaunchZ),true,true);if(!MatchRules().bUnlimitedStamina)Stamina-=18;}
     else Jump();
     MulticastSound(WildlineAudio::Jump);
 }
@@ -194,12 +194,58 @@ void AWildlineCharacter::ServerClimb_Implementation(){
     if(bInLobby||!bSquirrel||bDead)return;
     if(TreeIndex!=INDEX_NONE){TreeIndex=INDEX_NONE;GetCharacterMovement()->SetMovementMode(MOVE_Falling);return;}
     if(!Forest)Forest=AWildlineWorld::Find(GetWorld());if(!Forest)return;
+    FHitResult Best;int32 WoodTree=INDEX_NONE;float Distance=70;
+    const FVector P=GetActorLocation();
+    // A falling squirrel can catch a limb; leaf cards are excluded from traces.
+    // Prefer the limb under the paws; at forks the nearest lateral triangle may
+    // belong to an adjacent twig or the underside of the same branch.
+    FHitResult Foot;int32 FootTree;
+    if(Forest->TraceWood(P,P-FVector(0,0,45),Foot,FootTree,12)&&Foot.ImpactNormal.Z>.4f){Best=Foot;WoodTree=FootTree;Distance=-1;}
+    for(int32 D=0;D<50&&Distance>=0;D++){
+        const float Z=D<16?0.f:D<32?.707f:-.707f;
+        const FVector Direction=D==48?FVector::UpVector:D==49?-FVector::UpVector:FVector(FMath::Cos((D%16)*PI/8),FMath::Sin((D%16)*PI/8),Z).GetSafeNormal();
+        FHitResult Hit;int32 Index;
+        if(Forest->TraceWood(P,P+Direction*70,Hit,Index,12)&&Hit.Distance<Distance){Best=Hit;WoodTree=Index;Distance=Hit.Distance;}
+    }
+    if(WoodTree!=INDEX_NONE){
+        TreeIndex=WoodTree;bWoodClimbing=true;ClimbNormal=Best.ImpactNormal;bBranchClimbing=Forest->IsLimbSurface(TreeIndex,Best.ImpactPoint,ClimbNormal);
+        ClimbHeading=FVector::VectorPlaneProject(bBranchClimbing?GetControlRotation().Vector():FVector::UpVector,ClimbNormal).GetSafeNormal();
+        SetActorLocation(Best.ImpactPoint+ClimbNormal*16,false);GetCharacterMovement()->StopMovementImmediately();GetCharacterMovement()->SetMovementMode(MOVE_Flying);MulticastSound(WildlineAudio::Climb);return;
+    }
+    bWoodClimbing=false;
     const int32 I=Forest->NearestTree(GetActorLocation(),30);if(I==INDEX_NONE)return;
     TreeIndex=I;MulticastSound(WildlineAudio::Climb);float Radius;const FVector Centre=Forest->TrunkCentre(I,GetActorLocation().Z,Radius);TreeAngle=FMath::Atan2(GetActorLocation().Y-Centre.Y,GetActorLocation().X-Centre.X);GetCharacterMovement()->StopMovementImmediately();GetCharacterMovement()->SetMovementMode(MOVE_Flying);
 }
+void AWildlineCharacter::OnRepClimbPosition(){if(TreeIndex!=INDEX_NONE&&IsLocallyControlled()){SetActorLocation(ClimbPosition,false);GetCharacterMovement()->SetMovementMode(MOVE_Flying);GetCharacterMovement()->StopMovementImmediately();}}
 void AWildlineCharacter::ServerClimbInput_Implementation(float F,float S){ForwardInput=FMath::Clamp(F,-1.f,1.f);SideInput=FMath::Clamp(S,-1.f,1.f);}
 void AWildlineCharacter::UpdateClimb(float Delta){
-    if(!Forest||!Forest->Trees.IsValidIndex(TreeIndex))return;const auto& T=Forest->Trees[TreeIndex];TreeAngle+=SideInput*Delta*1.7f*MatchRules().MovementScale;const float H=FMath::Clamp(GetActorLocation().Z+ForwardInput*200.f*Delta*MatchRules().MovementScale,T.Base.Z+18,T.ClimbTop-12);float Radius;const FVector Centre=Forest->TrunkCentre(TreeIndex,H,Radius);const FVector Target=Centre+FVector(FMath::Cos(TreeAngle)*(Radius+13),FMath::Sin(TreeAngle)*(Radius+13),0);SetActorLocation(Target,false);
+    if(Delta>.026f){const int32 Steps=FMath::CeilToInt(Delta/.025f);for(int32 I=0;I<Steps;I++)UpdateClimb(Delta/Steps);return;}
+    if(!Forest||!Forest->Trees.IsValidIndex(TreeIndex))return;
+    if(bWoodClimbing){
+        FVector N=ClimbNormal;
+        FVector Forward=FVector::VectorPlaneProject(bBranchClimbing?FRotator(0,GetControlRotation().Yaw,0).Vector():FVector::UpVector,N).GetSafeNormal();
+        FVector Right=FVector::CrossProduct(N,Forward).GetSafeNormal();
+        const FVector Direction=(Forward*ForwardInput+Right*SideInput).GetClampedToMaxSize(1);
+        const float Travel=200.f*FMath::Min(Delta,.05f)*MatchRules().MovementScale;
+        const FVector Surface=GetActorLocation()-N*16;
+        const FVector Candidate=Surface+Direction*Travel;
+        FHitResult Best;int32 Next=INDEX_NONE;
+        bool Found=Forest->TraceWood(Candidate+N*35,Candidate-N*55,Best,Next);
+        if(!Found)Found=Forest->TraceWood(Candidate+N*25,Candidate-N*45,Best,Next,5);
+        // At forks follow the adjacent bark surface without a height teleport.
+        if(!Found&&Direction.SizeSquared()>.1f){
+            for(const FVector Probe:{(N+Direction).GetSafeNormal(),(N-Direction).GetSafeNormal(),FVector::UpVector,-FVector::UpVector}){
+                if(Forest->TraceWood(Candidate+Probe*30,Candidate-Probe*45,Best,Next)&&FVector::Dist(Best.ImpactPoint,Surface)<Travel+18){Found=true;break;}
+            }
+        }
+        if(Found&&FVector::Dist(Best.ImpactPoint,Surface)<Travel+24){
+            TreeIndex=Next;ClimbNormal=Best.ImpactNormal;bBranchClimbing=Forest->IsLimbSurface(TreeIndex,Best.ImpactPoint,ClimbNormal);
+            if(Direction.SizeSquared()>.1f)ClimbHeading=FVector::VectorPlaneProject(Direction,ClimbNormal).GetSafeNormal();
+            SetActorLocation(Best.ImpactPoint+ClimbNormal*16,false);
+        }
+        return;
+    }
+    const auto& T=Forest->Trees[TreeIndex];TreeAngle+=SideInput*Delta*1.7f*MatchRules().MovementScale;const float H=FMath::Clamp(GetActorLocation().Z+ForwardInput*200.f*Delta*MatchRules().MovementScale,T.Base.Z+18,T.ClimbTop-12);float Radius;const FVector Centre=Forest->TrunkCentre(TreeIndex,H,Radius);const FVector Target=Centre+FVector(FMath::Cos(TreeAngle)*(Radius+13),FMath::Sin(TreeAngle)*(Radius+13),0);SetActorLocation(Target,false);
 }
 void AWildlineCharacter::ServerThermal_Implementation(){if(bInLobby)return;const float Now=ServerTime();if(!WildlineRules::CanThermal(!bSquirrel&&SelectedWeapon==WildlineRules::RifleWeapon,!bDead,Now,ThermalReadyAt))return;if(!MatchRules().bAllowThermal)return;ThermalUntil=Now+MatchRules().ThermalSeconds;ThermalReadyAt=ThermalUntil+MatchRules().ThermalCooldownSeconds;MulticastSound(WildlineAudio::Thermal);}
 void AWildlineCharacter::ServerReload_Implementation(){if(!bSquirrel&&!bDead&&Ammo<WildlineRules::WeaponCapacity(SelectedWeapon)&&ReloadUntil==0){ReloadUntil=ServerTime()+WildlineRules::WeaponReload(SelectedWeapon)*MatchRules().ReloadScale;MulticastSound(WildlineAudio::Reload);}}
@@ -305,13 +351,22 @@ void AWildlineCharacter::UpdateCamera(float Delta){
     if(bSquirrel&&Third&&Forest&&Forest->Trees.IsValidIndex(TreeIndex)){
         if(ThirdCamera->GetAttachParent())ThirdCamera->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
         float Radius;const FVector Centre=Forest->TrunkCentre(TreeIndex,GetActorLocation().Z,Radius);
-        const FVector Out=(GetActorLocation()-Centre).GetSafeNormal2D();
-        const FVector Side=FVector::CrossProduct(FVector::UpVector,Out);
-        const FVector Focus=GetActorLocation()+FVector(0,0,8);
+        const FVector Out=bWoodClimbing?FVector(ClimbNormal):(GetActorLocation()-Centre).GetSafeNormal2D();
+        const FVector Side=FVector::CrossProduct(bWoodClimbing?FVector(ClimbHeading):FVector::UpVector,Out).GetSafeNormal();
+        const FVector Focus=GetActorLocation()+(bWoodClimbing?Out*8:FVector(0,0,8));
         const float Orbit=FMath::Clamp(FMath::FindDeltaAngleDegrees(Out.Rotation().Yaw,GetControlRotation().Yaw),-55.f,55.f);
-        FVector Desired=Focus+Out*125+Side*(Orbit*.7f)+FVector(0,0,32);
-        FCollisionQueryParams Q(SCENE_QUERY_STAT(ClimbCamera),false,this);FHitResult Hit;
-        if(GetWorld()->SweepSingleByChannel(Hit,Focus,Desired,FQuat::Identity,ECC_Camera,FCollisionShape::MakeSphere(5.f),Q))Desired=Hit.Location;
+        FVector Desired=Focus;float Clearance=0;
+        FCollisionQueryParams Q(SCENE_QUERY_STAT(ClimbCamera),false,this);
+        for(float Offset:{0.f,55.f,-55.f,100.f,-100.f,180.f,-180.f}){
+          for(float Lift:{32.f,-65.f,100.f}){
+            FVector Candidate=Focus+(Out*125+Side*(Orbit*.7f+Offset)+FVector(0,0,Lift)).GetClampedToMaxSize(170);FHitResult Hit;
+            if(GetWorld()->SweepSingleByChannel(Hit,Focus,Candidate,FQuat::Identity,ECC_Camera,FCollisionShape::MakeSphere(5.f),Q))Candidate=Hit.Location;
+            const float Distance=FVector::DistSquared(Focus,Candidate);
+            if(Distance>Clearance){Clearance=Distance;Desired=Candidate;}
+            if(Offset==0&&Lift==32&&Distance>FMath::Square(90.f))break;
+          }
+          if(Offset==0&&Clearance>FMath::Square(90.f))break;
+        }
         ThirdCamera->SetWorldLocation(Desired);
         ThirdCamera->SetWorldRotation((Focus-Desired).Rotation());
     }else{
@@ -412,7 +467,7 @@ void AWildlineCharacter::Tick(float Delta){
         ViewRifle->SetRelativeRotation(FRotator(2*Kick,0,0));
     }
     Super::Tick(Delta);
-    if(!bPreviewHunter&&!bDead&&GetNetMode()!=NM_DedicatedServer&&bSquirrel){const float Now=ServerTime();if(Now>=NextStepSound&&GetVelocity().Size2D()>25&&(GetCharacterMovement()->IsMovingOnGround()||TreeIndex!=INDEX_NONE)){NextStepSound=Now+(bSprinting?.22f:.38f);WildlineAudio::Play(this,TreeIndex!=INDEX_NONE?WildlineAudio::Climb:WildlineAudio::Pawstep,GetActorLocation());}}
+    if(!bPreviewHunter&&!bDead&&GetNetMode()!=NM_DedicatedServer&&bSquirrel){const float Now=ServerTime();if(Now>=NextStepSound&&GetVelocity().Size2D()>25&&(GetCharacterMovement()->IsMovingOnGround()||TreeIndex!=INDEX_NONE)){const float Rate=bSprinting?WildlineAudio::RunningFootstepRate:1.f;NextStepSound=Now+.38f/Rate;WildlineAudio::Play(this,TreeIndex!=INDEX_NONE?WildlineAudio::Climb:WildlineAudio::Pawstep,GetActorLocation(),false,TreeIndex!=INDEX_NONE?1.f:Rate);}}
     if(IsLocallyControlled()){const float Now=ServerTime();if(Now>NextBirdSound){NextBirdSound=Now+FMath::FRandRange(6.f,12.f);WildlineAudio::Play(this,WildlineAudio::Bird,GetActorLocation()+FVector(FMath::FRandRange(-1200.f,1200.f),FMath::FRandRange(-1200.f,1200.f),500));}const auto* State=GetWorld()->GetGameState<AWildlineGameState>();if(State&&State->Winner!=HeardWinner){HeardWinner=State->Winner;if(HeardWinner)WildlineAudio::Play(this,WildlineAudio::Win,GetActorLocation(),true);}}
     if(!Forest)Forest=AWildlineWorld::Find(GetWorld());
     if(IsLocallyControlled()&&bSquirrel&&FParse::Param(FCommandLine::Get(),TEXT("WildlineSquirrelReview"))){const float T=GetWorld()->GetTimeSeconds();if(T>7&&T<11){bSprinting=T>9;AddMovementInput(FVector::ForwardVector,1);}}
@@ -425,19 +480,20 @@ void AWildlineCharacter::Tick(float Delta){
     GetCharacterMovement()->MaxWalkSpeed=bSquirrel?(bSprinting&&Stamina>4?650:320):(bSprinting&&Stamina>4?580:320);
     if(bBot&&!bSquirrel)GetCharacterMovement()->MaxWalkSpeed=WildlineRules::HunterDifficulty(AIDifficulty).WalkSpeed;
     GetCharacterMovement()->MaxWalkSpeed*=MatchRules().MovementScale;GetCharacterMovement()->MaxWalkSpeedCrouched=160*MatchRules().MovementScale;
-    if(HasAuthority()&&!bDead){const auto* S=GetWorld()->GetGameState<AWildlineGameState>();if(!S||S->Winner==0){if(bBot&&S&&S->bRoundStarted)BotThink(Delta);if(TreeIndex!=INDEX_NONE)UpdateClimb(Delta);Stamina=MatchRules().bUnlimitedStamina?100.f:FMath::Clamp(Stamina+(bSprinting&&GetVelocity().Size2D()>10?-12:9)*Delta,0.f,100.f);if(Stamina<=4)bSprinting=false;if(ReloadUntil>0&&ServerTime()>=ReloadUntil){Ammo=WildlineRules::WeaponCapacity(SelectedWeapon);ReloadUntil=0;}Forage();const FVector P=GetActorLocation();if(P.SizeSquared2D()>FMath::Square(WildlineRules::MapRadius)){FVector Q=P.GetSafeNormal2D()*WildlineRules::MapRadius;Q.Z=P.Z;SetActorLocation(Q);const FVector Out=P.GetSafeNormal2D();auto* M=GetCharacterMovement();M->Velocity-=Out*FMath::Max(0.f,static_cast<float>(FVector::DotProduct(M->Velocity,Out)));}}}
-    if(IsLocallyControlled()){UpdateCamera(Delta);if(TreeIndex!=INDEX_NONE&&!HasAuthority())ServerClimbInput(ForwardInput,SideInput);if(bFiring&&CanControl()&&ServerTime()-LastFireRequest>WildlineRules::WeaponInterval(SelectedWeapon)){LastFireRequest=ServerTime();FVector P;FRotator R;Controller->GetPlayerViewPoint(P,R);ServerFire(R.Vector());}}
+    if(HasAuthority()&&!bDead){const auto* S=GetWorld()->GetGameState<AWildlineGameState>();if(!S||S->Winner==0){if(bBot&&S&&S->bRoundStarted)BotThink(Delta);if(TreeIndex!=INDEX_NONE){UpdateClimb(Delta);ClimbPosition=GetActorLocation();}Stamina=MatchRules().bUnlimitedStamina?100.f:FMath::Clamp(Stamina+(bSprinting&&GetVelocity().Size2D()>10?-12:9)*Delta,0.f,100.f);if(Stamina<=4)bSprinting=false;if(ReloadUntil>0&&ServerTime()>=ReloadUntil){Ammo=WildlineRules::WeaponCapacity(SelectedWeapon);ReloadUntil=0;}Forage();const FVector P=GetActorLocation();if(P.SizeSquared2D()>FMath::Square(WildlineRules::MapRadius)){FVector Q=P.GetSafeNormal2D()*WildlineRules::MapRadius;Q.Z=P.Z;SetActorLocation(Q);const FVector Out=P.GetSafeNormal2D();auto* M=GetCharacterMovement();M->Velocity-=Out*FMath::Max(0.f,static_cast<float>(FVector::DotProduct(M->Velocity,Out)));}}}
+    GetCharacterMovement()->bIgnoreClientMovementErrorChecksAndCorrection=TreeIndex!=INDEX_NONE;
+    if(IsLocallyControlled()){if(TreeIndex!=INDEX_NONE&&bWoodClimbing&&!HasAuthority())UpdateClimb(Delta);UpdateCamera(Delta);if(TreeIndex!=INDEX_NONE&&!HasAuthority())ServerClimbInput(ForwardInput,SideInput);if(bFiring&&CanControl()&&ServerTime()-LastFireRequest>WildlineRules::WeaponInterval(SelectedWeapon)){LastFireRequest=ServerTime();FVector P;FRotator R;Controller->GetPlayerViewPoint(P,R);ServerFire(R.Vector());}}
     if(bSquirrel&&!bDead){
         FRotator Pose=FRotator::ZeroRotator;
         const bool Grounded=GetCharacterMovement()->IsMovingOnGround();
         if(Grounded){const FVector Normal=GetCharacterMovement()->CurrentFloor.HitResult.ImpactNormal;const FRotator GroundPose=FRotationMatrix::MakeFromXZ(GetActorForwardVector(),Normal).Rotator();Pose=FRotator(GroundPose.Pitch,0,GroundPose.Roll);}
         if(TreeIndex!=INDEX_NONE&&Forest&&Forest->Trees.IsValidIndex(TreeIndex)){
             float Radius;const FVector Toward=Forest->TrunkCentre(TreeIndex,GetActorLocation().Z,Radius)-GetActorLocation();
-            Pose=FRotator(90,FMath::FindDeltaAngleDegrees(GetActorRotation().Yaw,Toward.Rotation().Yaw),0);
+            Pose=bWoodClimbing?(GetActorQuat().Inverse()*FRotationMatrix::MakeFromXZ(ClimbHeading,ClimbNormal).ToQuat()).Rotator():FRotator(90,FMath::FindDeltaAngleDegrees(GetActorRotation().Yaw,Toward.Rotation().Yaw),0);
         }
         AnimalRoot->SetRelativeRotation(FMath::RInterpTo(AnimalRoot->GetRelativeRotation(),Pose,Delta,14));
         // Keep the grip tangent to the bark rather than rotating paws inside it.
-        GetMesh()->SetRelativeLocation(FVector(0,0,TreeIndex!=INDEX_NONE?-8.f:Grounded?-14.15f:-12.f));
+        GetMesh()->SetRelativeLocation(FVector(0,0,TreeIndex!=INDEX_NONE?(bWoodClimbing?-18.15f:-8.f):Grounded?-14.15f:-12.f));
         if(IsLocallyControlled()){
             const FVector Eye=TreeIndex!=INDEX_NONE?GetMesh()->GetSocketLocation(TEXT("FACIAL_Nose"))+GetControlRotation().Vector()*3:GetActorTransform().TransformPosition(FVector(13,0,Grounded?-1.15f:1.f));
             FirstCamera->SetWorldLocation(FMath::VInterpTo(FirstCamera->GetComponentLocation(),Eye,Delta,18));

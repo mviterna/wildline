@@ -1,0 +1,684 @@
+{
+  "Diffuse": {
+    "4k": {
+      "jpg": {
+        "size": 6216730,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_diff_4k.jpg",
+        "md5": "e72e67a9bdb921639d2ec4ce2514cb02"
+      },
+      "png": {
+        "size": 87059568,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/planter_pot_clay/planter_pot_clay_diff_4k.png",
+        "md5": "7ce43f311fc47616e6e790e0ddee50b0"
+      },
+      "exr": {
+        "size": 10220380,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_diff_4k.exr",
+        "md5": "cf405b7b8fb04d12087f2f55c6ef8797"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2097198,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_diff_2k.jpg",
+        "md5": "24c6aee9f07cee0df6a665cba541bb45"
+      },
+      "png": {
+        "size": 22196973,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/planter_pot_clay/planter_pot_clay_diff_2k.png",
+        "md5": "2a43e1947d5ea11c5062b377ae2e15f8"
+      },
+      "exr": {
+        "size": 3701953,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_diff_2k.exr",
+        "md5": "88fde10cc06fff754bc244ca5a8bc61b"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 596319,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_diff_1k.jpg",
+        "md5": "6823eb18ca73c8cdcb3cbc04704c443b"
+      },
+      "png": {
+        "size": 5764427,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/planter_pot_clay/planter_pot_clay_diff_1k.png",
+        "md5": "3a2aac6fcceb42f37f27288b8d80c033"
+      },
+      "exr": {
+        "size": 1118145,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_diff_1k.exr",
+        "md5": "a6424b399ecf619060e0c33f6a504e7d"
+      }
+    }
+  },
+  "nor_dx": {
+    "4k": {
+      "jpg": {
+        "size": 4121856,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_nor_dx_4k.jpg",
+        "md5": "6de1ec04abea3b6e033a959a8eb284a0"
+      },
+      "png": {
+        "size": 65244808,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/planter_pot_clay/planter_pot_clay_nor_dx_4k.png",
+        "md5": "a7aead02e705367e39afcbe6872c3276"
+      },
+      "exr": {
+        "size": 6496145,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_nor_dx_4k.exr",
+        "md5": "61454ea469e96f1db07e86db79de0f37"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1469287,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_nor_dx_2k.jpg",
+        "md5": "0b55832ace76643eb6b293bbea62d62c"
+      },
+      "png": {
+        "size": 19091588,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/planter_pot_clay/planter_pot_clay_nor_dx_2k.png",
+        "md5": "9cdfb00399c345bdaa3223fae5a9ebbb"
+      },
+      "exr": {
+        "size": 2519298,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_nor_dx_2k.exr",
+        "md5": "c8d4d926e1bb753dbea961345714bc1f"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 507000,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_nor_dx_1k.jpg",
+        "md5": "d750aa355458a3a58c2847c1dd658d69"
+      },
+      "png": {
+        "size": 5172822,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/planter_pot_clay/planter_pot_clay_nor_dx_1k.png",
+        "md5": "11da78ee7c54bdbc8f3567b45ca0c8b5"
+      },
+      "exr": {
+        "size": 998201,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_nor_dx_1k.exr",
+        "md5": "7da009d7e662903335ecd988d02f8222"
+      }
+    }
+  },
+  "nor_gl": {
+    "4k": {
+      "jpg": {
+        "size": 4123130,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_nor_gl_4k.jpg",
+        "md5": "3f10c3160dad77fac6d78558f891299e"
+      },
+      "png": {
+        "size": 74109634,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/planter_pot_clay/planter_pot_clay_nor_gl_4k.png",
+        "md5": "84122394c91e0cead036ec3ec43ee6f1"
+      },
+      "exr": {
+        "size": 6499021,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_nor_gl_4k.exr",
+        "md5": "c0988a56df70f8d7fabccf846317edac"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1469255,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_nor_gl_2k.jpg",
+        "md5": "875b7e438c4426f9ad05620cd81da2b4"
+      },
+      "png": {
+        "size": 19090964,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/planter_pot_clay/planter_pot_clay_nor_gl_2k.png",
+        "md5": "1bce88eb39e62174f9b432332a3df38d"
+      },
+      "exr": {
+        "size": 2520794,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_nor_gl_2k.exr",
+        "md5": "c57d6a1d3a73bb2ac1dfb1c42f7ecb3e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 506446,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_nor_gl_1k.jpg",
+        "md5": "269b48d6a5038e97acf9d670b7381b3a"
+      },
+      "png": {
+        "size": 5172061,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/planter_pot_clay/planter_pot_clay_nor_gl_1k.png",
+        "md5": "8afa8559317608f7aea91c172faca976"
+      },
+      "exr": {
+        "size": 997457,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_nor_gl_1k.exr",
+        "md5": "2becbadcd9b94196d2236d179369001a"
+      }
+    }
+  },
+  "blend": {
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/planter_pot_clay_rough_4k.exr": {
+            "size": 13966162,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_rough_4k.exr",
+            "md5": "4c9094e35e541a6ebe44d1f834561698"
+          },
+          "textures/planter_pot_clay_nor_gl_4k.exr": {
+            "size": 6499021,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_nor_gl_4k.exr",
+            "md5": "c0988a56df70f8d7fabccf846317edac"
+          },
+          "textures/planter_pot_clay_diff_4k.jpg": {
+            "size": 6216730,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_diff_4k.jpg",
+            "md5": "e72e67a9bdb921639d2ec4ce2514cb02"
+          }
+        },
+        "size": 192601,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/planter_pot_clay/planter_pot_clay_4k.blend",
+        "md5": "57be9a587d90c020ce9ecfbeec695622"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/planter_pot_clay_diff_2k.jpg": {
+            "size": 2097198,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_diff_2k.jpg",
+            "md5": "24c6aee9f07cee0df6a665cba541bb45"
+          },
+          "textures/planter_pot_clay_rough_2k.exr": {
+            "size": 3729385,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_rough_2k.exr",
+            "md5": "c9435acfd503bfe300ba8f9bbf3ed41b"
+          },
+          "textures/planter_pot_clay_nor_gl_2k.exr": {
+            "size": 2520794,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_nor_gl_2k.exr",
+            "md5": "c57d6a1d3a73bb2ac1dfb1c42f7ecb3e"
+          }
+        },
+        "size": 192563,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/planter_pot_clay/planter_pot_clay_2k.blend",
+        "md5": "52dbdeff4ff2fa5249516dd08d6ae999"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/planter_pot_clay_rough_1k.exr": {
+            "size": 956226,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_rough_1k.exr",
+            "md5": "9ae329da68b70b8f96cf996422251d8d"
+          },
+          "textures/planter_pot_clay_diff_1k.jpg": {
+            "size": 596319,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_diff_1k.jpg",
+            "md5": "6823eb18ca73c8cdcb3cbc04704c443b"
+          },
+          "textures/planter_pot_clay_nor_gl_1k.exr": {
+            "size": 997457,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_nor_gl_1k.exr",
+            "md5": "2becbadcd9b94196d2236d179369001a"
+          }
+        },
+        "size": 192674,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/planter_pot_clay/planter_pot_clay_1k.blend",
+        "md5": "e5d1c0290eb9ea835ed37e38145cea47"
+      }
+    }
+  },
+  "gltf": {
+    "4k": {
+      "gltf": {
+        "include": {
+          "planter_pot_clay.bin": {
+            "size": 78096,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/planter_pot_clay/planter_pot_clay.bin",
+            "md5": "93aa55f6378a47c3e2d03eb5b98da8b0"
+          },
+          "textures/planter_pot_clay_nor_gl_4k.jpg": {
+            "size": 4123130,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_nor_gl_4k.jpg",
+            "md5": "3f10c3160dad77fac6d78558f891299e"
+          },
+          "textures/planter_pot_clay_arm_4k.jpg": {
+            "size": 7779239,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_arm_4k.jpg",
+            "md5": "f00ded24d56d765000ab47fde9585ff5"
+          },
+          "textures/planter_pot_clay_diff_4k.jpg": {
+            "size": 6216730,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_diff_4k.jpg",
+            "md5": "e72e67a9bdb921639d2ec4ce2514cb02"
+          }
+        },
+        "size": 2813,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/planter_pot_clay/planter_pot_clay_4k.gltf",
+        "md5": "724e0186633416fa8b7a8e24ca995f52"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/planter_pot_clay_arm_2k.jpg": {
+            "size": 2311213,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_arm_2k.jpg",
+            "md5": "389e1c9bdd359ccd2bd9e8ea0245a0a3"
+          },
+          "planter_pot_clay.bin": {
+            "size": 78096,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/planter_pot_clay/planter_pot_clay.bin",
+            "md5": "93aa55f6378a47c3e2d03eb5b98da8b0"
+          },
+          "textures/planter_pot_clay_diff_2k.jpg": {
+            "size": 2097198,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_diff_2k.jpg",
+            "md5": "24c6aee9f07cee0df6a665cba541bb45"
+          },
+          "textures/planter_pot_clay_nor_gl_2k.jpg": {
+            "size": 1469255,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_nor_gl_2k.jpg",
+            "md5": "875b7e438c4426f9ad05620cd81da2b4"
+          }
+        },
+        "size": 2813,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/planter_pot_clay/planter_pot_clay_2k.gltf",
+        "md5": "aada56568f8bff1b61f9a0fdc69a6082"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/planter_pot_clay_diff_1k.jpg": {
+            "size": 596319,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_diff_1k.jpg",
+            "md5": "6823eb18ca73c8cdcb3cbc04704c443b"
+          },
+          "planter_pot_clay.bin": {
+            "size": 78096,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/planter_pot_clay/planter_pot_clay.bin",
+            "md5": "93aa55f6378a47c3e2d03eb5b98da8b0"
+          },
+          "textures/planter_pot_clay_arm_1k.jpg": {
+            "size": 613484,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_arm_1k.jpg",
+            "md5": "ec397ae29f1f52292cbc9482037c11c4"
+          },
+          "textures/planter_pot_clay_nor_gl_1k.jpg": {
+            "size": 506446,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_nor_gl_1k.jpg",
+            "md5": "269b48d6a5038e97acf9d670b7381b3a"
+          }
+        },
+        "size": 2813,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/planter_pot_clay/planter_pot_clay_1k.gltf",
+        "md5": "1c78fcfd6144747c97e2b822a6229c0d"
+      }
+    }
+  },
+  "usd": {
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/planter_pot_clay_rough_4k.exr": {
+            "size": 13966162,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_rough_4k.exr",
+            "md5": "4c9094e35e541a6ebe44d1f834561698"
+          },
+          "textures/planter_pot_clay_nor_gl_4k.exr": {
+            "size": 6499021,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_nor_gl_4k.exr",
+            "md5": "c0988a56df70f8d7fabccf846317edac"
+          },
+          "textures/planter_pot_clay_diff_4k.jpg": {
+            "size": 6216730,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_diff_4k.jpg",
+            "md5": "e72e67a9bdb921639d2ec4ce2514cb02"
+          }
+        },
+        "size": 160380,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/planter_pot_clay/planter_pot_clay_4k.usdc",
+        "md5": "a7f379927e33725545a320650bfcc10c"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/planter_pot_clay_diff_2k.jpg": {
+            "size": 2097198,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_diff_2k.jpg",
+            "md5": "24c6aee9f07cee0df6a665cba541bb45"
+          },
+          "textures/planter_pot_clay_rough_2k.exr": {
+            "size": 3729385,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_rough_2k.exr",
+            "md5": "c9435acfd503bfe300ba8f9bbf3ed41b"
+          },
+          "textures/planter_pot_clay_nor_gl_2k.exr": {
+            "size": 2520794,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_nor_gl_2k.exr",
+            "md5": "c57d6a1d3a73bb2ac1dfb1c42f7ecb3e"
+          }
+        },
+        "size": 160380,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/planter_pot_clay/planter_pot_clay_2k.usdc",
+        "md5": "11ab7a4bd997a7bbdc7b8d838a9aa82c"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/planter_pot_clay_rough_1k.exr": {
+            "size": 956226,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_rough_1k.exr",
+            "md5": "9ae329da68b70b8f96cf996422251d8d"
+          },
+          "textures/planter_pot_clay_diff_1k.jpg": {
+            "size": 596319,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_diff_1k.jpg",
+            "md5": "6823eb18ca73c8cdcb3cbc04704c443b"
+          },
+          "textures/planter_pot_clay_nor_gl_1k.exr": {
+            "size": 997457,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_nor_gl_1k.exr",
+            "md5": "2becbadcd9b94196d2236d179369001a"
+          }
+        },
+        "size": 160380,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/planter_pot_clay/planter_pot_clay_1k.usdc",
+        "md5": "1bf0fb673f4789e0e2fa24e2a1510973"
+      }
+    }
+  },
+  "fbx": {
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/planter_pot_clay_rough_4k.exr": {
+            "size": 13966162,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_rough_4k.exr",
+            "md5": "4c9094e35e541a6ebe44d1f834561698"
+          },
+          "textures/planter_pot_clay_nor_gl_4k.exr": {
+            "size": 6499021,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_nor_gl_4k.exr",
+            "md5": "c0988a56df70f8d7fabccf846317edac"
+          },
+          "textures/planter_pot_clay_diff_4k.jpg": {
+            "size": 6216730,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_diff_4k.jpg",
+            "md5": "e72e67a9bdb921639d2ec4ce2514cb02"
+          }
+        },
+        "size": 130284,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/planter_pot_clay/planter_pot_clay_4k.fbx",
+        "md5": "ebab6168ff3d8528266312285e3277ac"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/planter_pot_clay_diff_2k.jpg": {
+            "size": 2097198,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_diff_2k.jpg",
+            "md5": "24c6aee9f07cee0df6a665cba541bb45"
+          },
+          "textures/planter_pot_clay_rough_2k.exr": {
+            "size": 3729385,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_rough_2k.exr",
+            "md5": "c9435acfd503bfe300ba8f9bbf3ed41b"
+          },
+          "textures/planter_pot_clay_nor_gl_2k.exr": {
+            "size": 2520794,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_nor_gl_2k.exr",
+            "md5": "c57d6a1d3a73bb2ac1dfb1c42f7ecb3e"
+          }
+        },
+        "size": 130268,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/planter_pot_clay/planter_pot_clay_2k.fbx",
+        "md5": "59c03081460efc4c32cb29cf189041dc"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/planter_pot_clay_rough_1k.exr": {
+            "size": 956226,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_rough_1k.exr",
+            "md5": "9ae329da68b70b8f96cf996422251d8d"
+          },
+          "textures/planter_pot_clay_diff_1k.jpg": {
+            "size": 596319,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_diff_1k.jpg",
+            "md5": "6823eb18ca73c8cdcb3cbc04704c443b"
+          },
+          "textures/planter_pot_clay_nor_gl_1k.exr": {
+            "size": 997457,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_nor_gl_1k.exr",
+            "md5": "2becbadcd9b94196d2236d179369001a"
+          }
+        },
+        "size": 130252,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/planter_pot_clay/planter_pot_clay_1k.fbx",
+        "md5": "eaf86b88b597006754997bb2c4b1dbd8"
+      }
+    }
+  },
+  "arm": {
+    "4k": {
+      "jpg": {
+        "size": 7779239,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_arm_4k.jpg",
+        "md5": "f00ded24d56d765000ab47fde9585ff5"
+      },
+      "png": {
+        "size": 50508828,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/planter_pot_clay/planter_pot_clay_arm_4k.png",
+        "md5": "4e0d6f62dfdc3f7d805223fccdd7bc7d"
+      },
+      "exr": {
+        "size": 13068343,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_arm_4k.exr",
+        "md5": "fe8c3f2b535f65fc92d7f0a268245d2c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2311213,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_arm_2k.jpg",
+        "md5": "389e1c9bdd359ccd2bd9e8ea0245a0a3"
+      },
+      "png": {
+        "size": 13231049,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/planter_pot_clay/planter_pot_clay_arm_2k.png",
+        "md5": "7cc3fc7d8c2ba35f082128c3e22a69f1"
+      },
+      "exr": {
+        "size": 4457066,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_arm_2k.exr",
+        "md5": "960e04d43bdd37e08492251c5173ca64"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 613484,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_arm_1k.jpg",
+        "md5": "ec397ae29f1f52292cbc9482037c11c4"
+      },
+      "png": {
+        "size": 3456672,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/planter_pot_clay/planter_pot_clay_arm_1k.png",
+        "md5": "2281bea51918d7a4c85c327751ab19fb"
+      },
+      "exr": {
+        "size": 1263931,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_arm_1k.exr",
+        "md5": "d4079a180eb8adce36a62fe1006697d3"
+      }
+    }
+  },
+  "Rough": {
+    "4k": {
+      "jpg": {
+        "size": 6557046,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_rough_4k.jpg",
+        "md5": "80a24772f91bf46f5d7e9c8ed90c3fea"
+      },
+      "png": {
+        "size": 24993477,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/planter_pot_clay/planter_pot_clay_rough_4k.png",
+        "md5": "2dc78344a0876825d48fcaac54caa258"
+      },
+      "exr": {
+        "size": 13966162,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_rough_4k.exr",
+        "md5": "4c9094e35e541a6ebe44d1f834561698"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1981617,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_rough_2k.jpg",
+        "md5": "e68eb32f39c83ebe7d51dff5f6b09eae"
+      },
+      "png": {
+        "size": 6365521,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/planter_pot_clay/planter_pot_clay_rough_2k.png",
+        "md5": "9c6cb0b639aac6352370e756cb6477f8"
+      },
+      "exr": {
+        "size": 3729385,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_rough_2k.exr",
+        "md5": "c9435acfd503bfe300ba8f9bbf3ed41b"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 525864,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_rough_1k.jpg",
+        "md5": "5fc4679257bc6646d37132d8f6b9f804"
+      },
+      "png": {
+        "size": 1613008,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/planter_pot_clay/planter_pot_clay_rough_1k.png",
+        "md5": "5e54ade824a5335de1ad0b34ee0ce5b8"
+      },
+      "exr": {
+        "size": 956226,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_rough_1k.exr",
+        "md5": "9ae329da68b70b8f96cf996422251d8d"
+      }
+    }
+  },
+  "Displacement": {
+    "4k": {
+      "jpg": {
+        "size": 2359992,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_disp_4k.jpg",
+        "md5": "450612c897b6c1f6bd11fb13dbc72fe9"
+      },
+      "png": {
+        "size": 21448246,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/planter_pot_clay/planter_pot_clay_disp_4k.png",
+        "md5": "69904dc2bdbf2a12f61e796e44e66510"
+      },
+      "exr": {
+        "size": 6906633,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_disp_4k.exr",
+        "md5": "a0a5a31eccddd55a9c91907767f4daf8"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 753366,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_disp_2k.jpg",
+        "md5": "5f73c04021413d9cef4b185d5fdb6887"
+      },
+      "png": {
+        "size": 5683548,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/planter_pot_clay/planter_pot_clay_disp_2k.png",
+        "md5": "7e56cd8221c44a404e2abb588a38ac40"
+      },
+      "exr": {
+        "size": 2590328,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_disp_2k.exr",
+        "md5": "796bf1b4cdcc84e18a1a3d50cf2854cf"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 260811,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_disp_1k.jpg",
+        "md5": "6f0870e9b4192b8815aae7c1c902f2c0"
+      },
+      "png": {
+        "size": 1520791,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/planter_pot_clay/planter_pot_clay_disp_1k.png",
+        "md5": "b2ebc8993b51bb707a91b903dba4ac34"
+      },
+      "exr": {
+        "size": 862610,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_disp_1k.exr",
+        "md5": "7e392c49b36b5e1e2b33a65cf299a8f3"
+      }
+    }
+  },
+  "AO": {
+    "4k": {
+      "jpg": {
+        "size": 2321006,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/planter_pot_clay/planter_pot_clay_ao_4k.jpg",
+        "md5": "e33f6fca77b9d153838f96126276f74d"
+      },
+      "png": {
+        "size": 18952037,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/planter_pot_clay/planter_pot_clay_ao_4k.png",
+        "md5": "32cb991bcf5efb7ae9557cec2ae76df0"
+      },
+      "exr": {
+        "size": 7784910,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/planter_pot_clay/planter_pot_clay_ao_4k.exr",
+        "md5": "e47bdf2c9ca5ae9605a1191d5eb10e21"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 587256,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/planter_pot_clay/planter_pot_clay_ao_2k.jpg",
+        "md5": "a642199a2ebd1424d723e835e89d2df0"
+      },
+      "png": {
+        "size": 4776923,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/planter_pot_clay/planter_pot_clay_ao_2k.png",
+        "md5": "1ffec11d4c90e62d99d1320fd00aeb94"
+      },
+      "exr": {
+        "size": 1945976,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/planter_pot_clay/planter_pot_clay_ao_2k.exr",
+        "md5": "e6881cf3f16120707eb2ee587b9b5837"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 192330,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/planter_pot_clay/planter_pot_clay_ao_1k.jpg",
+        "md5": "d17ecb3f8b387795609b37df30b7c5e3"
+      },
+      "png": {
+        "size": 1302039,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/planter_pot_clay/planter_pot_clay_ao_1k.png",
+        "md5": "1867f45f2e5d8348c3e0d7b52ee48ec9"
+      },
+      "exr": {
+        "size": 562264,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/planter_pot_clay/planter_pot_clay_ao_1k.exr",
+        "md5": "152faa6866f30ff5fa56af402c730d29"
+      }
+    }
+  }
+}

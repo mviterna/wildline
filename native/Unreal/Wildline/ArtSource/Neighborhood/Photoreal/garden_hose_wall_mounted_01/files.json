@@ -1,0 +1,964 @@
+{
+  "Diffuse": {
+    "8k": {
+      "jpg": {
+        "size": 33631623,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_8k.jpg",
+        "md5": "2952090a6f790652059695e7f4a3123c"
+      },
+      "png": {
+        "size": 135368668,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_8k.png",
+        "md5": "597aa352b016eb85e757aac0afb0bb68"
+      },
+      "exr": {
+        "size": 68092135,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_8k.exr",
+        "md5": "6d64cfb6f146aa9bdc70bb80201f1bfd"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 10508050,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_4k.jpg",
+        "md5": "2a9ec784b3a018c413f891f9275c8f5c"
+      },
+      "png": {
+        "size": 49270735,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_4k.png",
+        "md5": "d5ed30999364c4580a0e3479efb9fa97"
+      },
+      "exr": {
+        "size": 19234894,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_4k.exr",
+        "md5": "d1e1666c024f1b123e18a6f6eb7b4d14"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3154493,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_2k.jpg",
+        "md5": "80b30a3eb16d4816e9afc3228ea325e3"
+      },
+      "png": {
+        "size": 15116708,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_2k.png",
+        "md5": "d0532339493d6625d11f40b77777859c"
+      },
+      "exr": {
+        "size": 6156941,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_2k.exr",
+        "md5": "d28761312740411db334bb079c72d601"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 786985,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_1k.jpg",
+        "md5": "a874ce98e7fe2e726a52001a25f78d5c"
+      },
+      "png": {
+        "size": 4404280,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_1k.png",
+        "md5": "11440f81e9b6925edce3360cb367aab6"
+      },
+      "exr": {
+        "size": 1707455,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_1k.exr",
+        "md5": "4ef0ca4ecdfa2ef70a594c9010436e37"
+      }
+    }
+  },
+  "nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 38775514,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_8k.jpg",
+        "md5": "eb24e023fa0f5605749200be6df2ca78"
+      },
+      "png": {
+        "size": 187757442,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_8k.png",
+        "md5": "54f895e3a0a3dc45ded04fb5511a19e8"
+      },
+      "exr": {
+        "size": 77266084,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_8k.exr",
+        "md5": "f6669a3ff4c7b3119624f705ef762bde"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 11092728,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_4k.jpg",
+        "md5": "1ce43e356ab25dd5e7de9cac9298ff9c"
+      },
+      "png": {
+        "size": 50605977,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_4k.png",
+        "md5": "3c020f8e404cf763eacf13175e70a218"
+      },
+      "exr": {
+        "size": 23193318,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_4k.exr",
+        "md5": "2ff70fc195db7a43435ed76c8c6cc3f6"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2823718,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_2k.jpg",
+        "md5": "623389723c946099157629f54bb06a8f"
+      },
+      "png": {
+        "size": 14627958,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_2k.png",
+        "md5": "a96ebde1a04f466f22d7273e812e2231"
+      },
+      "exr": {
+        "size": 6483404,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_2k.exr",
+        "md5": "5fe25eaf02e26e986ced7d8bff9bf34f"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 619768,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_1k.jpg",
+        "md5": "1e608df79887ffa5a872d4607f1e5d2f"
+      },
+      "png": {
+        "size": 4215916,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_1k.png",
+        "md5": "054ece19a28c5107e2bd7f88aa2e57fe"
+      },
+      "exr": {
+        "size": 1467560,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_dx_1k.exr",
+        "md5": "cb8ccd790e3f68f1cdbe1cc8e1027739"
+      }
+    }
+  },
+  "nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 38567261,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_8k.jpg",
+        "md5": "e883dfde11178b12a7ef577758b885b5"
+      },
+      "png": {
+        "size": 187719682,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_8k.png",
+        "md5": "f11bfc9003f08419b283bfc4bb30368c"
+      },
+      "exr": {
+        "size": 76787072,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_8k.exr",
+        "md5": "5a79851149c6dff0dba3b00a195eddf6"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 10995563,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_4k.jpg",
+        "md5": "7d5914af016d362bfea5f996766cf30b"
+      },
+      "png": {
+        "size": 50609722,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_4k.png",
+        "md5": "c02b110f1660dcfb1f58beefb6e7c85b"
+      },
+      "exr": {
+        "size": 23000180,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_4k.exr",
+        "md5": "14951ea125bb58d7e973dd41deab934a"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2793706,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_2k.jpg",
+        "md5": "50ec12c0d7058ffbda25d80c83749adb"
+      },
+      "png": {
+        "size": 14627415,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_2k.png",
+        "md5": "fdf116dfff8ce421c24f9bfce452ed2e"
+      },
+      "exr": {
+        "size": 6420660,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_2k.exr",
+        "md5": "cc8269c32b4b594aeee7c94900ad2683"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 612921,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_1k.jpg",
+        "md5": "8de7b001a5e4a3a86effd35d802dde1c"
+      },
+      "png": {
+        "size": 4217073,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_1k.png",
+        "md5": "839cdb5636098d603c63a697aa8bf68a"
+      },
+      "exr": {
+        "size": 1452542,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_1k.exr",
+        "md5": "03a7eee973766544a284f90ccc27d49f"
+      }
+    }
+  },
+  "blend": {
+    "8k": {
+      "blend": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_metal_8k.exr": {
+            "size": 2813987,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_8k.exr",
+            "md5": "673e3c09c369153685e205489f96f106"
+          },
+          "textures/garden_hose_wall_mounted_01_nor_gl_8k.exr": {
+            "size": 76787072,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_8k.exr",
+            "md5": "5a79851149c6dff0dba3b00a195eddf6"
+          },
+          "textures/garden_hose_wall_mounted_01_rough_8k.exr": {
+            "size": 42211528,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_8k.exr",
+            "md5": "c770f0035b9c9588423283da3229ee3d"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_8k.jpg": {
+            "size": 33631623,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_8k.jpg",
+            "md5": "2952090a6f790652059695e7f4a3123c"
+          }
+        },
+        "size": 398216,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_8k.blend",
+        "md5": "d70379c3cd991ef37355995c8170670e"
+      }
+    },
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_rough_4k.exr": {
+            "size": 13545348,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_4k.exr",
+            "md5": "49fe91a457c2d0f7b7854b272b4d30f4"
+          },
+          "textures/garden_hose_wall_mounted_01_nor_gl_4k.exr": {
+            "size": 23000180,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_4k.exr",
+            "md5": "14951ea125bb58d7e973dd41deab934a"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_4k.jpg": {
+            "size": 10508050,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_4k.jpg",
+            "md5": "2a9ec784b3a018c413f891f9275c8f5c"
+          },
+          "textures/garden_hose_wall_mounted_01_metal_4k.exr": {
+            "size": 996790,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_4k.exr",
+            "md5": "b3a8a15e741b4fbe0a4d8a16784d40c8"
+          }
+        },
+        "size": 397906,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_4k.blend",
+        "md5": "51ee79ee3e49d15df488e6fabe1268cd"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_nor_gl_2k.exr": {
+            "size": 6420660,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_2k.exr",
+            "md5": "cc8269c32b4b594aeee7c94900ad2683"
+          },
+          "textures/garden_hose_wall_mounted_01_metal_2k.exr": {
+            "size": 342412,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_2k.exr",
+            "md5": "5d06fae4324ee1119bca0d355366024c"
+          },
+          "textures/garden_hose_wall_mounted_01_rough_2k.exr": {
+            "size": 4111514,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_2k.exr",
+            "md5": "576ba0cce711b95c72dd9708dbd5d5b5"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_2k.jpg": {
+            "size": 3154493,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_2k.jpg",
+            "md5": "80b30a3eb16d4816e9afc3228ea325e3"
+          }
+        },
+        "size": 398136,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_2k.blend",
+        "md5": "d3ac2f8aace723075841d4349142373f"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_rough_1k.exr": {
+            "size": 1148569,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_1k.exr",
+            "md5": "8fc8c916d5486ad3f9624d72c61bd2d6"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_1k.jpg": {
+            "size": 786985,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_1k.jpg",
+            "md5": "a874ce98e7fe2e726a52001a25f78d5c"
+          },
+          "textures/garden_hose_wall_mounted_01_metal_1k.exr": {
+            "size": 115616,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_1k.exr",
+            "md5": "441f4619c47bc08ccc640e625a565522"
+          },
+          "textures/garden_hose_wall_mounted_01_nor_gl_1k.exr": {
+            "size": 1452542,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_1k.exr",
+            "md5": "03a7eee973766544a284f90ccc27d49f"
+          }
+        },
+        "size": 398282,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_1k.blend",
+        "md5": "4f5e4e3c4891dbc7e2ac69bc43da6cf1"
+      }
+    }
+  },
+  "gltf": {
+    "8k": {
+      "gltf": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_nor_gl_8k.jpg": {
+            "size": 38567261,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_8k.jpg",
+            "md5": "e883dfde11178b12a7ef577758b885b5"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_8k.jpg": {
+            "size": 33631623,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_8k.jpg",
+            "md5": "2952090a6f790652059695e7f4a3123c"
+          },
+          "garden_hose_wall_mounted_01.bin": {
+            "size": 301688,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01.bin",
+            "md5": "ad482237273f1d551176350f324ea8e7"
+          },
+          "textures/garden_hose_wall_mounted_01_arm_8k.jpg": {
+            "size": 40479052,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_8k.jpg",
+            "md5": "4e6932906bb4a2c4ed99990d1ea22124"
+          }
+        },
+        "size": 4432,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_8k.gltf",
+        "md5": "c3366430d262b4b7119d0a05663fbb56"
+      }
+    },
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_arm_4k.jpg": {
+            "size": 11856496,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_4k.jpg",
+            "md5": "df887a191e8aaf61b73188a47a193ff3"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_4k.jpg": {
+            "size": 10508050,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_4k.jpg",
+            "md5": "2a9ec784b3a018c413f891f9275c8f5c"
+          },
+          "garden_hose_wall_mounted_01.bin": {
+            "size": 301688,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01.bin",
+            "md5": "ad482237273f1d551176350f324ea8e7"
+          },
+          "textures/garden_hose_wall_mounted_01_nor_gl_4k.jpg": {
+            "size": 10995563,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_4k.jpg",
+            "md5": "7d5914af016d362bfea5f996766cf30b"
+          }
+        },
+        "size": 4432,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_4k.gltf",
+        "md5": "a7bc20b2eacf2df5de909e820869d27e"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_nor_gl_2k.jpg": {
+            "size": 2793706,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_2k.jpg",
+            "md5": "50ec12c0d7058ffbda25d80c83749adb"
+          },
+          "garden_hose_wall_mounted_01.bin": {
+            "size": 301688,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01.bin",
+            "md5": "ad482237273f1d551176350f324ea8e7"
+          },
+          "textures/garden_hose_wall_mounted_01_arm_2k.jpg": {
+            "size": 3328146,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_2k.jpg",
+            "md5": "e9176c318d302cfec5cd6e33fa783a89"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_2k.jpg": {
+            "size": 3154493,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_2k.jpg",
+            "md5": "80b30a3eb16d4816e9afc3228ea325e3"
+          }
+        },
+        "size": 4432,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_2k.gltf",
+        "md5": "72e01f6e2cf553405aefe05a8f712d07"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_arm_1k.jpg": {
+            "size": 878931,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_1k.jpg",
+            "md5": "dc51c6e0a6ed39a3168ca81f54265456"
+          },
+          "textures/garden_hose_wall_mounted_01_nor_gl_1k.jpg": {
+            "size": 612921,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_1k.jpg",
+            "md5": "8de7b001a5e4a3a86effd35d802dde1c"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_1k.jpg": {
+            "size": 786985,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_1k.jpg",
+            "md5": "a874ce98e7fe2e726a52001a25f78d5c"
+          },
+          "garden_hose_wall_mounted_01.bin": {
+            "size": 301688,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01.bin",
+            "md5": "ad482237273f1d551176350f324ea8e7"
+          }
+        },
+        "size": 4432,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_1k.gltf",
+        "md5": "0dc02c9d34e11ab0a00562894264d9e7"
+      }
+    }
+  },
+  "usd": {
+    "8k": {
+      "usd": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_metal_8k.exr": {
+            "size": 2813987,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_8k.exr",
+            "md5": "673e3c09c369153685e205489f96f106"
+          },
+          "textures/garden_hose_wall_mounted_01_nor_gl_8k.exr": {
+            "size": 76787072,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_8k.exr",
+            "md5": "5a79851149c6dff0dba3b00a195eddf6"
+          },
+          "textures/garden_hose_wall_mounted_01_rough_8k.exr": {
+            "size": 42211528,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_8k.exr",
+            "md5": "c770f0035b9c9588423283da3229ee3d"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_8k.jpg": {
+            "size": 33631623,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_8k.jpg",
+            "md5": "2952090a6f790652059695e7f4a3123c"
+          }
+        },
+        "size": 548439,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_8k.usdc",
+        "md5": "9480af48bedaeb93aee6016c916c10db"
+      }
+    },
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_rough_4k.exr": {
+            "size": 13545348,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_4k.exr",
+            "md5": "49fe91a457c2d0f7b7854b272b4d30f4"
+          },
+          "textures/garden_hose_wall_mounted_01_nor_gl_4k.exr": {
+            "size": 23000180,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_4k.exr",
+            "md5": "14951ea125bb58d7e973dd41deab934a"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_4k.jpg": {
+            "size": 10508050,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_4k.jpg",
+            "md5": "2a9ec784b3a018c413f891f9275c8f5c"
+          },
+          "textures/garden_hose_wall_mounted_01_metal_4k.exr": {
+            "size": 996790,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_4k.exr",
+            "md5": "b3a8a15e741b4fbe0a4d8a16784d40c8"
+          }
+        },
+        "size": 548472,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_4k.usdc",
+        "md5": "8d477c5dc840c440756b932f349912fc"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_nor_gl_2k.exr": {
+            "size": 6420660,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_2k.exr",
+            "md5": "cc8269c32b4b594aeee7c94900ad2683"
+          },
+          "textures/garden_hose_wall_mounted_01_metal_2k.exr": {
+            "size": 342412,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_2k.exr",
+            "md5": "5d06fae4324ee1119bca0d355366024c"
+          },
+          "textures/garden_hose_wall_mounted_01_rough_2k.exr": {
+            "size": 4111514,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_2k.exr",
+            "md5": "576ba0cce711b95c72dd9708dbd5d5b5"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_2k.jpg": {
+            "size": 3154493,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_2k.jpg",
+            "md5": "80b30a3eb16d4816e9afc3228ea325e3"
+          }
+        },
+        "size": 548438,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_2k.usdc",
+        "md5": "968b8239bab508e91ecc133558c9de02"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_rough_1k.exr": {
+            "size": 1148569,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_1k.exr",
+            "md5": "8fc8c916d5486ad3f9624d72c61bd2d6"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_1k.jpg": {
+            "size": 786985,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_1k.jpg",
+            "md5": "a874ce98e7fe2e726a52001a25f78d5c"
+          },
+          "textures/garden_hose_wall_mounted_01_metal_1k.exr": {
+            "size": 115616,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_1k.exr",
+            "md5": "441f4619c47bc08ccc640e625a565522"
+          },
+          "textures/garden_hose_wall_mounted_01_nor_gl_1k.exr": {
+            "size": 1452542,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_1k.exr",
+            "md5": "03a7eee973766544a284f90ccc27d49f"
+          }
+        },
+        "size": 548474,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_1k.usdc",
+        "md5": "ca871b035d13ce188bfaebbbc42cc7f7"
+      }
+    }
+  },
+  "Metal": {
+    "8k": {
+      "jpg": {
+        "size": 4752970,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_8k.jpg",
+        "md5": "46b29980d139fd688d9de23573fe5aad"
+      },
+      "png": {
+        "size": 4333752,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_8k.png",
+        "md5": "2646006fe3047ed0775bb7ff124e5ab3"
+      },
+      "exr": {
+        "size": 2813987,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_8k.exr",
+        "md5": "673e3c09c369153685e205489f96f106"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1283863,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_4k.jpg",
+        "md5": "949020ad3c4f5f56cbfcc43aae0ded0d"
+      },
+      "png": {
+        "size": 1375017,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_4k.png",
+        "md5": "9792c3824939c873b3c5459114aadb53"
+      },
+      "exr": {
+        "size": 996790,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_4k.exr",
+        "md5": "b3a8a15e741b4fbe0a4d8a16784d40c8"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 375673,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_2k.jpg",
+        "md5": "193502b432ad001f4c6e7ab87dc58993"
+      },
+      "png": {
+        "size": 482308,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_2k.png",
+        "md5": "d73d26ee3df6a7aed443ffaf1529250e"
+      },
+      "exr": {
+        "size": 342412,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_2k.exr",
+        "md5": "5d06fae4324ee1119bca0d355366024c"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 112749,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_1k.jpg",
+        "md5": "50af88a982264d1d8aa7c990ed91af62"
+      },
+      "png": {
+        "size": 157419,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_1k.png",
+        "md5": "f16c7863b474645e62ac4552462dcda1"
+      },
+      "exr": {
+        "size": 115616,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_1k.exr",
+        "md5": "441f4619c47bc08ccc640e625a565522"
+      }
+    }
+  },
+  "fbx": {
+    "8k": {
+      "fbx": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_metal_8k.exr": {
+            "size": 2813987,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_8k.exr",
+            "md5": "673e3c09c369153685e205489f96f106"
+          },
+          "textures/garden_hose_wall_mounted_01_nor_gl_8k.exr": {
+            "size": 76787072,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_8k.exr",
+            "md5": "5a79851149c6dff0dba3b00a195eddf6"
+          },
+          "textures/garden_hose_wall_mounted_01_rough_8k.exr": {
+            "size": 42211528,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_8k.exr",
+            "md5": "c770f0035b9c9588423283da3229ee3d"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_8k.jpg": {
+            "size": 33631623,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_8k.jpg",
+            "md5": "2952090a6f790652059695e7f4a3123c"
+          }
+        },
+        "size": 370188,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_8k.fbx",
+        "md5": "a0af1b4b46a28df5d27de66090ff9439"
+      }
+    },
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_rough_4k.exr": {
+            "size": 13545348,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_4k.exr",
+            "md5": "49fe91a457c2d0f7b7854b272b4d30f4"
+          },
+          "textures/garden_hose_wall_mounted_01_nor_gl_4k.exr": {
+            "size": 23000180,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_4k.exr",
+            "md5": "14951ea125bb58d7e973dd41deab934a"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_4k.jpg": {
+            "size": 10508050,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_4k.jpg",
+            "md5": "2a9ec784b3a018c413f891f9275c8f5c"
+          },
+          "textures/garden_hose_wall_mounted_01_metal_4k.exr": {
+            "size": 996790,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_4k.exr",
+            "md5": "b3a8a15e741b4fbe0a4d8a16784d40c8"
+          }
+        },
+        "size": 370188,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_4k.fbx",
+        "md5": "b81299ab7fbe347de670f4107450d25f"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_nor_gl_2k.exr": {
+            "size": 6420660,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_2k.exr",
+            "md5": "cc8269c32b4b594aeee7c94900ad2683"
+          },
+          "textures/garden_hose_wall_mounted_01_metal_2k.exr": {
+            "size": 342412,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_2k.exr",
+            "md5": "5d06fae4324ee1119bca0d355366024c"
+          },
+          "textures/garden_hose_wall_mounted_01_rough_2k.exr": {
+            "size": 4111514,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_2k.exr",
+            "md5": "576ba0cce711b95c72dd9708dbd5d5b5"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_2k.jpg": {
+            "size": 3154493,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_2k.jpg",
+            "md5": "80b30a3eb16d4816e9afc3228ea325e3"
+          }
+        },
+        "size": 370188,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_2k.fbx",
+        "md5": "3c4cf7b5be7a2a99e0d2db1594193773"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/garden_hose_wall_mounted_01_rough_1k.exr": {
+            "size": 1148569,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_1k.exr",
+            "md5": "8fc8c916d5486ad3f9624d72c61bd2d6"
+          },
+          "textures/garden_hose_wall_mounted_01_diff_1k.jpg": {
+            "size": 786985,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_diff_1k.jpg",
+            "md5": "a874ce98e7fe2e726a52001a25f78d5c"
+          },
+          "textures/garden_hose_wall_mounted_01_metal_1k.exr": {
+            "size": 115616,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_metal_1k.exr",
+            "md5": "441f4619c47bc08ccc640e625a565522"
+          },
+          "textures/garden_hose_wall_mounted_01_nor_gl_1k.exr": {
+            "size": 1452542,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_nor_gl_1k.exr",
+            "md5": "03a7eee973766544a284f90ccc27d49f"
+          }
+        },
+        "size": 370188,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_1k.fbx",
+        "md5": "90983f24a34a6e15b522ba9051a23c95"
+      }
+    }
+  },
+  "arm": {
+    "8k": {
+      "jpg": {
+        "size": 40479052,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_8k.jpg",
+        "md5": "4e6932906bb4a2c4ed99990d1ea22124"
+      },
+      "png": {
+        "size": 162827935,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_8k.png",
+        "md5": "5796c3492a0627f14f0195824fe81c10"
+      },
+      "exr": {
+        "size": 83991100,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_8k.exr",
+        "md5": "46cc34952e37720a437c7ec8bbb9d918"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 11856496,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_4k.jpg",
+        "md5": "df887a191e8aaf61b73188a47a193ff3"
+      },
+      "png": {
+        "size": 53011117,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_4k.png",
+        "md5": "86c322b0cfa22fa98fa1f2783fb23209"
+      },
+      "exr": {
+        "size": 24279217,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_4k.exr",
+        "md5": "a6ff5d2fd9e0ebe17e4b6e3c7a448e8a"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3328146,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_2k.jpg",
+        "md5": "e9176c318d302cfec5cd6e33fa783a89"
+      },
+      "png": {
+        "size": 15353489,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_2k.png",
+        "md5": "84befc25f8123c25677782d089ad0c97"
+      },
+      "exr": {
+        "size": 7255352,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_2k.exr",
+        "md5": "286f1c2f3139f17f13f59a7a70f11ce3"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 878931,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_1k.jpg",
+        "md5": "dc51c6e0a6ed39a3168ca81f54265456"
+      },
+      "png": {
+        "size": 4083939,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_1k.png",
+        "md5": "ad107c8e7efcb9d9a155b03750639c2e"
+      },
+      "exr": {
+        "size": 1945658,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_arm_1k.exr",
+        "md5": "bceb794fb72615525dafac0d92844fac"
+      }
+    }
+  },
+  "Rough": {
+    "8k": {
+      "jpg": {
+        "size": 33320896,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_8k.jpg",
+        "md5": "6e1ab66f2b5baf96eb7a8d2713ec1b1c"
+      },
+      "png": {
+        "size": 41365124,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_8k.png",
+        "md5": "bb35599c9a476d6253a6f7580b78450f"
+      },
+      "exr": {
+        "size": 42211528,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_8k.exr",
+        "md5": "c770f0035b9c9588423283da3229ee3d"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 9535421,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_4k.jpg",
+        "md5": "e8b9b2e030b715d7ad44cbc614131f67"
+      },
+      "png": {
+        "size": 18925482,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_4k.png",
+        "md5": "1e219b6340b62292dfde10f9e1d62b4a"
+      },
+      "exr": {
+        "size": 13545348,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_4k.exr",
+        "md5": "49fe91a457c2d0f7b7854b272b4d30f4"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2741628,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_2k.jpg",
+        "md5": "bffd7f2735b9244791cacfc9fcfd6594"
+      },
+      "png": {
+        "size": 5752660,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_2k.png",
+        "md5": "fac473965afbb21357495fe911ed7c79"
+      },
+      "exr": {
+        "size": 4111514,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_2k.exr",
+        "md5": "576ba0cce711b95c72dd9708dbd5d5b5"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 702683,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_1k.jpg",
+        "md5": "de6646586dabe1dbadbbe95f62a62a58"
+      },
+      "png": {
+        "size": 1595512,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_1k.png",
+        "md5": "638569e9fccf21dfd0e04ef9012d7df8"
+      },
+      "exr": {
+        "size": 1148569,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_rough_1k.exr",
+        "md5": "8fc8c916d5486ad3f9624d72c61bd2d6"
+      }
+    }
+  },
+  "AO": {
+    "8k": {
+      "jpg": {
+        "size": 9396408,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_8k.jpg",
+        "md5": "308e9ab2cf377cfb2617ccdd41790dd2"
+      },
+      "png": {
+        "size": 76289344,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_8k.png",
+        "md5": "05017613ec98e938f0054ab08a5ce3eb"
+      },
+      "exr": {
+        "size": 25105406,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_8k.exr",
+        "md5": "eb2176621eb87f931a9e2add9499b233"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 3167926,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_4k.jpg",
+        "md5": "45364f63f79a715c08a2061819007062"
+      },
+      "png": {
+        "size": 21447843,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_4k.png",
+        "md5": "0df9400a6a16921bdfc0111af644f5a3"
+      },
+      "exr": {
+        "size": 9216725,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_4k.exr",
+        "md5": "5ed524ce79396da7b2ea8c4e3084b4a2"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1125909,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_2k.jpg",
+        "md5": "ef4434069dbb21f6cf3bc152d7610cb8"
+      },
+      "png": {
+        "size": 5823069,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_2k.png",
+        "md5": "d5ede65b0f87dc1e656a803646c06dda"
+      },
+      "exr": {
+        "size": 3513842,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_2k.exr",
+        "md5": "611520c226547c1a9ade5e584d53f21a"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 409151,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_1k.jpg",
+        "md5": "5bdd1e6a0a1c06c1bc4f66ce133e4cc3"
+      },
+      "png": {
+        "size": 1608039,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_1k.png",
+        "md5": "df7bb1cee0aa2c1ae0cf5eddd9497813"
+      },
+      "exr": {
+        "size": 1091494,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_hose_wall_mounted_01/garden_hose_wall_mounted_01_ao_1k.exr",
+        "md5": "a2e93f6f9a2be5fba583642dede06a91"
+      }
+    }
+  }
+}

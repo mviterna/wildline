@@ -17,8 +17,7 @@ TArray<int16> WildlineAudio::Samples(Event Kind){
         float V=0;
         switch(Kind){
         case Rifle:case Shotgun:V=(N*.58f+Filter*.7f+Tone(Kind==Rifle?83:57)*.42f)*Pulse(0,.055f)+(Filter*.4f+Tone(41)*.08f)*Pulse(.045f,.20f);break;
-        case Footstep:V=(Filter*1.2f+Tone(92)*.20f)*Pulse(0,.037f)+N*.055f*Pulse(.02f,.075f);break;
-        case Pawstep:V=(Filter*.45f+N*.11f)*Pulse(0,.021f);break;
+        case Footstep:case Pawstep:break; // Recorded waves are played below.
         case Jump:V=Filter*.20f*Pulse(0,.065f)+Tone(750-T*1800)*.055f*FMath::Sin(PI*T/Duration);break;
         case Land:V=(Filter*.7f+Tone(65)*.18f)*Pulse(0,.055f);break;
         case Climb:V=N*.09f*(Pulse(0,.018f)+Pulse(.085f,.027f));break;
@@ -37,19 +36,30 @@ TArray<int16> WildlineAudio::Samples(Event Kind){
     }
     return PCM;
 }
-void WildlineAudio::Play(UObject* Context,Event Kind,FVector Position,bool Local){
+USoundWave* WildlineAudio::FootstepSound(int32 Variant){
+    const FString Name=FString::Printf(TEXT("SW_Footstep%02d"),FMath::Clamp(Variant,0,3)+1);
+    return LoadObject<USoundWave>(nullptr,*FString::Printf(TEXT("/Game/Wildline/Audio/%s.%s"),*Name,*Name));
+}
+void WildlineAudio::Play(UObject* Context,Event Kind,FVector Position,bool Local,float PlaybackRate){
     if(!Context||!Context->GetWorld()||Context->GetWorld()->GetNetMode()==NM_DedicatedServer)return;
     const auto* Settings=UWildlineUserSettings::Get();const float Volume=Settings?Settings->SoundVolume:.8f;if(Volume<=0)return;
-    auto* Sound=NewObject<USoundWaveProcedural>(Context);Sound->SetSampleRate(22050);Sound->NumChannels=1;
-    const auto PCM=Samples(Kind);Sound->Duration=PCM.Num()/22050.f;Sound->bLooping=false;
-    Sound->QueueAudio(reinterpret_cast<const uint8*>(PCM.GetData()),PCM.Num()*sizeof(int16));
+    USoundWave* Sound=nullptr;const bool RecordedStep=Kind==Footstep||Kind==Pawstep;
+    if(RecordedStep){
+        Sound=FootstepSound(FMath::RandRange(0,3));
+        if(!Sound){UE_LOG(LogTemp,Error,TEXT("WILDLINE missing recorded footstep wave"));return;}
+    }else{
+        auto* Stream=NewObject<USoundWaveProcedural>(Context);Stream->SetSampleRate(22050);Stream->NumChannels=1;
+        const auto PCM=Samples(Kind);Stream->Duration=PCM.Num()/22050.f;Stream->bLooping=false;
+        Stream->QueueAudio(reinterpret_cast<const uint8*>(PCM.GetData()),PCM.Num()*sizeof(int16));Sound=Stream;
+    }
+    PlaybackRate=FMath::Clamp(PlaybackRate,.5f,2.f);
     UAudioComponent* Component=nullptr;
-    if(Local)Component=UGameplayStatics::SpawnSound2D(Context,Sound,Volume);
+    if(Local)Component=UGameplayStatics::SpawnSound2D(Context,Sound,Volume,PlaybackRate);
     else{
     auto* Attenuation=NewObject<USoundAttenuation>(Context);auto& A=Attenuation->Attenuation;
     A.bAttenuate=true;A.bSpatialize=true;A.AttenuationShape=EAttenuationShape::Sphere;A.AttenuationShapeExtents=FVector(100);
     A.FalloffDistance=Kind==Rifle||Kind==Shotgun?14000.f:Kind==Bird?3000.f:1800.f;
-    Component=UGameplayStatics::SpawnSoundAtLocation(Context,Sound,Position,FRotator::ZeroRotator,Volume,1.f,0.f,Attenuation);}
+    Component=UGameplayStatics::SpawnSoundAtLocation(Context,Sound,Position,FRotator::ZeroRotator,Volume,PlaybackRate,0.f,Attenuation);}
     // Procedural streams otherwise continue submitting silence after their PCM ends.
-    if(Component){FTimerHandle Stop;Context->GetWorld()->GetTimerManager().SetTimer(Stop,FTimerDelegate::CreateWeakLambda(Component,[Component](){Component->FadeOut(.025f,0.f);}),Sound->Duration+.15f,false);}
+    if(Component&&!RecordedStep){FTimerHandle Stop;Context->GetWorld()->GetTimerManager().SetTimer(Stop,FTimerDelegate::CreateWeakLambda(Component,[Component](){Component->FadeOut(.025f,0.f);}),Sound->Duration/PlaybackRate+.15f,false);}
 }

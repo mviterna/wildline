@@ -1,0 +1,473 @@
+[
+  {
+    "name": "SM_painted_wooden_bench",
+    "dimensions_m": [
+      1.1649435758590698,
+      0.49654310941696167,
+      0.8892914652824402
+    ],
+    "triangles": 630,
+    "materials": [
+      "M_NH_painted_wooden_bench_0"
+    ]
+  },
+  {
+    "name": "SM_metal_trash_can",
+    "dimensions_m": [
+      1.8469351530075073,
+      0.556289792060852,
+      0.9061697125434875
+    ],
+    "triangles": 13960,
+    "materials": [
+      "M_NH_metal_trash_can_0",
+      "M_NH_metal_trash_can_1"
+    ]
+  },
+  {
+    "name": "SM_fire_hydrant",
+    "dimensions_m": [
+      0.8746235370635986,
+      0.31774356961250305,
+      0.799456000328064
+    ],
+    "triangles": 86316,
+    "materials": [
+      "M_NH_fire_hydrant_0",
+      "M_NH_fire_hydrant_1"
+    ]
+  },
+  {
+    "name": "SM_garden_hose_wall_mounted_01",
+    "dimensions_m": [
+      0.4667283892631531,
+      0.25030913949012756,
+      0.5570019483566284
+    ],
+    "triangles": 11684,
+    "materials": [
+      "M_NH_garden_hose_wall_mounted_01_0"
+    ]
+  },
+  {
+    "name": "SM_garden_sprinkler_01",
+    "dimensions_m": [
+      0.35959315299987793,
+      0.24906833469867706,
+      0.21562349796295166
+    ],
+    "triangles": 8192,
+    "materials": [
+      "M_NH_garden_sprinkler_01_0"
+    ]
+  },
+  {
+    "name": "SM_planter_box_01",
+    "dimensions_m": [
+      0.9126113653182983,
+      0.4136679768562317,
+      0.42496824264526367
+    ],
+    "triangles": 8094,
+    "materials": [
+      "M_NH_planter_box_01_0"
+    ]
+  },
+  {
+    "name": "SM_planter_pot_clay",
+    "dimensions_m": [
+      0.2659967243671417,
+      0.2634630501270294,
+      0.22187034785747528
+    ],
+    "triangles": 3080,
+    "materials": [
+      "M_NH_planter_pot_clay_0"
+    ]
+  },
+  {
+    "name": "SM_plastic_monobloc_chair_01",
+    "dimensions_m": [
+      0.6418611407279968,
+      0.6275919079780579,
+      0.8798412084579468
+    ],
+    "triangles": 3356,
+    "materials": [
+      "M_NH_plastic_monobloc_chair_01_0"
+    ]
+  },
+  {
+    "name": "SM_outdoor_table_chair_set_01_chair_01",
+    "dimensions_m": [
+      0.6019715070724487,
+      0.6952898502349854,
+      0.8585816025733948
+    ],
+    "triangles": 3752,
+    "materials": [
+      "M_NH_outdoor_table_chair_set_01_0"
+    ]
+  },
+  {
+    "name": "SM_outdoor_table_chair_set_01_table",
+    "dimensions_m": [
+      0.6916830539703369,
+      0.6918506622314453,
+      0.7259219288825989
+    ],
+    "triangles": 2324,
+    "materials": [
+      "M_NH_outdoor_table_chair_set_01_1"
+    ]
+  },
+  {
+    "name": "SM_outdoor_table_chair_set_01_chair_02",
+    "dimensions_m": [
+      0.7539395093917847,
+      0.8053721785545349,
+      0.8585816025733948
+    ],
+    "triangles": 3752,
+    "materials": [
+      "M_NH_outdoor_table_chair_set_01_0"
+    ]
+  },
+  {
+    "name": "SM_garden_gnome",
+    "dimensions_m": [
+      0.2579185962677002,
+      0.20971597731113434,
+      0.5990858674049377
+    ],
+    "triangles": 28858,
+    "materials": [
+      "M_NH_garden_gnome_0"
+    ]
+  },
+  {
+    "name": "SM_CedarBirdFeeder",
+    "dimensions_m": [
+      0.800000011920929,
+      0.8199999928474426,
+      2.9919066429138184
+    ],
+    "triangles": 16224,
+    "materials": [
+      "M_BirdSeed",
+      "M_FeederCedar",
+      "M_FeederHopper",
+      "M_FeederRoof",
+      "M_Galvanized"
+    ]
+  },
+  {
+    "name": "SM_BackyardTrampoline",
+    "dimensions_m": [
+      2.4200000762939453,
+      2.4200000762939453,
+      0.9500000476837158
+    ],
+    "triangles": 57372,
+    "materials": [
+      "M_Galvanized",
+      "M_TrampolineMat",
+      "M_TrampolinePad"
+    ]
+  },
+  {
+    "name": "SM_PrivacyFence",
+    "dimensions_m": [
+      2.140000104904175,
+      0.1574999988079071,
+      1.903772234916687
+    ],
+    "triangles": 11468,
+    "materials": [
+      "M_Galvanized",
+      "M_PrivacyCedar"
+    ]
+  },
+  {
+    "name": "SM_AsphaltStreet",
+    "dimensions_m": [
+      110.0,
+      11.0,
+      0.05999999865889549
+    ],
+    "triangles": 188,
+    "materials": [
+      "M_Asphalt"
+    ]
+  },
+  {
+    "name": "SM_ConcreteWalk",
+    "dimensions_m": [
+      110.0,
+      2.200000047683716,
+      0.11999999731779099
+    ],
+    "triangles": 188,
+    "materials": [
+      "M_Sidewalk"
+    ]
+  },
+  {
+    "name": "SM_Driveway",
+    "dimensions_m": [
+      3.799999952316284,
+      18.0,
+      0.05999999865889549
+    ],
+    "triangles": 188,
+    "materials": [
+      "M_Sidewalk"
+    ]
+  },
+  {
+    "name": "SM_Curb",
+    "dimensions_m": [
+      2.0,
+      0.20000000298023224,
+      0.1599999964237213
+    ],
+    "triangles": 188,
+    "materials": [
+      "M_Sidewalk"
+    ]
+  },
+  {
+    "name": "SM_UtilityPole01",
+    "dimensions_m": [
+      1.1999999284744263,
+      1.957270622253418,
+      6.130000591278076
+    ],
+    "triangles": 31932,
+    "materials": [
+      "M_NH_modular_electricity_poles_0",
+      "M_NH_modular_electricity_poles_1"
+    ]
+  },
+  {
+    "name": "SM_UtilityPole02",
+    "dimensions_m": [
+      1.1999998092651367,
+      0.8522416353225708,
+      6.130000591278076
+    ],
+    "triangles": 26466,
+    "materials": [
+      "M_NH_modular_electricity_poles_0",
+      "M_NH_modular_electricity_poles_1"
+    ]
+  },
+  {
+    "name": "SM_UtilityPole03",
+    "dimensions_m": [
+      1.28692626953125,
+      0.8522417545318604,
+      6.130000591278076
+    ],
+    "triangles": 35012,
+    "materials": [
+      "M_NH_modular_electricity_poles_0",
+      "M_NH_modular_electricity_poles_1"
+    ]
+  },
+  {
+    "name": "SM_ColonialHouse",
+    "dimensions_m": [
+      11.65999984741211,
+      11.456507682800293,
+      8.300000190734863
+    ],
+    "triangles": 113928,
+    "materials": [
+      "M_DoorBrass",
+      "M_HouseBrick",
+      "M_HouseCream",
+      "M_HouseDoor",
+      "M_HouseFoundation",
+      "M_HouseShingles",
+      "M_HouseTrim",
+      "M_WindowReflection"
+    ]
+  },
+  {
+    "name": "SM_CapeCodHouse",
+    "dimensions_m": [
+      11.65999984741211,
+      11.456506729125977,
+      6.0
+    ],
+    "triangles": 63544,
+    "materials": [
+      "M_DoorBrass",
+      "M_HouseBlue",
+      "M_HouseBrick",
+      "M_HouseDoor",
+      "M_HouseFoundation",
+      "M_HouseShingles",
+      "M_HouseTrim",
+      "M_WindowReflection"
+    ]
+  },
+  {
+    "name": "SM_CourseBranch",
+    "dimensions_m": [
+      2.058715581893921,
+      0.48158568143844604,
+      0.5736749172210693
+    ],
+    "triangles": 360,
+    "materials": [
+      "M_CourseBark"
+    ]
+  },
+  {
+    "name": "SM_ServiceCable",
+    "dimensions_m": [
+      3.0,
+      0.03999999910593033,
+      0.03804226219654083
+    ],
+    "triangles": 20,
+    "materials": [
+      "M_ServiceCable"
+    ]
+  },
+  {
+    "name": "SM_PlanterSoil",
+    "dimensions_m": [
+      1.1299999952316284,
+      0.9300000071525574,
+      0.05000000074505806
+    ],
+    "triangles": 188,
+    "materials": [
+      "M_PlanterSoil"
+    ]
+  },
+  {
+    "name": "SM_PottingBench",
+    "dimensions_m": [
+      1.600000023841858,
+      0.7300000190734863,
+      0.9045000076293945
+    ],
+    "triangles": 4272,
+    "materials": [
+      "M_FeederCedar",
+      "M_Galvanized"
+    ]
+  },
+  {
+    "name": "SM_KitGardenHouse",
+    "dimensions_m": [
+      8.0,
+      8.00049877166748,
+      3.8266804218292236
+    ],
+    "triangles": 229927,
+    "materials": [
+      "M_NH_HouseKit_0",
+      "M_NH_HouseKit_2",
+      "M_NH_HouseKit_3"
+    ]
+  },
+  {
+    "name": "SM_KitTwoStoryHouse",
+    "dimensions_m": [
+      8.338902473449707,
+      5.768929481506348,
+      5.454062461853027
+    ],
+    "triangles": 277001,
+    "materials": [
+      "M_NH_HouseKit_0",
+      "M_NH_HouseKit_2",
+      "M_NH_HouseKit_3",
+      "M_NH_HouseKit_4"
+    ]
+  },
+  {
+    "name": "SM_KitCottage",
+    "dimensions_m": [
+      6.847630023956299,
+      5.694240570068359,
+      3.281020402908325
+    ],
+    "triangles": 242685,
+    "materials": [
+      "M_NH_HouseKit_0",
+      "M_NH_HouseKit_1",
+      "M_NH_HouseKit_2",
+      "M_NH_HouseKit_3"
+    ]
+  },
+  {
+    "name": "SM_KitGarage",
+    "dimensions_m": [
+      2.7110891342163086,
+      4.677806854248047,
+      2.702202081680298
+    ],
+    "triangles": 87503,
+    "materials": [
+      "M_NH_HouseKit_0",
+      "M_NH_HouseKit_1",
+      "M_NH_HouseKit_2",
+      "M_NH_HouseKit_3"
+    ]
+  },
+  {
+    "name": "SM_KitPool",
+    "dimensions_m": [
+      5.0,
+      8.00000286102295,
+      1.010000228881836
+    ],
+    "triangles": 2072,
+    "materials": [
+      "M_NH_HouseKit_2"
+    ]
+  },
+  {
+    "name": "SM_KitMailbox",
+    "dimensions_m": [
+      0.14475440979003906,
+      0.29302978515625,
+      0.6997519731521606
+    ],
+    "triangles": 714,
+    "materials": [
+      "M_NH_HouseKit_0",
+      "M_NH_HouseKit_2"
+    ]
+  },
+  {
+    "name": "SM_KitSwing",
+    "dimensions_m": [
+      0.5192728042602539,
+      1.6727900505065918,
+      1.5536465644836426
+    ],
+    "triangles": 54795,
+    "materials": [
+      "M_NH_HouseKit_0"
+    ]
+  },
+  {
+    "name": "SM_KitLounge",
+    "dimensions_m": [
+      0.5387005805969238,
+      1.4832396507263184,
+      0.5225545167922974
+    ],
+    "triangles": 2212,
+    "materials": [
+      "M_NH_HouseKit_0"
+    ]
+  }
+]

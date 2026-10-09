@@ -1,0 +1,473 @@
+[
+  {
+    "name": "SM_painted_wooden_bench",
+    "slots": [
+      "M_NH_painted_wooden_bench_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      58.2471809387207,
+      24.8271541595459,
+      44.46457290649414
+    ]
+  },
+  {
+    "name": "SM_metal_trash_can",
+    "slots": [
+      "M_NH_metal_trash_can_0",
+      "M_NH_metal_trash_can_1"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      88.90047836303711,
+      27.814489364624023,
+      45.30848693847656
+    ]
+  },
+  {
+    "name": "SM_fire_hydrant",
+    "slots": [
+      "M_NH_fire_hydrant_0",
+      "M_NH_fire_hydrant_1"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      43.731178283691406,
+      15.887181282043457,
+      39.972801208496094
+    ]
+  },
+  {
+    "name": "SM_garden_hose_wall_mounted_01",
+    "slots": [
+      "M_NH_garden_hose_wall_mounted_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      23.336419105529785,
+      12.515457153320312,
+      27.85009691119194
+    ]
+  },
+  {
+    "name": "SM_garden_sprinkler_01",
+    "slots": [
+      "M_NH_garden_sprinkler_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      17.541671752929688,
+      11.341792583465576,
+      10.149879455566406
+    ]
+  },
+  {
+    "name": "SM_planter_box_01",
+    "slots": [
+      "M_NH_planter_box_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      45.63056945800781,
+      20.683395385742188,
+      21.2484130859375
+    ]
+  },
+  {
+    "name": "SM_planter_pot_clay",
+    "slots": [
+      "M_NH_planter_pot_clay_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      13.299836158752441,
+      13.173152446746826,
+      11.093517303466797
+    ]
+  },
+  {
+    "name": "SM_plastic_monobloc_chair_01",
+    "slots": [
+      "M_NH_plastic_monobloc_chair_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      32.09305763244629,
+      31.379596710205078,
+      43.992061614990234
+    ]
+  },
+  {
+    "name": "SM_outdoor_table_chair_set_01_chair_01",
+    "slots": [
+      "M_NH_outdoor_table_chair_set_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      28.706019401550293,
+      33.058963775634766,
+      42.929080963134766
+    ]
+  },
+  {
+    "name": "SM_outdoor_table_chair_set_01_table",
+    "slots": [
+      "M_NH_outdoor_table_chair_set_01_1"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      34.58415603637695,
+      34.59253692626953,
+      36.29609680175781
+    ]
+  },
+  {
+    "name": "SM_outdoor_table_chair_set_01_chair_02",
+    "slots": [
+      "M_NH_outdoor_table_chair_set_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      24.541046142578125,
+      30.614521026611328,
+      42.929080963134766
+    ]
+  },
+  {
+    "name": "SM_garden_gnome",
+    "slots": [
+      "M_NH_garden_gnome_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      12.895929336547852,
+      10.485798835754395,
+      29.954294204711914
+    ]
+  },
+  {
+    "name": "SM_CedarBirdFeeder",
+    "slots": [
+      "M_FeederCedar",
+      "M_Galvanized",
+      "M_FeederRoof",
+      "M_BirdSeed",
+      "M_FeederHopper"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      40.000003814697266,
+      41.0,
+      149.52308654785156
+    ]
+  },
+  {
+    "name": "SM_BackyardTrampoline",
+    "slots": [
+      "M_TrampolineMat",
+      "M_Galvanized",
+      "M_TrampolinePad"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      121.00000381469727,
+      121.00000381469727,
+      47.499999940395355
+    ]
+  },
+  {
+    "name": "SM_PrivacyFence",
+    "slots": [
+      "M_PrivacyCedar",
+      "M_Galvanized"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      107.00000762939453,
+      7.875008821487427,
+      95.18861293792725
+    ]
+  },
+  {
+    "name": "SM_ServiceCable",
+    "slots": [
+      "M_ServiceCable"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      150.0,
+      2.0000131130218506,
+      1.90211296454072
+    ]
+  },
+  {
+    "name": "SM_PottingBench",
+    "slots": [
+      "M_FeederCedar",
+      "M_Galvanized"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      80.00000762939453,
+      36.50000762939453,
+      45.224998474121094
+    ]
+  },
+  {
+    "name": "SM_AsphaltStreet",
+    "slots": [
+      "M_Asphalt"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      5500.0,
+      550.00048828125,
+      3.0
+    ]
+  },
+  {
+    "name": "SM_ConcreteWalk",
+    "slots": [
+      "M_Sidewalk"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      5500.0,
+      110.00048065185547,
+      6.0
+    ]
+  },
+  {
+    "name": "SM_Driveway",
+    "slots": [
+      "M_Sidewalk"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      190.0000762939453,
+      900.0,
+      3.0
+    ]
+  },
+  {
+    "name": "SM_Curb",
+    "slots": [
+      "M_Sidewalk"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      100.0,
+      10.000008583068848,
+      8.0
+    ]
+  },
+  {
+    "name": "SM_UtilityPole01",
+    "slots": [
+      "M_NH_modular_electricity_poles_0",
+      "M_NH_modular_electricity_poles_1"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      60.00000190734863,
+      97.8635311126709,
+      306.5000140629709
+    ]
+  },
+  {
+    "name": "SM_UtilityPole02",
+    "slots": [
+      "M_NH_modular_electricity_poles_0",
+      "M_NH_modular_electricity_poles_1"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      60.000003814697266,
+      42.61208534240723,
+      306.5000140629709
+    ]
+  },
+  {
+    "name": "SM_UtilityPole03",
+    "slots": [
+      "M_NH_modular_electricity_poles_0",
+      "M_NH_modular_electricity_poles_1"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      64.3463191986084,
+      42.61208534240723,
+      306.5000140629709
+    ]
+  },
+  {
+    "name": "SM_ColonialHouse",
+    "slots": [
+      "M_HouseFoundation",
+      "M_HouseCream",
+      "M_HouseTrim",
+      "M_HouseShingles",
+      "M_WindowReflection",
+      "M_HouseDoor",
+      "M_HouseBrick",
+      "M_DoorBrass"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      583.0,
+      572.8254089355469,
+      415.0
+    ]
+  },
+  {
+    "name": "SM_CapeCodHouse",
+    "slots": [
+      "M_HouseFoundation",
+      "M_HouseBlue",
+      "M_HouseTrim",
+      "M_HouseShingles",
+      "M_WindowReflection",
+      "M_HouseDoor",
+      "M_HouseBrick",
+      "M_DoorBrass"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      583.0,
+      572.8253784179688,
+      300.0
+    ]
+  },
+  {
+    "name": "SM_CourseBranch",
+    "slots": [
+      "M_CourseBark"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      102.93577575683594,
+      24.07928228378296,
+      28.683745861053467
+    ]
+  },
+  {
+    "name": "SM_PlanterSoil",
+    "slots": [
+      "M_PlanterSoil"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      56.500003814697266,
+      46.500003814697266,
+      2.5
+    ]
+  },
+  {
+    "name": "SM_KitGardenHouse",
+    "slots": [
+      "M_NH_HouseKit_2",
+      "M_NH_HouseKit_3",
+      "M_NH_HouseKit_0"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      400.0,
+      400.02490234375,
+      191.3339385986328
+    ]
+  },
+  {
+    "name": "SM_KitTwoStoryHouse",
+    "slots": [
+      "M_NH_HouseKit_4",
+      "M_NH_HouseKit_3",
+      "M_NH_HouseKit_2",
+      "M_NH_HouseKit_0"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      416.9451446533203,
+      288.4465026855469,
+      272.7031235098839
+    ]
+  },
+  {
+    "name": "SM_KitCottage",
+    "slots": [
+      "M_NH_HouseKit_1",
+      "M_NH_HouseKit_3",
+      "M_NH_HouseKit_2",
+      "M_NH_HouseKit_0"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      342.3815155029297,
+      284.71205139160156,
+      164.05102129280567
+    ]
+  },
+  {
+    "name": "SM_KitGarage",
+    "slots": [
+      "M_NH_HouseKit_1",
+      "M_NH_HouseKit_3",
+      "M_NH_HouseKit_2",
+      "M_NH_HouseKit_0"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      135.55449676513672,
+      233.8903579711914,
+      135.1100714328959
+    ]
+  },
+  {
+    "name": "SM_KitPool",
+    "slots": [
+      "M_NH_HouseKit_2"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      250.0000228881836,
+      400.00018310546875,
+      50.5000114440918
+    ]
+  },
+  {
+    "name": "SM_KitMailbox",
+    "slots": [
+      "M_NH_HouseKit_2",
+      "M_NH_HouseKit_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      7.237738847732544,
+      14.65148401260376,
+      34.98759841918945
+    ]
+  },
+  {
+    "name": "SM_KitSwing",
+    "slots": [
+      "M_NH_HouseKit_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      25.96364974975586,
+      83.63946533203125,
+      77.68232714579904
+    ]
+  },
+  {
+    "name": "SM_KitLounge",
+    "slots": [
+      "M_NH_HouseKit_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      26.935049057006836,
+      74.16199111938477,
+      26.12772560119629
+    ]
+  }
+]

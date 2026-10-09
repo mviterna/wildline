@@ -5,9 +5,10 @@
 #include "Engine/StaticMesh.h"
 #include "Materials/MaterialInterface.h"
 #include "ProceduralMeshComponent.h"
+#include "WildlineNeighborhoodConfig.h"
 
 FVector AWildlineWorld::CourseTarget(int32 Lane,int32 Checkpoint)const{
-    if(Checkpoint<=0)return CourseStart+FVector(0,Lane==1?170:-170,0);
+    if(Checkpoint<=0)return NeighborhoodConfig&&NeighborhoodConfig->Routes.IsValidIndex(Lane)?NeighborhoodConfig->Routes[Lane].Start:CourseStart+FVector(0,Lane==1?170:-170,0);
     if(Checkpoint>=5)return FeederLocation;
     const int32 Index=FMath::Clamp(Lane,0,1)*4+Checkpoint-1;
     return CoursePlatforms.IsValidIndex(Index)?CoursePlatforms[Index]:CourseStart;
@@ -19,6 +20,7 @@ bool AWildlineWorld::OnCourseTarget(FVector P,int32 Lane,int32 Checkpoint)const{
 }
 
 void AWildlineWorld::GenerateResidential(){
+    if(GenerateConfiguredNeighborhood())return;
     // Keep the wooded skyline, while clearing the playable neighborhood of trees,
     // rocks and undergrowth that could bypass the final feeder jump.
     RootComponent->SetMobility(EComponentMobility::Static);Generate();Terrain->SetMaterial(0,LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/Wildline/Residential/M_Lawn.M_Lawn")));Acorns->ClearInstances();AcornCaps->ClearInstances();AcornLocations.Empty();DenMesh->SetVisibility(false);

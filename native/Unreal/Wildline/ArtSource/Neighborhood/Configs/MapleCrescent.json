@@ -1,0 +1,4520 @@
+{
+  "id": "MapleCrescent",
+  "display_name": "Maple Crescent / utility easement",
+  "feeder": [
+    120,
+    0,
+    450
+  ],
+  "routes": [
+    {
+      "name": "Over the easement",
+      "start": [
+        -1530,
+        -400,
+        210
+      ],
+      "entry_trunk": [
+        -1370,
+        -400,
+        210
+      ],
+      "entry_climb_top": 825,
+      "entry_radius": 15,
+      "targets": [
+        [
+          -1050,
+          -400,
+          810
+        ],
+        [
+          -790,
+          -310,
+          750
+        ],
+        [
+          -510,
+          -190,
+          390
+        ],
+        [
+          -220,
+          -145,
+          300
+        ]
+      ],
+      "labels": [
+        "TELEPHONE LINE",
+        "OAK LIMB",
+        "CEDAR FENCE",
+        "TRAMPOLINE"
+      ],
+      "trampoline_launch_z": 620
+    },
+    {
+      "name": "Through the garden",
+      "start": [
+        -1170,
+        430,
+        210
+      ],
+      "entry_trunk": [
+        0,
+        0,
+        0
+      ],
+      "entry_climb_top": 0,
+      "entry_radius": 15,
+      "targets": [
+        [
+          -875,
+          430,
+          255
+        ],
+        [
+          -595,
+          370,
+          300
+        ],
+        [
+          -335,
+          300,
+          345
+        ],
+        [
+          -130,
+          205,
+          300
+        ]
+      ],
+      "labels": [
+        "RAISED PLANTER",
+        "POTTING BENCH",
+        "GARDEN FENCE",
+        "TRAMPOLINE"
+      ],
+      "trampoline_launch_z": 620
+    }
+  ],
+  "props": [
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_AsphaltStreet.SM_AsphaltStreet",
+      "position": [
+        0,
+        -4300,
+        213
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_ConcreteWalk.SM_ConcreteWalk",
+      "position": [
+        0,
+        -5020,
+        218
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -5400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -5200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -5000,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -4800,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -4600,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -4400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -4200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -4000,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -3800,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -3600,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -3400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -3200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -3000,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -2800,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -2600,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -2400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -2200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -2000,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -1800,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -1600,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -1400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -1200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -1000,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -800,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -600,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        0,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        600,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        800,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        1000,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        1200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        1400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        1600,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        1800,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        2000,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        2200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        2400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        2600,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        2800,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        3000,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        3200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        3400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        3600,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        3800,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        4000,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        4200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        4400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        4600,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        4800,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        5000,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        5200,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        5400,
+        -4868,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_ConcreteWalk.SM_ConcreteWalk",
+      "position": [
+        0,
+        -3580,
+        218
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -5400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -5200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -5000,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -4800,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -4600,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -4400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -4200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -4000,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -3800,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -3600,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -3400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -3200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -3000,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -2800,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -2600,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -2400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -2200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -2000,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -1800,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -1600,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -1400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -1200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -1000,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -800,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -600,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        -200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        0,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        600,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        800,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        1000,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        1200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        1400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        1600,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        1800,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        2000,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        2200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        2400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        2600,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        2800,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        3000,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        3200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        3400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        3600,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        3800,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        4000,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        4200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        4400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        4600,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        4800,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        5000,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        5200,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Curb.SM_Curb",
+      "position": [
+        5400,
+        -3732,
+        211
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_CapeCodHouse.SM_CapeCodHouse",
+      "position": [
+        -3100,
+        -2700,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitMailbox.SM_KitMailbox",
+      "position": [
+        -4030,
+        -3500,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Driveway.SM_Driveway",
+      "position": [
+        -2250,
+        -3450,
+        212
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -4360,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -4150,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -3940,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -3730,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -3520,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -3310,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -3100,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -2890,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -2680,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -2470,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -2260,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -2050,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -1840,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_metal_trash_can.SM_metal_trash_can",
+      "position": [
+        -2200,
+        -2050,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 23,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_hose_wall_mounted_01.SM_garden_hose_wall_mounted_01",
+      "position": [
+        -3300.0,
+        -2283.4845239520073,
+        275
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_planter_pot_clay.SM_planter_pot_clay",
+      "position": [
+        -3540,
+        -2140,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_gnome.SM_garden_gnome",
+      "position": [
+        -3820,
+        -2090,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Forest/Meshes/SM_OakA.SM_OakA",
+      "position": [
+        -4350,
+        -2250,
+        210
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ],
+      "yaw": -37,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_ColonialHouse.SM_ColonialHouse",
+      "position": [
+        0,
+        -2700,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitMailbox.SM_KitMailbox",
+      "position": [
+        -930,
+        -3500,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Driveway.SM_Driveway",
+      "position": [
+        850,
+        -3450,
+        212
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_metal_trash_can.SM_metal_trash_can",
+      "position": [
+        900,
+        -2050,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 23,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_hose_wall_mounted_01.SM_garden_hose_wall_mounted_01",
+      "position": [
+        -200.0,
+        -2283.4845239520073,
+        275
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_planter_pot_clay.SM_planter_pot_clay",
+      "position": [
+        -440,
+        -2140,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_gnome.SM_garden_gnome",
+      "position": [
+        -720,
+        -2090,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Forest/Meshes/SM_OakB.SM_OakB",
+      "position": [
+        -1250,
+        -2250,
+        210
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_CapeCodHouse.SM_CapeCodHouse",
+      "position": [
+        3100,
+        -2700,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitMailbox.SM_KitMailbox",
+      "position": [
+        2170,
+        -3500,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Driveway.SM_Driveway",
+      "position": [
+        3950,
+        -3450,
+        212
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        1840,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        2050,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        2260,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        2470,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        2680,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        2890,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        3100,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        3310,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        3520,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        3730,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        3940,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        4150,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        4360,
+        -1450,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_metal_trash_can.SM_metal_trash_can",
+      "position": [
+        4000,
+        -2050,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 23,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_hose_wall_mounted_01.SM_garden_hose_wall_mounted_01",
+      "position": [
+        2900.0,
+        -2283.4845239520073,
+        275
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_planter_pot_clay.SM_planter_pot_clay",
+      "position": [
+        2660,
+        -2140,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_gnome.SM_garden_gnome",
+      "position": [
+        2380,
+        -2090,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Forest/Meshes/SM_OakA.SM_OakA",
+      "position": [
+        1850,
+        -2250,
+        210
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ],
+      "yaw": 37,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitGardenHouse.SM_KitGardenHouse",
+      "position": [
+        -3100,
+        2900,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitMailbox.SM_KitMailbox",
+      "position": [
+        -4030,
+        2220,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitGarage.SM_KitGarage",
+      "position": [
+        -2130,
+        2900,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitLounge.SM_KitLounge",
+      "position": [
+        -2370,
+        1950,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": -20,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitPool.SM_KitPool",
+      "position": [
+        -2150,
+        3900,
+        110.9999771118164
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Driveway.SM_Driveway",
+      "position": [
+        -2250,
+        1400,
+        212
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -4360,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -4150,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -3940,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -3730,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -3520,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -3310,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -3100,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -2890,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -2680,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -2470,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -2260,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -2050,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -1840,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_metal_trash_can.SM_metal_trash_can",
+      "position": [
+        -2200,
+        3550,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 23,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_hose_wall_mounted_01.SM_garden_hose_wall_mounted_01",
+      "position": [
+        -3069.999998807907,
+        2576.1151010394096,
+        275
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_planter_pot_clay.SM_planter_pot_clay",
+      "position": [
+        -3540,
+        2340,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_gnome.SM_garden_gnome",
+      "position": [
+        -3820,
+        2290,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Forest/Meshes/SM_OakA.SM_OakA",
+      "position": [
+        -4350,
+        2500,
+        210
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ],
+      "yaw": -37,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitTwoStoryHouse.SM_KitTwoStoryHouse",
+      "position": [
+        0,
+        2900,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitMailbox.SM_KitMailbox",
+      "position": [
+        -930,
+        2220,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitGarage.SM_KitGarage",
+      "position": [
+        970,
+        2900,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitLounge.SM_KitLounge",
+      "position": [
+        730,
+        1950,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Driveway.SM_Driveway",
+      "position": [
+        850,
+        1400,
+        212
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -1260,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -1050,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -840,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -630,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -420,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -210,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        0,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        210,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        420,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        630,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        840,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        1050,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        1260,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_metal_trash_can.SM_metal_trash_can",
+      "position": [
+        900,
+        3550,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 23,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_hose_wall_mounted_01.SM_garden_hose_wall_mounted_01",
+      "position": [
+        290.00000953674316,
+        2727.1404916644096,
+        275
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_planter_pot_clay.SM_planter_pot_clay",
+      "position": [
+        -440,
+        2340,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_gnome.SM_garden_gnome",
+      "position": [
+        -720,
+        2290,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Forest/Meshes/SM_OakB.SM_OakB",
+      "position": [
+        -1250,
+        2500,
+        210
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitCottage.SM_KitCottage",
+      "position": [
+        3100,
+        2900,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitMailbox.SM_KitMailbox",
+      "position": [
+        2170,
+        2220,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitGarage.SM_KitGarage",
+      "position": [
+        4070,
+        2900,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitLounge.SM_KitLounge",
+      "position": [
+        3830,
+        1950,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 20,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_KitSwing.SM_KitSwing",
+      "position": [
+        4050,
+        2250,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_Driveway.SM_Driveway",
+      "position": [
+        3950,
+        1400,
+        212
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        1840,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        2050,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        2260,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        2470,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        2680,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        2890,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        3100,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        3310,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        3520,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        3730,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        3940,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        4150,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        4360,
+        1650,
+        210
+      ],
+      "scale": [
+        0.98,
+        1,
+        0.8
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_metal_trash_can.SM_metal_trash_can",
+      "position": [
+        4000,
+        3550,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 23,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_hose_wall_mounted_01.SM_garden_hose_wall_mounted_01",
+      "position": [
+        3300.0,
+        2627.703254878521,
+        275
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_planter_pot_clay.SM_planter_pot_clay",
+      "position": [
+        2660,
+        2340,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_gnome.SM_garden_gnome",
+      "position": [
+        2380,
+        2290,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Forest/Meshes/SM_OakA.SM_OakA",
+      "position": [
+        1850,
+        2500,
+        210
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ],
+      "yaw": 37,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_UtilityPole02.SM_UtilityPole02",
+      "position": [
+        -4800,
+        -3440,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_UtilityPole02.SM_UtilityPole02",
+      "position": [
+        -2400,
+        -3440,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_UtilityPole02.SM_UtilityPole02",
+      "position": [
+        0,
+        -3440,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_UtilityPole02.SM_UtilityPole02",
+      "position": [
+        2400,
+        -3440,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_UtilityPole02.SM_UtilityPole02",
+      "position": [
+        4800,
+        -3440,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_fire_hydrant.SM_fire_hydrant",
+      "position": [
+        -4200,
+        -3530,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_fire_hydrant.SM_fire_hydrant",
+      "position": [
+        4100,
+        -3530,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_outdoor_table_chair_set_01_table.SM_outdoor_table_chair_set_01_table",
+      "position": [
+        -2350,
+        550,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_plastic_monobloc_chair_01.SM_plastic_monobloc_chair_01",
+      "position": [
+        -2350,
+        400,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_plastic_monobloc_chair_01.SM_plastic_monobloc_chair_01",
+      "position": [
+        -2350,
+        700,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_sprinkler_01.SM_garden_sprinkler_01",
+      "position": [
+        -2010,
+        640,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_planter_box_01.SM_planter_box_01",
+      "position": [
+        -1900,
+        250,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_outdoor_table_chair_set_01_table.SM_outdoor_table_chair_set_01_table",
+      "position": [
+        2650,
+        450,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_plastic_monobloc_chair_01.SM_plastic_monobloc_chair_01",
+      "position": [
+        2650,
+        300,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_plastic_monobloc_chair_01.SM_plastic_monobloc_chair_01",
+      "position": [
+        2650,
+        600,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_garden_sprinkler_01.SM_garden_sprinkler_01",
+      "position": [
+        2990,
+        540,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_planter_box_01.SM_planter_box_01",
+      "position": [
+        3100,
+        150,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_CedarBirdFeeder.SM_CedarBirdFeeder",
+      "position": [
+        120,
+        0,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_UtilityPole01.SM_UtilityPole01",
+      "position": [
+        -1370,
+        -400,
+        210
+      ],
+      "scale": [
+        0.916666721304261,
+        0.3576408862633853,
+        1.0277323641638474
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_ServiceCable.SM_ServiceCable",
+      "position": [
+        -1210.0,
+        -400.0,
+        810.0
+      ],
+      "scale": [
+        1.1333333333333333,
+        1,
+        1
+      ],
+      "yaw": 0.0,
+      "pitch": 0.0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_ServiceCable.SM_ServiceCable",
+      "position": [
+        -920.0,
+        -355.0,
+        780.0
+      ],
+      "scale": [
+        1.005341856021915,
+        1,
+        1
+      ],
+      "yaw": 19.093492000485615,
+      "pitch": -12.302102964135491,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_CourseBranch.SM_CourseBranch",
+      "position": [
+        -790,
+        -310,
+        747
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Forest/Meshes/SM_OakA.SM_OakA",
+      "position": [
+        -885,
+        -295,
+        210
+      ],
+      "scale": [
+        0.34,
+        0.34,
+        0.34
+      ],
+      "yaw": 180,
+      "pitch": 0,
+      "collision": false
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -510,
+        -190,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        0.9473684210526315
+      ],
+      "yaw": -20,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_BackyardTrampoline.SM_BackyardTrampoline",
+      "position": [
+        -220,
+        -145,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PrivacyFence.SM_PrivacyFence",
+      "position": [
+        -335,
+        300,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        0.7105263157894737
+      ],
+      "yaw": 18,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_BackyardTrampoline.SM_BackyardTrampoline",
+      "position": [
+        -130,
+        205,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_planter_box_01.SM_planter_box_01",
+      "position": [
+        -875,
+        430,
+        210
+      ],
+      "scale": [
+        1.369695850285656,
+        2.5382675448549947,
+        1.058902653993445
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PlanterSoil.SM_PlanterSoil",
+      "position": [
+        -875,
+        430,
+        255
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Residential/Meshes/SM_PottingBench.SM_PottingBench",
+      "position": [
+        -595,
+        370,
+        210
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 12,
+      "pitch": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_vehCar_vehicle02_LOD.SM_vehCar_vehicle02_LOD",
+      "position": [
+        -4397.697319997344,
+        -3945.0,
+        214.66363735603082
+      ],
+      "scale": [
+        0.950125521967332,
+        0.950125521967332,
+        0.950125521967332
+      ],
+      "yaw": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_vehCar_vehicle03_LOD.SM_vehCar_vehicle03_LOD",
+      "position": [
+        -2112.060393563677,
+        -4650.0,
+        216.44181940130682
+      ],
+      "scale": [
+        0.8425344070408911,
+        0.8425344070408911,
+        0.8425344070408911
+      ],
+      "yaw": 180,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_vehTruck_vehicle04_LOD.SM_vehTruck_vehicle04_LOD",
+      "position": [
+        1420.4904094877552,
+        -3944.999992995335,
+        214.78673597786988
+      ],
+      "scale": [
+        0.9181154144596937,
+        0.9181154144596937,
+        0.9181154144596937
+      ],
+      "yaw": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_vehVan_vehicle01_LOD.SM_vehVan_vehicle01_LOD",
+      "position": [
+        4297.74430987148,
+        -4650.0,
+        214.34705804301507
+      ],
+      "scale": [
+        0.9497337556144527,
+        0.9497337556144527,
+        0.9497337556144527
+      ],
+      "yaw": 180,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_vehCar_vehicle02_LOD.SM_vehCar_vehicle02_LOD",
+      "position": [
+        -2250.000003624441,
+        1402.302672680403,
+        211.66363646063814
+      ],
+      "scale": [
+        0.9501254916932749,
+        0.9501254916932749,
+        0.9501254916932749
+      ],
+      "yaw": 90,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_vehCar_vehicle03_LOD.SM_vehCar_vehicle03_LOD",
+      "position": [
+        3850.0,
+        -3437.939606436323,
+        213.44181940130682
+      ],
+      "scale": [
+        0.8425344070408911,
+        0.8425344070408911,
+        0.8425344070408911
+      ],
+      "yaw": 90,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_Bench03.SM_Bench03",
+      "position": [
+        -3003.962305776292,
+        1150.0,
+        210.08655098295483
+      ],
+      "scale": [
+        0.7762169304040988,
+        0.7762169304040988,
+        0.7762169304040988
+      ],
+      "yaw": 180,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_TrashCan02.SM_TrashCan02",
+      "position": [
+        -2850.0,
+        1150.0,
+        210.83215502597636
+      ],
+      "scale": [
+        0.5420465034552451,
+        0.5420465034552451,
+        0.5420465034552451
+      ],
+      "yaw": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_Bench03.SM_Bench03",
+      "position": [
+        2495.5096394250995,
+        1149.9999559627536,
+        210.75609603283473
+      ],
+      "scale": [
+        0.7696066600066233,
+        0.7696066600066233,
+        0.7696066600066233
+      ],
+      "yaw": 180,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_TrashCan02.SM_TrashCan02",
+      "position": [
+        2650.0006031032103,
+        1149.9199624989337,
+        210.93819631933175
+      ],
+      "scale": [
+        0.5341212433054185,
+        0.5341212433054185,
+        0.5341212433054185
+      ],
+      "yaw": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_LampPost01.SM_LampPost01",
+      "position": [
+        -4899.999998092651,
+        -3565.0,
+        210.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_LampPost01.SM_LampPost01",
+      "position": [
+        5000.014399528503,
+        -3565.341643333435,
+        210.003173828125
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": true
+    },
+    {
+      "mesh": "/Game/Wildline/Fab/Meshes/SM_DrinkingFountain.SM_DrinkingFountain",
+      "position": [
+        3300.0,
+        1100.0,
+        210.0
+      ],
+      "scale": [
+        1.025259490090114,
+        1.025259490090114,
+        1.025259490090114
+      ],
+      "yaw": 90,
+      "collision": true
+    }
+  ]
+}

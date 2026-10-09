@@ -1,0 +1,782 @@
+{
+  "Diffuse": {
+    "4k": {
+      "jpg": {
+        "size": 9720695,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_diff_4k.jpg",
+        "md5": "ec02fc42011faf61dbfa2c52a97fad42"
+      },
+      "png": {
+        "size": 44620304,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_sprinkler_01/garden_sprinkler_01_diff_4k.png",
+        "md5": "dffa88412fb092ccd0b952f6376a30d7"
+      },
+      "exr": {
+        "size": 18480182,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_diff_4k.exr",
+        "md5": "acceb6483e1e2481d721198b5a486b83"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2662193,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_diff_2k.jpg",
+        "md5": "255fc9dcc9fd5986176b6ce185350cc3"
+      },
+      "png": {
+        "size": 15122591,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_sprinkler_01/garden_sprinkler_01_diff_2k.png",
+        "md5": "b68324c8beff31899155af8e89c94912"
+      },
+      "exr": {
+        "size": 4943044,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_diff_2k.exr",
+        "md5": "fa10006325c2d438a927a583eac177b8"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 743201,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_diff_1k.jpg",
+        "md5": "d039be3d1dc799ea5ddbd120fce6cf11"
+      },
+      "png": {
+        "size": 4493193,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_sprinkler_01/garden_sprinkler_01_diff_1k.png",
+        "md5": "e03878e397dbfa280aa4a5c5bb797e8c"
+      },
+      "exr": {
+        "size": 1368103,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_diff_1k.exr",
+        "md5": "944cd585e5f26b64a80a90854d1bee49"
+      }
+    }
+  },
+  "nor_dx": {
+    "4k": {
+      "jpg": {
+        "size": 13987395,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_nor_dx_4k.jpg",
+        "md5": "ab7cd2e8ebc220b74f4643cb7827eba1"
+      },
+      "png": {
+        "size": 66746690,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_sprinkler_01/garden_sprinkler_01_nor_dx_4k.png",
+        "md5": "abf97e9f44918d74baa2a5d6f7797d74"
+      },
+      "exr": {
+        "size": 28166261,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_nor_dx_4k.exr",
+        "md5": "44698201690ecc92f5b19d7ced8b9725"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3504820,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_nor_dx_2k.jpg",
+        "md5": "c7d3af33290410aabf638a7656fd4771"
+      },
+      "png": {
+        "size": 18855105,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_sprinkler_01/garden_sprinkler_01_nor_dx_2k.png",
+        "md5": "bdd7d4a46a55f4d32a12c0477dff8577"
+      },
+      "exr": {
+        "size": 7466095,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_nor_dx_2k.exr",
+        "md5": "cf368c4d62739b83b5e1c436d4fd307d"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 884134,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_nor_dx_1k.jpg",
+        "md5": "8d8412d1b27e15b8acb4c4671791b1d7"
+      },
+      "png": {
+        "size": 5050163,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_sprinkler_01/garden_sprinkler_01_nor_dx_1k.png",
+        "md5": "4f55b29bd320112ad40a4402c26b5399"
+      },
+      "exr": {
+        "size": 1933388,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_nor_dx_1k.exr",
+        "md5": "4bad74c95accb09550eddad47a94cd59"
+      }
+    }
+  },
+  "nor_gl": {
+    "4k": {
+      "jpg": {
+        "size": 13158569,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_4k.jpg",
+        "md5": "6150883ea38aa107e4dc916167e08869"
+      },
+      "png": {
+        "size": 67056456,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_4k.png",
+        "md5": "0fadd933491c8efd95adb286747ad949"
+      },
+      "exr": {
+        "size": 28164279,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_4k.exr",
+        "md5": "48d8bb7a07e17bacfa7d22fd33ca809c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3394327,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_2k.jpg",
+        "md5": "dabc6fb041fdc36f74f96632ed906ffd"
+      },
+      "png": {
+        "size": 18852704,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_2k.png",
+        "md5": "2c7801c18ab863369b0ffb17778e6258"
+      },
+      "exr": {
+        "size": 7466153,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_2k.exr",
+        "md5": "655d10ed8694231694176f3736654824"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 873183,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_1k.jpg",
+        "md5": "884bef8a6e7f0a20a3bafa491a7bf0a1"
+      },
+      "png": {
+        "size": 5049394,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_1k.png",
+        "md5": "b4d813a4f00b208aa8b546686cac2e7f"
+      },
+      "exr": {
+        "size": 1937300,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_1k.exr",
+        "md5": "54fd2335f1be766cc11505e99427bcd3"
+      }
+    }
+  },
+  "blend": {
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/garden_sprinkler_01_nor_gl_4k.exr": {
+            "size": 28164279,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_4k.exr",
+            "md5": "48d8bb7a07e17bacfa7d22fd33ca809c"
+          },
+          "textures/garden_sprinkler_01_metal_4k.exr": {
+            "size": 303968,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_metal_4k.exr",
+            "md5": "f1595c664d5ea0f3b849eaf796fb7a95"
+          },
+          "textures/garden_sprinkler_01_rough_4k.exr": {
+            "size": 13169464,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_rough_4k.exr",
+            "md5": "1c04d2df706171e43d9bd574ec6a4bd6"
+          },
+          "textures/garden_sprinkler_01_diff_4k.jpg": {
+            "size": 9720695,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_diff_4k.jpg",
+            "md5": "ec02fc42011faf61dbfa2c52a97fad42"
+          }
+        },
+        "size": 304911,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/garden_sprinkler_01/garden_sprinkler_01_4k.blend",
+        "md5": "b2e1e0cb54121e106c0b94b0e3239b47"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/garden_sprinkler_01_diff_2k.jpg": {
+            "size": 2662193,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_diff_2k.jpg",
+            "md5": "255fc9dcc9fd5986176b6ce185350cc3"
+          },
+          "textures/garden_sprinkler_01_rough_2k.exr": {
+            "size": 4078969,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_rough_2k.exr",
+            "md5": "7f20795cb198cfc9f7e8aa7257133f45"
+          },
+          "textures/garden_sprinkler_01_nor_gl_2k.exr": {
+            "size": 7466153,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_2k.exr",
+            "md5": "655d10ed8694231694176f3736654824"
+          },
+          "textures/garden_sprinkler_01_metal_2k.exr": {
+            "size": 114940,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_metal_2k.exr",
+            "md5": "7b373673c82c7f00ab74dc340b3fe4b7"
+          }
+        },
+        "size": 304865,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/garden_sprinkler_01/garden_sprinkler_01_2k.blend",
+        "md5": "cbe6f03e05dbd54a0f8d5742b9ccb134"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/garden_sprinkler_01_metal_1k.exr": {
+            "size": 38203,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_metal_1k.exr",
+            "md5": "9f48b16d541179377959e0c287a1ef38"
+          },
+          "textures/garden_sprinkler_01_nor_gl_1k.exr": {
+            "size": 1937300,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_1k.exr",
+            "md5": "54fd2335f1be766cc11505e99427bcd3"
+          },
+          "textures/garden_sprinkler_01_diff_1k.jpg": {
+            "size": 743201,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_diff_1k.jpg",
+            "md5": "d039be3d1dc799ea5ddbd120fce6cf11"
+          },
+          "textures/garden_sprinkler_01_rough_1k.exr": {
+            "size": 1186821,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_rough_1k.exr",
+            "md5": "cba875894a9827449317c4b0e43ffa7c"
+          }
+        },
+        "size": 305020,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/garden_sprinkler_01/garden_sprinkler_01_1k.blend",
+        "md5": "68e243f1b32ef37c2b950ea85744cbae"
+      }
+    }
+  },
+  "gltf": {
+    "4k": {
+      "gltf": {
+        "include": {
+          "garden_sprinkler_01.bin": {
+            "size": 307520,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_sprinkler_01/garden_sprinkler_01.bin",
+            "md5": "8e42e466e2c0dc00146c2e066477e130"
+          },
+          "textures/garden_sprinkler_01_nor_gl_4k.jpg": {
+            "size": 13158569,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_4k.jpg",
+            "md5": "6150883ea38aa107e4dc916167e08869"
+          },
+          "textures/garden_sprinkler_01_diff_4k.jpg": {
+            "size": 9720695,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_diff_4k.jpg",
+            "md5": "ec02fc42011faf61dbfa2c52a97fad42"
+          },
+          "textures/garden_sprinkler_01_arm_4k.jpg": {
+            "size": 13290088,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_arm_4k.jpg",
+            "md5": "591185c2d6bf2b0ae81da63815843968"
+          }
+        },
+        "size": 9574,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_sprinkler_01/garden_sprinkler_01_4k.gltf",
+        "md5": "19359616edd00179e3c4fb55b561491e"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "garden_sprinkler_01.bin": {
+            "size": 307520,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_sprinkler_01/garden_sprinkler_01.bin",
+            "md5": "8e42e466e2c0dc00146c2e066477e130"
+          },
+          "textures/garden_sprinkler_01_diff_2k.jpg": {
+            "size": 2662193,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_diff_2k.jpg",
+            "md5": "255fc9dcc9fd5986176b6ce185350cc3"
+          },
+          "textures/garden_sprinkler_01_arm_2k.jpg": {
+            "size": 3596221,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_arm_2k.jpg",
+            "md5": "dd171d32dfd81473bb48706a7c64f535"
+          },
+          "textures/garden_sprinkler_01_nor_gl_2k.jpg": {
+            "size": 3394327,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_2k.jpg",
+            "md5": "dabc6fb041fdc36f74f96632ed906ffd"
+          }
+        },
+        "size": 9574,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/garden_sprinkler_01/garden_sprinkler_01_2k.gltf",
+        "md5": "612cb5691fcbf024eb2f54e90d3bd707"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "garden_sprinkler_01.bin": {
+            "size": 307520,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_sprinkler_01/garden_sprinkler_01.bin",
+            "md5": "8e42e466e2c0dc00146c2e066477e130"
+          },
+          "textures/garden_sprinkler_01_nor_gl_1k.jpg": {
+            "size": 873183,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_1k.jpg",
+            "md5": "884bef8a6e7f0a20a3bafa491a7bf0a1"
+          },
+          "textures/garden_sprinkler_01_diff_1k.jpg": {
+            "size": 743201,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_diff_1k.jpg",
+            "md5": "d039be3d1dc799ea5ddbd120fce6cf11"
+          },
+          "textures/garden_sprinkler_01_arm_1k.jpg": {
+            "size": 983590,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_arm_1k.jpg",
+            "md5": "35f5ab0d0fde5efe21aca417f850ceed"
+          }
+        },
+        "size": 9574,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/garden_sprinkler_01/garden_sprinkler_01_1k.gltf",
+        "md5": "d5318fe37a6ab4ec19e551411f7bdc71"
+      }
+    }
+  },
+  "usd": {
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/garden_sprinkler_01_nor_gl_4k.exr": {
+            "size": 28164279,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_4k.exr",
+            "md5": "48d8bb7a07e17bacfa7d22fd33ca809c"
+          },
+          "textures/garden_sprinkler_01_metal_4k.exr": {
+            "size": 303968,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_metal_4k.exr",
+            "md5": "f1595c664d5ea0f3b849eaf796fb7a95"
+          },
+          "textures/garden_sprinkler_01_rough_4k.exr": {
+            "size": 13169464,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_rough_4k.exr",
+            "md5": "1c04d2df706171e43d9bd574ec6a4bd6"
+          },
+          "textures/garden_sprinkler_01_diff_4k.jpg": {
+            "size": 9720695,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_diff_4k.jpg",
+            "md5": "ec02fc42011faf61dbfa2c52a97fad42"
+          }
+        },
+        "size": 429968,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/garden_sprinkler_01/garden_sprinkler_01_4k.usdc",
+        "md5": "4da644abee03cfa1b8615eb55184ff68"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/garden_sprinkler_01_diff_2k.jpg": {
+            "size": 2662193,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_diff_2k.jpg",
+            "md5": "255fc9dcc9fd5986176b6ce185350cc3"
+          },
+          "textures/garden_sprinkler_01_rough_2k.exr": {
+            "size": 4078969,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_rough_2k.exr",
+            "md5": "7f20795cb198cfc9f7e8aa7257133f45"
+          },
+          "textures/garden_sprinkler_01_nor_gl_2k.exr": {
+            "size": 7466153,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_2k.exr",
+            "md5": "655d10ed8694231694176f3736654824"
+          },
+          "textures/garden_sprinkler_01_metal_2k.exr": {
+            "size": 114940,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_metal_2k.exr",
+            "md5": "7b373673c82c7f00ab74dc340b3fe4b7"
+          }
+        },
+        "size": 429969,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/garden_sprinkler_01/garden_sprinkler_01_2k.usdc",
+        "md5": "f0d6e7a9ae14e39bf37bd855ff96da30"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/garden_sprinkler_01_metal_1k.exr": {
+            "size": 38203,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_metal_1k.exr",
+            "md5": "9f48b16d541179377959e0c287a1ef38"
+          },
+          "textures/garden_sprinkler_01_nor_gl_1k.exr": {
+            "size": 1937300,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_1k.exr",
+            "md5": "54fd2335f1be766cc11505e99427bcd3"
+          },
+          "textures/garden_sprinkler_01_diff_1k.jpg": {
+            "size": 743201,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_diff_1k.jpg",
+            "md5": "d039be3d1dc799ea5ddbd120fce6cf11"
+          },
+          "textures/garden_sprinkler_01_rough_1k.exr": {
+            "size": 1186821,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_rough_1k.exr",
+            "md5": "cba875894a9827449317c4b0e43ffa7c"
+          }
+        },
+        "size": 429934,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/garden_sprinkler_01/garden_sprinkler_01_1k.usdc",
+        "md5": "5011e9f8d15aef27ade565963d77dd6f"
+      }
+    }
+  },
+  "Metal": {
+    "4k": {
+      "jpg": {
+        "size": 553067,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_metal_4k.jpg",
+        "md5": "8aa1178e1bc4d8d80912a05d539eed73"
+      },
+      "png": {
+        "size": 243803,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_sprinkler_01/garden_sprinkler_01_metal_4k.png",
+        "md5": "92392836e0864825c2d742bc73646ca1"
+      },
+      "exr": {
+        "size": 303968,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_metal_4k.exr",
+        "md5": "f1595c664d5ea0f3b849eaf796fb7a95"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 157507,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_metal_2k.jpg",
+        "md5": "5e59d7726d55476576323be87fb84370"
+      },
+      "png": {
+        "size": 95162,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_sprinkler_01/garden_sprinkler_01_metal_2k.png",
+        "md5": "0bd2dadd333b1f0883282502fc09c006"
+      },
+      "exr": {
+        "size": 114940,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_metal_2k.exr",
+        "md5": "7b373673c82c7f00ab74dc340b3fe4b7"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 43540,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_metal_1k.jpg",
+        "md5": "c3463c488fe29bbbb3a16b6e95785c9d"
+      },
+      "png": {
+        "size": 36201,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_sprinkler_01/garden_sprinkler_01_metal_1k.png",
+        "md5": "e929b90378732c7c8efec8e8755dfe64"
+      },
+      "exr": {
+        "size": 38203,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_metal_1k.exr",
+        "md5": "9f48b16d541179377959e0c287a1ef38"
+      }
+    }
+  },
+  "arm": {
+    "4k": {
+      "jpg": {
+        "size": 13290088,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_arm_4k.jpg",
+        "md5": "591185c2d6bf2b0ae81da63815843968"
+      },
+      "png": {
+        "size": 16624110,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_sprinkler_01/garden_sprinkler_01_arm_4k.png",
+        "md5": "aca0441c8717806bfa3cdf63131aa5f8"
+      },
+      "exr": {
+        "size": 27494114,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_arm_4k.exr",
+        "md5": "423d0e1b3a34ce1a55a71c8d0ff65afd"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3596221,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_arm_2k.jpg",
+        "md5": "dd171d32dfd81473bb48706a7c64f535"
+      },
+      "png": {
+        "size": 4502133,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_sprinkler_01/garden_sprinkler_01_arm_2k.png",
+        "md5": "854acd45c31232985e65e118bcc3722a"
+      },
+      "exr": {
+        "size": 7545877,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_arm_2k.exr",
+        "md5": "4cc942c3795bc4cccb1197e7272ad8f5"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 983590,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_arm_1k.jpg",
+        "md5": "35f5ab0d0fde5efe21aca417f850ceed"
+      },
+      "png": {
+        "size": 1271571,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_sprinkler_01/garden_sprinkler_01_arm_1k.png",
+        "md5": "18d49dcd347f9b2f822b3b7209168a38"
+      },
+      "exr": {
+        "size": 2086857,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_arm_1k.exr",
+        "md5": "41a6f8dbc3f01af9ca5b5549368a684c"
+      }
+    }
+  },
+  "fbx": {
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/garden_sprinkler_01_nor_gl_4k.exr": {
+            "size": 28164279,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_4k.exr",
+            "md5": "48d8bb7a07e17bacfa7d22fd33ca809c"
+          },
+          "textures/garden_sprinkler_01_metal_4k.exr": {
+            "size": 303968,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_metal_4k.exr",
+            "md5": "f1595c664d5ea0f3b849eaf796fb7a95"
+          },
+          "textures/garden_sprinkler_01_rough_4k.exr": {
+            "size": 13169464,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_rough_4k.exr",
+            "md5": "1c04d2df706171e43d9bd574ec6a4bd6"
+          },
+          "textures/garden_sprinkler_01_diff_4k.jpg": {
+            "size": 9720695,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_diff_4k.jpg",
+            "md5": "ec02fc42011faf61dbfa2c52a97fad42"
+          }
+        },
+        "size": 299468,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/garden_sprinkler_01/garden_sprinkler_01_4k.fbx",
+        "md5": "ec43eb012aeeecf675b4632d7ce43eee"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/garden_sprinkler_01_diff_2k.jpg": {
+            "size": 2662193,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_diff_2k.jpg",
+            "md5": "255fc9dcc9fd5986176b6ce185350cc3"
+          },
+          "textures/garden_sprinkler_01_rough_2k.exr": {
+            "size": 4078969,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_rough_2k.exr",
+            "md5": "7f20795cb198cfc9f7e8aa7257133f45"
+          },
+          "textures/garden_sprinkler_01_nor_gl_2k.exr": {
+            "size": 7466153,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_2k.exr",
+            "md5": "655d10ed8694231694176f3736654824"
+          },
+          "textures/garden_sprinkler_01_metal_2k.exr": {
+            "size": 114940,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_metal_2k.exr",
+            "md5": "7b373673c82c7f00ab74dc340b3fe4b7"
+          }
+        },
+        "size": 299468,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/garden_sprinkler_01/garden_sprinkler_01_2k.fbx",
+        "md5": "d120b43c34a0679645d4d398a0d87f61"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/garden_sprinkler_01_metal_1k.exr": {
+            "size": 38203,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_metal_1k.exr",
+            "md5": "9f48b16d541179377959e0c287a1ef38"
+          },
+          "textures/garden_sprinkler_01_nor_gl_1k.exr": {
+            "size": 1937300,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_nor_gl_1k.exr",
+            "md5": "54fd2335f1be766cc11505e99427bcd3"
+          },
+          "textures/garden_sprinkler_01_diff_1k.jpg": {
+            "size": 743201,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_diff_1k.jpg",
+            "md5": "d039be3d1dc799ea5ddbd120fce6cf11"
+          },
+          "textures/garden_sprinkler_01_rough_1k.exr": {
+            "size": 1186821,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_rough_1k.exr",
+            "md5": "cba875894a9827449317c4b0e43ffa7c"
+          }
+        },
+        "size": 299468,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/garden_sprinkler_01/garden_sprinkler_01_1k.fbx",
+        "md5": "b5cd275c6119fb9d0ea9c7ddb5fa1b18"
+      }
+    }
+  },
+  "Rough": {
+    "4k": {
+      "jpg": {
+        "size": 10713182,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_rough_4k.jpg",
+        "md5": "82141d9380b5a6de6c3050415625f484"
+      },
+      "png": {
+        "size": 14341833,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_sprinkler_01/garden_sprinkler_01_rough_4k.png",
+        "md5": "bb65887cbf6ed1a8e9cb860150303533"
+      },
+      "exr": {
+        "size": 13169464,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_rough_4k.exr",
+        "md5": "1c04d2df706171e43d9bd574ec6a4bd6"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2882573,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_rough_2k.jpg",
+        "md5": "05517466bf37a83f77035e745568754a"
+      },
+      "png": {
+        "size": 5431224,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_sprinkler_01/garden_sprinkler_01_rough_2k.png",
+        "md5": "e28d545a390ff0cb8a01faa8274c01d8"
+      },
+      "exr": {
+        "size": 4078969,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_rough_2k.exr",
+        "md5": "7f20795cb198cfc9f7e8aa7257133f45"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 777530,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_rough_1k.jpg",
+        "md5": "9fdb00a99307c02aae30d3b7b347bd87"
+      },
+      "png": {
+        "size": 1616056,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_sprinkler_01/garden_sprinkler_01_rough_1k.png",
+        "md5": "2a3aa0d5baa092f93ebcf15a13ae758c"
+      },
+      "exr": {
+        "size": 1186821,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_rough_1k.exr",
+        "md5": "cba875894a9827449317c4b0e43ffa7c"
+      }
+    }
+  },
+  "Displacement": {
+    "4k": {
+      "jpg": {
+        "size": 2071260,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_height_4k.jpg",
+        "md5": "9588437794b365ea40e55b6206be875e"
+      },
+      "png": {
+        "size": 13244941,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_sprinkler_01/garden_sprinkler_01_height_4k.png",
+        "md5": "8ab82965fbc6a21676bb0d6cb9fbe9ce"
+      },
+      "exr": {
+        "size": 7124142,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_height_4k.exr",
+        "md5": "75b58d664b48ea86cee8ddf171cad111"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 596259,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_height_2k.jpg",
+        "md5": "36929ca03062cd45a093f2dfa0a55c0e"
+      },
+      "png": {
+        "size": 4066125,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_sprinkler_01/garden_sprinkler_01_height_2k.png",
+        "md5": "3e3a1a011ffb79660bfc088e2cf46bfc"
+      },
+      "exr": {
+        "size": 2151333,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_height_2k.exr",
+        "md5": "c76bfc365ee929a412ab50c7f177816c"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 164098,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_height_1k.jpg",
+        "md5": "0b6adc9c324bef451335bee221eb026b"
+      },
+      "png": {
+        "size": 1171456,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_sprinkler_01/garden_sprinkler_01_height_1k.png",
+        "md5": "9dc1a099083b58e6948844026c435794"
+      },
+      "exr": {
+        "size": 622043,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_height_1k.exr",
+        "md5": "41f7b119f269a2bb9fd1e20f3522c1c3"
+      }
+    }
+  },
+  "AO": {
+    "4k": {
+      "jpg": {
+        "size": 4537180,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_sprinkler_01/garden_sprinkler_01_ao_4k.jpg",
+        "md5": "13fd67836d5086d1c0ebcda458d8e89b"
+      },
+      "png": {
+        "size": 5614014,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_sprinkler_01/garden_sprinkler_01_ao_4k.png",
+        "md5": "1b0e1728de9c2c3eb8d985254f301869"
+      },
+      "exr": {
+        "size": 6600521,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_sprinkler_01/garden_sprinkler_01_ao_4k.exr",
+        "md5": "86ab67e2531453b3b6ce62d58de7114c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1243232,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_sprinkler_01/garden_sprinkler_01_ao_2k.jpg",
+        "md5": "b31855368a855e20641d2dd32d35492e"
+      },
+      "png": {
+        "size": 3404506,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_sprinkler_01/garden_sprinkler_01_ao_2k.png",
+        "md5": "81bf73036530a9a0ef74fccfadd1f339"
+      },
+      "exr": {
+        "size": 2674247,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_sprinkler_01/garden_sprinkler_01_ao_2k.exr",
+        "md5": "7bfc37242042a5165c088b4310e43dcf"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 406217,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_sprinkler_01/garden_sprinkler_01_ao_1k.jpg",
+        "md5": "65464b52f9fa5226d8ba3529066b4a90"
+      },
+      "png": {
+        "size": 1293735,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_sprinkler_01/garden_sprinkler_01_ao_1k.png",
+        "md5": "e1be04912cf8ba210c9b7eab10c7caf3"
+      },
+      "exr": {
+        "size": 911752,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_sprinkler_01/garden_sprinkler_01_ao_1k.exr",
+        "md5": "382284edd7bf7893220bb19db1a299b4"
+      }
+    }
+  }
+}

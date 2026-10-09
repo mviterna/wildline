@@ -1,0 +1,835 @@
+{
+  "Diffuse": {
+    "4k": {
+      "jpg": {
+        "size": 4755750,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_diff_4k.jpg",
+        "md5": "d27c5a5633463525104882c58186121e"
+      },
+      "png": {
+        "size": 9183757,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_gnome/garden_gnome_diff_4k.png",
+        "md5": "ef87b06f1b4a607325882ad6493359f6"
+      },
+      "exr": {
+        "size": 9388123,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_diff_4k.exr",
+        "md5": "e2a6648dd8412207605fedf885bca5ca"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1560793,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_diff_2k.jpg",
+        "md5": "9ca9c4987c493f1095567c554c55fc27"
+      },
+      "png": {
+        "size": 2893700,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_gnome/garden_gnome_diff_2k.png",
+        "md5": "0cca064739298db048614d9214d7ca03"
+      },
+      "exr": {
+        "size": 3058441,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_diff_2k.exr",
+        "md5": "f459719895cbc8c1c9242a79fd32a1f1"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 530382,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_diff_1k.jpg",
+        "md5": "dc4d0b525dacde8715f8bf8e6860aa27"
+      },
+      "png": {
+        "size": 872515,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_gnome/garden_gnome_diff_1k.png",
+        "md5": "fb4f37da47544e0ffac1970ec2b4b21e"
+      },
+      "exr": {
+        "size": 1065656,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_diff_1k.exr",
+        "md5": "f66b0ac126c7ff60d8c1f1222bba525e"
+      }
+    }
+  },
+  "diffuse_colortint": {
+    "4k": {
+      "jpg": {
+        "size": 4422691,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_diffuse_colortint_4k.jpg",
+        "md5": "ede82ccc7b0b28f0afec6263bf37dca7"
+      },
+      "png": {
+        "size": 7826729,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_gnome/garden_gnome_diffuse_colortint_4k.png",
+        "md5": "db808955e073be7ace8bbd00afd95c38"
+      },
+      "exr": {
+        "size": 6653100,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_diffuse_colortint_4k.exr",
+        "md5": "f2284b56247de3ae3ebddbb75600d8cf"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1453640,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_diffuse_colortint_2k.jpg",
+        "md5": "15df89721f3e7fd95cc3e6de4639f9c6"
+      },
+      "png": {
+        "size": 2528946,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_gnome/garden_gnome_diffuse_colortint_2k.png",
+        "md5": "e95bc9297ab39db44b5d17cdcf082336"
+      },
+      "exr": {
+        "size": 2300273,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_diffuse_colortint_2k.exr",
+        "md5": "6f59454d929ffd15d74bed75fee2732c"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 493951,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_diffuse_colortint_1k.jpg",
+        "md5": "8a7cf9ddd128d86a6b2b84a1b73e9712"
+      },
+      "png": {
+        "size": 782675,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_gnome/garden_gnome_diffuse_colortint_1k.png",
+        "md5": "dd9670b7f57a58190345c7b99fa97cc3"
+      },
+      "exr": {
+        "size": 827958,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_diffuse_colortint_1k.exr",
+        "md5": "db7cf330a65d740ee4d18467c28caae1"
+      }
+    }
+  },
+  "nor_dx": {
+    "4k": {
+      "jpg": {
+        "size": 6664267,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_nor_dx_4k.jpg",
+        "md5": "20473b3121e57d301830aa5ba1d183d8"
+      },
+      "png": {
+        "size": 12053243,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_gnome/garden_gnome_nor_dx_4k.png",
+        "md5": "96136843c84ba6f432c4a02923f052e4"
+      },
+      "exr": {
+        "size": 13514005,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_nor_dx_4k.exr",
+        "md5": "a66dc1e7628c0433baa3ee71e2d4ecb3"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2027399,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_nor_dx_2k.jpg",
+        "md5": "7203cdef443848660249f65d8a1cbacb"
+      },
+      "png": {
+        "size": 3814532,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_gnome/garden_gnome_nor_dx_2k.png",
+        "md5": "b7e6ce94d2c50f1c4068904c8a02f3c3"
+      },
+      "exr": {
+        "size": 4542701,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_nor_dx_2k.exr",
+        "md5": "9ddf2956be7ca9822dcba0a151bba122"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 608195,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_nor_dx_1k.jpg",
+        "md5": "b1107af11844d4e9045dfc6404f50cc0"
+      },
+      "png": {
+        "size": 1114052,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_gnome/garden_gnome_nor_dx_1k.png",
+        "md5": "643eb41b8a1cb46f9624acd0cde29005"
+      },
+      "exr": {
+        "size": 1446851,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_nor_dx_1k.exr",
+        "md5": "ed22afe0b05056d5eeb24c9a6ad8fdd8"
+      }
+    }
+  },
+  "blend": {
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/garden_gnome_nor_gl_4k.exr": {
+            "size": 13285586,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_nor_gl_4k.exr",
+            "md5": "048b92a50df52e069a25c11b59fae558"
+          },
+          "textures/garden_gnome_rough_4k.exr": {
+            "size": 6099889,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_rough_4k.exr",
+            "md5": "e9b5ef3ad628d28087e2d2170c260dc3"
+          },
+          "textures/garden_gnome_diff_4k.jpg": {
+            "size": 4755750,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_diff_4k.jpg",
+            "md5": "d27c5a5633463525104882c58186121e"
+          },
+          "textures/garden_gnome_metal_4k.exr": {
+            "size": 53903,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_metal_4k.exr",
+            "md5": "7f84a0cc92404af92807e26085592e36"
+          }
+        },
+        "size": 1001156,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/garden_gnome/garden_gnome_4k.blend",
+        "md5": "9df50d5cf03ff14bbc5e429bbf5d4d02"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/garden_gnome_diff_2k.jpg": {
+            "size": 1560793,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_diff_2k.jpg",
+            "md5": "9ca9c4987c493f1095567c554c55fc27"
+          },
+          "textures/garden_gnome_metal_2k.exr": {
+            "size": 24506,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_metal_2k.exr",
+            "md5": "55c276baa4657de3b6b4d229ef910e05"
+          },
+          "textures/garden_gnome_rough_2k.exr": {
+            "size": 1904308,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_rough_2k.exr",
+            "md5": "1eaca8c43a16535055830ad0388bd52e"
+          },
+          "textures/garden_gnome_nor_gl_2k.exr": {
+            "size": 4353789,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_nor_gl_2k.exr",
+            "md5": "15f100054f73f436513f04014b36a1cc"
+          }
+        },
+        "size": 1001292,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/garden_gnome/garden_gnome_2k.blend",
+        "md5": "848e53cc8503061e9a91f7bf811e0008"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/garden_gnome_rough_1k.exr": {
+            "size": 603755,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_rough_1k.exr",
+            "md5": "ec791609e85d1fcd37aaf90ee691c206"
+          },
+          "textures/garden_gnome_nor_gl_1k.exr": {
+            "size": 1369566,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_nor_gl_1k.exr",
+            "md5": "edde1ead54ac7465e1ab985b8bb3ed47"
+          },
+          "textures/garden_gnome_diff_1k.jpg": {
+            "size": 530382,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_diff_1k.jpg",
+            "md5": "dc4d0b525dacde8715f8bf8e6860aa27"
+          },
+          "textures/garden_gnome_metal_1k.exr": {
+            "size": 11915,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_metal_1k.exr",
+            "md5": "f3463bf3e2e0baf4c2d6ed6c31d97af8"
+          }
+        },
+        "size": 1001442,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/garden_gnome/garden_gnome_1k.blend",
+        "md5": "b722777b3518f3dd257a5d6db6193bb2"
+      }
+    }
+  },
+  "tintmask": {
+    "4k": {
+      "jpg": {
+        "size": 603868,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_tintmask_4k.jpg",
+        "md5": "e4379375aa7c151552e0e7cfd7e1203f"
+      },
+      "png": {
+        "size": 631023,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_gnome/garden_gnome_tintmask_4k.png",
+        "md5": "25726e883ad46c648445114d598c37fb"
+      },
+      "exr": {
+        "size": 770519,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_tintmask_4k.exr",
+        "md5": "60b437c71b08a8175e933c12772512c7"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 240317,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_tintmask_2k.jpg",
+        "md5": "39083028b63bbfb74d72b72a2d98afba"
+      },
+      "png": {
+        "size": 250742,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_gnome/garden_gnome_tintmask_2k.png",
+        "md5": "0ad5a644a581ad73387225a9f9c48e54"
+      },
+      "exr": {
+        "size": 343105,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_tintmask_2k.exr",
+        "md5": "11400a2a98e56157d0553ab359f25250"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 111798,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_tintmask_1k.jpg",
+        "md5": "263945eba7aed42934e08551cfe3d0ad"
+      },
+      "png": {
+        "size": 100566,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_gnome/garden_gnome_tintmask_1k.png",
+        "md5": "dee3808787ba62054498b4b8004f6e32"
+      },
+      "exr": {
+        "size": 163271,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_tintmask_1k.exr",
+        "md5": "c7641e9b578b2c9d4f0145e6820f73e4"
+      }
+    }
+  },
+  "gltf": {
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/garden_gnome_arm_4k.jpg": {
+            "size": 5870304,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_arm_4k.jpg",
+            "md5": "b4ee9c71ad46f89f10ec064ed9018d78"
+          },
+          "textures/garden_gnome_diff_4k.jpg": {
+            "size": 4755750,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_diff_4k.jpg",
+            "md5": "d27c5a5633463525104882c58186121e"
+          },
+          "textures/garden_gnome_nor_gl_4k.jpg": {
+            "size": 6816487,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_nor_gl_4k.jpg",
+            "md5": "c6737b3851e102dacf2f012c6baf94c2"
+          },
+          "garden_gnome.bin": {
+            "size": 683068,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_gnome/garden_gnome.bin",
+            "md5": "c445c52a1360d6ccc01aed0c04ada5c4"
+          }
+        },
+        "size": 2784,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_gnome/garden_gnome_4k.gltf",
+        "md5": "08989c6ce8488b65222c43b373288118"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/garden_gnome_diff_2k.jpg": {
+            "size": 1560793,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_diff_2k.jpg",
+            "md5": "9ca9c4987c493f1095567c554c55fc27"
+          },
+          "textures/garden_gnome_arm_2k.jpg": {
+            "size": 1839012,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_arm_2k.jpg",
+            "md5": "d26bee79b09654981efe7696587475aa"
+          },
+          "garden_gnome.bin": {
+            "size": 683068,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_gnome/garden_gnome.bin",
+            "md5": "c445c52a1360d6ccc01aed0c04ada5c4"
+          },
+          "textures/garden_gnome_nor_gl_2k.jpg": {
+            "size": 2082903,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_nor_gl_2k.jpg",
+            "md5": "1731bb360e743ab2980057fb4b9aa1f7"
+          }
+        },
+        "size": 2784,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/garden_gnome/garden_gnome_2k.gltf",
+        "md5": "e89ee3deaeb13030256540bac148eee5"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/garden_gnome_nor_gl_1k.jpg": {
+            "size": 642032,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_nor_gl_1k.jpg",
+            "md5": "e025f07fd77f7e3a5113726bb632d090"
+          },
+          "textures/garden_gnome_diff_1k.jpg": {
+            "size": 530382,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_diff_1k.jpg",
+            "md5": "dc4d0b525dacde8715f8bf8e6860aa27"
+          },
+          "garden_gnome.bin": {
+            "size": 683068,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/garden_gnome/garden_gnome.bin",
+            "md5": "c445c52a1360d6ccc01aed0c04ada5c4"
+          },
+          "textures/garden_gnome_arm_1k.jpg": {
+            "size": 596273,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_arm_1k.jpg",
+            "md5": "265638368131dc13c418e30b5be964e8"
+          }
+        },
+        "size": 2784,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/garden_gnome/garden_gnome_1k.gltf",
+        "md5": "b8eaf51c5f3d218be0c096d2759b0d2f"
+      }
+    }
+  },
+  "usd": {
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/garden_gnome_nor_gl_4k.exr": {
+            "size": 13285586,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_nor_gl_4k.exr",
+            "md5": "048b92a50df52e069a25c11b59fae558"
+          },
+          "textures/garden_gnome_rough_4k.exr": {
+            "size": 6099889,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_rough_4k.exr",
+            "md5": "e9b5ef3ad628d28087e2d2170c260dc3"
+          },
+          "textures/garden_gnome_diff_4k.jpg": {
+            "size": 4755750,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_diff_4k.jpg",
+            "md5": "d27c5a5633463525104882c58186121e"
+          },
+          "textures/garden_gnome_metal_4k.exr": {
+            "size": 53903,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_metal_4k.exr",
+            "md5": "7f84a0cc92404af92807e26085592e36"
+          }
+        },
+        "size": 1442462,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/garden_gnome/garden_gnome_4k.usdc",
+        "md5": "0fb049f160b2359cd6deacdddcac53ce"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/garden_gnome_diff_2k.jpg": {
+            "size": 1560793,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_diff_2k.jpg",
+            "md5": "9ca9c4987c493f1095567c554c55fc27"
+          },
+          "textures/garden_gnome_metal_2k.exr": {
+            "size": 24506,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_metal_2k.exr",
+            "md5": "55c276baa4657de3b6b4d229ef910e05"
+          },
+          "textures/garden_gnome_rough_2k.exr": {
+            "size": 1904308,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_rough_2k.exr",
+            "md5": "1eaca8c43a16535055830ad0388bd52e"
+          },
+          "textures/garden_gnome_nor_gl_2k.exr": {
+            "size": 4353789,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_nor_gl_2k.exr",
+            "md5": "15f100054f73f436513f04014b36a1cc"
+          }
+        },
+        "size": 1442462,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/garden_gnome/garden_gnome_2k.usdc",
+        "md5": "c41e9ef7ac07bd7bae23845581b57d37"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/garden_gnome_rough_1k.exr": {
+            "size": 603755,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_rough_1k.exr",
+            "md5": "ec791609e85d1fcd37aaf90ee691c206"
+          },
+          "textures/garden_gnome_nor_gl_1k.exr": {
+            "size": 1369566,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_nor_gl_1k.exr",
+            "md5": "edde1ead54ac7465e1ab985b8bb3ed47"
+          },
+          "textures/garden_gnome_diff_1k.jpg": {
+            "size": 530382,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_diff_1k.jpg",
+            "md5": "dc4d0b525dacde8715f8bf8e6860aa27"
+          },
+          "textures/garden_gnome_metal_1k.exr": {
+            "size": 11915,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_metal_1k.exr",
+            "md5": "f3463bf3e2e0baf4c2d6ed6c31d97af8"
+          }
+        },
+        "size": 1442462,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/garden_gnome/garden_gnome_1k.usdc",
+        "md5": "fc9ff8827e8f04ee53b0795a51b2a6c1"
+      }
+    }
+  },
+  "Metal": {
+    "4k": {
+      "jpg": {
+        "size": 272470,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_metal_4k.jpg",
+        "md5": "5bf64b964c96ff8a3efbc1eb72fe5bb9"
+      },
+      "png": {
+        "size": 65253,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_gnome/garden_gnome_metal_4k.png",
+        "md5": "dece67946087915c4bdffa03049aa87e"
+      },
+      "exr": {
+        "size": 53903,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_metal_4k.exr",
+        "md5": "7f84a0cc92404af92807e26085592e36"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 70620,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_metal_2k.jpg",
+        "md5": "6273df3522fcb44482752db27fc8a825"
+      },
+      "png": {
+        "size": 19120,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_gnome/garden_gnome_metal_2k.png",
+        "md5": "e2f6ed0fd0575ba4d159f67c67253a88"
+      },
+      "exr": {
+        "size": 24506,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_metal_2k.exr",
+        "md5": "55c276baa4657de3b6b4d229ef910e05"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 19352,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_metal_1k.jpg",
+        "md5": "61fb594e5d0a6cb96b36eb0d58d669ed"
+      },
+      "png": {
+        "size": 6049,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_gnome/garden_gnome_metal_1k.png",
+        "md5": "57ed5cc8c8aa89e259767c868207e05a"
+      },
+      "exr": {
+        "size": 11915,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_metal_1k.exr",
+        "md5": "f3463bf3e2e0baf4c2d6ed6c31d97af8"
+      }
+    }
+  },
+  "Rough": {
+    "4k": {
+      "jpg": {
+        "size": 4934357,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_rough_4k.jpg",
+        "md5": "302372e07136697ef5f3106848923f49"
+      },
+      "png": {
+        "size": 6578148,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_gnome/garden_gnome_rough_4k.png",
+        "md5": "ef00fa5012345c1b01dcbfd852691722"
+      },
+      "exr": {
+        "size": 6099889,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_rough_4k.exr",
+        "md5": "e9b5ef3ad628d28087e2d2170c260dc3"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1459704,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_rough_2k.jpg",
+        "md5": "f8c6a6fd3c8d7e60a84e3c2665a46772"
+      },
+      "png": {
+        "size": 2108511,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_gnome/garden_gnome_rough_2k.png",
+        "md5": "013e16eb5a7b34d60c48c7dd98c1eedb"
+      },
+      "exr": {
+        "size": 1904308,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_rough_2k.exr",
+        "md5": "1eaca8c43a16535055830ad0388bd52e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 436573,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_rough_1k.jpg",
+        "md5": "c9b66b5425c8ea0e37d3f641a4bc1a56"
+      },
+      "png": {
+        "size": 593026,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_gnome/garden_gnome_rough_1k.png",
+        "md5": "b4067e3ee4ec042fa5985a413893ef73"
+      },
+      "exr": {
+        "size": 603755,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_rough_1k.exr",
+        "md5": "ec791609e85d1fcd37aaf90ee691c206"
+      }
+    }
+  },
+  "AO": {
+    "4k": {
+      "jpg": {
+        "size": 2368811,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_ao_4k.jpg",
+        "md5": "25958c1a34aae6ff0a7c5351a06cdf1e"
+      },
+      "png": {
+        "size": 5425570,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_gnome/garden_gnome_ao_4k.png",
+        "md5": "c5ceb915109f324508ef310b46d76f93"
+      },
+      "exr": {
+        "size": 3109163,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_ao_4k.exr",
+        "md5": "f68a64edd280692726a6f773621e4aa2"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 873781,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_ao_2k.jpg",
+        "md5": "c9a7805de5f35612782c108b26978d49"
+      },
+      "png": {
+        "size": 1511095,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_gnome/garden_gnome_ao_2k.png",
+        "md5": "1471b469100fe19632a9b3cc9fe63c67"
+      },
+      "exr": {
+        "size": 1211302,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_ao_2k.exr",
+        "md5": "608c22fedf472a645b0425b0128d59e9"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 338033,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_ao_1k.jpg",
+        "md5": "a9a31d73884995c867680f02e15446ba"
+      },
+      "png": {
+        "size": 545144,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_gnome/garden_gnome_ao_1k.png",
+        "md5": "bf117025ff83dbf29ce91896996b05cf"
+      },
+      "exr": {
+        "size": 479330,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_ao_1k.exr",
+        "md5": "9f33e66399075eae7145850fdabe5077"
+      }
+    }
+  },
+  "nor_gl": {
+    "4k": {
+      "jpg": {
+        "size": 6816487,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_nor_gl_4k.jpg",
+        "md5": "c6737b3851e102dacf2f012c6baf94c2"
+      },
+      "png": {
+        "size": 11970443,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_gnome/garden_gnome_nor_gl_4k.png",
+        "md5": "2495c258ddd313ea640f40c5cd22704f"
+      },
+      "exr": {
+        "size": 13285586,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_nor_gl_4k.exr",
+        "md5": "048b92a50df52e069a25c11b59fae558"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2082903,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_nor_gl_2k.jpg",
+        "md5": "1731bb360e743ab2980057fb4b9aa1f7"
+      },
+      "png": {
+        "size": 3816052,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_gnome/garden_gnome_nor_gl_2k.png",
+        "md5": "e8f003d00177b07e44e374b299a2bc63"
+      },
+      "exr": {
+        "size": 4353789,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_nor_gl_2k.exr",
+        "md5": "15f100054f73f436513f04014b36a1cc"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 642032,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_nor_gl_1k.jpg",
+        "md5": "e025f07fd77f7e3a5113726bb632d090"
+      },
+      "png": {
+        "size": 1114666,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_gnome/garden_gnome_nor_gl_1k.png",
+        "md5": "60c0d884b085ba613bc20ca8b25e547c"
+      },
+      "exr": {
+        "size": 1369566,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_nor_gl_1k.exr",
+        "md5": "edde1ead54ac7465e1ab985b8bb3ed47"
+      }
+    }
+  },
+  "arm": {
+    "4k": {
+      "jpg": {
+        "size": 5870304,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_arm_4k.jpg",
+        "md5": "b4ee9c71ad46f89f10ec064ed9018d78"
+      },
+      "png": {
+        "size": 8296334,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/garden_gnome/garden_gnome_arm_4k.png",
+        "md5": "79b7c2bd54957160f766b7737573f116"
+      },
+      "exr": {
+        "size": 12427820,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_arm_4k.exr",
+        "md5": "ac2d61579c0c33eb623acc897e9ef970"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1839012,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_arm_2k.jpg",
+        "md5": "d26bee79b09654981efe7696587475aa"
+      },
+      "png": {
+        "size": 2570518,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/garden_gnome/garden_gnome_arm_2k.png",
+        "md5": "dc9dc164e8bbe6d85e8510701a414935"
+      },
+      "exr": {
+        "size": 3985283,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_arm_2k.exr",
+        "md5": "4fd3cdac8e6523184dba893a7fe15c0e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 596273,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_arm_1k.jpg",
+        "md5": "265638368131dc13c418e30b5be964e8"
+      },
+      "png": {
+        "size": 776050,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/garden_gnome/garden_gnome_arm_1k.png",
+        "md5": "72ea545f5946d20077ac15dd0a8848b2"
+      },
+      "exr": {
+        "size": 1293898,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_arm_1k.exr",
+        "md5": "bd85efd6c1adf74ad625784c557d9ad3"
+      }
+    }
+  },
+  "fbx": {
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/garden_gnome_rough_4k.exr": {
+            "size": 6099889,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_rough_4k.exr",
+            "md5": "e9b5ef3ad628d28087e2d2170c260dc3"
+          },
+          "textures/garden_gnome_nor_gl_4k.exr": {
+            "size": 13285586,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_nor_gl_4k.exr",
+            "md5": "048b92a50df52e069a25c11b59fae558"
+          },
+          "textures/garden_gnome_diff_4k.jpg": {
+            "size": 4755750,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/garden_gnome/garden_gnome_diff_4k.jpg",
+            "md5": "d27c5a5633463525104882c58186121e"
+          },
+          "textures/garden_gnome_metal_4k.exr": {
+            "size": 53903,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/garden_gnome/garden_gnome_metal_4k.exr",
+            "md5": "7f84a0cc92404af92807e26085592e36"
+          }
+        },
+        "size": 978508,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/garden_gnome/garden_gnome_4k.fbx",
+        "md5": "7d9297d795d008925e575b1b506f2ed0"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/garden_gnome_diff_2k.jpg": {
+            "size": 1560793,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/garden_gnome/garden_gnome_diff_2k.jpg",
+            "md5": "9ca9c4987c493f1095567c554c55fc27"
+          },
+          "textures/garden_gnome_metal_2k.exr": {
+            "size": 24506,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_metal_2k.exr",
+            "md5": "55c276baa4657de3b6b4d229ef910e05"
+          },
+          "textures/garden_gnome_rough_2k.exr": {
+            "size": 1904308,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_rough_2k.exr",
+            "md5": "1eaca8c43a16535055830ad0388bd52e"
+          },
+          "textures/garden_gnome_nor_gl_2k.exr": {
+            "size": 4353789,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/garden_gnome/garden_gnome_nor_gl_2k.exr",
+            "md5": "15f100054f73f436513f04014b36a1cc"
+          }
+        },
+        "size": 978508,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/garden_gnome/garden_gnome_2k.fbx",
+        "md5": "a78382229a341de33f8ef6581b682850"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/garden_gnome_rough_1k.exr": {
+            "size": 603755,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_rough_1k.exr",
+            "md5": "ec791609e85d1fcd37aaf90ee691c206"
+          },
+          "textures/garden_gnome_nor_gl_1k.exr": {
+            "size": 1369566,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_nor_gl_1k.exr",
+            "md5": "edde1ead54ac7465e1ab985b8bb3ed47"
+          },
+          "textures/garden_gnome_diff_1k.jpg": {
+            "size": 530382,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/garden_gnome/garden_gnome_diff_1k.jpg",
+            "md5": "dc4d0b525dacde8715f8bf8e6860aa27"
+          },
+          "textures/garden_gnome_metal_1k.exr": {
+            "size": 11915,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/garden_gnome/garden_gnome_metal_1k.exr",
+            "md5": "f3463bf3e2e0baf4c2d6ed6c31d97af8"
+          }
+        },
+        "size": 978508,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/garden_gnome/garden_gnome_1k.fbx",
+        "md5": "9b6a4cdaa38d6c00bc2510f96c548bfa"
+      }
+    }
+  }
+}

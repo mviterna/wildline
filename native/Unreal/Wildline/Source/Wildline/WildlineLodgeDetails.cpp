@@ -42,9 +42,15 @@ void AWildlineLobby::BuildLodgeDetails(){
     // The lobby is above the play maps. A shared woodland clearing around the
     // lodge supplies actual parallax through every window in all three modes.
     // Instanced trees keep the detailed source forest inexpensive to draw.
-    LodgeScenery.Add(Piece(TEXT("Woodland clearing outside lodge"),TEXT("Cube"),O+FVector(0,0,-35),FVector(10500,10500,40),ForestSurface(TEXT("M_LeafLitter"))));
+    LodgeScenery.Add(Piece(TEXT("Woodland clearing outside lodge"),TEXT("Cube"),O+FVector(0,0,-55),FVector(28000,28000,80),ForestSurface(TEXT("M_LeafLitter"))));
+    // Rising wooded ground closes the horizon from the elevated waiting room.
+    // The near clearing remains level with the sills, and has real parallax.
+    for(int32 I=0;I<32;I++){
+        const float A=I*2*PI/32;
+        LodgeScenery.Add(Piece(TEXT("Wooded ridge beyond lodge"),TEXT("Sphere"),O+FVector(FMath::Cos(A)*9500,FMath::Sin(A)*9500,-1450),FVector(6500,6500,4200),ForestSurface(TEXT("M_LeafLitter"))));
+    }
     FRandomStream Random(68123);
-    const TCHAR* Trees[]={TEXT("SM_OakA"),TEXT("SM_OakB"),TEXT("SM_Pine"),TEXT("SM_Birch")};
+    const TCHAR* Trees[]={TEXT("SM_OakA_Thin"),TEXT("SM_OakB_Thin"),TEXT("SM_Pine_Thin"),TEXT("SM_OakC_Thin")};
     for(int32 Species=0;Species<4;Species++){
         const FString Path=FString::Printf(TEXT("/Game/Wildline/Forest/Meshes/%s.%s"),Trees[Species],Trees[Species]);
         auto* Mesh=LoadObject<UStaticMesh>(nullptr,*Path);if(!Mesh)continue;
@@ -54,11 +60,13 @@ void AWildlineLobby::BuildLodgeDetails(){
         // shadow-map pages on foliage surrounding a sealed waiting room.
         Instances->SetStaticMesh(Mesh);Instances->SetCollisionProfileName(TEXT("NoCollision"));Instances->SetCastShadow(false);Instances->RegisterComponent();
         LodgeScenery.Add(Instances);
-        for(int32 I=0;I<7;I++){
-            const float Angle=(I*4+Species)*2*PI/28;
-            const float Radius=Random.FRandRange(3000,4900);
-            const float Scale=Random.FRandRange(.65f,1.05f);
-            Instances->AddInstance(FTransform(FRotator(0,Random.FRandRange(0,360),0),O+FVector(FMath::Cos(Angle)*Radius,FMath::Sin(Angle)*Radius,-15),FVector(Scale)));
+        for(int32 I=0;I<36;I++){
+            const float Angle=(I*4+Species)*2*PI/144+Random.FRandRange(-.02f,.02f);
+            const float Radius=I<12?Random.FRandRange(1250,2800):Random.FRandRange(3000,7800);
+            const float Scale=Random.FRandRange(.55f,1.10f);
+            const float Collar=Species==2?460.f:0.f;
+            const float Ground=Radius>6400?FMath::Square((Radius-6400)/3100)*400:-15;
+            Instances->AddInstance(FTransform(FRotator(0,Random.FRandRange(0,360),0),O+FVector(FMath::Cos(Angle)*Radius,FMath::Sin(Angle)*Radius,Ground-(Mesh->GetBoundingBox().Min.Z+Collar)*Scale),FVector(Scale)));
         }
     }
     // Nearby deadwood and ferns give the sills a foreground beyond distant trees.

@@ -1,0 +1,143 @@
+[
+  {
+    "mesh": "SM_OakA_Wood",
+    "source": "Source_OakA",
+    "original_foliage_faces": 4032,
+    "removed_foliage_faces": 4032,
+    "faces": 8972,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ]
+  },
+  {
+    "mesh": "SM_OakA_Bare",
+    "source": "Source_OakA",
+    "original_foliage_faces": 4032,
+    "removed_foliage_faces": 4032,
+    "faces": 8972,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ]
+  },
+  {
+    "mesh": "SM_OakA_Thin",
+    "source": "Source_OakA",
+    "original_foliage_faces": 4032,
+    "removed_foliage_faces": 1157,
+    "faces": 11847,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ]
+  },
+  {
+    "mesh": "SM_OakB_Wood",
+    "source": "Source_OakB",
+    "original_foliage_faces": 20220,
+    "removed_foliage_faces": 20220,
+    "faces": 15673,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ]
+  },
+  {
+    "mesh": "SM_OakB_Bare",
+    "source": "Source_OakB",
+    "original_foliage_faces": 20220,
+    "removed_foliage_faces": 20220,
+    "faces": 15673,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ]
+  },
+  {
+    "mesh": "SM_OakB_Thin",
+    "source": "Source_OakB",
+    "original_foliage_faces": 20220,
+    "removed_foliage_faces": 5567,
+    "faces": 30326,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ]
+  },
+  {
+    "mesh": "SM_OakC_Wood",
+    "source": "Source_OakC",
+    "original_foliage_faces": 7876,
+    "removed_foliage_faces": 7876,
+    "faces": 4492,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ]
+  },
+  {
+    "mesh": "SM_OakC_Bare",
+    "source": "Source_OakC",
+    "original_foliage_faces": 7876,
+    "removed_foliage_faces": 7876,
+    "faces": 4492,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ]
+  },
+  {
+    "mesh": "SM_OakC_Thin",
+    "source": "Source_OakC",
+    "original_foliage_faces": 7876,
+    "removed_foliage_faces": 2178,
+    "faces": 10190,
+    "materials": [
+      "F_Bark",
+      "F_Leaf",
+      "F_LivingLeaf"
+    ]
+  },
+  {
+    "mesh": "SM_Pine_Wood",
+    "source": "Source_Pine",
+    "original_foliage_faces": 6668,
+    "removed_foliage_faces": 6668,
+    "faces": 109250,
+    "materials": [
+      "F_Bark",
+      "F_Needles"
+    ]
+  },
+  {
+    "mesh": "SM_Pine_Bare",
+    "source": "Source_Pine",
+    "original_foliage_faces": 6668,
+    "removed_foliage_faces": 6668,
+    "faces": 109250,
+    "materials": [
+      "F_Bark",
+      "F_Needles"
+    ]
+  },
+  {
+    "mesh": "SM_Pine_Thin",
+    "source": "Source_Pine",
+    "original_foliage_faces": 6668,
+    "removed_foliage_faces": 1853,
+    "faces": 114065,
+    "materials": [
+      "F_Bark",
+      "F_Needles"
+    ]
+  }
+]

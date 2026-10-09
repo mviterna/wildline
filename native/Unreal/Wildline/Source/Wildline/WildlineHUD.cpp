@@ -39,13 +39,13 @@ void AWildlineHUD::DrawHUD(){
         DrawRect(FLinearColor::Black,CX-4,CY-4,8,8);DrawRect(FLinearColor(1.f,.2f,.06f),CX-2,CY-2,4,4);
         Label(P->IsThermalActive()?TEXT("THERMAL IMAGING"):TEXT("BLACKWOOD OPTICS"),CX-85,CY-Radius+60,12,Cream);if(P->IsThermalActive())Label(FString::Printf(TEXT("%.1fs"),FMath::Max(0.f,P->ThermalUntil-P->ServerTime())),CX-20,CY-Radius+85,15,Sage);
     }else {DrawLine(CX-5,CY,CX+5,CY,Cream,1);DrawLine(CX,CY-5,CX,CY+5,Cream,1);}
-    Label(Hill?TEXT("W  /  KING OF THE HILL"):Farm?TEXT("W  /  FARM RAID"):TEXT("W  /  BLACKWOOD RESERVE"),30,25,18,Cream);Label(P->bSquirrel?TEXT("SQUIRREL"):Farm?TEXT("FARMER"):Hill?TEXT("DEFENDER"):TEXT("HUNTER"),30,50,11,Sage);
+    Label(Hill?TEXT("W  /  KING OF THE HILL"):Farm?TEXT("W  /  FARM RAID"):S->MatchConfig.ClassicLayout==1?TEXT("W  /  FROSTWOOD RESERVE"):TEXT("W  /  BLACKWOOD RESERVE"),30,25,18,Cream);Label(P->bSquirrel?TEXT("SQUIRREL"):Farm?TEXT("FARMER"):Hill?TEXT("DEFENDER"):TEXT("HUNTER"),30,50,11,Sage);
     Label(FString::Printf(TEXT("%d / %d KILLS    %s    %s %d / %d"),S->HunterKills,S->MatchConfig.DefenderGoal,*ClockText(S->RoundRemaining()),Hill?TEXT("FEEDER TRIPS"):TEXT("STORED"),S->StoredAcorns,S->MatchConfig.SquirrelGoal),CX-260,30,14,Cream);
     if(!P->IsScoped()){
         Label(TEXT("FIELD OBJECTIVE"),30,120,11,Sage);
         const FString Goal=P->bSquirrel?(Hill?FString::Printf(TEXT("Complete %d trips through the course to the feeder."),S->MatchConfig.SquirrelGoal):FString::Printf(TEXT("Bring %d %ss back to the den."),S->MatchConfig.SquirrelGoal,Farm?TEXT("peanut"):TEXT("acorn"))):FString::Printf(TEXT("Kill %d squirrels%s."),S->MatchConfig.DefenderGoal,(S->MatchConfig.TimeWinner?S->MatchConfig.TimeWinner:WildlineRules::TimeoutWinner(S->ExpeditionMode))==1?TEXT(" or defend until time expires"):TEXT(" with your team"));
         Label(Goal,30,143,15,Cream);
-        Label(Hill?TEXT("Two routes / land on every checkpoint / return to start after scoring"):P->bSquirrel?(Farm?TEXT("Use crop cover and low wall vents. Give livestock space."):TEXT("E: climb   W/S: ascend/descend   Space: long leap")):TEXT("Trees and solid scenery stop bullets."),30,167,11,Dim);
+        Label(Hill?TEXT("Two routes / land on every checkpoint / return to start after scoring"):P->bSquirrel?(Farm?TEXT("Use crop cover and low wall vents. Give livestock space."):TEXT("E: grip trunk or branch   WASD: climb / traverse   Space: long leap")):TEXT("Trees and solid scenery stop bullets."),30,167,11,Dim);
     }
     DrawRect(Panel,30,H-63,170,4);DrawRect(Sage,30,H-63,170*P->Stamina/100.f,4);Label(TEXT("STAMINA"),30,H-85,10,Cream);
     Label(TEXT("WASD Move     SHIFT Sprint     V First / third person     ESC Camp"),CX-250,H-35,11,Dim);
@@ -66,7 +66,7 @@ void AWildlineHUD::DrawReserveMap(AWildlineCharacter* P,AWildlineGameState* S,AW
     const float Range=Zoom?3500.f:F->bResidential?5500.f:F->bFarm?7000.f:WildlineRules::MapRadius+400;const FVector Origin=Zoom?P->GetActorLocation():FVector::ZeroVector;
     const FLinearColor Cream(.94f,.96f,.84f),Gold(1.f,.72f,.25f),Home(.56f,.9f,.7f),Red(1.f,.28f,.21f),Muted(.53f,.64f,.56f);
     DrawRect(FLinearColor(.013f,.026f,.022f,.94f),30,H-367,248,267);
-    DrawLine(30,H-367,278,H-367,Home,.8f);Label(FString::Printf(TEXT("%s  /  %s"),F->bResidential?TEXT("NEIGHBORHOOD"):F->bFarm?TEXT("FARMSTEAD"):TEXT("BLACKWOOD"),S->MatchConfig.MapIntel==0?TEXT("FULL INTEL"):S->MatchConfig.MapIntel==2?TEXT("LIMITED INTEL"):TEXT("NEARBY INTEL")),42,H-356,10,Cream);
+    DrawLine(30,H-367,278,H-367,Home,.8f);Label(FString::Printf(TEXT("%s  /  %s"),F->bResidential?TEXT("NEIGHBORHOOD"):F->bFarm?TEXT("FARMSTEAD"):F->bWinter?TEXT("FROSTWOOD"):TEXT("BLACKWOOD"),S->MatchConfig.MapIntel==0?TEXT("FULL INTEL"):S->MatchConfig.MapIntel==2?TEXT("LIMITED INTEL"):TEXT("NEARBY INTEL")),42,H-356,10,Cream);
     Label(Zoom?TEXT("M: RESERVE MAP  /  70 m"):F->bFarm?TEXT("M: ZOOM IN  /  140 m"):TEXT("M: ZOOM IN  /  290 m"),42,H-344,8,Muted);
     auto Map=[&](FVector World){const FVector D=(World-Origin)*(Half/Range);return Centre+FVector2D(D.Y,-D.X);};
     auto Inside=[&](FVector2D Point,float Margin=3.f){return FMath::Abs(Point.X-Centre.X)<Half-Margin&&FMath::Abs(Point.Y-Centre.Y)<Half-Margin;};
@@ -132,10 +132,9 @@ void AWildlineHUD::DrawForageHints(AWildlineCharacter* P,AWildlineWorld* F){
     const auto* State=GetWorld()->GetGameState<AWildlineGameState>();if(!State)return;
     const float W=Canvas->SizeX,H=Canvas->SizeY,Now=P->ServerTime();const FLinearColor Gold(1.f,.75f,.32f),Home(.6f,.92f,.72f);
     if(F->bResidential){
-        const TCHAR* Names[]={TEXT("START PAD"),TEXT("BIN"),TEXT("GARDEN BENCH"),TEXT("FENCE LEDGE"),TEXT("PERGOLA"),TEXT("BIRD FEEDER")};
         const int32 Step=FMath::Clamp(P->CourseCheckpoint,0,5);
-        Label(FString::Printf(TEXT("NEXT: %s / %d OF 5 CHECKPOINTS / YOUR TRIPS: %d"),Names[Step],FMath::Max(0,Step-1),P->FeederVisits),30,191,11,Home);
-        for(int32 Lane=0;Lane<2;Lane++){if(P->CourseLane>=0&&Lane!=P->CourseLane)continue;FVector2D Screen;const FVector Target=F->CourseTarget(Lane,Step)+FVector(0,0,28);if(GetOwningPlayerController()->ProjectWorldLocationToScreen(Target,Screen)&&Screen.X>285&&Screen.X<W-120&&Screen.Y>220&&Screen.Y<H-110)Label(FString::Printf(TEXT("%s / %.1f m"),Names[Step],FVector::Dist(P->GetActorLocation(),Target)/100),Screen.X,Screen.Y,12,Lane==0?Home:Gold);}
+        Label(FString::Printf(TEXT("NEXT: %s / %d OF 5 CHECKPOINTS / YOUR TRIPS: %d"),*F->CourseLabel(FMath::Max(0,P->CourseLane),Step),FMath::Max(0,Step-1),P->FeederVisits),30,191,11,Home);
+        for(int32 Lane=0;Lane<2;Lane++){if(P->CourseLane>=0&&Lane!=P->CourseLane)continue;FVector2D Screen;const FVector Target=F->CourseTarget(Lane,Step)+FVector(0,0,28);if(GetOwningPlayerController()->ProjectWorldLocationToScreen(Target,Screen)&&Screen.X>285&&Screen.X<W-120&&Screen.Y>220&&Screen.Y<H-110)Label(FString::Printf(TEXT("%s / %.1f m"),*F->CourseLabel(Lane,Step),FVector::Dist(P->GetActorLocation(),Target)/100),Screen.X,Screen.Y,12,Lane==0?Home:Gold);}
         return;
     }
     if(FeedbackPlayer.Get()!=P){FeedbackPlayer=P;PreviousBag=P->Bag;PreviousCollected=P->Collected.Num();PreviousStored=State->StoredAcorns;FeedbackUntil=0;}

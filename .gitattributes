@@ -8,6 +8,8 @@
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.usdc filter=lfs diff=lfs merge=lfs -text
 native/Unreal/Wildline/ArtSource/Lobby/Photoreal/**/*.bin filter=lfs diff=lfs merge=lfs -text
+native/Unreal/Wildline/ArtSource/Neighborhood/Photoreal/**/*.bin filter=lfs diff=lfs merge=lfs -text
+native/Unreal/Wildline/ArtSource/Neighborhood/ModularHouseKitGLTF/*.bin filter=lfs diff=lfs merge=lfs -text
 
 # Textures, previews, fonts and audio are binary assets too.
 *.png filter=lfs diff=lfs merge=lfs -text

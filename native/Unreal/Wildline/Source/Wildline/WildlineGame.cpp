@@ -1,4 +1,5 @@
 #include "WildlineGame.h"
+#include "Misc/App.h"
 #include "WildlineLobby.h"
 #include "WildlineRules.h"
 #include "WildlineWorld.h"
@@ -57,7 +58,7 @@ void AWildlineGameMode::InitGame(const FString& MapName,const FString& Options,F
 void AWildlineGameMode::BeginPlay(){Super::BeginPlay();
     if(auto* Settings=UWildlineUserSettings::Get()){Settings->LoadSettings(false);if(auto* State=GetGameState<AWildlineGameState>())State->HunterDifficulty=FMath::Clamp(Settings->HunterDifficulty,0,2);}
     if(!AWildlineWorld::Find(GetWorld()))GetWorld()->SpawnActor<AWildlineWorld>();
-    if(auto* Forest=AWildlineWorld::Find(GetWorld());Forest){auto* State=GetGameState<AWildlineGameState>();State->ExpeditionMode=Forest->bResidential?2:Forest->bFarm?1:0;if(auto* Settings=UWildlineUserSettings::Get())State->MatchConfig=Settings->ConfigForMode(State->ExpeditionMode);State->MatchConfig.Clamp();}
+    if(auto* Forest=AWildlineWorld::Find(GetWorld());Forest){auto* State=GetGameState<AWildlineGameState>();State->ExpeditionMode=Forest->bResidential?2:Forest->bFarm?1:0;if(auto* Settings=UWildlineUserSettings::Get())State->MatchConfig=Settings->ConfigForMode(State->ExpeditionMode);State->MatchConfig.Clamp();State->MatchConfig.ClassicLayout=Forest->bWinter?1:0;if(Forest->bResidential)State->MatchConfig.NeighborhoodLayout=GetWorld()->GetMapName().Contains(TEXT("Cedar"))?1:0;}
     if(auto* Forest=AWildlineWorld::Find(GetWorld());Forest&&Forest->bFarm){
         GetGameState<AWildlineGameState>()->ExpeditionMode=WildlineRules::FarmMode;
         for(int32 I=0;I<6;I++){
@@ -105,7 +106,7 @@ void AWildlineGameMode::RecordKill(AWildlineCharacter* Victim,AController* Hunte
 }
 void AWildlineGameMode::RespawnAnimal(TWeakObjectPtr<AWildlineCharacter> Weak){auto* P=Weak.Get();if(!P)return;auto* S=GetGameState<AWildlineGameState>();if(S&&S->Winner)return;P->bDead=false;P->Health=S?S->MatchConfig.SquirrelHealth:40;P->ProtectedUntil=P->ServerTime()+(S?S->MatchConfig.SpawnProtectionSeconds:0);P->Bag=0;P->CourseCheckpoint=0;P->CourseLane=-1;P->Stamina=100;P->RespawnAt=0;P->TreeIndex=INDEX_NONE;FVector Pos=SpawnLocation(true,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}
 void AWildlineGameMode::Deposit(int32 Count){auto* S=GetGameState<AWildlineGameState>();if(!S||S->Winner||!S->bRoundStarted)return;S->StoredAcorns+=Count;if(S->StoredAcorns>=S->MatchConfig.SquirrelGoal)S->Winner=2;}
-void AWildlineGameMode::RestartRound(){auto* S=GetGameState<AWildlineGameState>();if(!S||!S->Winner)return;if(auto* Settings=UWildlineUserSettings::Get())S->MatchConfig=Settings->ConfigForMode(S->ExpeditionMode);S->MatchConfig.Clamp();if(GameSession)GameSession->MaxPlayers=S->MatchConfig.MaxPlayers;S->HunterKills=0;S->StoredAcorns=0;S->TakenPeanuts.Empty();S->Winner=0;S->RoundStartedAt=S->GetServerWorldTimeSeconds();for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It){auto* P=*It;P->bDead=false;P->Health=P->bSquirrel?S->MatchConfig.SquirrelHealth:100;P->ProtectedUntil=P->bSquirrel?P->ServerTime()+S->MatchConfig.SpawnProtectionSeconds:0;P->RifleAmmo=5;P->ShotgunAmmo=2;P->Ammo=WildlineRules::WeaponCapacity(P->SelectedWeapon);P->Bag=0;P->BagPeanuts.Empty();P->CourseCheckpoint=0;P->CourseLane=-1;P->FeederVisits=0;P->Collected.Empty();P->ThermalReadyAt=P->ThermalUntil=P->ReloadUntil=P->RespawnAt=0;P->TreeIndex=INDEX_NONE;P->Stamina=100;P->ResetBotAwareness();FVector Pos=SpawnLocation(P->bSquirrel,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}if(bWaitingRoomsEnabled)ResetWaitingRooms();else RefreshBots();S->ForceNetUpdate();}
+void AWildlineGameMode::RestartRound(){auto* S=GetGameState<AWildlineGameState>();if(!S||!S->Winner)return;if(auto* Settings=UWildlineUserSettings::Get())S->MatchConfig=Settings->ConfigForMode(S->ExpeditionMode);S->MatchConfig.Clamp();if(S->ExpeditionMode==0)S->MatchConfig.ClassicLayout=GetWorld()->GetMapName().Contains(TEXT("Frostwood"))?1:0;if(S->ExpeditionMode==2)S->MatchConfig.NeighborhoodLayout=GetWorld()->GetMapName().Contains(TEXT("Cedar"))?1:0;if(GameSession)GameSession->MaxPlayers=S->MatchConfig.MaxPlayers;S->HunterKills=0;S->StoredAcorns=0;S->TakenPeanuts.Empty();S->Winner=0;S->RoundStartedAt=S->GetServerWorldTimeSeconds();for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It){auto* P=*It;P->bDead=false;P->Health=P->bSquirrel?S->MatchConfig.SquirrelHealth:100;P->ProtectedUntil=P->bSquirrel?P->ServerTime()+S->MatchConfig.SpawnProtectionSeconds:0;P->RifleAmmo=5;P->ShotgunAmmo=2;P->Ammo=WildlineRules::WeaponCapacity(P->SelectedWeapon);P->Bag=0;P->BagPeanuts.Empty();P->CourseCheckpoint=0;P->CourseLane=-1;P->FeederVisits=0;P->Collected.Empty();P->ThermalReadyAt=P->ThermalUntil=P->ReloadUntil=P->RespawnAt=0;P->TreeIndex=INDEX_NONE;P->Stamina=100;P->ResetBotAwareness();FVector Pos=SpawnLocation(P->bSquirrel,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}if(bWaitingRoomsEnabled)ResetWaitingRooms();else RefreshBots();S->ForceNetUpdate();}
 
 AWildlineController::AWildlineController(){bShowMouseCursor=true;}
 void AWildlineController::BeginPlay(){
@@ -119,7 +120,7 @@ void AWildlineController::BeginPlay(){
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLobbyNetProbe")))RunLobbyNetworkProbe();
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineAutoStart"))){ChooseRole(FParse::Param(FCommandLine::Get(),TEXT("WildlineSquirrel")));}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHillNetProbe")))RunHillNetworkProbe();
-    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHillSmoke"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunHillSmokeTest,2.f,false);}
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHillSmoke"))){FApp::SetUseFixedTimeStep(true);FApp::SetFixedDeltaTime(1./60.);FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunHillSmokeTest,2.f,false);}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineFarmSmoke"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunFarmSmokeTest,2.f,false);}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineConfigSmoke"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[this](){RunConfigSmokeTest();}),2.f,false);}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineConfigNetProbe")))RunConfigNetworkProbe();
@@ -141,7 +142,15 @@ void AWildlineController::BeginPlay(){
         At(11,[this](){auto* Camera=GetWorld()->SpawnActor<ACameraActor>(FVector(-1800,-1400,1100),FRotator::ZeroRotator);Camera->SetActorRotation((FVector(-150,0,400)-Camera->GetActorLocation()).Rotation());Camera->GetCameraComponent()->SetFieldOfView(60);SetViewTarget(Camera);GetHUD()->bShowHUD=false;});
         At(15,[Shot](){Shot(TEXT("HillCourse.png"));});
         At(16,[this](){auto* Camera=GetWorld()->SpawnActor<ACameraActor>(FVector(-4200,-5800,4000),FRotator::ZeroRotator);Camera->SetActorRotation((FVector(0,-200,450)-Camera->GetActorLocation()).Rotation());Camera->GetCameraComponent()->SetFieldOfView(65);SetViewTarget(Camera);});
-        At(21,[Shot](){Shot(TEXT("HillNeighborhood.png"));});At(22,[this](){SetMenu(true);Menu->ScrollToSettings();});At(26,[Shot](){Shot(TEXT("HillSettings.png"));});At(28,[](){FPlatformMisc::RequestExit(false);});
+        At(21,[Shot](){Shot(TEXT("HillNeighborhood.png"));});
+        At(22,[this](){const auto* F=AWildlineWorld::Find(GetWorld());const FVector Eye=F->FeederLocation+FVector(220,-280,160);auto* Camera=GetWorld()->SpawnActor<ACameraActor>(Eye,(F->FeederLocation+FVector(0,0,15)-Eye).Rotation());Camera->GetCameraComponent()->SetFieldOfView(50);SetViewTarget(Camera);});
+        At(26,[Shot](){Shot(TEXT("HillFeeder.png"));});At(27,[this](){SetMenu(true);Menu->ScrollToSettings();});At(31,[Shot](){Shot(TEXT("HillSettings.png"));});
+        At(32,[this](){SetMenu(false);const auto* F=AWildlineWorld::Find(GetWorld());for(auto* Prop:F->ResidentialProps)if(Prop->GetStaticMesh()->GetName()==TEXT("SM_KitPool")){const FVector Target=Prop->Bounds.Origin;const FVector Eye=Target+FVector(440,-660,220);auto* Camera=GetWorld()->SpawnActor<ACameraActor>(Eye,(Target-Eye).Rotation());Camera->GetCameraComponent()->SetFieldOfView(65);SetViewTarget(Camera);break;}});
+        At(36,[Shot](){Shot(TEXT("HillPool.png"));});
+        At(37,[this](){const auto* F=AWildlineWorld::Find(GetWorld());for(auto* Prop:F->ResidentialProps)if(Prop->GetStaticMesh()->GetName()==TEXT("SM_garden_hose_wall_mounted_01")&&Prop->GetComponentLocation().Y>0&&Prop->GetComponentLocation().X>3000){const FVector Target=Prop->Bounds.Origin;const FVector Eye=Target+FVector(-80,-180,30);auto* Camera=GetWorld()->SpawnActor<ACameraActor>(Eye,(Target-Eye).Rotation());Camera->GetCameraComponent()->SetFieldOfView(60);SetViewTarget(Camera);break;}});
+        At(41,[Shot](){Shot(TEXT("HillHose.png"));});
+        At(42,[this](){const FVector Eye(0,-200,380);auto* Camera=GetWorld()->SpawnActor<ACameraActor>(Eye,(AWildlineLobby::Centre(false)-Eye).Rotation());Camera->GetCameraComponent()->SetFieldOfView(65);SetViewTarget(Camera);});
+        At(46,[Shot](){Shot(TEXT("HillSky.png"));});At(48,[](){FPlatformMisc::RequestExit(false);});
     }
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineFarmReview"))){
         auto At=[this](float Time,TFunction<void()> Work){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Work](){Work();}),Time,false);};
@@ -159,6 +168,9 @@ void AWildlineController::BeginPlay(){
         At(30,[Shot](){Shot(TEXT("FarmLivestock.png"));});At(32,[](){FPlatformMisc::RequestExit(false);});
     }
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineSmoke"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunSmokeTest,1.5f,false);}
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineTraversalSmoke"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunTraversalSmokeTest,2.f,false);}
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineWorldUpgradeReview"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunWorldUpgradeReview,2.f,false);}
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineTraversalNetProbe"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunTraversalNetProbe,2.f,false);}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineSettingsReview"))){
         auto At=[this](float Time,TFunction<void()> Work){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Work](){Work();}),Time,false);};
         auto Passed=MakeShared<bool>(true);const FIntPoint Original=UWildlineUserSettings::Get()->GetScreenResolution();
@@ -556,12 +568,13 @@ void AWildlineController::ToggleMapZoom(){const auto* S=GetWorld()->GetGameState
 void AWildlineController::ToggleMenu(){if(Intro){Intro->Finish();return;}SetMenu(!bMenuOpen);}
 void AWildlineController::ChooseRole(bool bAnimal){auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI)GI->bPreferredSquirrel=bAnimal;if(Menu){if(bAnimal)Menu->Squirrel();else Menu->Hunter();}ServerPickRole(bAnimal);if(!bAnimal)if(const auto* Settings=UWildlineUserSettings::Get())ServerSelectWeapon(Settings->SelectedWeapon);SetMenu(false);}
 void AWildlineController::ServerPickRole_Implementation(bool bAnimal){if(auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>())GM->PickRole(this,bAnimal);}
-void AWildlineController::Host(bool bAnimal){auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI){GI->bPreferredSquirrel=bAnimal;GI->bStartAfterTravel=true;}UGameplayStatics::OpenLevel(this,FName(WildlineRules::ModeMap(GI?GI->PreferredMode:0)),true,TEXT("listen"));}
+static const TCHAR* SelectedExpeditionMap(int32 Mode){const auto* Settings=UWildlineUserSettings::Get();return Mode==0&&Settings&&Settings->ClassicConfig.ClassicLayout==1?TEXT("Frostwood"):Mode==2&&Settings&&Settings->HillConfig.NeighborhoodLayout==1?TEXT("NeighborhoodCedar"):WildlineRules::ModeMap(Mode);}
+void AWildlineController::Host(bool bAnimal){auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI){GI->bPreferredSquirrel=bAnimal;GI->bStartAfterTravel=true;}UGameplayStatics::OpenLevel(this,FName(SelectedExpeditionMap(GI?GI->PreferredMode:0)),true,TEXT("listen"));}
 void AWildlineController::Join(FString Address,bool bAnimal){Address=Address.TrimStartAndEnd();if(Address.IsEmpty())return;auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI){GI->bPreferredSquirrel=bAnimal;GI->bStartAfterTravel=true;GI->JoinAddress=Address;}ClientTravel(Address,TRAVEL_Absolute);}
 void AWildlineController::ServerSelectWeapon_Implementation(int32 Weapon){const auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>();if(GM&&GM->bWaitingRoomsEnabled)return;if(auto* P=Cast<AWildlineCharacter>(GetPawn()))P->SelectWeapon(Weapon);}
 void AWildlineController::PlaySelected(bool Animal){
     auto* GI=GetGameInstance<UWildlineGameInstance>();const auto* State=GetWorld()->GetGameState<AWildlineGameState>();
-    if(HasAuthority()&&GI&&State&&(GI->PreferredMode!=State->ExpeditionMode||(UWildlineUserSettings::Get()&&UWildlineUserSettings::Get()->ConfigForMode(GI->PreferredMode)!=State->MatchConfig))){GI->bPreferredSquirrel=Animal;GI->bStartAfterTravel=true;UGameplayStatics::OpenLevel(this,FName(WildlineRules::ModeMap(GI->PreferredMode)),true,GetNetMode()==NM_ListenServer?TEXT("listen"):TEXT(""));return;}
+    if(HasAuthority()&&GI&&State&&(GI->PreferredMode!=State->ExpeditionMode||(UWildlineUserSettings::Get()&&UWildlineUserSettings::Get()->ConfigForMode(GI->PreferredMode)!=State->MatchConfig))){GI->bPreferredSquirrel=Animal;GI->bStartAfterTravel=true;UGameplayStatics::OpenLevel(this,FName(SelectedExpeditionMap(GI->PreferredMode)),true,GetNetMode()==NM_ListenServer?TEXT("listen"):TEXT(""));return;}
     if(auto* P=Cast<AWildlineCharacter>(GetPawn());P&&P->bSquirrel==Animal&&(P->bInLobby||(State&&State->bRoundStarted)))SetMenu(false);
     else EnterWaitingRoom(Animal);
 }
@@ -589,7 +602,7 @@ void AWildlineController::RunSmokeTest(){
     bool PlantAssets=true;
     for(auto* Layer:Forest->ForestLayers)PlantAssets&=Layer&&Layer->GetStaticMesh()&&Layer->GetStaticMesh()->GetPathName().StartsWith(TEXT("/Game/Wildline/Forest/"))&&Layer->GetInstanceCount()>0;
     Check(PlantAssets,TEXT("licensed forest meshes cooked and instanced for every vegetation layer"));
-    Check(!Forest->Trunks->IsVisible()&&Forest->Trunks->GetCollisionEnabled()!=ECollisionEnabled::NoCollision,TEXT("tree climb collision stays active without placeholder cylinders rendering"));
+    bool SolidWood=Forest->ClimbWood.Num()==4;for(auto* Wood:Forest->ClimbWood)SolidWood&=Wood&&Wood->GetCollisionEnabled()!=ECollisionEnabled::NoCollision;Check(!Forest->Trunks->IsVisible()&&SolidWood,TEXT("wood collision stays active without placeholder cylinders rendering"));
     UStaticMesh* Stone=Forest->Rocks->GetStaticMesh();
     Check(Stone&&Stone->GetBodySetup()&&Stone->GetBodySetup()->AggGeom.ConvexElems.Num()>0&&Forest->Rocks->GetCollisionEnabled()==ECollisionEnabled::QueryAndPhysics,TEXT("rocks have cooked convex hulls and physical collision"));
     int32 SolidRockTraces=0,SolidRockSweeps=0;
@@ -714,10 +727,10 @@ void AWildlineController::RunSmokeTest(){
                 for(float Height:{.15f,.45f,.8f}){
                     const float Z=FMath::Lerp(T.Base.Z+25,T.ClimbTop-25,Height);float R;
                     const FVector CentreAtHeight=F->TrunkCentre(Index,Z,R);
-                    Moving->TreeIndex=INDEX_NONE;Moving->SetActorLocation(CentreAtHeight+FVector(R+20,0,0));Moving->ServerClimb();
+                    FHitResult Bark;int32 BarkTree;const bool BarkFound=F->TraceWood(CentreAtHeight+FVector(R+250,0,0),CentreAtHeight-FVector(R+30,0,0),Bark,BarkTree)&&BarkTree==Index;Moving->TreeIndex=INDEX_NONE;Moving->SetActorLocation(BarkFound?Bark.ImpactPoint+Bark.ImpactNormal*16:CentreAtHeight+FVector(R+20,0,0));Moving->ServerClimb();
                     SpeciesViews&=Moving->TreeIndex==Index;
                     for(int32 Angle=0;Angle<360;Angle+=45){SetControlRotation(FRotator(0,Angle,0));Moving->Tick(.016f);const FVector Camera=Moving->ThirdCamera->GetComponentLocation();FHitResult H;FCollisionQueryParams Q(SCENE_QUERY_STAT(SpeciesClimbCamera),false,Moving);
-                        SpeciesViews&=FVector::Dist(Camera,Moving->GetActorLocation())>60&&!GetWorld()->LineTraceSingleByChannel(H,Camera,Moving->GetActorLocation()+FVector(0,0,8),ECC_Camera,Q);
+                        const bool Visible=FVector::Dist(Camera,Moving->GetActorLocation())>60&&!GetWorld()->LineTraceSingleByChannel(H,Camera,Moving->GetActorLocation()+FVector(0,0,8),ECC_Camera,Q);if(!Visible||Moving->TreeIndex!=Index)UE_LOG(LogTemp,Display,TEXT("CLIMB CAMERA obstruction species=%d height=%.2f yaw=%d distance=%.1f component=%s grip=%d"),Species,Height,Angle,FVector::Dist(Camera,Moving->GetActorLocation()),*GetNameSafe(H.Component.Get()),Moving->TreeIndex);SpeciesViews&=Visible;
                     }
                 }
             }

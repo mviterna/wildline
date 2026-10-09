@@ -1,0 +1,8 @@
+{
+  "verifiedAtUtc": "2026-10-09T04:35:14.3820949+00:00",
+  "shortcutTarget": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "shortcutArguments": "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\_git\\wildline\\native\\LaunchNative.ps1\"",
+  "packageRoot": "C:\\_git\\wildline\\native\\Build\\WorldUpgradeReview\\Windows",
+  "gamePath": "C:\\_git\\wildline\\native\\Build\\WorldUpgradeReview\\Windows\\Wildline.exe",
+  "completedAtUtc": "2026-10-09T00:34:51.0000000-04:00"
+}

@@ -1,0 +1,662 @@
+{
+  "M_NH_modular_electricity_poles_0": {
+    "color": "Photoreal\\modular_electricity_poles\\textures\\modular_electricity_poles_pieces_diff_4k.jpg",
+    "normal": "Photoreal\\modular_electricity_poles\\textures\\modular_electricity_poles_pieces_nor_gl_4k.jpg",
+    "arm": "Photoreal\\modular_electricity_poles\\textures\\modular_electricity_poles_pieces_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/modular_electricity_poles"
+  },
+  "M_NH_modular_electricity_poles_1": {
+    "color": "Photoreal\\modular_electricity_poles\\textures\\modular_electricity_poles_diff_4k.jpg",
+    "normal": "Photoreal\\modular_electricity_poles\\textures\\modular_electricity_poles_nor_gl_4k.jpg",
+    "arm": "Photoreal\\modular_electricity_poles\\textures\\modular_electricity_poles_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/modular_electricity_poles"
+  },
+  "M_NH_painted_wooden_bench_0": {
+    "color": "Photoreal\\painted_wooden_bench\\textures\\painted_wooden_bench_diff_4k.jpg",
+    "normal": "Photoreal\\painted_wooden_bench\\textures\\painted_wooden_bench_nor_gl_4k.jpg",
+    "arm": "Photoreal\\painted_wooden_bench\\textures\\painted_wooden_bench_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/painted_wooden_bench"
+  },
+  "M_NH_metal_trash_can_0": {
+    "color": "Photoreal\\metal_trash_can\\textures\\metal_trash_can_diff_4k.jpg",
+    "normal": "Photoreal\\metal_trash_can\\textures\\metal_trash_can_nor_gl_4k.jpg",
+    "arm": "Photoreal\\metal_trash_can\\textures\\metal_trash_can_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/metal_trash_can"
+  },
+  "M_NH_metal_trash_can_1": {
+    "color": "Photoreal\\metal_trash_can\\textures\\metal_trash_can_rust_diff_4k.jpg",
+    "normal": "Photoreal\\metal_trash_can\\textures\\metal_trash_can_rust_nor_gl_4k.jpg",
+    "arm": "Photoreal\\metal_trash_can\\textures\\metal_trash_can_rust_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/metal_trash_can"
+  },
+  "M_NH_metal_trash_can_2": {
+    "color": "Photoreal\\metal_trash_can\\textures\\metal_trash_can_rust_diff_4k.jpg",
+    "normal": "Photoreal\\metal_trash_can\\textures\\metal_trash_can_rust_nor_gl_4k.jpg",
+    "arm": "Photoreal\\metal_trash_can\\textures\\metal_trash_can_rust_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/metal_trash_can"
+  },
+  "M_NH_fire_hydrant_0": {
+    "color": "Photoreal\\fire_hydrant\\textures\\fire_hydrant_diff_4k.jpg",
+    "normal": "Photoreal\\fire_hydrant\\textures\\fire_hydrant_nor_gl_4k.jpg",
+    "arm": "Photoreal\\fire_hydrant\\textures\\fire_hydrant_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/fire_hydrant"
+  },
+  "M_NH_fire_hydrant_1": {
+    "color": "Photoreal\\fire_hydrant\\textures\\fire_hydrant_aged_diff_4k.jpg",
+    "normal": "Photoreal\\fire_hydrant\\textures\\fire_hydrant_aged_nor_gl_4k.jpg",
+    "arm": "Photoreal\\fire_hydrant\\textures\\fire_hydrant_aged_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/fire_hydrant"
+  },
+  "M_NH_garden_hose_wall_mounted_01_0": {
+    "color": "Photoreal\\garden_hose_wall_mounted_01\\textures\\garden_hose_wall_mounted_01_diff_4k.jpg",
+    "normal": "Photoreal\\garden_hose_wall_mounted_01\\textures\\garden_hose_wall_mounted_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\garden_hose_wall_mounted_01\\textures\\garden_hose_wall_mounted_01_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/garden_hose_wall_mounted_01"
+  },
+  "M_NH_garden_sprinkler_01_0": {
+    "color": "Photoreal\\garden_sprinkler_01\\textures\\garden_sprinkler_01_diff_4k.jpg",
+    "normal": "Photoreal\\garden_sprinkler_01\\textures\\garden_sprinkler_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\garden_sprinkler_01\\textures\\garden_sprinkler_01_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/garden_sprinkler_01"
+  },
+  "M_NH_planter_box_01_0": {
+    "color": "Photoreal\\planter_box_01\\textures\\planter_box_01_diff_4k.jpg",
+    "normal": "Photoreal\\planter_box_01\\textures\\planter_box_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\planter_box_01\\textures\\planter_box_01_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/planter_box_01"
+  },
+  "M_NH_planter_pot_clay_0": {
+    "color": "Photoreal\\planter_pot_clay\\textures\\planter_pot_clay_diff_4k.jpg",
+    "normal": "Photoreal\\planter_pot_clay\\textures\\planter_pot_clay_nor_gl_4k.jpg",
+    "arm": "Photoreal\\planter_pot_clay\\textures\\planter_pot_clay_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/planter_pot_clay"
+  },
+  "M_NH_plastic_monobloc_chair_01_0": {
+    "color": "Photoreal\\plastic_monobloc_chair_01\\textures\\plastic_monobloc_chair_01_diff_4k.jpg",
+    "normal": "Photoreal\\plastic_monobloc_chair_01\\textures\\plastic_monobloc_chair_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\plastic_monobloc_chair_01\\textures\\plastic_monobloc_chair_01_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/plastic_monobloc_chair_01"
+  },
+  "M_NH_outdoor_table_chair_set_01_0": {
+    "color": "Photoreal\\outdoor_table_chair_set_01\\textures\\outdoor_table_chair_set_01_chair_diff_4k.jpg",
+    "normal": "Photoreal\\outdoor_table_chair_set_01\\textures\\outdoor_table_chair_set_01_chair_nor_gl_4k.jpg",
+    "arm": "Photoreal\\outdoor_table_chair_set_01\\textures\\outdoor_table_chair_set_01_chair_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/outdoor_table_chair_set_01"
+  },
+  "M_NH_outdoor_table_chair_set_01_1": {
+    "color": "Photoreal\\outdoor_table_chair_set_01\\textures\\outdoor_table_chair_set_01_table_diff_4k.jpg",
+    "normal": "Photoreal\\outdoor_table_chair_set_01\\textures\\outdoor_table_chair_set_01_table_nor_gl_4k.jpg",
+    "arm": "Photoreal\\outdoor_table_chair_set_01\\textures\\outdoor_table_chair_set_01_table_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/outdoor_table_chair_set_01"
+  },
+  "M_NH_garden_gnome_0": {
+    "color": "Photoreal\\garden_gnome\\textures\\garden_gnome_diff_4k.jpg",
+    "normal": "Photoreal\\garden_gnome\\textures\\garden_gnome_nor_gl_4k.jpg",
+    "arm": "Photoreal\\garden_gnome\\textures\\garden_gnome_arm_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/garden_gnome"
+  },
+  "M_FeederCedar": {
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.65,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "color": "Photoreal\\weathered_plank_siding\\weathered_plank_siding_diff_4k.jpg",
+    "normal": "Photoreal\\weathered_plank_siding\\weathered_plank_siding_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\weathered_plank_siding\\weathered_plank_siding_rough_4k.jpg",
+    "source": "https://polyhaven.com/a/weathered_plank_siding"
+  },
+  "M_Galvanized": {
+    "factor": [
+      0.38,
+      0.4,
+      0.42,
+      1
+    ],
+    "roughness": 0.32,
+    "metallic": 0.9,
+    "alpha": "OPAQUE"
+  },
+  "M_FeederRoof": {
+    "factor": [
+      0.15,
+      0.19,
+      0.17,
+      1
+    ],
+    "roughness": 0.37,
+    "metallic": 0.75,
+    "alpha": "OPAQUE"
+  },
+  "M_FeederHopper": {
+    "factor": [
+      0.8,
+      0.86,
+      0.87,
+      0.2
+    ],
+    "roughness": 0.08,
+    "metallic": 0,
+    "alpha": "BLEND"
+  },
+  "M_BirdSeed": {
+    "factor": [
+      0.47,
+      0.34,
+      0.12,
+      1
+    ],
+    "roughness": 0.85,
+    "metallic": 0,
+    "alpha": "OPAQUE"
+  },
+  "M_TrampolinePad": {
+    "factor": [
+      0.018,
+      0.13,
+      0.14,
+      1
+    ],
+    "roughness": 0.67,
+    "metallic": 0,
+    "alpha": "OPAQUE"
+  },
+  "M_TrampolineMat": {
+    "factor": [
+      0.019,
+      0.022,
+      0.023,
+      1
+    ],
+    "roughness": 0.87,
+    "metallic": 0,
+    "alpha": "OPAQUE"
+  },
+  "M_PrivacyCedar": {
+    "factor": [
+      0.75,
+      0.72,
+      0.65,
+      1
+    ],
+    "roughness": 0.65,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "color": "Photoreal\\wood_peeling_paint_weathered\\wood_peeling_paint_weathered_diff_4k.jpg",
+    "normal": "Photoreal\\wood_peeling_paint_weathered\\wood_peeling_paint_weathered_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\wood_peeling_paint_weathered\\wood_peeling_paint_weathered_rough_4k.jpg",
+    "source": "https://polyhaven.com/a/wood_peeling_paint_weathered"
+  },
+  "M_CourseBark": {
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.9,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "color": "..\\Lobby\\Photoreal\\jolcham_oak_bark_01\\jolcham_oak_bark_01_diff_4k.jpg",
+    "normal": "..\\Lobby\\Photoreal\\jolcham_oak_bark_01\\jolcham_oak_bark_01_nor_gl_4k.jpg",
+    "rough_map": "..\\Lobby\\Photoreal\\jolcham_oak_bark_01\\jolcham_oak_bark_01_rough_4k.jpg",
+    "source": "https://polyhaven.com/a/jolcham_oak_bark_01"
+  },
+  "M_ServiceCable": {
+    "factor": [
+      0.014,
+      0.017,
+      0.019,
+      1
+    ],
+    "roughness": 0.7,
+    "metallic": 0,
+    "alpha": "OPAQUE"
+  },
+  "M_HouseCream": {
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.65,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "color": "Photoreal\\weathered_plank_siding\\weathered_plank_siding_diff_4k.jpg",
+    "normal": "Photoreal\\weathered_plank_siding\\weathered_plank_siding_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\weathered_plank_siding\\weathered_plank_siding_rough_4k.jpg",
+    "source": "https://polyhaven.com/a/weathered_plank_siding",
+    "paint": [
+      0.94,
+      0.91,
+      0.79
+    ]
+  },
+  "M_HouseTrim": {
+    "factor": [
+      0.85,
+      0.86,
+      0.81,
+      1
+    ],
+    "roughness": 0.73,
+    "metallic": 0,
+    "alpha": "OPAQUE"
+  },
+  "M_HouseShingles": {
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.65,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "color": "Photoreal\\roof_07\\roof_07_diff_4k.jpg",
+    "normal": "Photoreal\\roof_07\\roof_07_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\roof_07\\roof_07_rough_4k.jpg",
+    "source": "https://polyhaven.com/a/roof_07"
+  },
+  "M_HouseFoundation": {
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.65,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "color": "Photoreal\\concrete_pavement\\concrete_pavement_diff_4k.jpg",
+    "normal": "Photoreal\\concrete_pavement\\concrete_pavement_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\concrete_pavement\\concrete_pavement_rough_4k.jpg",
+    "source": "https://polyhaven.com/a/concrete_pavement"
+  },
+  "M_WindowReflection": {
+    "factor": [
+      0.09,
+      0.16,
+      0.19,
+      1
+    ],
+    "roughness": 0.16,
+    "metallic": 0.48,
+    "alpha": "OPAQUE"
+  },
+  "M_HouseDoor": {
+    "factor": [
+      0.12,
+      0.18,
+      0.17,
+      1
+    ],
+    "roughness": 0.63,
+    "metallic": 0,
+    "alpha": "OPAQUE"
+  },
+  "M_HouseBrick": {
+    "factor": [
+      0.34,
+      0.14,
+      0.09,
+      1
+    ],
+    "roughness": 0.9,
+    "metallic": 0,
+    "alpha": "OPAQUE"
+  },
+  "M_DoorBrass": {
+    "factor": [
+      0.48,
+      0.32,
+      0.08,
+      1
+    ],
+    "roughness": 0.25,
+    "metallic": 0.8,
+    "alpha": "OPAQUE"
+  },
+  "M_HouseBlue": {
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.65,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "color": "Photoreal\\weathered_plank_siding\\weathered_plank_siding_diff_4k.jpg",
+    "normal": "Photoreal\\weathered_plank_siding\\weathered_plank_siding_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\weathered_plank_siding\\weathered_plank_siding_rough_4k.jpg",
+    "source": "https://polyhaven.com/a/weathered_plank_siding",
+    "paint": [
+      0.57,
+      0.68,
+      0.76
+    ]
+  },
+  "M_Asphalt": {
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.65,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "color": "Photoreal\\aerial_asphalt_01\\aerial_asphalt_01_diff_4k.jpg",
+    "normal": "Photoreal\\aerial_asphalt_01\\aerial_asphalt_01_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\aerial_asphalt_01\\aerial_asphalt_01_rough_4k.jpg",
+    "source": "https://polyhaven.com/a/aerial_asphalt_01"
+  },
+  "M_Sidewalk": {
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.65,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "color": "Photoreal\\concrete_pavement\\concrete_pavement_diff_4k.jpg",
+    "normal": "Photoreal\\concrete_pavement\\concrete_pavement_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\concrete_pavement\\concrete_pavement_rough_4k.jpg",
+    "source": "https://polyhaven.com/a/concrete_pavement"
+  },
+  "M_NeighborhoodLawn": {
+    "factor": [
+      0.24,
+      0.52,
+      0.14,
+      1
+    ],
+    "roughness": 0.65,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "color": "Photoreal\\grass_path_2\\grass_path_2_diff_4k.jpg",
+    "normal": "Photoreal\\grass_path_2\\grass_path_2_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\grass_path_2\\grass_path_2_rough_4k.jpg",
+    "source": "https://polyhaven.com/a/grass_path_2"
+  },
+  "M_PlanterSoil": {
+    "factor": [
+      0.09,
+      0.055,
+      0.025,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE"
+  },
+  "M_NH_HouseKit_0": {
+    "color": "ModularHouseKitGLTF\\textures\\M_UberWood_baseColor.png",
+    "normal": "ModularHouseKitGLTF\\textures\\M_UberWood_normal.png",
+    "arm": "ModularHouseKitGLTF\\textures\\M_UberWood_metallicRoughness.png",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://sketchfab.com/3d-models/7dfa7d64895d4b1394162401366e806a"
+  },
+  "M_NH_HouseKit_1": {
+    "color": "ModularHouseKitGLTF\\textures\\M_BlackWood_baseColor.png",
+    "normal": "ModularHouseKitGLTF\\textures\\M_UberWood_normal.png",
+    "arm": "ModularHouseKitGLTF\\textures\\M_UberWood_metallicRoughness.png",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://sketchfab.com/3d-models/7dfa7d64895d4b1394162401366e806a"
+  },
+  "M_NH_HouseKit_2": {
+    "color": "ModularHouseKitGLTF\\textures\\M_UberOther_baseColor.png",
+    "normal": "ModularHouseKitGLTF\\textures\\M_UberOther_normal.png",
+    "arm": "ModularHouseKitGLTF\\textures\\M_UberOther_metallicRoughness.png",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0.0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://sketchfab.com/3d-models/7dfa7d64895d4b1394162401366e806a"
+  },
+  "M_NH_HouseKit_3": {
+    "color": null,
+    "normal": null,
+    "arm": null,
+    "factor": [
+      1.0,
+      1.0,
+      1.0,
+      0.12038131925735392
+    ],
+    "roughness": 0.6,
+    "metallic": 0.0,
+    "alpha": "BLEND",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://sketchfab.com/3d-models/7dfa7d64895d4b1394162401366e806a"
+  },
+  "M_NH_HouseKit_4": {
+    "color": null,
+    "normal": null,
+    "arm": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.6,
+    "metallic": 0.0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://sketchfab.com/3d-models/7dfa7d64895d4b1394162401366e806a"
+  }
+}

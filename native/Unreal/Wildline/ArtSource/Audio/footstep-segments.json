@@ -1,0 +1,23 @@
+{
+  "source": "https://www.youtube.com/watch?v=OY1LwHQZF3s",
+  "segments_seconds": [
+    [
+      0.426,
+      0.735
+    ],
+    [
+      0.9,
+      1.167
+    ],
+    [
+      1.267,
+      1.611
+    ],
+    [
+      1.633,
+      1.92
+    ]
+  ],
+  "sample_rate": 22050,
+  "run_playback_rate": 1.1
+}

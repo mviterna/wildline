@@ -22,6 +22,12 @@ void AWildlineLobby::Tick(float DeltaSeconds){
     auto* PC=GetWorld()->GetFirstPlayerController();
     const FVector Eye=PC&&PC->PlayerCameraManager?PC->PlayerCameraManager->GetCameraLocation()-Centre(false):FVector(0,0,-10000);
     const bool Visible=FMath::Abs(Eye.X)<760&&FMath::Abs(Eye.Y)<760&&Eye.Z>-50&&Eye.Z<510;
+    const FVector TreeEye=PC&&PC->PlayerCameraManager?PC->PlayerCameraManager->GetCameraLocation()-Centre(true):FVector(0,0,-10000);
+    const bool TreeVisible=FMath::Abs(TreeEye.X)<520&&FMath::Abs(TreeEye.Y)<520&&TreeEye.Z>-50&&TreeEye.Z<510;
+    // Waiting rooms live above the reserve; only the peer looking from inside
+    // a room should render their architecture, furniture, signs and portals.
+    SetActorHiddenInGame(!Visible&&!TreeVisible);
+    for(auto* Prop:Props)if(Prop&&Prop->bCastHiddenShadow)Prop->SetCastShadow(Visible||TreeVisible);
     if(Visible!=bLodgeSceneryVisible){bLodgeSceneryVisible=Visible;for(auto* C:LodgeScenery)if(C)C->SetVisibility(Visible,true);}
 }
 FVector AWildlineLobby::Centre(bool S){return FVector(S?2400:-2400,-6500,5500);}
@@ -32,6 +38,7 @@ FVector AWildlineLobby::Rack(int32 Weapon){return Centre(false)+FVector(Weapon==
 int32 AWildlineLobby::WeaponAt(FVector P){if(FMath::Abs(P.Z-Centre(false).Z)>210)return INDEX_NONE;int32 Best=INDEX_NONE;float Distance=170;for(int32 I=0;I<2;I++){const float D=FVector::Dist2D(P,Rack(I));if(D<Distance){Distance=D;Best=I;}}return Best;}
 void AWildlineLobby::BeginPlay(){
     Super::BeginPlay();BuildLodge();BuildTree();BuildPortal(false);BuildPortal(true);
+    SetActorHiddenInGame(true);
     // One invisible, low-poly envelope per room blocks outdoor sunlight instead
     // of asking every log and bark segment to cast overlapping virtual shadows.
     for(bool S:{false,true}){
@@ -43,7 +50,14 @@ void AWildlineLobby::BeginPlay(){
     for(bool S:{false,true}){
         auto* Bounds=NewObject<UBoxComponent>(this);AddInstanceComponent(Bounds);Bounds->SetupAttachment(RootComponent);Bounds->SetRelativeLocation(Centre(S)+FVector(0,0,225));Bounds->SetBoxExtent(FVector(S?490:730,S?490:730,280));Bounds->SetCollisionEnabled(ECollisionEnabled::QueryOnly);Bounds->SetCollisionResponseToAllChannels(ECR_Ignore);Bounds->SetGenerateOverlapEvents(false);Bounds->RegisterComponent();
         auto* Grade=NewObject<UPostProcessComponent>(this);AddInstanceComponent(Grade);Grade->SetupAttachment(Bounds);Grade->bUnbound=false;Grade->Priority=200;Grade->BlendRadius=20;
-        auto& Settings=Grade->Settings;Settings.bOverride_AutoExposureMinBrightness=true;Settings.bOverride_AutoExposureMaxBrightness=true;Settings.AutoExposureMinBrightness=7.5f;Settings.AutoExposureMaxBrightness=7.5f;Settings.bOverride_BloomIntensity=true;Settings.BloomIntensity=.38f;Grade->RegisterComponent();
+        auto& Settings=Grade->Settings;
+        Settings.bOverride_AutoExposureMethod=true;Settings.AutoExposureMethod=AEM_Histogram;
+        Settings.bOverride_AutoExposureMinBrightness=true;Settings.bOverride_AutoExposureMaxBrightness=true;Settings.AutoExposureMinBrightness=S?5.7f:7.5f;Settings.AutoExposureMaxBrightness=S?5.7f:7.5f;
+        // Reserve grades override the engine's exposure compensation; room light
+        // must not inherit a different compensation from each outdoor map.
+        Settings.bOverride_AutoExposureBias=true;Settings.AutoExposureBias=1.5f;
+        Settings.bOverride_AutoExposureApplyPhysicalCameraExposure=true;Settings.AutoExposureApplyPhysicalCameraExposure=false;
+        Settings.bOverride_BloomIntensity=true;Settings.BloomIntensity=.38f;Grade->RegisterComponent();
     }
 }
 UStaticMeshComponent* AWildlineLobby::Piece(const TCHAR* Name,const TCHAR* Shape,FVector P,FVector Size,UMaterialInterface* M,FRotator R,bool Collision){

@@ -16,6 +16,9 @@ native/Unreal/Wildline/*.sln
 native/Build/
 native/AssetDownloads/
 native/Tools/python/
+native/Tools/InnoSetup/
+native/Tools/innosetup-installer.exe
+native/Installer/Generated.iss
 __pycache__/
 *.py[cod]
 *.pid

@@ -1,0 +1,45 @@
+{
+  "verified_at": "2026-10-09T04:40:27.026182+00:00",
+  "engine": "Unreal Engine 5.8.3",
+  "build": "native/Build/WorldUpgradeReview/Windows",
+  "asset_and_layout_automation": "Wildline.Gameplay.NeighborhoodAssetsAndLayouts: PASS",
+  "physical_routes": [
+    {
+      "log": "native/neighborhood-Neighborhood-lane0.log",
+      "verified_at_utc": "2026-10-09T04:15:07.958107+00:00",
+      "passed": true,
+      "map": "Neighborhood",
+      "lane": 0,
+      "completed_trips": 5
+    },
+    {
+      "log": "native/neighborhood-Neighborhood-lane1.log",
+      "verified_at_utc": "2026-10-09T04:15:20.710653+00:00",
+      "passed": true,
+      "map": "Neighborhood",
+      "lane": 1,
+      "completed_trips": 8
+    },
+    {
+      "log": "native/neighborhood-NeighborhoodCedar-lane0.log",
+      "verified_at_utc": "2026-10-09T04:15:32.201178+00:00",
+      "passed": true,
+      "map": "NeighborhoodCedar",
+      "lane": 0,
+      "completed_trips": 2
+    },
+    {
+      "log": "native/neighborhood-NeighborhoodCedar-lane1.log",
+      "verified_at_utc": "2026-10-09T04:15:43.992560+00:00",
+      "passed": true,
+      "map": "NeighborhoodCedar",
+      "lane": 1,
+      "completed_trips": 7
+    }
+  ],
+  "visual_review": {
+    "verified_at": "2026-10-09T04:40:27.026182+00:00",
+    "description": "Final cooked cars, neighborhood, den trophies and wooded lodge captures at 1600x900."
+  },
+  "test_stage": "Physical routes verified in packaged gameplay pass; final changes affect room lighting only."
+}

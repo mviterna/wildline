@@ -1,7 +1,7 @@
-param([switch]$Capture,[switch]$Editor)
+param([switch]$Capture,[switch]$Editor,[string]$GamePath)
 $ErrorActionPreference='Stop'
 $taskProject=Join-Path $PSScriptRoot 'Unreal/Wildline/Wildline.uproject'
-$taskGame=Join-Path $PSScriptRoot 'Build/Windows/Wildline/Binaries/Win64/Wildline.exe'
+$taskGame=if($GamePath){$GamePath}else{Join-Path $PSScriptRoot 'Build/Windows/Wildline/Binaries/Win64/Wildline.exe'}
 if($Editor){$taskGame='D:/EpicEngine/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe'}
 if(!(Test-Path -LiteralPath $taskGame)){throw 'Build the game or editor first.'}
 $taskProcesses=@()

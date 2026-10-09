@@ -1,7 +1,7 @@
-param([switch]$Capture,[switch]$Editor,[switch]$SkipSmoke,[switch]$CaptureOnly)
+param([switch]$Capture,[switch]$Editor,[switch]$SkipSmoke,[switch]$CaptureOnly,[string]$GamePath)
 $ErrorActionPreference='Stop'
 $taskProject=Join-Path $PSScriptRoot 'Unreal/Wildline/Wildline.uproject'
-$taskExe=if($Editor){'D:/EpicEngine/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe'}else{Join-Path $PSScriptRoot 'Build/Windows/Wildline/Binaries/Win64/Wildline.exe'}
+$taskExe=if($GamePath){$GamePath}elseif($Editor){'D:/EpicEngine/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe'}else{Join-Path $PSScriptRoot 'Build/Windows/Wildline/Binaries/Win64/Wildline.exe'}
 if(!(Test-Path -LiteralPath $taskExe)){throw 'Build the native game first.'}
 $taskProcesses=@()
 function Start-LobbyProbe([string]$Flags,[string]$Name){

@@ -83,6 +83,8 @@ public:
     UPROPERTY() UCheckBox* AllowThermal;
     UPROPERTY() UCheckBox* LivestockDamage;
     UPROPERTY() UComboBoxString* MapIntel;
+    UPROPERTY() UComboBoxString* NeighborhoodLayout;
+    UPROPERTY() UComboBoxString* ClassicLayout;
     UPROPERTY() UComboBoxString* TimeWinner;
     UPROPERTY() UComboBoxString* Presets;
     UPROPERTY() UWidgetSwitcher* Pages;

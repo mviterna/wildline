@@ -1,4 +1,6 @@
 #include "WildlineWorld.h"
+#include "Misc/CommandLine.h"
+#include "Misc/Parse.h"
 #include "WildlineLobby.h"
 #include "WildlineRules.h"
 #include "WildlineTrunkProfiles.h"
@@ -36,6 +38,11 @@ AWildlineWorld::AWildlineWorld() {
         Layer->SetupAttachment(RootComponent);Layer->SetCollisionEnabled(ECollisionEnabled::NoCollision);
         Layer->SetCullDistances(I<4?22000:4800,I<4?30000:6500);ForestLayers.Add(Layer);
     }
+    for(int32 I=0;I<4;I++){
+        auto* Wood=CreateDefaultSubobject<UHierarchicalInstancedStaticMeshComponent>(*FString::Printf(TEXT("Climbable wood %d"),I));
+        Wood->SetupAttachment(RootComponent);Wood->SetVisibility(false);Wood->SetCastShadow(false);
+        Wood->SetCollisionProfileName(TEXT("BlockAll"));ClimbWood.Add(Wood);
+    }
     Trunks->SetVisibility(false);Trunks->SetCastShadow(false);
     Foliage->SetVisibility(false);Branches->SetVisibility(false);Grass->SetVisibility(false);
     Farmhouse=CreateDefaultSubobject<UHierarchicalInstancedStaticMeshComponent>(TEXT("Farmhouse"));Farmhouse->SetupAttachment(RootComponent);Farmhouse->SetCollisionProfileName(TEXT("BlockAll"));
@@ -44,7 +51,7 @@ AWildlineWorld::AWildlineWorld() {
 }
 AWildlineWorld* AWildlineWorld::Find(UWorld* W){for(TActorIterator<AWildlineWorld> It(W);It;++It)return *It;return nullptr;}
 FVector AWildlineWorld::TrunkCentre(int32 Index,float WorldZ,float& Radius) const {
-    const auto& T=Trees[Index];const auto& Profile=WildlineTrunkProfile(T.Species);
+    const auto& T=Trees[Index];if(T.bStraightTrunk){Radius=T.Radius;return FVector(T.Base.X,T.Base.Y,WorldZ);}const auto& Profile=WildlineTrunkProfile(T.Species);
     const float LocalZ=(WorldZ-T.MeshTransform.GetLocation().Z)/T.MeshTransform.GetScale3D().Z;
     FVector4 Ring=Profile[0];
     for(int32 I=1;I<Profile.Num();I++){
@@ -56,8 +63,8 @@ FVector AWildlineWorld::TrunkCentre(int32 Index,float WorldZ,float& Radius) cons
     FVector Centre=T.MeshTransform.TransformPosition(FVector(Ring.X,Ring.Y,Ring.Z));Centre.Z=WorldZ;return Centre;
 }
 int32 AWildlineWorld::NearestTree(FVector P,float Max) const {int32 Result=INDEX_NONE;for(int32 I=0;I<Trees.Num();I++){float Radius;const auto Centre=TrunkCentre(I,P.Z,Radius);const float D=FVector::Dist2D(P,Centre)-Radius;if(D<Max&&P.Z<Trees[I].ClimbTop){Max=D;Result=I;}}return Result;}
-void AWildlineWorld::BeginPlay(){Super::BeginPlay();if(Trees.Num()==0)Rebuild();if(!AWildlineLobby::Find(GetWorld()))GetWorld()->SpawnActor<AWildlineLobby>();}
-void AWildlineWorld::Rebuild(){Trunks->ClearInstances();Foliage->ClearInstances();Branches->ClearInstances();Rocks->ClearInstances();Grass->ClearInstances();Acorns->ClearInstances();AcornCaps->ClearInstances();ReserveFence->ClearInstances();for(auto* Layer:ForestLayers)Layer->ClearInstances();Terrain->ClearAllMeshSections();Trees.Empty();AcornLocations.Empty();Farmhouse->ClearInstances();for(auto* Prop:FarmProps)Prop->ClearInstances();for(auto* Prop:ResidentialProps)if(Prop)Prop->DestroyComponent();ResidentialProps.Empty();for(auto* Gable:ResidentialGables)if(Gable)Gable->DestroyComponent();ResidentialGables.Empty();CoursePlatforms.Empty();DenMesh->SetVisibility(true);if(bResidential)GenerateResidential();else if(bFarm)GenerateFarm();else Generate();}
+void AWildlineWorld::BeginPlay(){Super::BeginPlay();float ReviewYaw;if(Trees.Num()==0||(bResidential&&FParse::Value(FCommandLine::Get(),TEXT("WildlineCourseOakYaw="),ReviewYaw)))Rebuild();bool WoodReady=ClimbWood.Num()==4;for(auto* Wood:ClimbWood)WoodReady&=Wood&&Wood->GetStaticMesh()&&Wood->GetInstanceCount()>0;Trunks->SetCollisionEnabled(WoodReady?ECollisionEnabled::NoCollision:ECollisionEnabled::QueryAndPhysics);if(!AWildlineLobby::Find(GetWorld()))GetWorld()->SpawnActor<AWildlineLobby>();}
+void AWildlineWorld::Rebuild(){for(auto* Wood:ClimbWood)Wood->ClearInstances();Trunks->ClearInstances();Foliage->ClearInstances();Branches->ClearInstances();Rocks->ClearInstances();Grass->ClearInstances();Acorns->ClearInstances();AcornCaps->ClearInstances();ReserveFence->ClearInstances();for(auto* Layer:ForestLayers)Layer->ClearInstances();Terrain->ClearAllMeshSections();Trees.Empty();AcornLocations.Empty();Farmhouse->ClearInstances();for(auto* Prop:FarmProps)Prop->ClearInstances();for(auto* Prop:ResidentialProps)if(Prop)Prop->DestroyComponent();ResidentialProps.Empty();for(auto* Gable:ResidentialGables)if(Gable)Gable->DestroyComponent();ResidentialGables.Empty();CoursePlatforms.Empty();DenMesh->SetVisibility(true);if(bResidential)GenerateResidential();else if(bFarm)GenerateFarm();else Generate();}
 void AWildlineWorld::ShowLocalAcorns(const TArray<int32>& Collected){
     for(int32 I=0;I<AcornLocations.Num();I++){
         FTransform T;Acorns->GetInstanceTransform(I,T);
@@ -69,30 +76,47 @@ void AWildlineWorld::ShowLocalAcorns(const TArray<int32>& Collected){
 void AWildlineWorld::Generate(){
     using namespace WildlineRules;
     auto Mat=[](const TCHAR* Name){return LoadObject<UMaterialInterface>(nullptr,Name);};
-    Terrain->SetMaterial(0,Mat(TEXT("/Game/Wildline/Forest/Materials/M_LeafLitter.M_LeafLitter")));
+    Terrain->SetMaterial(0,Mat(bWinter?TEXT("/Game/Wildline/Forest/Materials/M_Snow.M_Snow"):TEXT("/Game/Wildline/Forest/Materials/M_LeafLitter.M_LeafLitter")));
     Trunks->SetVisibility(false);Foliage->SetVisibility(false);Branches->SetVisibility(false);Grass->SetVisibility(false);
     const TCHAR* MeshNames[]={TEXT("SM_OakA"),TEXT("SM_OakB"),TEXT("SM_OakC"),TEXT("SM_Pine"),TEXT("SM_GrassA"),TEXT("SM_GrassB"),TEXT("SM_GrassC"),TEXT("SM_DryGrass"),TEXT("SM_Clover"),TEXT("SM_CloverWide"),TEXT("SM_Weed"),TEXT("SM_WeedB"),TEXT("SM_Fern1"),TEXT("SM_Fern2"),TEXT("SM_Fern3"),TEXT("SM_Fern4"),TEXT("SM_FallenLeaf"),TEXT("SM_OakA"),TEXT("SM_Log")};
     for(int32 I=0;I<ForestLayers.Num();I++){
         const FString Path=FString::Printf(TEXT("/Game/Wildline/Forest/Meshes/%s.%s"),MeshNames[I],MeshNames[I]);
         ForestLayers[I]->SetStaticMesh(LoadObject<UStaticMesh>(nullptr,*Path));
+        if(I<4||I==17){
+            const FString Seasonal=FString::Printf(TEXT("/Game/Wildline/Forest/Meshes/%s_%s.%s_%s"),MeshNames[I],bWinter?TEXT("Bare"):TEXT("Thin"),MeshNames[I],bWinter?TEXT("Bare"):TEXT("Thin"));
+            if(auto* Mesh=LoadObject<UStaticMesh>(nullptr,*Seasonal))ForestLayers[I]->SetStaticMesh(Mesh);
+        }
+        if(I<4){
+            const FString Wood=FString::Printf(TEXT("/Game/Wildline/Forest/Meshes/%s_Wood.%s_Wood"),MeshNames[I],MeshNames[I]);
+            ClimbWood[I]->SetStaticMesh(LoadObject<UStaticMesh>(nullptr,*Wood));
+        }
         ForestLayers[I]->SetVisibility(true);
         if(I==18)ForestLayers[I]->SetCollisionProfileName(TEXT("BlockAll"));
         ForestLayers[I]->bAutoRebuildTreeOnInstanceChanges=false;
         if(I>=4)ForestLayers[I]->SetCastShadow(I>=10&&I!=16);
     }
     Rocks->SetStaticMesh(LoadObject<UStaticMesh>(nullptr,TEXT("/Game/Wildline/Forest/Meshes/SM_Stone.SM_Stone")));
-    Rocks->SetMaterial(0,Mat(TEXT("/Game/Wildline/Forest/Materials/M_Stone.M_Stone")));
+    Rocks->SetMaterial(0,Mat(bWinter?TEXT("/Game/Wildline/Forest/Materials/M_FrostStone.M_FrostStone"):TEXT("/Game/Wildline/Forest/Materials/M_Stone.M_Stone")));
     // Serialized reserve actors also need the repaired component collision settings.
     Rocks->SetCollisionProfileName(TEXT("BlockAll"));Rocks->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
     ReserveFence->SetMaterial(0,Mat(TEXT("/Game/Wildline/Forest/Materials/M_TreeBark.M_TreeBark")));
     constexpr int32 N=420;constexpr float Extent=22000.f;const float Step=Extent*2/N;
+    TArray<float> GridX,GridY;
+    for(int32 I=0;I<=N;I++){GridX.Add(-Extent+I*Step);GridY.Add(-Extent+I*Step);}
+    // Exact basin edges keep lawn triangles out of recessed pools. The normal
+    // terrain grid is too coarse to follow a pool's narrow concrete coping.
+    if(bResidential)for(const FBox& Basin:ResidentialPoolBasins){
+        for(float X:{float(Basin.Min.X),float(Basin.Min.X+35),float(Basin.Max.X-35),float(Basin.Max.X)})GridX.AddUnique(X);
+        for(float Y:{float(Basin.Min.Y),float(Basin.Min.Y+35),float(Basin.Max.Y-35),float(Basin.Max.Y)})GridY.AddUnique(Y);
+    }
+    GridX.Sort();GridY.Sort();const int32 Width=GridX.Num();
     TArray<FVector> Vertices,Normals;TArray<int32> Indices;TArray<FVector2D> UV;TArray<FLinearColor> Colors;TArray<FProcMeshTangent> Tangents;
-    for(int32 Y=0;Y<=N;Y++)for(int32 X=0;X<=N;X++){
-        const float PX=-Extent+X*Step,PY=-Extent+Y*Step;
+    for(int32 Y=0;Y<GridY.Num();Y++)for(int32 X=0;X<Width;X++){
+        const float PX=GridX[X],PY=GridY[Y];
         Vertices.Add(FVector(PX,PY,GroundHeight(PX,PY)));UV.Add(FVector2D(PX/220.f,PY/220.f));
         Normals.Add(FVector(GroundHeight(PX-10,PY)-GroundHeight(PX+10,PY),GroundHeight(PX,PY-10)-GroundHeight(PX,PY+10),20).GetSafeNormal());
         Colors.Add(FLinearColor::White);Tangents.Add(FProcMeshTangent(1,0,0));
-        if(X<N&&Y<N){const int32 A=Y*(N+1)+X;Indices.Append({A,A+N+1,A+1,A+1,A+N+1,A+N+2});}
+        if(X<Width-1&&Y<GridY.Num()-1){const int32 A=Y*Width+X;Indices.Append({A,A+Width,A+1,A+1,A+Width,A+Width+1});}
     }
     Terrain->CreateMeshSection_LinearColor(0,Vertices,Indices,Normals,UV,Colors,Tangents,true);Terrain->SetCollisionProfileName(TEXT("BlockAll"));
     FRandomStream R(84672);
@@ -111,7 +135,7 @@ void AWildlineWorld::Generate(){
         const float Collar=Species==3?460.f:0.f;
         const FVector Planted(T.Base.X,T.Base.Y,RootGround-8.f-(Bounds.Min.Z+Collar)*ZScale);
         T.MeshTransform=FTransform(FRotator(0,R.FRandRange(0,360),0),Planted,FVector(XY,XY,ZScale));
-        ForestLayers[Species]->AddInstance(T.MeshTransform);
+        ForestLayers[Species]->AddInstance(T.MeshTransform);AddClimbWood(I);
         const auto& Profile=WildlineTrunkProfile(Species);T.ClimbTop=Planted.Z+Profile.Last().Z*ZScale;
         // Segmented collision follows the actual curved/tapered stem.
         const float Bottom=T.Base.Z-15;
@@ -162,12 +186,12 @@ void AWildlineWorld::Generate(){
         ForestLayers[Species]->AddInstance(FTransform(Align,FVector(X,Y,GroundHeight(X,Y)-RootSink),FVector(S)));
     };
     // Broad ecological patches keep trails open and avoid a uniformly planted lawn.
-    for(int32 I=0;I<112000;I++){
+    for(int32 I=0;I<(bWinter?0:112000);I++){
         const bool Camp=I<18000;
         float X,Y;
         if(Camp){X=R.FRandRange(-4400,4400);Y=R.FRandRange(-4400,4400);}
         else{const auto& T=Trees[R.RandRange(0,Trees.Num()-1)];X=T.Base.X+R.FRandRange(-1100,1100);Y=T.Base.Y+R.FRandRange(-1100,1100);}
-        if((bFarm||bResidential)&&FMath::Sqrt(X*X+Y*Y)<4700)continue;if(NearForage(X,Y,110))continue;
+        if((bFarm&&FMath::Sqrt(X*X+Y*Y)<4700)||(bResidential&&FMath::Abs(X)<6400&&FMath::Abs(Y)<5600))continue;if(NearForage(X,Y,110))continue;
         const float Trail=FMath::Abs(Y-700.f-FMath::Sin(X*.0007f)*210.f);
         if(Trail<100.f||(FMath::Abs(X)<130&&Y>500&&Y<1350))continue;
         const float Patch=FMath::Sin(X*.0018f)*FMath::Cos(Y*.0014f)+FMath::Sin((X+Y)*.0033f)*.3f;
@@ -177,21 +201,21 @@ void AWildlineWorld::Generate(){
         else if(R.FRand()<.16f)Species=7;
         GroundInstance(Species,X,Y,R.FRandRange(.65f,1.25f),.8f);
     }
-    for(int32 I=0;I<4800;I++){
+    for(int32 I=0;I<(bWinter?0:4800);I++){
         const auto& T=Trees[R.RandRange(0,Trees.Num()-1)];const float A=R.FRandRange(0,2*PI),D=R.FRandRange(120,650);
         const float X=T.Base.X+FMath::Cos(A)*D,Y=T.Base.Y+FMath::Sin(A)*D;
         if(NearForage(X,Y,200))continue;
         const int32 Species=R.FRand()<.76f?12+R.RandRange(0,3):10+R.RandRange(0,1);
         GroundInstance(Species,X,Y,R.FRandRange(.6f,1.25f),1.3f);
     }
-    for(int32 I=0;I<28000;I++){
+    for(int32 I=0;I<(bWinter?0:19000);I++){
         float X=R.FRandRange(-15800,15800),Y=R.FRandRange(-15800,15800);
         if(I<6500){X=R.FRandRange(-2400,2400);Y=R.FRandRange(-2400,2400);}
-        if((bFarm||bResidential)&&FVector2D(X,Y).Size()<4700)continue;GroundInstance(16,X,Y,R.FRandRange(.7f,1.2f),-.35f);
+        if((bFarm&&FVector2D(X,Y).Size()<4700)||(bResidential&&FMath::Abs(X)<6400&&FMath::Abs(Y)<5600))continue;GroundInstance(16,X,Y,R.FRandRange(.7f,1.2f),-.35f);
     }
     for(int32 I=0;I<1400;I++){
         const float X=R.FRandRange(-16000,16000),Y=R.FRandRange(-16000,16000),S=R.FRandRange(.12f,1.6f);
-        if((bFarm||bResidential)&&FVector2D(X,Y).Size()<5100)continue;if(NearForage(X,Y,280*S+195))continue;
+        if((bFarm&&FVector2D(X,Y).Size()<5100)||(bResidential&&FMath::Abs(X)<6400&&FMath::Abs(Y)<5600))continue;if(NearForage(X,Y,280*S+195))continue;
         Rocks->AddInstance(FTransform(FRotator(R.FRandRange(-15,15),R.FRandRange(0,360),R.FRandRange(-10,10)),FVector(X,Y,GroundHeight(X,Y)-5*S),FVector(S,S*R.FRandRange(.8f,1.3f),S)));
     }
     for(int32 I=0;I<150;I++){
@@ -214,7 +238,14 @@ void AWildlineWorld::Generate(){
     DenMesh->SetRelativeLocation(DenLocation+FVector(0,0,26));DenMesh->SetRelativeRotation(FRotator(0,75,0));
 }
 
-float AWildlineWorld::GroundHeight(float X,float Y) const{return (bFarm||bResidential)?WildlineRules::FarmGround(X,Y):WildlineRules::Ground(X,Y);}
+float AWildlineWorld::GroundHeight(float X,float Y) const{
+    float Height=(bFarm||bResidential)?WildlineRules::FarmGround(X,Y):WildlineRules::Ground(X,Y);
+    if(bResidential)for(const FBox& Basin:ResidentialPoolBasins){
+        const float Edge=FMath::Min(FMath::Min(X-Basin.Min.X,Basin.Max.X-X),FMath::Min(Y-Basin.Min.Y,Basin.Max.Y-Y));
+        if(Edge>0)Height=FMath::Lerp(Height,float(Basin.Min.Z-2),FMath::SmoothStep(0.f,35.f,Edge));
+    }
+    return Height;
+}
 bool AWildlineWorld::InsideFarmhouse(FVector P) const{const FVector D=P-FarmhouseLocation;return bFarm&&FMath::Abs(D.X)<585&&FMath::Abs(D.Y)<470&&D.Z>FarmFloor-1&&D.Z<FarmFloor+218;}
 bool AWildlineWorld::InCropCover(FVector P) const{return bFarm&&P.X>-2400&&P.X<700&&FMath::Abs(P.Y)>850&&FMath::Abs(P.Y)<2250&&P.Z-GroundHeight(P.X,P.Y)<100;}
 FVector AWildlineWorld::FarmRoute(FVector From,FVector Target) const{

@@ -29,17 +29,44 @@ void AWildlineCharacter::UpdateCourse(){
 
 void AWildlineCharacter::CourseBotThink(float Delta){
     UpdateCourse();bSprinting=false;auto* M=GetCharacterMovement();
-    const int32 Lane=CourseLane>=0?CourseLane:(GetUniqueID()%2);
+    const int32 Lane=CourseLane>=0?CourseLane:((BotSlot>=0?BotSlot:GetUniqueID())%2);
     FVector Target=Forest->CourseTarget(Lane,CourseCheckpoint);
+    const int32 Entry=Forest->CourseEntryTree(Lane);
+    if(Entry!=INDEX_NONE&&CourseCheckpoint==1){
+        const auto& Tree=Forest->Trees[Entry];
+        if(TreeIndex==Entry){
+            if(GetActorLocation().Z<Tree.ClimbTop-35){ForwardInput=1;SideInput=0;return;}
+            // The service wire leaves beneath a crossarm. Orbit to the clear
+            // approach side before launching, including after a return trip.
+            if((GetActorLocation()-Tree.Base).GetSafeNormal2D().X>-.85f){ForwardInput=0;SideInput=1;return;}
+            ForwardInput=SideInput=0;if(Controller)Controller->SetControlRotation((Target-GetActorLocation()).GetSafeNormal2D().Rotation());ServerJump_Implementation();return;
+        }
+        if(!M->IsFalling()&&GetActorLocation().Z<Tree.ClimbTop-90){
+            const FVector Toward=Tree.Base-GetActorLocation();
+            if(Controller)Controller->SetControlRotation(Toward.GetSafeNormal2D().Rotation());
+            if(Forest->NearestTree(GetActorLocation(),30)==Entry)ServerClimb_Implementation();else AddMovementInput(Toward.GetSafeNormal2D(),1);return;
+        }
+    }
     // Return beside the course, rather than into the solid bins and bench legs.
-    if(CourseCheckpoint==0&&GetActorLocation().X>-800){const float Side=Lane==0?-500.f:500.f;Target=FMath::Abs(GetActorLocation().Y-Side)>40?FVector(GetActorLocation().X,Side,210):FVector(-1050,Side,210);}
+    if(CourseCheckpoint==0&&GetActorLocation().X>-800){
+        float Side=Forest->CourseTarget(Lane,0).Y;
+        for(int32 Step=1;Step<=4;Step++)Side=Lane==0?FMath::Min(Side,Forest->CourseTarget(Lane,Step).Y):FMath::Max(Side,Forest->CourseTarget(Lane,Step).Y);
+        Side+=Lane==0?-180.f:180.f;
+        Target=FMath::Abs(GetActorLocation().Y-Side)>20?FVector(GetActorLocation().X,Side,210):FVector(-1050,Side,210);
+    }
+    // Leave the hopper through its open end before heading down the lawn.
+    // The clear front/back panes are physical barriers above the seed tray.
+    if(CourseCheckpoint==0&&FVector::Dist2D(GetActorLocation(),Forest->FeederLocation)<120&&GetActorLocation().Z>Forest->GroundHeight(GetActorLocation().X,GetActorLocation().Y)+30)Target=Forest->FeederLocation+FVector(-160,0,-240);
     const FVector D=Target-GetActorLocation();const FVector Dir=D.GetSafeNormal2D();
     if(Controller)Controller->SetControlRotation(Dir.Rotation());
     if(M->IsFalling()){
         // Braking is necessary: a full long jump otherwise overshoots the narrow props.
         const float Distance=D.Size2D();const float Speed=M->Velocity.Size2D();
-        if(Distance<40||FVector::DotProduct(M->Velocity,Dir)<0)M->Velocity.X=M->Velocity.Y=0;
-        else if(Speed>0){M->Velocity.X=Dir.X*FMath::Min(Speed,600.f);M->Velocity.Y=Dir.Y*FMath::Min(Speed,600.f);}
+        if(Distance<1)M->Velocity.X=M->Velocity.Y=0;
+        else{
+            const float Approach=FMath::Min(FMath::Min(FMath::Max(Speed,80.f),600.f),Distance/FMath::Max(Delta,.001f));
+            M->Velocity.X=Dir.X*Approach;M->Velocity.Y=Dir.Y*Approach;
+        }
         return;
     }
     // Keep airborne steering continuous; difficulty adds a pause only on landing.
@@ -50,8 +77,11 @@ void AWildlineCharacter::CourseBotThink(float Delta){
         if(D.Size2D()>25)AddMovementInput(Dir,1);return;
     }
     const float Height=D.Z+13; // surface height above the squirrel's feet
-    if(Height>65){CourseCheckpoint=0;CourseLane=-1;return;}
+    const float LaunchZ=Forest->CourseLaunchZ(GetActorLocation());
+    if(Height>LaunchZ*LaunchZ/(2*980.f*M->GravityScale)+5){CourseCheckpoint=0;CourseLane=-1;return;}
     if(Stamina<22){M->StopMovementImmediately();return;}
-    if(D.Size2D()>300){AddMovementInput(Dir,1);return;}
+    const float Gravity=980.f*M->GravityScale;
+    const float Flight=(LaunchZ+FMath::Sqrt(FMath::Max(0.f,LaunchZ*LaunchZ-2*Gravity*Height)))/Gravity;
+    if(D.Size2D()>FMath::Max(30.f,600.f*Flight-10)){AddMovementInput(Dir,1);return;}
     ServerJump_Implementation();
 }

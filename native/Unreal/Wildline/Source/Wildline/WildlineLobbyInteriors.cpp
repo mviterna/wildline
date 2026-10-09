@@ -105,6 +105,38 @@ void AWildlineLobby::BuildTree(){
     Light(O+FVector(-266,167,108),FLinearColor(1,.70f,.39f),2500,850,true);
     Light(O+FVector(90,-50,335),FLinearColor(.73f,.86f,1),3100,1100,true);
     Light(O+FVector(-190,-195,155),FLinearColor(1,.79f,.52f),1700,640);
+    Light(O+FVector(-290,-5,215),FLinearColor(1,.79f,.55f),14000,650);
+    Light(O+FVector(80,170,230),FLinearColor(1,.85f,.67f),9000,850);
     Sign(TEXT("THE ACORN HOLLOW"),O+FVector(417,0,335),23);
     Sign(TEXT("ACORN PANTRY"),O+FVector(-238,-307,105),12,FRotator(0,90,0));
+    // The squirrels turn the lodge's specimen wall into a playful rivalry.
+    const TCHAR* Hunters[]={TEXT("Travis"),TEXT("Ethan"),TEXT("Greyson")};
+    const TCHAR* Captions[]={TEXT("TRAVIS / OUTRUN"),TEXT("ETHAN / OUTSMART"),TEXT("GREYSON / OUTCLIMB")};
+    auto* Oak=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/Wildline/Lobby/Photoreal/Materials/M_WindowOak.M_WindowOak"));
+    auto* Brass=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/Wildline/Lobby/Photoreal/Materials/M_LodgeDetailBrass.M_LodgeDetailBrass"));
+    Sign(TEXT("THE ONES THAT GOT AWAY"),O+FVector(-397,0,299),13,FRotator(0,0,0));
+    for(int32 I=0;I<3;I++){
+        const FVector P=O+FVector(-414,(I-1)*107,163);
+        Piece(TEXT("Hunter trophy oak shield"),TEXT("Sphere"),P+FVector(0,0,31),FVector(9,78,100),Oak);
+        const FString Path=FString::Printf(TEXT("/Game/Wildline/Hunters/Meshes/SM_HunterTrophy%s.SM_HunterTrophy%s"),Hunters[I],Hunters[I]);
+        auto* C=Piece(TEXT("Squirrel mounted hunter bust"),TEXT("Sphere"),P+FVector(15,0,0),FVector(100),nullptr,FRotator(0,-90,0));
+        C->SetStaticMesh(LoadObject<UStaticMesh>(nullptr,*Path));C->SetRelativeScale3D(FVector(1.55f));
+        Piece(TEXT("Hunter trophy nameplate"),TEXT("Cube"),P-FVector(-7,0,17),FVector(2,86,17),Brass);
+        Sign(Captions[I],P+FVector(9,0,-13),4.8f,FRotator(0,0,0));
+    }
+    Piece(TEXT("Keepsake shelf"),TEXT("Cube"),O+FVector(45,403,122),FVector(260,44,8),Oak);
+    Model(TEXT("SM_brass_goblets"),O+FVector(-20,395,128),FVector(0,0,24));
+    Model(TEXT("SM_book_encyclopedia_set_01"),O+FVector(100,396,128),FVector(0,0,26));
+    Model(TEXT("SM_AcornDetailed"),O+FVector(30,391,129),FVector(0,0,21));
+    Sign(TEXT("FINDERS KEEPERS"),O+FVector(35,408,165),10,FRotator(0,-90,0));
+    // Bark stepping stools, a lookout perch, and a table for planning raids.
+    Model(TEXT("SM_tree_stump_02"),O+FVector(220,-245,0),FVector(90,80,68),FRotator(0,17,0),true);
+    Model(TEXT("SM_dead_tree_trunk"),O+FVector(220,-160,0),FVector(100,42,28),FRotator(0,4,0),true);
+    Model(TEXT("SM_wooden_bowl_01"),O+FVector(218,-247,69),FVector(0,0,16));
+    for(int32 I=0;I<4;I++)Model(TEXT("SM_AcornDetailed"),O+FVector(207+I*7,-246,74),FVector(0,0,9),FRotator(0,I*48,30));
+    Piece(TEXT("Lookout branch perch"),TEXT("Cylinder"),O+FVector(245,267,95),FVector(24,24,190),Oak,FRotator(0,0,90),true);
+    Model(TEXT("SM_tree_stump_02"),O+FVector(200,160,0),FVector(65,60,30),FRotator(0,28,0),true);
+    Model(TEXT("SM_tree_stump_02"),O+FVector(225,215,0),FVector(60,58,62),FRotator(0,67,0),true);
+    Model(TEXT("SM_moss_01"),O+FVector(218,273,106),FVector(64,40,9));
+    Sign(TEXT("NO HUNTERS / NO PROBLEM"),O+FVector(293,-291,152),8,FRotator(0,135,0));
 }

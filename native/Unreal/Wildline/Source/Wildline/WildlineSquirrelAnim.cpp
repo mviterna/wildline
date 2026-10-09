@@ -33,7 +33,7 @@ struct FWildlineSquirrelProxy : public FAnimInstanceProxy {
         const float Distance=Initialized?FVector::Dist(Position,Previous):0;
         Previous=Position;Initialized=true;Time=Pawn->ServerTime();
         const float Speed=FMath::Max(Pawn->GetVelocity().Size2D(),Delta>0?FMath::Min(Distance/Delta,750.f):0.f);
-        Climbing=Pawn->TreeIndex!=INDEX_NONE;Falling=Pawn->GetCharacterMovement()->IsFalling();Dead=Pawn->bDead;
+        Climbing=Pawn->TreeIndex!=INDEX_NONE&&(!Pawn->bWoodClimbing||!Pawn->bBranchClimbing);Falling=Pawn->GetCharacterMovement()->IsFalling();Dead=Pawn->bDead;
         Vertical=Pawn->GetVelocity().Z;
         Move=FMath::FInterpTo(Move,FMath::Clamp(Speed/140.f,0.f,1.f),Delta,12);
         Run=FMath::FInterpTo(Run,FMath::Clamp((Speed-170.f)/250.f,0.f,1.f),Delta,8);

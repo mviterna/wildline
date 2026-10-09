@@ -1,0 +1,187 @@
+{
+  "verified_at_utc": "2026-10-09T04:40:27.026182+00:00",
+  "engine": "Unreal Engine 5.8.3",
+  "package": "native/Build/WorldUpgradeReview/Windows",
+  "package_completed_at_utc": "2026-10-09T04:34:51.7656708+00:00",
+  "features": [
+    "Six City Sample cars and seven City Park details in each neighborhood",
+    "Wooded lodge horizon with layered trees and rising ridges",
+    "Three hunter trophies, keepsake shelf, raid table and branch perch in Acorn Hollow",
+    "Wood-only branch and trunk collision with grip traversal on all five maps",
+    "Approximately 28 percent fewer canopy leaf faces; ground leaves reduced from 28000 to 19000",
+    "Leafless Frostwood winter map preserving Classic rules and 30 forage acorns"
+  ],
+  "editor_automation": {
+    "log": "native/Unreal/Wildline/Saved/Logs/Wildline-backup-2026.10.09-03.37.37.log",
+    "verified_at_utc": "2026-10-09T03:37:37+00:00",
+    "passed": true,
+    "tests": [
+      "Wildline.Controls.DefaultsAndInversion",
+      "Wildline.Gameplay.CustomRulesAndBotRoster",
+      "Wildline.Gameplay.ForagingAndRockCollision",
+      "Wildline.Gameplay.HunterDifficultyAndMap",
+      "Wildline.Gameplay.MatchConfigsAndAudio",
+      "Wildline.Gameplay.ModesAndShotgun",
+      "Wildline.Gameplay.NeighborhoodAssetsAndLayouts",
+      "Wildline.Gameplay.ThermalWindow",
+      "Wildline.Hunters.PhotoPresets",
+      "Wildline.Hunting.CollisionAndMagazine",
+      "Wildline.Lobby.PortalAndRack"
+    ]
+  },
+  "packaged_traversal": [
+    {
+      "log": "native/world-upgrade-Blackwood-smoke.log",
+      "verified_at_utc": "2026-10-09T04:14:57.540902+00:00",
+      "passed": true,
+      "map": "Blackwood",
+      "stage": "packaged gameplay pass before final room-lighting adjustment"
+    },
+    {
+      "log": "native/world-upgrade-Farmstead-smoke.log",
+      "verified_at_utc": "2026-10-09T04:15:01.723229+00:00",
+      "passed": true,
+      "map": "Farmstead",
+      "stage": "packaged gameplay pass before final room-lighting adjustment"
+    },
+    {
+      "log": "native/world-upgrade-Neighborhood-smoke.log",
+      "verified_at_utc": "2026-10-09T04:15:05.630352+00:00",
+      "passed": true,
+      "map": "Neighborhood",
+      "stage": "packaged gameplay pass before final room-lighting adjustment"
+    },
+    {
+      "log": "native/world-upgrade-NeighborhoodCedar-smoke.log",
+      "verified_at_utc": "2026-10-09T04:15:09.386487+00:00",
+      "passed": true,
+      "map": "NeighborhoodCedar",
+      "stage": "packaged gameplay pass before final room-lighting adjustment"
+    },
+    {
+      "log": "native/world-upgrade-Frostwood-smoke.log",
+      "verified_at_utc": "2026-10-09T04:35:51.093895+00:00",
+      "passed": true,
+      "map": "Frostwood",
+      "stage": "final package"
+    }
+  ],
+  "packaged_routes_before_final_lighting_pass": [
+    {
+      "log": "native/neighborhood-Neighborhood-lane0.log",
+      "verified_at_utc": "2026-10-09T04:15:07.958107+00:00",
+      "passed": true,
+      "map": "Neighborhood",
+      "lane": 0,
+      "completed_trips": 5
+    },
+    {
+      "log": "native/neighborhood-Neighborhood-lane1.log",
+      "verified_at_utc": "2026-10-09T04:15:20.710653+00:00",
+      "passed": true,
+      "map": "Neighborhood",
+      "lane": 1,
+      "completed_trips": 8
+    },
+    {
+      "log": "native/neighborhood-NeighborhoodCedar-lane0.log",
+      "verified_at_utc": "2026-10-09T04:15:32.201178+00:00",
+      "passed": true,
+      "map": "NeighborhoodCedar",
+      "lane": 0,
+      "completed_trips": 2
+    },
+    {
+      "log": "native/neighborhood-NeighborhoodCedar-lane1.log",
+      "verified_at_utc": "2026-10-09T04:15:43.992560+00:00",
+      "passed": true,
+      "map": "NeighborhoodCedar",
+      "lane": 1,
+      "completed_trips": 7
+    }
+  ],
+  "classic_regression": {
+    "log": "native/world-upgrade-package-classic.log",
+    "verified_at_utc": "2026-10-09T04:14:59.950815+00:00",
+    "passed": true
+  },
+  "farm_regression": {
+    "log": "native/world-upgrade-package-farm.log",
+    "verified_at_utc": "2026-10-09T04:15:03.484281+00:00",
+    "passed": true
+  },
+  "final_package_network": [
+    {
+      "log": "native/world-upgrade-net-host.log",
+      "verified_at_utc": "2026-10-09T04:36:21.235159+00:00",
+      "passed": true
+    },
+    {
+      "log": "native/world-upgrade-net-client.log",
+      "verified_at_utc": "2026-10-09T04:36:19.166778+00:00",
+      "passed": true
+    }
+  ],
+  "final_package_waiting_rooms": {
+    "log": "native/world-upgrade-final-lobbies.log",
+    "verified_at_utc": "2026-10-09T04:36:52.097735+00:00",
+    "passed": true
+  },
+  "final_package_visual_review": [
+    {
+      "log": "native/world-upgrade-final-captures.log",
+      "verified_at_utc": "2026-10-09T04:37:08.401205+00:00",
+      "passed": true,
+      "render_log": "native/world-upgrade-Frostwood-review.log",
+      "map": "Frostwood",
+      "images": [
+        "native/Preview/Frostwood_UpgradeReserve.png",
+        "native/Preview/Frostwood_UpgradeBranch.png",
+        "native/Preview/Frostwood_UpgradeHunterTrophies.png",
+        "native/Preview/Frostwood_UpgradeSquirrelDen.png",
+        "native/Preview/Frostwood_UpgradeLodgeWoods.png"
+      ],
+      "visually_reviewed": true
+    },
+    {
+      "log": "native/world-upgrade-final-captures.log",
+      "verified_at_utc": "2026-10-09T04:37:08.401205+00:00",
+      "passed": true,
+      "render_log": "native/world-upgrade-Neighborhood-review.log",
+      "map": "Neighborhood",
+      "images": [
+        "native/Preview/Neighborhood_UpgradeCars.png",
+        "native/Preview/Neighborhood_UpgradeNeighborhood.png",
+        "native/Preview/Neighborhood_UpgradeHunterTrophies.png",
+        "native/Preview/Neighborhood_UpgradeSquirrelDen.png",
+        "native/Preview/Neighborhood_UpgradeLodgeWoods.png"
+      ],
+      "visually_reviewed": true
+    }
+  ],
+  "desktop_launcher": {
+    "verifiedAtUtc": "2026-10-09T04:35:14.3820949+00:00",
+    "shortcutTarget": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "shortcutArguments": "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\_git\\wildline\\native\\LaunchNative.ps1\"",
+    "packageRoot": "C:\\_git\\wildline\\native\\Build\\WorldUpgradeReview\\Windows",
+    "gamePath": "C:\\_git\\wildline\\native\\Build\\WorldUpgradeReview\\Windows\\Wildline.exe",
+    "completedAtUtc": "2026-10-09T00:34:51.0000000-04:00"
+  },
+  "desktop_visible_launch": {
+    "shortcut": "C:\\Users\\mvite\\OneDrive\\Desktop\\WILDLINE.lnk",
+    "launchedAtUtc": "2026-10-09T04:38:38.4124608Z",
+    "runningExecutables": [
+      "C:\\_git\\wildline\\native\\Build\\WorldUpgradeReview\\Windows\\Wildline.exe",
+      "C:\\_git\\wildline\\native\\Build\\WorldUpgradeReview\\Windows\\Wildline\\Binaries\\Win64\\Wildline.exe"
+    ],
+    "respondingGameWindow": true
+  },
+  "new_asset_download_blockers": [],
+  "previous_asset_download_blockers": [
+    {
+      "asset": "Artec bird feeder scan",
+      "reason": "Publisher provides no download option or reuse license",
+      "url": "https://www.artec3d.com/3d-models/bird-feeder"
+    }
+  ]
+}

@@ -1,0 +1,1624 @@
+{
+  "Diffuse": {
+    "8k": {
+      "jpg": {
+        "size": 39334660,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_diff_8k.jpg",
+        "md5": "957b845b7d9b853b54ecef1c0e9df94f"
+      },
+      "png": {
+        "size": 272503534,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_diff_8k.png",
+        "md5": "e490b6b5493d40dd8175c5659b4333dd"
+      },
+      "exr": {
+        "size": 89026390,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_diff_8k.exr",
+        "md5": "32842b823f4937be13a775388e56d1e4"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 10066538,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_diff_4k.jpg",
+        "md5": "a5f04134008bc8617a36c8741ca06373"
+      },
+      "png": {
+        "size": 82679800,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_diff_4k.png",
+        "md5": "1d47b9fcfb9f47b6d146b4f05b901c27"
+      },
+      "exr": {
+        "size": 18218275,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_diff_4k.exr",
+        "md5": "e78158668d997ed19c507b662a1b8179"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2652895,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_diff_2k.jpg",
+        "md5": "587fdf3b7bc5091a0cb3da26ff1fb944"
+      },
+      "png": {
+        "size": 21746501,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_diff_2k.png",
+        "md5": "771f0e9c7b251d719279702f4b4b2976"
+      },
+      "exr": {
+        "size": 4451125,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_diff_2k.exr",
+        "md5": "30abc9d7971884a77ec13eb1f2652cc2"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 658915,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_diff_1k.jpg",
+        "md5": "34df50003850fdc33507c5d0713af802"
+      },
+      "png": {
+        "size": 5574741,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_diff_1k.png",
+        "md5": "e749b5dad6972ea7ac7fb7a14fb1b087"
+      },
+      "exr": {
+        "size": 1116410,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_diff_1k.exr",
+        "md5": "b41113b0edfd489c2e7deca617abcc8f"
+      }
+    }
+  },
+  "pieces_diff": {
+    "8k": {
+      "jpg": {
+        "size": 29369895,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_pieces_diff_8k.jpg",
+        "md5": "84a3a299d413a3607da00e9a5391a7ae"
+      },
+      "png": {
+        "size": 140187774,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_diff_8k.png",
+        "md5": "928f89385a8c0b063bfb6d7abe95eb1c"
+      },
+      "exr": {
+        "size": 55837167,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_pieces_diff_8k.exr",
+        "md5": "650db580977ba6ae960b91b698ad3490"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 8482227,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_diff_4k.jpg",
+        "md5": "883b1cadd262eb08057e7dedd5a1e928"
+      },
+      "png": {
+        "size": 54054201,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_diff_4k.png",
+        "md5": "fef0784163f018b2f9e1303e72fdb54e"
+      },
+      "exr": {
+        "size": 15043070,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_pieces_diff_4k.exr",
+        "md5": "00d6f9fae38b336669375922a33a45ab"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2671327,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_pieces_diff_2k.jpg",
+        "md5": "1011f233d60e66467bfb40a3de2d5f24"
+      },
+      "png": {
+        "size": 16510722,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_diff_2k.png",
+        "md5": "bc504edbf4d48fdb4505c813ab72d4cc"
+      },
+      "exr": {
+        "size": 4941701,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_pieces_diff_2k.exr",
+        "md5": "663489d1bdfd3907794ae42a0199661d"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 802771,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_pieces_diff_1k.jpg",
+        "md5": "89d3636e70e2bf7fd8ca25440dbd9f8f"
+      },
+      "png": {
+        "size": 5175155,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_diff_1k.png",
+        "md5": "1eb7488ac37653b823b8309e37d1f908"
+      },
+      "exr": {
+        "size": 1621203,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_pieces_diff_1k.exr",
+        "md5": "d723db58fb47887ac06665f8c0597ad9"
+      }
+    }
+  },
+  "pieces_nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 31724281,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_8k.jpg",
+        "md5": "2e4f354f78933491b4831a6399b09506"
+      },
+      "png": {
+        "size": 172798332,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_8k.png",
+        "md5": "eb172d64c02fd4cee288599e80c2da52"
+      },
+      "exr": {
+        "size": 66253856,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_8k.exr",
+        "md5": "a5ea7b0417c83c2b1028cb2badbfb9ab"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 9531579,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_4k.jpg",
+        "md5": "fbc104e5205ff983c9c8c184f6f7bc01"
+      },
+      "png": {
+        "size": 51102292,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_4k.png",
+        "md5": "ace487af41458a202f38d69f2550ec43"
+      },
+      "exr": {
+        "size": 19616438,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_4k.exr",
+        "md5": "a6f3cbabfb5d75e9b587ad53c8948b5d"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2923685,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_2k.jpg",
+        "md5": "8af39af86c2cedad5c5af00f740a6774"
+      },
+      "png": {
+        "size": 15226206,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_2k.png",
+        "md5": "a5f849b6106d60d4d280b12e9c0f9f52"
+      },
+      "exr": {
+        "size": 6155340,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_2k.exr",
+        "md5": "887239e29c9cb83e24e340f2b0215fc8"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 865048,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_1k.jpg",
+        "md5": "54b2b71a53740f86fce87be506c1a89f"
+      },
+      "png": {
+        "size": 4490727,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_1k.png",
+        "md5": "c350802c653159711f928ee5ab8fc737"
+      },
+      "exr": {
+        "size": 1823597,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_1k.exr",
+        "md5": "57cd41ca1a99520e7b61568fea711063"
+      }
+    }
+  },
+  "nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 51767051,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_nor_dx_8k.jpg",
+        "md5": "8eaf008fa576fd9b5e4d0f147b5c6053"
+      },
+      "png": {
+        "size": 290749589,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_nor_dx_8k.png",
+        "md5": "0e054a334d7ab8e9399cbea3e3e14291"
+      },
+      "exr": {
+        "size": 97472766,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_nor_dx_8k.exr",
+        "md5": "a057b50c9cdd28efdb02690598b1f93e"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 14743570,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_nor_dx_4k.jpg",
+        "md5": "d862d3892a77b6c23e5c4e69e537a562"
+      },
+      "png": {
+        "size": 76434148,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_nor_dx_4k.png",
+        "md5": "6bfc07735f7cc11cd21730eb02ac2a48"
+      },
+      "exr": {
+        "size": 29689144,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_nor_dx_4k.exr",
+        "md5": "c19702b65821e2b310600ab875d9a329"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3846524,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_nor_dx_2k.jpg",
+        "md5": "75d9818dae58ac40244a8344a6f52d5c"
+      },
+      "png": {
+        "size": 19748570,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_nor_dx_2k.png",
+        "md5": "6b38217838dd75a3789334b330d321c6"
+      },
+      "exr": {
+        "size": 8079976,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_nor_dx_2k.exr",
+        "md5": "2c1ddb03e496bb2cf44ae7ba79d4b9d7"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 931497,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_nor_dx_1k.jpg",
+        "md5": "8b443dde678bb8d389880dd09c86d8b5"
+      },
+      "png": {
+        "size": 5085866,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_nor_dx_1k.png",
+        "md5": "8fa5fe0ce4ee5276f976d3cf6641bd9e"
+      },
+      "exr": {
+        "size": 2023612,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_nor_dx_1k.exr",
+        "md5": "e38ab33d94a1b9a98e12dda42bc2fa1a"
+      }
+    }
+  },
+  "blend": {
+    "8k": {
+      "blend": {
+        "include": {
+          "textures/modular_electricity_poles_pieces_diff_8k.png": {
+            "size": 140187774,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_diff_8k.png",
+            "md5": "928f89385a8c0b063bfb6d7abe95eb1c"
+          },
+          "textures/modular_electricity_poles_nor_gl_8k.exr": {
+            "size": 98184363,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_nor_gl_8k.exr",
+            "md5": "1aeb9ce15d54b4deb055b434baef47ac"
+          },
+          "textures/modular_electricity_poles_pieces_metal_8k.png": {
+            "size": 20022479,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_metal_8k.png",
+            "md5": "e9d43cd1ef803d94962b2dd82c99df41"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_8k.png": {
+            "size": 172798332,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_8k.png",
+            "md5": "eb172d64c02fd4cee288599e80c2da52"
+          },
+          "textures/modular_electricity_poles_rough_8k.exr": {
+            "size": 48969308,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_rough_8k.exr",
+            "md5": "b430501582bfac60f248b80a75ba4af9"
+          },
+          "textures/modular_electricity_poles_diff_8k.jpg": {
+            "size": 39334660,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_diff_8k.jpg",
+            "md5": "957b845b7d9b853b54ecef1c0e9df94f"
+          },
+          "textures/modular_electricity_poles_pieces_rough_8k.png": {
+            "size": 29115393,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_rough_8k.png",
+            "md5": "2f12f875816bae61179a5b4d43c523a2"
+          }
+        },
+        "size": 3267382,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/8k/modular_electricity_poles/modular_electricity_poles_8k.blend",
+        "md5": "8814985fdbb6a35ff1048c3e1dfd3299"
+      }
+    },
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/modular_electricity_poles_diff_4k.jpg": {
+            "size": 10066538,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_diff_4k.jpg",
+            "md5": "a5f04134008bc8617a36c8741ca06373"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_4k.png": {
+            "size": 51102292,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_4k.png",
+            "md5": "ace487af41458a202f38d69f2550ec43"
+          },
+          "textures/modular_electricity_poles_nor_gl_4k.exr": {
+            "size": 29627387,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_nor_gl_4k.exr",
+            "md5": "f924e444a32ffa2e46cf045df843ae06"
+          },
+          "textures/modular_electricity_poles_pieces_metal_4k.png": {
+            "size": 9457933,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_metal_4k.png",
+            "md5": "a488751391e25ced48b22c8f11aed0d7"
+          },
+          "textures/modular_electricity_poles_rough_4k.exr": {
+            "size": 16887121,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_rough_4k.exr",
+            "md5": "f4187b6d24adb7401d77b3a15e361acb"
+          },
+          "textures/modular_electricity_poles_pieces_diff_4k.png": {
+            "size": 54054201,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_diff_4k.png",
+            "md5": "fef0784163f018b2f9e1303e72fdb54e"
+          },
+          "textures/modular_electricity_poles_pieces_rough_4k.png": {
+            "size": 14196994,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_rough_4k.png",
+            "md5": "7515804acb7457100adf568000386239"
+          }
+        },
+        "size": 3267931,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/modular_electricity_poles/modular_electricity_poles_4k.blend",
+        "md5": "6350c093ea328c4b136282f120f1bcbc"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/modular_electricity_poles_diff_2k.jpg": {
+            "size": 2652895,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_diff_2k.jpg",
+            "md5": "587fdf3b7bc5091a0cb3da26ff1fb944"
+          },
+          "textures/modular_electricity_poles_nor_gl_2k.exr": {
+            "size": 8074481,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_nor_gl_2k.exr",
+            "md5": "e309b65e30e2ad14355bf32ceaad8c5e"
+          },
+          "textures/modular_electricity_poles_pieces_metal_2k.png": {
+            "size": 3355618,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_metal_2k.png",
+            "md5": "14e94879b55dc700e358e95c72037c1a"
+          },
+          "textures/modular_electricity_poles_pieces_diff_2k.png": {
+            "size": 16510722,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_diff_2k.png",
+            "md5": "bc504edbf4d48fdb4505c813ab72d4cc"
+          },
+          "textures/modular_electricity_poles_pieces_rough_2k.png": {
+            "size": 4904243,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_rough_2k.png",
+            "md5": "3d25dd56f3903614bcbb27bcdec41e89"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_2k.png": {
+            "size": 15226206,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_2k.png",
+            "md5": "a5f849b6106d60d4d280b12e9c0f9f52"
+          },
+          "textures/modular_electricity_poles_rough_2k.exr": {
+            "size": 4586375,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_rough_2k.exr",
+            "md5": "10ca2488e0c5de020416edfd89833e55"
+          }
+        },
+        "size": 3268053,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/modular_electricity_poles/modular_electricity_poles_2k.blend",
+        "md5": "4b0566dafdce31b03a332ccf88dbe119"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/modular_electricity_poles_rough_1k.exr": {
+            "size": 1183725,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_rough_1k.exr",
+            "md5": "d535e4df21a108d70ba1bafdf18c2835"
+          },
+          "textures/modular_electricity_poles_pieces_diff_1k.png": {
+            "size": 5175155,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_diff_1k.png",
+            "md5": "1eb7488ac37653b823b8309e37d1f908"
+          },
+          "textures/modular_electricity_poles_diff_1k.jpg": {
+            "size": 658915,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_diff_1k.jpg",
+            "md5": "34df50003850fdc33507c5d0713af802"
+          },
+          "textures/modular_electricity_poles_pieces_rough_1k.png": {
+            "size": 1535130,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_rough_1k.png",
+            "md5": "cad13b0c293be62c63385c7b122499da"
+          },
+          "textures/modular_electricity_poles_nor_gl_1k.exr": {
+            "size": 2024477,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_nor_gl_1k.exr",
+            "md5": "8c73370d1ef93ca5df18269b979bb59e"
+          },
+          "textures/modular_electricity_poles_pieces_metal_1k.png": {
+            "size": 1097684,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_metal_1k.png",
+            "md5": "98344ed0f2ad26ec94f177ad7a9338fb"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_1k.png": {
+            "size": 4490727,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_1k.png",
+            "md5": "c350802c653159711f928ee5ab8fc737"
+          }
+        },
+        "size": 3268604,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/modular_electricity_poles/modular_electricity_poles_1k.blend",
+        "md5": "d5a6272e502acd9785a167693b7f4916"
+      }
+    }
+  },
+  "gltf": {
+    "8k": {
+      "gltf": {
+        "include": {
+          "textures/modular_electricity_poles_nor_gl_8k.jpg": {
+            "size": 49907152,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_nor_gl_8k.jpg",
+            "md5": "ec9b726e0160f39feed47824501c5fa0"
+          },
+          "modular_electricity_poles.bin": {
+            "size": 7215652,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/modular_electricity_poles/modular_electricity_poles.bin",
+            "md5": "c6214884e3bd6ea4a2ea20b795c648f4"
+          },
+          "textures/modular_electricity_poles_pieces_arm_8k.jpg": {
+            "size": 36666368,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_pieces_arm_8k.jpg",
+            "md5": "a8ebcbf50b7da111d0abae210c08d370"
+          },
+          "textures/modular_electricity_poles_diff_8k.jpg": {
+            "size": 39334660,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_diff_8k.jpg",
+            "md5": "957b845b7d9b853b54ecef1c0e9df94f"
+          },
+          "textures/modular_electricity_poles_pieces_diff_8k.jpg": {
+            "size": 29369895,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_pieces_diff_8k.jpg",
+            "md5": "84a3a299d413a3607da00e9a5391a7ae"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_8k.jpg": {
+            "size": 31724281,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_8k.jpg",
+            "md5": "2e4f354f78933491b4831a6399b09506"
+          },
+          "textures/modular_electricity_poles_arm_8k.jpg": {
+            "size": 35222806,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_arm_8k.jpg",
+            "md5": "594ef5042e1f62a28dcf27e96181a958"
+          }
+        },
+        "size": 149324,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/modular_electricity_poles/modular_electricity_poles_8k.gltf",
+        "md5": "fd70398ce11791ce5d46fb46e2cbe419"
+      }
+    },
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/modular_electricity_poles_pieces_diff_4k.jpg": {
+            "size": 8482227,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_diff_4k.jpg",
+            "md5": "883b1cadd262eb08057e7dedd5a1e928"
+          },
+          "modular_electricity_poles.bin": {
+            "size": 7215652,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/modular_electricity_poles/modular_electricity_poles.bin",
+            "md5": "c6214884e3bd6ea4a2ea20b795c648f4"
+          },
+          "textures/modular_electricity_poles_pieces_arm_4k.jpg": {
+            "size": 11183966,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_arm_4k.jpg",
+            "md5": "fb84ff035cdde937eba865dfa25b72ad"
+          },
+          "textures/modular_electricity_poles_diff_4k.jpg": {
+            "size": 10066538,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_diff_4k.jpg",
+            "md5": "a5f04134008bc8617a36c8741ca06373"
+          },
+          "textures/modular_electricity_poles_nor_gl_4k.jpg": {
+            "size": 14567934,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_nor_gl_4k.jpg",
+            "md5": "47a7cea771b89f19e9d05038382ecc79"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_4k.jpg": {
+            "size": 9531579,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_4k.jpg",
+            "md5": "fbc104e5205ff983c9c8c184f6f7bc01"
+          },
+          "textures/modular_electricity_poles_arm_4k.jpg": {
+            "size": 10141508,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_arm_4k.jpg",
+            "md5": "82563a13deb04d7ace973f7b18d0d973"
+          }
+        },
+        "size": 149324,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/modular_electricity_poles/modular_electricity_poles_4k.gltf",
+        "md5": "b2808506d5a37f409d60c470a715abee"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/modular_electricity_poles_pieces_nor_gl_2k.jpg": {
+            "size": 2923685,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_2k.jpg",
+            "md5": "8af39af86c2cedad5c5af00f740a6774"
+          },
+          "textures/modular_electricity_poles_diff_2k.jpg": {
+            "size": 2652895,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_diff_2k.jpg",
+            "md5": "587fdf3b7bc5091a0cb3da26ff1fb944"
+          },
+          "textures/modular_electricity_poles_arm_2k.jpg": {
+            "size": 2938395,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_arm_2k.jpg",
+            "md5": "5e56d1623e4f2a994c9d1491e3a422ab"
+          },
+          "modular_electricity_poles.bin": {
+            "size": 7215652,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/modular_electricity_poles/modular_electricity_poles.bin",
+            "md5": "c6214884e3bd6ea4a2ea20b795c648f4"
+          },
+          "textures/modular_electricity_poles_nor_gl_2k.jpg": {
+            "size": 3833235,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_nor_gl_2k.jpg",
+            "md5": "da2926aeb305161afff30713eb723c31"
+          },
+          "textures/modular_electricity_poles_pieces_arm_2k.jpg": {
+            "size": 3534574,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_pieces_arm_2k.jpg",
+            "md5": "5c66eee5c89f8a1c157217eb9157a81e"
+          },
+          "textures/modular_electricity_poles_pieces_diff_2k.jpg": {
+            "size": 2671327,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_pieces_diff_2k.jpg",
+            "md5": "1011f233d60e66467bfb40a3de2d5f24"
+          }
+        },
+        "size": 149324,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/modular_electricity_poles/modular_electricity_poles_2k.gltf",
+        "md5": "516ec7ea60f1b090d89e9981c4182c50"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/modular_electricity_poles_pieces_diff_1k.jpg": {
+            "size": 802771,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_pieces_diff_1k.jpg",
+            "md5": "89d3636e70e2bf7fd8ca25440dbd9f8f"
+          },
+          "modular_electricity_poles.bin": {
+            "size": 7215652,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/modular_electricity_poles/modular_electricity_poles.bin",
+            "md5": "c6214884e3bd6ea4a2ea20b795c648f4"
+          },
+          "textures/modular_electricity_poles_pieces_arm_1k.jpg": {
+            "size": 1052303,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_pieces_arm_1k.jpg",
+            "md5": "f1557e1cfdaa2f191697f582063ead9d"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_1k.jpg": {
+            "size": 865048,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_1k.jpg",
+            "md5": "54b2b71a53740f86fce87be506c1a89f"
+          },
+          "textures/modular_electricity_poles_arm_1k.jpg": {
+            "size": 748382,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_arm_1k.jpg",
+            "md5": "8242b81c3bc7216233199e122023dfb3"
+          },
+          "textures/modular_electricity_poles_diff_1k.jpg": {
+            "size": 658915,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_diff_1k.jpg",
+            "md5": "34df50003850fdc33507c5d0713af802"
+          },
+          "textures/modular_electricity_poles_nor_gl_1k.jpg": {
+            "size": 931236,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_nor_gl_1k.jpg",
+            "md5": "d2f75d2c5f3868c93f8c4c03bbd78144"
+          }
+        },
+        "size": 149324,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/modular_electricity_poles/modular_electricity_poles_1k.gltf",
+        "md5": "5c596896d092dfe96b490910f4422743"
+      }
+    }
+  },
+  "usd": {
+    "8k": {
+      "usd": {
+        "include": {
+          "textures/modular_electricity_poles_pieces_diff_8k.png": {
+            "size": 140187774,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_diff_8k.png",
+            "md5": "928f89385a8c0b063bfb6d7abe95eb1c"
+          },
+          "textures/modular_electricity_poles_nor_gl_8k.exr": {
+            "size": 98184363,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_nor_gl_8k.exr",
+            "md5": "1aeb9ce15d54b4deb055b434baef47ac"
+          },
+          "textures/modular_electricity_poles_pieces_metal_8k.png": {
+            "size": 20022479,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_metal_8k.png",
+            "md5": "e9d43cd1ef803d94962b2dd82c99df41"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_8k.png": {
+            "size": 172798332,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_8k.png",
+            "md5": "eb172d64c02fd4cee288599e80c2da52"
+          },
+          "textures/modular_electricity_poles_rough_8k.exr": {
+            "size": 48969308,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_rough_8k.exr",
+            "md5": "b430501582bfac60f248b80a75ba4af9"
+          },
+          "textures/modular_electricity_poles_diff_8k.jpg": {
+            "size": 39334660,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_diff_8k.jpg",
+            "md5": "957b845b7d9b853b54ecef1c0e9df94f"
+          },
+          "textures/modular_electricity_poles_pieces_rough_8k.png": {
+            "size": 29115393,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_rough_8k.png",
+            "md5": "2f12f875816bae61179a5b4d43c523a2"
+          }
+        },
+        "size": 5337798,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/8k/modular_electricity_poles/modular_electricity_poles_8k.usdc",
+        "md5": "fd265ec07d2ba69bee9d8e69e0a272e1"
+      }
+    },
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/modular_electricity_poles_diff_4k.jpg": {
+            "size": 10066538,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_diff_4k.jpg",
+            "md5": "a5f04134008bc8617a36c8741ca06373"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_4k.png": {
+            "size": 51102292,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_4k.png",
+            "md5": "ace487af41458a202f38d69f2550ec43"
+          },
+          "textures/modular_electricity_poles_nor_gl_4k.exr": {
+            "size": 29627387,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_nor_gl_4k.exr",
+            "md5": "f924e444a32ffa2e46cf045df843ae06"
+          },
+          "textures/modular_electricity_poles_pieces_metal_4k.png": {
+            "size": 9457933,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_metal_4k.png",
+            "md5": "a488751391e25ced48b22c8f11aed0d7"
+          },
+          "textures/modular_electricity_poles_rough_4k.exr": {
+            "size": 16887121,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_rough_4k.exr",
+            "md5": "f4187b6d24adb7401d77b3a15e361acb"
+          },
+          "textures/modular_electricity_poles_pieces_diff_4k.png": {
+            "size": 54054201,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_diff_4k.png",
+            "md5": "fef0784163f018b2f9e1303e72fdb54e"
+          },
+          "textures/modular_electricity_poles_pieces_rough_4k.png": {
+            "size": 14196994,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_rough_4k.png",
+            "md5": "7515804acb7457100adf568000386239"
+          }
+        },
+        "size": 5337790,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/modular_electricity_poles/modular_electricity_poles_4k.usdc",
+        "md5": "dada9b15cbe644a4a384008ec89fdc86"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/modular_electricity_poles_diff_2k.jpg": {
+            "size": 2652895,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_diff_2k.jpg",
+            "md5": "587fdf3b7bc5091a0cb3da26ff1fb944"
+          },
+          "textures/modular_electricity_poles_nor_gl_2k.exr": {
+            "size": 8074481,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_nor_gl_2k.exr",
+            "md5": "e309b65e30e2ad14355bf32ceaad8c5e"
+          },
+          "textures/modular_electricity_poles_pieces_metal_2k.png": {
+            "size": 3355618,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_metal_2k.png",
+            "md5": "14e94879b55dc700e358e95c72037c1a"
+          },
+          "textures/modular_electricity_poles_pieces_diff_2k.png": {
+            "size": 16510722,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_diff_2k.png",
+            "md5": "bc504edbf4d48fdb4505c813ab72d4cc"
+          },
+          "textures/modular_electricity_poles_pieces_rough_2k.png": {
+            "size": 4904243,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_rough_2k.png",
+            "md5": "3d25dd56f3903614bcbb27bcdec41e89"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_2k.png": {
+            "size": 15226206,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_2k.png",
+            "md5": "a5f849b6106d60d4d280b12e9c0f9f52"
+          },
+          "textures/modular_electricity_poles_rough_2k.exr": {
+            "size": 4586375,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_rough_2k.exr",
+            "md5": "10ca2488e0c5de020416edfd89833e55"
+          }
+        },
+        "size": 5337799,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/modular_electricity_poles/modular_electricity_poles_2k.usdc",
+        "md5": "4106ce70aea3d8d7f0d7e9557002182c"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/modular_electricity_poles_rough_1k.exr": {
+            "size": 1183725,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_rough_1k.exr",
+            "md5": "d535e4df21a108d70ba1bafdf18c2835"
+          },
+          "textures/modular_electricity_poles_pieces_diff_1k.png": {
+            "size": 5175155,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_diff_1k.png",
+            "md5": "1eb7488ac37653b823b8309e37d1f908"
+          },
+          "textures/modular_electricity_poles_diff_1k.jpg": {
+            "size": 658915,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_diff_1k.jpg",
+            "md5": "34df50003850fdc33507c5d0713af802"
+          },
+          "textures/modular_electricity_poles_pieces_rough_1k.png": {
+            "size": 1535130,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_rough_1k.png",
+            "md5": "cad13b0c293be62c63385c7b122499da"
+          },
+          "textures/modular_electricity_poles_nor_gl_1k.exr": {
+            "size": 2024477,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_nor_gl_1k.exr",
+            "md5": "8c73370d1ef93ca5df18269b979bb59e"
+          },
+          "textures/modular_electricity_poles_pieces_metal_1k.png": {
+            "size": 1097684,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_metal_1k.png",
+            "md5": "98344ed0f2ad26ec94f177ad7a9338fb"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_1k.png": {
+            "size": 4490727,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_1k.png",
+            "md5": "c350802c653159711f928ee5ab8fc737"
+          }
+        },
+        "size": 5337815,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/modular_electricity_poles/modular_electricity_poles_1k.usdc",
+        "md5": "ea1c2d5834313e59aae473799a4ace2e"
+      }
+    }
+  },
+  "pieces_metal": {
+    "8k": {
+      "jpg": {
+        "size": 19212210,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_pieces_metal_8k.jpg",
+        "md5": "b72ec18740c818542d4323ce14b8ab4c"
+      },
+      "png": {
+        "size": 20022479,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_metal_8k.png",
+        "md5": "e9d43cd1ef803d94962b2dd82c99df41"
+      },
+      "exr": {
+        "size": 20227599,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_pieces_metal_8k.exr",
+        "md5": "dfc2143ff2fff040a4ec5c67d6bba19b"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 5893017,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_metal_4k.jpg",
+        "md5": "96b33d9b46d8c4d14318339d779adf9b"
+      },
+      "png": {
+        "size": 9457933,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_metal_4k.png",
+        "md5": "a488751391e25ced48b22c8f11aed0d7"
+      },
+      "exr": {
+        "size": 7423295,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_pieces_metal_4k.exr",
+        "md5": "2dcd020272509b442e1e5de831759add"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2020223,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_pieces_metal_2k.jpg",
+        "md5": "d4778914071014bc8dd14cfdec3b09d4"
+      },
+      "png": {
+        "size": 3355618,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_metal_2k.png",
+        "md5": "14e94879b55dc700e358e95c72037c1a"
+      },
+      "exr": {
+        "size": 2521924,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_pieces_metal_2k.exr",
+        "md5": "37a7729dc9d66bda96636dae6af3ff2e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 671426,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_pieces_metal_1k.jpg",
+        "md5": "995c22783774a12564b6aae6ab4dfeb1"
+      },
+      "png": {
+        "size": 1097684,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_metal_1k.png",
+        "md5": "98344ed0f2ad26ec94f177ad7a9338fb"
+      },
+      "exr": {
+        "size": 839430,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_pieces_metal_1k.exr",
+        "md5": "1a85400c7d7a6fa30b969331f18f58a5"
+      }
+    }
+  },
+  "AO": {
+    "8k": {
+      "jpg": {
+        "size": 5472041,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_ao_8k.jpg",
+        "md5": "3976747de07891607d27974b889b921e"
+      },
+      "png": {
+        "size": 47708665,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_ao_8k.png",
+        "md5": "578fc81e44f78c743dd9f3c818889849"
+      },
+      "exr": {
+        "size": 23057573,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_ao_8k.exr",
+        "md5": "2ee5457a78b1e3aabb48691c7d9386f6"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1051110,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_ao_4k.jpg",
+        "md5": "c9a482963a205d80cf1f3ec8cd93cc36"
+      },
+      "png": {
+        "size": 11714060,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_ao_4k.png",
+        "md5": "9b37f04777ca0438a93d0be2279cbfda"
+      },
+      "exr": {
+        "size": 4507182,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_ao_4k.exr",
+        "md5": "557b7438eb26824fbdccda4e3ec369d2"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 375719,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_ao_2k.jpg",
+        "md5": "96bdabf4f7e2b65c11f260735257516e"
+      },
+      "png": {
+        "size": 3030856,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_ao_2k.png",
+        "md5": "baa6d37c6d9a22b4d588727b9f757731"
+      },
+      "exr": {
+        "size": 905169,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_ao_2k.exr",
+        "md5": "65770be7995e4eb3f6a754eb64554ac7"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 113952,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_ao_1k.jpg",
+        "md5": "21bcd3959dd910b0c3716f5df03172f1"
+      },
+      "png": {
+        "size": 696665,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_ao_1k.png",
+        "md5": "0143efefd4a4b482d7a43c74d6062aaf"
+      },
+      "exr": {
+        "size": 184960,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_ao_1k.exr",
+        "md5": "bf9d26318a0724c45284956982f61fa8"
+      }
+    }
+  },
+  "Rough": {
+    "8k": {
+      "jpg": {
+        "size": 30720738,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_rough_8k.jpg",
+        "md5": "9a56613c6c2b84ce93f8091235b37b17"
+      },
+      "png": {
+        "size": 36233392,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_rough_8k.png",
+        "md5": "a052448a74c342484e35432e864bca4a"
+      },
+      "exr": {
+        "size": 48969308,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_rough_8k.exr",
+        "md5": "b430501582bfac60f248b80a75ba4af9"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 8497624,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_rough_4k.jpg",
+        "md5": "a73a947a003d76ef46d8787ef8ffe3b8"
+      },
+      "png": {
+        "size": 21921249,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_rough_4k.png",
+        "md5": "06e6b0a8a4da5241ebbb1b4c72efc39b"
+      },
+      "exr": {
+        "size": 16887121,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_rough_4k.exr",
+        "md5": "f4187b6d24adb7401d77b3a15e361acb"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2524372,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_rough_2k.jpg",
+        "md5": "dd30a6f3c44c5b130a9ddb5ba42a08db"
+      },
+      "png": {
+        "size": 6490032,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_rough_2k.png",
+        "md5": "0acffa35e397d6f9ada623dd231acb8c"
+      },
+      "exr": {
+        "size": 4586375,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_rough_2k.exr",
+        "md5": "10ca2488e0c5de020416edfd89833e55"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 648605,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_rough_1k.jpg",
+        "md5": "62efaf80f7a36bbadf651059a277d634"
+      },
+      "png": {
+        "size": 1687375,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_rough_1k.png",
+        "md5": "689adb1c697966e58dc9ffc9abf291fa"
+      },
+      "exr": {
+        "size": 1183725,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_rough_1k.exr",
+        "md5": "d535e4df21a108d70ba1bafdf18c2835"
+      }
+    }
+  },
+  "pieces_arm": {
+    "8k": {
+      "jpg": {
+        "size": 36666368,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_pieces_arm_8k.jpg",
+        "md5": "a8ebcbf50b7da111d0abae210c08d370"
+      },
+      "png": {
+        "size": 129757700,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_arm_8k.png",
+        "md5": "3d0155d3a45e542512ad4cdb698f0c42"
+      },
+      "exr": {
+        "size": 76383852,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_pieces_arm_8k.exr",
+        "md5": "33742afa5d79bbdf7d11f13403203b8a"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 11183966,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_arm_4k.jpg",
+        "md5": "fb84ff035cdde937eba865dfa25b72ad"
+      },
+      "png": {
+        "size": 45418484,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_arm_4k.png",
+        "md5": "c16f43987be0f138c711af3e21d55eba"
+      },
+      "exr": {
+        "size": 22685001,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_pieces_arm_4k.exr",
+        "md5": "cf31fcd963ea6ba1f02d9274b4833fbf"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3534574,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_pieces_arm_2k.jpg",
+        "md5": "5c66eee5c89f8a1c157217eb9157a81e"
+      },
+      "png": {
+        "size": 14368508,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_arm_2k.png",
+        "md5": "afebab8c3cfc2fcfb6988e8f39c06366"
+      },
+      "exr": {
+        "size": 7407203,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_pieces_arm_2k.exr",
+        "md5": "75355b4fff3b519e60813486edd19703"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 1052303,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_pieces_arm_1k.jpg",
+        "md5": "f1557e1cfdaa2f191697f582063ead9d"
+      },
+      "png": {
+        "size": 4319691,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_arm_1k.png",
+        "md5": "8f37fbf35057e38d4c4d59760ee9a4ab"
+      },
+      "exr": {
+        "size": 2248162,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_pieces_arm_1k.exr",
+        "md5": "ddde8a2986950dd4a26bf731dedb5ebf"
+      }
+    }
+  },
+  "pieces_rough": {
+    "8k": {
+      "jpg": {
+        "size": 27167151,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_pieces_rough_8k.jpg",
+        "md5": "ceeb15ba275053ba6a454655b757a016"
+      },
+      "png": {
+        "size": 29115393,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_rough_8k.png",
+        "md5": "2f12f875816bae61179a5b4d43c523a2"
+      },
+      "exr": {
+        "size": 30545917,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_pieces_rough_8k.exr",
+        "md5": "414d6ab17d56dc2f9e82d1c2bddabaa2"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 7883959,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_rough_4k.jpg",
+        "md5": "32ecdf39aa282aabadf5d34785f23513"
+      },
+      "png": {
+        "size": 14196994,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_rough_4k.png",
+        "md5": "7515804acb7457100adf568000386239"
+      },
+      "exr": {
+        "size": 10859819,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_pieces_rough_4k.exr",
+        "md5": "475868f4c0905d8fb15f8ca5d12e31d5"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2506239,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_pieces_rough_2k.jpg",
+        "md5": "ae5d99d4a36897fe0a295fc0c20f5e86"
+      },
+      "png": {
+        "size": 4904243,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_rough_2k.png",
+        "md5": "3d25dd56f3903614bcbb27bcdec41e89"
+      },
+      "exr": {
+        "size": 3529460,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_pieces_rough_2k.exr",
+        "md5": "207022d16af974b7549b526dc2b11914"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 746321,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_pieces_rough_1k.jpg",
+        "md5": "a33e4d6083e3625d75b1b930ed3e2940"
+      },
+      "png": {
+        "size": 1535130,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_rough_1k.png",
+        "md5": "cad13b0c293be62c63385c7b122499da"
+      },
+      "exr": {
+        "size": 1108239,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_pieces_rough_1k.exr",
+        "md5": "bb65d690605d115d93b5db4dc373b05c"
+      }
+    }
+  },
+  "pieces_nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 33341698,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_8k.jpg",
+        "md5": "ae04c1f9dc218e15c5759b3077208f52"
+      },
+      "png": {
+        "size": 172784880,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_8k.png",
+        "md5": "51f552c12f36c7c5fc43b49270dcaff8"
+      },
+      "exr": {
+        "size": 66596972,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_8k.exr",
+        "md5": "95205bb3191b8295b624a3f1e4688812"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 9721506,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_4k.jpg",
+        "md5": "69535cd83d154fcf9fb234acab3401fc"
+      },
+      "png": {
+        "size": 51099374,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_4k.png",
+        "md5": "65dcbd30d4a74c9a5f5c488ce0c1e22d"
+      },
+      "exr": {
+        "size": 19685267,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_4k.exr",
+        "md5": "66d777e2bcb656af81ec3841fe72790c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2950016,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_2k.jpg",
+        "md5": "070ce1ff3054e5b00c3a2efeb2c22fb1"
+      },
+      "png": {
+        "size": 15224664,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_2k.png",
+        "md5": "fb0534d6d70cb1974bab249540812b8d"
+      },
+      "exr": {
+        "size": 6178110,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_2k.exr",
+        "md5": "207a38fedd5b6a7b3b9c9980901acd9e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 869300,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_1k.jpg",
+        "md5": "8b19a0a1fcd216dc66bdab42006ff17c"
+      },
+      "png": {
+        "size": 4490533,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_1k.png",
+        "md5": "0b0ba6f3e1109d13ff1f2f171288312f"
+      },
+      "exr": {
+        "size": 1835637,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_pieces_nor_dx_1k.exr",
+        "md5": "587e153867f0f7598e3a18ba457d66e4"
+      }
+    }
+  },
+  "nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 49907152,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_nor_gl_8k.jpg",
+        "md5": "ec9b726e0160f39feed47824501c5fa0"
+      },
+      "png": {
+        "size": 290765088,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_nor_gl_8k.png",
+        "md5": "6c5ca33b9b724dbbf4bd5b0287d888d4"
+      },
+      "exr": {
+        "size": 98184363,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_nor_gl_8k.exr",
+        "md5": "1aeb9ce15d54b4deb055b434baef47ac"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 14567934,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_nor_gl_4k.jpg",
+        "md5": "47a7cea771b89f19e9d05038382ecc79"
+      },
+      "png": {
+        "size": 76437884,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_nor_gl_4k.png",
+        "md5": "c3888c3263ca960714ccbe6cf9dc8dc1"
+      },
+      "exr": {
+        "size": 29627387,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_nor_gl_4k.exr",
+        "md5": "f924e444a32ffa2e46cf045df843ae06"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 3833235,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_nor_gl_2k.jpg",
+        "md5": "da2926aeb305161afff30713eb723c31"
+      },
+      "png": {
+        "size": 19749636,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_nor_gl_2k.png",
+        "md5": "d6c5f41f506e34547609e646dd48732e"
+      },
+      "exr": {
+        "size": 8074481,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_nor_gl_2k.exr",
+        "md5": "e309b65e30e2ad14355bf32ceaad8c5e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 931236,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_nor_gl_1k.jpg",
+        "md5": "d2f75d2c5f3868c93f8c4c03bbd78144"
+      },
+      "png": {
+        "size": 5086325,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_nor_gl_1k.png",
+        "md5": "26b3b555747c1230981a006a8d2a8859"
+      },
+      "exr": {
+        "size": 2024477,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_nor_gl_1k.exr",
+        "md5": "8c73370d1ef93ca5df18269b979bb59e"
+      }
+    }
+  },
+  "arm": {
+    "8k": {
+      "jpg": {
+        "size": 35222806,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_arm_8k.jpg",
+        "md5": "594ef5042e1f62a28dcf27e96181a958"
+      },
+      "png": {
+        "size": 114296975,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_arm_8k.png",
+        "md5": "2f2ee12dfaef81e3b28099c3e892a0ee"
+      },
+      "exr": {
+        "size": 64549371,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_arm_8k.exr",
+        "md5": "f972919d5757b7ebb12ea475dd282b80"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 10141508,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_arm_4k.jpg",
+        "md5": "82563a13deb04d7ace973f7b18d0d973"
+      },
+      "png": {
+        "size": 38015526,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_arm_4k.png",
+        "md5": "e4abda325a2229efe87bc69cf9b8aa93"
+      },
+      "exr": {
+        "size": 18000807,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_arm_4k.exr",
+        "md5": "7859e78dae66effb159bed9d0676b634"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2938395,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_arm_2k.jpg",
+        "md5": "5e56d1623e4f2a994c9d1491e3a422ab"
+      },
+      "png": {
+        "size": 11122698,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_arm_2k.png",
+        "md5": "4b88ef5361d052a63a60468f194e7ce4"
+      },
+      "exr": {
+        "size": 5932412,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_arm_2k.exr",
+        "md5": "f78b0537ed8150672d383386bf3dc6f5"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 748382,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_arm_1k.jpg",
+        "md5": "8242b81c3bc7216233199e122023dfb3"
+      },
+      "png": {
+        "size": 2793537,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_arm_1k.png",
+        "md5": "d529eb6151511c58cb749eb60987a1e5"
+      },
+      "exr": {
+        "size": 1602810,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_arm_1k.exr",
+        "md5": "a9ec6f016fc2400cd6f731923d08f5c2"
+      }
+    }
+  },
+  "fbx": {
+    "8k": {
+      "fbx": {
+        "include": {
+          "textures/modular_electricity_poles_pieces_diff_8k.png": {
+            "size": 140187774,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_diff_8k.png",
+            "md5": "928f89385a8c0b063bfb6d7abe95eb1c"
+          },
+          "textures/modular_electricity_poles_nor_gl_8k.exr": {
+            "size": 98184363,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_nor_gl_8k.exr",
+            "md5": "1aeb9ce15d54b4deb055b434baef47ac"
+          },
+          "textures/modular_electricity_poles_pieces_metal_8k.png": {
+            "size": 20022479,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_metal_8k.png",
+            "md5": "e9d43cd1ef803d94962b2dd82c99df41"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_8k.png": {
+            "size": 172798332,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_8k.png",
+            "md5": "eb172d64c02fd4cee288599e80c2da52"
+          },
+          "textures/modular_electricity_poles_rough_8k.exr": {
+            "size": 48969308,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_rough_8k.exr",
+            "md5": "b430501582bfac60f248b80a75ba4af9"
+          },
+          "textures/modular_electricity_poles_diff_8k.jpg": {
+            "size": 39334660,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_diff_8k.jpg",
+            "md5": "957b845b7d9b853b54ecef1c0e9df94f"
+          },
+          "textures/modular_electricity_poles_pieces_rough_8k.png": {
+            "size": 29115393,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_rough_8k.png",
+            "md5": "2f12f875816bae61179a5b4d43c523a2"
+          }
+        },
+        "size": 6041596,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/8k/modular_electricity_poles/modular_electricity_poles_8k.fbx",
+        "md5": "0c642183dab2766578d0eccfb9f754c8"
+      }
+    },
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/modular_electricity_poles_diff_4k.jpg": {
+            "size": 10066538,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_diff_4k.jpg",
+            "md5": "a5f04134008bc8617a36c8741ca06373"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_4k.png": {
+            "size": 51102292,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_4k.png",
+            "md5": "ace487af41458a202f38d69f2550ec43"
+          },
+          "textures/modular_electricity_poles_nor_gl_4k.exr": {
+            "size": 29627387,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_nor_gl_4k.exr",
+            "md5": "f924e444a32ffa2e46cf045df843ae06"
+          },
+          "textures/modular_electricity_poles_pieces_metal_4k.png": {
+            "size": 9457933,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_metal_4k.png",
+            "md5": "a488751391e25ced48b22c8f11aed0d7"
+          },
+          "textures/modular_electricity_poles_rough_4k.exr": {
+            "size": 16887121,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_rough_4k.exr",
+            "md5": "f4187b6d24adb7401d77b3a15e361acb"
+          },
+          "textures/modular_electricity_poles_pieces_diff_4k.png": {
+            "size": 54054201,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_diff_4k.png",
+            "md5": "fef0784163f018b2f9e1303e72fdb54e"
+          },
+          "textures/modular_electricity_poles_pieces_rough_4k.png": {
+            "size": 14196994,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_rough_4k.png",
+            "md5": "7515804acb7457100adf568000386239"
+          }
+        },
+        "size": 6041596,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/modular_electricity_poles/modular_electricity_poles_4k.fbx",
+        "md5": "fe8aaeb398144c59ddac3ad4ebe13cd1"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/modular_electricity_poles_diff_2k.jpg": {
+            "size": 2652895,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_diff_2k.jpg",
+            "md5": "587fdf3b7bc5091a0cb3da26ff1fb944"
+          },
+          "textures/modular_electricity_poles_nor_gl_2k.exr": {
+            "size": 8074481,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_nor_gl_2k.exr",
+            "md5": "e309b65e30e2ad14355bf32ceaad8c5e"
+          },
+          "textures/modular_electricity_poles_pieces_metal_2k.png": {
+            "size": 3355618,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_metal_2k.png",
+            "md5": "14e94879b55dc700e358e95c72037c1a"
+          },
+          "textures/modular_electricity_poles_pieces_diff_2k.png": {
+            "size": 16510722,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_diff_2k.png",
+            "md5": "bc504edbf4d48fdb4505c813ab72d4cc"
+          },
+          "textures/modular_electricity_poles_pieces_rough_2k.png": {
+            "size": 4904243,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_rough_2k.png",
+            "md5": "3d25dd56f3903614bcbb27bcdec41e89"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_2k.png": {
+            "size": 15226206,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_2k.png",
+            "md5": "a5f849b6106d60d4d280b12e9c0f9f52"
+          },
+          "textures/modular_electricity_poles_rough_2k.exr": {
+            "size": 4586375,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_rough_2k.exr",
+            "md5": "10ca2488e0c5de020416edfd89833e55"
+          }
+        },
+        "size": 6041596,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/modular_electricity_poles/modular_electricity_poles_2k.fbx",
+        "md5": "7544cc8a798c9d2d5893b68afc4e45e6"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/modular_electricity_poles_rough_1k.exr": {
+            "size": 1183725,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_rough_1k.exr",
+            "md5": "d535e4df21a108d70ba1bafdf18c2835"
+          },
+          "textures/modular_electricity_poles_pieces_diff_1k.png": {
+            "size": 5175155,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_diff_1k.png",
+            "md5": "1eb7488ac37653b823b8309e37d1f908"
+          },
+          "textures/modular_electricity_poles_diff_1k.jpg": {
+            "size": 658915,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_diff_1k.jpg",
+            "md5": "34df50003850fdc33507c5d0713af802"
+          },
+          "textures/modular_electricity_poles_pieces_rough_1k.png": {
+            "size": 1535130,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_rough_1k.png",
+            "md5": "cad13b0c293be62c63385c7b122499da"
+          },
+          "textures/modular_electricity_poles_nor_gl_1k.exr": {
+            "size": 2024477,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_nor_gl_1k.exr",
+            "md5": "8c73370d1ef93ca5df18269b979bb59e"
+          },
+          "textures/modular_electricity_poles_pieces_metal_1k.png": {
+            "size": 1097684,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_metal_1k.png",
+            "md5": "98344ed0f2ad26ec94f177ad7a9338fb"
+          },
+          "textures/modular_electricity_poles_pieces_nor_gl_1k.png": {
+            "size": 4490727,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_nor_gl_1k.png",
+            "md5": "c350802c653159711f928ee5ab8fc737"
+          }
+        },
+        "size": 6041596,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/modular_electricity_poles/modular_electricity_poles_1k.fbx",
+        "md5": "8ae989bc4551564ee8f620a3e2074d9c"
+      }
+    }
+  },
+  "pieces_ao": {
+    "8k": {
+      "jpg": {
+        "size": 13121526,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/modular_electricity_poles/modular_electricity_poles_pieces_ao_8k.jpg",
+        "md5": "a3abc527ab5793baf4bcd50c91364a5f"
+      },
+      "png": {
+        "size": 47762957,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/modular_electricity_poles/modular_electricity_poles_pieces_ao_8k.png",
+        "md5": "e597c4ebc9ca8314772a5992776dd4e1"
+      },
+      "exr": {
+        "size": 25793635,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/modular_electricity_poles/modular_electricity_poles_pieces_ao_8k.exr",
+        "md5": "8d067f5798f7f7345ba3d9beb60d0598"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 4293528,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/modular_electricity_poles/modular_electricity_poles_pieces_ao_4k.jpg",
+        "md5": "052547383ac8291b2ba10fd1be41d117"
+      },
+      "png": {
+        "size": 14706707,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/modular_electricity_poles/modular_electricity_poles_pieces_ao_4k.png",
+        "md5": "31661e75e8123294bff3f175a67a8bfa"
+      },
+      "exr": {
+        "size": 7984866,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/modular_electricity_poles/modular_electricity_poles_pieces_ao_4k.exr",
+        "md5": "dedccd1feaae829543f847f46032f303"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1606214,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/modular_electricity_poles/modular_electricity_poles_pieces_ao_2k.jpg",
+        "md5": "027c8cd9953afe7136b4b0355ac53e5b"
+      },
+      "png": {
+        "size": 4359273,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_electricity_poles/modular_electricity_poles_pieces_ao_2k.png",
+        "md5": "b941471d0ab1deb9759163ac68c73ebd"
+      },
+      "exr": {
+        "size": 2512491,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/modular_electricity_poles/modular_electricity_poles_pieces_ao_2k.exr",
+        "md5": "3cc68cd44f081104746d6756b068a8da"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 590995,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modular_electricity_poles/modular_electricity_poles_pieces_ao_1k.jpg",
+        "md5": "72e7ccc3dd1a4b0dbb0434fdab766ce0"
+      },
+      "png": {
+        "size": 1296640,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/modular_electricity_poles/modular_electricity_poles_pieces_ao_1k.png",
+        "md5": "d186014f6cff0ea5b4f57dcb57137be4"
+      },
+      "exr": {
+        "size": 803793,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/modular_electricity_poles/modular_electricity_poles_pieces_ao_1k.exr",
+        "md5": "08c5e653c226a3bf388d0f4f11339020"
+      }
+    }
+  }
+}
