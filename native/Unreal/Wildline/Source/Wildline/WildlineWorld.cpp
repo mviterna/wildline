@@ -3,11 +3,13 @@
 #include "Misc/Parse.h"
 #include "WildlineLobby.h"
 #include "WildlineRules.h"
+#include "WildlineUserSettings.h"
 #include "WildlineTrunkProfiles.h"
 #include "Components/HierarchicalInstancedStaticMeshComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "ProceduralMeshComponent.h"
 #include "Materials/MaterialInterface.h"
+#include "Materials/MaterialInstanceDynamic.h"
 #include "Engine/StaticMesh.h"
 #include "EngineUtils.h"
 #include "UObject/ConstructorHelpers.h"
@@ -63,7 +65,41 @@ FVector AWildlineWorld::TrunkCentre(int32 Index,float WorldZ,float& Radius) cons
     FVector Centre=T.MeshTransform.TransformPosition(FVector(Ring.X,Ring.Y,Ring.Z));Centre.Z=WorldZ;return Centre;
 }
 int32 AWildlineWorld::NearestTree(FVector P,float Max) const {int32 Result=INDEX_NONE;for(int32 I=0;I<Trees.Num();I++){float Radius;const auto Centre=TrunkCentre(I,P.Z,Radius);const float D=FVector::Dist2D(P,Centre)-Radius;if(D<Max&&P.Z<Trees[I].ClimbTop){Max=D;Result=I;}}return Result;}
-void AWildlineWorld::BeginPlay(){Super::BeginPlay();float ReviewYaw;if(Trees.Num()==0||(bResidential&&FParse::Value(FCommandLine::Get(),TEXT("WildlineCourseOakYaw="),ReviewYaw)))Rebuild();bool WoodReady=ClimbWood.Num()==4;for(auto* Wood:ClimbWood)WoodReady&=Wood&&Wood->GetStaticMesh()&&Wood->GetInstanceCount()>0;Trunks->SetCollisionEnabled(WoodReady?ECollisionEnabled::NoCollision:ECollisionEnabled::QueryAndPhysics);if(!AWildlineLobby::Find(GetWorld()))GetWorld()->SpawnActor<AWildlineLobby>();}
+void AWildlineWorld::BeginPlay(){Super::BeginPlay();float ReviewYaw;if(Trees.Num()==0||(bResidential&&FParse::Value(FCommandLine::Get(),TEXT("WildlineCourseOakYaw="),ReviewYaw)))Rebuild();bool WoodReady=ClimbWood.Num()==4;for(auto* Wood:ClimbWood)WoodReady&=Wood&&Wood->GetStaticMesh()&&Wood->GetInstanceCount()>0;Trunks->SetCollisionEnabled(WoodReady?ECollisionEnabled::NoCollision:ECollisionEnabled::QueryAndPhysics);if(!AWildlineLobby::Find(GetWorld()))GetWorld()->SpawnActor<AWildlineLobby>();if(auto* S=UWildlineUserSettings::Get())ApplyTreeLeafDensity(bWinter?S->WinterTreeLeafDensity:S->TreeLeafDensity);}
+void AWildlineWorld::ApplyTreeLeafDensity(float Density){
+    Density=FMath::Clamp(Density,0.f,100.f);
+    // Visual meshes only: wood collision, climb profiles and instance placement
+    // stay fixed. Each connected leaf card carries a stable rank in vertex G.
+    for(TActorIterator<AActor> It(GetWorld());It;++It){
+        TArray<UStaticMeshComponent*> Components;It->GetComponents(Components);
+        for(auto* C:Components){
+            if(!C->GetStaticMesh())continue;const FString Name=C->GetStaticMesh()->GetName();
+            for(const TCHAR* Base:{TEXT("SM_OakA"),TEXT("SM_OakB"),TEXT("SM_OakC"),TEXT("SM_Pine")}){
+                if(Name!=Base&&Name!=FString(Base)+TEXT("_Thin")&&Name!=FString(Base)+TEXT("_Bare")&&Name!=FString(Base)+TEXT("_Density"))continue;
+                const FString Target=FString(Base)+(Density<=0?TEXT("_Bare"):TEXT("_Density"));
+                if(Name!=Target){
+                    const FString Path=FString::Printf(TEXT("/Game/Wildline/Forest/Meshes/%s.%s"),*Target,*Target);
+                    if(auto* Mesh=LoadObject<UStaticMesh>(nullptr,*Path)){
+                        // Yard props and lodge scenery are registered as static.
+                        // Temporarily allow the visual mesh change, then restore
+                        // their authored mobility and lighting behavior.
+                        const auto Mobility=C->Mobility;C->SetMobility(EComponentMobility::Movable);
+                        C->EmptyOverrideMaterials();C->SetStaticMesh(Mesh);C->SetMobility(Mobility);
+                    }
+                }
+                for(int32 Slot=0;Slot<C->GetNumMaterials();Slot++){
+                    auto* Material=C->GetMaterial(Slot);if(!Material)continue;
+                    auto* Source=C->GetStaticMesh()->GetMaterial(Slot);const FString MaterialName=Source?Source->GetName():Material->GetName();
+                    if(MaterialName.Contains(TEXT("M_Leaves"))||MaterialName.Contains(TEXT("M_LivingLeaf"))||MaterialName.Contains(TEXT("M_Needles"))){
+                        auto* MID=Cast<UMaterialInstanceDynamic>(Material);if(!MID)MID=C->CreateDynamicMaterialInstance(Slot);
+                        if(MID)MID->SetScalarParameterValue(TEXT("LeafDensity"),Density*.01f);
+                    }else if(MaterialName==TEXT("M_TreeBark")||MaterialName==TEXT("M_FrostBark"))C->SetMaterial(Slot,LoadObject<UMaterialInterface>(nullptr,bWinter?TEXT("/Game/Wildline/Forest/Materials/M_FrostBark.M_FrostBark"):TEXT("/Game/Wildline/Forest/Materials/M_TreeBark.M_TreeBark")));
+                }
+                break;
+            }
+        }
+    }
+}
 void AWildlineWorld::Rebuild(){for(auto* Wood:ClimbWood)Wood->ClearInstances();Trunks->ClearInstances();Foliage->ClearInstances();Branches->ClearInstances();Rocks->ClearInstances();Grass->ClearInstances();Acorns->ClearInstances();AcornCaps->ClearInstances();ReserveFence->ClearInstances();for(auto* Layer:ForestLayers)Layer->ClearInstances();Terrain->ClearAllMeshSections();Trees.Empty();AcornLocations.Empty();Farmhouse->ClearInstances();for(auto* Prop:FarmProps)Prop->ClearInstances();for(auto* Prop:ResidentialProps)if(Prop)Prop->DestroyComponent();ResidentialProps.Empty();for(auto* Gable:ResidentialGables)if(Gable)Gable->DestroyComponent();ResidentialGables.Empty();CoursePlatforms.Empty();DenMesh->SetVisibility(true);if(bResidential)GenerateResidential();else if(bFarm)GenerateFarm();else Generate();}
 void AWildlineWorld::ShowLocalAcorns(const TArray<int32>& Collected){
     for(int32 I=0;I<AcornLocations.Num();I++){

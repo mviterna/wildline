@@ -2,6 +2,7 @@
 #include "WildlineGame.h"
 #include "WildlineCharacter.h"
 #include "WildlineUserSettings.h"
+#include "WildlineWorld.h"
 #include "WildlineRules.h"
 #include "WildlineHunterCreator.h"
 #include "Blueprint/WidgetTree.h"
@@ -112,16 +113,27 @@ TSharedRef<SWidget> UWildlineMenu::RebuildWidget(){
     Combo(NeighborhoodLayout,TEXT("BIRD FEEDER NEIGHBORHOOD"),{TEXT("Maple Crescent / utility easement"),TEXT("Cedar Backyards / staggered gardens")});
 
     Page();Section(TEXT("BUILD YOUR BOT ROSTER"));Add(Text(TEXT("Exact bot counts, in addition to human players. Set either team to zero to disable its bots. Removed slots keep their loadout if you add them back."),11,Muted),16);
+    Section(TEXT("AI BEHAVIOR / SAVED FOR THIS MODE"));
+    Number(BotSight,TEXT("Bot sight / 0-100"),0,100,5);Number(BotReaction,TEXT("Bot reaction speed / 0-100"),0,100,5);
+    Number(BotAccuracy,TEXT("Hunter accuracy / 0-100"),0,100,5);Number(HunterAggression,TEXT("Hunter pursuit aggression / 0-100"),0,100,5);
+    Number(SquirrelCaution,TEXT("Squirrel danger awareness / 0-100"),0,100,5);Number(BotSpacing,TEXT("Bot personal space / centimetres"),60,400,20);
+    Number(BotTreeSeconds,TEXT("Maximum escape tree stay / seconds"),2,12);Check(BotClimbing,TEXT("Squirrel bots use escape trees / woodland"));
+    Add(Text(TEXT("0: weakest / 50: balanced / 100: maximum. Higher values strengthen the AI. At 100 accuracy, rifles fire pinpoint instant shots; shotguns aim precisely and retain their pellet pattern. Cover still blocks shots. At 100 reaction speed, hunters react immediately and fire at the weapon's fastest allowed rate. Changes apply in a fresh match or after F5 restart."),10,Muted),18);
     auto RosterHeader=[&](const TCHAR* Team,const TCHAR* Equipment){auto* Row=WidgetTree->ConstructWidget<UHorizontalBox>();auto* NS=Row->AddChildToHorizontalBox(Text(Team,10,Sage));NS->SetSize(FSlateChildSize(ESlateSizeRule::Fill));auto* WS=Row->AddChildToHorizontalBox(Text(Equipment,10,Sage));FSlateChildSize Wide(ESlateSizeRule::Fill);Wide.Value=2;WS->SetSize(Wide);WS->SetPadding(FMargin(8,0));Row->AddChildToHorizontalBox(Text(TEXT("AI DIFFICULTY"),10,Sage))->SetSize(FSlateChildSize(ESlateSizeRule::Fill));Add(Row,8);};
     Number(DefenderBotCount,TEXT("Defender bots / 0-8"),0,8);RosterHeader(TEXT("DEFENDER"),TEXT("WEAPON"));
     for(int32 I=0;I<FWildlineMatchConfig::MaxBotsPerTeam;I++){auto* Row=CreateWidget<UWildlineBotRow>(GetOwningPlayer());Row->Menu=this;Row->Index=I;Add(Row,10);Row->TakeWidget();BotRows.Add(Row);}
     Add(Text(TEXT("Easy: slower reactions and wide aim. Medium: balanced pursuit. Hard: longer sight, faster reactions and precise leading shots. All defenders need line of sight."),10,Muted),18);
     Number(SquirrelBotCount,TEXT("Squirrel bots / 0-8"),0,8);RosterHeader(TEXT("SQUIRREL"),TEXT("ABILITIES"));
     for(int32 I=0;I<FWildlineMatchConfig::MaxBotsPerTeam;I++){auto* Row=CreateWidget<UWildlineBotRow>(GetOwningPlayer());Row->Menu=this;Row->Index=I;Row->bSquirrel=true;Add(Row,10);Row->TakeWidget();BotRows.Add(Row);}
-    Add(Text(TEXT("Squirrels are unarmed. Difficulty changes how quickly they notice and react to danger; course bots pause between jumps."),10,Muted),12);
+    Add(Text(TEXT("Squirrels share food destinations, spread out, and avoid occupied escape trees. Difficulty changes danger awareness and reaction time; course bots queue for tree access and pause between jumps."),10,Muted),12);
     Add(Text(TEXT("A match needs opponents to earn kills, and enough food to reach its goal. Zero bots is useful for co-op or practicing alone."),10,Muted),12);
 
     FieldScroll=Page();Section(TEXT("YOUR CONTROLS & PRESENTATION"));
+    const auto* Forest=AWildlineWorld::Find(GetWorld());const bool Winter=Forest&&Forest->bWinter;
+    const float Density=Settings?(Winter?Settings->WinterTreeLeafDensity:Settings->TreeLeafDensity):72.f;
+    TreeLeavesLabel=Text(FString::Printf(TEXT("TREE LEAVES / %s / %.0f"),Winter?TEXT("WINTER"):TEXT("AUTUMN"),Density),10,Muted);Add(TreeLeavesLabel,4);
+    TreeLeaves=WidgetTree->ConstructWidget<USlider>();TreeLeaves->SetMinValue(0);TreeLeaves->SetMaxValue(100);TreeLeaves->SetStepSize(1);TreeLeaves->SetValue(Density);TreeLeaves->OnValueChanged.AddDynamic(this,&UWildlineMenu::TreeLeavesChanged);Add(TreeLeaves,6);
+    Add(Text(TEXT("0: bare branches / 100: very full. Changes apply immediately and save for this season."),10,Muted),16);
     Inversion=WidgetTree->ConstructWidget<UCheckBox>();Inversion->AddChild(Text(TEXT("  Invert mouse Y"),12,Cream));Inversion->SetIsChecked(Settings?Settings->bInvertMouseY:true);Inversion->OnCheckStateChanged.AddDynamic(this,&UWildlineMenu::InvertChanged);Add(Inversion,10);
     Blood=WidgetTree->ConstructWidget<UCheckBox>();Blood->AddChild(Text(TEXT("  Blood effects"),12,Cream));Blood->SetIsChecked(Settings?Settings->bBloodEnabled:true);Blood->OnCheckStateChanged.AddDynamic(this,&UWildlineMenu::BloodChanged);Add(Blood,16);
     Add(Text(TEXT("MOUSE SENSITIVITY"),10,Muted),4);Sensitivity=WidgetTree->ConstructWidget<USlider>();Sensitivity->SetMinValue(.15f);Sensitivity->SetMaxValue(2.f);Sensitivity->SetValue(Settings?Settings->MouseSensitivity:.8f);Sensitivity->OnValueChanged.AddDynamic(this,&UWildlineMenu::SensitivityChanged);Add(Sensitivity,18);
@@ -177,6 +189,9 @@ void UWildlineMenu::RefreshConfig(){
     const int32 Selection=Mode?Mode->GetSelectedIndex():0;FWildlineMatchConfig C=Host&&Settings?Settings->ConfigForMode(Selection):State?State->MatchConfig:FWildlineMatchConfig();C.Clamp();
     PlayerLimit->SetValue(C.MaxPlayers);RoundMinutes->SetValue(C.DurationSeconds/60);SquirrelPoints->SetValue(C.SquirrelGoal);DefenderPoints->SetValue(C.DefenderGoal);
     DefenderBotCount->SetValue(C.DefenderBots);SquirrelBotCount->SetValue(C.SquirrelBots);SquirrelHealth->SetValue(C.SquirrelHealth);RespawnSeconds->SetValue(C.RespawnSeconds);SpawnProtection->SetValue(C.SpawnProtectionSeconds);CarryCapacity->SetValue(C.CarryCapacity);MovementPercent->SetValue(C.MovementScale*100);ReloadPercent->SetValue(C.ReloadScale*100);ThermalSeconds->SetValue(C.ThermalSeconds);ThermalCooldown->SetValue(C.ThermalCooldownSeconds);
+    BotSight->SetValue(C.BotSightScale*100);BotReaction->SetValue(C.BotReactionScale*100);BotAccuracy->SetValue(C.BotAccuracyScale*100);HunterAggression->SetValue(C.HunterAggression*100);SquirrelCaution->SetValue(C.SquirrelCaution*100);BotSpacing->SetValue(C.BotSpacing);BotTreeSeconds->SetValue(C.BotTreeSeconds);BotClimbing->SetIsChecked(C.bBotClimbing);
+    for(auto* Box:{BotSight,BotReaction,BotAccuracy,HunterAggression,SquirrelCaution,BotSpacing,BotTreeSeconds})Box->SetIsEnabled(Host);
+    BotClimbing->SetIsEnabled(Host&&Selection==0);BotTreeSeconds->SetIsEnabled(Host&&Selection==0&&C.bBotClimbing);
     for(auto* Box:{PlayerLimit,RoundMinutes,SquirrelPoints,DefenderPoints,DefenderBotCount,SquirrelBotCount,SquirrelHealth,RespawnSeconds,SpawnProtection,CarryCapacity,MovementPercent,ReloadPercent,ThermalSeconds,ThermalCooldown})Box->SetIsEnabled(Host);
     Minimap->SetIsChecked(C.bAllowMinimap);UnlimitedStamina->SetIsChecked(C.bUnlimitedStamina);InfiniteAmmo->SetIsChecked(C.bInfiniteAmmo);AllowThermal->SetIsChecked(C.bAllowThermal);LivestockDamage->SetIsChecked(C.bLivestockDamage);
     for(auto* Box:{Minimap,UnlimitedStamina,InfiniteAmmo,AllowThermal,LivestockDamage})Box->SetIsEnabled(Host);
@@ -193,6 +208,7 @@ void UWildlineMenu::ConfigChanged(float Value){
     if(bRefreshingConfig||!Minimap||!GetOwningPlayer()||!GetOwningPlayer()->HasAuthority())return;
     if(auto* S=UWildlineUserSettings::Get()){auto& C=S->ConfigForMode(Mode->GetSelectedIndex());C.MaxPlayers=FMath::RoundToInt(PlayerLimit->GetValue());C.DurationSeconds=FMath::RoundToInt(RoundMinutes->GetValue())*60.f;C.SquirrelGoal=FMath::RoundToInt(SquirrelPoints->GetValue());C.DefenderGoal=FMath::RoundToInt(DefenderPoints->GetValue());
         C.DefenderBots=FMath::RoundToInt(DefenderBotCount->GetValue());C.SquirrelBots=FMath::RoundToInt(SquirrelBotCount->GetValue());C.SquirrelHealth=SquirrelHealth->GetValue();C.RespawnSeconds=RespawnSeconds->GetValue();C.SpawnProtectionSeconds=SpawnProtection->GetValue();C.CarryCapacity=FMath::RoundToInt(CarryCapacity->GetValue());C.MovementScale=MovementPercent->GetValue()/100.f;C.ReloadScale=ReloadPercent->GetValue()/100.f;C.ThermalSeconds=ThermalSeconds->GetValue();C.ThermalCooldownSeconds=ThermalCooldown->GetValue();
+        C.BotSightScale=BotSight->GetValue()/100.f;C.BotReactionScale=BotReaction->GetValue()/100.f;C.BotAccuracyScale=BotAccuracy->GetValue()/100.f;C.HunterAggression=HunterAggression->GetValue()/100.f;C.SquirrelCaution=SquirrelCaution->GetValue()/100.f;C.BotSpacing=BotSpacing->GetValue();C.BotTreeSeconds=BotTreeSeconds->GetValue();C.bBotClimbing=BotClimbing->IsChecked();
         C.bAllowMinimap=Minimap->IsChecked();C.bUnlimitedStamina=UnlimitedStamina->IsChecked();C.bInfiniteAmmo=InfiniteAmmo->IsChecked();C.bAllowThermal=AllowThermal->IsChecked();C.bLivestockDamage=LivestockDamage->IsChecked();C.MapIntel=MapIntel->GetSelectedIndex();C.NeighborhoodLayout=NeighborhoodLayout->GetSelectedIndex();C.ClassicLayout=ClassicLayout->GetSelectedIndex();C.TimeWinner=TimeWinner->GetSelectedIndex();C.Clamp();S->Persist();Presets->SetSelectedIndex(0);
     }RefreshMode();
 }
@@ -222,3 +238,9 @@ void UWildlineMenu::SetWorkshop(bool Open){
 }
 void UWildlineMenu::ToggleWorkshop(){SetWorkshop(!bWorkshopOpen);}
 void UWildlineMenu::MusicVolumeChanged(float Value){if(auto* S=UWildlineUserSettings::Get()){S->MusicVolume=Value;S->Persist();}}
+void UWildlineMenu::TreeLeavesChanged(float Value){
+    Value=FMath::Clamp(Value,0.f,100.f);auto* Forest=AWildlineWorld::Find(GetWorld());const bool Winter=Forest&&Forest->bWinter;
+    if(TreeLeavesLabel)TreeLeavesLabel->SetText(FText::FromString(FString::Printf(TEXT("TREE LEAVES / %s / %.0f"),Winter?TEXT("WINTER"):TEXT("AUTUMN"),Value)));
+    if(auto* S=UWildlineUserSettings::Get()){(Winter?S->WinterTreeLeafDensity:S->TreeLeafDensity)=Value;S->Persist();}
+    if(Forest)Forest->ApplyTreeLeafDensity(Value);
+}

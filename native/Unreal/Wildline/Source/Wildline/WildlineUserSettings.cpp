@@ -11,11 +11,13 @@ void UWildlineUserSettings::EnforceHighQuality() {
 void UWildlineUserSettings::LoadSettings(bool bForceReload) {
     Super::LoadSettings(bForceReload);
     EnforceHighQuality();
+    TreeLeafDensity=FMath::Clamp(TreeLeafDensity,0.f,100.f);WinterTreeLeafDensity=FMath::Clamp(WinterTreeLeafDensity,0.f,100.f);
     ClassicConfig.Clamp();FarmConfig.Clamp();HillConfig.Clamp();
 }
 void UWildlineUserSettings::ValidateSettings() {
     Super::ValidateSettings();
     EnforceHighQuality();
+    TreeLeafDensity=FMath::Clamp(TreeLeafDensity,0.f,100.f);WinterTreeLeafDensity=FMath::Clamp(WinterTreeLeafDensity,0.f,100.f);
     ClassicConfig.Clamp();FarmConfig.Clamp();HillConfig.Clamp();
 }
 void UWildlineUserSettings::Persist() { MouseSensitivity=FMath::Clamp(MouseSensitivity,.15f,2.f); HunterDifficulty=FMath::Clamp(HunterDifficulty,0,2); ExpeditionMode=FMath::Clamp(ExpeditionMode,0,2);SelectedWeapon=FMath::Clamp(SelectedWeapon,0,1);ScopeSensitivity=FMath::Clamp(ScopeSensitivity,.05f,2.f);SoundVolume=FMath::Clamp(SoundVolume,0.f,1.f);MusicVolume=FMath::Clamp(MusicVolume,0.f,1.f);ClassicConfig.Clamp();FarmConfig.Clamp();HillConfig.Clamp();HunterProfile.Clamp(); SaveSettings(); }

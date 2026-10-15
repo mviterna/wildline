@@ -1,0 +1,161 @@
+{
+  "verified_at_utc": "2026-10-09T16:38:06.5787442+00:00",
+  "package_root": "C:\\_git\\wildline\\native\\Build\\branch-thermal-lighting\\Windows",
+  "package_completed_at_utc": "2026-10-09T12:24:01.9263863-04:00",
+  "executable_sha256": "2A389E69F3713EC275F01B5F854E5E17C80F183A24CAEC56CFEDD0A10510B652",
+  "maps": [
+    {
+      "map": "Blackwood",
+      "traversal": "PASS",
+      "thermal_zoom": "PASS",
+      "forks": [
+        {
+          "species": 0,
+          "largest_step_cm": 8.3
+        },
+        {
+          "species": 1,
+          "largest_step_cm": 19.6
+        },
+        {
+          "species": 2,
+          "largest_step_cm": 7.6
+        },
+        {
+          "species": 3,
+          "largest_step_cm": 5.2
+        }
+      ]
+    },
+    {
+      "map": "Frostwood",
+      "traversal": "PASS",
+      "thermal_zoom": "PASS",
+      "forks": [
+        {
+          "species": 0,
+          "largest_step_cm": 8.3
+        },
+        {
+          "species": 1,
+          "largest_step_cm": 19.6
+        },
+        {
+          "species": 2,
+          "largest_step_cm": 7.6
+        },
+        {
+          "species": 3,
+          "largest_step_cm": 5.2
+        }
+      ]
+    },
+    {
+      "map": "Farmstead",
+      "traversal": "PASS",
+      "thermal_zoom": "PASS",
+      "forks": [
+        {
+          "species": 0,
+          "largest_step_cm": 5.6
+        },
+        {
+          "species": 1,
+          "largest_step_cm": 8.7
+        },
+        {
+          "species": 2,
+          "largest_step_cm": 7.6
+        },
+        {
+          "species": 3,
+          "largest_step_cm": 7.6
+        }
+      ]
+    },
+    {
+      "map": "Neighborhood",
+      "traversal": "PASS",
+      "thermal_zoom": "PASS",
+      "forks": [
+        {
+          "species": 0,
+          "largest_step_cm": 7.3
+        },
+        {
+          "species": 1,
+          "largest_step_cm": 20.9
+        },
+        {
+          "species": 2,
+          "largest_step_cm": 20.5
+        },
+        {
+          "species": 3,
+          "largest_step_cm": 6.3
+        }
+      ]
+    },
+    {
+      "map": "NeighborhoodCedar",
+      "traversal": "PASS",
+      "thermal_zoom": "PASS",
+      "forks": [
+        {
+          "species": 0,
+          "largest_step_cm": 7.3
+        },
+        {
+          "species": 1,
+          "largest_step_cm": 20.9
+        },
+        {
+          "species": 2,
+          "largest_step_cm": 20.5
+        },
+        {
+          "species": 3,
+          "largest_step_cm": 6.3
+        }
+      ]
+    }
+  ],
+  "multiplayer": "PASS: trunk-to-branch input, supported grip, jump release and replicated disturbance on host and client",
+  "lighting": "PASS: reduced light intensity, exposure and bloom; both room captures visually reviewed",
+  "leaf_cue": "PASS: shaking/falling leaves; small snow flakes on bare winter trees; replicated cosmetic geometry",
+  "captures": [
+    {
+      "path": "C:\\_git\\wildline\\native\\Preview\\LobbyHunterRoom.png",
+      "modified_utc": "2026-10-09T16:31:47.4350741Z"
+    },
+    {
+      "path": "C:\\_git\\wildline\\native\\Preview\\LobbySquirrelRoom.png",
+      "modified_utc": "2026-10-09T16:32:02.4402885Z"
+    },
+    {
+      "path": "C:\\_git\\wildline\\native\\Preview\\Blackwood_UpgradeBranch.png",
+      "modified_utc": "2026-10-09T16:32:36.7949947Z"
+    },
+    {
+      "path": "C:\\_git\\wildline\\native\\Preview\\Frostwood_UpgradeBranch.png",
+      "modified_utc": "2026-10-09T16:33:15.8103360Z"
+    },
+    {
+      "path": "C:\\_git\\wildline\\native\\Preview\\Blackwood_ThermalUnscoped.png",
+      "modified_utc": "2026-10-09T16:33:47.9193671Z"
+    },
+    {
+      "path": "C:\\_git\\wildline\\native\\Preview\\Blackwood_ThermalHot.png",
+      "modified_utc": "2026-10-09T16:33:48.8880723Z"
+    }
+  ],
+  "desktop_shortcut": {
+    "path": "C:\\Users\\mvite\\OneDrive\\Desktop\\WILDLINE.lnk",
+    "target": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "arguments": "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\_git\\wildline\\native\\LaunchNative.ps1\"",
+    "selects_verified_package": true
+  },
+  "notes": [
+    "One D3D12 visual-probe startup GPU error; a serial retry completed all final captures and checks."
+  ]
+}

@@ -46,6 +46,9 @@ public:
     UPROPERTY() UCanvasPanelSlot* ExpeditionSlot;
     UPROPERTY() UScaleBox* MenuArtwork;
     UPROPERTY() USlider* MusicVolume;
+    UPROPERTY() USlider* TreeLeaves;
+    UPROPERTY() UTextBlock* TreeLeavesLabel;
+    UFUNCTION() void TreeLeavesChanged(float Value);
     UPROPERTY() UButton* HunterChoice;
     UPROPERTY() UButton* SquirrelChoice;
     bool bWorkshopOpen=false;
@@ -69,6 +72,14 @@ public:
     UPROPERTY() USpinBox* DefenderPoints;
     UPROPERTY() USpinBox* DefenderBotCount;
     UPROPERTY() USpinBox* SquirrelBotCount;
+    UPROPERTY() USpinBox* BotSight;
+    UPROPERTY() USpinBox* BotReaction;
+    UPROPERTY() USpinBox* BotAccuracy;
+    UPROPERTY() USpinBox* HunterAggression;
+    UPROPERTY() USpinBox* SquirrelCaution;
+    UPROPERTY() USpinBox* BotSpacing;
+    UPROPERTY() USpinBox* BotTreeSeconds;
+    UPROPERTY() UCheckBox* BotClimbing;
     UPROPERTY() USpinBox* SquirrelHealth;
     UPROPERTY() USpinBox* RespawnSeconds;
     UPROPERTY() USpinBox* SpawnProtection;

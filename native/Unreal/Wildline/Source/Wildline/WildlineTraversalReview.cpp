@@ -36,6 +36,23 @@ bool FindLimb(AWildlineWorld* F,int32 Tree,FHitResult& Hit){
     }
     return false;
 }
+bool FindFork(AWildlineWorld* F,int32 Tree,FHitResult& Trunk,FVector& Heading){
+    const auto& T=F->Trees[Tree];
+    for(float Z=T.Base.Z+180;Z<T.Base.Z+T.Height;Z+=60)for(int32 A=0;A<24;A++){
+        float R;const FVector Stem=F->TrunkCentre(Tree,Z,R);
+        const FVector Out(FMath::Cos(A*PI/12),FMath::Sin(A*PI/12),0);
+        for(float Reach:{50.f,85.f,120.f}){
+            FHitResult Branch;int32 Index;const FVector Probe=Stem+Out*(R+Reach);
+            if(!F->TraceWood(Probe+FVector(0,0,60),Probe-FVector(0,0,60),Branch,Index)||Index!=Tree||Branch.ImpactNormal.Z<.55f||!F->IsLimbSurface(Tree,Branch.ImpactPoint,Branch.ImpactNormal))continue;
+            float RootRadius;const FVector Root=F->TrunkCentre(Tree,Branch.ImpactPoint.Z-65,RootRadius);
+            if(F->TraceWood(Root+Out*(RootRadius+60),Root-Out*20,Trunk,Index)&&Index==Tree&&!F->IsLimbSurface(Tree,Trunk.ImpactPoint,Trunk.ImpactNormal)&&FVector::Dist(Trunk.ImpactPoint,Branch.ImpactPoint)<155){
+                Heading=(Branch.ImpactPoint-Trunk.ImpactPoint).GetSafeNormal2D();
+                if(Trunk.ImpactNormal.Z<.45f&&FVector::DotProduct(Heading,Trunk.ImpactNormal)>.2f)return true;
+            }
+        }
+    }
+    return false;
+}
 }
 
 void AWildlineController::RunTraversalSmokeTest(){
@@ -58,6 +75,18 @@ void AWildlineController::RunTraversalSmokeTest(){
         Check(GetWorld()->SweepSingleByChannel(Physical,Hit.ImpactPoint+FVector(0,0,65),Hit.ImpactPoint-FVector(0,0,5),FQuat::Identity,ECC_Pawn,FCollisionShape::MakeCapsule(12,14),Query)&&F->ClimbWood.Contains(Cast<UHierarchicalInstancedStaticMeshComponent>(Physical.Component.Get())),TEXT("real branch blocks a landing squirrel capsule"));
         P->TreeIndex=INDEX_NONE;P->SetActorLocation(Hit.ImpactPoint+Hit.ImpactNormal*16,false);SetControlRotation(FRotator(0,(Hit.ImpactPoint-F->Trees[Tree].Base).Rotation().Yaw,0));
         P->ServerClimb();Check(P->TreeIndex==Tree&&P->bWoodClimbing,TEXT("E catches a branch beyond the trunk"));
+        P->Tick(.025f);
+        bool Disturbed=false;for(TActorIterator<AWildlineBranchLeaves> It(GetWorld());It;++It)Disturbed|=It->GetIsReplicated()&&It->bSnow==F->bWinter;
+        Check(Disturbed,TEXT("occupied branch emits replicated leaves or winter snow"));
+        FHitResult ForkTrunk;FVector ForkHeading;const bool ForkFound=FindFork(F,Tree,ForkTrunk,ForkHeading);
+        Check(ForkFound,TEXT("connected fork has real trunk and branch bark within reach"));
+        if(ForkFound){P->TreeIndex=INDEX_NONE;P->SetActorLocation(ForkTrunk.ImpactPoint+ForkTrunk.ImpactNormal*16,false);SetControlRotation(ForkHeading.Rotation());P->ServerClimb();}
+        Check(ForkFound&&P->bWoodClimbing&&!P->bBranchClimbing,TEXT("fork transition starts gripping vertical trunk bark"));
+        P->ServerClimbInput(1,0);bool ReachedBranch=false;float LargestStep=0;
+        for(int32 Step=0;Step<160;Step++){const FVector Previous=P->GetActorLocation();P->Tick(.025f);LargestStep=FMath::Max(LargestStep,static_cast<float>(FVector::Dist(Previous,P->GetActorLocation())));if(P->bBranchClimbing&&P->ClimbNormal.Z>.5f){ReachedBranch=true;break;}}
+        UE_LOG(LogTemp,Display,TEXT("WILDLINE FORK species=%d branch=%d maxStep=%.1f location=%s normal=%s"),Species,ReachedBranch,LargestStep,*P->GetActorLocation().ToString(),*FVector(P->ClimbNormal).ToString());
+        Check(ForkFound&&ReachedBranch&&LargestStep<35,TEXT("trunk transitions onto branch without a jump or teleport"));
+        P->TreeIndex=INDEX_NONE;P->SetActorLocation(Hit.ImpactPoint+Hit.ImpactNormal*16,false);SetControlRotation(FRotator(0,(Hit.ImpactPoint-F->Trees[Tree].Base).Rotation().Yaw,0));P->ServerClimb();
         const FVector Start=P->GetActorLocation();P->ServerClimbInput(1,0);
         for(int32 Step=0;Step<20;Step++)P->Tick(.025f);
         const float Travel=FVector::Dist(Start,P->GetActorLocation());
@@ -113,14 +142,16 @@ void AWildlineController::RunWorldUpgradeReview(){
 
 void AWildlineController::RunTraversalNetProbe(){
     auto At=[this](float Time,TFunction<void()> Work){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Work](){Work();}),Time,false);};
-    auto Finish=[this](bool Passed){UE_LOG(LogTemp,Display,TEXT("WILDLINE TRAVERSAL NET %s: %s"),HasAuthority()?TEXT("host"):TEXT("client"),Passed?TEXT("PASS"):TEXT("FAIL"));FPlatformMisc::RequestExitWithStatus(false,Passed?0:1);};
+    auto Disturbed=MakeShared<bool>(false);
+    auto Finish=[this,Disturbed](bool Passed){Passed&=*Disturbed;UE_LOG(LogTemp,Display,TEXT("WILDLINE TRAVERSAL NET %s: %s disturbance=%d"),HasAuthority()?TEXT("host"):TEXT("client"),Passed?TEXT("PASS"):TEXT("FAIL"),*Disturbed);FPlatformMisc::RequestExitWithStatus(false,Passed?0:1);};
     auto* S=GetWorld()->GetGameState<AWildlineGameState>();GetGameInstance<UWildlineGameInstance>()->PreferredMode=S->ExpeditionMode;
     UWildlineUserSettings::Get()->ConfigForMode(S->ExpeditionMode)=S->MatchConfig;
     EnterWaitingRoom(!HasAuthority());SetMenu(false);
     auto Phase=MakeShared<int32>(0);auto Start=MakeShared<FVector>(FVector::ZeroVector);auto Changed=MakeShared<float>(0);
     auto Moved=MakeShared<bool>(false);auto Poll=MakeShared<FTimerHandle>();
-    GetWorldTimerManager().SetTimer(*Poll,FTimerDelegate::CreateWeakLambda(this,[this,At,Finish,Phase,Start,Changed,Moved,Poll](){
+    GetWorldTimerManager().SetTimer(*Poll,FTimerDelegate::CreateWeakLambda(this,[this,At,Finish,Phase,Start,Changed,Moved,Poll,Disturbed](){
         auto* F=AWildlineWorld::Find(GetWorld());if(!F)return;
+        for(TActorIterator<AWildlineBranchLeaves> It(GetWorld());It;++It)*Disturbed|=It->bSnow==F->bWinter;
         AWildlineCharacter* P=nullptr;
         if(HasAuthority()){for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It)if(It->bSquirrel&&!It->bBot){P=*It;break;}}
         else P=Cast<AWildlineCharacter>(GetPawn());
@@ -128,20 +159,21 @@ void AWildlineController::RunTraversalNetProbe(){
         const float Now=GetWorld()->GetTimeSeconds();
         if(HasAuthority()){
             if(*Phase==0&&P->bInLobby){
-                FHitResult Hit;if(!FindLimb(F,0,Hit)){Finish(false);return;}
+                FHitResult Hit;FVector Heading;if(!FindFork(F,0,Hit,Heading)){Finish(false);return;}
                 P->bInLobby=false;P->TreeIndex=INDEX_NONE;P->GetCharacterMovement()->StopMovementImmediately();P->GetCharacterMovement()->SetMovementMode(MOVE_Flying);
                 P->SetActorLocation(Hit.ImpactPoint+Hit.ImpactNormal*16);P->ForceNetUpdate();*Start=P->GetActorLocation();*Phase=1;
             }else if(*Phase==1&&P->TreeIndex!=INDEX_NONE&&P->bWoodClimbing){*Phase=2;}
             else if(*Phase==2){
-                *Moved|=FVector::Dist(*Start,P->GetActorLocation())>20;
+                *Moved|=FVector::Dist(*Start,P->GetActorLocation())>20&&P->bBranchClimbing;
                 if(P->TreeIndex==INDEX_NONE){const bool Ok=*Moved;At(3,[Finish,Ok](){Finish(Ok);});FTimerHandle Handle=*Poll;GetWorldTimerManager().ClearTimer(Handle);}
             }
         }else{
             if(*Phase==0&&!P->bInLobby&&P->bSquirrel&&P->GetActorLocation().Z<4500){P->Climb();*Phase=1;}
             else if(*Phase==1&&P->TreeIndex!=INDEX_NONE&&P->bWoodClimbing){
-                *Start=P->GetActorLocation();SetControlRotation(FRotator(0,(P->GetActorLocation()-F->Trees[P->TreeIndex].Base).Rotation().Yaw,0));InputKey(FInputKeyEventArgs(nullptr,INPUTDEVICEID_NONE,EKeys::W,IE_Pressed,FPlatformTime::Cycles64()));*Changed=Now;*Phase=2;
-            }else if(*Phase==2&&Now-*Changed>1){
-                UE_LOG(LogTemp,Display,TEXT("WILDLINE TRAVERSAL NET client travel=%.1f normal=%s"),FVector::Dist(*Start,P->GetActorLocation()),*FVector(P->ClimbNormal).ToString());*Moved=FVector::Dist(*Start,P->GetActorLocation())>20&&FMath::IsNearlyEqual(FVector(P->ClimbNormal).Size(),1.f,.05f);
+                FHitResult Hit;FVector Heading;if(!FindFork(F,P->TreeIndex,Hit,Heading)){Finish(false);return;}
+                *Start=P->GetActorLocation();SetControlRotation(Heading.Rotation());InputKey(FInputKeyEventArgs(nullptr,INPUTDEVICEID_NONE,EKeys::W,IE_Pressed,FPlatformTime::Cycles64()));*Changed=Now;*Phase=2;
+            }else if(*Phase==2&&Now-*Changed>1.6f){
+                UE_LOG(LogTemp,Display,TEXT("WILDLINE TRAVERSAL NET client travel=%.1f normal=%s branch=%d"),FVector::Dist(*Start,P->GetActorLocation()),*FVector(P->ClimbNormal).ToString(),P->bBranchClimbing);*Moved=FVector::Dist(*Start,P->GetActorLocation())>20&&P->bBranchClimbing&&FMath::IsNearlyEqual(FVector(P->ClimbNormal).Size(),1.f,.05f);
                 InputKey(FInputKeyEventArgs(nullptr,INPUTDEVICEID_NONE,EKeys::W,IE_Released,FPlatformTime::Cycles64()));P->MoveForward(0);P->DoJump();*Phase=3;
             }else if(*Phase==3&&P->TreeIndex==INDEX_NONE&&P->GetCharacterMovement()->IsFalling()){
                 const bool Ok=*Moved;At(1,[Finish,Ok](){Finish(Ok);});FTimerHandle Handle=*Poll;GetWorldTimerManager().ClearTimer(Handle);

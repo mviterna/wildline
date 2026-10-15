@@ -101,6 +101,8 @@ public:
     UFUNCTION(Server,Reliable) void ServerRestartRound();
     void RunSmokeTest();
     void RunTraversalSmokeTest();
+    void RunGameplayBugsReview();
+    void RunThermalReview();
     void RunWorldUpgradeReview();
     void RunTraversalNetProbe();
     void RunFarmSmokeTest();
@@ -109,5 +111,7 @@ public:
     void RunConfigSmokeTest();
     void RunConfigNetworkProbe();
     void RunConfigReview();
+    void RunAIReview();
+    void RunAIBalanceReview();
     void RunIntroSmokeTest();
 };

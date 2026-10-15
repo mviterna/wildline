@@ -105,8 +105,8 @@ void AWildlineLobby::BuildTree(){
     Light(O+FVector(-266,167,108),FLinearColor(1,.70f,.39f),2500,850,true);
     Light(O+FVector(90,-50,335),FLinearColor(.73f,.86f,1),3100,1100,true);
     Light(O+FVector(-190,-195,155),FLinearColor(1,.79f,.52f),1700,640);
-    Light(O+FVector(-290,-5,215),FLinearColor(1,.79f,.55f),14000,650);
-    Light(O+FVector(80,170,230),FLinearColor(1,.85f,.67f),9000,850);
+    Light(O+FVector(-290,-5,215),FLinearColor(1,.79f,.55f),2200,650,true);
+    Light(O+FVector(80,170,230),FLinearColor(1,.85f,.67f),1700,850,true);
     Sign(TEXT("THE ACORN HOLLOW"),O+FVector(417,0,335),23);
     Sign(TEXT("ACORN PANTRY"),O+FVector(-238,-307,105),12,FRotator(0,90,0));
     // The squirrels turn the lodge's specimen wall into a playful rivalry.

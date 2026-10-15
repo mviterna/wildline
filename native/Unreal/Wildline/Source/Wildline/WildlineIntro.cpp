@@ -64,7 +64,7 @@ TSharedRef<SWidget> UWildlineIntroOverlay::RebuildWidget(){
     Logo=WidgetTree->ConstructWidget<UImage>();Logo->SetBrushFromTexture(LoadObject<UTexture2D>(nullptr,TEXT("/Game/Wildline/Presentation/T_StudioLogo.T_StudioLogo")),true);LogoBox->AddChild(Logo);Place(LogoBox,FAnchors(.20f,.08f,.80f,.82f),FMargin(0));
     Presents=WidgetTree->ConstructWidget<UTextBlock>();Presents->SetText(FText::FromString(TEXT("P R E S E N T S")));auto Font=Presents->GetFont();Font.Size=11;Presents->SetFont(Font);Presents->SetColorAndOpacity(FLinearColor(.64f,.43f,.18f));Presents->SetJustification(ETextJustify::Center);Presents->SetVisibility(ESlateVisibility::HitTestInvisible);Place(Presents,FAnchors(.25f,.84f,.75f,.89f),FMargin(0));
     auto* SkipButton=WidgetTree->ConstructWidget<UButton>();auto Style=SkipButton->GetStyle();Style.Normal.TintColor=FSlateColor(FLinearColor(0,0,0,0));Style.Hovered.TintColor=FSlateColor(FLinearColor(.04f,.03f,.01f));SkipButton->SetStyle(Style);
-    auto* Hint=WidgetTree->ConstructWidget<UTextBlock>();Hint->SetText(FText::FromString(TEXT("SKIP  /  SPACE")));auto HintFont=Hint->GetFont();HintFont.Size=10;Hint->SetFont(HintFont);Hint->SetColorAndOpacity(FLinearColor(.42f,.38f,.29f));Hint->SetMargin(FMargin(12,8));SkipButton->AddChild(Hint);SkipButton->OnClicked.AddDynamic(this,&UWildlineIntroOverlay::Skip);Place(SkipButton,FAnchors(1,1),FMargin(-180,-50,150,30));
+    auto* Hint=WidgetTree->ConstructWidget<UTextBlock>();Hint->SetText(FText::FromString(TEXT("SKIP  /  ESC")));auto HintFont=Hint->GetFont();HintFont.Size=10;Hint->SetFont(HintFont);Hint->SetColorAndOpacity(FLinearColor(.42f,.38f,.29f));Hint->SetMargin(FMargin(12,8));SkipButton->AddChild(Hint);SkipButton->OnClicked.AddDynamic(this,&UWildlineIntroOverlay::Skip);Place(SkipButton,FAnchors(1,1),FMargin(-180,-50,150,30));
     Update(0);return Super::RebuildWidget();
 }
 void UWildlineIntroOverlay::Update(float T){
@@ -108,7 +108,7 @@ int32 UWildlineIntroOverlay::NativePaint(const FPaintArgs& Args,const FGeometry&
     return Top+1;
 }
 void UWildlineIntroOverlay::Skip(){if(auto* PC=Cast<AWildlineController>(GetOwningPlayer());PC&&PC->Intro)PC->Intro->Finish();}
-FReply UWildlineIntroOverlay::NativeOnKeyDown(const FGeometry& G,const FKeyEvent& E){if(E.GetKey()==EKeys::Escape||E.GetKey()==EKeys::SpaceBar||E.GetKey()==EKeys::Enter){Skip();return FReply::Handled();}return Super::NativeOnKeyDown(G,E);}
+FReply UWildlineIntroOverlay::NativeOnKeyDown(const FGeometry& G,const FKeyEvent& E){if(E.GetKey()==EKeys::Escape){Skip();return FReply::Handled();}return Super::NativeOnKeyDown(G,E);}
 AWildlineIntro::AWildlineIntro(){PrimaryActorTick.bCanEverTick=true;bReplicates=false;}
 void AWildlineIntro::BeginPlay(){
     Super::BeginPlay();bPreviousScreenMessages=GAreScreenMessagesEnabled;GAreScreenMessagesEnabled=false;bReview=FParse::Param(FCommandLine::Get(),TEXT("WildlineIntroReview"));

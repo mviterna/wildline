@@ -1,0 +1,27 @@
+{
+  "verified_at_utc": "2026-10-09T17:07:27.2500019Z",
+  "installer": "C:\\_git\\wildline\\native\\Build\\Beta\\Wildline-0.2.0-beta.20261009.124917-Setup.exe",
+  "installer_version": "0.2.0-beta.20261009.124917",
+  "installer_sha256": "0AB03FA7684E91B2E95B1576FC9FEA58AF2D865DDB53972C9AD54D23D87C1A19",
+  "installer_size_bytes": 3235321038,
+  "package_root": "C:/_git/wildline/native/Build/branch-thermal-lighting/Windows",
+  "bootstrap_sha256": "2A389E69F3713EC275F01B5F854E5E17C80F183A24CAEC56CFEDD0A10510B652",
+  "game_executable_sha256": "B7A0BB7624E5375D25F9963DA7F11CB20C20E3F527CE20C1684D12BB4C1011A9",
+  "matching_staged_package_files": 53,
+  "installer_verification": "PASS",
+  "checks": [
+    "install",
+    "upgrade",
+    "repair",
+    "obsolete file cleanup",
+    "save preservation",
+    "all payload hashes",
+    "Start menu shortcut",
+    "installed classic/farm/hill/intro smoke",
+    "single install path",
+    "uninstall"
+  ],
+  "verification_log": "C:/_git/wildline/native/branch-thermal-installer-verification.log",
+  "verification_directory": "C:/_git/wildline/native/Build/InstallerVerification/6310fa63f8a541738f654dd45d92653b",
+  "desktop_launcher_verified": true
+}

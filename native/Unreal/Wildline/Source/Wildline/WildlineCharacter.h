@@ -103,7 +103,8 @@ public:
     void MoveRight(float Value);
     void Turn(float Value);
     void LookUp(float Value);
-    void SetHeatVision(bool bActive);
+    void UpdateHeatSignature();
+    UPROPERTY() UMaterialInterface* ThermalMaterial;
     UFUNCTION() void OnRepRole();
     UFUNCTION() void OnRepDead();
     UFUNCTION(Server,Reliable) void ServerSprint(bool bValue);
@@ -124,23 +125,43 @@ public:
     float VisualShotAt=-10.f;
     UFUNCTION(NetMulticast,Reliable) void MulticastBlood(FVector_NetQuantize Impact,FVector_NetQuantizeNormal Direction);
 private:
+    friend class AWildlineController;
+    float NextBranchLeavesAt=0;
+    FVector ClimbTransferTarget=FVector::ZeroVector;
+    FVector ClimbTransferNormal=FVector::UpVector;
+    bool bClimbTransfer=false;
+    bool bTransferToBranch=false;
+    float LastGroundedAt=-100.f;
+    bool bGroundJumpConsumed=false;
     float LastShot=-10.f;
     float BoltCycleAt=-10.f;
     float LastFireRequest=-10.f;
     float ForwardInput=0,SideInput=0;
     float TreeAngle=0;
     float BotDecisionAt=0;
+    float BotShotAt=0;
     TWeakObjectPtr<AWildlineCharacter> BotTarget;
     FVector BotLastKnown=FVector::ZeroVector;
     float BotLastSeenAt=-100.f;
     int32 BotDifficultyLevel=-1;
     int32 BotCourseStep=-1;
-    int32 FarmPatrolIndex=0;
-    bool bHeatApplied=false;
+    int32 BotFoodIndex=INDEX_NONE,BotEscapeTree=INDEX_NONE,BotPatrolStep=0;
+    int32 BotTrackedTree=INDEX_NONE,BotRecoveries=0;
+    FVector BotGoal=FVector::ZeroVector,BotMove=FVector::ZeroVector,BotLookAt=FVector::ZeroVector;
+    FVector BotProgressPosition=FVector::ZeroVector,BotEscapeHeading=FVector::ZeroVector;
+    float BotPlanAt=0,BotGoalUntil=0,BotProgressAt=0,BotEscapeUntil=0,BotTreeAt=0,BotTreeCooldown=0;
+    float BotSteerSide=1;
+    FVector BotProgressGoal=FVector::ZeroVector;
+    float BotClosestGoalDistance=MAX_flt,BotGoalProgressAt=0;
+    TMap<int32,float> BotBlockedFood;
     AWildlineWorld* Forest=nullptr;
-    UPROPERTY() TArray<UMaterialInterface*> OriginalMaterials;
     void UpdateCamera(float Delta);
     void BotThink(float Delta);
+    void PlanBot(float Now);
+    void MoveBot(FVector Target,float Now,bool bSeparate=true);
+    FVector BotSteering(FVector Target,bool bSeparate) const;
+    bool BotCanSee(const AWildlineCharacter* Other,float Range) const;
+    void LeaveBotTree(float Now,FVector Heading);
     void Forage();
     void UpdateCourse();
     void CourseBotThink(float Delta);
@@ -168,4 +189,19 @@ public:
 private:
     UPROPERTY() TArray<UStaticMeshComponent*> Drops;
     TArray<FVector> Velocities;
+};
+
+// Replicated cosmetic disturbance, shared by nearby hunters and squirrels.
+UCLASS()
+class WILDLINE_API AWildlineBranchLeaves : public AActor {
+    GENERATED_BODY()
+public:
+    AWildlineBranchLeaves();
+    void BeginPlay() override;
+    void Tick(float Delta) override;
+    UPROPERTY(Replicated) bool bSnow=false;
+    void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out) const override;
+private:
+    UPROPERTY() TArray<UStaticMeshComponent*> Leaves;
+    float Age=0;
 };

@@ -62,6 +62,11 @@ void AWildlineController::RunLobbySmokeTest(){
     Hunter->SetActorLocation(AWildlineLobby::Spawn(false));ServerSelectWeapon(0);ServerLobbyInteract();Check(Hunter->SelectedWeapon==1,TEXT("Remote and out-of-range weapon changes rejected"));
     Hunter->SetActorLocation(AWildlineLobby::Portal(false)+FVector(0,0,110));GM->UpdateWaitingRooms();Check(Hunter->bLobbyReady&&!S->bRoundStarted,TEXT("One ready human waits for other team"));
     Hunter->SetActorLocation(AWildlineLobby::Spawn(false));GM->UpdateWaitingRooms();Check(!Hunter->bLobbyReady,TEXT("Stepping off cancels ready"));
+    for(const FVector Offset:{FVector(620,620,110),FVector(-620,620,110),FVector(620,-620,110),FVector(-620,-620,110),FVector(660,200,110)}){
+        const FVector Position=AWildlineLobby::Centre(false)+Offset;Hunter->SetActorLocation(Position);SetControlRotation(FRotator(-12,143,0));Hunter->bThirdPerson=true;
+        GM->UpdateWaitingRooms();Check(Hunter->GetActorLocation().Equals(Position,.1)&&GetControlRotation().Equals(FRotator(-12,143,0),.1)&&Hunter->bThirdPerson,TEXT("Lodge wall and corner preserve player position and camera"));
+    }
+    Hunter->SetActorLocation(AWildlineLobby::Centre(false)+FVector(800,0,110));GM->UpdateWaitingRooms();Check(Hunter->GetActorLocation().Equals(AWildlineLobby::Spawn(false)),TEXT("Escaped lodge player is still recovered"));
     Animal->SetActorLocation(AWildlineLobby::Centre(true)+FVector(0,0,-100));GM->UpdateWaitingRooms();Check(Animal->GetActorLocation().Z>AWildlineLobby::Centre(true).Z,TEXT("Escaped player is recovered into room"));
     Hunter->SetActorLocation(AWildlineLobby::Portal(false)+FVector(0,0,110));Animal->SetActorLocation(AWildlineLobby::Portal(true)+FVector(0,0,17));GM->UpdateWaitingRooms();
     Check(S->bRoundStarted&&!Hunter->bInLobby&&!Animal->bInLobby&&Hunter->SelectedWeapon==1,TEXT("Both portals launch the match with chosen equipment"));

@@ -1,0 +1,46 @@
+{
+  "verifiedAt": "2026-10-15T15:31:09.7526114-04:00",
+  "package": "C:/_git/wildline/native/Build/Windows",
+  "gameSha256": "FD57F1AEA573067854FBC04025C6D88C7AF7316456097BC7984013454184328A",
+  "maps": [
+    "Blackwood",
+    "Frostwood",
+    "Farmstead",
+    "Neighborhood",
+    "NeighborhoodCedar"
+  ],
+  "aiRuntimePassed": true,
+  "coOpRulesAndAllEightAIControlsPassed": true,
+  "settingsVisuallyVerified": [
+    "C:/_git/wildline/native/Preview/AIBehavior.png",
+    "C:/_git/wildline/native/Preview/AIRoster.png"
+  ],
+  "desktop": {
+    "arguments": "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\_git\\wildline\\native\\LaunchNative.ps1\"",
+    "shortcut": "C:\\Users\\mvite\\OneDrive\\Desktop\\WILDLINE.lnk",
+    "window": "Wildline (64-bit Development PCD3D_SM6) ",
+    "gameSha256": "FD57F1AEA573067854FBC04025C6D88C7AF7316456097BC7984013454184328A",
+    "responding": true,
+    "target": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "processId": 40440,
+    "game": "C:\\_git\\wildline\\native\\Build\\Windows\\Wildline\\Binaries\\Win64\\Wildline.exe",
+    "verifiedAt": "2026-10-15T15:21:48.1295757-04:00"
+  },
+  "installer": "C:/_git/wildline/native/Build/Beta/Wildline-0.2.0-beta.20261015.151623-Setup.exe",
+  "installerSha256": "4835BFE1B9ED56066EAA71FC298B2146F991D663512D8C65E14B76562EA785FE",
+  "installerPayloadMatchesAITestedGame": true,
+  "installerLifecyclePassed": [
+    "installation in a path with spaces",
+    "upgrade path detection",
+    "stale payload cleanup",
+    "payload hashes",
+    "save preservation",
+    "start menu shortcut",
+    "installed Classic Farm Hill and intro smoke",
+    "same-version repair with missing EXE",
+    "single installation path",
+    "uninstall"
+  ],
+  "cleanMachinePrerequisitesTested": false,
+  "installerLog": "C:/_git/wildline/native/ai-installer-verification.log"
+}

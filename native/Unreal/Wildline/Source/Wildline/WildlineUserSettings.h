@@ -17,6 +17,8 @@ public:
     UPROPERTY(Config, BlueprintReadWrite) float ScopeSensitivity = .256f;
     UPROPERTY(Config) float SoundVolume=.8f;
     UPROPERTY(Config) float MusicVolume=.65f;
+    UPROPERTY(Config, BlueprintReadWrite) float TreeLeafDensity=72.f;
+    UPROPERTY(Config, BlueprintReadWrite) float WinterTreeLeafDensity=0.f;
     UPROPERTY(Config) FWildlineMatchConfig ClassicConfig;
     UPROPERTY(Config) FWildlineMatchConfig FarmConfig;
     UPROPERTY(Config) FWildlineMatchConfig HillConfig;

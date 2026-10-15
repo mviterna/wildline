@@ -49,7 +49,20 @@ void AWildlineController::RunIntroSmokeTest(){
     });
     At(AWildlineIntro::Duration+1.7f,[this,Check](){Check(!Intro&&FMath::IsNearlyEqual(CurrentMusicVolume,UWildlineUserSettings::Get()->MusicVolume*.7f*.6f,.01f),TEXT("main menu music fades forty percent below intro volume"));StartIntro();});
     // Exercise the internal skip path; the menu does not expose a replay action.
-    At(AWildlineIntro::Duration+2.2f,[this,Check](){Check(Intro!=nullptr,TEXT("skip path ready"));if(Intro)Intro->Overlay->Skip();});
+    At(AWildlineIntro::Duration+2.2f,[this,Check](){
+        Check(Intro!=nullptr,TEXT("skip path ready"));if(!Intro)return;
+        for(FKey Key:{EKeys::SpaceBar,EKeys::Enter}){
+            FKeyEvent Event(Key,FModifierKeysState(),0,false,0,0);
+            Intro->Overlay->NativeOnKeyDown(FGeometry(),Event);
+            Check(Intro!=nullptr,TEXT("Space and Enter leave intro playing"));
+        }
+        bool EscHint=false;TArray<UWidget*> Widgets;Intro->Overlay->WidgetTree->GetAllWidgets(Widgets);
+        for(auto* W:Widgets)if(auto* Text=Cast<UTextBlock>(W))EscHint|=Text->GetText().ToString()==TEXT("SKIP  /  ESC");
+        Check(EscHint,TEXT("intro advertises Esc to skip"));
+        FKeyEvent Escape(EKeys::Escape,FModifierKeysState(),0,false,0,0);
+        Intro->Overlay->NativeOnKeyDown(FGeometry(),Escape);
+        Check(!Intro,TEXT("Esc key skips intro immediately"));
+    });
     At(AWildlineIntro::Duration+2.4f,[this,Check](){StartIntro();Check(Intro&&!PlayerCameraManager->bEnableFading,TEXT("restart clears transition blackout"));if(Intro)Intro->Overlay->Skip();});
     At(AWildlineIntro::Duration+3.f,[this,Check](){
         Check(!Intro&&bMenuOpen&&Menu->GetVisibility()==ESlateVisibility::Visible,TEXT("skip returns immediately to menu"));

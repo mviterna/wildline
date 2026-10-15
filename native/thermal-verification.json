@@ -1,0 +1,81 @@
+{
+  "maps": {
+    "Blackwood": {
+      "passed": true,
+      "white_heat_pixels": 18423,
+      "background_p99": 40.0,
+      "checks": {
+        "packaged_gameplay_probe_passed": true,
+        "white_hot_squirrel_visible": true,
+        "thermal_scene_grayscale": true,
+        "background_stays_cool": true,
+        "solid_cover_blocks_heat": true,
+        "dead_squirrel_has_no_heat": true,
+        "normal_squirrel_is_not_white": true,
+        "expiry_restores_original_color": true
+      }
+    },
+    "Frostwood": {
+      "passed": true,
+      "white_heat_pixels": 20138,
+      "background_p99": 83.0,
+      "checks": {
+        "packaged_gameplay_probe_passed": true,
+        "white_hot_squirrel_visible": true,
+        "thermal_scene_grayscale": true,
+        "background_stays_cool": true,
+        "solid_cover_blocks_heat": true,
+        "dead_squirrel_has_no_heat": true,
+        "normal_squirrel_is_not_white": true,
+        "expiry_restores_original_color": true
+      }
+    },
+    "Farmstead": {
+      "passed": true,
+      "white_heat_pixels": 18850,
+      "background_p99": 90.0,
+      "checks": {
+        "packaged_gameplay_probe_passed": true,
+        "white_hot_squirrel_visible": true,
+        "thermal_scene_grayscale": true,
+        "background_stays_cool": true,
+        "solid_cover_blocks_heat": true,
+        "dead_squirrel_has_no_heat": true,
+        "normal_squirrel_is_not_white": true,
+        "expiry_restores_original_color": true
+      }
+    },
+    "Neighborhood": {
+      "passed": true,
+      "white_heat_pixels": 18870,
+      "background_p99": 86.0,
+      "checks": {
+        "packaged_gameplay_probe_passed": true,
+        "white_hot_squirrel_visible": true,
+        "thermal_scene_grayscale": true,
+        "background_stays_cool": true,
+        "solid_cover_blocks_heat": true,
+        "dead_squirrel_has_no_heat": true,
+        "normal_squirrel_is_not_white": true,
+        "expiry_restores_original_color": true
+      }
+    },
+    "NeighborhoodCedar": {
+      "passed": true,
+      "white_heat_pixels": 18852,
+      "background_p99": 86.0,
+      "checks": {
+        "packaged_gameplay_probe_passed": true,
+        "white_hot_squirrel_visible": true,
+        "thermal_scene_grayscale": true,
+        "background_stays_cool": true,
+        "solid_cover_blocks_heat": true,
+        "dead_squirrel_has_no_heat": true,
+        "normal_squirrel_is_not_white": true,
+        "expiry_restores_original_color": true
+      }
+    }
+  },
+  "passed": true,
+  "intro_esc_skip_passed": true
+}

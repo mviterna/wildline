@@ -45,7 +45,8 @@ void AWildlineGameMode::UpdateWaitingRooms(){
         Waiting.Add(P);
         const FVector Offset=P->GetActorLocation()-AWildlineLobby::Centre(P->bSquirrel);
         // Also recover anyone who finds a way over furniture or out of the shell.
-        if(Offset.Z<-30||Offset.Z>510||Offset.Size2D()>(P->bSquirrel?440:685)){
+        const bool OutsideShell=P->bSquirrel?Offset.SizeSquared2D()>FMath::Square(470.f):FMath::Abs(Offset.X)>730.f||FMath::Abs(Offset.Y)>730.f;
+        if(Offset.Z<-30||Offset.Z>510||OutsideShell){
             P->SetActorLocation(AWildlineLobby::Spawn(P->bSquirrel,Waiting.Num()-1),false,nullptr,ETeleportType::TeleportPhysics);P->GetCharacterMovement()->StopMovementImmediately();
         }
         const bool Ready=AWildlineLobby::OnPortal(P->bSquirrel,P->GetActorLocation());

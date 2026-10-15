@@ -1,0 +1,41 @@
+{
+  "gameSha256": "EF4064233009B181488113FC6989CD8C9F9FCC6B3F9E2CF30E70C4A8A75C65A2",
+  "installerBlock": "Unable to execute file in the temporary directory. Setup aborted. Error 4551: An Application Control policy has blocked this file.",
+  "cleanMachinePrerequisitesTested": false,
+  "maximumExposedShots": 35,
+  "installerSha256": "4424FC7BA227EC3580A598331515B7C8167CC07C58F93D5390D821BAB0D21B84",
+  "maximumExposedHits": 35,
+  "installerLifecycleVerified": false,
+  "installer": "C:/_git/wildline/native/Build/Beta/Wildline-0.2.0-beta.20261015.155141-Setup.exe",
+  "settingsCapture": "C:/_git/wildline/native/Preview/AIStrength100.png",
+  "desktop": {
+    "window": "Wildline (64-bit Development PCD3D_SM6) ",
+    "target": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "arguments": "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\_git\\wildline\\native\\LaunchNative.ps1\"",
+    "responding": true,
+    "gameSha256": "EF4064233009B181488113FC6989CD8C9F9FCC6B3F9E2CF30E70C4A8A75C65A2",
+    "verifiedAt": "2026-10-15T15:53:11.6504253-04:00",
+    "game": "C:\\_git\\wildline\\native\\Build\\Windows\\Wildline\\Binaries\\Win64\\Wildline.exe",
+    "processId": 22672,
+    "shortcut": "C:\\Users\\mvite\\OneDrive\\Desktop\\WILDLINE.lnk"
+  },
+  "installerBlockEvidence": "Installer diagnostic dialog read through Windows GetWindowText",
+  "verifiedAt": "2026-10-15T16:03:25.0202135-04:00",
+  "balancedStrength": 50,
+  "coOpRulesAndSavedSettingsPassed": true,
+  "installerChecksumMatches": true,
+  "installerPayloadMatchesVerifiedGame": true,
+  "game": "C:\\_git\\wildline\\native\\Build\\Windows\\Wildline\\Binaries\\Win64\\Wildline.exe",
+  "maps": [
+    "Blackwood",
+    "Frostwood",
+    "Farmstead",
+    "Neighborhood",
+    "NeighborhoodCedar"
+  ],
+  "coverBlocksShots": true,
+  "strengthRange": [
+    0,
+    100
+  ]
+}

@@ -3,6 +3,7 @@
 #include "WildlineGame.h"
 #include "WildlineAudio.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "EngineUtils.h"
 
 void AWildlineCharacter::UpdateCourse(){
     const auto* S=GetWorld()->GetGameState<AWildlineGameState>();
@@ -29,7 +30,11 @@ void AWildlineCharacter::UpdateCourse(){
 
 void AWildlineCharacter::CourseBotThink(float Delta){
     UpdateCourse();bSprinting=false;auto* M=GetCharacterMovement();
-    const int32 Lane=CourseLane>=0?CourseLane:((BotSlot>=0?BotSlot:GetUniqueID())%2);
+    if(BotCourseStep!=CourseCheckpoint){BotCourseStep=CourseCheckpoint;BotDecisionAt=ServerTime()+MatchRules().ReactionDelay(AIDifficulty==0?.8f:AIDifficulty==2?0.f:.2f);BotGoalUntil=ServerTime()+18;}
+    // Retry a different authored route when the entry tree is congested or a
+    // landing repeatedly fails. Each retry still starts at a real ground pad.
+    if(CourseCheckpoint==1&&TreeIndex==INDEX_NONE&&!M->IsFalling()&&ServerTime()>BotGoalUntil){CourseCheckpoint=0;CourseLane=-1;BotCourseStep=-1;BotPatrolStep++;}
+    const int32 Lane=CourseLane>=0?CourseLane:((FMath::Max(0,BotSlot)+BotPatrolStep)%2);
     FVector Target=Forest->CourseTarget(Lane,CourseCheckpoint);
     const int32 Entry=Forest->CourseEntryTree(Lane);
     if(Entry!=INDEX_NONE&&CourseCheckpoint==1){
@@ -42,9 +47,16 @@ void AWildlineCharacter::CourseBotThink(float Delta){
             ForwardInput=SideInput=0;if(Controller)Controller->SetControlRotation((Target-GetActorLocation()).GetSafeNormal2D().Rotation());ServerJump_Implementation();return;
         }
         if(!M->IsFalling()&&GetActorLocation().Z<Tree.ClimbTop-90){
+            for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It)if(*It!=this&&It->bSquirrel&&!It->bDead&&It->TreeIndex==Entry){
+                // Wait clear of the trunk so the squirrel above can launch safely.
+                BotProgressAt=ServerTime();M->StopMovementImmediately();return;
+            }
             const FVector Toward=Tree.Base-GetActorLocation();
             if(Controller)Controller->SetControlRotation(Toward.GetSafeNormal2D().Rotation());
-            if(Forest->NearestTree(GetActorLocation(),30)==Entry)ServerClimb_Implementation();else AddMovementInput(Toward.GetSafeNormal2D(),1);return;
+            if(Forest->NearestTree(GetActorLocation(),30)==Entry&&GetActorLocation().X<Tree.Base.X&&FMath::Abs(GetActorLocation().Y-Tree.Base.Y)<8)ServerClimb_Implementation();else {
+                const FVector Grip=Tree.Base+FVector(-Tree.Radius-18,0,0);
+                MoveBot(Grip,ServerTime(),Toward.Size2D()>250);AddMovementInput(BotMove,1);
+            }return;
         }
     }
     // Return beside the course, rather than into the solid bins and bench legs.
@@ -70,11 +82,10 @@ void AWildlineCharacter::CourseBotThink(float Delta){
         return;
     }
     // Keep airborne steering continuous; difficulty adds a pause only on landing.
-    if(BotCourseStep!=CourseCheckpoint){BotCourseStep=CourseCheckpoint;BotDecisionAt=ServerTime()+(AIDifficulty==0?.8f:AIDifficulty==2?0.f:.2f);}
     if(ServerTime()<BotDecisionAt){M->StopMovementImmediately();return;}
     if(CourseCheckpoint==0){
         if(GetActorLocation().Z>Forest->GroundHeight(GetActorLocation().X,GetActorLocation().Y)+30){AddMovementInput(Dir,1);return;}
-        if(D.Size2D()>25)AddMovementInput(Dir,1);return;
+        if(D.Size2D()>25){MoveBot(Target,ServerTime(),D.Size2D()>150);AddMovementInput(BotMove,1);}return;
     }
     const float Height=D.Z+13; // surface height above the squirrel's feet
     const float LaunchZ=Forest->CourseLaunchZ(GetActorLocation());

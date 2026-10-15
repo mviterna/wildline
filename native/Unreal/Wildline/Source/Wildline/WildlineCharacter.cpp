@@ -49,8 +49,9 @@ AWildlineCharacter::AWildlineCharacter(){
     static ConstructorHelpers::FObjectFinder<UStaticMesh> Bolt(TEXT("/Game/Wildline/Hunters/Meshes/SM_RifleBolt.SM_RifleBolt"));ViewBolt->SetStaticMesh(Bolt.Object);WorldBolt->SetStaticMesh(Bolt.Object);
     ViewRifle->SetRelativeLocation(FVector(30,14,-19));ViewRifle->SetRelativeRotation(FRotator::ZeroRotator);WorldRifle->SetRelativeLocation(FVector(0,30,130));WorldRifle->SetRelativeRotation(FRotator::ZeroRotator);
     AIControllerClass=AAIController::StaticClass();AutoPossessAI=EAutoPossessAI::Disabled;
+    static ConstructorHelpers::FObjectFinder<UMaterialInterface> ThermalFilter(TEXT("/Game/Wildline/Materials/M_ThermalVision.M_ThermalVision"));ThermalMaterial=ThermalFilter.Object;
 }
-void AWildlineCharacter::BeginPlay(){Super::BeginPlay();Forest=AWildlineWorld::Find(GetWorld());ConfigureRole();AWildlineWeaponFX::Warmup(GetWorld());if(bBot&&HasAuthority()){BotDecisionAt=ServerTime()+6.f;SpawnDefaultController();}}
+void AWildlineCharacter::BeginPlay(){Super::BeginPlay();Forest=AWildlineWorld::Find(GetWorld());ConfigureRole();AWildlineWeaponFX::Warmup(GetWorld());if(bBot&&HasAuthority()){ResetBotAwareness();SpawnDefaultController();}}
 void AWildlineCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps)const{
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     DOREPLIFETIME(AWildlineCharacter,bInLobby);DOREPLIFETIME(AWildlineCharacter,bLobbyReady);DOREPLIFETIME(AWildlineCharacter,CourseCheckpoint);DOREPLIFETIME(AWildlineCharacter,CourseLane);DOREPLIFETIME(AWildlineCharacter,FeederVisits);DOREPLIFETIME(AWildlineCharacter,bSquirrel);DOREPLIFETIME(AWildlineCharacter,bDead);DOREPLIFETIME(AWildlineCharacter,bBot);DOREPLIFETIME(AWildlineCharacter,BotSlot);DOREPLIFETIME(AWildlineCharacter,AIDifficulty);DOREPLIFETIME(AWildlineCharacter,ProtectedUntil);DOREPLIFETIME(AWildlineCharacter,bSprinting);DOREPLIFETIME(AWildlineCharacter,Stamina);DOREPLIFETIME(AWildlineCharacter,Health);DOREPLIFETIME(AWildlineCharacter,Ammo);DOREPLIFETIME(AWildlineCharacter,Bag);DOREPLIFETIME(AWildlineCharacter,ThermalUntil);DOREPLIFETIME(AWildlineCharacter,ThermalReadyAt);DOREPLIFETIME(AWildlineCharacter,ReloadUntil);DOREPLIFETIME(AWildlineCharacter,RespawnAt);DOREPLIFETIME(AWildlineCharacter,TreeIndex);DOREPLIFETIME(AWildlineCharacter,bWoodClimbing);DOREPLIFETIME(AWildlineCharacter,bBranchClimbing);DOREPLIFETIME(AWildlineCharacter,ClimbNormal);DOREPLIFETIME(AWildlineCharacter,ClimbHeading);DOREPLIFETIME(AWildlineCharacter,ClimbPosition);DOREPLIFETIME(AWildlineCharacter,Collected);DOREPLIFETIME(AWildlineCharacter,BagPeanuts);DOREPLIFETIME(AWildlineCharacter,SelectedWeapon);
@@ -61,14 +62,14 @@ float AWildlineCharacter::ServerTime()const{const auto* S=GetWorld()->GetGameSta
 bool AWildlineCharacter::CanControl()const{const auto* PC=Cast<AWildlineController>(Controller);const auto* S=GetWorld()->GetGameState<AWildlineGameState>();return !bDead&&(!PC||!PC->bMenuOpen)&&(!S||S->Winner==0);}
 const FWildlineMatchConfig& AWildlineCharacter::MatchRules()const{const auto* S=GetWorld()->GetGameState<AWildlineGameState>();static const FWildlineMatchConfig Default;return S?S->MatchConfig:Default;}
 bool AWildlineCharacter::IsThermalActive()const{return !bSquirrel&&!bDead&&SelectedWeapon==WildlineRules::RifleWeapon&&ServerTime()<ThermalUntil;}
-bool AWildlineCharacter::IsScoped()const{return !bSquirrel&&!bDead&&((SelectedWeapon==WildlineRules::RifleWeapon&&bAiming)||IsThermalActive());}
+bool AWildlineCharacter::IsScoped()const{return !bSquirrel&&!bDead&&SelectedWeapon==WildlineRules::RifleWeapon&&bAiming;}
 void AWildlineCharacter::ConfigureRole(){
     if(bSquirrel)SetActorScale3D(FVector::OneVector);
     // The authored animal is 42.5 cm nose to tail; 1.15 gives 48.9 cm overall.
     GetCapsuleComponent()->SetCapsuleSize(bSquirrel?7.f:38.f,bSquirrel?12.f:96.f);
     AnimalRoot->SetRelativeTransform(FTransform::Identity);
     GetMesh()->SetSkeletalMesh(bSquirrel?SquirrelMeshAsset:HumanMeshAsset);
-    GetMesh()->EmptyOverrideMaterials();OriginalMaterials.Empty();bHeatApplied=false;
+    GetMesh()->EmptyOverrideMaterials();
     GetMesh()->SetRelativeLocation(FVector(0,0,bSquirrel?-12:-96));
     GetMesh()->SetRelativeRotation(FRotator(0,-90,0));GetMesh()->SetRelativeScale3D(FVector(bSquirrel?1.15f:1.f));
     GetMesh()->SetVisibility(true);GetMesh()->SetOwnerNoSee(!bThirdPerson);
@@ -83,6 +84,7 @@ void AWildlineCharacter::ConfigureRole(){
     Movement->MaxAcceleration=bSquirrel?6500:2048;Movement->BrakingDecelerationWalking=bSquirrel?4200:2048;Movement->GroundFriction=bSquirrel?10:8;
     if(HasAuthority()){Health=bSquirrel?MatchRules().SquirrelHealth:100.f;ProtectedUntil=bSquirrel?ServerTime()+MatchRules().SpawnProtectionSeconds:0;}
     BuildFur();
+    UpdateHeatSignature();
     if(!bSquirrel){ApplyHunterProfile();OnRepWeapon();}
 }
 void AWildlineCharacter::OnRepWeapon(){
@@ -183,15 +185,27 @@ void AWildlineCharacter::StartFire(){if(CanControl()&&!bSquirrel){bFiring=true;L
 void AWildlineCharacter::StartSprint(){if(CanControl()){bSprinting=true;ServerSprint(true);}}void AWildlineCharacter::StopSprint(){bSprinting=false;ServerSprint(false);}
 void AWildlineCharacter::ServerSprint_Implementation(bool V){bSprinting=V&&!bDead&&Stamina>4;}
 void AWildlineCharacter::DoCrouch(){if(CanControl()&&!bSquirrel)Crouch();}void AWildlineCharacter::DoUnCrouch(){UnCrouch();}
-void AWildlineCharacter::DoJump(){if(CanControl())ServerJump();}void AWildlineCharacter::Climb(){if(!CanControl())return;if(bInLobby){if(auto* PC=Cast<AWildlineController>(Controller))PC->ServerLobbyInteract();}else ServerClimb();}void AWildlineCharacter::Thermal(){if(CanControl())ServerThermal();}void AWildlineCharacter::Reload(){if(CanControl())ServerReload();}
+void AWildlineCharacter::DoJump(){if(CanControl()){bClimbTransfer=false;ServerJump();}}void AWildlineCharacter::Climb(){if(!CanControl())return;bClimbTransfer=false;if(bInLobby){if(auto* PC=Cast<AWildlineController>(Controller))PC->ServerLobbyInteract();}else ServerClimb();}void AWildlineCharacter::Thermal(){if(CanControl())ServerThermal();}void AWildlineCharacter::Reload(){if(CanControl())ServerReload();}
 void AWildlineCharacter::ServerJump_Implementation(){
     if(bDead||Stamina<15)return;
-    if(bSquirrel){if(TreeIndex==INDEX_NONE&&GetCharacterMovement()->IsFalling())return;const bool FromTree=TreeIndex!=INDEX_NONE;const float LaunchZ=FromTree?450:Forest&&Forest->bResidential?Forest->CourseLaunchZ(GetActorLocation()):360;TreeIndex=INDEX_NONE;GetCharacterMovement()->SetMovementMode(MOVE_Falling);FRotator R=GetControlRotation();R.Pitch=0;R.Roll=0;LaunchCharacter(R.Vector()*(FromTree?900:600)+FVector(0,0,LaunchZ),true,true);if(!MatchRules().bUnlimitedStamina)Stamina-=18;}
+    bClimbTransfer=false;
+    if(bSquirrel){
+        auto* Movement=GetCharacterMovement();const bool FromTree=TreeIndex!=INDEX_NONE;
+        // Running over uneven ground can briefly lose floor contact. Allow a
+        // short grace period, but consume it once so it cannot become a double jump.
+        if(!FromTree&&(bGroundJumpConsumed||(!Movement->IsMovingOnGround()&&ServerTime()-LastGroundedAt>.12f)))return;
+        bGroundJumpConsumed=true;
+        const float LaunchZ=FromTree?450:Forest&&Forest->bResidential?Forest->CourseLaunchZ(GetActorLocation()):360;
+        TreeIndex=INDEX_NONE;Movement->SetMovementMode(MOVE_Falling);FRotator R=GetControlRotation();R.Pitch=0;R.Roll=0;
+        const FVector Horizontal=FromTree?R.Vector()*900:(Movement->Velocity.Size2D()>10?Movement->Velocity.GetSafeNormal2D()*FMath::Max(600.f,static_cast<float>(Movement->Velocity.Size2D())):R.Vector()*600);
+        LaunchCharacter(Horizontal+FVector(0,0,LaunchZ),true,true);if(!MatchRules().bUnlimitedStamina)Stamina-=18;
+    }
     else Jump();
     MulticastSound(WildlineAudio::Jump);
 }
 void AWildlineCharacter::ServerClimb_Implementation(){
     if(bInLobby||!bSquirrel||bDead)return;
+    bClimbTransfer=false;
     if(TreeIndex!=INDEX_NONE){TreeIndex=INDEX_NONE;GetCharacterMovement()->SetMovementMode(MOVE_Falling);return;}
     if(!Forest)Forest=AWildlineWorld::Find(GetWorld());if(!Forest)return;
     FHitResult Best;int32 WoodTree=INDEX_NONE;float Distance=70;
@@ -223,21 +237,64 @@ void AWildlineCharacter::UpdateClimb(float Delta){
     if(!Forest||!Forest->Trees.IsValidIndex(TreeIndex))return;
     if(bWoodClimbing){
         FVector N=ClimbNormal;
-        FVector Forward=FVector::VectorPlaneProject(bBranchClimbing?FRotator(0,GetControlRotation().Yaw,0).Vector():FVector::UpVector,N).GetSafeNormal();
+        const FVector Look=FRotator(0,GetControlRotation().Yaw,0).Vector();
+        float StemRadius;const FVector Stem=Forest->TrunkCentre(TreeIndex,GetActorLocation().Z,StemRadius);
+        if(!bClimbTransfer&&FMath::Abs(ForwardInput)>.1f){
+            FHitResult Landing;int32 Index;
+            if(!bBranchClimbing&&N.Z<.5f&&ForwardInput>0&&FVector::DotProduct(Look,N)>.15f){
+                // Find a top surface within a short reach of the fork.
+                // Mantle over the junction at normal climb speed, never teleport.
+                for(float Reach:{20.f,40.f,65.f,95.f,125.f}){
+                    const FVector Probe=GetActorLocation()+Look*Reach;
+                    if(Forest->TraceWood(Probe+FVector(0,0,95),Probe-FVector(0,0,25),Landing,Index,8)&&Index==TreeIndex&&Landing.ImpactNormal.Z>.5f&&Forest->IsLimbSurface(Index,Landing.ImpactPoint,Landing.ImpactNormal)&&FVector::Dist(GetActorLocation(),Landing.ImpactPoint)<150){
+                        ClimbTransferTarget=Landing.ImpactPoint+Landing.ImpactNormal*16;ClimbTransferNormal=Landing.ImpactNormal;bClimbTransfer=true;bTransferToBranch=true;break;
+                    }
+                }
+            }else if(bBranchClimbing&&ForwardInput<0&&FVector::Dist2D(GetActorLocation(),Stem)<StemRadius+150){
+                const FVector Out=(GetActorLocation()-Stem).GetSafeNormal2D();const FVector Centre=Stem-FVector(0,0,55);
+                if(Forest->TraceWood(Centre+Out*(StemRadius+120),Centre-Out*20,Landing,Index)&&Index==TreeIndex&&FMath::Abs(Landing.ImpactNormal.Z)<.45f&&FVector::Dist(GetActorLocation(),Landing.ImpactPoint)<180){
+                    ClimbTransferTarget=Landing.ImpactPoint+Landing.ImpactNormal*16;ClimbTransferNormal=Landing.ImpactNormal;bClimbTransfer=true;bTransferToBranch=false;
+                }
+            }
+        }
+        if(bClimbTransfer){
+            if(FMath::Abs(ForwardInput)<.1f)return;
+            if((bTransferToBranch?ForwardInput:-ForwardInput)<0){bClimbTransfer=false;return;}
+            const FVector Previous=GetActorLocation();const float Speed=200.f*Delta*MatchRules().MovementScale;
+            const FVector Target=FMath::VInterpConstantTo(Previous,ClimbTransferTarget,Delta,200.f*MatchRules().MovementScale);
+            SetActorLocation(Target,false);ClimbNormal=FMath::VInterpNormalRotationTo(N,ClimbTransferNormal,Delta,180.f);
+            ClimbHeading=FVector::VectorPlaneProject(bTransferToBranch?Look:FVector::UpVector,ClimbNormal).GetSafeNormal();
+            if(FVector::Dist(Target,ClimbTransferTarget)<=Speed){SetActorLocation(ClimbTransferTarget,false);ClimbNormal=ClimbTransferNormal;bBranchClimbing=bTransferToBranch;bClimbTransfer=false;}
+            return;
+        }
+        // Blend towards the direction the player looks as bark slopes into a
+        // fork. A hard trunk/limb switch can reverse W or lose its tangent.
+        const float BranchBlend=FMath::Clamp((static_cast<float>(N.Z)-.15f)/.5f,0.f,1.f);
+        FVector Forward=FVector::VectorPlaneProject(FMath::Lerp(FVector::UpVector,Look,BranchBlend),N).GetSafeNormal();
+        if(Forward.IsNearlyZero())Forward=FVector::VectorPlaneProject(FVector(ClimbHeading),N).GetSafeNormal();
         FVector Right=FVector::CrossProduct(N,Forward).GetSafeNormal();
         const FVector Direction=(Forward*ForwardInput+Right*SideInput).GetClampedToMaxSize(1);
         const float Travel=200.f*FMath::Min(Delta,.05f)*MatchRules().MovementScale;
         const FVector Surface=GetActorLocation()-N*16;
         const FVector Candidate=Surface+Direction*Travel;
         FHitResult Best;int32 Next=INDEX_NONE;
-        bool Found=Forest->TraceWood(Candidate+N*35,Candidate-N*55,Best,Next);
-        if(!Found)Found=Forest->TraceWood(Candidate+N*25,Candidate-N*45,Best,Next,5);
-        // At forks follow the adjacent bark surface without a height teleport.
-        if(!Found&&Direction.SizeSquared()>.1f){
-            for(const FVector Probe:{(N+Direction).GetSafeNormal(),(N-Direction).GetSafeNormal(),FVector::UpVector,-FVector::UpVector}){
-                if(Forest->TraceWood(Candidate+Probe*30,Candidate-Probe*45,Best,Next)&&FVector::Dist(Best.ImpactPoint,Surface)<Travel+18){Found=true;break;}
-            }
+        bool Found=false;float BestScore=MAX_flt;
+        auto Probe=[&](FVector Axis,float Sweep){
+            FHitResult Hit;int32 Index;
+            if(!Forest->TraceWood(Candidate+Axis*40,Candidate-Axis*55,Hit,Index,Sweep)||Index!=TreeIndex||FVector::Dist(Hit.ImpactPoint,Surface)>Travel+18)return;
+            if(FVector::Dist(Hit.ImpactPoint+Hit.ImpactNormal*16,GetActorLocation())>Travel+16)return;
+            const float Progress=FVector::DotProduct(Hit.ImpactPoint-Surface,Direction);
+            if(Direction.SizeSquared()>.1f&&Progress<-.5f)return;
+            const float Score=FVector::DistSquared(Hit.ImpactPoint,Candidate)-Progress*8;
+            if(Score<BestScore){BestScore=Score;Best=Hit;Next=Index;Found=true;}
+        };
+        Probe(N,0);
+        if(Direction.SizeSquared()>.1f){
+            // Look around the corner instead of repeatedly selecting the trunk
+            // triangle behind the paws. The short step limit prevents snapping.
+            for(const FVector Axis:{(N+Direction).GetSafeNormal(),(N-Direction).GetSafeNormal(),FVector::UpVector,Look.GetSafeNormal()})Probe(Axis,0);
         }
+        if(!Found)Probe(N,5);
         if(Found&&FVector::Dist(Best.ImpactPoint,Surface)<Travel+24){
             TreeIndex=Next;ClimbNormal=Best.ImpactNormal;bBranchClimbing=Forest->IsLimbSurface(TreeIndex,Best.ImpactPoint,ClimbNormal);
             if(Direction.SizeSquared()>.1f)ClimbHeading=FVector::VectorPlaneProject(Direction,ClimbNormal).GetSafeNormal();
@@ -246,6 +303,13 @@ void AWildlineCharacter::UpdateClimb(float Delta){
         return;
     }
     const auto& T=Forest->Trees[TreeIndex];TreeAngle+=SideInput*Delta*1.7f*MatchRules().MovementScale;const float H=FMath::Clamp(GetActorLocation().Z+ForwardInput*200.f*Delta*MatchRules().MovementScale,T.Base.Z+18,T.ClimbTop-12);float Radius;const FVector Centre=Forest->TrunkCentre(TreeIndex,H,Radius);const FVector Target=Centre+FVector(FMath::Cos(TreeAngle)*(Radius+13),FMath::Sin(TreeAngle)*(Radius+13),0);SetActorLocation(Target,false);
+    // A grip caught by the trunk profile must also join the real bark once it
+    // comes within reach; otherwise that grip can never enter any branch.
+    const FVector Out=(Target-Centre).GetSafeNormal2D();FHitResult Bark;int32 Index;
+    if(Forest->TraceWood(Target+Out*35,Target-Out*50,Bark,Index)&&Index==TreeIndex&&FVector::Dist(Bark.ImpactPoint+Bark.ImpactNormal*16,Target)<24){
+        bWoodClimbing=true;ClimbNormal=Bark.ImpactNormal;bBranchClimbing=Forest->IsLimbSurface(Index,Bark.ImpactPoint,ClimbNormal);
+        ClimbHeading=FVector::VectorPlaneProject(FVector::UpVector,ClimbNormal).GetSafeNormal();SetActorLocation(Bark.ImpactPoint+ClimbNormal*16,false);
+    }
 }
 void AWildlineCharacter::ServerThermal_Implementation(){if(bInLobby)return;const float Now=ServerTime();if(!WildlineRules::CanThermal(!bSquirrel&&SelectedWeapon==WildlineRules::RifleWeapon,!bDead,Now,ThermalReadyAt))return;if(!MatchRules().bAllowThermal)return;ThermalUntil=Now+MatchRules().ThermalSeconds;ThermalReadyAt=ThermalUntil+MatchRules().ThermalCooldownSeconds;MulticastSound(WildlineAudio::Thermal);}
 void AWildlineCharacter::ServerReload_Implementation(){if(!bSquirrel&&!bDead&&Ammo<WildlineRules::WeaponCapacity(SelectedWeapon)&&ReloadUntil==0){ReloadUntil=ServerTime()+WildlineRules::WeaponReload(SelectedWeapon)*MatchRules().ReloadScale;MulticastSound(WildlineAudio::Reload);}}
@@ -274,6 +338,16 @@ void AWildlineCharacter::ServerFire_Implementation(FVector_NetQuantizeNormal Dir
         }
         for(const auto& Hit:Damage){Hit.Key->MulticastBlood(Hit.Key->GetActorLocation(),Aim);UGameplayStatics::ApplyDamage(Hit.Key,Hit.Value,Controller,this,UDamageType::StaticClass());}
         MulticastShot(Aim);if(!Impacts.IsEmpty())MulticastImpacts(Impacts);return;
+    }
+    if(bBot&&MatchRules().BotAccuracyScale>=1.f){
+        // Maximum AI accuracy is a true pinpoint shot. Trace the physical world
+        // so cover and intervening pawns still block it; no target-forced damage.
+        FHitResult Hit;
+        if(GetWorld()->LineTraceSingleByChannel(Hit,Muzzle,Muzzle+Aim*180000.f,ECC_Visibility,Q)){
+            if(auto* Animal=Cast<AWildlineCharacter>(Hit.GetActor());Animal&&Animal->bSquirrel&&!Animal->bDead){Animal->MulticastBlood(Hit.ImpactPoint,Aim);UGameplayStatics::ApplyDamage(Animal,100,Controller,this,UDamageType::StaticClass());}
+            else if(!Cast<AWildlineCharacter>(Hit.GetActor()))MulticastImpacts({AWildlineWeaponFX::DescribeImpact(Hit)});
+        }
+        MulticastShot(Aim);return;
     }
     auto* Bullet=GetWorld()->SpawnActor<AWildlineBullet>(AWildlineBullet::StaticClass(),Muzzle,Aim.Rotation());if(Bullet){Bullet->Shooter=this;Bullet->Velocity=Aim*90000;Bullet->SetOwner(this);}
     MulticastShot(Aim);
@@ -335,11 +409,12 @@ void AWildlineCharacter::Forage(){
     }
     if(Bag>0&&TreeIndex==INDEX_NONE&&FMath::Abs(GetActorLocation().Z-Forest->DenLocation.Z)<100&&FVector::Dist2D(GetActorLocation(),Forest->DenLocation)<280){if(auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>())GM->Deposit(Bag);MulticastSound(WildlineAudio::Deposit);Bag=0;BagPeanuts.Empty();}
 }
-void AWildlineCharacter::SetHeatVision(bool Active){
-    if(bHeatApplied==Active||!bSquirrel)return;bHeatApplied=Active;
-    if(Active){OriginalMaterials.Empty();auto* Heat=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/Wildline/Materials/M_Heat.M_Heat"));for(int32 I=0;I<GetMesh()->GetNumMaterials();I++){OriginalMaterials.Add(GetMesh()->GetMaterial(I));GetMesh()->SetMaterial(I,Heat);}}
-    else {for(int32 I=0;I<OriginalMaterials.Num();I++)GetMesh()->SetMaterial(I,OriginalMaterials[I]);OriginalMaterials.Empty();}
-    auto* FurMaterial=LoadObject<UMaterialInterface>(nullptr,Active?TEXT("/Game/Wildline/Materials/M_Heat.M_Heat"):TEXT("/Game/Wildline/Squirrel/M_SquirrelStrands.M_SquirrelStrands"));for(auto* Fur:FurSections)Fur->SetMaterial(0,FurMaterial);
+void AWildlineCharacter::UpdateHeatSignature(){
+    // Tag geometry on every client. The viewing camera decides whether to display heat.
+    // Keeping the original body/fur materials preserves their silhouettes and masks.
+    const bool Hot=bSquirrel&&!bDead&&!bInLobby;
+    GetMesh()->SetCustomDepthStencilValue(1);GetMesh()->SetRenderCustomDepth(Hot);
+    for(auto* Fur:FurSections){Fur->SetCustomDepthStencilValue(1);Fur->SetRenderCustomDepth(Hot);}
 }
 void AWildlineCharacter::UpdateCamera(float Delta){
     if(Forest){const auto* State=GetWorld()->GetGameState<AWildlineGameState>();Forest->ShowLocalAcorns(Forest->bFarm&&State?State->TakenPeanuts:Collected);}
@@ -375,76 +450,13 @@ void AWildlineCharacter::UpdateCamera(float Delta){
         ThirdCamera->SetRelativeRotation(FRotator::ZeroRotator);
     }
     FirstCamera->SetFieldOfView(FMath::FInterpTo(FirstCamera->FieldOfView,IsScoped()?24.f:SelectedWeapon==1&&bAiming?55.f:78.f,Delta,12));
-    FirstCamera->PostProcessSettings.bOverride_ColorSaturation=true;FirstCamera->PostProcessSettings.ColorSaturation=IsThermalActive()?FVector4(0,0,0,1):FVector4(1,1,1,1);FirstCamera->PostProcessBlendWeight=1;
-    for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It)if(It->bSquirrel)It->SetHeatVision(IsThermalActive());
-}
-void AWildlineCharacter::ResetBotAwareness(){BotTarget.Reset();BotLastSeenAt=-100;BotDecisionAt=ServerTime()+6.f;BotCourseStep=-1;bAiming=false;}
-void AWildlineCharacter::BotThink(float Delta){
-    if(!Forest||bDead)return;
-    AWildlineCharacter* Foe=nullptr;float Nearest=MAX_flt;for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It)if(It->bSquirrel!=bSquirrel&&!It->bInLobby&&!It->bDead&&!It->bPreviewHunter){float D=FVector::Dist2D(GetActorLocation(),It->GetActorLocation());if(D<Nearest){Nearest=D;Foe=*It;}}
-    FVector Target=GetActorLocation();
-    if(bSquirrel){
-        if(Forest->bResidential){CourseBotThink(Delta);return;}
-        const float DangerRange=AIDifficulty==0?1200.f:AIDifficulty==2?3000.f:2100.f;
-        if(Foe&&Nearest<DangerRange){if(BotTarget.Get()!=Foe){BotTarget=Foe;BotDecisionAt=ServerTime()+(AIDifficulty==0?1.2f:AIDifficulty==2?.1f:.5f);}if(ServerTime()<BotDecisionAt)return;}else BotTarget.Reset();
-        if(TreeIndex!=INDEX_NONE){ForwardInput=1;SideInput=.15f;const auto& T=Forest->Trees[TreeIndex];if(GetActorLocation().Z>FMath::Min(T.Base.Z+850,T.ClimbTop-50)){if(Controller&&Foe)Controller->SetControlRotation((GetActorLocation()-Foe->GetActorLocation()).Rotation());ServerJump_Implementation();}return;}
-        if(Forest->bFarm){
-            const auto* State=GetWorld()->GetGameState<AWildlineGameState>();
-            Target=Forest->DenLocation;
-            if(Bag<MatchRules().CarryCapacity){float Distance=MAX_flt;for(int32 I=0;I<Forest->AcornLocations.Num();I++)if(State&&!State->TakenPeanuts.Contains(I)){const float D=FVector::Dist2D(GetActorLocation(),Forest->AcornLocations[I]);if(D<Distance){Distance=D;Target=Forest->AcornLocations[I];}}}
-            Target=Forest->FarmRoute(GetActorLocation(),Target);bSprinting=Foe&&Nearest<(AIDifficulty==0?650:AIDifficulty==2?1800:1200);
-            FVector Dir=(Target-GetActorLocation()).GetSafeNormal2D();if(Controller)Controller->SetControlRotation(Dir.Rotation());AddMovementInput(Dir,1);return;
-        }
-        if(Foe&&Nearest<(AIDifficulty==0?1200:AIDifficulty==2?3000:2100)){const int32 I=Forest->NearestTree(GetActorLocation(),2200);Target=I==INDEX_NONE?GetActorLocation()+(GetActorLocation()-Foe->GetActorLocation()).GetSafeNormal2D()*1500:Forest->Trees[I].Base;const int32 Grab=Forest->NearestTree(GetActorLocation(),30);if(Grab!=INDEX_NONE)ServerClimb_Implementation();bSprinting=true;}
-        else if(Bag>=MatchRules().CarryCapacity){Target=Forest->DenLocation;bSprinting=false;}
-        else {float D=MAX_flt;for(int32 I=0;I<Forest->AcornLocations.Num();I++)if(!Collected.Contains(I)){const float New=FVector::Dist2D(GetActorLocation(),Forest->AcornLocations[I]);if(New<D){D=New;Target=Forest->AcornLocations[I];}}bSprinting=false;}
-    }else {
-        const int32 Level=AIDifficulty;
-        const auto Tuning=WildlineRules::HunterDifficulty(Level);const float Now=ServerTime();
-        if(BotDifficultyLevel!=Level){BotDifficultyLevel=Level;ResetBotAwareness();}
-        // Perception only knows visible squirrels; solid trunks, rocks and logs provide cover.
-        Foe=nullptr;Nearest=MAX_flt;const FVector Eye=GetActorLocation()+FVector(0,0,72*HunterProfile.HeightScale());
-        for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It){
-            if(!It->bSquirrel||It->bDead||It->bPreviewHunter)continue;
-            const float D=FVector::Dist2D(GetActorLocation(),It->GetActorLocation());if(D>Tuning.SightRange||D>=Nearest||(Forest->InCropCover(It->GetActorLocation())&&!It->bSprinting&&D>900))continue;
-            FHitResult Hit;FCollisionQueryParams Query(SCENE_QUERY_STAT(BotSight),false,this);
-            const bool Blocked=GetWorld()->LineTraceSingleByChannel(Hit,Eye,It->GetActorLocation()+FVector(0,0,8),ECC_Visibility,Query);
-            if(!Blocked||Hit.GetActor()==*It){Foe=*It;Nearest=D;}
-        }
-        if(Foe){
-            if(BotTarget.Get()!=Foe||Now-BotLastSeenAt>.35f)BotDecisionAt=FMath::Max(BotDecisionAt,Now+Tuning.ReactionTime);
-            BotTarget=Foe;BotLastSeenAt=Now;BotLastKnown=Foe->GetActorLocation();Target=BotLastKnown;bAiming=true;
-            if(Now>=BotDecisionAt&&Ammo>0&&ReloadUntil<=0&&(SelectedWeapon!=1||Nearest<WildlineRules::ShotgunRange*.85f)){
-                BotDecisionAt=Now+Tuning.ShotDelay;
-                const FVector Error(FMath::FRandRange(-Tuning.AimError,Tuning.AimError),FMath::FRandRange(-Tuning.AimError,Tuning.AimError),FMath::FRandRange(-Tuning.AimError*.45f,Tuning.AimError*.45f));
-                const FVector Lead=Level==2?Foe->GetVelocity()*(Nearest/90000.f):FVector::ZeroVector;
-                ServerFire_Implementation((Target+FVector(0,0,5)+Lead+Error-Eye).GetSafeNormal());
-            }
-        }else {
-            bAiming=false;
-            if(!BotTarget.IsValid()||BotTarget->bDead||Now-BotLastSeenAt>Tuning.MemoryTime){
-                BotTarget.Reset();if(!Forest->bFarm)return;
-                const FVector Route[]={FVector(1100,-900,210),FVector(1100,900,210),FVector(3100,900,210),FVector(3100,-900,210)};
-                Target=Route[FarmPatrolIndex%4];if(FVector::Dist2D(GetActorLocation(),Target)<180)FarmPatrolIndex=(FarmPatrolIndex+1)%4;Nearest=FVector::Dist2D(GetActorLocation(),Target);
-            }else{Target=BotLastKnown;Nearest=FVector::Dist2D(Target,GetActorLocation());}
-        }
-        if(Ammo==0)ServerReload_Implementation();
-        if(Nearest<(Foe?Tuning.StopDistance:140.f))return;
-        Target=Forest->FarmRoute(GetActorLocation(),Target);FVector Dir=(Target-GetActorLocation()).GetSafeNormal2D();
-        // Steer around collidable scenery instead of walking straight into it.
-        const FVector Probe=GetActorLocation()-FVector(0,0,25);FCollisionQueryParams Query(SCENE_QUERY_STAT(BotAvoid),false,this);
-        auto Clear=[&](FVector Heading){FHitResult Hit;return !GetWorld()->SweepSingleByObjectType(Hit,Probe,Probe+Heading*220,FQuat::Identity,FCollisionObjectQueryParams(ECC_WorldStatic),FCollisionShape::MakeSphere(38),Query);};
-        if(!Clear(Dir)){
-            FVector Best=FVector::ZeroVector;float BestDistance=MAX_flt;
-            for(float Angle:{55.f,-55.f,95.f,-95.f}){const FVector Candidate=Dir.RotateAngleAxis(Angle,FVector::UpVector);const float Distance=FVector::DistSquared2D(GetActorLocation()+Candidate*220,Target);if(Clear(Candidate)&&Distance<BestDistance){Best=Candidate;BestDistance=Distance;}}
-            Dir=Best;
-        }
-        if(Controller)Controller->SetControlRotation((Target-Eye).Rotation());AddMovementInput(Dir,1);return;
-    }
-    const FVector Dir=(Target-GetActorLocation()).GetSafeNormal2D();if(Controller)Controller->SetControlRotation(Dir.Rotation());AddMovementInput(Dir,1);
+    FirstCamera->PostProcessBlendWeight=1;
+    ThirdCamera->PostProcessBlendWeight=1;
+    if(ThermalMaterial){FirstCamera->AddOrUpdateBlendable(ThermalMaterial,IsThermalActive()?1.f:0.f);ThirdCamera->AddOrUpdateBlendable(ThermalMaterial,IsThermalActive()?1.f:0.f);}
 }
 void AWildlineCharacter::Tick(float Delta){
     if(bPreviewHunter)return;
+    UpdateHeatSignature();
     if(!bSquirrel&&IsLocallyControlled()&&!bProfileSubmitted)SubmitSavedHunterProfile();
     if(!bSquirrel){
         const float T=ServerTime()-BoltCycleAt;
@@ -467,9 +479,19 @@ void AWildlineCharacter::Tick(float Delta){
         ViewRifle->SetRelativeRotation(FRotator(2*Kick,0,0));
     }
     Super::Tick(Delta);
+    if(HasAuthority()&&bSquirrel&&!bDead&&TreeIndex==INDEX_NONE&&GetCharacterMovement()->IsMovingOnGround()&&GetCharacterMovement()->PendingLaunchVelocity.IsNearlyZero()){
+        LastGroundedAt=ServerTime();bGroundJumpConsumed=false;
+    }
     if(!bPreviewHunter&&!bDead&&GetNetMode()!=NM_DedicatedServer&&bSquirrel){const float Now=ServerTime();if(Now>=NextStepSound&&GetVelocity().Size2D()>25&&(GetCharacterMovement()->IsMovingOnGround()||TreeIndex!=INDEX_NONE)){const float Rate=bSprinting?WildlineAudio::RunningFootstepRate:1.f;NextStepSound=Now+.38f/Rate;WildlineAudio::Play(this,TreeIndex!=INDEX_NONE?WildlineAudio::Climb:WildlineAudio::Pawstep,GetActorLocation(),false,TreeIndex!=INDEX_NONE?1.f:Rate);}}
     if(IsLocallyControlled()){const float Now=ServerTime();if(Now>NextBirdSound){NextBirdSound=Now+FMath::FRandRange(6.f,12.f);WildlineAudio::Play(this,WildlineAudio::Bird,GetActorLocation()+FVector(FMath::FRandRange(-1200.f,1200.f),FMath::FRandRange(-1200.f,1200.f),500));}const auto* State=GetWorld()->GetGameState<AWildlineGameState>();if(State&&State->Winner!=HeardWinner){HeardWinner=State->Winner;if(HeardWinner)WildlineAudio::Play(this,WildlineAudio::Win,GetActorLocation(),true);}}
     if(!Forest)Forest=AWildlineWorld::Find(GetWorld());
+    if(HasAuthority()&&Forest&&bSquirrel&&!bDead&&!bInLobby&&TreeIndex!=INDEX_NONE&&bWoodClimbing&&bBranchClimbing&&ServerTime()>=NextBranchLeavesAt){
+        NextBranchLeavesAt=ServerTime()+1.4f;
+        const FTransform Transform(FRotator::ZeroRotator,GetActorLocation());
+        if(auto* Leaves=GetWorld()->SpawnActorDeferred<AWildlineBranchLeaves>(AWildlineBranchLeaves::StaticClass(),Transform)){
+            Leaves->bSnow=Forest->bWinter;Leaves->FinishSpawning(Transform);
+        }
+    }
     if(IsLocallyControlled()&&bSquirrel&&FParse::Param(FCommandLine::Get(),TEXT("WildlineSquirrelReview"))){const float T=GetWorld()->GetTimeSeconds();if(T>7&&T<11){bSprinting=T>9;AddMovementInput(FVector::ForwardVector,1);}}
     if(IsLocallyControlled()&&!bSquirrel&&(FParse::Param(FCommandLine::Get(),TEXT("WildlineHunterLocomotionReview"))||FParse::Param(FCommandLine::Get(),TEXT("WildlineHunterAnimationProbe")))){
         const float T=GetWorld()->GetTimeSeconds();bSprinting=T>=8&&T<10;
@@ -478,7 +500,7 @@ void AWildlineCharacter::Tick(float Delta){
         if(T>=11&&T<13)AddMovementInput(GetActorRightVector(),1);
     }
     GetCharacterMovement()->MaxWalkSpeed=bSquirrel?(bSprinting&&Stamina>4?650:320):(bSprinting&&Stamina>4?580:320);
-    if(bBot&&!bSquirrel)GetCharacterMovement()->MaxWalkSpeed=WildlineRules::HunterDifficulty(AIDifficulty).WalkSpeed;
+    if(bBot&&!bSquirrel)GetCharacterMovement()->MaxWalkSpeed=MatchRules().PursuitSpeed(WildlineRules::HunterDifficulty(AIDifficulty).WalkSpeed);
     GetCharacterMovement()->MaxWalkSpeed*=MatchRules().MovementScale;GetCharacterMovement()->MaxWalkSpeedCrouched=160*MatchRules().MovementScale;
     if(HasAuthority()&&!bDead){const auto* S=GetWorld()->GetGameState<AWildlineGameState>();if(!S||S->Winner==0){if(bBot&&S&&S->bRoundStarted)BotThink(Delta);if(TreeIndex!=INDEX_NONE){UpdateClimb(Delta);ClimbPosition=GetActorLocation();}Stamina=MatchRules().bUnlimitedStamina?100.f:FMath::Clamp(Stamina+(bSprinting&&GetVelocity().Size2D()>10?-12:9)*Delta,0.f,100.f);if(Stamina<=4)bSprinting=false;if(ReloadUntil>0&&ServerTime()>=ReloadUntil){Ammo=WildlineRules::WeaponCapacity(SelectedWeapon);ReloadUntil=0;}Forage();const FVector P=GetActorLocation();if(P.SizeSquared2D()>FMath::Square(WildlineRules::MapRadius)){FVector Q=P.GetSafeNormal2D()*WildlineRules::MapRadius;Q.Z=P.Z;SetActorLocation(Q);const FVector Out=P.GetSafeNormal2D();auto* M=GetCharacterMovement();M->Velocity-=Out*FMath::Max(0.f,static_cast<float>(FVector::DotProduct(M->Velocity,Out)));}}}
     GetCharacterMovement()->bIgnoreClientMovementErrorChecksAndCorrection=TreeIndex!=INDEX_NONE;
@@ -509,4 +531,4 @@ void AWildlineBlood::Tick(float Delta){Super::Tick(Delta);for(int32 I=0;I<Drops.
 
 
 void AWildlineCharacter::MulticastSound_Implementation(uint8 Event){CosmeticSounds++;if(Event<=WildlineAudio::Win)WildlineAudio::Play(this,static_cast<WildlineAudio::Event>(Event),GetActorLocation(),IsLocallyControlled()&&(Event==WildlineAudio::Pickup||Event==WildlineAudio::Deposit||Event==WildlineAudio::Checkpoint||Event==WildlineAudio::Feeder||Event==WildlineAudio::Thermal));}
-void AWildlineCharacter::Landed(const FHitResult& Hit){Super::Landed(Hit);if(HasAuthority())MulticastSound(WildlineAudio::Land);}
+void AWildlineCharacter::Landed(const FHitResult& Hit){Super::Landed(Hit);if(HasAuthority()){LastGroundedAt=ServerTime();bGroundJumpConsumed=false;MulticastSound(WildlineAudio::Land);}}

@@ -39,6 +39,7 @@ public:
     int32 CourseEntryTree(int32 Lane)const;
     UPROPERTY() TArray<int32> CourseEntryTrees;
     void BeginPlay() override;
+    void ApplyTreeLeafDensity(float Density);
     UPROPERTY() UProceduralMeshComponent* Terrain;
     UPROPERTY() UHierarchicalInstancedStaticMeshComponent* Trunks;
     UPROPERTY() UHierarchicalInstancedStaticMeshComponent* Foliage;
