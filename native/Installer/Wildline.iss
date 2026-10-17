@@ -20,7 +20,7 @@ OutputBaseFilename=Wildline-{#BetaVersion}-Setup
 Compression=lzma2/fast
 SolidCompression=yes
 WizardStyle=modern
-UninstallDisplayIcon={app}\Wildline.exe
+UninstallDisplayIcon={app}\WildlineLauncher.exe
 InfoBeforeFile=BetaReadme.txt
 SetupLogging=yes
 CloseApplications=yes
@@ -31,31 +31,62 @@ ExtraDiskSpaceRequired=536870912
 Name: desktopicon; Description: "Create a desktop shortcut"; GroupDescription: "Shortcuts:"; Flags: unchecked
 
 [Files]
-Source: "{#PayloadPath}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#PayloadPath}\*"; DestDir: "{app}\versions\{#BetaVersion}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#LauncherPath}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "BetaReadme.txt"; DestDir: "{app}"; DestName: "WildlineGuide.txt"; Flags: ignoreversion
 Source: "{#RedistPath}\vc_redist.x64.exe"; Flags: dontcopy
 Source: "{#RedistPath}\GameInputRedist.msi"; Flags: dontcopy
 
 [InstallDelete]
-; Replace packaged trees so renamed/removed DLLs and cooked archives cannot
-; survive an upgrade. Saved and the user's AppData are never removed.
-Type: filesandordirs; Name: "{app}\Engine"; Check: IsGameInstallation
-Type: filesandordirs; Name: "{app}\Wildline\Binaries"; Check: IsGameInstallation
-Type: filesandordirs; Name: "{app}\Wildline\Content"; Check: IsGameInstallation
-Type: filesandordirs; Name: "{app}\Wildline\Config"; Check: IsGameInstallation
+; A different version is never removed during update. Same-version repair
+; replaces only immutable packaged trees; Saved and AppData stay intact.
+Type: filesandordirs; Name: "{app}\versions\{#BetaVersion}\Engine"
+Type: filesandordirs; Name: "{app}\versions\{#BetaVersion}\Wildline\Binaries"
+Type: filesandordirs; Name: "{app}\versions\{#BetaVersion}\Wildline\Content"
+Type: filesandordirs; Name: "{app}\versions\{#BetaVersion}\Wildline\Config"
+
+[UninstallDelete]
+Type: files; Name: "{app}\current.version"
+Type: files; Name: "{app}\previous.version"
 
 [Icons]
-Name: "{group}\WILDLINE Beta"; Filename: "{app}\Wildline.exe"; Parameters: "-preferNvidia"; WorkingDir: "{app}"
-Name: "{group}\Beta testing guide"; Filename: "{app}\BetaReadme.txt"
-Name: "{autodesktop}\WILDLINE Beta"; Filename: "{app}\Wildline.exe"; Parameters: "-preferNvidia"; WorkingDir: "{app}"; Tasks: desktopicon
+Name: "{group}\WILDLINE Beta"; Filename: "{app}\WildlineLauncher.exe"; WorkingDir: "{app}"
+Name: "{group}\WILDLINE Beta (offline)"; Filename: "{app}\WildlineLauncher.exe"; Parameters: "--offline"; WorkingDir: "{app}"
+Name: "{group}\Beta testing guide"; Filename: "{app}\WildlineGuide.txt"
+Name: "{autodesktop}\WILDLINE Beta"; Filename: "{app}\WildlineLauncher.exe"; WorkingDir: "{app}"; Tasks: desktopicon
 
 [Run]
-Filename: "{app}\Wildline.exe"; Parameters: "-preferNvidia"; WorkingDir: "{app}"; Description: "Launch WILDLINE Beta"; Flags: nowait postinstall skipifsilent runasoriginaluser; Check: CanLaunch
+Filename: "{app}\WildlineLauncher.exe"; WorkingDir: "{app}"; Description: "Launch WILDLINE Beta"; Flags: nowait postinstall skipifsilent runasoriginaluser; Check: CanLaunch
 
 [Code]
 var
   RuntimeRestart: Boolean;
   PrerequisiteLogDir: String;
   PreviousInstallDir: String;
+  ActivationFailed: Boolean;
+
+function GetCustomSetupExitCode: Integer;
+begin
+  if ActivationFailed then Result := 1 else Result := 0;
+end;
+
+procedure CurStepChanged(CurStep: TSetupStep);
+var
+  ExitCode: Integer;
+begin
+  if CurStep = ssPostInstall then begin
+    WizardForm.StatusLabel.Caption := 'Verifying and activating WILDLINE...';
+    if not Exec(ExpandConstant('{app}\WildlineLauncher.exe'), '--activate {#BetaVersion}',
+      ExpandConstant('{app}'), SW_HIDE, ewWaitUntilTerminated, ExitCode) then begin
+      ActivationFailed := True;
+      RaiseException('Could not verify the new game. The previous version remains selected.');
+    end;
+    if ExitCode <> 0 then begin
+      ActivationFailed := True;
+      RaiseException('Game verification failed. The previous version remains selected.');
+    end;
+  end;
+end;
 
 function IsGameInstallation: Boolean;
 begin

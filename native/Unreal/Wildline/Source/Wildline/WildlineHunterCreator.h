@@ -48,6 +48,7 @@ public:
     void LoadTravisPreset();
     void LoadEthanPreset();
     void LoadGreysonPreset();
+    void LoadMarkPreset();
     UFUNCTION() void PresetChanged(FString Item,ESelectInfo::Type Type);
     UFUNCTION() void ResetPreset();
     UFUNCTION() void BeardChanged(bool Value);

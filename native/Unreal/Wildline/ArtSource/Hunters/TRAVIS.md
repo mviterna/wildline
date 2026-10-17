@@ -1,4 +1,4 @@
-# Photo hunters: Travis, Ethan and Greyson
+# Photo hunters: Travis, Ethan, Greyson and Mark
 
 Updated 2026-10-08. The user selected the photo-superimposed approach and discarded
 the detailed MetaHuman variant. The former Travis 2 is now named **Travis**.
@@ -46,8 +46,17 @@ and preserves authored normals. The only vertex-color layer is `PhotoMask`.
 
 Preset ID 1 is Travis. Retired ID 2 migrates to Travis so previously saved
 Travis 2 selections retain their identity and appearance edits. Ethan uses ID 3.
-Greyson uses ID 4. The visible options are Custom hunter, Travis, Ethan, Greyson. MetaHuman Creator is no
+Greyson uses ID 4. Mark uses ID 5, adult height and proportions, and the supplied
+`Textures/mark_reference.png`. His source files are `SK_HunterMark.blend`,
+`Export/SK_HunterMark.fbx`, `mark-model.json` and `mark-unreal.json`.
+The visible options are Custom hunter, Travis, Ethan, Greyson, Mark. MetaHuman Creator is no
 longer required. Existing body and animation credits remain in `PROVENANCE.md`.
+
+`native/VerifyHunterFaces.ps1 -Capture` checks the cooked presets and captures
+all four face close-ups, Mark's turn, full body, cap/clothing customization and
+in-world appearance. These checks use isolated profiles and preserve player
+settings. `native/VerifyHunterAnimations.ps1 -Presets Mark -Rates 60` checks
+Mark's live movement, stance, feet and weapon grips.
 
 Runtime height (uncapped): Travis retains the 174.5 cm source height, Ethan is
 71.4 cm (30% shorter than the previous 102 cm), and Greyson is 110.4 cm (20% shorter

@@ -114,7 +114,8 @@ void AWildlineCharacter::ApplyHunterProfile(){
     const bool bTravis=HunterProfile.Preset==1&&HunterProfile.Body==0;
     const bool bEthan=HunterProfile.Preset==3&&HunterProfile.Body==0;
     const bool bGreyson=HunterProfile.Preset==4&&HunterProfile.Body==0;
-    auto* Asset=LoadObject<USkeletalMesh>(nullptr,HunterProfile.Body==1?TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterFemale.SK_HunterFemale"):bTravis?TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterTravis.SK_HunterTravis"):bEthan?TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterEthan.SK_HunterEthan"):bGreyson?TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterGreyson.SK_HunterGreyson"):TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterMale.SK_HunterMale"));
+    const bool bMark=HunterProfile.Preset==5&&HunterProfile.Body==0;
+    auto* Asset=LoadObject<USkeletalMesh>(nullptr,HunterProfile.Body==1?TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterFemale.SK_HunterFemale"):bTravis?TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterTravis.SK_HunterTravis"):bEthan?TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterEthan.SK_HunterEthan"):bGreyson?TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterGreyson.SK_HunterGreyson"):bMark?TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterMark.SK_HunterMark"):TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterMale.SK_HunterMale"));
     if(Asset&&GetMesh()->GetSkeletalMeshAsset()!=Asset){HumanMeshAsset=Asset;GetMesh()->SetSkeletalMesh(Asset);GetMesh()->SetAnimInstanceClass(UWildlineHunterAnim::StaticClass());}
     // Scale the complete rig, collision and attached gear together. Deriving
     // this from the saved/replicated preset also upgrades existing profiles.
@@ -140,6 +141,7 @@ void AWildlineCharacter::ApplyHunterProfile(){
         const float T=HunterProfile.SkinTone;M->SetVectorParameterValue(TEXT("SkinTint"),FLinearColor(1-T*.55f,1-T*.68f,1-T*.73f));M->SetScalarParameterValue(TEXT("CapVisible"),HunterProfile.bCap?1:0);
         M->SetScalarParameterValue(TEXT("BeardVisible"),HunterProfile.bBeard?1:0);
         M->SetScalarParameterValue(TEXT("CloseCrop"),0);
+        M->SetScalarParameterValue(TEXT("FaceFill"),bPreviewHunter?.025f:.18f);
         M->SetScalarParameterValue(TEXT("HasPhoto"),HunterFaceTexture?1:0);if(HunterFaceTexture)M->SetTextureParameterValue(TEXT("FacePhoto"),HunterFaceTexture);
         M->SetScalarParameterValue(TEXT("PhotoX"),HunterProfile.PhotoX);M->SetScalarParameterValue(TEXT("PhotoY"),HunterProfile.PhotoY);M->SetScalarParameterValue(TEXT("PhotoZoom"),HunterProfile.PhotoZoom);HunterMaterials.Add(M);
     }

@@ -36,6 +36,18 @@ GREYSON_ROWS=[(1.420,.055,-.067,384,112,158,211),(1.490,.053,-.080,384,112,158,2
  (1.733,.047,-.043,30,44,128,233),(1.742,.018,-.014,7,94,127,167),
  (1.745,.001,-.003,4,125,127,129)]
 
+# Mark's supplied portrait is 255 x 412. Trace jaw, cheeks and hairline so
+# his moustache, eyes and smile stay on the visible front of the shared rig.
+MARK_ROWS=[(1.420,.055,-.067,411,74,124,174),(1.490,.053,-.080,411,74,124,174),
+ (1.511,.035,-.113,400,86,125,173),(1.520,.050,-.121,384,44,124,199),
+ (1.535,.065,-.125,361,20,123,225),(1.555,.078,-.127,335,5,123,239),
+ (1.575,.083,-.130,304,1,124,246),(1.598,.087,-.132,267,1,127,249),
+ (1.620,.088,-.132,229,1,130,246),(1.644,.087,-.128,187,2,130,245),
+ (1.663,.086,-.119,153,5,129,237),(1.683,.085,-.109,111,12,128,228),
+ (1.703,.079,-.094,70,22,124,220),(1.720,.066,-.072,37,40,121,205),
+ (1.733,.047,-.043,15,57,120,185),(1.742,.018,-.014,3,91,120,145),
+ (1.745,.001,-.003,2,118,120,122)]
+
 def build(person,rows,image_width,image_height,skin_color,hair_color):
     slug=person.lower()
     bpy.ops.wm.open_mainfile(filepath=str(root/'SK_HunterMale.blend'),use_scripts=False)
@@ -124,3 +136,4 @@ selected=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
 if not selected or 'Travis' in selected:build('Travis',TRAVIS_ROWS,363,529,(.44,.29,.235,1),(.044,.032,.025,1))
 if not selected or 'Ethan' in selected:build('Ethan',ETHAN_ROWS,540,595,(.30,.25,.24,1),(.025,.030,.042,1))
 if not selected or 'Greyson' in selected:build('Greyson',GREYSON_ROWS,271,385,(.48,.34,.30,1),(.070,.056,.043,1))
+if not selected or 'Mark' in selected:build('Mark',MARK_ROWS,255,412,(.46,.32,.28,1),(.045,.032,.023,1))

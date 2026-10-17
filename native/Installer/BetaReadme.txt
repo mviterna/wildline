@@ -1,13 +1,20 @@
 WILDLINE - FRIENDS BETA
 
 Install
-Run Wildline-*-Setup.exe. The game installs for your Windows account. Setup asks
+Run WildlineSetup.exe to download the latest beta, or Wildline-*-Setup.exe for
+the self-contained offline installer. The game installs for your Windows account. Setup asks
 for administrator permission only if shared Microsoft runtimes need installing.
-All runtime installers are bundled; no download,
+All runtime installers are bundled in the full game installer; no additional runtime download,
 Unreal Engine, Epic Games Launcher, Node.js or developer tools are needed.
 Launch WILDLINE Beta from the Start menu or the optional desktop shortcut.
-To update, run the new setup EXE. It detects the previous installation and
-replaces the game files in the same folder, including older packaged content.
+The launcher checks the public beta feed when opened and downloads verified
+updates automatically. If offline it starts the installed game. The Start menu
+also has an offline shortcut. Downloads can be several GB; completed parts are
+reused when retrying. Close the game before installing an update.
+Game versions live in separate folders. Setup verifies a new version before
+selecting it, keeping the previous version available. On an update error the
+launcher offers Play installed and Previous version when available.
+You can also update or repair by running the full setup EXE again.
 Your saved settings and hunter portrait are preserved. No uninstall is needed.
 Uninstall through Windows Settings > Apps > Installed apps.
 
@@ -35,10 +42,12 @@ Internet co-op needs UDP 7777 forwarded to the host, or a shared gaming VPN.
 No matchmaking, accounts or automatic NAT traversal is available yet.
 
 Feedback
-Send the beta version from BetaBuild.json, your Windows/GPU details, what you
+Send the beta version from versions/<current.version>/BetaBuild.json, your Windows/GPU details, what you
 did, what happened, and a screenshot when useful. Logs and crash reports are
 under %LOCALAPPDATA%\Wildline\Saved\Logs and Saved\Crashes.
 Settings and your hunter portrait stay in %LOCALAPPDATA%\Wildline\Saved.
+Launcher logs are in %LOCALAPPDATA%\Wildline\LauncherLogs. Update installation
+logs are in %LOCALAPPDATA%\Wildline\Updates/<version>/install.log.
 Uninstall preserves these personal files. Logs may contain network addresses;
 review them before sharing. This is a Development beta so diagnostics remain
 available. Asset credits and third-party notices are installed with the game.

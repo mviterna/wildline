@@ -37,15 +37,27 @@ duration/skip, cleanup and gameplay entry, and capture the studio logo and menu.
 Double-click **Build Windows Game.cmd** or **Build Beta Installer.cmd**. Both
 rebuild/cook the current native game and produce a single
 `Wildline-<version>-Setup.exe` in `native/Build/Beta`,
-alongside a SHA-256 checksum and `BetaReadme.txt`. Send the setup EXE; the runtimes
-and testing guide are embedded. This is a Development beta with diagnostic logs.
+alongside a SHA-256 checksum, `BetaReadme.txt`, and the small online installer
+`WildlineSetup.exe`. The full setup EXE embeds the runtimes and testing guide.
+This is a Development beta with diagnostic logs.
 
 Every Windows packaged build includes this installer; installer failure fails
-the build. Run a newer setup EXE to update: it detects the previous installation,
-reuses its folder and overwrites the game files, even for the same version.
-Old packaged engine/binary/content/config files are removed before replacement
-so obsolete cooked archives cannot survive. Saved settings and hunter portraits
-are preserved; no manual uninstall is needed.
+the build. Installed shortcuts open the updater launcher, which checks the
+signed beta feed at [wildline-downloads](https://github.com/mviterna/wildline-downloads).
+Updates download in verified parts and use the same prerequisite-checking setup.
+Different game versions have separate folders; setup verifies the new payload
+before switching the active version and retaining the previous one. Re-running
+the same full setup repairs its packaged trees. Saves and portraits are preserved.
+The Start menu includes an offline shortcut. The development **WILDLINE** shortcut
+continues to select local packages through `LaunchNative.ps1`.
+
+Run **Publish Windows Beta.cmd** to build locally, verify the installers, and
+publish a beta to the public download repository. Use an account without a
+registered beta install for these lifecycle checks. Normal build commands never
+upload. The permanent friend download is
+[WildlineSetup.exe](https://github.com/mviterna/wildline-downloads/releases/download/beta/WildlineSetup.exe).
+See [the update workflow](native/Launcher/README.md) for signing-key recovery,
+release checks, rollback, and online installation verification.
 
 Setup checks 64-bit Intel/AMD Windows, Windows updates, DirectX 12 availability
 and free disk space. It compares installed Visual C++ x64 and GameInput DLL
@@ -115,7 +127,7 @@ Graphics always use the high-quality configuration with 100% render resolution a
 
 ## Create your hunter
 
-Choose **Create / Edit Hunter** at camp. Start with **Custom hunter**, **Travis**, **Ethan**, or **Greyson**, then customize field clothing, cap, body slimness, skin tone and face width. Travis, Ethan and Greyson use their supplied photographs on simple curved heads with no modeled facial features underneath. Hair, facial-hair and nose controls are disabled for those photo heads. All three start with camouflage and blaze-orange torso panels. Custom hunters also offer male/female bodies, hair color and nose shape. Full-body and face close-up views update live, with buttons to turn the preview. **Save Hunter** keeps the appearance for your expeditions; **Cancel** keeps the previous saved hunter. Previously saved Travis 2 profiles now load Travis.
+Choose **Create / Edit Hunter** at camp. Start with **Custom hunter**, **Travis**, **Ethan**, **Greyson**, or **Mark**, then customize field clothing, cap, body slimness, skin tone and face width. The four named hunters use their supplied photographs on simple curved heads with no modeled facial features underneath. Hair, facial-hair and nose controls are disabled for those photo heads. Travis, Ethan and Greyson start with camouflage and blaze-orange torso panels; Mark starts in woodland olive at adult height. Face materials preserve detail in shade, the portrait uses soft face-level lighting, and the rifle pose keeps the head upright. Custom hunters also offer male/female bodies, hair color and nose shape. Full-body and face close-up views update live, with buttons to turn the preview. **Save Hunter** keeps the appearance for your expeditions; **Cancel** keeps the previous saved hunter. Previously saved Travis 2 profiles now load Travis.
 
 **Choose PNG / JPEG** opens the native Windows image picker. Use a clear front-facing portrait, then align and crop it against the live face close-up. The image supplies photographic appearance on the selected 3D head; a single photo does not reconstruct an entire head. Portraits are resized locally and saved as a compact JPEG in the game's `Saved/Profiles/HunterFace.jpg`. Your appearance and face texture are shared with players in that co-op session, including late joiners. No external photo-processing service is used.
 

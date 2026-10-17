@@ -1,4 +1,4 @@
-param([switch]$Capture,[int[]]$Rates=@(30,60,120),[ValidateSet('Travis','Ethan','Greyson')][string[]]$Presets=@('Travis'))
+param([switch]$Capture,[int[]]$Rates=@(30,60,120),[ValidateSet('Travis','Ethan','Greyson','Mark')][string[]]$Presets=@('Travis'))
 $ErrorActionPreference='Stop'
 $taskGame=Join-Path $PSScriptRoot 'Build/Windows/Wildline/Binaries/Win64/Wildline.exe'
 if(!(Test-Path -LiteralPath $taskGame)){throw 'Build the Windows game first.'}

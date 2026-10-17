@@ -20,7 +20,16 @@ def import_photo_hunter(person,skin_color,hair_color):
     puv=custom(m,'return (U-.5)/max(.1,Z)+float2(.5+X,.5+Y);',{'U':puv,'Z':scalar('PhotoZoom',1),'X':scalar('PhotoX',0),'Y':scalar('PhotoY',0)},ue.CustomMaterialOutputType.CMOT_FLOAT2)
     photo=node(m,ue.MaterialExpressionTextureSampleParameter2D,parameter_name='FacePhoto',texture=tex);connect(puv,photo,'UVs')
     skin=node(m,ue.MaterialExpressionVectorParameter,parameter_name='SkinTint',default_value=ue.LinearColor(1,1,1,1))
-    c=custom(m,'return lerp(C,P,H)*S*.52;',{'C':(ref,'RGB'),'P':(photo,'RGB'),'H':scalar('HasPhoto',0),'S':(skin,'RGB')});prop(c,ue.MaterialProperty.MP_BASE_COLOR);constant(m,1,ue.MaterialProperty.MP_ROUGHNESS);constant(m,0,ue.MaterialProperty.MP_SPECULAR);finish(m)
+    c=custom(m,'return pow(saturate(lerp(C,P,H)),1.15)*S;',{'C':(ref,'RGB'),'P':(photo,'RGB'),'H':scalar('HasPhoto',0),'S':(skin,'RGB')})
+    prop(c,ue.MaterialProperty.MP_BASE_COLOR)
+    # A small exposure-compensated fill keeps facial details readable in shade.
+    # Default-lit shading still supplies shape and directional illumination.
+    fill=custom(m,'return C*F;',{'C':c,'F':scalar('FaceFill',.055)})
+    adapted=node(m,ue.MaterialExpressionEyeAdaptationInverse)
+    inputs=mel.get_material_expression_input_names(adapted)
+    assert len(inputs)==2,inputs
+    connect(fill,adapted,str(inputs[0]));connect(scalar('FaceFillExposure',1),adapted,str(inputs[1]));prop(adapted,ue.MaterialProperty.MP_EMISSIVE_COLOR)
+    constant(m,1,ue.MaterialProperty.MP_ROUGHNESS);constant(m,0,ue.MaterialProperty.MP_SPECULAR);finish(m)
     for name,col in [(f'M_{person}Skin',skin_color),(f'M_{person}Hair',hair_color)]:
         m=fresh(name);c=node(m,ue.MaterialExpressionVectorParameter,parameter_name='Tint',default_value=ue.LinearColor(*col))
         tone=node(m,ue.MaterialExpressionVectorParameter,parameter_name='SkinTint',default_value=ue.LinearColor(1,1,1,1))
@@ -44,10 +53,11 @@ if old and any('M_TravisHead' in s.material_interface.get_name() for s in old.ge
     assert eal.delete_asset(base+'/Meshes/SK_HunterTravis')
 selection=re.search(r'-PhotoHunters=(\w+)',ue.SystemLibrary.get_command_line())
 selected=selection.group(1) if selection else None
-assert selected in [None,'Travis','Ethan','Greyson'],selected
+assert selected in [None,'Travis','Ethan','Greyson','Mark'],selected
 if not selected or selected=='Travis':import_photo_hunter('Travis',(.26,.16,.125,1),(.033,.024,.018,1))
 if not selected or selected=='Ethan':import_photo_hunter('Ethan',(.16,.125,.12,1),(.015,.018,.025,1))
 if not selected or selected=='Greyson':import_photo_hunter('Greyson',(.29,.20,.17,1),(.045,.035,.027,1))
+if not selected or selected=='Mark':import_photo_hunter('Mark',(.28,.19,.16,1),(.035,.025,.018,1))
 
 # Retire the detailed variant and the old comparison names from cooked content.
 retired=['Meshes/SK_HunterTravis2','Textures/T_Travis2Face','Textures/T_TravisMH_Basecolor','Textures/T_TravisMH_Normal']

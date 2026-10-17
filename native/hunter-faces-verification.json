@@ -1,0 +1,61 @@
+{
+  "character": "Mark",
+  "presetId": 5,
+  "sourceImage": "C:/Users/mvite/Downloads/mark.png",
+  "sourceSha256": "395E59433A816B2CEDD8D485BC5DD2F942A9E2BC359B3B61F2041EC00843FEF7",
+  "changes": [
+    "Built-in rigged Mark portrait, adult height and customization",
+    "Face contrast, soft portrait lighting and game-world face fill",
+    "Upright connected neck/head while carrying the rifle"
+  ],
+  "packagedBuild": "C:\\_git\\wildline\\native\\Build\\Windows",
+  "desktopLauncher": "native/LaunchNative.ps1",
+  "desktopSelectsLatestBuild": true,
+  "checks": {
+    "persistedAssets": "PASS",
+    "profileAutomation": "PASS",
+    "cookedSmoke": "PASS",
+    "finalPackagedVisualReview": "PASS",
+    "animation60fps": {
+      "Mark": "PASS",
+      "Greyson": "PASS",
+      "Ethan": "PASS",
+      "Travis": "PASS"
+    },
+    "diffCheck": "PASS",
+    "finalInstallerChecksums": "PASS"
+  },
+  "installer": {
+    "version": "0.2.0-beta.20261017.090245",
+    "sequence": 1792242165,
+    "setupPath": "C:\\_git\\wildline\\native\\Build\\Beta\\Wildline-0.2.0-beta.20261017.090245-Setup.exe",
+    "sha256": "200141EF9FAA82DA70EA68148B126989B41A06AC97AFD849EB9B6EF7E3161E8D",
+    "size": 3235940857,
+    "bootstrapPath": "C:\\_git\\wildline\\native\\Build\\Beta\\WildlineSetup.exe",
+    "bootstrapSha256": "7378E0C101824CDD3141E13DFCBE4094FA7D6105737A3F534852E4A5175ED1B5"
+  },
+  "installerLifecycle": {
+    "result": "PASS",
+    "testedVersion": "0.2.0-beta.20261017.085649",
+    "note": "Installer code unchanged in final release; final game head-pose change separately validated in the packaged release.",
+    "evidence": {
+      "passed": true,
+      "sha256": "9E84DF2CD475124422995113EB8ECA56BA5C4EEBC5EF78022EFBDE7487A865F7",
+      "bootstrapSha256": "BAF2BA71AC7BF66241685028BEED5616CE098F174D4D4A95A19AC9B9A732F42B",
+      "checkedAtUtc": "2026-10-17T09:06:55.8316031-04:00",
+      "logs": "C:\\_git\\wildline\\native\\Build\\InstallerVerification\\d92d1c51ad7b4a3cb8f58aa278c1f517"
+    },
+    "cleanMachinePrerequisitesTested": false
+  },
+  "captures": [
+    "HunterFacesTravis.png",
+    "HunterFacesEthan.png",
+    "HunterFacesGreyson.png",
+    "MarkFace.png",
+    "MarkThreeQuarter.png",
+    "MarkCreator.png",
+    "MarkCustomized.png",
+    "MarkInGame.png"
+  ],
+  "checkedAtUtc": "2026-10-17T13:07:40.6148118+00:00"
+}

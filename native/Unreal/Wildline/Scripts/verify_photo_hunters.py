@@ -2,9 +2,9 @@
 import unreal as ue
 eal=ue.EditorAssetLibrary
 base='/Game/Wildline/Hunters/'
-for name in ['SK_HunterMale','SK_HunterFemale','SK_HunterTravis','SK_HunterEthan','SK_HunterGreyson']:
+for name in ['SK_HunterMale','SK_HunterFemale','SK_HunterTravis','SK_HunterEthan','SK_HunterGreyson','SK_HunterMark']:
     mesh=eal.load_asset(base+'Meshes/'+name);assert mesh
-    photo=name in ['SK_HunterTravis','SK_HunterEthan','SK_HunterGreyson']
+    photo=name in ['SK_HunterTravis','SK_HunterEthan','SK_HunterGreyson','SK_HunterMark']
     morphs=[m.get_name() for m in mesh.get_editor_property('morph_targets')]
     expected=['FaceWidth','SlimBuild'] if photo else ['FaceWidth','NoseDepth','SlimBuild']
     assert all(m in morphs for m in expected),(name,morphs)

@@ -22,14 +22,15 @@ struct FWildlineHunterProfile {
     // ID 2 belonged to Travis 2. Keep it reserved for saved-profile migration.
     static FWildlineHunterProfile Ethan(){auto P=Travis();P.Preset=3;P.Hair=1;return P;}
     static FWildlineHunterProfile Greyson(){auto P=Travis();P.Preset=4;return P;}
-    bool IsPhotoPreset() const {return Body==0&&(Preset==1||Preset==3||Preset==4);}
+    static FWildlineHunterProfile Mark(){auto P=Travis();P.Preset=5;P.Outfit=0;P.Slimness=.25f;return P;}
+    bool IsPhotoPreset() const {return Body==0&&(Preset==1||Preset==3||Preset==4||Preset==5);}
     // Uncapped photo heads are 174.5 cm in the shared source rig.
     float HeightScale() const {return Body==0?(Preset==3?71.4f/174.5f:Preset==4?110.4f/174.5f:1.f):1.f;}
     // Part scales are relative to the body, and fingers/toes inherit them.
     float HandScale() const {return Body==0?(Preset==3?.72f:Preset==4?.82f:1.f):1.f;}
     float FootScale() const {return Body==0?(Preset==3?.75f:Preset==4?.84f:1.f):1.f;}
-    int32 PresetOptionIndex() const {return Preset==4?3:Preset==3?2:Preset==1?1:0;}
-    void Clamp(){Preset=FMath::Clamp(Preset,0,4);if(Preset==2)Preset=1;if(IsPhotoPreset())bBeard=false;Body=FMath::Clamp(Body,0,1);Outfit=FMath::Clamp(Outfit,0,2);Hair=FMath::Clamp(Hair,0,2);Slimness=FMath::Clamp(Slimness,0.f,1.f);SkinTone=FMath::Clamp(SkinTone,0.f,1.f);FaceWidth=FMath::Clamp(FaceWidth,-1.f,1.f);NoseDepth=FMath::Clamp(NoseDepth,-1.f,1.f);PhotoX=FMath::Clamp(PhotoX,-.5f,.5f);PhotoY=FMath::Clamp(PhotoY,-.5f,.5f);PhotoZoom=FMath::Clamp(PhotoZoom,.5f,4.f);}
+    int32 PresetOptionIndex() const {return Preset==5?4:Preset==4?3:Preset==3?2:Preset==1?1:0;}
+    void Clamp(){Preset=FMath::Clamp(Preset,0,5);if(Preset==2)Preset=1;Body=FMath::Clamp(Body,0,1);if(IsPhotoPreset())bBeard=false;Outfit=FMath::Clamp(Outfit,0,2);Hair=FMath::Clamp(Hair,0,2);Slimness=FMath::Clamp(Slimness,0.f,1.f);SkinTone=FMath::Clamp(SkinTone,0.f,1.f);FaceWidth=FMath::Clamp(FaceWidth,-1.f,1.f);NoseDepth=FMath::Clamp(NoseDepth,-1.f,1.f);PhotoX=FMath::Clamp(PhotoX,-.5f,.5f);PhotoY=FMath::Clamp(PhotoY,-.5f,.5f);PhotoZoom=FMath::Clamp(PhotoZoom,.5f,4.f);}
 };
 class UTexture2D;
 namespace WildlinePortrait {

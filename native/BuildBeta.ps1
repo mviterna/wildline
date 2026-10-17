@@ -55,6 +55,8 @@ $taskConfig = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline
 $taskProjectVersion = [regex]::Match($taskConfig, '(?m)^ProjectVersion=([\d.]+)').Groups[1].Value
 if (!$taskProjectVersion) { throw 'ProjectVersion is missing.' }
 $taskBetaVersion = "$taskProjectVersion-beta.$(Get-Date -Format 'yyyyMMdd.HHmmss')"
+$taskSequence = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
+$taskLauncher = & (Join-Path $PSScriptRoot 'Launcher/BuildLauncher.ps1')
 $taskStage = Join-Path $PSScriptRoot "Build/InstallerStage/$taskBetaVersion"
 New-Item -ItemType Directory -Path $taskStage,$taskOutput -Force | Out-Null
 $taskPackagePrefix = [IO.Path]::GetFullPath($taskPackage).TrimEnd('\') + '\'
@@ -80,6 +82,7 @@ foreach ($taskCredit in @(
 }
 $taskBuildInfo = [ordered]@{
     version = $taskBetaVersion
+    sequence = $taskSequence
     builtAt = (Get-Date).ToUniversalTime().ToString('o')
     configuration = 'Development'
     gitCommit = (& git -C $PSScriptRoot rev-parse HEAD)
@@ -94,6 +97,7 @@ $taskBuildInfo | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $
 $taskDefines = @{
     BetaVersion = $taskBetaVersion; PayloadPath = $taskStage; OutputPath = $taskOutput
     RedistPath = $taskRedist; VCVersion = $taskVCVersion; GameInputVersion = $taskGameInputVersion
+    LauncherPath = $taskLauncher
 }
 $taskDefines.GetEnumerator() | ForEach-Object { '#define ' + $_.Key + ' "' + $_.Value + '"' } |
     Set-Content -LiteralPath (Join-Path $taskInstaller 'Generated.iss') -Encoding UTF8
@@ -103,4 +107,13 @@ $taskSetup = Join-Path $taskOutput "Wildline-$taskBetaVersion-Setup.exe"
 Copy-Item -LiteralPath (Join-Path $taskInstaller 'BetaReadme.txt') -Destination $taskOutput -Force
 $taskHash = Get-FileHash -LiteralPath $taskSetup -Algorithm SHA256
 "$($taskHash.Hash)  $([IO.Path]::GetFileName($taskSetup))" | Set-Content -LiteralPath "$taskSetup.sha256" -Encoding ASCII
+& $CompilerPath (Join-Path $taskInstaller 'Bootstrap.iss')
+if ($LASTEXITCODE -ne 0) { throw "Bootstrap installer compiler failed: $LASTEXITCODE" }
+$taskReceipt = [ordered]@{
+    version = $taskBetaVersion; sequence = $taskSequence; setupPath = $taskSetup
+    sha256 = $taskHash.Hash; size = (Get-Item -LiteralPath $taskSetup).Length
+    bootstrapPath = (Join-Path $taskOutput 'WildlineSetup.exe')
+    bootstrapSha256 = (Get-FileHash (Join-Path $taskOutput 'WildlineSetup.exe') -Algorithm SHA256).Hash
+}
+$taskReceipt | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $taskOutput 'LatestInstaller.json') -Encoding UTF8
 Write-Output "Ready to send: $taskSetup"

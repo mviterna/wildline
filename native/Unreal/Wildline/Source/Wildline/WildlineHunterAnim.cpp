@@ -246,10 +246,25 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
             const auto Chest=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(Names.IndexOfByKey(FName(TEXT("spine_02")))));
             if(Chest.GetInt()!=INDEX_NONE){
                 const FVector Shift=Space.GetComponentSpaceTransform(Chest).GetLocation()-UpperSpace.GetComponentSpaceTransform(Chest).GetLocation();
+                // The ADS capture bows and rolls its head against the stock.
+                // Keep the locomotion look direction while carrying the rifle;
+                // vertical aim is shared through the neck/head below.
+                const int32 NeckIndex=Names.IndexOfByKey(FName(TEXT("neck_01"))),HeadIndex=Names.IndexOfByKey(FName(TEXT("head")));
+                const auto Neck=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(NeckIndex));
+                const auto Head=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(HeadIndex));
+                const bool HasHead=Neck.GetInt()!=INDEX_NONE&&Head.GetInt()!=INDEX_NONE;
+                FTransform NeckTarget,HeadTarget;
+                if(HasHead){
+                    NeckTarget=UpperSpace.GetComponentSpaceTransform(Neck);NeckTarget.AddToTranslation(Shift);
+                    NeckTarget.SetRotation(Space.GetComponentSpaceTransform(Neck).GetRotation());
+                    HeadTarget=Output.Pose[Head]*NeckTarget;
+                }
                 TArray<FBoneTransform> Held;
                 for(int32 I=0;I<Names.Num();I++)if(UpperBody[I]){
                     const auto Compact=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(I));if(Compact.GetInt()==INDEX_NONE)continue;
                     FTransform Target=UpperSpace.GetComponentSpaceTransform(Compact);Target.AddToTranslation(Shift);
+                    if(HasHead&&I==NeckIndex)Target=NeckTarget;
+                    else if(HasHead&&I==HeadIndex)Target=HeadTarget;
                     FTransform Blended;Blended.Blend(Space.GetComponentSpaceTransform(Compact),Target,.96f);Held.Emplace(Compact,Blended);
                 }
                 Space.SafeSetCSBoneTransforms(Held);

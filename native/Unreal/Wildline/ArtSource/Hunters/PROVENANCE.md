@@ -54,17 +54,28 @@ UE 5.8 Interchange's runtime skeletal buffers place the portrait projection at U
 
 Logs use twelve original convex collision wall segments, leaving their hollow tunnel open. The engine's legacy FBX importer imports the named UCX hulls; the Interchange path in this engine build skipped them.
 
-The three built-in photo presets use unchanged user-supplied images:
+The four built-in photo presets use unchanged user-supplied images:
 `Textures/travis_reference.png` comes from
 `codex-clipboard-beb6573a-6c4f-41d8-aa30-ca42f8a949fe.png`, and
 `Textures/ethan_reference.png` comes from
 `codex-clipboard-b9766ea3-2551-4f5d-adfd-51417ac71a17.png`, and
 `Textures/greyson_reference.png` comes from
 `codex-clipboard-0ae6cb0e-1d1f-4209-bf4f-a8c7e808fa7e.png` (added 2026-10-08).
+`Textures/mark_reference.png` is an unchanged copy of the user's
+`Downloads/mark.png` (added 2026-10-17; SHA-256
+`395e59433a816b2cedd8d485bc5dd2f942a9e2bc359b3b61f2041ec00843fef7`).
 These are personal reference photos, not CC0 assets or AI-generated textures.
 Original simple head and ear geometry carries each image without modeled
 facial features. Both face UV channels intentionally carry the same coordinates.
 The discarded MetaHuman head, textures, materials and authoring path are removed.
+
+The face materials retain the source photo color and add a small
+exposure-compensated fill so eyes and expressions remain readable in shade.
+They retain default-lit shading. The creator uses two soft lights closer to
+face level. No portrait has been retouched or sent to an external service.
+The rifle layer retains the locomotion neck/head direction and a connected
+neck-to-head chain, so the ADS capture no longer bows and rolls every hunter's
+face into the stock. Vertical aiming still moves the chest, neck and head.
 
 Acorn Hollow's mounted Travis, Ethan and Greyson busts are static derivatives of
 these existing player models. `prepare_hunter_trophies.py` crops below the collar

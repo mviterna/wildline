@@ -77,7 +77,11 @@ bool FWildlinePhotoHuntersTest::RunTest(const FString& Parameters){
     TestTrue(TEXT("Adult proportions remain unchanged"),P.HandScale()==1.f&&P.FootScale()==1.f&&Female.HandScale()==1.f&&Female.FootScale()==1.f);
     G.Outfit=2;G.Slimness=.4f;G.FaceWidth=.2f;G.bCap=true;G.bBeard=true;G.Clamp();
     TestTrue(TEXT("Greyson customization retains the photo preset without an extra beard"),G.Preset==4&&G.Outfit==2&&G.Slimness==.4f&&G.FaceWidth==.2f&&G.bCap&&!G.bBeard);
-    P.Preset=999;P.Slimness=10;P.Clamp();TestEqual(TEXT("Invalid preset clamps"),P.Preset,4);TestEqual(TEXT("Slimness bounded"),P.Slimness,1.f);
+    auto M=FWildlineHunterProfile::Mark();M.Clamp();
+    TestTrue(TEXT("Mark has a stable adult photo preset with its own visible option"),M.Preset==5&&M.PresetOptionIndex()==4&&M.IsPhotoPreset()&&!M.bUsePhoto&&M.HeightScale()==1.f);
+    M.Outfit=2;M.bCap=true;M.bBeard=true;M.Slimness=.6f;M.Clamp();
+    TestTrue(TEXT("Mark retains identity and customization without a second beard"),M.Preset==5&&M.Outfit==2&&M.bCap&&!M.bBeard&&M.Slimness==.6f);
+    P.Preset=999;P.Slimness=10;P.Clamp();TestEqual(TEXT("Invalid preset clamps"),P.Preset,5);TestEqual(TEXT("Slimness bounded"),P.Slimness,1.f);
     const auto Reset=FWildlineHunterProfile::Travis();TestTrue(TEXT("Reset restores photo preset defaults"),Reset.Slimness>.7f&&Reset.Outfit==1&&!Reset.bBeard);
     TestEqual(TEXT("Existing hunter default stays custom"),FWildlineHunterProfile().Preset,0);return true;
 }

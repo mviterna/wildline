@@ -369,7 +369,8 @@ void AWildlineController::BeginPlay(){
             FString Preset;FParse::Value(FCommandLine::Get(),TEXT("WildlineHunterPreset="),Preset);
             const float ExpectedHeight=Preset==TEXT("Ethan")?71.4f:Preset==TEXT("Greyson")?110.4f:174.5f;
             if(Preset==TEXT("Ethan"))P->HunterProfile=FWildlineHunterProfile::Ethan();
-            if(Preset==TEXT("Greyson"))P->HunterProfile=FWildlineHunterProfile::Greyson();
+            else if(Preset==TEXT("Mark"))P->HunterProfile=FWildlineHunterProfile::Mark();
+            else if(Preset==TEXT("Greyson"))P->HunterProfile=FWildlineHunterProfile::Greyson();
             const float FeetZ=P->GetActorLocation().Z-P->GetCapsuleComponent()->GetScaledCapsuleHalfHeight();P->ApplyHunterProfile();
             const float Scale=P->HunterProfile.HeightScale();
             Check(FMath::IsNearlyEqual(static_cast<float>(P->GetActorScale3D().Z)*174.5f,ExpectedHeight,.01f),TEXT("selected hunter uses its intended standing height"));
@@ -468,6 +469,36 @@ void AWildlineController::BeginPlay(){
         At(39,[this](){Menu->Creator->PreviewAngle=0;Menu->Creator->FullBody();});
         At(44,[Shot](){Shot(TEXT("EthanCreator.png"));});
         At(46,[](){FPlatformMisc::RequestExit(false);});
+    }
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHunterFacesReview"))){
+        auto At=[this](float Seconds,TFunction<void()> Action){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Action](){Action();}),Seconds,false);};
+        auto Shot=[](const TCHAR* Name){FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows")/Name,true,false);};
+        At(3,[this](){Menu->CreateHunter();Menu->Creator->LoadTravisPreset();Menu->Creator->FaceView();});
+        At(8,[Shot](){Shot(TEXT("HunterFacesTravis.png"));});
+        At(10,[this](){Menu->Creator->LoadEthanPreset();});
+        At(15,[Shot](){Shot(TEXT("HunterFacesEthan.png"));});
+        At(17,[this](){Menu->Creator->LoadGreysonPreset();});
+        At(22,[Shot](){Shot(TEXT("HunterFacesGreyson.png"));});
+        At(24,[this](){Menu->Creator->PresetChanged(TEXT("Mark"),ESelectInfo::Direct);});
+        At(29,[Shot](){Shot(TEXT("MarkFace.png"));});
+        At(31,[this](){Menu->Creator->TurnRight();Menu->Creator->TurnRight();});
+        At(36,[Shot](){Shot(TEXT("MarkThreeQuarter.png"));});
+        At(38,[this](){auto* C=Menu->Creator;C->PreviewAngle=0;C->FullBody();Cast<UWildlineChoice>(C->PresetCombo)->SetMenuOpen(true);});
+        At(43,[Shot](){Shot(TEXT("MarkCreator.png"));});
+        At(45,[this](){auto* C=Menu->Creator;Cast<UWildlineChoice>(C->PresetCombo)->SetMenuOpen(false);C->Pending.Outfit=2;C->Pending.bCap=true;C->SyncControls();C->RefreshPreview();C->FaceView();});
+        At(50,[Shot](){Shot(TEXT("MarkCustomized.png"));});
+        At(52,[this](){
+            Menu->Creator->ResetPreset();Menu->Creator->Cancel();ChooseRole(false);
+            auto* P=Cast<AWildlineCharacter>(GetPawn());P->bProfileSubmitted=true;P->bThirdPerson=true;
+            P->HunterProfile=FWildlineHunterProfile::Mark();P->ApplyHunterProfile();
+            P->SetActorLocation(FVector(-900,1400,WildlineRules::Ground(-900,1400)+96));P->SetActorRotation(FRotator::ZeroRotator);SetControlRotation(FRotator::ZeroRotator);
+            P->GetMesh()->SetOwnerNoSee(false);P->WorldRifle->SetVisibility(false);P->WorldBolt->SetVisibility(false);
+            GetWorld()->GetGameState<AWildlineGameState>()->bRoundStarted=false;
+            auto* Camera=GetWorld()->SpawnActor<ACameraActor>();Camera->SetActorLocation(P->GetActorLocation()+FVector(105,0,68));
+            Camera->SetActorRotation((P->GetActorLocation()+FVector(0,0,65)-Camera->GetActorLocation()).Rotation());SetViewTarget(Camera);
+        });
+        At(58,[Shot](){Shot(TEXT("MarkInGame.png"));});
+        At(60,[](){FPlatformMisc::RequestExit(false);});
     }
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHunterHeightReview"))){
         auto At=[this](float Seconds,TFunction<void()> Action){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Action](){Action();}),Seconds,false);};
@@ -675,6 +706,12 @@ void AWildlineController::RunSmokeTest(){
     Check(GreysonPhoto&&P->GetMesh()->GetSkeletalMeshAsset()->FindMorphTarget(TEXT("SlimBuild"))&&CheckGrip(),TEXT("Greyson retains its cooked photo material, build morph and rifle grips"));
     auto EditedGreyson=P->HunterProfile;EditedGreyson.Outfit=0;EditedGreyson.Slimness=.3f;EditedGreyson.bCap=true;P->ServerSetHunterProfile(EditedGreyson,FString());
     Check(P->HunterProfile.Preset==4&&P->HunterProfile.Outfit==0&&FMath::IsNearlyEqual(P->GetMesh()->GetMorphTarget(TEXT("SlimBuild")),.3f),TEXT("customizing Greyson retains its built-in photo head"));
+    P->ServerSetHunterProfile(FWildlineHunterProfile::Mark(),FString());
+    Check(P->GetMesh()->GetSkeletalMeshAsset()->GetName()==TEXT("SK_HunterMark")&&!P->HunterFaceTexture&&!P->HunterProfile.bBeard,TEXT("Mark selects its cooked face without an upload"));
+    bool MarkPhoto=false;for(auto* M:P->HunterMaterials)if(M&&M->GetBaseMaterial()->GetName()==TEXT("M_MarkPhoto"))MarkPhoto=true;
+    Check(MarkPhoto&&P->GetMesh()->GetSkeletalMeshAsset()->FindMorphTarget(TEXT("SlimBuild"))&&CheckGrip(),TEXT("Mark retains its cooked portrait, build morph and rifle grips"));
+    auto EditedMark=P->HunterProfile;EditedMark.Outfit=2;EditedMark.bCap=true;EditedMark.Slimness=.6f;P->ServerSetHunterProfile(EditedMark,FString());
+    Check(P->HunterProfile.Preset==5&&P->HunterProfile.Outfit==2&&P->HunterProfile.bCap&&FMath::IsNearlyEqual(P->GetMesh()->GetMorphTarget(TEXT("SlimBuild")),.6f),TEXT("customizing Mark retains its built-in face"));
     auto LegacyTravis=FWildlineHunterProfile::Travis();LegacyTravis.Preset=2;LegacyTravis.Outfit=2;P->ServerSetHunterProfile(LegacyTravis,FString());
     Check(P->HunterProfile.Preset==1&&P->HunterProfile.Outfit==2&&P->GetMesh()->GetSkeletalMeshAsset()->GetName()==TEXT("SK_HunterTravis"),TEXT("saved Travis 2 migrates to Travis while retaining outfit"));
     bool TravisPhoto=false;for(auto* M:P->HunterMaterials)if(M&&M->GetBaseMaterial()->GetName()==TEXT("M_TravisPhoto"))TravisPhoto=true;
