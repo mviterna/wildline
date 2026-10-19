@@ -1,0 +1,120 @@
+{
+  "verifiedAtUtc": "2026-10-19T12:28:25.6740082+00:00",
+  "status": "PASS",
+  "sourceCommit": "98a6a74bf4df9d2d584a25d827bec71cbd7207a4",
+  "features": [
+    "Squirrel weapon hitbox difficulty 1-100",
+    "Editable hunter height, weight/build, width, depth, hands, feet, head/face",
+    "Named hunter defaults and legacy save migration",
+    "Co-op body replication"
+  ],
+  "releaseVersion": "0.2.0-beta.20261017.193434",
+  "releaseUrl": "https://github.com/mviterna/wildline-downloads/releases/tag/v0.2.0-beta.20261017.193434",
+  "updaterUrl": "https://github.com/mviterna/wildline-downloads/releases/download/beta/WildlineSetup.exe",
+  "publicFeedAdvanced": true,
+  "installerSha256": "991CA4032652CF8E2EFA61A3018820AFCDE762BEA81D578FBE0F48513EAF3B21",
+  "bootstrapSha256": "FEC2FDF112908309655CC743835D895AE7CDCEC74301E31929F370E1332BD999",
+  "gameExeSha256": "CA8AFC46D7F22DEFF862776FB823333B44E047754A3B3DB3693AA1825EC2B5F6",
+  "buildProvenance": "Packaged and feature-tested before committing; installer metadata records the prior base commit plus working-tree changes. All feature sources were committed as sourceCommit.",
+  "featureVerificationReports": [
+    "native/squirrel-hitbox-verification.json",
+    "native/hunter-body-settings-verification.json"
+  ],
+  "updaterIntegrityChecks": 23,
+  "updaterIntegrityResult": "PASS signing, shipped trust key, split reconstruction, cache corruption, activation, rollback and save preservation",
+  "installerLifecycle": {
+    "passed": true,
+    "checkedAtUtc": "2026-10-19T08:07:55.0469266-04:00",
+    "logs": "native/Build/InstallerVerification/1fe365114e444a93ab5921b1b1d716ed",
+    "cases": [
+      "Install path with spaces",
+      "Upgrade finds registered location",
+      "Payload hashes",
+      "Stale content cleanup",
+      "Missing executable repair",
+      "Same-version reinstall prevents duplicate installation",
+      "Save preservation",
+      "Updater shortcuts",
+      "Classic, Farmstead, Neighborhood and intro smoke",
+      "Full and bootstrap uninstall"
+    ]
+  },
+  "versionedSetup": {
+    "passed": true,
+    "logs": "native/Build/VersionedSetupVerification/fd789d2bcd884308a4f59b52f29e6a2a",
+    "cases": [
+      "Activate verified new version",
+      "Retain previous payload",
+      "Reject corrupt payload without changing active version",
+      "Rollback to verified previous version"
+    ]
+  },
+  "publicUpdater": {
+    "passed": true,
+    "checkedAtUtc": "2026-10-19T08:27:11.3608553-04:00",
+    "logs": "native/Build/OnlineInstallerVerification/5296ce8a215a48939a5f9e8844ec901a",
+    "firstRespondingGamePid": 22628,
+    "cases": [
+      "Public bootstrap download and hash",
+      "Signed live feed",
+      "Fresh four-part download and verification",
+      "Byte-exact installer assembly",
+      "Setup helper install and activation",
+      "Responding actual game",
+      "Large download cache cleanup",
+      "Current-version launch without reinstall",
+      "Explicit offline launch",
+      "Uninstall"
+    ]
+  },
+  "restoredUserInstallation": {
+    "passed": true,
+    "version": "0.2.0-beta.20261017.112938",
+    "checkedAtUtc": "2026-10-19T08:27:33.8266399-04:00",
+    "installedFilesHashVerified": 118,
+    "savedFilesHashVerified": 36,
+    "registrationRestored": true,
+    "originalDesktopShortcutHashVerified": true,
+    "backup": "native/Build/ReleaseWork/PreservedBeta-20261019-075758",
+    "readyForUserUpdaterTest": true
+  },
+  "uploadedAssets": [
+    {
+      "name": "latest.json",
+      "size": 1734,
+      "sha256": "a127dcc767b8c337da791f53542c7b7f8eae6a3172c1ddf4a96b52cbe59d8508",
+      "remoteVerified": true
+    },
+    {
+      "name": "Wildline-0.2.0-beta.20261017.193434-Setup.exe.part000",
+      "size": 1073741824,
+      "sha256": "1b1a05748e2be22ef6468741cb3eb3fb31f36c4ecff32c5066581ce0e5900234",
+      "remoteVerified": true
+    },
+    {
+      "name": "Wildline-0.2.0-beta.20261017.193434-Setup.exe.part001",
+      "size": 1073741824,
+      "sha256": "3bf933f822728cbae2640da900b79d5926c2b724685171fb6861f33fab3c5792",
+      "remoteVerified": true
+    },
+    {
+      "name": "Wildline-0.2.0-beta.20261017.193434-Setup.exe.part002",
+      "size": 1073741824,
+      "sha256": "b7e56a721b141843c47154eec14e5c6570ced7574b3cb6e658be6d2fe2f751ed",
+      "remoteVerified": true
+    },
+    {
+      "name": "Wildline-0.2.0-beta.20261017.193434-Setup.exe.part003",
+      "size": 14724799,
+      "sha256": "3fd13e96130191e15e4d698d528fc68720f70e2e858d67924d7609fe56870bda",
+      "remoteVerified": true
+    },
+    {
+      "name": "WildlineSetup.exe",
+      "size": 2109467,
+      "sha256": "fec2fdf112908309655cc743835d895ae7cdcec74301e31929f370e1332bd999",
+      "remoteVerified": true
+    }
+  ],
+  "cleanMachinePrerequisitesTested": false
+}
