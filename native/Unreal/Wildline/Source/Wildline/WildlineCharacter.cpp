@@ -41,6 +41,10 @@ AWildlineCharacter::AWildlineCharacter(){
     ViewBolt=CreateDefaultSubobject<UStaticMeshComponent>(TEXT("First person bolt"));ViewBolt->SetupAttachment(ViewRifle);ViewBolt->SetOnlyOwnerSee(true);ViewBolt->SetCollisionEnabled(ECollisionEnabled::NoCollision);ViewBolt->SetCastShadow(false);
     WorldBolt=CreateDefaultSubobject<UStaticMeshComponent>(TEXT("World bolt"));WorldBolt->SetupAttachment(WorldRifle);WorldBolt->SetCollisionEnabled(ECollisionEnabled::NoCollision);
     AnimalRoot=CreateDefaultSubobject<USceneComponent>(TEXT("Squirrel body"));AnimalRoot->SetupAttachment(RootComponent);
+    SquirrelHitbox=CreateDefaultSubobject<UCapsuleComponent>(TEXT("Squirrel weapon hitbox"));SquirrelHitbox->SetupAttachment(RootComponent);
+    SquirrelHitbox->InitCapsuleSize(7,12);SquirrelHitbox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+    SquirrelHitbox->SetCollisionResponseToAllChannels(ECR_Ignore);SquirrelHitbox->SetCollisionResponseToChannel(ECC_Visibility,ECR_Block);
+    SquirrelHitbox->SetGenerateOverlapEvents(false);SquirrelHitbox->SetCanEverAffectNavigation(false);
     static ConstructorHelpers::FObjectFinder<USkeletalMesh> Human(TEXT("/Game/Characters/Mannequins/Meshes/SKM_Manny_Simple.SKM_Manny_Simple"));
     HumanMeshAsset=Human.Object;
     static ConstructorHelpers::FObjectFinder<USkeletalMesh> Squirrel(TEXT("/Game/Wildline/Squirrel/SK_Squirrel.SK_Squirrel"));SquirrelMeshAsset=Squirrel.Object;
@@ -67,6 +71,7 @@ void AWildlineCharacter::ConfigureRole(){
     if(bSquirrel)SetActorScale3D(FVector::OneVector);
     // The authored animal is 42.5 cm nose to tail; 1.15 gives 48.9 cm overall.
     GetCapsuleComponent()->SetCapsuleSize(bSquirrel?7.f:38.f,bSquirrel?12.f:96.f);
+    UpdateSquirrelHitbox();
     AnimalRoot->SetRelativeTransform(FTransform::Identity);
     GetMesh()->SetSkeletalMesh(bSquirrel?SquirrelMeshAsset:HumanMeshAsset);
     GetMesh()->EmptyOverrideMaterials();
@@ -164,9 +169,18 @@ void AWildlineCharacter::ServerSetHunterProfile_Implementation(FWildlineHunterPr
     HunterProfile=Profile;HunterFaceData=FaceData;ApplyHunterProfile();ForceNetUpdate();
 }
 void AWildlineCharacter::OnRepRole(){ConfigureRole();}
+void AWildlineCharacter::UpdateSquirrelHitbox(){
+    // Only weapon/visibility queries use this shape. Movement keeps its original capsule.
+    const float Scale=MatchRules().SquirrelHitboxScale();
+    if(!FMath::IsNearlyEqual(SquirrelHitbox->GetUnscaledCapsuleRadius(),7.f*Scale))SquirrelHitbox->SetCapsuleSize(7.f*Scale,12.f*Scale,false);
+    const auto Collision=bSquirrel&&!bDead?ECollisionEnabled::QueryOnly:ECollisionEnabled::NoCollision;
+    if(SquirrelHitbox->GetCollisionEnabled()!=Collision)SquirrelHitbox->SetCollisionEnabled(Collision);
+    GetCapsuleComponent()->SetCollisionResponseToChannel(ECC_Visibility,bSquirrel||bDead?ECR_Ignore:ECR_Block);
+}
 void AWildlineCharacter::OnRepDead(){
     if(bDead){GetCharacterMovement()->StopMovementImmediately();GetCharacterMovement()->SetMovementMode(MOVE_Falling);GetCapsuleComponent()->SetCollisionResponseToChannel(ECC_Visibility,ECR_Ignore);TreeIndex=INDEX_NONE;AnimalRoot->SetRelativeLocation(FVector(0,0,-7));AnimalRoot->SetRelativeRotation(FRotator(0,0,82));}
     else {GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);GetCharacterMovement()->SetMovementMode(MOVE_Walking);AnimalRoot->SetRelativeTransform(FTransform::Identity);GetCapsuleComponent()->SetCollisionResponseToChannel(ECC_Visibility,ECR_Block);}
+    UpdateSquirrelHitbox();
 }
 void AWildlineCharacter::SetupPlayerInputComponent(UInputComponent* I){
     Super::SetupPlayerInputComponent(I);
@@ -458,6 +472,7 @@ void AWildlineCharacter::UpdateCamera(float Delta){
 }
 void AWildlineCharacter::Tick(float Delta){
     if(bPreviewHunter)return;
+    UpdateSquirrelHitbox();
     UpdateHeatSignature();
     if(!bSquirrel&&IsLocallyControlled()&&!bProfileSubmitted)SubmitSavedHunterProfile();
     if(!bSquirrel){

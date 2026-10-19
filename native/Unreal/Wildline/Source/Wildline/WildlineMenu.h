@@ -81,6 +81,7 @@ public:
     UPROPERTY() USpinBox* BotTreeSeconds;
     UPROPERTY() UCheckBox* BotClimbing;
     UPROPERTY() USpinBox* SquirrelHealth;
+    UPROPERTY() USpinBox* SquirrelHitbox;
     UPROPERTY() USpinBox* RespawnSeconds;
     UPROPERTY() USpinBox* SpawnProtection;
     UPROPERTY() USpinBox* CarryCapacity;

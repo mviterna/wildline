@@ -1,0 +1,74 @@
+{
+  "verifiedAtUtc": "2026-10-17T22:49:45.3362354Z",
+  "status": "PASS",
+  "baseCommit": "1e8925b639ae319f0ab21b753f5b33a12a91ea99",
+  "setting": {
+    "name": "Squirrel hitbox size",
+    "location": "Match Workshop / Match Rules / Weapons & Hazards",
+    "minimum": 1,
+    "default": 50,
+    "maximum": 100,
+    "minimumScale": 0.5,
+    "defaultScale": 1.0,
+    "maximumScale": 2.0,
+    "savedPerMode": true,
+    "hostControlled": true,
+    "appliesOnFreshMatchOrRestart": true
+  },
+  "editorAutomation": {
+    "passedTests": 11,
+    "log": "native/hitbox-automation.log"
+  },
+  "editorRuntimeVerification": "native/verify-hitbox-editor.log",
+  "packagedModes": [
+    {
+      "map": "Blackwood",
+      "passedChecks": 30,
+      "log": "native/config-Blackwood-package.log"
+    },
+    {
+      "map": "Farmstead",
+      "passedChecks": 30,
+      "log": "native/config-Farmstead-package.log"
+    },
+    {
+      "map": "Neighborhood",
+      "passedChecks": 29,
+      "log": "native/config-Neighborhood-package.log"
+    }
+  ],
+  "packagedNetwork": {
+    "host": "PASS",
+    "client": "PASS",
+    "hostLog": "native/config-net-host.log",
+    "clientLog": "native/config-net-client.log",
+    "clientMovementCapsuleRadius": 6.99,
+    "hostMovementCapsuleRadius": 7,
+    "weaponHitboxRadiusAt100": 14
+  },
+  "packageRoot": "native/Build/Windows",
+  "payloadVerification": {
+    "version": "0.2.0-beta.20261017.184404",
+    "manifestFileCount": 55,
+    "payloadHashes": "PASS",
+    "debugAndSaveExclusions": "PASS",
+    "packageExecutableMatch": "PASS",
+    "exeSha256": "3FF9CFC80BE9CEB0178D008A05361762AC17EEC9C39C8644068F00D8D378AACF",
+    "installerLifecycle": "Not run; existing installed beta preserved",
+    "cleanMachinePrerequisites": "Not tested"
+  },
+  "installer": {
+    "version": "0.2.0-beta.20261017.184404",
+    "sequence": 1792277044,
+    "setupPath": "C:\\_git\\wildline\\native\\Build\\Beta\\Wildline-0.2.0-beta.20261017.184404-Setup.exe",
+    "sha256": "818F801D6AF7E4270D82A021CD2A56AF452686C5FDE107B72CD7AF1B50076FEE",
+    "size": 3235936032,
+    "bootstrapPath": "C:\\_git\\wildline\\native\\Build\\Beta\\WildlineSetup.exe",
+    "bootstrapSha256": "B74981CC37C074E0EFAD9AE530C49D325B3CD4C6B1D0D25D008B5D8E85B4F881"
+  },
+  "preview": "native/Preview/ConfigHitbox.png",
+  "sourcePushed": false,
+  "publishedToBetaFeed": false,
+  "installedBetaVersion": "0.2.0-beta.20261017.112938",
+  "installedBetaModifiedByThisTask": false
+}

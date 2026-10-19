@@ -29,7 +29,7 @@ try {
     foreach($taskCheck in $taskChecks){if((Get-Content -LiteralPath (Join-Path $PSScriptRoot ($taskCheck[0]+'.log')) -Raw) -notmatch $taskCheck[1]){throw "Missing pass marker: $($taskCheck[0])"}}
     if($Capture){
         $taskShots=Join-Path $PSScriptRoot 'Unreal/Wildline/Saved/ConfigProbes/config-package-review/Saved/Screenshots/Windows'
-        foreach($taskName in @('ConfigRules.png','ConfigAdvanced.png','ConfigBots.png','ConfigSettings.png')){Copy-Item -LiteralPath (Join-Path $taskShots $taskName) -Destination (Join-Path $PSScriptRoot "Preview/$taskName") -Force}
+        foreach($taskName in @('ConfigRules.png','ConfigAdvanced.png','ConfigHitbox.png','ConfigBots.png','ConfigSettings.png')){Copy-Item -LiteralPath (Join-Path $taskShots $taskName) -Destination (Join-Path $PSScriptRoot "Preview/$taskName") -Force}
     }
     Write-Output 'Custom rules, exact bot rosters, save/reload, all three modes and host/client replication: PASS'
 } finally {

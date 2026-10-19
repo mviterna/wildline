@@ -6,6 +6,7 @@
 #include "WildlineWeaponFX.h"
 #include "WildlineCharacter.generated.h"
 class UCameraComponent;
+class UCapsuleComponent;
 class USpringArmComponent;
 class UStaticMeshComponent;
 class UProceduralMeshComponent;
@@ -73,6 +74,8 @@ public:
     UFUNCTION() void OnRepHunterProfile();
     UFUNCTION(Server,Reliable) void ServerSetHunterProfile(FWildlineHunterProfile Profile,const FString& FaceData);
     UPROPERTY() USceneComponent* AnimalRoot;
+    UPROPERTY() UCapsuleComponent* SquirrelHitbox;
+    void UpdateSquirrelHitbox();
     UPROPERTY() USkeletalMesh* HumanMeshAsset;
     UPROPERTY() USkeletalMesh* SquirrelMeshAsset;
     UPROPERTY() TArray<UProceduralMeshComponent*> FurSections;

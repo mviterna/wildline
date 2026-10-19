@@ -53,16 +53,27 @@ TSharedRef<SWidget> UWildlineHunterCreator::RebuildWidget(){
     Add(Text(TEXT("Choose your look, then preview it in the field."),11,Muted),16);
     auto Combo=[&](const FString& Label,const TArray<FString>& Options,int32 Index){Add(Text(Label,10,Sage),4);auto* C=WidgetTree->ConstructWidget<UWildlineChoice>();for(const auto& O:Options)C->AddOption(O);C->SetSelectedIndex(Index);Add(C,10);return C;};
     PresetCombo=Combo(TEXT("STARTING PRESET"),{TEXT("Custom hunter"),TEXT("Travis"),TEXT("Ethan"),TEXT("Greyson"),TEXT("Mark")},Pending.PresetOptionIndex());PresetCombo->OnSelectionChanged.AddDynamic(this,&UWildlineHunterCreator::PresetChanged);
-    Add(Text(TEXT("Choose Travis, Ethan, Greyson or Mark, then customize clothing and build."),11,Muted),10);
+    Add(Text(TEXT("Names are starting settings. Keep the default size or build your own adult or smaller hunter."),11,Muted),10);
     auto* Reset=Button(TEXT("RESET SELECTED PRESET"));Reset->OnClicked.AddDynamic(this,&UWildlineHunterCreator::ResetPreset);Add(Reset);
     auto* Body=Combo(TEXT("BODY"),{TEXT("Male hunter"),TEXT("Female hunter")},Pending.Body);BodyCombo=Body;Body->OnSelectionChanged.AddDynamic(this,&UWildlineHunterCreator::BodyChanged);
+    auto Slider=[&](const FString& Label,float Min,float Max,float Value){Add(Text(Label,10,Muted),4);auto* S=WidgetTree->ConstructWidget<USlider>();S->SetMinValue(Min);S->SetMaxValue(Max);S->SetValue(Value);AppearanceSliders.Add(S);Add(S,11);return S;};
+    Add(Text(TEXT("BODY MEASUREMENTS"),14,Sage),10);
+    auto Dimension=[&](float Min,float Max,float Value){auto* Label=Text(TEXT(""),10,Muted);DimensionLabels.Add(Label);Add(Label,4);auto* S=WidgetTree->ConstructWidget<USlider>();S->SetMinValue(Min);S->SetMaxValue(Max);S->SetStepSize(1);S->SetValue(Value);DimensionSliders.Add(S);Add(S,12);return S;};
+    Dimension(60,230,Pending.HeightCm)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::HeightChanged);
+    WeightLabel=Text(TEXT(""),10,Muted);Add(WeightLabel,4);
+    auto* Weight=Slider(TEXT("Lean  /  Heavy"),0,150,(1-Pending.Slimness)*100);Weight->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::SlimnessChanged);
+    Dimension(70,150,Pending.BodyWidth*100)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::BodyWidthChanged);
+    Dimension(70,160,Pending.BodyDepth*100)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::BodyDepthChanged);
+    Dimension(50,150,Pending.HandSize*100)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::HandSizeChanged);
+    Dimension(50,150,Pending.FootSize*100)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::FootSizeChanged);
+    Dimension(60,150,Pending.FaceSize*100)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::FaceSizeChanged);
+    Add(Text(TEXT("Height uses centimetres. Proportions use percentages of the adult rig. Weight changes body fullness. Ethan and Greyson can grow to adult size; reset restores each name's original measurements."),10,Muted),16);
+    Add(Text(TEXT("CLOTHING & FACE DETAILS"),14,Sage),10);
     auto* Outfit=Combo(TEXT("FIELD CLOTHING"),{TEXT("Woodland olive"),TEXT("Blaze orange"),TEXT("Earth brown")},Pending.Outfit);OutfitCombo=Outfit;Outfit->OnSelectionChanged.AddDynamic(this,&UWildlineHunterCreator::OutfitChanged);
     auto* Hair=Combo(TEXT("HAIR"),{TEXT("Brown"),TEXT("Black"),TEXT("Silver")},Pending.Hair);HairCombo=Hair;Hair->OnSelectionChanged.AddDynamic(this,&UWildlineHunterCreator::HairChanged);
     auto* Cap=WidgetTree->ConstructWidget<UCheckBox>();Cap->AddChild(Text(TEXT("  Field cap"),12,Cream));Cap->SetIsChecked(Pending.bCap);Cap->OnCheckStateChanged.AddDynamic(this,&UWildlineHunterCreator::CapChanged);Add(Cap);
     CapCheck=Cap;
     BeardCheck=WidgetTree->ConstructWidget<UCheckBox>();BeardCheck->AddChild(Text(TEXT("  Facial hair"),12,Cream));BeardCheck->SetIsChecked(Pending.bBeard);BeardCheck->OnCheckStateChanged.AddDynamic(this,&UWildlineHunterCreator::BeardChanged);Add(BeardCheck);
-    auto Slider=[&](const FString& Label,float Min,float Max,float Value){Add(Text(Label,10,Muted),4);auto* S=WidgetTree->ConstructWidget<USlider>();S->SetMinValue(Min);S->SetMaxValue(Max);S->SetValue(Value);AppearanceSliders.Add(S);Add(S,11);return S;};
-    Slider(TEXT("BODY BUILD / SLIMNESS"),0,1,Pending.Slimness)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::SlimnessChanged);
     Slider(TEXT("SKIN TONE"),0,1,Pending.SkinTone)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::SkinChanged);
     Slider(TEXT("FACE WIDTH"),-1,1,Pending.FaceWidth)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::WidthChanged);
     Slider(TEXT("NOSE PROFILE"),-1,1,Pending.NoseDepth)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::NoseChanged);
@@ -93,7 +104,7 @@ TSharedRef<SWidget> UWildlineHunterCreator::RebuildWidget(){
     RefreshPreview();UpdateCamera();return Super::RebuildWidget();
 }
 void UWildlineHunterCreator::RefreshPreview(){
-    Pending.Clamp();const bool bPhotoPreset=Pending.IsPhotoPreset();BeardCheck->SetIsEnabled(!bPhotoPreset);HairCombo->SetIsEnabled(!bPhotoPreset);
+    Pending.Clamp();RefreshMeasurementLabels();const bool bPhotoPreset=Pending.IsPhotoPreset();BeardCheck->SetIsEnabled(!bPhotoPreset);HairCombo->SetIsEnabled(!bPhotoPreset);
     if(AppearanceSliders.Num()>3)AppearanceSliders[3]->SetIsEnabled(!bPhotoPreset);
     if(Preview){
         const float OldScale=Preview->GetActorScale3D().Z;
@@ -106,11 +117,13 @@ void UWildlineHunterCreator::RefreshPreview(){
     PhotoTexture=Pending.bUsePhoto?WildlinePortrait::DecodePhoto(PhotoData):nullptr;
     if(PhotoTexture){PhotoImage->SetBrushFromTexture(PhotoTexture);PhotoFrame->SetVisibility(ESlateVisibility::Visible);}else if(PhotoFrame)PhotoFrame->SetVisibility(ESlateVisibility::Collapsed);
 }
-void UWildlineHunterCreator::UpdateCamera(){if(!Capture||!Preview)return;const float A=FMath::DegreesToRadians(PreviewAngle);const float Scale=Pending.HeightScale();float BodyHeight=0;if(auto* Mesh=Preview->GetMesh()->GetSkeletalMeshAsset()){const auto B=Mesh->GetImportedBounds();BodyHeight=(Preview->GetMesh()->GetRelativeLocation().Z+B.Origin.Z)*Scale;}const FVector FacePivot=Preview->GetMesh()->GetSocketLocation(TEXT("head"))-Preview->GetActorLocation()+FVector(10,0,-3)*Scale;const FVector Pivot=bFaceView?FacePivot:FVector(0,0,BodyHeight);const float Distance=bFaceView?46*Scale:275;const FVector Offset(FMath::Cos(A)*Distance,FMath::Sin(A)*Distance,bFaceView?0:28);Capture->SetWorldLocation(Preview->GetActorLocation()+Pivot+Offset);Capture->SetWorldRotation((-Offset).Rotation());}
+void UWildlineHunterCreator::UpdateCamera(){if(!Capture||!Preview)return;const float A=FMath::DegreesToRadians(PreviewAngle);const float Scale=Pending.HeightScale();float BodyHeight=0;if(auto* Mesh=Preview->GetMesh()->GetSkeletalMeshAsset()){const auto B=Mesh->GetImportedBounds();BodyHeight=(Preview->GetMesh()->GetRelativeLocation().Z+B.Origin.Z)*Scale;}const FVector FacePivot=Preview->GetMesh()->GetSocketLocation(TEXT("head"))-Preview->GetActorLocation()+FVector(10,0,-3)*Scale;const FVector Pivot=bFaceView?FacePivot:FVector(0,0,BodyHeight);const float Distance=bFaceView?46*Scale*Pending.FaceSize:FMath::Max(160.f,Pending.HeightCm*1.58f);const FVector Offset(FMath::Cos(A)*Distance,FMath::Sin(A)*Distance,bFaceView?0:28);Capture->SetWorldLocation(Preview->GetActorLocation()+Pivot+Offset);Capture->SetWorldRotation((-Offset).Rotation());}
 void UWildlineHunterCreator::SyncControls(){
     bSyncing=true;PresetCombo->SetSelectedIndex(Pending.PresetOptionIndex());BodyCombo->SetSelectedIndex(Pending.Body);OutfitCombo->SetSelectedIndex(Pending.Outfit);HairCombo->SetSelectedIndex(Pending.Hair);CapCheck->SetIsChecked(Pending.bCap);BeardCheck->SetIsChecked(Pending.bBeard);
-    const float Values[]={Pending.Slimness,Pending.SkinTone,Pending.FaceWidth,Pending.NoseDepth,Pending.PhotoX,Pending.PhotoY,Pending.PhotoZoom};
-    for(int32 I=0;I<AppearanceSliders.Num()&&I<UE_ARRAY_COUNT(Values);I++)AppearanceSliders[I]->SetValue(Values[I]);bSyncing=false;
+    const float Values[]={(1-Pending.Slimness)*100,Pending.SkinTone,Pending.FaceWidth,Pending.NoseDepth,Pending.PhotoX,Pending.PhotoY,Pending.PhotoZoom};
+    for(int32 I=0;I<AppearanceSliders.Num()&&I<UE_ARRAY_COUNT(Values);I++)AppearanceSliders[I]->SetValue(Values[I]);
+    const float Dimensions[]={Pending.HeightCm,Pending.BodyWidth*100,Pending.BodyDepth*100,Pending.HandSize*100,Pending.FootSize*100,Pending.FaceSize*100};
+    for(int32 I=0;I<DimensionSliders.Num()&&I<UE_ARRAY_COUNT(Dimensions);I++)DimensionSliders[I]->SetValue(Dimensions[I]);RefreshMeasurementLabels();bSyncing=false;
 }
 void UWildlineHunterCreator::LoadTravisPreset(){Pending=FWildlineHunterProfile::Travis();SyncControls();RefreshPreview();Message->SetText(FText::FromString(TEXT("Travis loaded. Customize clothing and build, then save your hunter.")));}
 void UWildlineHunterCreator::LoadEthanPreset(){Pending=FWildlineHunterProfile::Ethan();SyncControls();RefreshPreview();Message->SetText(FText::FromString(TEXT("Ethan loaded. Customize clothing and build, then save your hunter.")));}
@@ -119,7 +132,18 @@ void UWildlineHunterCreator::LoadMarkPreset(){Pending=FWildlineHunterProfile::Ma
 void UWildlineHunterCreator::PresetChanged(FString I,ESelectInfo::Type){if(bSyncing)return;if(I==TEXT("Travis")){LoadTravisPreset();return;}if(I==TEXT("Ethan")){LoadEthanPreset();return;}if(I==TEXT("Greyson")){LoadGreysonPreset();return;}if(I==TEXT("Mark")){LoadMarkPreset();return;}Pending.Preset=0;Pending.bBeard=false;SyncControls();RefreshPreview();}
 void UWildlineHunterCreator::ResetPreset(){if(Pending.Preset==1){LoadTravisPreset();return;}if(Pending.Preset==3){LoadEthanPreset();return;}if(Pending.Preset==4){LoadGreysonPreset();return;}if(Pending.Preset==5){LoadMarkPreset();return;}Pending=FWildlineHunterProfile();SyncControls();RefreshPreview();}
 void UWildlineHunterCreator::BeardChanged(bool V){if(bSyncing)return;Pending.bBeard=V;RefreshPreview();}
-void UWildlineHunterCreator::SlimnessChanged(float V){if(bSyncing)return;Pending.Slimness=V;RefreshPreview();}
+void UWildlineHunterCreator::SlimnessChanged(float V){if(bSyncing)return;Pending.Slimness=1-V/100.f;RefreshPreview();}
+void UWildlineHunterCreator::RefreshMeasurementLabels(){
+    const FString Labels[]={FString::Printf(TEXT("HEIGHT / %.1f cm"),Pending.HeightCm),FString::Printf(TEXT("BODY WIDTH / %.0f%%"),Pending.BodyWidth*100),FString::Printf(TEXT("BODY DEPTH / %.0f%%"),Pending.BodyDepth*100),FString::Printf(TEXT("HAND SIZE / %.0f%%"),Pending.HandSize*100),FString::Printf(TEXT("FOOT SIZE / %.0f%%"),Pending.FootSize*100),FString::Printf(TEXT("HEAD / FACE SIZE / %.0f%%"),Pending.FaceSize*100)};
+    for(int32 I=0;I<DimensionLabels.Num()&&I<UE_ARRAY_COUNT(Labels);I++)DimensionLabels[I]->SetText(FText::FromString(Labels[I]));
+    if(WeightLabel)WeightLabel->SetText(FText::FromString(FString::Printf(TEXT("WEIGHT / BUILD / %.0f%%"),(1-Pending.Slimness)*100)));
+}
+void UWildlineHunterCreator::HeightChanged(float V){if(bSyncing)return;Pending.HeightCm=V;RefreshPreview();}
+void UWildlineHunterCreator::BodyWidthChanged(float V){if(bSyncing)return;Pending.BodyWidth=V/100.f;RefreshPreview();}
+void UWildlineHunterCreator::BodyDepthChanged(float V){if(bSyncing)return;Pending.BodyDepth=V/100.f;RefreshPreview();}
+void UWildlineHunterCreator::HandSizeChanged(float V){if(bSyncing)return;Pending.HandSize=V/100.f;RefreshPreview();}
+void UWildlineHunterCreator::FootSizeChanged(float V){if(bSyncing)return;Pending.FootSize=V/100.f;RefreshPreview();}
+void UWildlineHunterCreator::FaceSizeChanged(float V){if(bSyncing)return;Pending.FaceSize=V/100.f;RefreshPreview();}
 void UWildlineHunterCreator::BodyChanged(FString I,ESelectInfo::Type){if(bSyncing)return;Pending.Body=I.StartsWith(TEXT("Female"))?1:0;RefreshPreview();UpdateCamera();}
 void UWildlineHunterCreator::OutfitChanged(FString I,ESelectInfo::Type){if(bSyncing)return;Pending.Outfit=I.StartsWith(TEXT("Blaze"))?1:I.StartsWith(TEXT("Earth"))?2:0;RefreshPreview();}
 void UWildlineHunterCreator::HairChanged(FString I,ESelectInfo::Type){if(bSyncing)return;Pending.Hair=I==TEXT("Black")?1:I==TEXT("Silver")?2:0;RefreshPreview();}

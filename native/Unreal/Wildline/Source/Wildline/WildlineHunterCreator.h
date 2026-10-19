@@ -38,6 +38,10 @@ public:
     UPROPERTY() UCheckBox* CapCheck;
     UPROPERTY() UCheckBox* BeardCheck;
     UPROPERTY() TArray<USlider*> AppearanceSliders;
+    UPROPERTY() TArray<USlider*> DimensionSliders;
+    UPROPERTY() TArray<UTextBlock*> DimensionLabels;
+    UPROPERTY() UTextBlock* WeightLabel;
+    void RefreshMeasurementLabels();
     bool bSyncing=false;
     bool bFaceView=false;
     float PreviewAngle=-16;
@@ -53,6 +57,12 @@ public:
     UFUNCTION() void ResetPreset();
     UFUNCTION() void BeardChanged(bool Value);
     UFUNCTION() void SlimnessChanged(float Value);
+    UFUNCTION() void HeightChanged(float Value);
+    UFUNCTION() void BodyWidthChanged(float Value);
+    UFUNCTION() void BodyDepthChanged(float Value);
+    UFUNCTION() void HandSizeChanged(float Value);
+    UFUNCTION() void FootSizeChanged(float Value);
+    UFUNCTION() void FaceSizeChanged(float Value);
     UFUNCTION() void BodyChanged(FString Item,ESelectInfo::Type Type);
     UFUNCTION() void OutfitChanged(FString Item,ESelectInfo::Type Type);
     UFUNCTION() void HairChanged(FString Item,ESelectInfo::Type Type);

@@ -58,7 +58,7 @@ in-world appearance. These checks use isolated profiles and preserve player
 settings. `native/VerifyHunterAnimations.ps1 -Presets Mark -Rates 60` checks
 Mark's live movement, stance, feet and weapon grips.
 
-Runtime height (uncapped): Travis retains the 174.5 cm source height, Ethan is
+Preset default height (uncapped): Travis and Mark use the 174.5 cm source height, Ethan is
 71.4 cm (30% shorter than the previous 102 cm), and Greyson is 110.4 cm (20% shorter
 than the previous 138 cm). `FWildlineHunterProfile::HeightScale()` scales the
 complete actor, including collision and equipment. The original editable rig
@@ -66,7 +66,7 @@ and animations remain at their authored size; gait and foot placement convert
 between rig and world distances. `-WildlineHunterAnimationProbe` with
 `-WildlineHunterPreset=Ethan` or `Greyson` verifies actual movement, crouch,
 jumps, foot planting and both weapon grips. `-WildlineHunterHeightReview`
-captures all three at the same full-body camera distance and both short heads
+captures all three with height-aware full-body framing and both short heads
 in face close-up, without changing the saved profile.
 Runtime hand/foot scales relative to the body are .72/.75 for Ethan and .82/.84
 for Greyson. The animation scales the wrist/ankle bones and their descendants,
@@ -74,3 +74,17 @@ preserving finger and toe articulation; ankle targets account for smaller soles.
 The creator evaluates the same proportions on its unarmed idle pose.
 Run `native/VerifyHunterAnimations.ps1 -Presets Ethan,Greyson -Rates 30,60`
 to check both heights with isolated standard settings at those frame rates.
+
+### Editable body settings
+
+Named presets initialize height, hands and feet; `DimensionsVersion` migrates
+older saves once. Height (60-230 cm), width (70-150%), depth (70-160%), hands
+and feet (50-150%) and head/face size (60-150%) are saved/replicated profile
+fields. Weight/build (0-150%) reuses `SlimBuild`, including negative morph
+weights for heavier bodies. Defaults preserve all existing shapes.
+`FWildlineHunterProxy::ApplyBodyShape` reshapes the rig before terrain and
+weapon IK; separate head/hand/foot subtrees retain independent proportions.
+Weapons stay uniformly scaled to height. Creator controls share the game rig,
+show measured values, and frame the selected height and face size.
+`VerifyHunterBodies.ps1 -Editor -Capture` supports iteration before packaging;
+the default invocation verifies the final packaged build in isolated profiles.

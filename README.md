@@ -127,17 +127,19 @@ Graphics always use the high-quality configuration with 100% render resolution a
 
 ## Create your hunter
 
-Choose **Create / Edit Hunter** at camp. Start with **Custom hunter**, **Travis**, **Ethan**, **Greyson**, or **Mark**, then customize field clothing, cap, body slimness, skin tone and face width. The four named hunters use their supplied photographs on simple curved heads with no modeled facial features underneath. Hair, facial-hair and nose controls are disabled for those photo heads. Travis, Ethan and Greyson start with camouflage and blaze-orange torso panels; Mark starts in woodland olive at adult height. Face materials preserve detail in shade, the portrait uses soft face-level lighting, and the rifle pose keeps the head upright. Custom hunters also offer male/female bodies, hair color and nose shape. Full-body and face close-up views update live, with buttons to turn the preview. **Save Hunter** keeps the appearance for your expeditions; **Cancel** keeps the previous saved hunter. Previously saved Travis 2 profiles now load Travis.
+Choose **Create / Edit Hunter** at camp. Start with **Custom hunter**, **Travis**, **Ethan**, **Greyson**, or **Mark**, then customize height, weight/build, body width and depth, hands, feet, head/face size, field clothing, cap, skin tone and face width. The four named hunters use their supplied photographs on simple curved heads with no modeled facial features underneath. Hair, facial-hair and nose controls are disabled for those photo heads. Travis, Ethan and Greyson start with camouflage and blaze-orange torso panels; Mark starts in woodland olive at adult height. Face materials preserve detail in shade, the portrait uses soft face-level lighting, and the rifle pose keeps the head upright. Custom hunters also offer male/female bodies, hair color and nose shape. Full-body and face close-up views update live, with buttons to turn the preview. **Save Hunter** keeps the appearance for your expeditions; **Cancel** keeps the previous saved hunter. Previously saved Travis 2 profiles now load Travis.
 
 **Choose PNG / JPEG** opens the native Windows image picker. Use a clear front-facing portrait, then align and crop it against the live face close-up. The image supplies photographic appearance on the selected 3D head; a single photo does not reconstruct an entire head. Portraits are resized locally and saved as a compact JPEG in the game's `Saved/Profiles/HunterFace.jpg`. Your appearance and face texture are shared with players in that co-op session, including late joiners. No external photo-processing service is used.
 
-Ethan is approximately **71.4 cm** tall (30% shorter than his previous 102 cm), and Greyson is
-approximately **110.4 cm** tall (20% shorter than his previous 138 cm), measured without a cap.
-Their collision, eye level and equipment scale with the body; locomotion uses
-shorter strides. Ethan's hands and feet are reduced by another 28% and 25%
-relative to his body; Greyson's by 18% and 16%. Fingers and toes follow the
-smaller proportions, including in the creator preview, with foot placement
-adjusted for the smaller boots. Existing saved selections automatically update.
+The names supply editable starting settings. **Travis and Mark default to 174.5 cm**, **Ethan to 71.4 cm**, and **Greyson to 110.4 cm**, measured without a cap. **Reset Selected Preset** restores those original settings; choosing a name never locks its dimensions.
+
+- **Height:** 60-230 cm, including adult-sized Ethan or Greyson. Collision, eyes, equipment and gait follow the chosen height while the feet stay anchored during resizing.
+- **Weight/build:** 0-150%, from lean through the original full build (100%) to heavier proportions. Existing build choices keep their original appearance.
+- **Body width:** 70-150%; **body depth:** 70-160%.
+- **Hands and feet:** 50-150% of the adult rig, independently adjustable. Ethan defaults to 72% hands / 75% feet; Greyson to 82% / 84%; Travis and Mark to 100% / 100%.
+- **Head/face size:** 60-150%, independent of face width and photo alignment.
+
+All measurement labels update with the live preview. Dimensions save with the hunter and replicate to co-op players, including late joiners. Older saves migrate once to their existing sizes; subsequent edits stay independent of the name. The animation reshapes the body before solving foot placement and weapon grips, keeping the rifle rigid. Run `native/VerifyHunterBodies.ps1 -Capture` for creator, persistence and co-op checks, and `native/VerifyHunterAnimations.ps1 -CustomBody -Presets Ethan -Rates 60` for adult Ethan's walking, crouching, jumps and grips.
 
 ## Native co-op
 
@@ -189,7 +191,7 @@ The camp **Match Workshop** has three tabs: **Match Rules**, **Bot Roster**, and
 - Hunters patrol food areas and course approaches, pursue visible squirrels, search their last seen position, reload during quiet periods, and approach shared targets from different sides. Squirrels reserve separate food destinations, avoid occupied escape trees, and leave stalled climbs with a re-entry cooldown. Both teams follow walkable slopes, hop low obstructions where possible, and try another direction when movement stalls or circles without reaching the goal; unreachable food is temporarily avoided. Course squirrels queue for an occupied entry tree and retry the other authored route after a blocked entry or repeated failed landing.
 - **Victory/session:** human player limit (1–8), round duration (1–30 minutes), squirrel objective and defender **kills** goals (1–30), and which side wins when time expires (mode default, defenders or squirrels).
 - **Survival:** squirrel health (10–200), respawn delay (1–30 seconds), spawn damage protection (0–10 seconds), food carrying capacity (1–12), movement/climb speed (50–150%) and unlimited stamina. Course launch strength stays fixed so the authored gaps remain reachable.
-- **Weapons/hazards:** reload duration (25–200%), infinite ammunition without magazine consumption, rifle thermal permission, thermal duration (5–60 seconds) and cooldown (0–300 seconds), and livestock damage in Farm Raid.
+- **Weapons/hazards:** squirrel hitbox size (1–100: 1 hardest, 50 original, 100 easiest), reload duration (25–200%), infinite ammunition without magazine consumption, rifle thermal permission, thermal duration (5–60 seconds) and cooldown (0–300 seconds), and livestock damage in Farm Raid. Hitbox size changes the weapon target from half to twice its original dimensions, independently of appearance and movement/climbing collision. It applies to human and bot squirrels, rifle bullets, instant AI rifle shots and shotgun pellets; cover still blocks shots.
 - **Minimap:** an **Allow minimap** checkbox, enforced for all players, plus Full/Nearby/Limited intel independent of bot AI. M only changes zoom when the map is allowed.
 - **Schemes:** Standard, Casual, Hardcore and Playground populate a complete editable ruleset and roster for the selected mode. Choosing a scheme replaces that mode's current configuration. Custom edits remain saved for that mode.
 

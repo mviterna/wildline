@@ -42,18 +42,40 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
     float FootAlpha[2]={0,0},FootFloorZ[2]={0,0},AnkleHeight[2]={13.5f,13.5f};
     bool FootLocked[2]={false,false},FootHit[2]={false,false};
     int32 FootSerial[2]={0,0};
-    float HandScale=1,FootScale=1;
+    float HandScale=1,FootScale=1,FaceScale=1,BodyWidth=1,BodyDepth=1;
+    TArray<int32> PartRoots;
     bool bPreview=false;
+    void ApplyBodyShape(FCSPose<FCompactPose>& Space,const FBoneContainer& Bones){
+        if(FMath::IsNearlyEqual(BodyWidth,1.f)&&FMath::IsNearlyEqual(BodyDepth,1.f))return;
+        const FVector Shape(BodyWidth,BodyDepth,1);
+        TArray<FBoneTransform> Shaped;
+        for(int32 Index=0;Index<Names.Num();Index++){
+            const auto Compact=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(Index));if(Compact.GetInt()==INDEX_NONE)continue;
+            FTransform Bone=Space.GetComponentSpaceTransform(Compact);
+            const int32 Root=PartRoots.IsValidIndex(Index)?PartRoots[Index]:INDEX_NONE;
+            if(Root!=INDEX_NONE){
+                const auto Part=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(Root));if(Part.GetInt()==INDEX_NONE)continue;
+                const FVector Origin=Space.GetComponentSpaceTransform(Part).GetLocation();
+                Bone.SetLocation(Origin*Shape+(Bone.GetLocation()-Origin));
+            }else{
+                Bone.SetLocation(Bone.GetLocation()*Shape);Bone.SetScale3D(Bone.GetScale3D()*Shape);
+            }
+            Shaped.Emplace(Compact,Bone);
+        }
+        // Deform the rig before feet and weapon IK. Hands, feet and head keep
+        // their own independent proportions, and the weapon stays rigid.
+        Space.SafeSetCSBoneTransforms(Shaped);
+    }
     void ApplyProportions(FCSPose<FCompactPose>& Space,const FBoneContainer& Bones){
-        const FName Parts[]={TEXT("hand_l"),TEXT("hand_r"),TEXT("foot_l"),TEXT("foot_r")};
-        for(int32 Part=0;Part<4;Part++){
-            const float Scale=Part<2?HandScale:FootScale;if(FMath::IsNearlyEqual(Scale,1.f))continue;
+        const FName Parts[]={TEXT("hand_l"),TEXT("hand_r"),TEXT("foot_l"),TEXT("foot_r"),TEXT("head")};
+        for(int32 Part=0;Part<5;Part++){
+            const float Scale=Part<2?HandScale:Part<4?FootScale:FaceScale;if(FMath::IsNearlyEqual(Scale,1.f))continue;
             const int32 Index=Names.IndexOfByKey(Parts[Part]);if(Index==INDEX_NONE)continue;
             const auto Compact=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(Index));if(Compact.GetInt()==INDEX_NONE)continue;
             FTransform Bone=Space.GetComponentSpaceTransform(Compact);Bone.SetScale3D(Bone.GetScale3D()*Scale);
             // Ground IK already lowers the ankle for the smaller sole. Apply
             // the same offset in the studio and in airborne animation poses.
-            if(Part>=2&&(!FootHit[Part-2]||Air>=.1f))Bone.AddToTranslation(FVector::UpVector*AnkleHeight[Part-2]*(Scale-1.f));
+            if(Part>=2&&Part<4&&(!FootHit[Part-2]||Air>=.1f))Bone.AddToTranslation(FVector::UpVector*AnkleHeight[Part-2]*(Scale-1.f));
             TArray<FBoneTransform> Sized;Sized.Emplace(Compact,Bone);Space.SafeSetCSBoneTransforms(Sized);
         }
     }
@@ -64,6 +86,7 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
         auto* Mesh=Instance->GetSkelMeshComponent();if(!Anim||!Pawn||!Mesh)return;
         const float BodyScale=FMath::Max(static_cast<float>(Mesh->GetComponentScale().Z),.1f);
         bPreview=Pawn->bPreviewHunter;HandScale=Pawn->HunterProfile.HandScale();FootScale=Pawn->HunterProfile.FootScale();
+        FaceScale=Pawn->HunterProfile.FaceSize;BodyWidth=Pawn->HunterProfile.BodyWidth;BodyDepth=Pawn->HunterProfile.BodyDepth;
         Idle=Anim->Idle;Walk=Anim->Walk;Run=Anim->Run;RifleReady=bPreview?nullptr:Anim->RifleReady;CrouchIdle=Anim->CrouchIdle;
         JumpStart=Anim->JumpStart;Land=Anim->Land;
         const auto* Movement=Pawn->GetCharacterMovement();
@@ -100,6 +123,9 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
                 Names.Add(Ref.GetBoneName(I));int32 Ancestor=I;
                 while(Ancestor>0&&Ancestor!=Chest)Ancestor=Ref.GetParentIndex(Ancestor);
                 UpperBody.Add(Ancestor==Chest);
+                int32 PartRoot=INDEX_NONE,Parent=I;
+                while(Parent>=0){const FName Name=Ref.GetBoneName(Parent);if(Name==TEXT("head")||Name==TEXT("hand_l")||Name==TEXT("hand_r")||Name==TEXT("foot_l")||Name==TEXT("foot_r")){PartRoot=Parent;break;}Parent=Ref.GetParentIndex(Parent);}
+                PartRoots.Add(PartRoot);
             }
             for(int32 Side=0;Side<2;Side++){
                 int32 Index=Ref.FindBoneIndex(Side==0?TEXT("foot_l"):TEXT("foot_r"));FTransform Rest=FTransform::Identity;
@@ -275,6 +301,7 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
             const auto Compact=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(PelvisIndex));
             if(Compact.GetInt()!=INDEX_NONE){FTransform Pelvis=Space.GetComponentSpaceTransform(Compact);Pelvis.AddToTranslation(FVector::UpVector*PelvisAdjust);TArray<FBoneTransform> Shift;Shift.Emplace(Compact,Pelvis);Space.SafeSetCSBoneTransforms(Shift);}
         }
+        ApplyBodyShape(Space,Bones);
         for(int32 Side=0;Side<2;Side++)if(FootHit[Side]&&Air<.1f){
             const TCHAR* Chains[2][3]={{TEXT("thigh_l"),TEXT("calf_l"),TEXT("foot_l")},{TEXT("thigh_r"),TEXT("calf_r"),TEXT("foot_r")}};
             FCompactPoseBoneIndex Indices[3];bool Valid=true;

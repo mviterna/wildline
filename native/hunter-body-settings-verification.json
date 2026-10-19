@@ -1,0 +1,118 @@
+{
+  "verifiedAtUtc": "2026-10-17T23:41:47.6352951Z",
+  "status": "PASS",
+  "baseCommit": "1e8925b639ae319f0ab21b753f5b33a12a91ea99",
+  "settings": {
+    "heightCm": [
+      60,
+      230
+    ],
+    "weightBuildPercent": [
+      0,
+      150
+    ],
+    "bodyWidthPercent": [
+      70,
+      150
+    ],
+    "bodyDepthPercent": [
+      70,
+      160
+    ],
+    "handSizePercent": [
+      50,
+      150
+    ],
+    "footSizePercent": [
+      50,
+      150
+    ],
+    "headFaceSizePercent": [
+      60,
+      150
+    ]
+  },
+  "presetDefaultHeightsCm": {
+    "Travis": 174.5,
+    "Mark": 174.5,
+    "Ethan": 71.4,
+    "Greyson": 110.4
+  },
+  "legacySaves": "One-time dimension migration preserves existing sizes",
+  "editorAutomation": {
+    "passedTests": 12,
+    "log": "native/hunter-bodies-automation.log"
+  },
+  "editorRuntime": "native/verify-hunter-bodies-editor.log",
+  "packagedCreator": {
+    "passedChecks": 14,
+    "log": "native/hunter-bodies-package-creator.log"
+  },
+  "lateJoinCoop": {
+    "host": "PASS",
+    "client": "PASS",
+    "hostLog": "native/hunter-bodies-package-host.log",
+    "clientLog": "native/hunter-bodies-package-client.log"
+  },
+  "animationCases": [
+    {
+      "case": "ethan-fps-60-custom-body",
+      "log": "native/test-results/hunter-animations/ethan-fps-60-custom-body.log",
+      "result": "[2026.10.17-23.40.34:862][992]LogTemp: Display: HUNTER ANIMATION RESULT: PASS shoulder=0.00 grip=0.90 footDrift=0.14 movingPlants=81"
+    },
+    {
+      "case": "fps-60",
+      "log": "native/test-results/hunter-animations/fps-60.log",
+      "result": "[2026.10.17-23.40.38:051][992]LogTemp: Display: HUNTER ANIMATION RESULT: PASS shoulder=0.00 grip=1.62 footDrift=2.54 movingPlants=83"
+    },
+    {
+      "case": "ethan-fps-60",
+      "log": "native/test-results/hunter-animations/ethan-fps-60.log",
+      "result": "[2026.10.17-23.40.41:146][992]LogTemp: Display: HUNTER ANIMATION RESULT: PASS shoulder=0.00 grip=0.66 footDrift=1.54 movingPlants=38"
+    },
+    {
+      "case": "greyson-fps-60",
+      "log": "native/test-results/hunter-animations/greyson-fps-60.log",
+      "result": "[2026.10.17-23.40.44:336][992]LogTemp: Display: HUNTER ANIMATION RESULT: PASS shoulder=0.00 grip=1.03 footDrift=1.25 movingPlants=63"
+    },
+    {
+      "case": "mark-fps-60",
+      "log": "native/test-results/hunter-animations/mark-fps-60.log",
+      "result": "[2026.10.17-23.40.47:441][992]LogTemp: Display: HUNTER ANIMATION RESULT: PASS shoulder=0.00 grip=1.62 footDrift=2.54 movingPlants=83"
+    }
+  ],
+  "smoke": "native/hunter-faces-smoke.log",
+  "packageRoot": "native/Build/Windows",
+  "payloadIntegrity": {
+    "version": "0.2.0-beta.20261017.193434",
+    "manifestFileCount": 55,
+    "payloadHashes": "PASS",
+    "debugAndSaveExclusions": "PASS",
+    "packageExecutableMatch": "PASS",
+    "exeSha256": "CA8AFC46D7F22DEFF862776FB823333B44E047754A3B3DB3693AA1825EC2B5F6",
+    "installerLifecycle": "Not run; existing installed beta preserved",
+    "cleanMachinePrerequisites": "Not tested"
+  },
+  "installer": {
+    "version": "0.2.0-beta.20261017.193434",
+    "sequence": 1792280074,
+    "setupPath": "C:\\_git\\wildline\\native\\Build\\Beta\\Wildline-0.2.0-beta.20261017.193434-Setup.exe",
+    "sha256": "991CA4032652CF8E2EFA61A3018820AFCDE762BEA81D578FBE0F48513EAF3B21",
+    "size": 3235950271,
+    "bootstrapPath": "C:\\_git\\wildline\\native\\Build\\Beta\\WildlineSetup.exe",
+    "bootstrapSha256": "FEC2FDF112908309655CC743835D895AE7CDCEC74301E31929F370E1332BD999"
+  },
+  "previews": [
+    "native/Preview/HunterBodyEthanDefault.png",
+    "native/Preview/HunterBodyEthanAdult.png",
+    "native/Preview/HunterBodyControls.png",
+    "native/Preview/HunterBodyFace.png",
+    "native/Preview/HunterBodyInGame.png",
+    "native/Preview/HunterBodyExtreme.png"
+  ],
+  "desktopMainArguments": "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\_git\\wildline\\native\\LaunchNative.ps1\"",
+  "installedBetaShortcut": "C:\\Users\\mvite\\AppData\\Local\\Programs\\WILDLINE Beta\\WildlineLauncher.exe",
+  "installedBetaModifiedByThisTask": false,
+  "sourcePushed": false,
+  "publishedToBetaFeed": false
+}

@@ -39,6 +39,7 @@ struct FWildlineMatchConfig {
     UPROPERTY() int32 NeighborhoodLayout=0;
     UPROPERTY() int32 ClassicLayout=0;
     UPROPERTY() float SquirrelHealth=40.f;
+    UPROPERTY() int32 SquirrelHitbox=50;
     UPROPERTY() float RespawnSeconds=7.f;
     UPROPERTY() float SpawnProtectionSeconds=0.f;
     UPROPERTY() int32 CarryCapacity=4;
@@ -67,6 +68,11 @@ struct FWildlineMatchConfig {
     float StopDistance(float Normal)const{return AIStrength(HunterAggression,Normal*1.5f,Normal,110.f);}
     float SearchMemory(float Normal)const{return AIStrength(HunterAggression,1.f,Normal,20.f);}
     float CautionMultiplier()const{return AIStrength(SquirrelCaution,.25f,1.f,2.5f);}
+    // 50 preserves the original 7 cm radius / 12 cm half-height target.
+    float SquirrelHitboxScale()const{
+        const int32 Value=FMath::Clamp(SquirrelHitbox,1,100);
+        return Value<=50?FMath::Lerp(.5f,1.f,(Value-1)/49.f):FMath::Lerp(1.f,2.f,(Value-50)/50.f);
+    }
     void Clamp(){
         MaxPlayers=FMath::Clamp(MaxPlayers,1,8);DurationSeconds=FMath::Clamp(DurationSeconds,60.f,1800.f);
         SquirrelGoal=FMath::Clamp(SquirrelGoal,1,30);DefenderGoal=FMath::Clamp(DefenderGoal,1,30);
@@ -78,6 +84,7 @@ struct FWildlineMatchConfig {
         for(auto& Bot:Defenders)Bot.Clamp();for(auto& Bot:Squirrels)Bot.Clamp();
         MapIntel=FMath::Clamp(MapIntel,0,2);TimeWinner=FMath::Clamp(TimeWinner,0,2);NeighborhoodLayout=FMath::Clamp(NeighborhoodLayout,0,1);ClassicLayout=FMath::Clamp(ClassicLayout,0,1);
         SquirrelHealth=FMath::Clamp(SquirrelHealth,10.f,200.f);RespawnSeconds=FMath::Clamp(RespawnSeconds,1.f,30.f);
+        SquirrelHitbox=FMath::Clamp(SquirrelHitbox,1,100);
         SpawnProtectionSeconds=FMath::Clamp(SpawnProtectionSeconds,0.f,10.f);CarryCapacity=FMath::Clamp(CarryCapacity,1,12);
         MovementScale=FMath::Clamp(MovementScale,.5f,1.5f);ReloadScale=FMath::Clamp(ReloadScale,.25f,2.f);
         ThermalSeconds=FMath::Clamp(ThermalSeconds,5.f,60.f);ThermalCooldownSeconds=FMath::Clamp(ThermalCooldownSeconds,0.f,300.f);
@@ -104,7 +111,7 @@ struct FWildlineMatchConfig {
             &&BotSightScale==O.BotSightScale&&BotReactionScale==O.BotReactionScale&&BotAccuracyScale==O.BotAccuracyScale
             &&HunterAggression==O.HunterAggression&&SquirrelCaution==O.SquirrelCaution&&BotSpacing==O.BotSpacing&&BotTreeSeconds==O.BotTreeSeconds&&bBotClimbing==O.bBotClimbing
             &&bAllowMinimap==O.bAllowMinimap&&MapIntel==O.MapIntel&&ClassicLayout==O.ClassicLayout&&NeighborhoodLayout==O.NeighborhoodLayout&&SquirrelHealth==O.SquirrelHealth&&RespawnSeconds==O.RespawnSeconds
-            &&SpawnProtectionSeconds==O.SpawnProtectionSeconds&&CarryCapacity==O.CarryCapacity&&MovementScale==O.MovementScale&&ReloadScale==O.ReloadScale
+            &&SquirrelHitbox==O.SquirrelHitbox&&SpawnProtectionSeconds==O.SpawnProtectionSeconds&&CarryCapacity==O.CarryCapacity&&MovementScale==O.MovementScale&&ReloadScale==O.ReloadScale
             &&bUnlimitedStamina==O.bUnlimitedStamina&&bInfiniteAmmo==O.bInfiniteAmmo&&bAllowThermal==O.bAllowThermal
             &&ThermalSeconds==O.ThermalSeconds&&ThermalCooldownSeconds==O.ThermalCooldownSeconds&&bLivestockDamage==O.bLivestockDamage&&TimeWinner==O.TimeWinner;
     }

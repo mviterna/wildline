@@ -2,6 +2,8 @@
 #include "Misc/AutomationTest.h"
 #include "WildlineRules.h"
 #include "WildlineUserSettings.h"
+#include "Misc/Paths.h"
+#include <limits>
 #include "WildlineCharacter.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -72,9 +74,9 @@ bool FWildlinePhotoHuntersTest::RunTest(const FString& Parameters){
     TestTrue(TEXT("Ethan is 30 percent shorter than his previous 102 cm height"),FMath::IsNearlyEqual(E.HeightScale()*174.5f,102.f*.7f,.01f));
     TestTrue(TEXT("Greyson is 20 percent shorter than his previous 138 cm height"),FMath::IsNearlyEqual(G.HeightScale()*174.5f,138.f*.8f,.01f));
     TestEqual(TEXT("Travis retains adult height"),P.HeightScale(),1.f);
-    auto Female=G;Female.Body=1;TestEqual(TEXT("Custom female body retains its original height"),Female.HeightScale(),1.f);
+    auto Female=G;Female.Body=1;TestEqual(TEXT("Changing body type retains chosen height"),Female.HeightScale(),G.HeightScale());
     TestTrue(TEXT("Both kids have smaller hands and feet relative to their bodies"),E.HandScale()<G.HandScale()&&G.HandScale()<1.f&&E.FootScale()<G.FootScale()&&G.FootScale()<1.f);
-    TestTrue(TEXT("Adult proportions remain unchanged"),P.HandScale()==1.f&&P.FootScale()==1.f&&Female.HandScale()==1.f&&Female.FootScale()==1.f);
+    TestTrue(TEXT("Adult proportions remain unchanged"),P.HandScale()==1.f&&P.FootScale()==1.f&&FWildlineHunterProfile::Mark().HandScale()==1.f);
     G.Outfit=2;G.Slimness=.4f;G.FaceWidth=.2f;G.bCap=true;G.bBeard=true;G.Clamp();
     TestTrue(TEXT("Greyson customization retains the photo preset without an extra beard"),G.Preset==4&&G.Outfit==2&&G.Slimness==.4f&&G.FaceWidth==.2f&&G.bCap&&!G.bBeard);
     auto M=FWildlineHunterProfile::Mark();M.Clamp();
@@ -84,6 +86,25 @@ bool FWildlinePhotoHuntersTest::RunTest(const FString& Parameters){
     P.Preset=999;P.Slimness=10;P.Clamp();TestEqual(TEXT("Invalid preset clamps"),P.Preset,5);TestEqual(TEXT("Slimness bounded"),P.Slimness,1.f);
     const auto Reset=FWildlineHunterProfile::Travis();TestTrue(TEXT("Reset restores photo preset defaults"),Reset.Slimness>.7f&&Reset.Outfit==1&&!Reset.bBeard);
     TestEqual(TEXT("Existing hunter default stays custom"),FWildlineHunterProfile().Preset,0);return true;
+}
+
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWildlineBodySettingsTest,"Wildline.Hunters.BodySettings",EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter)
+bool FWildlineBodySettingsTest::RunTest(const FString& Parameters){
+    FWildlineHunterProfile Legacy;Legacy.Preset=3;Legacy.Slimness=.3f;Legacy.Clamp();
+    TestTrue(TEXT("Old Ethan saves migrate to their existing dimensions"),Legacy.HeightCm==71.4f&&Legacy.HandSize==.72f&&Legacy.FootSize==.75f&&Legacy.Slimness==.3f&&Legacy.DimensionsVersion==1);
+    Legacy.DimensionsVersion=0;Legacy.Body=1;Legacy.Clamp();TestTrue(TEXT("Old female profiles retain adult dimensions"),Legacy.HeightCm==174.5f&&Legacy.HandSize==1&&Legacy.FootSize==1);
+    auto Adult=FWildlineHunterProfile::Ethan();Adult.HeightCm=180;Adult.HandSize=1.1f;Adult.FootSize=1.05f;Adult.BodyWidth=1.25f;Adult.BodyDepth=1.15f;Adult.FaceSize=1.2f;Adult.Slimness=-.2f;Adult.Clamp();
+    TestTrue(TEXT("Ethan's dimensions are editable independently of identity"),Adult.Preset==3&&Adult.HeightCm==180&&Adult.HandScale()==1.1f&&Adult.FootScale()==1.05f&&Adult.BodyWidth==1.25f&&Adult.BodyDepth==1.15f&&Adult.FaceSize==1.2f&&Adult.Slimness==-.2f);
+    auto Invalid=Adult;Invalid.HeightCm=10000;Invalid.BodyWidth=0;Invalid.BodyDepth=100;Invalid.HandSize=-10;Invalid.FootSize=10;Invalid.FaceSize=0;Invalid.Clamp();
+    TestTrue(TEXT("Server bounds cover all body settings"),Invalid.HeightCm==230&&Invalid.BodyWidth==.7f&&Invalid.BodyDepth==1.6f&&Invalid.HandSize==.5f&&Invalid.FootSize==1.5f&&Invalid.FaceSize==.6f);
+    Invalid.HeightCm=Invalid.BodyWidth=Invalid.BodyDepth=Invalid.HandSize=Invalid.FootSize=Invalid.FaceSize=Invalid.Slimness=std::numeric_limits<float>::quiet_NaN();Invalid.Clamp();
+    TestTrue(TEXT("Nonfinite profile dimensions cannot reach the rig"),Invalid.HeightCm==174.5f&&Invalid.BodyWidth==1&&Invalid.BodyDepth==1&&Invalid.HandSize==1&&Invalid.FootSize==1&&Invalid.FaceSize==1&&Invalid.Slimness==0);
+    const auto Original=GetDefault<UWildlineUserSettings>()->HunterProfile;
+    const FString Fixture=FPaths::ProjectSavedDir()/TEXT("BodySettingsFixture.ini");auto* Saved=NewObject<UWildlineUserSettings>();Saved->HunterProfile=Adult;Saved->SaveConfig(CPF_Config,*Fixture);
+    auto* Loaded=NewObject<UWildlineUserSettings>();Loaded->LoadConfig(UWildlineUserSettings::StaticClass(),*Fixture);Loaded->HunterProfile.Clamp();const auto& P=Loaded->HunterProfile;
+    TestTrue(TEXT("Every customized dimension survives save and reload"),P.HeightCm==180&&P.HandSize==1.1f&&P.FootSize==1.05f&&P.BodyWidth==1.25f&&P.BodyDepth==1.15f&&P.FaceSize==1.2f&&P.Slimness==-.2f&&P.Preset==3);
+    GetMutableDefault<UWildlineUserSettings>()->HunterProfile=Original;
+    return true;
 }
 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWildlineThermalTest,"Wildline.Gameplay.ThermalWindow",EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter)

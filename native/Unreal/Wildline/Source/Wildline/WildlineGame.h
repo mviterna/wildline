@@ -114,4 +114,5 @@ public:
     void RunAIReview();
     void RunAIBalanceReview();
     void RunIntroSmokeTest();
+    void RunHunterBodyReview();
 };
