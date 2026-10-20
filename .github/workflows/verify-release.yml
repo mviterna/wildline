@@ -15,6 +15,10 @@ on:
           - candidate
           - live
         default: candidate
+      upload_artifacts:
+        description: Also retain full log files when artifact storage is available
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -49,8 +53,22 @@ jobs:
         run: |
           & native/Launcher/VerifyPublishedBeta.ps1 -ReceiptPath native/Build/ReleaseValidation/Tools/ExpectedInstaller.json -Headless
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
-      - uses: actions/upload-artifact@v4
+      - name: Return verification receipts and diagnostics through job logs
         if: always()
+        shell: powershell
+        run: |
+          $taskReceipts = @(Get-ChildItem native/Build/ReleaseValidation/result.json,native/Build/OnlineInstallerVerification/*/result.json -ErrorAction SilentlyContinue)
+          foreach ($taskReceipt in $taskReceipts) {
+            $taskEncoded = [Convert]::ToBase64String([IO.File]::ReadAllBytes($taskReceipt.FullName))
+            Write-Output "WILDLINE_VERIFICATION_RESULT=$taskEncoded"
+          }
+          Get-ChildItem native/Build/InstallerVerification,native/Build/VersionedSetupVerification,native/Build/OnlineInstallerVerification -Recurse -Filter *.log -ErrorAction SilentlyContinue | ForEach-Object {
+            Write-Output ("Diagnostic tail: " + $_.FullName)
+            Get-Content -LiteralPath $_.FullName -Tail 12
+          }
+      - uses: actions/upload-artifact@v4
+        if: always() && inputs.upload_artifacts
+        continue-on-error: true
         with:
           name: release-verification
           path: |
