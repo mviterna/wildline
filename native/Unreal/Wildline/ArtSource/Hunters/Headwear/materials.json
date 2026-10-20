@@ -1,0 +1,212 @@
+{
+  "Olive": {
+    "asset": "M_Hat_Olive",
+    "color": [
+      0.12,
+      0.18,
+      0.07
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Blaze": {
+    "asset": "M_Hat_Blaze",
+    "color": [
+      0.95,
+      0.21,
+      0.018
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Leather": {
+    "asset": "M_Hat_Leather",
+    "color": [
+      0.18,
+      0.075,
+      0.026
+    ],
+    "roughness": 0.42,
+    "metallic": 0
+  },
+  "Charcoal": {
+    "asset": "M_Hat_Charcoal",
+    "color": [
+      0.028,
+      0.035,
+      0.041
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Navy": {
+    "asset": "M_Hat_Navy",
+    "color": [
+      0.025,
+      0.065,
+      0.16
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Canvas": {
+    "asset": "M_Hat_Canvas",
+    "color": [
+      0.66,
+      0.58,
+      0.38
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Ivory": {
+    "asset": "M_Hat_Ivory",
+    "color": [
+      0.88,
+      0.9,
+      0.84
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Crimson": {
+    "asset": "M_Hat_Crimson",
+    "color": [
+      0.65,
+      0.035,
+      0.025
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "SafetyYellow": {
+    "asset": "M_Hat_SafetyYellow",
+    "color": [
+      0.96,
+      0.58,
+      0.018
+    ],
+    "roughness": 0.34,
+    "metallic": 0
+  },
+  "DinosaurGreen": {
+    "asset": "M_Hat_DinosaurGreen",
+    "color": [
+      0.15,
+      0.4,
+      0.12
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "FrogGreen": {
+    "asset": "M_Hat_FrogGreen",
+    "color": [
+      0.3,
+      0.64,
+      0.1
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Ocean": {
+    "asset": "M_Hat_Ocean",
+    "color": [
+      0.065,
+      0.28,
+      0.48
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Steel": {
+    "asset": "M_Hat_Steel",
+    "color": [
+      0.34,
+      0.4,
+      0.43
+    ],
+    "roughness": 0.28,
+    "metallic": 0.72
+  },
+  "Brass": {
+    "asset": "M_Hat_Brass",
+    "color": [
+      0.74,
+      0.45,
+      0.075
+    ],
+    "roughness": 0.28,
+    "metallic": 0.7
+  },
+  "Black": {
+    "asset": "M_Hat_Black",
+    "color": [
+      0.008,
+      0.012,
+      0.018
+    ],
+    "roughness": 0.35,
+    "metallic": 0
+  },
+  "Wizard": {
+    "asset": "M_Hat_Wizard",
+    "color": [
+      0.16,
+      0.045,
+      0.34
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Pink": {
+    "asset": "M_Hat_Pink",
+    "color": [
+      0.95,
+      0.22,
+      0.34
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Fur": {
+    "asset": "M_Hat_Fur",
+    "color": [
+      0.27,
+      0.2,
+      0.12
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Mint": {
+    "asset": "M_Hat_Mint",
+    "color": [
+      0.28,
+      0.77,
+      0.58
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Acorn": {
+    "asset": "M_Hat_Acorn",
+    "color": [
+      0.39,
+      0.17,
+      0.045
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  },
+  "Camo": {
+    "asset": "M_Hat_Camo",
+    "color": [
+      0.045,
+      0.075,
+      0.028
+    ],
+    "roughness": 0.6,
+    "metallic": 0
+  }
+}

@@ -1,5 +1,10 @@
 # Small real Inno Setup fixtures exercise activation failure and rollback without
 # downloading or installing several copies of the full game.
+param(
+    [string]$CompilerPath,
+    [string]$RedistPath = 'D:\EpicEngine\UE_5.8\Engine\Extras\Redist\en-us',
+    [string]$RuntimeMetadataPath
+)
 $ErrorActionPreference = 'Stop'
 $taskRegistry = 'HKCU:/Software/Microsoft/Windows/CurrentVersion/Uninstall/{5BA860F0-CE7A-47E1-887D-EC02489DB723}_is1'
 if (Test-Path $taskRegistry) { throw 'A beta is installed; use a clean Windows account for versioned setup checks.' }
@@ -8,9 +13,19 @@ $taskRoot = Join-Path $taskNative ('Build/VersionedSetupVerification/' + [guid]:
 $taskInstall = [IO.Path]::GetFullPath((Join-Path $taskRoot 'Installed Game'))
 New-Item -ItemType Directory -Path $taskRoot -Force | Out-Null
 $taskCompiler = Join-Path $taskNative 'Tools/InnoSetup/ISCC.exe'
+if ($CompilerPath) { $taskCompiler = (Resolve-Path -LiteralPath $CompilerPath).Path }
 $taskLauncher = [IO.Path]::GetFullPath((Join-Path $taskNative 'Build/Launcher/WildlineLauncher.exe'))
-$taskEngineHeader = Get-Content 'D:/EpicEngine/UE_5.8/Engine/Source/Runtime/ApplicationCore/Internal/Windows/WindowsRedistributableValidation.h' -Raw
+if ($RuntimeMetadataPath) {
+    $taskRuntimeMetadata = Get-Content -LiteralPath $RuntimeMetadataPath -Raw | ConvertFrom-Json
+} else {
+    $taskEngineHeader = Get-Content 'D:/EpicEngine/UE_5.8/Engine/Source/Runtime/ApplicationCore/Internal/Windows/WindowsRedistributableValidation.h' -Raw
+}
 function Get-FixtureRuntime([string]$Name) {
+    if ($taskRuntimeMetadata) {
+        $taskValue = if ($Name -eq 'MinRedistVersion') { $taskRuntimeMetadata.visualCppMinimum } else { $taskRuntimeMetadata.gameInputMinimum }
+        if ($taskValue -notmatch '^\d+\.\d+\.\d+\.\d+$') { throw "Invalid runtime minimum: $Name" }
+        return $taskValue
+    }
     $taskMatch = [regex]::Match($taskEngineHeader, "$Name\s*=\s*\{\s*(\d+),\s*(\d+),\s*(\d+),\s*(\d+)\s*\}")
     if (!$taskMatch.Success) { throw "Engine minimum missing: $Name" }
     return (($taskMatch.Groups | Select-Object -Skip 1 | ForEach-Object Value) -join '.')
@@ -30,7 +45,7 @@ function New-FixtureSetup([string]$Version, [int]$Sequence, [switch]$Corrupt) {
     if ($Corrupt) { [IO.File]::WriteAllText((Join-Path $taskPayload 'Wildline.exe'),'invalid payload') }
     Copy-Item (Join-Path $taskNative 'Installer/BetaReadme.txt') $taskFixture
     Copy-Item (Join-Path $taskNative 'Installer/Wildline.iss') $taskFixture
-    $taskDefines = @{ BetaVersion=$Version; PayloadPath=$taskPayload; OutputPath=$taskFixture; LauncherPath=$taskLauncher; RedistPath='D:\EpicEngine\UE_5.8\Engine\Extras\Redist\en-us'; VCVersion=(Get-FixtureRuntime 'MinRedistVersion'); GameInputVersion=(Get-FixtureRuntime 'MinGameInputRedistVersion') }
+    $taskDefines = @{ BetaVersion=$Version; PayloadPath=$taskPayload; OutputPath=$taskFixture; LauncherPath=$taskLauncher; RedistPath=$RedistPath; VCVersion=(Get-FixtureRuntime 'MinRedistVersion'); GameInputVersion=(Get-FixtureRuntime 'MinGameInputRedistVersion') }
     $taskDefines.GetEnumerator() | ForEach-Object { '#define ' + $_.Key + ' "' + $_.Value + '"' } | Set-Content (Join-Path $taskFixture 'Generated.iss') -Encoding UTF8
     & $taskCompiler (Join-Path $taskFixture 'Wildline.iss') *> (Join-Path $taskFixture 'compile.log')
     if ($LASTEXITCODE) { throw "Fixture compilation failed: $taskFixture" }

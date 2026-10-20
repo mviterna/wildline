@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-10-19T13:56:40.073212-04:00",
+  "packageRoot": "C:/_git/wildline/native/Build/LodgeAtmosphere/Windows",
+  "desktopLauncher": "native/LaunchNative.ps1",
+  "changes": [
+    "Soft additive flame halo, interior bloom and flickering warm hearth light",
+    "Exterior follows loaded match map: snow/bare trees, farm scenery, or the selected neighborhood layout",
+    "Two framed 1839 foxhunting paintings by John Frederick Herring, with picture lights"
+  ],
+  "paintings": [
+    {
+      "key": "ClearingDitch",
+      "title": "John Frederick Herring, 1795–1865, Foxhunting: Clearing a Ditch, 1839",
+      "source": "https://collections.britishart.yale.edu/catalog/tms:41941",
+      "manifest": "https://manifests.collections.yale.edu/ycba/obj/41941",
+      "download": "https://images.collections.yale.edu/iiif/2/ycba:d360316f-bc8e-4d1a-b0cb-2bb8fae915b2/full/full/0/default.jpg",
+      "license": "CC0-1.0",
+      "image_rights": "No Copyright: You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. (CC0 1.0)",
+      "credit": "Yale Center for British Art, Paul Mellon Collection",
+      "sha256": "3556899520b5ecd038f0aca7f6b191eb03135ec580462847aab9840cada21d5c",
+      "width": 4433,
+      "height": 3619
+    },
+    {
+      "key": "EncouragingHounds",
+      "title": "John Frederick Herring, 1795–1865, Foxhunting: Encouraging Hounds, 1839",
+      "source": "https://collections.britishart.yale.edu/catalog/tms:41949",
+      "manifest": "https://manifests.collections.yale.edu/ycba/obj/41949",
+      "download": "https://images.collections.yale.edu/iiif/2/ycba:bd759135-4853-40b6-94a6-6b893c1c21f5/full/full/0/default.jpg",
+      "license": "CC0-1.0",
+      "image_rights": "No Copyright: You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. (CC0 1.0)",
+      "credit": "Yale Center for British Art, Paul Mellon Collection",
+      "sha256": "0a3b13b474655e1e3630c95826d582a2df5b489ef0d0a4d430e9de7fdb8a322d",
+      "width": 4425,
+      "height": 3640
+    }
+  ],
+  "editorChecks": "PASS across all five maps",
+  "packagedChecks": {
+    "Blackwood": "PASS",
+    "Frostwood": "PASS",
+    "Farmstead": "PASS",
+    "Neighborhood": "PASS",
+    "NeighborhoodCedar": "PASS",
+    "museumImagesMounted": "PASS",
+    "mapGroundMaterial": "PASS",
+    "winterBareTrees": "PASS",
+    "farmBarnOutside": "PASS",
+    "neighborhoodHousesOutside": "PASS",
+    "fireHaloAndWarmLight": "PASS",
+    "sceneryHiddenDuringOutdoorGameplay": "PASS",
+    "renderMaterialErrors": 0,
+    "capturedImages": 15
+  },
+  "resolvedIssue": "Reproduced GPU startup fault with duplicated farm Nanite HISM scenery. Distant farm copies now use conventional instancing, complete instance buffers and no empty layers. Editor and packaged Farmstead renders pass; playable-map render components retain their original settings.",
+  "evidence": [
+    "native/atmosphere-editor-verification.log",
+    "native/atmosphere-editor-followup.log",
+    "native/atmosphere-package-build.log",
+    "native/atmosphere-package-verification.log",
+    "native/Preview/Atmosphere-5fdedb1d6f174e2a937b0409344a3dff",
+    "native/Unreal/Wildline/Saved/LodgeAtmosphere/5fdedb1d6f174e2a937b0409344a3dff"
+  ],
+  "limitations": [
+    "Installer installation/upgrade lifecycle has not been run because a preexisting WILDLINE Beta installation is present."
+  ],
+  "installerStatus": "PASS: compiled, size and SHA-256 independently verified",
+  "installer": {
+    "path": "C:\\_git\\wildline\\native\\Build\\Beta\\Wildline-0.2.0-beta.20261019.135234-Setup.exe",
+    "version": "0.2.0-beta.20261019.135234",
+    "size": 3460033041,
+    "sha256": "7327A7282820748DF2413F8806D361D566E47FF196AB21F3E6DAC578076CBFE7"
+  }
+}

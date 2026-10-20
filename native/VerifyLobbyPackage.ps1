@@ -1,13 +1,15 @@
-param([switch]$Capture,[switch]$Editor,[switch]$SkipSmoke,[switch]$CaptureOnly,[string]$GamePath)
+param([switch]$Capture,[switch]$Editor,[switch]$SkipSmoke,[switch]$CaptureOnly,[string]$GamePath,[string]$PreviewDirectory)
 $ErrorActionPreference='Stop'
 $taskProject=Join-Path $PSScriptRoot 'Unreal/Wildline/Wildline.uproject'
 $taskExe=if($GamePath){$GamePath}elseif($Editor){'D:/EpicEngine/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe'}else{Join-Path $PSScriptRoot 'Build/Windows/Wildline/Binaries/Win64/Wildline.exe'}
 if(!(Test-Path -LiteralPath $taskExe)){throw 'Build the native game first.'}
 $taskProcesses=@()
+if(!$PreviewDirectory){$PreviewDirectory=Join-Path $PSScriptRoot ('Preview/Lodge-'+[guid]::NewGuid().ToString('N'))}
+New-Item -ItemType Directory -Path $PreviewDirectory -Force | Out-Null
 function Start-LobbyProbe([string]$Flags,[string]$Name){
     $taskProfile=Join-Path $PSScriptRoot "Unreal/Wildline/Saved/LobbyProbes/$Name"
     $taskArgs=if($Editor){'"'+$taskProject+'" -game '}else{''}
-    $taskArgs+=$Flags+' -WildlineNoIntro -unattended -UserDir="'+$taskProfile+'" -abslog="'+(Join-Path $PSScriptRoot "lobby-$Name.log")+'"'
+    $taskArgs+=$Flags+' -WildlineNoIntro -WildlineProfileName=LobbyProbe -WildlineDiscoveryPort=7792 -unattended -UserDir="'+$taskProfile+'" -abslog="'+(Join-Path $PSScriptRoot "lobby-$Name.log")+'"'
     Start-Process -FilePath $taskExe -ArgumentList $taskArgs -WindowStyle Hidden -PassThru
 }
 try{
@@ -35,13 +37,15 @@ try{
         while(!$taskP.WaitForExit(1000)){if((Get-Date)-$taskP.StartTime -gt [TimeSpan]::FromMinutes(3)){throw 'Lobby review timed out.'}}
         if($taskP.ExitCode -ne 0){throw 'Lobby render review failed.'}
         $taskLog=Get-Content (Join-Path $PSScriptRoot 'lobby-review.log') -Raw
-        if($taskLog -match 'LogMaterial: Error|LogShaderCompilers: Error|Failed to compile Material|Missing waiting room model|Fatal error'){throw 'Lobby render has material or asset errors.'}
-        foreach($taskName in @('LobbyHunterPlayer.png','LobbyHunterRoom.png','LobbyTrophies.png','LobbySquirrelPlayer.png','LobbySquirrelRoom.png','LobbyWeaponRack.png','LobbyAcornPantry.png','LobbyHunterWindows.png')){
+        if($taskLog -match 'LogMaterial: Error|LogShaderCompilers: Error|Failed to compile Material|Missing waiting room model|Default Material will be used in game|Fatal error'){throw 'Lobby render has material or asset errors.'}
+        if($taskLog -notmatch 'WILDLINE SCOREBOARD TRANSPARENCY: PASS'){throw 'In-game scoreboard transparency check failed.'}
+        foreach($taskName in @('LobbyHunterPlayer.png','LobbyHunterRoom.png','LobbyTrophies.png','LobbySquirrelPlayer.png','LobbySquirrelRoom.png','LobbyWeaponRack.png','LobbyAcornPantry.png','LobbyHunterWindows.png','LobbyScoreboard.png','LobbyLounge.png')){
             $taskShot=Join-Path $PSScriptRoot "Unreal/Wildline/Saved/LobbyProbes/review/Saved/Screenshots/Windows/$taskName"
             if(!(Test-Path -LiteralPath $taskShot)){throw "Missing screenshot: $taskName"}
             if((Get-Item -LiteralPath $taskShot).LastWriteTime -lt $taskP.StartTime){throw "Stale screenshot: $taskName"}
-            Copy-Item -LiteralPath $taskShot -Destination (Join-Path $PSScriptRoot "Preview/$taskName") -Force
+            Copy-Item -LiteralPath $taskShot -Destination (Join-Path $PreviewDirectory $taskName) -Force
         }
+        Write-Output "Lobby previews: $PreviewDirectory"
     }
     if($CaptureOnly){Write-Output 'Lobby visual review: PASS'}
     else{Write-Output 'Waiting rooms, equipment, readiness, protection, all three modes, late entry, restart and co-op replication: PASS'}

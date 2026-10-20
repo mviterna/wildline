@@ -61,6 +61,8 @@ public:
     UPROPERTY() USpringArmComponent* Boom;
     UPROPERTY() UStaticMeshComponent* ViewRifle;
     UPROPERTY() UStaticMeshComponent* WorldRifle;
+    UPROPERTY() UStaticMeshComponent* HunterHat;
+    void UpdateHeadwear();
     UPROPERTY() UStaticMeshComponent* ViewBolt;
     UPROPERTY() UStaticMeshComponent* WorldBolt;
     UPROPERTY(ReplicatedUsing=OnRepHunterProfile) FWildlineHunterProfile HunterProfile;

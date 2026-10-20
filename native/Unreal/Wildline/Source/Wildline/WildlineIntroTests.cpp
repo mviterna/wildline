@@ -30,8 +30,9 @@ void AWildlineController::RunIntroSmokeTest(){
         if(Intro&&Intro->Overlay->Acorn){auto* Slot=CastChecked<UCanvasPanelSlot>(Intro->Overlay->Acorn->Slot);*NutPosition=Slot->GetPosition();*NutSize=Slot->GetSize();}
         auto* Poster=LoadObject<UTexture2D>(nullptr,TEXT("/Game/Wildline/Presentation/T_MenuPoster.T_MenuPoster"));
         Check(Poster&&Poster->GetImportedSize()==FIntPoint(1024,1536),TEXT("full supplied poster cooked"));
-        auto* Sound=LoadObject<USoundWave>(nullptr,TEXT("/Game/Wildline/Presentation/SW_MenuBluegrass.SW_MenuBluegrass"));
-        Check(Sound&&Sound->bLooping&&FMath::IsNearlyEqual(Sound->Duration,26.299896f,.001f),TEXT("bluegrass loop cooked and gapless duration retained"));
+        auto* Sound=LoadObject<USoundWave>(nullptr,TEXT("/Game/Wildline/Presentation/SW_MenuRap.SW_MenuRap"));
+        Check(Sound&&Sound->bLooping&&FMath::IsNearlyEqual(Sound->Duration,140.f,.01f),TEXT("supplied 140-second rap soundtrack cooked"));
+        Check(LoadObject<USoundWave>(nullptr,TEXT("/Game/Wildline/Presentation/SW_MenuBluegrass.SW_MenuBluegrass"))!=nullptr,TEXT("previous music asset retained"));
         bool NoReplay=true;TArray<UWidget*> Widgets;Menu->WidgetTree->GetAllWidgets(Widgets);for(auto* W:Widgets)if(auto* Text=Cast<UTextBlock>(W);Text&&Text->GetText().ToString().Contains(TEXT("WATCH INTRO")))NoReplay=false;
         Check(NoReplay,TEXT("menu has no intro replay item"));
     });

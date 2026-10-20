@@ -28,9 +28,9 @@ def export(name,objects,centre=True):
                    'triangles':sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in objects),
                    'materials':sorted(set(m.name for o in objects for m in o.data.materials if m))})
 
-def convert_sources():
+def convert_sources(only=None):
     for entry in json.loads((SRC/'sources.json').read_text()):
-        if entry['type']!='model':continue
+        if entry['type']!='model' or (only and entry['id'] not in only):continue
         reset();asset=entry['id'];file=SRC/asset/(asset+'_4k.gltf');data=json.loads(file.read_text())
         bpy.ops.import_scene.gltf(filepath=str(file))
         def image_path(texture):
@@ -188,7 +188,12 @@ def architecture(lodge_only=False):
     mod=o.modifiers.new('Rounded moulding','BEVEL');mod.width=.012;mod.segments=4;export('SM_TrophyPlaque',[o],False)
 
 import sys
-if '--lodge-only' in sys.argv:
+if '--upgrade-only' in sys.argv:
+    names=['sofa_03','ArmChair_01','gothic_coffee_table','vintage_cabinet_01','throw_pillows_01']
+    MATERIALS=json.loads((ROOT/'material-index.json').read_text())
+    REPORT=[r for r in json.loads((ROOT/'model-index.json').read_text()) if r['name'] not in ['SM_'+n for n in names]]
+    convert_sources(names)
+elif '--lodge-only' in sys.argv:
     MATERIALS=json.loads((ROOT/'material-index.json').read_text())
     REPORT=[r for r in json.loads((ROOT/'model-index.json').read_text()) if r['name']!='SM_LodgeArchitecture']
     architecture(lodge_only=True)

@@ -1,5 +1,17 @@
 # Startup presentation
 
+2026-10-19 update: the active soundtrack is `MenuRap.wav`, a complete 140-second
+48 kHz stereo PCM16 decode of the supplied ElevenLabs MP3, also retained as
+`MenuRapOriginal.mp3`. The game uses `SW_MenuRap`; all previous music source and
+`SW_MenuBluegrass` remain in the repository. The existing music fade and saved
+volume behavior are unchanged. The track loops while the intro/menu is audible.
+
+The updated `StudioLogo.png` adds the supplied dinosaur on the left and bear on
+the right, both smaller than the cat and duck. The built-in ImageGen edit prompt
+is `StudioLogoGroupPrompt.txt`; references are `DinosaurReference.png` and
+`BearReference.png`. The previous logo is retained as `StudioLogoBeforeGroup.png`.
+These are user-supplied references and a generated interpretation of them.
+
 `MenuPoster.png` is the user's supplied `C:/Users/mvite/Downloads/unnamed.png`,
 retained unchanged. The landing menu fits the entire portrait into the artwork
 area so its title and lower sign stay visible at any display aspect ratio.

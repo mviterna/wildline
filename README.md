@@ -4,6 +4,25 @@ Native Windows co-op hunting prototype built in Unreal Engine 5.8.3. Play **Clas
 
 ## Launch
 
+On first launch, choose a local player name. It appears in the upper-right profile
+button. **Shift+Tab** opens the player list, grouped by team, with name editing,
+team changes, waiting-room entry, and a button to join the detected network room.
+Team changes return you to that team's waiting room; use its portal to enter play.
+
+For the shared four-player room, connect everyone to the same Hamachi network
+before opening the game. WILDLINE advertises/discovers rooms over UDP 7778 and
+plays over UDP 7777. Anyone can Host when no room is found. Once a room is found,
+Host is disabled and Join/Enter Waiting Room connects to that host. Simultaneous
+Host clicks use a short election window. No fixed IP, saved peer list or always-on
+coordinator is required. Allow WILDLINE through Windows Firewall on Hamachi.
+Discovery depends on Hamachi forwarding broadcasts; blocked or partitioned
+networks cannot guarantee a single room. The host-IP field remains a fallback.
+If the host leaves, another player can host a new session; live host migration
+is not implemented.
+
+Run `native/VerifySocialPackage.ps1 -Capture` for profile, height-preview and
+two-process room checks. Add `-Editor` to verify an editor build.
+
 Double-click **Launch Game.cmd** or the **WILDLINE** desktop shortcut. Both launch the newest successfully packaged Windows build under `native/Build`, including neighborhood review builds. Completion records validate the packaged files so incomplete or failed rebuilds are skipped. If no completed package is available, the launcher falls back to engine play. **Open Unreal Editor.cmd** opens the editable project at `native/Unreal/Wildline/Wildline.uproject`.
 
 **Build Windows Game.cmd** and **Build Beta Installer.cmd** publish the game after successful packaging, before building the installer, and automatically create or repair the **WILDLINE** desktop shortcut. For a separate review build, use `powershell -NoProfile -ExecutionPolicy Bypass -File native/LaunchNative.ps1 -Build -ArchiveRoot native/Build/YourReview -SkipInstaller`; it publishes to the same desktop launcher automatically. For a custom archive made directly with Unreal's packaging tools, run `powershell -NoProfile -ExecutionPolicy Bypass -File native/RegisterPackagedBuild.ps1 -PackageRoot native/Build/YourReview/Windows` after packaging succeeds. The launcher selects by completion time, including content-only builds whose EXE timestamp has not changed.
@@ -123,7 +142,23 @@ Changes apply immediately and save separately for autumn (default 72) and winter
 Squirrels can leap while holding W and Shift; running leaps retain their momentum
 and allow a brief grace period when uneven ground momentarily loses floor contact.
 
-Graphics always use the high-quality configuration with 100% render resolution and dynamic resolution disabled. **Display resolution** is the only graphics option at camp; it applies immediately and persists between sessions. Existing lower quality presets are upgraded automatically.
+**Your Settings / Graphics & Performance** offers Low through Cinematic presets,
+custom quality levels for AA, textures, shadows, lighting, reflections, effects,
+post processing, foliage, view distance, shading and landscape. Choose Off,
+FXAA, TAA or TSR; adjust render scale, sharpness, motion blur, VSync and frame
+limit. **Apply Graphics** saves the choices on that PC. Epic at native resolution
+is the initial default; saved choices are respected on later launches. The
+separate display-resolution selector applies immediately.
+
+**Shift+Tab** includes server-replicated kills, deaths, food picked/banked,
+successful shots/fired and hit percentage, plus feeder scores. Shotgun accuracy
+counts a blast once when it damages an opponent. Stats survive team changes and
+respawns, then reset when the host restarts the round. Names remain saved locally.
+
+The squirrel's continuous skeletal animation includes blended takeoff/apex/
+descent/landing poses, longer walking support and shorter running contacts,
+larger running strides, turn and acceleration response in the tail, terrain-aware
+paws and landing compression. Animation follows smoothed replicated motion.
 
 ## Create your hunter
 
@@ -281,7 +316,7 @@ this repository does not grant unrestricted redistribution of those assets.
 - Diagnostic logs and native screenshots are under `native` and the project's `Saved` directory. Generated build folders are excluded from Git.
 - `native/VerifyConfigPackage.ps1 -Capture` checks custom rules in all three modes, exact bot counts and individual loadouts, pickup capacity, health, respawn/protection, movement, ammo/reload/thermal permissions, real menu save/reload and co-op rules/roster replication using isolated test profiles. It captures all three workshop tabs and advanced rules. Use `-Editor` to verify the editor build.
 - `native/VerifyAI.ps1 -Capture` checks all five maps with three patrolling hunters and eight squirrels: travel with no visible enemies, separate food goals, sustained food/course progress, sight blocked by cover, remembered search positions, escape tree deadlines, and real menu save/reload for all eight AI controls. It captures the AI controls and roster. Use `-Editor` before packaging.
-- `native/VerifyGraphicsPackage.ps1` checks migration from saved low settings to fixed high quality, live resolution changes, persistence and restart using a separate test profile, and captures the graphics menu.
+- `native/VerifyGraphicsPackage.ps1` checks live renderer settings, persistence across application restart, actual pickup/deposit/death/hit/miss statistics, round resets and a 150-frame squirrel running/jumping/landing sequence. It uses an isolated profile; `-Editor` checks the editor build.
 
 ## TODO: integrate the new weapon assets
 

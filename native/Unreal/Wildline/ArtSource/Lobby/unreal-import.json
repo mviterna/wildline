@@ -392,5 +392,82 @@
       720.60302734375,
       252.35087847709656
     ]
+  },
+  {
+    "name": "SM_sofa_03",
+    "slots": [
+      "M_PH_sofa_03_0",
+      "M_PH_sofa_03_1"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      136.55886840820312,
+      46.25421333312988,
+      55.913204193115234
+    ]
+  },
+  {
+    "name": "SM_ArmChair_01",
+    "slots": [
+      "M_PH_ArmChair_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      42.42154312133789,
+      38.288015365600586,
+      53.2543830871582
+    ]
+  },
+  {
+    "name": "SM_gothic_coffee_table",
+    "slots": [
+      "M_PH_gothic_coffee_table_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      72.1545181274414,
+      72.1545181274414,
+      27.938648223876953
+    ]
+  },
+  {
+    "name": "SM_vintage_cabinet_01",
+    "slots": [
+      "M_PH_vintage_cabinet_01_0",
+      "M_PH_vintage_cabinet_01_1",
+      "M_PH_vintage_cabinet_01_2"
+    ],
+    "nanite": false,
+    "extent_cm": [
+      101.0880241394043,
+      33.490196228027344,
+      111.75257873535156
+    ]
+  },
+  {
+    "name": "SM_throw_pillows_01",
+    "slots": [
+      "M_PH_throw_pillows_01_0"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      47.00325012207031,
+      22.593050003051758,
+      22.507963180541992
+    ]
+  },
+  {
+    "name": "SM_LodgeHeritageRug",
+    "slots": [
+      "M_LodgeRugFringe",
+      "M_LodgeRugBorder",
+      "M_LodgeRugWeave"
+    ],
+    "nanite": true,
+    "extent_cm": [
+      230.00001525878906,
+      192.50021362304688,
+      1.9500000476837158
+    ]
   }
 ]

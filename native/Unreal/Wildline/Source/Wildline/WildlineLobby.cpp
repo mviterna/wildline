@@ -2,6 +2,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/TextRenderComponent.h"
 #include "Components/PointLightComponent.h"
+#include "Components/RectLightComponent.h"
 #include "Components/BoxComponent.h"
 #include "Components/PostProcessComponent.h"
 #include "Materials/MaterialInterface.h"
@@ -19,6 +20,7 @@ AWildlineLobby::AWildlineLobby(){PrimaryActorTick.bCanEverTick=true;PrimaryActor
 AWildlineLobby* AWildlineLobby::Find(UWorld* W){for(TActorIterator<AWildlineLobby> It(W);It;++It)return *It;return nullptr;}
 void AWildlineLobby::Tick(float DeltaSeconds){
     Super::Tick(DeltaSeconds);
+    if(HearthLight){const float T=GetWorld()->GetTimeSeconds();HearthLight->SetIntensity(4200.f*(.94f+.04f*FMath::Sin(T*4.7f)+.02f*FMath::Sin(T*10.3f)));}
     auto* PC=GetWorld()->GetFirstPlayerController();
     const FVector Eye=PC&&PC->PlayerCameraManager?PC->PlayerCameraManager->GetCameraLocation()-Centre(false):FVector(0,0,-10000);
     const bool Visible=FMath::Abs(Eye.X)<760&&FMath::Abs(Eye.Y)<760&&Eye.Z>-50&&Eye.Z<510;
@@ -55,10 +57,17 @@ void AWildlineLobby::BeginPlay(){
         Settings.bOverride_AutoExposureMinBrightness=true;Settings.bOverride_AutoExposureMaxBrightness=true;Settings.AutoExposureMinBrightness=S?5.7f:7.5f;Settings.AutoExposureMaxBrightness=S?5.7f:7.5f;
         // Reserve grades override the engine's exposure compensation; room light
         // must not inherit a different compensation from each outdoor map.
-        Settings.bOverride_AutoExposureBias=true;Settings.AutoExposureBias=-1.f;
+        Settings.bOverride_AutoExposureBias=true;Settings.AutoExposureBias=S?-1.f:-.15f;
         Settings.bOverride_AutoExposureApplyPhysicalCameraExposure=true;Settings.AutoExposureApplyPhysicalCameraExposure=false;
-        Settings.bOverride_BloomIntensity=true;Settings.BloomIntensity=.12f;Grade->RegisterComponent();
+        Settings.bOverride_BloomIntensity=true;Settings.BloomIntensity=S?.12f:.70f;
+        if(!S){Settings.bOverride_BloomThreshold=true;Settings.BloomThreshold=.8f;}Grade->RegisterComponent();
     }
+    // Broad cool window light gives furniture shape and soft contact shadows.
+    // Outdoor sunlight is occluded by the interior shell, so these sources are
+    // placed just inside the five actual apertures, pointing into the room.
+    auto Window=[this](FVector P,FRotator R){auto* L=NewObject<URectLightComponent>(this);AddInstanceComponent(L);L->SetupAttachment(RootComponent);L->SetRelativeLocation(Centre(false)+P);L->SetRelativeRotation(R);L->SetLightColor(FLinearColor(.72f,.84f,1));L->SetIntensity(1800);L->SetAttenuationRadius(1050);L->SetSourceWidth(180);L->SetSourceHeight(165);L->SetCastShadows(true);L->RegisterComponent();};
+    for(float X:{-405.f,455.f})for(float Side:{-1.f,1.f})Window(FVector(X,Side*664,255),FRotator(0,Side>0?-90:90,0));
+    Window(FVector(664,125,255),FRotator(0,180,0));
 }
 UStaticMeshComponent* AWildlineLobby::Piece(const TCHAR* Name,const TCHAR* Shape,FVector P,FVector Size,UMaterialInterface* M,FRotator R,bool Collision){
     auto* C=NewObject<UStaticMeshComponent>(this,MakeUniqueObjectName(this,UStaticMeshComponent::StaticClass(),FName(Name)));AddInstanceComponent(C);C->SetupAttachment(RootComponent);
@@ -80,7 +89,7 @@ UStaticMeshComponent* AWildlineLobby::Model(const TCHAR* Asset,FVector P,FVector
     FVector Scale(Uniform);for(int32 I=0;I<3;I++)if(Size[I]>0&&Bounds[I]>KINDA_SMALL_NUMBER)Scale[I]=Size[I]/Bounds[I];
     C->SetRelativeLocation(P);C->SetRelativeRotation(R);C->SetRelativeScale3D(Scale);C->SetCollisionProfileName(Collision?TEXT("BlockAll"):TEXT("NoCollision"));C->SetCastShadow(true);C->RegisterComponent();Props.Add(C);return C;
 }
-void AWildlineLobby::Light(FVector P,FLinearColor Color,float Intensity,float Radius,bool Shadows){auto* L=NewObject<UPointLightComponent>(this);AddInstanceComponent(L);L->SetupAttachment(RootComponent);L->SetRelativeLocation(P);L->SetLightColor(Color);L->SetIntensity(Intensity);L->SetAttenuationRadius(Radius);L->SetCastShadows(Shadows);L->SetSourceRadius(Shadows?35:12);L->RegisterComponent();}
+UPointLightComponent* AWildlineLobby::Light(FVector P,FLinearColor Color,float Intensity,float Radius,bool Shadows){auto* L=NewObject<UPointLightComponent>(this);AddInstanceComponent(L);L->SetupAttachment(RootComponent);L->SetRelativeLocation(P);L->SetLightColor(Color);L->SetIntensity(Intensity);L->SetAttenuationRadius(Radius);L->SetCastShadows(Shadows);L->SetSourceRadius(Shadows?35:12);L->RegisterComponent();return L;}
 void AWildlineLobby::BuildPortal(bool S){
     const FVector P=Portal(S);const float R=S?70:125,H=S?165:285;auto* Glow=LobbyMat(S?TEXT("M_PortalGreen"):TEXT("M_PortalAmber"));
     Piece(TEXT("Portal stone plinth"),TEXT("Cylinder"),P+FVector(0,0,2),FVector(R*2+18,R*2+18,4),LobbyMat(TEXT("M_Stone")),FRotator::ZeroRotator,true);

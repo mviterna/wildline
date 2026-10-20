@@ -1,5 +1,6 @@
 #include "WildlineLobby.h"
 #include "Components/StaticMeshComponent.h"
+#include "Components/RectLightComponent.h"
 #include "Engine/StaticMesh.h"
 #include "Materials/MaterialInterface.h"
 
@@ -17,32 +18,37 @@ void AWildlineLobby::BuildLodge(){
     Hidden(TEXT("Lodge floor collision"),O-FVector(0,0,10),FVector(1420,1420,20));
     for(float Side:{-1.f,1.f}){Hidden(TEXT("Lodge side wall collision"),O+FVector(Side*710,0,245),FVector(35,1460,490));Hidden(TEXT("Lodge end wall collision"),O+FVector(0,Side*710,245),FVector(1460,35,490));}
     Hidden(TEXT("Lodge ceiling collision"),O+FVector(0,0,490),FVector(1460,1460,20));
-    Model(TEXT("SM_LodgeRug"),O+FVector(45,45,1),FVector::ZeroVector,FRotator(0,90,0));
-    Model(TEXT("SM_wooden_picnic_table"),O+FVector(-270,365,0),FVector(0,0,79),FRotator(0,90,0),true);
-    Model(TEXT("SM_Rockingchair_01"),O+FVector(420,385,0),FVector(0,0,108),FRotator(0,-100,0),true);
-    Model(TEXT("SM_Rockingchair_01"),O+FVector(540,130,0),FVector(0,0,104),FRotator(0,-65,0),true);
-    Model(TEXT("SM_wooden_bookshelf_worn"),O+FVector(585,-320,0),FVector(0,0,213),FRotator(0,-90,0),true);
-    for(int32 I=0;I<4;I++)Model(TEXT("SM_book_encyclopedia_set_01"),O+FVector(580,-365+I*29,40+(I%2)*57),FVector(0,0,23),FRotator(0,-90,0));
+    // A coherent leather-and-oak lounge replaces the outdoor picnic furniture.
+    // Leave the central spawn, equipment and ready-portal routes open.
+    Model(TEXT("SM_LodgeHeritageRug"),O+FVector(-190,325,1));
+    Model(TEXT("SM_sofa_03"),O+FVector(-220,488,0),FVector(270,0,0),FRotator(0,180,0),true);
+    Model(TEXT("SM_ArmChair_01"),O+FVector(-505,330,0),FVector(0,0,112),FRotator(0,-75,0),true);
+    Model(TEXT("SM_ArmChair_01"),O+FVector(95,300,0),FVector(0,0,112),FRotator(0,100,0),true);
+    Model(TEXT("SM_gothic_coffee_table"),O+FVector(-220,285,4),FVector(148,0,0),FRotator::ZeroRotator,true);
+    Model(TEXT("SM_throw_pillows_01"),O+FVector(-285,478,47),FVector(0,0,47),FRotator(0,180,0));
+    Model(TEXT("SM_Rockingchair_01"),O+FVector(425,450,0),FVector(0,0,108),FRotator(0,-135,0),true);
+    Model(TEXT("SM_vintage_cabinet_01"),O+FVector(590,-340,0),FVector(0,0,224),FRotator(0,90,0),true);
     Model(TEXT("SM_wooden_bucket_01"),O+FVector(405,600,0),FVector(0,0,55),FRotator(0,15,0),true);
     Model(TEXT("SM_wooden_axe_03"),O+FVector(375,606,8),FVector(0,0,83),FRotator(0,-30,12));
     Model(TEXT("SM_wicker_basket_01"),O+FVector(-490,548,0),FVector(0,0,26),FRotator(0,30,0),true);
     // Keep the authored table surface clear of floating props and preserve room
     // circulation around the benches and the entrance-to-portal route.
-    Model(TEXT("SM_pot_enamel_01"),O+FVector(-266,357,79),FVector(0,0,21),FRotator(0,40,0));
-    Model(TEXT("SM_brass_goblets"),O+FVector(-330,340,79),FVector(0,0,23),FRotator(0,30,0));
-    Model(TEXT("SM_wooden_bowl_01"),O+FVector(-222,407,79),FVector(0,0,11));
-    Model(TEXT("SM_vintage_oil_lamp"),O+FVector(-345,407,79),FVector(0,0,50));
+    Model(TEXT("SM_brass_goblets"),O+FVector(-235,287,61.3f),FVector(0,0,17),FRotator(0,30,0));
+    Model(TEXT("SM_wooden_bowl_01"),O+FVector(-185,290,61.3f),FVector(0,0,8));
+    Model(TEXT("SM_vintage_oil_lamp"),O+FVector(-265,275,61.3f),FVector(0,0,37));
     Model(TEXT("SM_lantern_chandelier_01"),O+FVector(-40,130,350),FVector(0,0,105));
-    Light(O+FVector(-40,130,375),FLinearColor(1,.81f,.58f),6500,1400,true);
-    Light(O+FVector(-320,-365,335),FLinearColor(.79f,.85f,1),4500,1400,true);
+    Light(O+FVector(-40,130,375),FLinearColor(1,.84f,.65f),8500,1400,true);
+    Light(O+FVector(-320,-365,335),FLinearColor(.73f,.83f,1),4500,1400,true);
     Light(O+FVector(480,-100,300),FLinearColor(.91f,.87f,.79f),2300,1000);
-    Light(O+FVector(-345,407,115),FLinearColor(1,.57f,.26f),700,280);
+    Light(O+FVector(-265,275,98),FLinearColor(1,.66f,.35f),850,340,true);
     for(float X:{-460.f,340.f}){Model(TEXT("SM_Lantern_01"),O+FVector(X,-638,235),FVector(0,0,44),FRotator(0,180,0));Light(O+FVector(X,-600,259),FLinearColor(1,.70f,.42f),1100,450);}
     // Detailed scanned deadwood replaces the old smooth cylinders in the hearth.
     for(int32 I=0;I<5;I++)Model(TEXT("SM_dead_tree_trunk"),O+FVector(94,643-I*9,13+I%2*9),FVector(92,13,15),FRotator(0,I%2?12:-12,0));
     for(int32 I=0;I<8;I++)Model(TEXT("SM_dead_tree_trunk"),O+FVector(478,586+(I%2)*25,4+(I/2)*20),FVector(100,18,18),FRotator(0,90,0));
     auto* Black=RoomMaterial(TEXT("M_Iron"));Piece(TEXT("Recessed hearth back"),TEXT("Cube"),O+FVector(95,686,75),FVector(191,5,148),Black);
-    Light(O+FVector(95,610,63),FLinearColor(1,.39f,.105f),1800,630,true);
+    HearthLight=Light(O+FVector(95,600,68),FLinearColor(1,.43f,.13f),4200,760,true);
+    Piece(TEXT("Soft hearth glow"),TEXT("Plane"),O+FVector(95,624,65),FVector(205,150,100),DetailMaterial(TEXT("M_LodgeFireGlow")),FRotator(0,0,90));
+    Piece(TEXT("Living hearth fire"),TEXT("Plane"),O+FVector(95,625,57),FVector(125,90,100),DetailMaterial(TEXT("M_LodgeFire")),FRotator(0,0,90));
     for(int32 I=0;I<3;I++)Piece(TEXT("Hearth embers"),TEXT("Sphere"),O+FVector(55+I*37,631,20),FVector(15,8,3),RoomMaterial(TEXT("M_PortalAmber")));
     for(int32 I=0;I<2;I++){
         const FVector P=Rack(I);
@@ -67,7 +73,15 @@ void AWildlineLobby::BuildLodge(){
         }else UE_LOG(LogTemp,Error,TEXT("Missing waiting room model: %s"),*Asset);
         Sign(TrophyLabels[I],P+FVector(12,0,-10),7,FRotator::ZeroRotator);
     }
-    Model(TEXT("SM_hanging_picture_frame_01"),O+FVector(683,440,242),FVector(0,0,102),FRotator(0,90,0));
+    Model(TEXT("SM_PaintingClearingDitch"),O+FVector(682,-350,337),FVector::ZeroVector,FRotator(0,180,0));
+    Model(TEXT("SM_PaintingEncouragingHounds"),O+FVector(682,440,292),FVector::ZeroVector,FRotator(0,180,0));
+    for(const FVector P:{FVector(610,-350,402),FVector(610,440,357)}){
+        auto* L=NewObject<URectLightComponent>(this);AddInstanceComponent(L);L->SetupAttachment(RootComponent);L->SetRelativeLocation(O+P);L->SetRelativeRotation(FRotator(-35,0,0));L->SetLightColor(FLinearColor(1,.92f,.78f));L->SetIntensity(900);L->SetAttenuationRadius(300);L->SetSourceWidth(130);L->SetSourceHeight(12);L->SetCastShadows(false);L->RegisterComponent();
+        Piece(TEXT("Brass painting light"),TEXT("Cube"),O+P+FVector(35,0,18),FVector(12,76,3),DetailMaterial(TEXT("M_PaintingGilt")));
+        Piece(TEXT("Painting light arm"),TEXT("Cube"),O+P+FVector(53,0,18),FVector(38,3,3),DetailMaterial(TEXT("M_PaintingGilt")));
+        Piece(TEXT("Painting light wall mount"),TEXT("Cube"),O+P+FVector(68,0,18),FVector(4,9,12),DetailMaterial(TEXT("M_PaintingGilt")));
+        Light(O+P+FVector(-15,0,-65),FLinearColor(1,.93f,.84f),2400,270);
+    }
     Sign(TEXT("BLACKWOOD HUNTING LODGE"),O+FVector(674,0,411),22);
     BuildLodgeDetails();
 }

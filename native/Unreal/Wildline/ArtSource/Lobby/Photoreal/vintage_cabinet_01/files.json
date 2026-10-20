@@ -1,0 +1,1714 @@
+{
+  "a_ao": {
+    "8k": {
+      "jpg": {
+        "size": 9818221,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_ao_8k.jpg",
+        "md5": "a0951efe817b0bc5d84a3e97b6eeaf85"
+      },
+      "png": {
+        "size": 38526588,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_ao_8k.png",
+        "md5": "1a815b59d35a65269f02661b847c6200"
+      },
+      "exr": {
+        "size": 40794038,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_a_ao_8k.exr",
+        "md5": "44357a800ca104c942b0319955ca6967"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 2400897,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_ao_4k.jpg",
+        "md5": "3ca180f7f44862b5a194d4493b992014"
+      },
+      "png": {
+        "size": 17763247,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_ao_4k.png",
+        "md5": "47217d0c272cb069cb682a3443991673"
+      },
+      "exr": {
+        "size": 12651924,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_a_ao_4k.exr",
+        "md5": "f88f21cf6792236ecb9291053ac492cf"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 671092,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_ao_2k.jpg",
+        "md5": "ecc347d38d108faf239ea8d7928472f8"
+      },
+      "png": {
+        "size": 5454390,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_ao_2k.png",
+        "md5": "75dcf52716182ea881bedb42264a0524"
+      },
+      "exr": {
+        "size": 3577970,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_a_ao_2k.exr",
+        "md5": "0dc6bebb59da22cc6adfa03c2f612332"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 198301,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_ao_1k.jpg",
+        "md5": "f2c077f69fd95dacad17575b333aae64"
+      },
+      "png": {
+        "size": 1533882,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_ao_1k.png",
+        "md5": "d61b9622567d0cc65e71e01ffc3cd6a6"
+      },
+      "exr": {
+        "size": 986100,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_a_ao_1k.exr",
+        "md5": "72102e7aa1a0e7bfc383f6e9e9f68d2b"
+      }
+    }
+  },
+  "a_metal": {
+    "8k": {
+      "jpg": {
+        "size": 815141,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_metal_8k.jpg",
+        "md5": "9261370b70b8e29e09a77e565c7bd2e8"
+      },
+      "png": {
+        "size": 141349,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_metal_8k.png",
+        "md5": "93d76e564038a82878d23578f8c8ed1e"
+      },
+      "exr": {
+        "size": 158555,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_a_metal_8k.exr",
+        "md5": "6fc2b9d9a363a777f9afd5bf6fb772be"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 210098,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_metal_4k.jpg",
+        "md5": "c4e1fe21adf114976c67f1550f3def7b"
+      },
+      "png": {
+        "size": 39446,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_metal_4k.png",
+        "md5": "f36f29f879cc7bd848434ca7305a0425"
+      },
+      "exr": {
+        "size": 48275,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_a_metal_4k.exr",
+        "md5": "614c4aad25d77fd081bf270dfd0d624c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 55786,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_metal_2k.jpg",
+        "md5": "f898489aa04b8de3ac22e801aed56908"
+      },
+      "png": {
+        "size": 12664,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_metal_2k.png",
+        "md5": "4d6bda563a76267b286e2a05fb16c7c1"
+      },
+      "exr": {
+        "size": 17633,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_a_metal_2k.exr",
+        "md5": "4e53bfa9a64efc1a3427cd54d6f3bbab"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 15742,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_metal_1k.jpg",
+        "md5": "c26fb6fdd3c59ce1c87806b1190dd38c"
+      },
+      "png": {
+        "size": 4934,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_metal_1k.png",
+        "md5": "e12b6f6b1a27739da620ec992ba22957"
+      },
+      "exr": {
+        "size": 7994,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_a_metal_1k.exr",
+        "md5": "fb1dbb3356ea72431bbc5fad72d13b64"
+      }
+    }
+  },
+  "a_alpha": {
+    "8k": {
+      "jpg": {
+        "size": 831433,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_8k.jpg",
+        "md5": "1fa01b1b74df7857cee1fb8b30cc0f62"
+      },
+      "png": {
+        "size": 162466,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_8k.png",
+        "md5": "e93e3e6c15c9fd65ae884bf0b9647e9a"
+      },
+      "exr": {
+        "size": 168405,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_8k.exr",
+        "md5": "763abe6cc60d49712fb89b0002193907"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 217287,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_4k.jpg",
+        "md5": "abf799c814824d5a19c714b3e3a797ca"
+      },
+      "png": {
+        "size": 51558,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_4k.png",
+        "md5": "a76415127ad8aba8253701f9dcfae64b"
+      },
+      "exr": {
+        "size": 54062,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_4k.exr",
+        "md5": "aee409090d1d3b8cf65cfbbf3d3c58ba"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 59424,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_2k.jpg",
+        "md5": "6537332a2ee0833cee864b605b1c5346"
+      },
+      "png": {
+        "size": 18984,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_2k.png",
+        "md5": "6611810b7e8515e1b985eaecb307a656"
+      },
+      "exr": {
+        "size": 21361,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_2k.exr",
+        "md5": "de2242bdab3efc0f7ed69add9945d715"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 17689,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_1k.jpg",
+        "md5": "503608c151646b38c5812ed3ed22aaf3"
+      },
+      "png": {
+        "size": 8243,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_1k.png",
+        "md5": "88fdeda82b60204da6b94d6843a8038b"
+      },
+      "exr": {
+        "size": 10203,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_a_alpha_1k.exr",
+        "md5": "4105e835fdfc7546a7b0426645b1b6f2"
+      }
+    }
+  },
+  "b_rough": {
+    "8k": {
+      "jpg": {
+        "size": 9723588,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_b_rough_8k.jpg",
+        "md5": "4b01d03ac8b9fbb9a526f984c1a0cd05"
+      },
+      "png": {
+        "size": 43158699,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_rough_8k.png",
+        "md5": "ef5acab6b24fba7448c4af6d512faaf7"
+      },
+      "exr": {
+        "size": 50836437,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_b_rough_8k.exr",
+        "md5": "b6db9fa9c669f05a352106c91add6ac6"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 2227747,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_rough_4k.jpg",
+        "md5": "d442ac1a02331d96ce46fca9a3d1fd32"
+      },
+      "png": {
+        "size": 18626856,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_rough_4k.png",
+        "md5": "2adcf2c9d6f176b8f2708a909d1f846a"
+      },
+      "exr": {
+        "size": 14227577,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_b_rough_4k.exr",
+        "md5": "a743ee5836d8ea0ef5a0434021796513"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 566084,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_b_rough_2k.jpg",
+        "md5": "44733929286423a31cee468dafa23401"
+      },
+      "png": {
+        "size": 5495142,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_rough_2k.png",
+        "md5": "f62803f585babcf9a6c12e54ed97ecab"
+      },
+      "exr": {
+        "size": 4087523,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_b_rough_2k.exr",
+        "md5": "aab3b72a762335491b16fdadde03ce93"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 155539,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_b_rough_1k.jpg",
+        "md5": "e858bf92185d817f993dafcf21b9be18"
+      },
+      "png": {
+        "size": 1476774,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_rough_1k.png",
+        "md5": "24f189310e3f3280c88b5f218a436fae"
+      },
+      "exr": {
+        "size": 1098758,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_b_rough_1k.exr",
+        "md5": "38144939a631d00a12a59ba5eeb0cc02"
+      }
+    }
+  },
+  "b_diff": {
+    "8k": {
+      "jpg": {
+        "size": 7952751,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_b_diff_8k.jpg",
+        "md5": "2f9a3d09127a5144fe4be99e0a412e3c"
+      },
+      "png": {
+        "size": 187418153,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_diff_8k.png",
+        "md5": "1b8a8f51f86310c9e8fd349559187035"
+      },
+      "exr": {
+        "size": 97057127,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_b_diff_8k.exr",
+        "md5": "f0a199db27a53d510c78a281fbb6cab3"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1780218,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_diff_4k.jpg",
+        "md5": "2a048c92ad0493c1f46152fded6a6769"
+      },
+      "png": {
+        "size": 56722680,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_diff_4k.png",
+        "md5": "d7c152847cc69781f3826086873464f3"
+      },
+      "exr": {
+        "size": 19116373,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_b_diff_4k.exr",
+        "md5": "c5dd17f5046abb203959c444e9641079"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 457819,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_b_diff_2k.jpg",
+        "md5": "b7674aa644330feb49f4e153b21a2d50"
+      },
+      "png": {
+        "size": 15645729,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_diff_2k.png",
+        "md5": "64e62404712d8c5b8b98feb38f7b06e1"
+      },
+      "exr": {
+        "size": 3870662,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_b_diff_2k.exr",
+        "md5": "ece5364badc0f7a907bc4552767e0490"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 124307,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_b_diff_1k.jpg",
+        "md5": "7bd4316d7c8997626de05fe9e149e4d5"
+      },
+      "png": {
+        "size": 4189941,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_diff_1k.png",
+        "md5": "04e9e94b31653e4797d0de22f8156be9"
+      },
+      "exr": {
+        "size": 985163,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_b_diff_1k.exr",
+        "md5": "11a95ea301d03f10de26a0d57686f9e4"
+      }
+    }
+  },
+  "blend": {
+    "8k": {
+      "blend": {
+        "include": {
+          "textures/vintage_cabinet_01_a_nor_gl_8k.png": {
+            "size": 148836048,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_8k.png",
+            "md5": "78bdaae887f62a3d5a93ace2fe33a371"
+          },
+          "textures/vintage_cabinet_01_a_rough_8k.png": {
+            "size": 32491069,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_rough_8k.png",
+            "md5": "4992227f5d8af65d7754dbb78551f194"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_8k.png": {
+            "size": 157284624,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_8k.png",
+            "md5": "7f610489f1106e4b478dce76fba14593"
+          },
+          "textures/vintage_cabinet_01_a_diff_8k.png": {
+            "size": 199679581,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_diff_8k.png",
+            "md5": "cd516bc7176d8e790cf8ce51829c38c0"
+          },
+          "textures/vintage_cabinet_01_a_metal_8k.png": {
+            "size": 141349,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_metal_8k.png",
+            "md5": "93d76e564038a82878d23578f8c8ed1e"
+          },
+          "textures/vintage_cabinet_01_b_diff_8k.png": {
+            "size": 187418153,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_diff_8k.png",
+            "md5": "1b8a8f51f86310c9e8fd349559187035"
+          },
+          "textures/vintage_cabinet_01_b_rough_8k.png": {
+            "size": 43158699,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_rough_8k.png",
+            "md5": "ef5acab6b24fba7448c4af6d512faaf7"
+          }
+        },
+        "size": 3207580,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/8k/vintage_cabinet_01/vintage_cabinet_01_8k.blend",
+        "md5": "2d95ffd7d45cbe6123288d05a8d04733"
+      }
+    },
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/vintage_cabinet_01_b_diff_4k.png": {
+            "size": 56722680,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_diff_4k.png",
+            "md5": "d7c152847cc69781f3826086873464f3"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_4k.png": {
+            "size": 49258236,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_4k.png",
+            "md5": "9d3c62ee5c2a6b2b80c15ad179dbddd8"
+          },
+          "textures/vintage_cabinet_01_b_rough_4k.png": {
+            "size": 18626856,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_rough_4k.png",
+            "md5": "2adcf2c9d6f176b8f2708a909d1f846a"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_4k.png": {
+            "size": 48119797,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_4k.png",
+            "md5": "87f18776515a3521f45eaba06b12361e"
+          },
+          "textures/vintage_cabinet_01_a_rough_4k.png": {
+            "size": 15312679,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_rough_4k.png",
+            "md5": "def012269b2c4552f7df0ede47afcbd6"
+          },
+          "textures/vintage_cabinet_01_a_diff_4k.png": {
+            "size": 61293536,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_diff_4k.png",
+            "md5": "90dc773c8df87a462d141d7239b3a82b"
+          },
+          "textures/vintage_cabinet_01_a_metal_4k.png": {
+            "size": 39446,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_metal_4k.png",
+            "md5": "f36f29f879cc7bd848434ca7305a0425"
+          }
+        },
+        "size": 3207592,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/vintage_cabinet_01/vintage_cabinet_01_4k.blend",
+        "md5": "92312e436d60be335534111a2ad4ea82"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/vintage_cabinet_01_a_rough_2k.png": {
+            "size": 5035310,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_rough_2k.png",
+            "md5": "a7eadb7da300bf41f42bbdc11d12f453"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_2k.png": {
+            "size": 13825998,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_2k.png",
+            "md5": "da48866128463ace2406e0a663b19da8"
+          },
+          "textures/vintage_cabinet_01_b_rough_2k.png": {
+            "size": 5495142,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_rough_2k.png",
+            "md5": "f62803f585babcf9a6c12e54ed97ecab"
+          },
+          "textures/vintage_cabinet_01_a_metal_2k.png": {
+            "size": 12664,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_metal_2k.png",
+            "md5": "4d6bda563a76267b286e2a05fb16c7c1"
+          },
+          "textures/vintage_cabinet_01_a_diff_2k.png": {
+            "size": 17631467,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_diff_2k.png",
+            "md5": "582aac17540cf6955f3da419a5fa1171"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_2k.png": {
+            "size": 13434751,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_2k.png",
+            "md5": "0d4d5c13aae4ba8db3ca5dfcfcd0aa5f"
+          },
+          "textures/vintage_cabinet_01_b_diff_2k.png": {
+            "size": 15645729,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_diff_2k.png",
+            "md5": "64e62404712d8c5b8b98feb38f7b06e1"
+          }
+        },
+        "size": 3207550,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/vintage_cabinet_01/vintage_cabinet_01_2k.blend",
+        "md5": "965d61524582cd614aef8c212829a191"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/vintage_cabinet_01_a_diff_1k.png": {
+            "size": 4894967,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_diff_1k.png",
+            "md5": "df3274dee617a5b7e2359801b2945946"
+          },
+          "textures/vintage_cabinet_01_a_metal_1k.png": {
+            "size": 4934,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_metal_1k.png",
+            "md5": "e12b6f6b1a27739da620ec992ba22957"
+          },
+          "textures/vintage_cabinet_01_b_diff_1k.png": {
+            "size": 4189941,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_diff_1k.png",
+            "md5": "04e9e94b31653e4797d0de22f8156be9"
+          },
+          "textures/vintage_cabinet_01_a_rough_1k.png": {
+            "size": 1477138,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_rough_1k.png",
+            "md5": "0899b27b1d6856fdad1a1e3804323cec"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_1k.png": {
+            "size": 3792647,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_1k.png",
+            "md5": "4f5e2d2afbd278a4bb8c1b5bb52400f4"
+          },
+          "textures/vintage_cabinet_01_b_rough_1k.png": {
+            "size": 1476774,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_rough_1k.png",
+            "md5": "24f189310e3f3280c88b5f218a436fae"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_1k.png": {
+            "size": 3493260,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_1k.png",
+            "md5": "24a98a09440b5a6b44bd3be30fd7f233"
+          }
+        },
+        "size": 3207584,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/vintage_cabinet_01/vintage_cabinet_01_1k.blend",
+        "md5": "5c235ca6a45ef4b39cf3a4d8a19d774c"
+      }
+    }
+  },
+  "b_ao": {
+    "8k": {
+      "jpg": {
+        "size": 10522591,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_b_ao_8k.jpg",
+        "md5": "69a59945d97b795b02361b2460fa421a"
+      },
+      "png": {
+        "size": 42418952,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_ao_8k.png",
+        "md5": "f23b5444918fe4357b00fb8c2d5605bb"
+      },
+      "exr": {
+        "size": 42124317,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_b_ao_8k.exr",
+        "md5": "295bb5f9cdae3afd992acb1522125fa5"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 2313495,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_ao_4k.jpg",
+        "md5": "1bfc87e54ca7a1eb1b0c8fae5d89dbe9"
+      },
+      "png": {
+        "size": 18246122,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_ao_4k.png",
+        "md5": "8b019a9390a227feab314bf2982bea9a"
+      },
+      "exr": {
+        "size": 12289339,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_b_ao_4k.exr",
+        "md5": "b0f10f3b3ff9dcf9b0d78ebd44440aff"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 577483,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_b_ao_2k.jpg",
+        "md5": "ae18f3293de11982252c098bd5c1783d"
+      },
+      "png": {
+        "size": 5410971,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_ao_2k.png",
+        "md5": "e53e40230e08964e20a233f088e657d2"
+      },
+      "exr": {
+        "size": 3273249,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_b_ao_2k.exr",
+        "md5": "69add027841c9a3f8b26bd90c1a82fc8"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 160376,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_b_ao_1k.jpg",
+        "md5": "1df90d1e81fb0da4aa0824792cbef17b"
+      },
+      "png": {
+        "size": 1468058,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_ao_1k.png",
+        "md5": "58aa49193c28f0677b3e466a17b09492"
+      },
+      "exr": {
+        "size": 857977,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_b_ao_1k.exr",
+        "md5": "10e4fa0d66e347dc457068dc1a2e1f64"
+      }
+    }
+  },
+  "gltf": {
+    "8k": {
+      "gltf": {
+        "include": {
+          "textures/vintage_cabinet_01_a_diff_8k.jpg": {
+            "size": 6289743,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_diff_8k.jpg",
+            "md5": "87f0f3323edd03b76ef103a2d0a81e3b"
+          },
+          "textures/vintage_cabinet_01_b_diff_8k.jpg": {
+            "size": 7952751,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_b_diff_8k.jpg",
+            "md5": "2f9a3d09127a5144fe4be99e0a412e3c"
+          },
+          "vintage_cabinet_01.bin": {
+            "size": 1995776,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/vintage_cabinet_01/vintage_cabinet_01.bin",
+            "md5": "9048b5c9e35ab9d2e2732cf738b7fcb8"
+          },
+          "textures/vintage_cabinet_01_b_rough_8k.jpg": {
+            "size": 9723588,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_b_rough_8k.jpg",
+            "md5": "4b01d03ac8b9fbb9a526f984c1a0cd05"
+          },
+          "textures/vintage_cabinet_01_a_rough_8k.jpg": {
+            "size": 6991230,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_rough_8k.jpg",
+            "md5": "40cbd02597c888ce32a0ca2d3f63db4f"
+          },
+          "textures/vintage_cabinet_01_a_arm_8k.jpg": {
+            "size": 6469436,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_arm_8k.jpg",
+            "md5": "5a34321528ec0bf8d87b62571cd05934"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_8k.jpg": {
+            "size": 4466194,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_8k.jpg",
+            "md5": "47dbbf46c3957bddc6407e5c073ede94"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_8k.jpg": {
+            "size": 3677948,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_8k.jpg",
+            "md5": "8fc1aedfeb50c42c42c2eb16f8475419"
+          }
+        },
+        "size": 22562,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/vintage_cabinet_01/vintage_cabinet_01_8k.gltf",
+        "md5": "8c1ff668444b9efd35c2255a95c3082f"
+      }
+    },
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/vintage_cabinet_01_b_rough_4k.jpg": {
+            "size": 2227747,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_rough_4k.jpg",
+            "md5": "d442ac1a02331d96ce46fca9a3d1fd32"
+          },
+          "textures/vintage_cabinet_01_a_arm_4k.jpg": {
+            "size": 1755318,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_arm_4k.jpg",
+            "md5": "11477ad5cc219aa83146e7538b3e47b3"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_4k.jpg": {
+            "size": 1280138,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_4k.jpg",
+            "md5": "6eb8f0a68ef1b109d1990eab72b57fc8"
+          },
+          "vintage_cabinet_01.bin": {
+            "size": 1995776,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/vintage_cabinet_01/vintage_cabinet_01.bin",
+            "md5": "9048b5c9e35ab9d2e2732cf738b7fcb8"
+          },
+          "textures/vintage_cabinet_01_a_rough_4k.jpg": {
+            "size": 1684259,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_rough_4k.jpg",
+            "md5": "0b6b84ae4db5157d59c5257116184b7e"
+          },
+          "textures/vintage_cabinet_01_a_diff_4k.jpg": {
+            "size": 1504690,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_diff_4k.jpg",
+            "md5": "5b3c16497af10f932280490d76e33162"
+          },
+          "textures/vintage_cabinet_01_b_diff_4k.jpg": {
+            "size": 1780218,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_diff_4k.jpg",
+            "md5": "2a048c92ad0493c1f46152fded6a6769"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_4k.jpg": {
+            "size": 789914,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_4k.jpg",
+            "md5": "e0eef468c2454e391030cd7aece0b5c4"
+          }
+        },
+        "size": 22562,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_cabinet_01/vintage_cabinet_01_4k.gltf",
+        "md5": "5b63b0f3f5d92bdcaabd054805a7decb"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/vintage_cabinet_01_b_nor_gl_2k.jpg": {
+            "size": 185866,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_2k.jpg",
+            "md5": "ad8a0624523db2a813c3b41d26ce1cd7"
+          },
+          "vintage_cabinet_01.bin": {
+            "size": 1995776,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/vintage_cabinet_01/vintage_cabinet_01.bin",
+            "md5": "9048b5c9e35ab9d2e2732cf738b7fcb8"
+          },
+          "textures/vintage_cabinet_01_b_diff_2k.jpg": {
+            "size": 457819,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_b_diff_2k.jpg",
+            "md5": "b7674aa644330feb49f4e153b21a2d50"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_2k.jpg": {
+            "size": 375029,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_2k.jpg",
+            "md5": "96771fcb5dcd819f6920c1d1b777a91e"
+          },
+          "textures/vintage_cabinet_01_a_rough_2k.jpg": {
+            "size": 462771,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_rough_2k.jpg",
+            "md5": "5f7754c53c9aaeb6c95d3f4c06a1efc6"
+          },
+          "textures/vintage_cabinet_01_b_rough_2k.jpg": {
+            "size": 566084,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_b_rough_2k.jpg",
+            "md5": "44733929286423a31cee468dafa23401"
+          },
+          "textures/vintage_cabinet_01_a_arm_2k.jpg": {
+            "size": 519873,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_arm_2k.jpg",
+            "md5": "ba0e94a67417ec2d69647c3a73cc8f74"
+          },
+          "textures/vintage_cabinet_01_a_diff_2k.jpg": {
+            "size": 415570,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_diff_2k.jpg",
+            "md5": "3ec3b6443863e694a0f24b393794c03c"
+          }
+        },
+        "size": 22562,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/vintage_cabinet_01/vintage_cabinet_01_2k.gltf",
+        "md5": "91518e8123c56c6967fc0da44ebf5b21"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/vintage_cabinet_01_a_rough_1k.jpg": {
+            "size": 133697,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_rough_1k.jpg",
+            "md5": "183215e644cd0f74b426121b49e9a411"
+          },
+          "textures/vintage_cabinet_01_a_arm_1k.jpg": {
+            "size": 157915,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_arm_1k.jpg",
+            "md5": "9b4581b935f69907fc1bc93d5bc07ed6"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_1k.jpg": {
+            "size": 109236,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_1k.jpg",
+            "md5": "5f0f1319da94f89c1111f6484839d266"
+          },
+          "textures/vintage_cabinet_01_b_rough_1k.jpg": {
+            "size": 155539,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_b_rough_1k.jpg",
+            "md5": "e858bf92185d817f993dafcf21b9be18"
+          },
+          "vintage_cabinet_01.bin": {
+            "size": 1995776,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/vintage_cabinet_01/vintage_cabinet_01.bin",
+            "md5": "9048b5c9e35ab9d2e2732cf738b7fcb8"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_1k.jpg": {
+            "size": 52162,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_1k.jpg",
+            "md5": "492c300d382219c0cd696cf11c6dbc26"
+          },
+          "textures/vintage_cabinet_01_a_diff_1k.jpg": {
+            "size": 119782,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_diff_1k.jpg",
+            "md5": "fdb450df01c024a7f86f0719c23b63de"
+          },
+          "textures/vintage_cabinet_01_b_diff_1k.jpg": {
+            "size": 124307,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_b_diff_1k.jpg",
+            "md5": "7bd4316d7c8997626de05fe9e149e4d5"
+          }
+        },
+        "size": 22562,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/vintage_cabinet_01/vintage_cabinet_01_1k.gltf",
+        "md5": "754cfb6f79559dbd0eb3c1ccbf364e3b"
+      }
+    }
+  },
+  "usd": {
+    "8k": {
+      "usd": {
+        "include": {
+          "textures/vintage_cabinet_01_a_nor_gl_8k.png": {
+            "size": 148836048,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_8k.png",
+            "md5": "78bdaae887f62a3d5a93ace2fe33a371"
+          },
+          "textures/vintage_cabinet_01_a_rough_8k.png": {
+            "size": 32491069,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_rough_8k.png",
+            "md5": "4992227f5d8af65d7754dbb78551f194"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_8k.png": {
+            "size": 157284624,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_8k.png",
+            "md5": "7f610489f1106e4b478dce76fba14593"
+          },
+          "textures/vintage_cabinet_01_a_diff_8k.png": {
+            "size": 199679581,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_diff_8k.png",
+            "md5": "cd516bc7176d8e790cf8ce51829c38c0"
+          },
+          "textures/vintage_cabinet_01_a_metal_8k.png": {
+            "size": 141349,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_metal_8k.png",
+            "md5": "93d76e564038a82878d23578f8c8ed1e"
+          },
+          "textures/vintage_cabinet_01_b_diff_8k.png": {
+            "size": 187418153,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_diff_8k.png",
+            "md5": "1b8a8f51f86310c9e8fd349559187035"
+          },
+          "textures/vintage_cabinet_01_b_rough_8k.png": {
+            "size": 43158699,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_rough_8k.png",
+            "md5": "ef5acab6b24fba7448c4af6d512faaf7"
+          }
+        },
+        "size": 4400966,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/8k/vintage_cabinet_01/vintage_cabinet_01_8k.usdc",
+        "md5": "74d2c905a753eb209283cd1bdf18e439"
+      }
+    },
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/vintage_cabinet_01_b_diff_4k.png": {
+            "size": 56722680,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_diff_4k.png",
+            "md5": "d7c152847cc69781f3826086873464f3"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_4k.png": {
+            "size": 49258236,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_4k.png",
+            "md5": "9d3c62ee5c2a6b2b80c15ad179dbddd8"
+          },
+          "textures/vintage_cabinet_01_b_rough_4k.png": {
+            "size": 18626856,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_rough_4k.png",
+            "md5": "2adcf2c9d6f176b8f2708a909d1f846a"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_4k.png": {
+            "size": 48119797,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_4k.png",
+            "md5": "87f18776515a3521f45eaba06b12361e"
+          },
+          "textures/vintage_cabinet_01_a_rough_4k.png": {
+            "size": 15312679,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_rough_4k.png",
+            "md5": "def012269b2c4552f7df0ede47afcbd6"
+          },
+          "textures/vintage_cabinet_01_a_diff_4k.png": {
+            "size": 61293536,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_diff_4k.png",
+            "md5": "90dc773c8df87a462d141d7239b3a82b"
+          },
+          "textures/vintage_cabinet_01_a_metal_4k.png": {
+            "size": 39446,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_metal_4k.png",
+            "md5": "f36f29f879cc7bd848434ca7305a0425"
+          }
+        },
+        "size": 4400966,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/vintage_cabinet_01/vintage_cabinet_01_4k.usdc",
+        "md5": "bee455fff7a4a286e5b7db1ecfb97123"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/vintage_cabinet_01_a_rough_2k.png": {
+            "size": 5035310,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_rough_2k.png",
+            "md5": "a7eadb7da300bf41f42bbdc11d12f453"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_2k.png": {
+            "size": 13825998,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_2k.png",
+            "md5": "da48866128463ace2406e0a663b19da8"
+          },
+          "textures/vintage_cabinet_01_b_rough_2k.png": {
+            "size": 5495142,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_rough_2k.png",
+            "md5": "f62803f585babcf9a6c12e54ed97ecab"
+          },
+          "textures/vintage_cabinet_01_a_metal_2k.png": {
+            "size": 12664,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_metal_2k.png",
+            "md5": "4d6bda563a76267b286e2a05fb16c7c1"
+          },
+          "textures/vintage_cabinet_01_a_diff_2k.png": {
+            "size": 17631467,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_diff_2k.png",
+            "md5": "582aac17540cf6955f3da419a5fa1171"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_2k.png": {
+            "size": 13434751,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_2k.png",
+            "md5": "0d4d5c13aae4ba8db3ca5dfcfcd0aa5f"
+          },
+          "textures/vintage_cabinet_01_b_diff_2k.png": {
+            "size": 15645729,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_diff_2k.png",
+            "md5": "64e62404712d8c5b8b98feb38f7b06e1"
+          }
+        },
+        "size": 4400966,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/vintage_cabinet_01/vintage_cabinet_01_2k.usdc",
+        "md5": "e9a07dbc770e35247516c1fc075c1ae2"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/vintage_cabinet_01_a_diff_1k.png": {
+            "size": 4894967,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_diff_1k.png",
+            "md5": "df3274dee617a5b7e2359801b2945946"
+          },
+          "textures/vintage_cabinet_01_a_metal_1k.png": {
+            "size": 4934,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_metal_1k.png",
+            "md5": "e12b6f6b1a27739da620ec992ba22957"
+          },
+          "textures/vintage_cabinet_01_b_diff_1k.png": {
+            "size": 4189941,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_diff_1k.png",
+            "md5": "04e9e94b31653e4797d0de22f8156be9"
+          },
+          "textures/vintage_cabinet_01_a_rough_1k.png": {
+            "size": 1477138,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_rough_1k.png",
+            "md5": "0899b27b1d6856fdad1a1e3804323cec"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_1k.png": {
+            "size": 3792647,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_1k.png",
+            "md5": "4f5e2d2afbd278a4bb8c1b5bb52400f4"
+          },
+          "textures/vintage_cabinet_01_b_rough_1k.png": {
+            "size": 1476774,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_rough_1k.png",
+            "md5": "24f189310e3f3280c88b5f218a436fae"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_1k.png": {
+            "size": 3493260,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_1k.png",
+            "md5": "24a98a09440b5a6b44bd3be30fd7f233"
+          }
+        },
+        "size": 4400966,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/vintage_cabinet_01/vintage_cabinet_01_1k.usdc",
+        "md5": "d4f8f4b552af1c718f03887db67690f2"
+      }
+    }
+  },
+  "a_nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 4478104,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_8k.jpg",
+        "md5": "dc26530d85cda3c8192236b6bfbad690"
+      },
+      "png": {
+        "size": 149793603,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_8k.png",
+        "md5": "21b18b597f08fe5174bd0eb51dfe0795"
+      },
+      "exr": {
+        "size": 37985100,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_8k.exr",
+        "md5": "4052fdd14c167141b39668d998a02a64"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1279505,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_4k.jpg",
+        "md5": "1d4c561e5188075492d3a8a22e892ccd"
+      },
+      "png": {
+        "size": 48362426,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_4k.png",
+        "md5": "0064c7dcc0a368dcae0af2e2ce2c71f6"
+      },
+      "exr": {
+        "size": 10145417,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_4k.exr",
+        "md5": "b3b15626b180fed9f14416cf8a79f72e"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 373660,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_2k.jpg",
+        "md5": "17dfe2cd996c179eb299370c0465017f"
+      },
+      "png": {
+        "size": 13826378,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_2k.png",
+        "md5": "b31c9f4b405ea3637e1594d62fa2f75c"
+      },
+      "exr": {
+        "size": 2801394,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_2k.exr",
+        "md5": "656299116999a35940a619d6905e1d1e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 108261,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_1k.jpg",
+        "md5": "b1efee60c0f1a358197374dcaa25e40b"
+      },
+      "png": {
+        "size": 3793374,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_1k.png",
+        "md5": "fc38fcdd1e50c97948e7c8612eb4a7f9"
+      },
+      "exr": {
+        "size": 780304,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_a_nor_dx_1k.exr",
+        "md5": "26fa4b883aa3ce67e4fa5d4f871bdb01"
+      }
+    }
+  },
+  "a_rough": {
+    "8k": {
+      "jpg": {
+        "size": 6991230,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_rough_8k.jpg",
+        "md5": "40cbd02597c888ce32a0ca2d3f63db4f"
+      },
+      "png": {
+        "size": 32491069,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_rough_8k.png",
+        "md5": "4992227f5d8af65d7754dbb78551f194"
+      },
+      "exr": {
+        "size": 38985646,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_a_rough_8k.exr",
+        "md5": "0281cc49e8c50651f1c93726226d49f6"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1684259,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_rough_4k.jpg",
+        "md5": "0b6b84ae4db5157d59c5257116184b7e"
+      },
+      "png": {
+        "size": 15312679,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_rough_4k.png",
+        "md5": "def012269b2c4552f7df0ede47afcbd6"
+      },
+      "exr": {
+        "size": 12123200,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_a_rough_4k.exr",
+        "md5": "b8c3335af89bd733c4569d7ae41fc36c"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 462771,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_rough_2k.jpg",
+        "md5": "5f7754c53c9aaeb6c95d3f4c06a1efc6"
+      },
+      "png": {
+        "size": 5035310,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_rough_2k.png",
+        "md5": "a7eadb7da300bf41f42bbdc11d12f453"
+      },
+      "exr": {
+        "size": 3782055,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_a_rough_2k.exr",
+        "md5": "7cafbe17904b102f78d7d4d6a45940ca"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 133697,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_rough_1k.jpg",
+        "md5": "183215e644cd0f74b426121b49e9a411"
+      },
+      "png": {
+        "size": 1477138,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_rough_1k.png",
+        "md5": "0899b27b1d6856fdad1a1e3804323cec"
+      },
+      "exr": {
+        "size": 1070193,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_a_rough_1k.exr",
+        "md5": "1993c6a10d8c319898625505f9ff9e90"
+      }
+    }
+  },
+  "a_diff": {
+    "8k": {
+      "jpg": {
+        "size": 6289743,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_diff_8k.jpg",
+        "md5": "87f0f3323edd03b76ef103a2d0a81e3b"
+      },
+      "png": {
+        "size": 199679581,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_diff_8k.png",
+        "md5": "cd516bc7176d8e790cf8ce51829c38c0"
+      },
+      "exr": {
+        "size": 87518549,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_a_diff_8k.exr",
+        "md5": "9ff2c59581330a0971e29c36a0465a8f"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1504690,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_diff_4k.jpg",
+        "md5": "5b3c16497af10f932280490d76e33162"
+      },
+      "png": {
+        "size": 61293536,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_diff_4k.png",
+        "md5": "90dc773c8df87a462d141d7239b3a82b"
+      },
+      "exr": {
+        "size": 18114701,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_a_diff_4k.exr",
+        "md5": "3df382503ceb64fe3d34f291e805c83b"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 415570,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_diff_2k.jpg",
+        "md5": "3ec3b6443863e694a0f24b393794c03c"
+      },
+      "png": {
+        "size": 17631467,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_diff_2k.png",
+        "md5": "582aac17540cf6955f3da419a5fa1171"
+      },
+      "exr": {
+        "size": 3926768,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_a_diff_2k.exr",
+        "md5": "bb8ce4c96908ea02d911b88226def621"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 119782,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_diff_1k.jpg",
+        "md5": "fdb450df01c024a7f86f0719c23b63de"
+      },
+      "png": {
+        "size": 4894967,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_diff_1k.png",
+        "md5": "df3274dee617a5b7e2359801b2945946"
+      },
+      "exr": {
+        "size": 1048731,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_a_diff_1k.exr",
+        "md5": "fdd684bea9bb932aa6517c1783be6abe"
+      }
+    }
+  },
+  "b_arm": {
+    "8k": {
+      "jpg": {
+        "size": 7500174,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_b_arm_8k.jpg",
+        "md5": "efe458568f68b28c063b2f34d2ee819a"
+      },
+      "png": {
+        "size": 70036073,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_arm_8k.png",
+        "md5": "339923e36ed6fd9325aecd8a6d1e2944"
+      },
+      "exr": {
+        "size": 97348309,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_b_arm_8k.exr",
+        "md5": "d9ca933f408b1f24324fc3ff7306c952"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1875870,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_arm_4k.jpg",
+        "md5": "6009d6e03f6ae4bc2d23c7e59cd39418"
+      },
+      "png": {
+        "size": 16683065,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_arm_4k.png",
+        "md5": "af62aefbc94f1077c60e91378cd49f60"
+      },
+      "exr": {
+        "size": 22846251,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_b_arm_4k.exr",
+        "md5": "89b07f6cfae1bc31e12e52868824c4a9"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 514765,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_b_arm_2k.jpg",
+        "md5": "e4b785f2c99c652b3d1467f53706f465"
+      },
+      "png": {
+        "size": 4039276,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_arm_2k.png",
+        "md5": "4dcbca68c6e2f2f6e7142667b652ae9d"
+      },
+      "exr": {
+        "size": 5773839,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_b_arm_2k.exr",
+        "md5": "0ebab537d063946cff83dabb40afff87"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 151268,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_b_arm_1k.jpg",
+        "md5": "80157206635ef890d4da9e35547c0e3a"
+      },
+      "png": {
+        "size": 1044592,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_arm_1k.png",
+        "md5": "9b4fcc6a6923559822e136d5c0cec1cc"
+      },
+      "exr": {
+        "size": 1548446,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_b_arm_1k.exr",
+        "md5": "bf9851dcac84644942ea00c2bce4788d"
+      }
+    }
+  },
+  "b_nor_dx": {
+    "8k": {
+      "jpg": {
+        "size": 3731021,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_8k.jpg",
+        "md5": "4e35d0904b876ee104f3cbcec6c47198"
+      },
+      "png": {
+        "size": 157811019,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_8k.png",
+        "md5": "9947f39afa3e19b171ea5b6d79874a5b"
+      },
+      "exr": {
+        "size": 37771647,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_8k.exr",
+        "md5": "5e7a77027d7f6782eb0303fe3e4bfaf0"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 802213,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_4k.jpg",
+        "md5": "a0e019dec48e2db45a7799d0ad333853"
+      },
+      "png": {
+        "size": 49382597,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_4k.png",
+        "md5": "ea9474573cc5c200377d64b10a9c828d"
+      },
+      "exr": {
+        "size": 8913036,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_4k.exr",
+        "md5": "55c4380b9f70bedb410b803a99db88ed"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 187713,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_2k.jpg",
+        "md5": "97aa957ad47091dd731dad28e65c5ec2"
+      },
+      "png": {
+        "size": 13434338,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_2k.png",
+        "md5": "e97ed05d8e8fce66f7c96650dba5b900"
+      },
+      "exr": {
+        "size": 2016481,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_2k.exr",
+        "md5": "24a190486a11e383b162f8b6f208bec9"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 52585,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_1k.jpg",
+        "md5": "22e9cb7558137f3bd76ea86d30043329"
+      },
+      "png": {
+        "size": 3493373,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_1k.png",
+        "md5": "8bad804a5bfb732517a3087f3d237ec5"
+      },
+      "exr": {
+        "size": 449042,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_b_nor_dx_1k.exr",
+        "md5": "a31837e4e5a36be344355820072cc5ab"
+      }
+    }
+  },
+  "b_nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 3677948,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_8k.jpg",
+        "md5": "8fc1aedfeb50c42c42c2eb16f8475419"
+      },
+      "png": {
+        "size": 157284624,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_8k.png",
+        "md5": "7f610489f1106e4b478dce76fba14593"
+      },
+      "exr": {
+        "size": 37848235,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_8k.exr",
+        "md5": "661128124453232f378d3a400e9ad50a"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 789914,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_4k.jpg",
+        "md5": "e0eef468c2454e391030cd7aece0b5c4"
+      },
+      "png": {
+        "size": 49258236,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_4k.png",
+        "md5": "9d3c62ee5c2a6b2b80c15ad179dbddd8"
+      },
+      "exr": {
+        "size": 8915768,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_4k.exr",
+        "md5": "f14144f9421059cf722c2ba2844a614b"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 185866,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_2k.jpg",
+        "md5": "ad8a0624523db2a813c3b41d26ce1cd7"
+      },
+      "png": {
+        "size": 13434751,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_2k.png",
+        "md5": "0d4d5c13aae4ba8db3ca5dfcfcd0aa5f"
+      },
+      "exr": {
+        "size": 2021254,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_2k.exr",
+        "md5": "cdb23e8b04606d2998bb70bd51d28891"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 52162,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_1k.jpg",
+        "md5": "492c300d382219c0cd696cf11c6dbc26"
+      },
+      "png": {
+        "size": 3493260,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_1k.png",
+        "md5": "24a98a09440b5a6b44bd3be30fd7f233"
+      },
+      "exr": {
+        "size": 452434,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_1k.exr",
+        "md5": "92dae5c4921d26cfc12cdcc19c0aa90d"
+      }
+    }
+  },
+  "a_nor_gl": {
+    "8k": {
+      "jpg": {
+        "size": 4466194,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_8k.jpg",
+        "md5": "47dbbf46c3957bddc6407e5c073ede94"
+      },
+      "png": {
+        "size": 148836048,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_8k.png",
+        "md5": "78bdaae887f62a3d5a93ace2fe33a371"
+      },
+      "exr": {
+        "size": 37963873,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_8k.exr",
+        "md5": "f430652d7cfc54f6485365c03160bde2"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1280138,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_4k.jpg",
+        "md5": "6eb8f0a68ef1b109d1990eab72b57fc8"
+      },
+      "png": {
+        "size": 48119797,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_4k.png",
+        "md5": "87f18776515a3521f45eaba06b12361e"
+      },
+      "exr": {
+        "size": 10125447,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_4k.exr",
+        "md5": "c08f2db9d3cd3340e753988db00e60f4"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 375029,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_2k.jpg",
+        "md5": "96771fcb5dcd819f6920c1d1b777a91e"
+      },
+      "png": {
+        "size": 13825998,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_2k.png",
+        "md5": "da48866128463ace2406e0a663b19da8"
+      },
+      "exr": {
+        "size": 2799265,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_2k.exr",
+        "md5": "f06f6740143a401fa18f33d0e9a305bd"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 109236,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_1k.jpg",
+        "md5": "5f0f1319da94f89c1111f6484839d266"
+      },
+      "png": {
+        "size": 3792647,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_1k.png",
+        "md5": "4f5e2d2afbd278a4bb8c1b5bb52400f4"
+      },
+      "exr": {
+        "size": 780354,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_1k.exr",
+        "md5": "d0b235a4c66f7228bb805abc4d946160"
+      }
+    }
+  },
+  "a_arm": {
+    "8k": {
+      "jpg": {
+        "size": 6469436,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/vintage_cabinet_01/vintage_cabinet_01_a_arm_8k.jpg",
+        "md5": "5a34321528ec0bf8d87b62571cd05934"
+      },
+      "png": {
+        "size": 59235054,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_arm_8k.png",
+        "md5": "681dab83cd93227b0288d67aa0d869f9"
+      },
+      "exr": {
+        "size": 82011173,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/vintage_cabinet_01/vintage_cabinet_01_a_arm_8k.exr",
+        "md5": "75cd4a5b4a472acf6c76bc85c3b2a079"
+      }
+    },
+    "4k": {
+      "jpg": {
+        "size": 1755318,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_arm_4k.jpg",
+        "md5": "11477ad5cc219aa83146e7538b3e47b3"
+      },
+      "png": {
+        "size": 14839432,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_arm_4k.png",
+        "md5": "267b5d0226df2fa9973a78253cd5758e"
+      },
+      "exr": {
+        "size": 19044628,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/vintage_cabinet_01/vintage_cabinet_01_a_arm_4k.exr",
+        "md5": "20ae71fd203528df96b84e9f545f0f0b"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 519873,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/vintage_cabinet_01/vintage_cabinet_01_a_arm_2k.jpg",
+        "md5": "ba0e94a67417ec2d69647c3a73cc8f74"
+      },
+      "png": {
+        "size": 3844043,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_arm_2k.png",
+        "md5": "58e85e75cb1548bfb435f18eab27c572"
+      },
+      "exr": {
+        "size": 5046682,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/vintage_cabinet_01/vintage_cabinet_01_a_arm_2k.exr",
+        "md5": "65ace72afa645dc3c754b19b586caeb3"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 157915,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_cabinet_01/vintage_cabinet_01_a_arm_1k.jpg",
+        "md5": "9b4581b935f69907fc1bc93d5bc07ed6"
+      },
+      "png": {
+        "size": 1055384,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_arm_1k.png",
+        "md5": "c69ae522a2730bf75dcca70dc9de91f9"
+      },
+      "exr": {
+        "size": 1418526,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/vintage_cabinet_01/vintage_cabinet_01_a_arm_1k.exr",
+        "md5": "9bb64bcbc1f4e906a810993be86e8ad8"
+      }
+    }
+  },
+  "fbx": {
+    "8k": {
+      "fbx": {
+        "include": {
+          "textures/vintage_cabinet_01_a_nor_gl_8k.png": {
+            "size": 148836048,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_8k.png",
+            "md5": "78bdaae887f62a3d5a93ace2fe33a371"
+          },
+          "textures/vintage_cabinet_01_a_rough_8k.png": {
+            "size": 32491069,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_rough_8k.png",
+            "md5": "4992227f5d8af65d7754dbb78551f194"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_8k.png": {
+            "size": 157284624,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_8k.png",
+            "md5": "7f610489f1106e4b478dce76fba14593"
+          },
+          "textures/vintage_cabinet_01_a_metal_8k.png": {
+            "size": 141349,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_metal_8k.png",
+            "md5": "93d76e564038a82878d23578f8c8ed1e"
+          },
+          "textures/vintage_cabinet_01_a_diff_8k.png": {
+            "size": 199679581,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_a_diff_8k.png",
+            "md5": "cd516bc7176d8e790cf8ce51829c38c0"
+          },
+          "textures/vintage_cabinet_01_b_diff_8k.png": {
+            "size": 187418153,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_diff_8k.png",
+            "md5": "1b8a8f51f86310c9e8fd349559187035"
+          },
+          "textures/vintage_cabinet_01_b_rough_8k.png": {
+            "size": 43158699,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/vintage_cabinet_01/vintage_cabinet_01_b_rough_8k.png",
+            "md5": "ef5acab6b24fba7448c4af6d512faaf7"
+          }
+        },
+        "size": 1787660,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/8k/vintage_cabinet_01/vintage_cabinet_01_8k.fbx",
+        "md5": "2279c1174c6ebb9adb87d645183adc11"
+      }
+    },
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/vintage_cabinet_01_b_diff_4k.png": {
+            "size": 56722680,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_diff_4k.png",
+            "md5": "d7c152847cc69781f3826086873464f3"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_4k.png": {
+            "size": 49258236,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_4k.png",
+            "md5": "9d3c62ee5c2a6b2b80c15ad179dbddd8"
+          },
+          "textures/vintage_cabinet_01_b_rough_4k.png": {
+            "size": 18626856,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_b_rough_4k.png",
+            "md5": "2adcf2c9d6f176b8f2708a909d1f846a"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_4k.png": {
+            "size": 48119797,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_4k.png",
+            "md5": "87f18776515a3521f45eaba06b12361e"
+          },
+          "textures/vintage_cabinet_01_a_rough_4k.png": {
+            "size": 15312679,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_rough_4k.png",
+            "md5": "def012269b2c4552f7df0ede47afcbd6"
+          },
+          "textures/vintage_cabinet_01_a_metal_4k.png": {
+            "size": 39446,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_metal_4k.png",
+            "md5": "f36f29f879cc7bd848434ca7305a0425"
+          },
+          "textures/vintage_cabinet_01_a_diff_4k.png": {
+            "size": 61293536,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/vintage_cabinet_01/vintage_cabinet_01_a_diff_4k.png",
+            "md5": "90dc773c8df87a462d141d7239b3a82b"
+          }
+        },
+        "size": 1787660,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/vintage_cabinet_01/vintage_cabinet_01_4k.fbx",
+        "md5": "25c027af76b25ddacada1cae6be0d1f3"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/vintage_cabinet_01_a_rough_2k.png": {
+            "size": 5035310,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_rough_2k.png",
+            "md5": "a7eadb7da300bf41f42bbdc11d12f453"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_2k.png": {
+            "size": 13825998,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_2k.png",
+            "md5": "da48866128463ace2406e0a663b19da8"
+          },
+          "textures/vintage_cabinet_01_b_rough_2k.png": {
+            "size": 5495142,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_rough_2k.png",
+            "md5": "f62803f585babcf9a6c12e54ed97ecab"
+          },
+          "textures/vintage_cabinet_01_a_metal_2k.png": {
+            "size": 12664,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_metal_2k.png",
+            "md5": "4d6bda563a76267b286e2a05fb16c7c1"
+          },
+          "textures/vintage_cabinet_01_a_diff_2k.png": {
+            "size": 17631467,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_a_diff_2k.png",
+            "md5": "582aac17540cf6955f3da419a5fa1171"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_2k.png": {
+            "size": 13434751,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_2k.png",
+            "md5": "0d4d5c13aae4ba8db3ca5dfcfcd0aa5f"
+          },
+          "textures/vintage_cabinet_01_b_diff_2k.png": {
+            "size": 15645729,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/vintage_cabinet_01/vintage_cabinet_01_b_diff_2k.png",
+            "md5": "64e62404712d8c5b8b98feb38f7b06e1"
+          }
+        },
+        "size": 1787660,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/vintage_cabinet_01/vintage_cabinet_01_2k.fbx",
+        "md5": "a5b19a7c5f74b2085e4159e76fac9e57"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/vintage_cabinet_01_a_diff_1k.png": {
+            "size": 4894967,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_diff_1k.png",
+            "md5": "df3274dee617a5b7e2359801b2945946"
+          },
+          "textures/vintage_cabinet_01_a_metal_1k.png": {
+            "size": 4934,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_metal_1k.png",
+            "md5": "e12b6f6b1a27739da620ec992ba22957"
+          },
+          "textures/vintage_cabinet_01_b_diff_1k.png": {
+            "size": 4189941,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_diff_1k.png",
+            "md5": "04e9e94b31653e4797d0de22f8156be9"
+          },
+          "textures/vintage_cabinet_01_a_rough_1k.png": {
+            "size": 1477138,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_rough_1k.png",
+            "md5": "0899b27b1d6856fdad1a1e3804323cec"
+          },
+          "textures/vintage_cabinet_01_a_nor_gl_1k.png": {
+            "size": 3792647,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_1k.png",
+            "md5": "4f5e2d2afbd278a4bb8c1b5bb52400f4"
+          },
+          "textures/vintage_cabinet_01_b_rough_1k.png": {
+            "size": 1476774,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_rough_1k.png",
+            "md5": "24f189310e3f3280c88b5f218a436fae"
+          },
+          "textures/vintage_cabinet_01_b_nor_gl_1k.png": {
+            "size": 3493260,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_1k.png",
+            "md5": "24a98a09440b5a6b44bd3be30fd7f233"
+          }
+        },
+        "size": 1787660,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/vintage_cabinet_01/vintage_cabinet_01_1k.fbx",
+        "md5": "fe2b8df89089292a33262ce98ac80b41"
+      }
+    }
+  }
+}

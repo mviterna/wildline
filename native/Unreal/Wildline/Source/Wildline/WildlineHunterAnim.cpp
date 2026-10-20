@@ -1,6 +1,7 @@
 #include "WildlineHunterAnim.h"
 #include "WildlineCharacter.h"
 #include "WildlineHunterMotionData.h"
+#include "WildlineHunterGrip.h"
 #include "WildlineAudio.h"
 #include "Animation/AnimInstanceProxy.h"
 #include "Animation/AnimSequence.h"
@@ -15,15 +16,15 @@
 #include "TwoBoneIK.h"
 #include "Engine/World.h"
 
-// Evaluate the body first, place the stock in its animated shoulder pocket,
-// then solve both hands against that same weapon transform. Publish the weapon
+// Evaluate the body, blend side carry into the animated shoulder pocket,
+// then solve the gripping hands against that weapon transform. Publish it
 // on the game thread after evaluation, avoiding a frame of attachment/IK lag.
 struct FWildlineHunterProxy : public FAnimInstanceProxy {
     explicit FWildlineHunterProxy(UAnimInstance* Instance):FAnimInstanceProxy(Instance){}
     UAnimSequence* Idle=nullptr;UAnimSequence* Walk=nullptr;UAnimSequence* Run=nullptr;
     UAnimSequence* Jump=nullptr;UAnimSequence* JumpStart=nullptr;UAnimSequence* Land=nullptr;
     UAnimSequence* RifleReady=nullptr;UAnimSequence* CrouchIdle=nullptr;UAnimSequence* Transition=nullptr;UAnimSequence* Turn=nullptr;
-    float Cycle=0,Move=0,Fast=0,Air=0,Elapsed=0,AirTime=0,AimPitch=-6,Crouch=0;
+    float Cycle=0,Move=0,Fast=0,Air=0,Elapsed=0,AirTime=0,AimPitch=-6,Crouch=0,Aim=0;
     float LastSpeed=0,VerticalSpeed=0,TransitionTime=10,TransitionStart=0,TransitionDuration=.4f,LandTime=10;
     float LastYaw=0,RootYaw=0,TurnTime=10,TurnStart=0,PelvisAdjust=0;
     bool bWasFalling=false,bYawInitialized=false,bGrounded=false,bStep=false;
@@ -35,7 +36,6 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
     FQuat WeaponRotation=FQuat::Identity;
     FTransform WeaponPose=FTransform::Identity,SupportAction=FTransform::Identity;
     bool Shotgun=false,bWeaponPoseValid=false;
-    FVector BarrelAxis=FVector::ForwardVector;
     TArray<FName> Names;
     TArray<bool> UpperBody;
     FVector FootTargets[2],FootNormals[2],LockedFeet[2];
@@ -200,6 +200,9 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
         const float FloorShift=FootHit[0]&&FootHit[1]?FMath::Clamp(FMath::Min(FootFloorZ[0]-AnkleHeight[0]*FootScale,FootFloorZ[1]-AnkleHeight[1]*FootScale),-20.f,15.f):0;
         PelvisAdjust=FMath::FInterpTo(PelvisAdjust,FloorShift,Delta,10);
         const float ControlPitch=Pawn->IsLocallyControlled()?Pawn->GetControlRotation().Pitch:Pawn->GetBaseAimRotation().Pitch;
+        // bAiming is replicated, so every observer sees the same carry/ADS state.
+        Aim=FMath::FInterpTo(Aim,Pawn->bAiming&&!Pawn->bDead?1.f:0.f,Delta,10.f);
+        if(Aim<.001f)Aim=0;else if(Aim>.999f)Aim=1;
         const float TargetPitch=Pawn->bAiming||Pawn->IsScoped()?FMath::Clamp(FRotator::NormalizeAxis(ControlPitch),-35.f,40.f):-6.f;
         AimPitch=FMath::FInterpTo(AimPitch,TargetPitch,Delta,12);
         const float ShotAge=Pawn->ServerTime()-Pawn->VisualShotAt;
@@ -266,7 +269,7 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
         // A rifle pose has a different pelvis orientation from neutral capture.
         // Layer the held weapon in component space, preserving the captured
         // chest position but not inheriting that incompatible parent rotation.
-        if(RifleReady){
+        if(RifleReady&&Aim>.001f){
             FPoseContext Upper(Output);Sample(RifleReady,Upper,FMath::Fmod(Elapsed,RifleReady->GetPlayLength()));
             FCSPose<FCompactPose> UpperSpace;UpperSpace.InitPose(Upper.Pose);
             const auto Chest=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(Names.IndexOfByKey(FName(TEXT("spine_02")))));
@@ -291,7 +294,7 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
                     FTransform Target=UpperSpace.GetComponentSpaceTransform(Compact);Target.AddToTranslation(Shift);
                     if(HasHead&&I==NeckIndex)Target=NeckTarget;
                     else if(HasHead&&I==HeadIndex)Target=HeadTarget;
-                    FTransform Blended;Blended.Blend(Space.GetComponentSpaceTransform(Compact),Target,.96f);Held.Emplace(Compact,Blended);
+                    FTransform Blended;Blended.Blend(Space.GetComponentSpaceTransform(Compact),Target,.96f*Aim);Held.Emplace(Compact,Blended);
                 }
                 Space.SafeSetCSBoneTransforms(Held);
             }
@@ -339,15 +342,21 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
         // The pocket sits below and just medial to the shoulder joint, on the
         // padded upper chest rather than on top of the deltoid.
         const FVector Shoulder=Space.GetComponentSpaceTransform(ShoulderCompact).GetLocation()+Forward*5.f-Right*3.f-FVector::UpVector*6.f;
-        WeaponPose=FTransform(WeaponRotation,Shoulder-WeaponRotation.RotateVector(Butt));
+        const FTransform AimedPose(WeaponRotation,Shoulder-WeaponRotation.RotateVector(Butt));
+        const auto PelvisCompact=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(PelvisIndex));
+        const FVector Hip=PelvisCompact.GetInt()!=INDEX_NONE?Space.GetComponentSpaceTransform(PelvisCompact).GetLocation():Shoulder-FVector::UpVector*45;
+        const FQuat CarryRotation=(FQuat(Right,FMath::DegreesToRadians(55.f))*FRotationMatrix::MakeFromXZ(Forward,FVector::UpVector).ToQuat()).GetNormalized();
+        const FVector CarryWrist=Hip+Right*(24.f*BodyWidth)+Forward*(9.f*BodyDepth)-FVector::UpVector*2.f;
+        const FTransform CarryPose(CarryRotation,CarryWrist-CarryRotation.RotateVector(WildlineHunterGrip::Wrist(0,Shotgun,HandScale)));
+        WeaponPose.Blend(CarryPose,AimedPose,Aim);
         bWeaponPoseValid=true;
-        BarrelAxis=WeaponRotation.GetForwardVector();
-        Hands[0]=WeaponPose.TransformPosition(FVector(-17.f,0,Shotgun?-4.8f:-2.8f));
+        Hands[0]=WeaponPose.TransformPosition(WildlineHunterGrip::Wrist(0,Shotgun,HandScale));
         const FTransform Support=Shotgun?SupportAction*WeaponPose:WeaponPose;
-        Hands[1]=Support.TransformPosition(FVector(Shotgun?18.5f:17.f,-1.f,-3.f));
-        Poles[0]=Shoulder+Right*30.f- FVector::UpVector*30.f+Forward*8.f;
+        Hands[1]=Support.TransformPosition(WildlineHunterGrip::Wrist(1,Shotgun,HandScale));
+        Poles[0]=FMath::Lerp(Hip+Right*42.f+Forward*5.f,Shoulder+Right*30.f-FVector::UpVector*30.f+Forward*8.f,Aim);
         Poles[1]=Shoulder-Right*55.f-FVector::UpVector*28.f+Forward*15.f;
         for(int32 Side=0;Side<2;Side++){
+            if(Side==1&&Aim==0)continue;
             const TCHAR* Chain[2][3]={{TEXT("upperarm_r"),TEXT("lowerarm_r"),TEXT("hand_r")},{TEXT("upperarm_l"),TEXT("lowerarm_l"),TEXT("hand_l")}};
             FCompactPoseBoneIndex Indices[3];bool Valid=true;
             for(int32 J=0;J<3;J++){
@@ -358,22 +367,23 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
             }
             if(!Valid)continue;
             FTransform Upper=Space.GetComponentSpaceTransform(Indices[0]),Lower=Space.GetComponentSpaceTransform(Indices[1]),End=Space.GetComponentSpaceTransform(Indices[2]);
+            const FTransform OriginalUpper=Upper,OriginalLower=Lower,OriginalEnd=End;
             AnimationCore::SolveTwoBoneIK(Upper,Lower,End,Poles[Side],Hands[Side],false,1,1);
-            End.SetRotation((FQuat(Right,-FMath::DegreesToRadians(AimPitch))*End.GetRotation()).GetNormalized());
+            End.SetRotation((WeaponPose.GetRotation()*WildlineHunterGrip::Rotation(Side)).GetNormalized());
+            if(Side==1){FTransform U,L,E;U.Blend(OriginalUpper,Upper,Aim);L.Blend(OriginalLower,Lower,Aim);E.Blend(OriginalEnd,End,Aim);Upper=U;Lower=L;End=E;}
             TArray<FBoneTransform> Solved;Solved.Emplace(Indices[0],Upper);Solved.Emplace(Indices[1],Lower);Solved.Emplace(Indices[2],End);
             Space.SafeSetCSBoneTransforms(Solved);
         }
         ApplyProportions(Space,Bones);
         FCSPose<FCompactPose>::ConvertComponentPosesToLocalPosesSafe(Space,Output.Pose);
-        // Close the fingers around the narrow sporting stock instead of leaving
-        // the mannequin's open support hands underneath it.
-        for(int32 Side=0;Side<2;Side++)for(const TCHAR* Finger:{TEXT("index"),TEXT("middle"),TEXT("ring"),TEXT("pinky")})for(int32 Joint=1;Joint<=3;Joint++){
+        // The authored ADS fingers already curl around a grip. Preserve their
+        // local rotations instead of adding a second curl in weapon space.
+        FPoseContext Fingers(Output);Sample(RifleReady,Fingers,0);
+        for(int32 Side=0;Side<2;Side++)for(const TCHAR* Finger:{TEXT("thumb"),TEXT("index"),TEXT("middle"),TEXT("ring"),TEXT("pinky")})for(int32 Joint=1;Joint<=3;Joint++){
             const FName Name(*FString::Printf(TEXT("%s_0%d_%s"),Finger,Joint,Side==0?TEXT("r"):TEXT("l")));
             const int32 Index=Names.IndexOfByKey(Name);if(Index==INDEX_NONE)continue;
             const auto Compact=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(Index));if(Compact.GetInt()==INDEX_NONE)continue;
-            const FVector Axis=Space.GetComponentSpaceTransform(Compact).GetRotation().Inverse().RotateVector(BarrelAxis);
-            const float Bend=Side==0&&FCString::Strcmp(Finger,TEXT("index"))==0?22.f:Joint==1?42.f:55.f;
-            auto& T=Output.Pose[Compact];T.SetRotation((T.GetRotation()*FQuat(Axis,FMath::DegreesToRadians(Bend*(Side==0?-1.f:1.f)))).GetNormalized());
+            auto& T=Output.Pose[Compact];T.SetRotation(FQuat::Slerp(T.GetRotation(),Fingers.Pose[Compact].GetRotation(),Side==0?1.f:Aim).GetNormalized());
         }
         return true;
     }
@@ -399,7 +409,7 @@ void UWildlineHunterAnim::NativePostEvaluateAnimation(){
     Super::NativePostEvaluateAnimation();
     const auto& Proxy=GetProxyOnGameThread<FWildlineHunterProxy>();
     GaitPhase=Proxy.Cycle;for(int32 Side=0;Side<2;Side++){FootPlantWeight[Side]=Proxy.FootAlpha[Side];FootPlantSerial[Side]=Proxy.FootSerial[Side];}
-    CrouchBlend=Proxy.Crouch;MovementBlend=Proxy.Move;GroundOffset=Proxy.PelvisAdjust;
+    CrouchBlend=Proxy.Crouch;MovementBlend=Proxy.Move;GroundOffset=Proxy.PelvisAdjust;AimBlend=Proxy.Aim;
     auto* Pawn=Cast<AWildlineCharacter>(GetOwningActor());
     if(Pawn&&!Pawn->bSquirrel&&!Pawn->bPreviewHunter&&Proxy.bWeaponPoseValid){
         Pawn->WorldRifle->SetWorldTransform(Proxy.WeaponPose*GetSkelMeshComponent()->GetComponentTransform());

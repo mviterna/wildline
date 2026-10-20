@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-20",
+  "status": "PASS",
+  "profileFix": {
+    "finding": "The active build already contained PlayerDisplayName=Mark, but the room panel displayed the name setup controls whenever opened in menus. Build-local settings also used different save directories between package archives.",
+    "behavior": "Only missing profiles show initial name setup. Existing profiles have an explicit Edit My Name button. The local name and hunter selection use shared per-user profile storage across package directories.",
+    "storage": "C:/Users/mvite/AppData/Local/WILDLINE/Profiles/LocalPlayer.ini",
+    "actualExistingProfile": "PASS: recovered Mark and suppressed setup in the new packaged executable",
+    "actualProfileLog": "native/headwear-existing-profile.log",
+    "relaunchTest": "PASS: two separate processes; build-local GameUserSettings.ini retired only inside a disposable test fixture; name and hat recovered from shared profile",
+    "renameTest": "PASS: explicit rename opens editor, saves, and survives reload"
+  },
+  "headwear": {
+    "hatCount": 36,
+    "fieldAndWork": 16,
+    "funny": 20,
+    "noHatOption": true,
+    "provenance": "Original WILDLINE procedural artwork; no third-party assets or account access",
+    "picker": "Browse Hats button opens close-up portrait and a scrollable three-column thumbnail gallery with All, Field/Work, and Funny filters",
+    "preview": "Immediate equipped preview; turning controls; framing accommodates tall hats; selection persists and replicates",
+    "fitChecks": "PASS: both bodies, 60/174.5/230 cm heights, 60/150 percent head scales",
+    "catalog": "native/Unreal/Wildline/ArtSource/Hunters/Headwear/styles.json"
+  },
+  "editorEvidence": {
+    "profile": "native/Unreal/Wildline/Saved/HeadwearReview/c84bed3a58d045fd948e031d7e4db245",
+    "finalGallery": "native/Unreal/Wildline/Saved/HeadwearReview/1997765b5eef4eb6a0182ccc3033abd2"
+  },
+  "packageEvidence": {
+    "result": "PASS",
+    "profileAndGallery": "native/Unreal/Wildline/Saved/HeadwearReview/3c7ed6aa5bcc49eca80e215e95114765",
+    "previews": "native/Preview/Headwear-3c7ed6aa5bcc49eca80e215e95114765",
+    "network": "native/Unreal/Wildline/Saved/HeadwearReview/Network-ac809083c41e42f0b6ccf886589fefd6",
+    "networkChecks": "PASS: listen host and late-joining loopback client replicate headwear ID 19 and the actual SM_Hat_TRex mesh, custom body, portrait and aim"
+  },
+  "package": "C:/_git/wildline/native/Build/HeadwearProfiles/Windows",
+  "desktopBuildSelected": "HeadwearProfiles",
+  "bothDesktopShortcutsAndInstalledBetaPreserved": true,
+  "installer": {
+    "version": "0.2.0-beta.20261020.150249",
+    "status": "PASS",
+    "stagedExecutableMatchesTestedPackage": true,
+    "setupPath": "C:\\_git\\wildline\\native\\Build\\Beta\\Wildline-0.2.0-beta.20261020.150249-Setup.exe",
+    "sha256": "078EF77FF4E03E57593156B410442F98747C93B0F6D7870F1583EFAD494A2B6A",
+    "sizeBytes": 3472908609
+  },
+  "limits": [
+    "Network verification used two local processes; four separate Hamachi PCs were not available.",
+    "Fresh installation and destructive installer lifecycle checks were not run against the user's installed beta."
+  ],
+  "testedExecutableSHA256": "8B65939722BC6C607FE2C5F5DC29A6B9D992F994DE9E5772B9C700F7C8E553A1"
+}

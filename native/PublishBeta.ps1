@@ -1,4 +1,4 @@
-param([switch]$Build, [switch]$ResumeDraft, [string]$Notes = 'WILDLINE Windows beta. Install once; future updates are checked automatically on launch.')
+param([switch]$Build, [switch]$ResumeDraft, [switch]$StageCandidate, [switch]$ResumeCandidate, [string]$Notes = 'WILDLINE Windows beta. Install once; future updates are checked automatically on launch.')
 $ErrorActionPreference = 'Stop'
 if ($Build) {
     & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'LaunchNative.ps1') -Build
@@ -10,13 +10,17 @@ if ($Build) {
     if ($LASTEXITCODE) { throw 'Installer lifecycle verification failed; nothing was published.' }
 }
 $taskVerificationPath = Join-Path $PSScriptRoot 'Build/Beta/InstallerVerification.json'
+if (!$StageCandidate) {
 if (!(Test-Path $taskVerificationPath)) { throw 'Run VerifyBetaInstaller.ps1 on this installer before publishing.' }
 $taskVerification = Get-Content $taskVerificationPath -Raw | ConvertFrom-Json
 if ($taskVerification.sha256 -ne $taskReceipt.sha256 -or $taskVerification.bootstrapSha256 -ne $taskReceipt.bootstrapSha256 -or !$taskVerification.passed) { throw 'These exact installers have not passed lifecycle verification.' }
+}
 & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'Launcher/VerifyUpdates.ps1')
 if ($LASTEXITCODE) { throw 'Updater checks failed; nothing was published.' }
-& powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'Launcher/VerifyVersionedSetup.ps1')
-if ($LASTEXITCODE) { throw 'Versioned setup integration failed; nothing was published.' }
+if (!$StageCandidate -and !($taskVerification.versionedSetupPassed -and $taskVerification.runner -eq 'github-hosted-windows' -and $taskVerification.runUrl -match '^https://github.com/mviterna/wildline/actions/runs/\d+$')) {
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'Launcher/VerifyVersionedSetup.ps1')
+    if ($LASTEXITCODE) { throw 'Versioned setup integration failed; nothing was published.' }
+}
 $taskOutput = & (Join-Path $PSScriptRoot 'Launcher/PrepareUpdate.ps1')
 $taskRepo = 'mviterna/wildline-downloads'
 $taskTag = "v$($taskReceipt.version)"
@@ -28,7 +32,7 @@ function Invoke-GitHub {
 # Do not replace an existing version. A retry must inspect/reuse its draft explicitly.
 $taskExistingTags = @(& gh api --paginate "repos/$taskRepo/releases?per_page=100" --jq '.[].tag_name')
 if ($LASTEXITCODE) { throw 'Cannot inspect existing releases.' }
-if (($taskExistingTags -contains $taskTag) -and !$ResumeDraft) { throw "Release $taskTag already exists. Use -ResumeDraft only for an interrupted unpublished draft." }
+if (($taskExistingTags -contains $taskTag) -and !$ResumeDraft -and !$ResumeCandidate) { throw "Release $taskTag already exists. Explicitly resume its draft or verified candidate." }
 $taskNotesPath = Join-Path $taskOutput 'release-notes.txt'
 [IO.File]::WriteAllText($taskNotesPath, $Notes)
 if ($taskExistingTags -notcontains $taskTag) {
@@ -37,8 +41,8 @@ if ($taskExistingTags -notcontains $taskTag) {
 # Drafts may not resolve through the tag endpoint until they are published.
 $taskReleases = & gh api "repos/$taskRepo/releases?per_page=100" | ConvertFrom-Json
 if ($LASTEXITCODE) { throw 'Cannot inspect the release draft.' }
-$taskDrafts = @($taskReleases | Where-Object { $_.tag_name -eq $taskTag -and $_.draft })
-if ($taskDrafts.Count -ne 1) { throw 'The version must be an unpublished draft; published assets are never replaced.' }
+$taskDrafts = @($taskReleases | Where-Object { $_.tag_name -eq $taskTag -and ($_.draft -or $ResumeCandidate) })
+if ($taskDrafts.Count -ne 1) { throw 'The version must be an unpublished draft or an explicitly resumed candidate; published assets are never replaced.' }
 $taskDraft = $taskDrafts[0]
 $taskAssets = @(Get-ChildItem $taskOutput -File | Where-Object { $_.Name -match '\.part\d{3}$|^latest\.json$|^WildlineSetup\.exe$' })
 foreach ($taskAsset in $taskAssets) {
@@ -46,10 +50,12 @@ foreach ($taskAsset in $taskAssets) {
     $taskExisting = @($taskDraft.assets | Where-Object { $_.name -eq $taskAsset.Name })
     if ($taskExisting.Count) {
         if ($taskExisting.Count -eq 1 -and $taskExisting[0].state -eq 'uploaded' -and $taskExisting[0].digest -eq $taskExpectedDigest -and $taskExisting[0].size -eq $taskAsset.Length) { continue }
+        if (!$taskDraft.draft) { throw "Published candidate asset differs: $($taskAsset.Name). Published assets are immutable." }
         if ($taskExisting.Count -eq 1 -and $taskExisting[0].state -ne 'uploaded') {
             Invoke-GitHub @('api','--method','DELETE',"repos/$taskRepo/releases/assets/$($taskExisting[0].id)")
         } else { throw "Existing draft asset differs: $($taskAsset.Name). Inspect it before retrying." }
     }
+    if (!$taskDraft.draft) { throw "Published candidate asset is missing: $($taskAsset.Name)." }
     Invoke-GitHub @('release','upload',$taskTag,$taskAsset.FullName,'--repo',$taskRepo)
 }
 $taskRemote = & gh api "repos/$taskRepo/releases/$($taskDraft.id)" | ConvertFrom-Json
@@ -59,7 +65,11 @@ foreach ($taskAsset in $taskAssets) {
     $taskMatch = @($taskRemote.assets | Where-Object { $_.name -eq $taskAsset.Name -and $_.size -eq $taskAsset.Length -and $_.digest -eq $taskExpectedDigest })
     if ($taskMatch.Count -ne 1) { throw "Upload verification failed: $($taskAsset.Name)" }
 }
-Invoke-GitHub @('release','edit',$taskTag,'--repo',$taskRepo,'--draft=false')
+if ($taskDraft.draft) { Invoke-GitHub @('release','edit',$taskTag,'--repo',$taskRepo,'--draft=false') }
+if ($StageCandidate) {
+    Write-Output "Candidate available for isolated verification: https://github.com/$taskRepo/releases/tag/$taskTag. The beta feed has not changed."
+    return
+}
 if ($taskExistingTags -notcontains 'beta') {
     Invoke-GitHub @('release','create','beta','--repo',$taskRepo,'--prerelease','--title','WILDLINE beta downloads','--notes','Install WildlineSetup.exe once. It downloads the current verified beta and checks for future updates on launch.')
 } else {

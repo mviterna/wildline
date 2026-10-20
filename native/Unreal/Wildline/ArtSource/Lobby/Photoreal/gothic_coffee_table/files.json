@@ -1,0 +1,904 @@
+{
+  "blend": {
+    "1k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/gothic_coffee_table/gothic_coffee_table_1k.blend",
+        "md5": "eb4dceaa94ac9453e64760cbe2f98d67",
+        "size": 642320,
+        "include": {
+          "textures/gothic_coffee_table_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_diff_1k.jpg",
+            "md5": "b21f338ebdfe546f17d2d5dd16150725",
+            "size": 618166
+          },
+          "textures/gothic_coffee_table_nor_gl_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_nor_gl_1k.exr",
+            "md5": "551c4b1ec13af49154a0afbea6ca750c",
+            "size": 1812638
+          },
+          "textures/gothic_coffee_table_rough_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_rough_1k.exr",
+            "md5": "6b0e5f94ed9ee42bfea140f945c5a4fc",
+            "size": 752124
+          }
+        }
+      }
+    },
+    "2k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/gothic_coffee_table/gothic_coffee_table_2k.blend",
+        "md5": "108e7293e623ffb8f59224c7bcbb30f0",
+        "size": 642209,
+        "include": {
+          "textures/gothic_coffee_table_diff_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_diff_2k.jpg",
+            "md5": "a6cb5fbcbaf6cf804ebdd4b08d7ce7d5",
+            "size": 2063263
+          },
+          "textures/gothic_coffee_table_nor_gl_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_nor_gl_2k.exr",
+            "md5": "b46c8cc010def6993c04dd0f08c3a9c6",
+            "size": 5973848
+          },
+          "textures/gothic_coffee_table_rough_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_rough_2k.exr",
+            "md5": "22f79d1266b15d8beff2c11b0568c882",
+            "size": 2435896
+          }
+        }
+      }
+    },
+    "4k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/gothic_coffee_table/gothic_coffee_table_4k.blend",
+        "md5": "e555033a0bdc37c074be4795a4f24fc9",
+        "size": 642236,
+        "include": {
+          "textures/gothic_coffee_table_diff_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_diff_4k.jpg",
+            "md5": "689a53d0b9d385eff34b8c3681531006",
+            "size": 7159735
+          },
+          "textures/gothic_coffee_table_nor_gl_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_nor_gl_4k.exr",
+            "md5": "eba685ce1466251b5d46bc5db69c8dc3",
+            "size": 20995507
+          },
+          "textures/gothic_coffee_table_rough_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_rough_4k.exr",
+            "md5": "f4649e041a6190efece763ca93f98dfd",
+            "size": 8288211
+          }
+        }
+      }
+    },
+    "8k": {
+      "blend": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/8k/gothic_coffee_table/gothic_coffee_table_8k.blend",
+        "md5": "55889bd9597b39815331353bc7fcc687",
+        "size": 642292,
+        "include": {
+          "textures/gothic_coffee_table_diff_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_diff_8k.jpg",
+            "md5": "93f41e22b68b16eea96aa5e2e55e592c",
+            "size": 26504093
+          },
+          "textures/gothic_coffee_table_nor_gl_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_nor_gl_8k.exr",
+            "md5": "44a5f63b49c4a07dc109bc0bbf37b929",
+            "size": 79440050
+          },
+          "textures/gothic_coffee_table_rough_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_rough_8k.exr",
+            "md5": "6fbb4c3f30c0e92941cc324c2c835543",
+            "size": 29742969
+          }
+        }
+      }
+    }
+  },
+  "gothic_coffee_rough": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_rough_1k.exr",
+        "md5": "a7a04cb28e12333095c71676d80210fa",
+        "size": 757066
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_rough_1k.jpg",
+        "md5": "8c978d4b5b45601fe09b71bdd5766509",
+        "size": 649060
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/gothic_coffee_table/gothic_coffee_rough_1k.png",
+        "md5": "5e6a81c068a60aff4f0ced4c7dfe1790",
+        "size": 822440
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_rough_2k.exr",
+        "md5": "79364fea0257af877c8cad28df9b7dda",
+        "size": 2469110
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_rough_2k.jpg",
+        "md5": "1e020c8042e7a2447de39f7d710066c9",
+        "size": 2152484
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/gothic_coffee_table/gothic_coffee_rough_2k.png",
+        "md5": "c19754d40a8c5db4264c93d913c2cb1c",
+        "size": 2704810
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_rough_4k.exr",
+        "md5": "a854c0b48287f9b2e48e8e219a7289b7",
+        "size": 8378364
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_rough_4k.jpg",
+        "md5": "ed6cd18748a8e60eb5cb4b011730b3f8",
+        "size": 7446784
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/gothic_coffee_table/gothic_coffee_rough_4k.png",
+        "md5": "558d2569ca30849a9663dfde5193e95c",
+        "size": 8912200
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_rough_8k.exr",
+        "md5": "14d447dd650fd0a205645ccadc9fc11e",
+        "size": 29508164
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_rough_8k.jpg",
+        "md5": "7c9e566185952a71bbb3fb0fa12cfb3e",
+        "size": 26747365
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/gothic_coffee_table/gothic_coffee_rough_8k.png",
+        "md5": "42e0cf4449e34d354b64e6c1a7306497",
+        "size": 30230366
+      }
+    }
+  },
+  "AO": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_ao_1k.exr",
+        "md5": "5ca4e35cbb7e1ba7793c41336f8f6c14",
+        "size": 725935
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_ao_1k.jpg",
+        "md5": "3635af99d83d7eb41de049cf15b7f4df",
+        "size": 608415
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/gothic_coffee_table/gothic_coffee_table_ao_1k.png",
+        "md5": "348699d2cd97f58a04c1b42ea7543265",
+        "size": 1095280
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_ao_2k.exr",
+        "md5": "fc5c681de68c0806c1b80e9234bad9a9",
+        "size": 1802728
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_ao_2k.jpg",
+        "md5": "9304245b0b9c010806b46d6b439623b4",
+        "size": 1540575
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/gothic_coffee_table/gothic_coffee_table_ao_2k.png",
+        "md5": "e8a740de0dec35414e2b9b62a2e0e76c",
+        "size": 3529520
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_ao_4k.exr",
+        "md5": "218f84b2d48c183c0994d418fe1bac92",
+        "size": 4327366
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_ao_4k.jpg",
+        "md5": "fa870c6272cf26c89a0d9771df94949d",
+        "size": 3932730
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/gothic_coffee_table/gothic_coffee_table_ao_4k.png",
+        "md5": "4cc1a32580201533f24832be66687756",
+        "size": 11696146
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_ao_8k.exr",
+        "md5": "a28a2cc524ff5bbc502a8df81df3ed23",
+        "size": 11553736
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_ao_8k.jpg",
+        "md5": "8e39531682d93ff42a98627569becb35",
+        "size": 11528301
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/gothic_coffee_table/gothic_coffee_table_ao_8k.png",
+        "md5": "665e7938f5c93362e2fd72ba225442a2",
+        "size": 38971422
+      }
+    }
+  },
+  "arm": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_arm_1k.exr",
+        "md5": "bfe1e501bc3a9fcec3ce59588542d249",
+        "size": 2133905
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_arm_1k.jpg",
+        "md5": "c950595ab24ec4ad0aafe24c08aec004",
+        "size": 965587
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/gothic_coffee_table/gothic_coffee_table_arm_1k.png",
+        "md5": "ed6845502ca9c2b4b02d2506bb77b70e",
+        "size": 3154137
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_arm_2k.exr",
+        "md5": "a687d2929e335d98af9a93e3de1bb4f2",
+        "size": 6989495
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_arm_2k.jpg",
+        "md5": "d864e528959214b7547d026a128b5a33",
+        "size": 3235495
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/gothic_coffee_table/gothic_coffee_table_arm_2k.png",
+        "md5": "269f5c7288659c1216cfb5c85e7f362c",
+        "size": 10553149
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_arm_4k.exr",
+        "md5": "4606212022218599d0011230bddb5efc",
+        "size": 22734283
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_arm_4k.jpg",
+        "md5": "437d54da1be7a0598340af878c3e8c49",
+        "size": 10759328
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/gothic_coffee_table/gothic_coffee_table_arm_4k.png",
+        "md5": "033a3ff6e40c97e7c70692ad5129a70b",
+        "size": 33228425
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_arm_8k.exr",
+        "md5": "c1fdae3d8bb160e939226e87913df3d3",
+        "size": 77674024
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_arm_8k.jpg",
+        "md5": "2266b3c88e18e01ce6f364331115af36",
+        "size": 36982832
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/gothic_coffee_table/gothic_coffee_table_arm_8k.png",
+        "md5": "729f33ce75e862d930edb842e21bd5b1",
+        "size": 100674389
+      }
+    }
+  },
+  "Diffuse": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_diff_1k.exr",
+        "md5": "024e8f93785cbffbd1ef57c9d057928a",
+        "size": 1882217
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_diff_1k.jpg",
+        "md5": "b21f338ebdfe546f17d2d5dd16150725",
+        "size": 618166
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/gothic_coffee_table/gothic_coffee_table_diff_1k.png",
+        "md5": "c0696ae113a7db490e3de98140a592df",
+        "size": 4759145
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_diff_2k.exr",
+        "md5": "4937a399c568443e55c82f397a4e6e3b",
+        "size": 6053906
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_diff_2k.jpg",
+        "md5": "a6cb5fbcbaf6cf804ebdd4b08d7ce7d5",
+        "size": 2063263
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/gothic_coffee_table/gothic_coffee_table_diff_2k.png",
+        "md5": "28b691838f1401db70f0b4784cd3404d",
+        "size": 15222391
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_diff_4k.exr",
+        "md5": "fb92ce3e6b6eedbee90d8d13d1bc825a",
+        "size": 20834931
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_diff_4k.jpg",
+        "md5": "689a53d0b9d385eff34b8c3681531006",
+        "size": 7159735
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/gothic_coffee_table/gothic_coffee_table_diff_4k.png",
+        "md5": "fa7ed92d79181c08960baf2dd2167d72",
+        "size": 47483267
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_diff_8k.exr",
+        "md5": "1833508888459da9dae98efbaf510022",
+        "size": 78572215
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_diff_8k.jpg",
+        "md5": "93f41e22b68b16eea96aa5e2e55e592c",
+        "size": 26504093
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/gothic_coffee_table/gothic_coffee_table_diff_8k.png",
+        "md5": "eb72aa781d38fe123946ae559882a48c",
+        "size": 119094761
+      }
+    }
+  },
+  "nor_dx": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_nor_dx_1k.exr",
+        "md5": "3341499a2855b27b1f2541a2b2cfd416",
+        "size": 1794100
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_nor_dx_1k.jpg",
+        "md5": "e8279186e455682a254f8e3c3f8a6776",
+        "size": 846828
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/gothic_coffee_table/gothic_coffee_table_nor_dx_1k.png",
+        "md5": "7ebfd5f71e6dee724ec57adce680b575",
+        "size": 4066053
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_nor_dx_2k.exr",
+        "md5": "7a26f3ab919bfa2419ac2f792f713329",
+        "size": 5919003
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_nor_dx_2k.jpg",
+        "md5": "abcfc63c9f0893b27eaff05da0a95cdc",
+        "size": 2839640
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/gothic_coffee_table/gothic_coffee_table_nor_dx_2k.png",
+        "md5": "ed211c2f0521995a79b52241880548c3",
+        "size": 13363689
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_nor_dx_4k.exr",
+        "md5": "ee64512e763795d0ef76d9b88bcb1b8a",
+        "size": 20839259
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_nor_dx_4k.jpg",
+        "md5": "38030b978906b2b6bde183476c0433b2",
+        "size": 9887332
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/gothic_coffee_table/gothic_coffee_table_nor_dx_4k.png",
+        "md5": "f8180592732af228ee319c2bb80b72c0",
+        "size": 41849859
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_nor_dx_8k.exr",
+        "md5": "649b8870aa5f50c102a60b8812261486",
+        "size": 79064269
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_nor_dx_8k.jpg",
+        "md5": "4ca7e7ed828864d58e0c9de193bd4821",
+        "size": 37197708
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/gothic_coffee_table/gothic_coffee_table_nor_dx_8k.png",
+        "md5": "8af9adff1b7757580881f26209d782e1",
+        "size": 132787004
+      }
+    }
+  },
+  "nor_gl": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_nor_gl_1k.exr",
+        "md5": "551c4b1ec13af49154a0afbea6ca750c",
+        "size": 1812638
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_nor_gl_1k.jpg",
+        "md5": "9dc3073a3b210554be58db913116ffdb",
+        "size": 836624
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/gothic_coffee_table/gothic_coffee_table_nor_gl_1k.png",
+        "md5": "57e5d7c533f4613ead29afb32f8abbc2",
+        "size": 4066167
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_nor_gl_2k.exr",
+        "md5": "b46c8cc010def6993c04dd0f08c3a9c6",
+        "size": 5973848
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_nor_gl_2k.jpg",
+        "md5": "af4e37bbda3def19e491044ed823c5ac",
+        "size": 2796089
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/gothic_coffee_table/gothic_coffee_table_nor_gl_2k.png",
+        "md5": "5b2c51a34f3e6a936f0fcf8b341fec03",
+        "size": 13363873
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_nor_gl_4k.exr",
+        "md5": "eba685ce1466251b5d46bc5db69c8dc3",
+        "size": 20995507
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_nor_gl_4k.jpg",
+        "md5": "7b2c213d8e74efa4bbed0a7de28ecb8d",
+        "size": 9708971
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/gothic_coffee_table/gothic_coffee_table_nor_gl_4k.png",
+        "md5": "4757eda278ab13d3983f5558f96ff0c4",
+        "size": 41850729
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_nor_gl_8k.exr",
+        "md5": "44a5f63b49c4a07dc109bc0bbf37b929",
+        "size": 79440050
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_nor_gl_8k.jpg",
+        "md5": "40050d7606ce4d7c627059943e2afed4",
+        "size": 36313943
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/gothic_coffee_table/gothic_coffee_table_nor_gl_8k.png",
+        "md5": "de4193c3377f9d8f2341f5292901f54b",
+        "size": 132806474
+      }
+    }
+  },
+  "Rough": {
+    "1k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_rough_1k.exr",
+        "md5": "6b0e5f94ed9ee42bfea140f945c5a4fc",
+        "size": 752124
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_rough_1k.jpg",
+        "md5": "19189fb83387c4ea155420f7cb9900ca",
+        "size": 668330
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/gothic_coffee_table/gothic_coffee_table_rough_1k.png",
+        "md5": "4f57be139a18cb66d306b363ac249741",
+        "size": 1460454
+      }
+    },
+    "2k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_rough_2k.exr",
+        "md5": "22f79d1266b15d8beff2c11b0568c882",
+        "size": 2435896
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_rough_2k.jpg",
+        "md5": "5dfae6794991371cefc66759229fb9b1",
+        "size": 2210578
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/gothic_coffee_table/gothic_coffee_table_rough_2k.png",
+        "md5": "798e29ab35107acdcbb6e88c1e2ba9d4",
+        "size": 4731545
+      }
+    },
+    "4k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_rough_4k.exr",
+        "md5": "f4649e041a6190efece763ca93f98dfd",
+        "size": 8288211
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_rough_4k.jpg",
+        "md5": "67e6d4289fa8f5e130cc57bedfe2449f",
+        "size": 7692067
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/gothic_coffee_table/gothic_coffee_table_rough_4k.png",
+        "md5": "59b104af871f991f5171a9917a54d55c",
+        "size": 13751855
+      }
+    },
+    "8k": {
+      "exr": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_rough_8k.exr",
+        "md5": "6fbb4c3f30c0e92941cc324c2c835543",
+        "size": 29742969
+      },
+      "jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_rough_8k.jpg",
+        "md5": "53d057f8fda397394f015221fdd93714",
+        "size": 28196453
+      },
+      "png": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/8k/gothic_coffee_table/gothic_coffee_table_rough_8k.png",
+        "md5": "77677f7218f8dcfe755bafff3eec1458",
+        "size": 30502975
+      }
+    }
+  },
+  "fbx": {
+    "1k": {
+      "fbx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/gothic_coffee_table/gothic_coffee_table_1k.fbx",
+        "md5": "1339e8a2123853372fc58d46e3b0c0f5",
+        "size": 730572,
+        "include": {
+          "textures/gothic_coffee_table_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_diff_1k.jpg",
+            "md5": "b21f338ebdfe546f17d2d5dd16150725",
+            "size": 618166
+          },
+          "textures/gothic_coffee_table_nor_gl_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_nor_gl_1k.exr",
+            "md5": "551c4b1ec13af49154a0afbea6ca750c",
+            "size": 1812638
+          },
+          "textures/gothic_coffee_table_rough_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_rough_1k.exr",
+            "md5": "6b0e5f94ed9ee42bfea140f945c5a4fc",
+            "size": 752124
+          }
+        }
+      }
+    },
+    "2k": {
+      "fbx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/gothic_coffee_table/gothic_coffee_table_2k.fbx",
+        "md5": "7436aafe92f844f3c60ddd933c0d8dd7",
+        "size": 730572,
+        "include": {
+          "textures/gothic_coffee_table_diff_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_diff_2k.jpg",
+            "md5": "a6cb5fbcbaf6cf804ebdd4b08d7ce7d5",
+            "size": 2063263
+          },
+          "textures/gothic_coffee_table_nor_gl_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_nor_gl_2k.exr",
+            "md5": "b46c8cc010def6993c04dd0f08c3a9c6",
+            "size": 5973848
+          },
+          "textures/gothic_coffee_table_rough_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_rough_2k.exr",
+            "md5": "22f79d1266b15d8beff2c11b0568c882",
+            "size": 2435896
+          }
+        }
+      }
+    },
+    "4k": {
+      "fbx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/gothic_coffee_table/gothic_coffee_table_4k.fbx",
+        "md5": "948ed2559b1cb1bf44aa952f918f0250",
+        "size": 730572,
+        "include": {
+          "textures/gothic_coffee_table_diff_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_diff_4k.jpg",
+            "md5": "689a53d0b9d385eff34b8c3681531006",
+            "size": 7159735
+          },
+          "textures/gothic_coffee_table_nor_gl_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_nor_gl_4k.exr",
+            "md5": "eba685ce1466251b5d46bc5db69c8dc3",
+            "size": 20995507
+          },
+          "textures/gothic_coffee_table_rough_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_rough_4k.exr",
+            "md5": "f4649e041a6190efece763ca93f98dfd",
+            "size": 8288211
+          }
+        }
+      }
+    },
+    "8k": {
+      "fbx": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/8k/gothic_coffee_table/gothic_coffee_table_8k.fbx",
+        "md5": "66ec508384873bc97065d2cddc41a401",
+        "size": 730572,
+        "include": {
+          "textures/gothic_coffee_table_diff_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_diff_8k.jpg",
+            "md5": "93f41e22b68b16eea96aa5e2e55e592c",
+            "size": 26504093
+          },
+          "textures/gothic_coffee_table_nor_gl_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_nor_gl_8k.exr",
+            "md5": "44a5f63b49c4a07dc109bc0bbf37b929",
+            "size": 79440050
+          },
+          "textures/gothic_coffee_table_rough_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_rough_8k.exr",
+            "md5": "6fbb4c3f30c0e92941cc324c2c835543",
+            "size": 29742969
+          }
+        }
+      }
+    }
+  },
+  "gltf": {
+    "1k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/gothic_coffee_table/gothic_coffee_table_1k.gltf",
+        "md5": "feca9bfb96010e34e735627fe158b201",
+        "size": 2842,
+        "include": {
+          "textures/gothic_coffee_table_nor_gl_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_nor_gl_1k.jpg",
+            "md5": "9dc3073a3b210554be58db913116ffdb",
+            "size": 836624
+          },
+          "textures/gothic_coffee_table_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_diff_1k.jpg",
+            "md5": "b21f338ebdfe546f17d2d5dd16150725",
+            "size": 618166
+          },
+          "textures/gothic_coffee_table_arm_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_arm_1k.jpg",
+            "md5": "c950595ab24ec4ad0aafe24c08aec004",
+            "size": 965587
+          },
+          "gothic_coffee_table.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/gothic_coffee_table/gothic_coffee_table.bin",
+            "md5": "d8c45735d6effb7fc383dba30c35012d",
+            "size": 843496
+          }
+        }
+      }
+    },
+    "2k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/gothic_coffee_table/gothic_coffee_table_2k.gltf",
+        "md5": "45073f8a5038bad8bdb7f929a3362c3e",
+        "size": 2842,
+        "include": {
+          "textures/gothic_coffee_table_nor_gl_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_nor_gl_2k.jpg",
+            "md5": "af4e37bbda3def19e491044ed823c5ac",
+            "size": 2796089
+          },
+          "textures/gothic_coffee_table_diff_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_diff_2k.jpg",
+            "md5": "a6cb5fbcbaf6cf804ebdd4b08d7ce7d5",
+            "size": 2063263
+          },
+          "textures/gothic_coffee_table_arm_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_arm_2k.jpg",
+            "md5": "d864e528959214b7547d026a128b5a33",
+            "size": 3235495
+          },
+          "gothic_coffee_table.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/gothic_coffee_table/gothic_coffee_table.bin",
+            "md5": "d8c45735d6effb7fc383dba30c35012d",
+            "size": 843496
+          }
+        }
+      }
+    },
+    "4k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/gothic_coffee_table/gothic_coffee_table_4k.gltf",
+        "md5": "895004d2a1eb62e0e3a8fda8791f6bff",
+        "size": 2842,
+        "include": {
+          "textures/gothic_coffee_table_nor_gl_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_nor_gl_4k.jpg",
+            "md5": "7b2c213d8e74efa4bbed0a7de28ecb8d",
+            "size": 9708971
+          },
+          "textures/gothic_coffee_table_diff_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_diff_4k.jpg",
+            "md5": "689a53d0b9d385eff34b8c3681531006",
+            "size": 7159735
+          },
+          "textures/gothic_coffee_table_arm_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_arm_4k.jpg",
+            "md5": "437d54da1be7a0598340af878c3e8c49",
+            "size": 10759328
+          },
+          "gothic_coffee_table.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/gothic_coffee_table/gothic_coffee_table.bin",
+            "md5": "d8c45735d6effb7fc383dba30c35012d",
+            "size": 843496
+          }
+        }
+      }
+    },
+    "8k": {
+      "gltf": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/gothic_coffee_table/gothic_coffee_table_8k.gltf",
+        "md5": "9d562ee2c742884dc441919eae75331e",
+        "size": 2842,
+        "include": {
+          "textures/gothic_coffee_table_nor_gl_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_nor_gl_8k.jpg",
+            "md5": "40050d7606ce4d7c627059943e2afed4",
+            "size": 36313943
+          },
+          "textures/gothic_coffee_table_diff_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_diff_8k.jpg",
+            "md5": "93f41e22b68b16eea96aa5e2e55e592c",
+            "size": 26504093
+          },
+          "textures/gothic_coffee_table_arm_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_arm_8k.jpg",
+            "md5": "2266b3c88e18e01ce6f364331115af36",
+            "size": 36982832
+          },
+          "gothic_coffee_table.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/gothic_coffee_table/gothic_coffee_table.bin",
+            "md5": "d8c45735d6effb7fc383dba30c35012d",
+            "size": 843496
+          }
+        }
+      }
+    }
+  },
+  "usd": {
+    "1k": {
+      "usd": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/gothic_coffee_table/gothic_coffee_table_1k.usdc",
+        "md5": "00aacd8744e069c7007416ceb8a0d463",
+        "size": 1135383,
+        "include": {
+          "textures/gothic_coffee_table_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/gothic_coffee_table/gothic_coffee_table_diff_1k.jpg",
+            "md5": "b21f338ebdfe546f17d2d5dd16150725",
+            "size": 618166
+          },
+          "textures/gothic_coffee_table_nor_gl_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_nor_gl_1k.exr",
+            "md5": "551c4b1ec13af49154a0afbea6ca750c",
+            "size": 1812638
+          },
+          "textures/gothic_coffee_table_rough_1k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/gothic_coffee_table/gothic_coffee_table_rough_1k.exr",
+            "md5": "6b0e5f94ed9ee42bfea140f945c5a4fc",
+            "size": 752124
+          }
+        }
+      }
+    },
+    "2k": {
+      "usd": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/gothic_coffee_table/gothic_coffee_table_2k.usdc",
+        "md5": "37554a73470a638c33c091cb9c03ae7b",
+        "size": 1135383,
+        "include": {
+          "textures/gothic_coffee_table_diff_2k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/gothic_coffee_table/gothic_coffee_table_diff_2k.jpg",
+            "md5": "a6cb5fbcbaf6cf804ebdd4b08d7ce7d5",
+            "size": 2063263
+          },
+          "textures/gothic_coffee_table_nor_gl_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_nor_gl_2k.exr",
+            "md5": "b46c8cc010def6993c04dd0f08c3a9c6",
+            "size": 5973848
+          },
+          "textures/gothic_coffee_table_rough_2k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/gothic_coffee_table/gothic_coffee_table_rough_2k.exr",
+            "md5": "22f79d1266b15d8beff2c11b0568c882",
+            "size": 2435896
+          }
+        }
+      }
+    },
+    "4k": {
+      "usd": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/gothic_coffee_table/gothic_coffee_table_4k.usdc",
+        "md5": "d9be09db9918d4b60b4ff539c585fd11",
+        "size": 1135383,
+        "include": {
+          "textures/gothic_coffee_table_diff_4k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_diff_4k.jpg",
+            "md5": "689a53d0b9d385eff34b8c3681531006",
+            "size": 7159735
+          },
+          "textures/gothic_coffee_table_nor_gl_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_nor_gl_4k.exr",
+            "md5": "eba685ce1466251b5d46bc5db69c8dc3",
+            "size": 20995507
+          },
+          "textures/gothic_coffee_table_rough_4k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/gothic_coffee_table/gothic_coffee_table_rough_4k.exr",
+            "md5": "f4649e041a6190efece763ca93f98dfd",
+            "size": 8288211
+          }
+        }
+      }
+    },
+    "8k": {
+      "usd": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/8k/gothic_coffee_table/gothic_coffee_table_8k.usdc",
+        "md5": "6aadcf7db527877329725eb8b30f254c",
+        "size": 1135383,
+        "include": {
+          "textures/gothic_coffee_table_diff_8k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/8k/gothic_coffee_table/gothic_coffee_table_diff_8k.jpg",
+            "md5": "93f41e22b68b16eea96aa5e2e55e592c",
+            "size": 26504093
+          },
+          "textures/gothic_coffee_table_nor_gl_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_nor_gl_8k.exr",
+            "md5": "44a5f63b49c4a07dc109bc0bbf37b929",
+            "size": 79440050
+          },
+          "textures/gothic_coffee_table_rough_8k.exr": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/8k/gothic_coffee_table/gothic_coffee_table_rough_8k.exr",
+            "md5": "6fbb4c3f30c0e92941cc324c2c835543",
+            "size": 29742969
+          }
+        }
+      }
+    }
+  }
+}

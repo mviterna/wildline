@@ -1,0 +1,30 @@
+{
+  "checkedAtUtc": "2026-10-19T14:10:13.3150720+00:00",
+  "packageRoot": "C:/_git/wildline/native/Build/PlayerPolish/Windows",
+  "binarySha256": "F70236B36CE6D8976AC6471352182FC3DC73CC861021C0C25D1DD25D694AB228",
+  "installer": "C:/_git/wildline/native/Build/Beta/Wildline-0.2.0-beta.20261019.100235-Setup.exe",
+  "installerSha256": "5517B9190A03B2DC23CF97B0CFEAE9EF291A14415C071FF36DB9E0FA1C115ED7",
+  "installerBytes": 3241241990,
+  "desktopShortcut": "C:\\Users\\mvite\\OneDrive\\Desktop\\WILDLINE.lnk",
+  "desktopShortcutArguments": "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\_git\\wildline\\native\\LaunchNative.ps1\"",
+  "automationTestsPassed": 12,
+  "packagedProfileHeightAndNetwork": "PASS: first launch, name persistence, full height range, team switching, discovery lock, joining, names and shared stats replicated on host and client",
+  "socialEvidence": "C:\\_git\\wildline\\native\\Unreal\\Wildline\\Saved\\SocialProbes\\44242ee190c644158f96c04b6ced1033",
+  "packagedStatsGraphicsAnimation": {
+    "passed": true,
+    "checkedAtUtc": "2026-10-19T10:05:15.6783275-04:00",
+    "profile": "C:\\_git\\wildline\\native\\Unreal\\Wildline\\Saved\\PolishProbes\\42eace98df5b4ad1954d5e383a950630",
+    "preview": "C:\\_git\\wildline\\native\\Preview\\Polish-42eace98df5b4ad1954d5e383a950630",
+    "motionFrames": 150,
+    "editor": false
+  },
+  "packagedIntro": "PASS: 140-second rap, legacy audio retained, logo, intro/skip, menu fade and gameplay",
+  "presentationEvidence": "native/presentation-verification.json",
+  "motionPreview": "native/Preview/SquirrelPolish.mp4",
+  "installerLifecycle": "NOT RUN: verifier refuses an existing WILDLINE Beta installation in this Windows account",
+  "installedBetaPreserved": "0.2.0-beta.20261016.164555",
+  "cleanMachinePrerequisitesTested": false,
+  "fourPhysicalHamachiPCsTested": false,
+  "hostMigrationImplemented": false,
+  "roomDiscovery": "Adapter-bound UDP 7778 broadcasts, automatic room detection, host claim election, direct-IP fallback; game traffic UDP 7777. Single-room enforcement depends on discovery connectivity."
+}

@@ -1,5 +1,7 @@
 #include "WildlineMenu.h"
 #include "WildlineGame.h"
+#include "WildlineRoom.h"
+#include "WildlineGraphics.h"
 #include "WildlineCharacter.h"
 #include "WildlineUserSettings.h"
 #include "WildlineWorld.h"
@@ -79,10 +81,10 @@ TSharedRef<SWidget> UWildlineMenu::RebuildWidget(){
     auto* Customize=Button(TEXT("CREATE / EDIT HUNTER"));Customize->OnClicked.AddDynamic(this,&UWildlineMenu::CreateHunter);Add(Customize,18);
     auto* WorkshopButton=Button(TEXT("MATCH RULES / BOTS / SETTINGS"));WorkshopButton->OnClicked.AddDynamic(this,&UWildlineMenu::ToggleWorkshop);Add(WorkshopButton,10);
     auto* PlayButton=Button(TEXT("ENTER WAITING ROOM / RESUME"));auto PlayStyle=PlayButton->GetStyle();PlayStyle.Normal.TintColor=FSlateColor(FLinearColor(.9f,.23f,.012f));PlayStyle.Hovered.TintColor=FSlateColor(FLinearColor(1,.36f,.026f));PlayButton->SetStyle(PlayStyle);PlayButton->OnClicked.AddDynamic(this,&UWildlineMenu::Play);Add(PlayButton);
-    auto* HostButton=Button(TEXT("HOST CO-OP EXPEDITION"));HostButton->OnClicked.AddDynamic(this,&UWildlineMenu::Host);Add(HostButton,14);
+    auto* HostButton=Button(TEXT("HOST CO-OP EXPEDITION"));HostRoomButton=HostButton;HostButton->OnClicked.AddDynamic(this,&UWildlineMenu::Host);Add(HostButton,14);
     Address=WidgetTree->ConstructWidget<UEditableTextBox>();auto AddressStyle=Address->GetWidgetStyle();AddressStyle.TextStyle.Font.Size=14;AddressStyle.TextStyle.ColorAndOpacity=FSlateColor(FLinearColor(.06f,.09f,.07f));Address->SetWidgetStyle(AddressStyle);Address->SetForegroundColor(FLinearColor(.06f,.09f,.07f));Address->SetHintText(FText::FromString(TEXT("Host IP address")));Address->SetText(FText::FromString(TEXT("127.0.0.1")));Add(Address);
     auto* JoinButton=Button(TEXT("JOIN EXPEDITION"));JoinButton->OnClicked.AddDynamic(this,&UWildlineMenu::Join);Add(JoinButton);
-    Status=Text(TEXT("Host owns the match rules. Up to 8 humans plus the configured bots."),10,Muted);Add(Status,14);
+    Status=Text(TEXT("Looking for your shared four-player room…"),10,Muted);Add(Status,14);
     auto* Exit=Button(TEXT("QUIT GAME"));Exit->OnClicked.AddDynamic(this,&UWildlineMenu::Quit);Add(Exit,0);
 
     auto* Right=Panel(FAnchors(.32f,0,1,1),FMargin(12,28,28,28));Workshop=Right;auto* Main=WidgetTree->ConstructWidget<UVerticalBox>();Right->SetContent(Main);
@@ -131,6 +133,7 @@ TSharedRef<SWidget> UWildlineMenu::RebuildWidget(){
     Add(Text(TEXT("A match needs opponents to earn kills, and enough food to reach its goal. Zero bots is useful for co-op or practicing alone."),10,Muted),12);
 
     FieldScroll=Page();Section(TEXT("YOUR CONTROLS & PRESENTATION"));
+    Graphics=CreateWidget<UWildlineGraphics>(GetOwningPlayer());Add(Graphics,22);
     const auto* Forest=AWildlineWorld::Find(GetWorld());const bool Winter=Forest&&Forest->bWinter;
     const float Density=Settings?(Winter?Settings->WinterTreeLeafDensity:Settings->TreeLeafDensity):72.f;
     TreeLeavesLabel=Text(FString::Printf(TEXT("TREE LEAVES / %s / %.0f"),Winter?TEXT("WINTER"):TEXT("AUTUMN"),Density),10,Muted);Add(TreeLeavesLabel,4);
@@ -141,10 +144,10 @@ TSharedRef<SWidget> UWildlineMenu::RebuildWidget(){
     Add(Text(TEXT("MOUSE SENSITIVITY"),10,Muted),4);Sensitivity=WidgetTree->ConstructWidget<USlider>();Sensitivity->SetMinValue(.15f);Sensitivity->SetMaxValue(2.f);Sensitivity->SetValue(Settings?Settings->MouseSensitivity:.8f);Sensitivity->OnValueChanged.AddDynamic(this,&UWildlineMenu::SensitivityChanged);Add(Sensitivity,18);
     Add(Text(TEXT("SCOPE MOUSE SENSITIVITY"),10,Muted),4);ScopeSensitivity=WidgetTree->ConstructWidget<USlider>();ScopeSensitivity->SetMinValue(.05f);ScopeSensitivity->SetMaxValue(2.f);ScopeSensitivity->SetValue(Settings?Settings->ScopeSensitivity:.256f);ScopeSensitivity->OnValueChanged.AddDynamic(this,&UWildlineMenu::ScopeSensitivityChanged);Add(ScopeSensitivity,18);
     Add(Text(TEXT("SOUND EFFECTS VOLUME"),10,Muted),4);SoundVolume=WidgetTree->ConstructWidget<USlider>();SoundVolume->SetMinValue(0);SoundVolume->SetMaxValue(1);SoundVolume->SetValue(Settings?Settings->SoundVolume:.8f);SoundVolume->OnValueChanged.AddDynamic(this,&UWildlineMenu::SoundVolumeChanged);Add(SoundVolume,18);
-    Add(Text(TEXT("MENU MUSIC / BLUEGRASS"),10,Muted),4);MusicVolume=WidgetTree->ConstructWidget<USlider>();MusicVolume->SetMinValue(0);MusicVolume->SetMaxValue(1);MusicVolume->SetValue(Settings?Settings->MusicVolume:.65f);MusicVolume->OnValueChanged.AddDynamic(this,&UWildlineMenu::MusicVolumeChanged);Add(MusicVolume,18);
+    Add(Text(TEXT("MENU MUSIC"),10,Muted),4);MusicVolume=WidgetTree->ConstructWidget<USlider>();MusicVolume->SetMinValue(0);MusicVolume->SetMaxValue(1);MusicVolume->SetValue(Settings?Settings->MusicVolume:.65f);MusicVolume->OnValueChanged.AddDynamic(this,&UWildlineMenu::MusicVolumeChanged);Add(MusicVolume,18);
     Add(Text(TEXT("DISPLAY RESOLUTION"),10,Muted),4);Resolution=WidgetTree->ConstructWidget<UWildlineChoice>();
     if(Settings){const FIntPoint Desktop=Settings->GetDesktopResolution(),Current=Settings->GetScreenResolution();const FIntPoint Common[]={FIntPoint(1280,720),FIntPoint(1366,768),FIntPoint(1600,900),FIntPoint(1920,1080),FIntPoint(2560,1440),FIntPoint(3840,2160)};for(const auto& Size:Common)if(Size.X<=Desktop.X&&Size.Y<=Desktop.Y)ResolutionOptions.AddUnique(Size);if(Desktop.X>0&&Desktop.Y>0)ResolutionOptions.AddUnique(Desktop);ResolutionOptions.AddUnique(Current);ResolutionOptions.Sort([](const FIntPoint& A,const FIntPoint& B){return A.X==B.X?A.Y<B.Y:A.X<B.X;});for(const auto& Size:ResolutionOptions)Resolution->AddOption(FString::Printf(TEXT("%d x %d"),Size.X,Size.Y));Resolution->SetSelectedIndex(ResolutionOptions.IndexOfByKey(Current));}
-    Resolution->OnSelectionChanged.AddDynamic(this,&UWildlineMenu::ResolutionChanged);Add(Resolution,10);Add(Text(TEXT("High quality / 100% render resolution"),10,Muted),20);
+    Resolution->OnSelectionChanged.AddDynamic(this,&UWildlineMenu::ResolutionChanged);Add(Resolution,10);
     Add(Text(TEXT("WASD move / Shift sprint / V camera\nHunter: LMB fire, RMB scope, T thermal, R reload\nSquirrel: E grab a tree, W/S climb, Space launch\nM: minimap zoom, when allowed / Esc: return to camp"),12,Cream));
     Pages->SetActiveWidgetIndex(0);SetWorkshop(false);RefreshMode();return Super::RebuildWidget();
 }
@@ -171,7 +174,9 @@ void UWildlineMenu::RefreshMode(){
 void UWildlineMenu::ModeChanged(FString Value,ESelectInfo::Type Type){if(Type==ESelectInfo::Direct||!GetOwningPlayer()->HasAuthority())return;const int32 Selection=Mode->FindOptionIndex(Value);if(Selection<0)return;if(auto* GI=GetGameInstance<UWildlineGameInstance>())GI->PreferredMode=Selection;if(auto* Settings=UWildlineUserSettings::Get()){Settings->ExpeditionMode=Selection;Settings->Persist();}if(Presets)Presets->SetSelectedIndex(0);RefreshMode();}
 void UWildlineMenu::Play(){if(auto* PC=Cast<AWildlineController>(GetOwningPlayer()))PC->PlaySelected(bSquirrelSelected);}
 void UWildlineMenu::Host(){if(auto* PC=Cast<AWildlineController>(GetOwningPlayer()))PC->Host(bSquirrelSelected);}
-void UWildlineMenu::Join(){if(auto* PC=Cast<AWildlineController>(GetOwningPlayer()))PC->Join(Address->GetText().ToString(),bSquirrelSelected);}
+void UWildlineMenu::Join(){if(auto* PC=Cast<AWildlineController>(GetOwningPlayer())){auto* Room=GetGameInstance()->GetSubsystem<UWildlineRoomSubsystem>();PC->Join(Room&&!Room->RoomAddress().IsEmpty()?Room->RoomAddress():Address->GetText().ToString(),bSquirrelSelected);}}
+void UWildlineMenu::RefreshRoom(){if(!HostRoomButton||!Status)return;auto* Room=GetGameInstance()->GetSubsystem<UWildlineRoomSubsystem>();if(!Room)return;const FString Found=Room->RoomAddress();const bool Connected=GetWorld()->GetNetMode()!=NM_Standalone;HostRoomButton->SetIsEnabled(Room->Ready()&&!Room->bClaiming&&Found.IsEmpty()&&!Connected);Status->SetText(FText::FromString(Connected?TEXT("Connected to your shared room. Shift + Tab: players and teams."):!Room->bAvailable?TEXT("Room discovery unavailable. You can still join by host IP."):!Room->Ready()?TEXT("Searching Hamachi / LAN for the shared room…"):!Found.IsEmpty()?TEXT("Room found: ")+Room->RoomLabel()+TEXT(". Join to play together."):Room->bClaiming?TEXT("Opening room — checking for another host…"):TEXT("No active room. Anyone can host. Shift + Tab: profile and teams.")));}
+FReply UWildlineMenu::NativeOnPreviewKeyDown(const FGeometry& G,const FKeyEvent& E){if(E.GetKey()==EKeys::Tab&&E.IsShiftDown()){if(auto* PC=Cast<AWildlineController>(GetOwningPlayer()))PC->ToggleSocial();return FReply::Handled();}return Super::NativeOnPreviewKeyDown(G,E);}
 void UWildlineMenu::InvertChanged(bool V){if(auto* S=UWildlineUserSettings::Get()){S->bInvertMouseY=V;S->Persist();}}
 void UWildlineMenu::BloodChanged(bool V){if(auto* S=UWildlineUserSettings::Get()){S->bBloodEnabled=V;S->Persist();}}
 void UWildlineMenu::SensitivityChanged(float V){if(auto* S=UWildlineUserSettings::Get()){S->MouseSensitivity=V;S->Persist();}}

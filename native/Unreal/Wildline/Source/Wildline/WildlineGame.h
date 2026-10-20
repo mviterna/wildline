@@ -3,6 +3,7 @@
 #include "GameFramework/GameModeBase.h"
 #include "GameFramework/GameStateBase.h"
 #include "GameFramework/PlayerController.h"
+#include "GameFramework/PlayerState.h"
 #include "Engine/GameInstance.h"
 #include "WildlineMatchConfig.h"
 #include "WildlineGame.generated.h"
@@ -10,6 +11,24 @@ class AWildlineCharacter;
 class UWildlineMenu;
 class AWildlineIntro;
 class UAudioComponent;
+class UWildlineSocial;
+UCLASS()
+class WILDLINE_API AWildlinePlayerState : public APlayerState {
+    GENERATED_BODY()
+public:
+    UPROPERTY(Replicated) bool bSquirrelTeam=false;
+    UPROPERTY(Replicated) bool bWaiting=true;
+    UPROPERTY(Replicated) int32 Kills=0;
+    UPROPERTY(Replicated) int32 Deaths=0;
+    UPROPERTY(Replicated) int32 Shots=0;
+    UPROPERTY(Replicated) int32 Hits=0;
+    UPROPERTY(Replicated) int32 FoodCollected=0;
+    UPROPERTY(Replicated) int32 FoodDeposited=0;
+    UPROPERTY(Replicated) int32 FeederScores=0;
+    void ResetMatchStats();
+    float HitPercentage()const{return Shots>0?100.f*Hits/Shots:0.f;}
+    void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out) const override;
+};
 UCLASS()
 class WILDLINE_API UWildlineGameInstance : public UGameInstance {
     GENERATED_BODY()
@@ -44,6 +63,7 @@ class WILDLINE_API AWildlineGameMode : public AGameModeBase {
 public:
     AWildlineGameMode();
     void InitGame(const FString& MapName,const FString& Options,FString& ErrorMessage) override;
+    void PreLogin(const FString& Options,const FString& Address,const FUniqueNetIdRepl& UniqueId,FString& ErrorMessage) override;
     void BeginPlay() override;
     void Tick(float Delta) override;
     void Logout(AController* Exiting) override;
@@ -69,6 +89,13 @@ public:
     void SetupInputComponent() override;
     void Tick(float Delta) override;
     void EndPlay(const EEndPlayReason::Type Reason) override;
+    bool InputKey(const FInputKeyEventArgs& Params) override;
+    UPROPERTY() UWildlineSocial* Social;
+    void ToggleSocial();
+    void RefreshSocialInput();
+    UFUNCTION(Server,Reliable) void ServerSetProfileName(const FString& Name);
+    float ProfileSyncAt=0;
+    void CompleteHost(bool bSquirrel);
     UPROPERTY() AWildlineIntro* Intro;
     UPROPERTY() UAudioComponent* MenuMusic;
     void StartIntro();
@@ -115,4 +142,6 @@ public:
     void RunAIBalanceReview();
     void RunIntroSmokeTest();
     void RunHunterBodyReview();
+    void RunSocialReview();
+    void RunSocialNetworkProbe();
 };

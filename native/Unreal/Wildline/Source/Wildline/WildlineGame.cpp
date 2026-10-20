@@ -7,12 +7,15 @@
 #include "WildlineCharacter.h"
 #include "WildlineSquirrelAnim.h"
 #include "WildlineHunterAnim.h"
+#include "WildlineHunterGrip.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Engine/SkeletalMesh.h"
 #include "Engine/StaticMesh.h"
 #include "WildlineHUD.h"
 #include "WildlineMenu.h"
+#include "WildlineSocial.h"
+#include "WildlineRoom.h"
 #include "WildlineIntro.h"
 #include "WildlineHunterCreator.h"
 #include "WildlineUserSettings.h"
@@ -49,9 +52,11 @@
 #include "Rendering/SkeletalMeshLODRenderData.h"
 #endif
 
+void WildlineRunPolishReview(AWildlineController* PC);
 void AWildlineGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps)const{Super::GetLifetimeReplicatedProps(OutLifetimeProps);DOREPLIFETIME(AWildlineGameState,MatchConfig);DOREPLIFETIME(AWildlineGameState,HunterKills);DOREPLIFETIME(AWildlineGameState,StoredAcorns);DOREPLIFETIME(AWildlineGameState,Winner);DOREPLIFETIME(AWildlineGameState,RoundStartedAt);DOREPLIFETIME(AWildlineGameState,bRoundStarted);DOREPLIFETIME(AWildlineGameState,LobbyPlayers);DOREPLIFETIME(AWildlineGameState,LobbyReadyPlayers);DOREPLIFETIME(AWildlineGameState,HunterDifficulty);DOREPLIFETIME(AWildlineGameState,ExpeditionMode);DOREPLIFETIME(AWildlineGameState,TakenPeanuts);}
 float AWildlineGameState::RoundRemaining()const{return bRoundStarted?FMath::Max(0.f,MatchConfig.DurationSeconds-(GetServerWorldTimeSeconds()-RoundStartedAt)):MatchConfig.DurationSeconds;}
-AWildlineGameMode::AWildlineGameMode(){PrimaryActorTick.bCanEverTick=true;DefaultPawnClass=AWildlineCharacter::StaticClass();PlayerControllerClass=AWildlineController::StaticClass();HUDClass=AWildlineHUD::StaticClass();GameStateClass=AWildlineGameState::StaticClass();}
+AWildlineGameMode::AWildlineGameMode(){PrimaryActorTick.bCanEverTick=true;DefaultPawnClass=AWildlineCharacter::StaticClass();PlayerControllerClass=AWildlineController::StaticClass();PlayerStateClass=AWildlinePlayerState::StaticClass();HUDClass=AWildlineHUD::StaticClass();GameStateClass=AWildlineGameState::StaticClass();}
+void AWildlineGameMode::PreLogin(const FString& Options,const FString& Address,const FUniqueNetIdRepl& UniqueId,FString& ErrorMessage){Super::PreLogin(Options,Address,UniqueId,ErrorMessage);if(GetNumPlayers()>=4)ErrorMessage=TEXT("This four-player room is full.");}
 void AWildlineGameMode::InitGame(const FString& MapName,const FString& Options,FString& ErrorMessage){
     Super::InitGame(MapName,Options,ErrorMessage);if(auto* Settings=UWildlineUserSettings::Get()){Settings->LoadSettings(false);const int32 Mode=MapName.Contains(TEXT("Neighborhood"))?2:MapName.Contains(TEXT("Farmstead"))?1:0;auto Config=Settings->ConfigForMode(Mode);Config.Clamp();if(GameSession)GameSession->MaxPlayers=Config.MaxPlayers;}
 }
@@ -73,6 +78,7 @@ void AWildlineGameMode::BeginPlay(){Super::BeginPlay();
 void AWildlineGameMode::Tick(float Delta){Super::Tick(Delta);UpdateWaitingRooms();auto* S=GetGameState<AWildlineGameState>();if(S&&S->bRoundStarted&&!S->Winner&&S->RoundRemaining()<=0)S->Winner=S->MatchConfig.TimeWinner?S->MatchConfig.TimeWinner:WildlineRules::TimeoutWinner(S->ExpeditionMode);}
 void AWildlineGameMode::PickRole(APlayerController* PC,bool bAnimal){
     if(!PC)return;
+    if(auto* PS=PC->GetPlayerState<AWildlinePlayerState>()){PS->bSquirrelTeam=bAnimal;PS->bWaiting=false;PS->ForceNetUpdate();}
     if(auto* P=Cast<AWildlineCharacter>(PC->GetPawn());P&&!P->bInLobby&&P->bSquirrel==bAnimal&&GetGameState<AWildlineGameState>()->bRoundStarted)return;
     APawn* Old=PC->GetPawn();if(auto* OldAnimal=Cast<AWildlineCharacter>(Old))OldAnimal->ReturnCarriedPeanuts();FVector P=SpawnLocation(bAnimal,GetNumPlayers());
     auto* New=GetWorld()->SpawnActorDeferred<AWildlineCharacter>(AWildlineCharacter::StaticClass(),FTransform(FRotator::ZeroRotator,P),PC,nullptr,ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn);
@@ -101,22 +107,30 @@ FVector AWildlineGameMode::SpawnLocation(bool Animal,int32 Index) const{
 }
 void AWildlineGameMode::Logout(AController* Exiting){if(Exiting)if(auto* P=Cast<AWildlineCharacter>(Exiting->GetPawn()))P->ReturnCarriedPeanuts();Super::Logout(Exiting);RefreshBots();}
 void AWildlineGameMode::RecordKill(AWildlineCharacter* Victim,AController* Hunter){
-    auto* S=GetGameState<AWildlineGameState>();if(!S||S->Winner)return;S->HunterKills++;if(S->HunterKills>=S->MatchConfig.DefenderGoal)S->Winner=1;
+    auto* S=GetGameState<AWildlineGameState>();if(!S||S->Winner)return;
+    if(Victim)if(auto* PS=Victim->GetPlayerState<AWildlinePlayerState>()){PS->Deaths++;PS->ForceNetUpdate();}
+    if(Hunter&&Victim&&Hunter!=Victim->Controller)if(auto* PS=Hunter->GetPlayerState<AWildlinePlayerState>()){PS->Kills++;PS->ForceNetUpdate();}
+    S->HunterKills++;if(S->HunterKills>=S->MatchConfig.DefenderGoal)S->Winner=1;
     FTimerHandle Handle;const TWeakObjectPtr<AWildlineCharacter> Weak=Victim;const float Expected=Victim->RespawnAt;GetWorldTimerManager().SetTimer(Handle,FTimerDelegate::CreateWeakLambda(this,[this,Weak,Expected](){if(Weak.IsValid()&&Weak->bDead&&FMath::IsNearlyEqual(Weak->RespawnAt,Expected))RespawnAnimal(Weak);}),S->MatchConfig.RespawnSeconds,false);
 }
 void AWildlineGameMode::RespawnAnimal(TWeakObjectPtr<AWildlineCharacter> Weak){auto* P=Weak.Get();if(!P)return;auto* S=GetGameState<AWildlineGameState>();if(S&&S->Winner)return;P->bDead=false;P->Health=S?S->MatchConfig.SquirrelHealth:40;P->ProtectedUntil=P->ServerTime()+(S?S->MatchConfig.SpawnProtectionSeconds:0);P->Bag=0;P->CourseCheckpoint=0;P->CourseLane=-1;P->Stamina=100;P->RespawnAt=0;P->TreeIndex=INDEX_NONE;P->ResetBotAwareness();FVector Pos=SpawnLocation(true,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}
 void AWildlineGameMode::Deposit(int32 Count){auto* S=GetGameState<AWildlineGameState>();if(!S||S->Winner||!S->bRoundStarted)return;S->StoredAcorns+=Count;if(S->StoredAcorns>=S->MatchConfig.SquirrelGoal)S->Winner=2;}
-void AWildlineGameMode::RestartRound(){auto* S=GetGameState<AWildlineGameState>();if(!S||!S->Winner)return;if(auto* Settings=UWildlineUserSettings::Get())S->MatchConfig=Settings->ConfigForMode(S->ExpeditionMode);S->MatchConfig.Clamp();if(S->ExpeditionMode==0)S->MatchConfig.ClassicLayout=GetWorld()->GetMapName().Contains(TEXT("Frostwood"))?1:0;if(S->ExpeditionMode==2)S->MatchConfig.NeighborhoodLayout=GetWorld()->GetMapName().Contains(TEXT("Cedar"))?1:0;if(GameSession)GameSession->MaxPlayers=S->MatchConfig.MaxPlayers;S->HunterKills=0;S->StoredAcorns=0;S->TakenPeanuts.Empty();S->Winner=0;S->RoundStartedAt=S->GetServerWorldTimeSeconds();for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It){auto* P=*It;P->bDead=false;P->Health=P->bSquirrel?S->MatchConfig.SquirrelHealth:100;P->ProtectedUntil=P->bSquirrel?P->ServerTime()+S->MatchConfig.SpawnProtectionSeconds:0;P->RifleAmmo=5;P->ShotgunAmmo=2;P->Ammo=WildlineRules::WeaponCapacity(P->SelectedWeapon);P->Bag=0;P->BagPeanuts.Empty();P->CourseCheckpoint=0;P->CourseLane=-1;P->FeederVisits=0;P->Collected.Empty();P->ThermalReadyAt=P->ThermalUntil=P->ReloadUntil=P->RespawnAt=0;P->TreeIndex=INDEX_NONE;P->Stamina=100;P->ResetBotAwareness();FVector Pos=SpawnLocation(P->bSquirrel,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}if(bWaitingRoomsEnabled)ResetWaitingRooms();else RefreshBots();S->ForceNetUpdate();}
+void AWildlineGameMode::RestartRound(){auto* S=GetGameState<AWildlineGameState>();if(!S||!S->Winner)return;if(auto* Settings=UWildlineUserSettings::Get())S->MatchConfig=Settings->ConfigForMode(S->ExpeditionMode);S->MatchConfig.Clamp();if(S->ExpeditionMode==0)S->MatchConfig.ClassicLayout=GetWorld()->GetMapName().Contains(TEXT("Frostwood"))?1:0;if(S->ExpeditionMode==2)S->MatchConfig.NeighborhoodLayout=GetWorld()->GetMapName().Contains(TEXT("Cedar"))?1:0;if(GameSession)GameSession->MaxPlayers=S->MatchConfig.MaxPlayers;for(const auto& Base:S->PlayerArray)if(auto* PS=Cast<AWildlinePlayerState>(Base.Get()))PS->ResetMatchStats();S->HunterKills=0;S->StoredAcorns=0;S->TakenPeanuts.Empty();S->Winner=0;S->RoundStartedAt=S->GetServerWorldTimeSeconds();for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It){auto* P=*It;P->bDead=false;P->Health=P->bSquirrel?S->MatchConfig.SquirrelHealth:100;P->ProtectedUntil=P->bSquirrel?P->ServerTime()+S->MatchConfig.SpawnProtectionSeconds:0;P->RifleAmmo=5;P->ShotgunAmmo=2;P->Ammo=WildlineRules::WeaponCapacity(P->SelectedWeapon);P->Bag=0;P->BagPeanuts.Empty();P->CourseCheckpoint=0;P->CourseLane=-1;P->FeederVisits=0;P->Collected.Empty();P->ThermalReadyAt=P->ThermalUntil=P->ReloadUntil=P->RespawnAt=0;P->TreeIndex=INDEX_NONE;P->Stamina=100;P->ResetBotAwareness();FVector Pos=SpawnLocation(P->bSquirrel,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}if(bWaitingRoomsEnabled)ResetWaitingRooms();else RefreshBots();S->ForceNetUpdate();}
 
 AWildlineController::AWildlineController(){bShowMouseCursor=true;}
 void AWildlineController::BeginPlay(){
     Super::BeginPlay();if(!IsLocalController())return;
     if(auto* S=UWildlineUserSettings::Get()){S->LoadSettings(false);S->ApplyNonResolutionSettings();S->Persist();}
+    FString ProbeName;if(FParse::Value(FCommandLine::Get(),TEXT("WildlineProfileName="),ProbeName))if(auto* S=UWildlineUserSettings::Get()){S->PlayerDisplayName=UWildlineUserSettings::CleanPlayerName(ProbeName);S->Persist();}
     PlayerCameraManager->ViewPitchMin=-80;PlayerCameraManager->ViewPitchMax=80;
     Menu=CreateWidget<UWildlineMenu>(this,UWildlineMenu::StaticClass());if(Menu)Menu->AddToViewport();
+    Social=CreateWidget<UWildlineSocial>(this,UWildlineSocial::StaticClass());if(Social)Social->AddToViewport(30);
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineSocialReview")))RunSocialReview();
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineExistingProfileProbe"))||FParse::Param(FCommandLine::Get(),TEXT("WildlineHeadwearReview"))||FParse::Param(FCommandLine::Get(),TEXT("WildlineProfileWriteProbe"))||FParse::Param(FCommandLine::Get(),TEXT("WildlineProfileReadProbe"))){extern void WildlineRunHeadwearReview(AWildlineController*);WildlineRunHeadwearReview(this);}
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineSocialNetProbe")))RunSocialNetworkProbe();
     auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI&&GI->bStartAfterTravel){GI->bStartAfterTravel=false;EnterWaitingRoom(GI->bPreferredSquirrel);}else SetMenu(true);
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLobbySmoke"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunLobbySmokeTest,2.f,false);}
-    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLobbyReview")))RunLobbyReview();
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLobbyReview"))||FParse::Param(FCommandLine::Get(),TEXT("WildlineLodgeAtmosphereReview")))RunLobbyReview();
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLobbyNetProbe")))RunLobbyNetworkProbe();
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineAutoStart"))){ChooseRole(FParse::Param(FCommandLine::Get(),TEXT("WildlineSquirrel")));}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHillNetProbe")))RunHillNetworkProbe();
@@ -175,36 +189,7 @@ void AWildlineController::BeginPlay(){
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineThermalReview"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunThermalReview,2.f,false);}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineWorldUpgradeReview"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunWorldUpgradeReview,2.f,false);}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineTraversalNetProbe"))){FTimerHandle H;GetWorldTimerManager().SetTimer(H,this,&AWildlineController::RunTraversalNetProbe,2.f,false);}
-    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineSettingsReview"))){
-        auto At=[this](float Time,TFunction<void()> Work){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Work](){Work();}),Time,false);};
-        auto Passed=MakeShared<bool>(true);const FIntPoint Original=UWildlineUserSettings::Get()->GetScreenResolution();
-        auto Check=[Passed](bool Ok,const TCHAR* Message){*Passed&=Ok;UE_LOG(LogTemp,Display,TEXT("WILDLINE SETTINGS %s: %s"),Ok?TEXT("PASS"):TEXT("FAIL"),Message);};
-        auto Quality=[Check](){
-            auto* S=UWildlineUserSettings::Get();
-            for(const TCHAR* Name:{TEXT("sg.ViewDistanceQuality"),TEXT("sg.AntiAliasingQuality"),TEXT("sg.PostProcessQuality"),TEXT("sg.ShadowQuality"),TEXT("sg.GlobalIlluminationQuality"),TEXT("sg.ReflectionQuality"),TEXT("sg.TextureQuality"),TEXT("sg.EffectsQuality"),TEXT("sg.FoliageQuality"),TEXT("sg.ShadingQuality"),TEXT("sg.LandscapeQuality")}){
-                const auto* CVar=IConsoleManager::Get().FindConsoleVariable(Name);Check(CVar&&CVar->GetInt()==3,Name);
-            }
-            const auto* Scale=IConsoleManager::Get().FindConsoleVariable(TEXT("sg.ResolutionQuality"));
-            Check(Scale&&FMath::IsNearlyEqual(Scale->GetFloat(),100.f)&&!S->IsDynamicResolutionEnabled(),TEXT("native render resolution and dynamic resolution disabled"));
-        };
-        At(2,[this,Quality,Check,Original](){
-            Quality();Check(Menu&&Menu->Resolution&&Menu->Resolution->GetSelectedOption()==FString::Printf(TEXT("%d x %d"),Original.X,Original.Y),TEXT("saved display resolution selected in menu"));
-            auto* S=UWildlineUserSettings::Get();S->SetOverallScalabilityLevel(0);S->SetResolutionScaleValueEx(50);S->SetDynamicResolutionEnabled(true);S->ApplyNonResolutionSettings();Quality();
-            Menu->ScrollToSettings();const int32 Index=Menu->ResolutionOptions.IndexOfByKey(FIntPoint(1280,720));Check(Index!=INDEX_NONE,TEXT("720p resolution offered"));
-            if(Index!=INDEX_NONE){Menu->Resolution->SetSelectedIndex(Index);Menu->ResolutionChanged(Menu->Resolution->GetSelectedOption(),ESelectInfo::OnMouseClick);}
-        });
-        At(5,[Quality,Check](){
-            auto* S=UWildlineUserSettings::Get();Check(S->GetScreenResolution()==FIntPoint(1280,720)&&GEngine->GameViewport->Viewport->GetSizeXY()==FIntPoint(1280,720),TEXT("resolution selector resizes live viewport to 720p"));
-            S->LoadSettings(true);Check(S->GetScreenResolution()==FIntPoint(1280,720)&&S->GetLastConfirmedScreenResolution()==FIntPoint(1280,720),TEXT("720p selection and confirmation persist after reload"));Quality();
-            FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows/HighQualitySettings720.png"),true,false);
-        });
-        At(6,[this,Original](){const int32 Index=Menu->ResolutionOptions.IndexOfByKey(Original);Menu->Resolution->SetSelectedIndex(Index);Menu->ResolutionChanged(Menu->Resolution->GetSelectedOption(),ESelectInfo::OnMouseClick);});
-        At(9,[Quality,Check,Original](){
-            auto* S=UWildlineUserSettings::Get();S->LoadSettings(true);Check(S->GetScreenResolution()==Original&&GEngine->GameViewport->Viewport->GetSizeXY()==Original,TEXT("original resolution restored and retained"));Quality();
-            FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows/HighQualitySettings.png"),true,false);
-        });
-        At(11,[Passed](){UE_LOG(LogTemp,Display,TEXT("WILDLINE SETTINGS RESULT: %s"),*Passed?TEXT("PASS"):TEXT("FAIL"));FPlatformMisc::RequestExitWithStatus(false,*Passed?0:1);});
-    }
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineSettingsReview"))||FParse::Param(FCommandLine::Get(),TEXT("WildlinePlayerPolishReview"))||FParse::Param(FCommandLine::Get(),TEXT("WildlinePolishReload")))WildlineRunPolishReview(this);
 #if WITH_EDITOR
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineUVProbe"))){FTimerHandle Probe;GetWorldTimerManager().SetTimer(Probe,FTimerDelegate::CreateWeakLambda(this,[](){
         auto* Mesh=LoadObject<USkeletalMesh>(nullptr,TEXT("/Game/Wildline/Hunters/Meshes/SK_HunterFemale.SK_HunterFemale"));const auto& L=Mesh->GetResourceForRendering()->LODRenderData[0];const auto& B=L.StaticVertexBuffers;
@@ -234,10 +219,10 @@ void AWildlineController::BeginPlay(){
         if(HasAuthority()){
             FTimerHandle FXShot;GetWorldTimerManager().SetTimer(FXShot,FTimerDelegate::CreateWeakLambda(this,[this](){if(auto* F=AWildlineWorld::Find(GetWorld());F&&F->bFarm){auto* P=Cast<AWildlineCharacter>(GetPawn());P->SetActorLocation(FVector(1250,250,320));P->Ammo=2;P->ServerFire(FVector::ForwardVector);P->ForceNetUpdate();}}),32.f,false);
         }
-        GetWorldTimerManager().SetTimer(Activate,FTimerDelegate::CreateWeakLambda(this,[this](){if(HasAuthority())if(auto* P=Cast<AWildlineCharacter>(GetPawn())){if(auto* State=GetWorld()->GetGameState<AWildlineGameState>()){State->HunterDifficulty=2;State->ForceNetUpdate();}if(auto* F=AWildlineWorld::Find(GetWorld());F&&F->bFarm){P->SelectWeapon(1);P->Ammo=1;GetWorld()->GetGameState<AWildlineGameState>()->TakenPeanuts.AddUnique(29);}P->ServerThermal();P->ServerAim(true);auto Look=P->HunterProfile;Look.Body=1;Look.Outfit=2;Look.FaceWidth=.4f;Look.DimensionsVersion=1;Look.HeightCm=183;Look.BodyWidth=1.3f;Look.BodyDepth=.9f;Look.HandSize=1.2f;Look.FootSize=.9f;Look.FaceSize=1.1f;Look.Slimness=-.15f;Look.bUsePhoto=true;FImage Img(512,512,ERawImageFormat::BGRA8,EGammaSpace::sRGB);for(int32 Y=0;Y<512;Y++)for(int32 X=0;X<512;X++){const int32 I=(Y*512+X)*4,N=(X*37+Y*19)%17-8;Img.RawData[I]=120+N;Img.RawData[I+1]=60+Y/4+N;Img.RawData[I+2]=70+X/4+N;Img.RawData[I+3]=255;}TArray64<uint8> Data;FImageUtils::CompressImage(Data,TEXT("jpg"),Img,75);UE_LOG(LogTemp,Display,TEXT("WILDLINE NETWORK portrait fixture: %lld bytes"),Data.Num());P->ServerSetHunterProfile(Look,FBase64::Encode(Data.GetData(),Data.Num()));}}),12.f,false);
+        GetWorldTimerManager().SetTimer(Activate,FTimerDelegate::CreateWeakLambda(this,[this](){if(HasAuthority())if(auto* P=Cast<AWildlineCharacter>(GetPawn())){if(auto* State=GetWorld()->GetGameState<AWildlineGameState>()){State->HunterDifficulty=2;State->ForceNetUpdate();}if(auto* F=AWildlineWorld::Find(GetWorld());F&&F->bFarm){P->SelectWeapon(1);P->Ammo=1;GetWorld()->GetGameState<AWildlineGameState>()->TakenPeanuts.AddUnique(29);}P->ServerThermal();P->ServerAim(true);auto Look=P->HunterProfile;Look.Headwear=19;Look.Body=1;Look.Outfit=2;Look.FaceWidth=.4f;Look.DimensionsVersion=1;Look.HeightCm=183;Look.BodyWidth=1.3f;Look.BodyDepth=.9f;Look.HandSize=1.2f;Look.FootSize=.9f;Look.FaceSize=1.1f;Look.Slimness=-.15f;Look.bUsePhoto=true;FImage Img(512,512,ERawImageFormat::BGRA8,EGammaSpace::sRGB);for(int32 Y=0;Y<512;Y++)for(int32 X=0;X<512;X++){const int32 I=(Y*512+X)*4,N=(X*37+Y*19)%17-8;Img.RawData[I]=120+N;Img.RawData[I+1]=60+Y/4+N;Img.RawData[I+2]=70+X/4+N;Img.RawData[I+3]=255;}TArray64<uint8> Data;FImageUtils::CompressImage(Data,TEXT("jpg"),Img,75);UE_LOG(LogTemp,Display,TEXT("WILDLINE NETWORK portrait fixture: %lld bytes"),Data.Num());P->ServerSetHunterProfile(Look,FBase64::Encode(Data.GetData(),Data.Num()));}}),12.f,false);
         GetWorldTimerManager().SetTimer(Verify,FTimerDelegate::CreateWeakLambda(this,[this](){
             int32 Humans=0;bool Hunter=false,Animal=false,ReplicatedThermal=false,ReplicatedLook=false,ReplicatedAim=false;
-            for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It)if(!It->bBot&&!It->bPreviewHunter){ReplicatedAim|=!It->bSquirrel&&It->bAiming;Humans++;Hunter|=!It->bSquirrel;Animal|=It->bSquirrel;ReplicatedThermal|=!It->bSquirrel&&(It->SelectedWeapon==1?!It->IsThermalActive()&&It->ThermalUntil==0:It->ThermalReadyAt>It->ServerTime());ReplicatedLook|=!It->bSquirrel&&It->HunterProfile.Body==1&&It->HunterProfile.Outfit==2&&It->HunterFaceTexture&&It->HunterFaceData.Len()>2000&&FMath::IsNearlyEqual(It->HunterProfile.FaceWidth,.4f)&&It->HunterProfile.HeightCm==183&&FMath::IsNearlyEqual(It->HunterProfile.BodyWidth,1.3f)&&FMath::IsNearlyEqual(It->HunterProfile.BodyDepth,.9f)&&FMath::IsNearlyEqual(It->HunterProfile.HandSize,1.2f)&&FMath::IsNearlyEqual(It->HunterProfile.FootSize,.9f)&&FMath::IsNearlyEqual(It->HunterProfile.FaceSize,1.1f)&&FMath::IsNearlyEqual(It->GetActorScale3D().Z,183.f/174.5f);}
+            for(TActorIterator<AWildlineCharacter> It(GetWorld());It;++It)if(!It->bBot&&!It->bPreviewHunter){ReplicatedAim|=!It->bSquirrel&&It->bAiming;Humans++;Hunter|=!It->bSquirrel;Animal|=It->bSquirrel;ReplicatedThermal|=!It->bSquirrel&&(It->SelectedWeapon==1?!It->IsThermalActive()&&It->ThermalUntil==0:It->ThermalReadyAt>It->ServerTime());ReplicatedLook|=!It->bSquirrel&&It->HunterProfile.Headwear==19&&It->HunterHat->GetStaticMesh()&&It->HunterHat->GetStaticMesh()->GetName()==TEXT("SM_Hat_TRex")&&It->HunterProfile.Body==1&&It->HunterProfile.Outfit==2&&It->HunterFaceTexture&&It->HunterFaceData.Len()>2000&&FMath::IsNearlyEqual(It->HunterProfile.FaceWidth,.4f)&&It->HunterProfile.HeightCm==183&&FMath::IsNearlyEqual(It->HunterProfile.BodyWidth,1.3f)&&FMath::IsNearlyEqual(It->HunterProfile.BodyDepth,.9f)&&FMath::IsNearlyEqual(It->HunterProfile.HandSize,1.2f)&&FMath::IsNearlyEqual(It->HunterProfile.FootSize,.9f)&&FMath::IsNearlyEqual(It->HunterProfile.FaceSize,1.1f)&&FMath::IsNearlyEqual(It->GetActorScale3D().Z,183.f/174.5f);}
             const auto* S=GetWorld()->GetGameState<AWildlineGameState>();const auto* P=Cast<AWildlineCharacter>(GetPawn());
             const bool IsHost=!FParse::Param(FCommandLine::Get(),TEXT("WildlineSquirrel"));
             bool FarmReplication=true;
@@ -330,6 +315,7 @@ void AWildlineController::BeginPlay(){
         GetWorldTimerManager().SetTimer(Exit,FTimerDelegate::CreateWeakLambda(this,[](){FPlatformMisc::RequestExit(false);}),13.f,false);
     }
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHunterBodies")))RunHunterBodyReview();
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHunterCarryReview"))){extern void WildlineRunHunterCarryReview(AWildlineController*);WildlineRunHunterCarryReview(this);}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineOpenCreator"))){FTimerHandle Open;GetWorldTimerManager().SetTimer(Open,FTimerDelegate::CreateWeakLambda(this,[this](){Menu->CreateHunter();if(FParse::Param(FCommandLine::Get(),TEXT("WildlineOpenTravis")))Menu->Creator->LoadTravisPreset();}),2.f,false);}
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHunterMotionReview"))){
         auto At=[this](float Time,TFunction<void()> Work){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Work](){Work();}),Time,false);};
@@ -424,16 +410,16 @@ void AWildlineController::BeginPlay(){
             const FVector Pocket=M->GetSocketLocation(TEXT("upperarm_r"))+(P->GetActorForwardVector()*5-P->GetActorRightVector()*3-FVector::UpVector*6)*P->HunterProfile.HeightScale();
             const FVector Butt(P->SelectedWeapon==1?P->WorldRifle->GetStaticMesh()->GetBoundingBox().Min.X+1:-45.6f,0,P->SelectedWeapon==1?-4.8f:-4.f);
             if(A&&P->GetVelocity().Size2D()>100)for(int32 Side=0;Side<2;Side++)if(A->FootPlantWeight[Side]>.98f)(*MovingPlants)++;
-            const float ShoulderError=FVector::Dist(Pocket,Gun.TransformPosition(Butt));
+            const float ShoulderError=A&&A->AimBlend==1?FVector::Dist(Pocket,Gun.TransformPosition(Butt)):0;
             if(ShoulderError>*MaxShoulder+.5f)UE_LOG(LogTemp,Display,TEXT("HUNTER CONTACT shoulder=%.2f time=%.3f speed=%.1f crouch=%d"),ShoulderError,Time,P->GetVelocity().Size2D(),P->bIsCrouched);
             *MaxShoulder=FMath::Max(*MaxShoulder,ShoulderError);
-            *MaxGrip=FMath::Max(*MaxGrip,static_cast<float>(FVector::Dist(M->GetSocketLocation(TEXT("hand_r")),Gun.TransformPosition(FVector(-17,0,P->SelectedWeapon==1?-4.8f:-2.8f)))));
-            *MaxGrip=FMath::Max(*MaxGrip,static_cast<float>(FVector::Dist(M->GetSocketLocation(TEXT("hand_l")),(P->SelectedWeapon==1?P->WorldBolt->GetComponentTransform():Gun).TransformPosition(FVector(P->SelectedWeapon==1?18.5f:17,-1,-3)))));
+            *MaxGrip=FMath::Max(*MaxGrip,static_cast<float>(FVector::Dist(M->GetSocketLocation(TEXT("hand_r")),Gun.TransformPosition(WildlineHunterGrip::Wrist(0,P->SelectedWeapon==1,P->HunterProfile.HandScale())))));
+            if(A&&A->AimBlend==1)*MaxGrip=FMath::Max(*MaxGrip,static_cast<float>(FVector::Dist(M->GetSocketLocation(TEXT("hand_l")),(P->SelectedWeapon==1?P->WorldBolt->GetComponentTransform():Gun).TransformPosition(WildlineHunterGrip::Wrist(1,P->SelectedWeapon==1,P->HunterProfile.HandScale())))));
             for(int32 Side=0;Side<2;Side++){const FVector Foot=M->GetSocketLocation(Side==0?TEXT("foot_l"):TEXT("foot_r"));if(A&&A->FootPlantSerial[Side]==(*PreviousSerial)[Side]&&A->FootPlantWeight[Side]>.98f&&(*PreviousPlant)[Side]>.98f){const float Drift=FVector::Dist2D(Foot,(*PreviousFeet)[Side]);if(Drift>*MaxFootDrift+.5f)UE_LOG(LogTemp,Display,TEXT("HUNTER CONTACT foot=%d drift=%.2f time=%.3f phase=%.3f speed=%.1f crouch=%d"),Side,Drift,Time,A->GaitPhase,P->GetVelocity().Size2D(),P->bIsCrouched);*MaxFootDrift=FMath::Max(*MaxFootDrift,Drift);}(*PreviousFeet)[Side]=Foot;(*PreviousPlant)[Side]=A?A->FootPlantWeight[Side]:0;(*PreviousSerial)[Side]=A?A->FootPlantSerial[Side]:-1;}
             for(const TCHAR* Bone:{TEXT("pelvis"),TEXT("foot_l"),TEXT("foot_r"),TEXT("hand_l"),TEXT("hand_r")})*Passed&=!M->GetBoneTransform(Bone,RTS_Component).ContainsNaN();
             if(Render){FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/FString::Printf(TEXT("Screenshots/Windows/HunterLocomotion/Frame%04d.png"),(*Frame)++),false,false);}
         }),1.f/60.f,ContactTimer);
-        At(33.2f,[Check,Passed,MaxGrip,MaxShoulder,MaxFootDrift,MovingPlants](){Check(*MaxShoulder<.5f,TEXT("shoulder contact remains stable throughout movement and stance changes"));Check(*MaxGrip<3.f,TEXT("both weapon grips stay within three centimetres throughout the sequence"));Check(*MaxFootDrift<3.f&&*MovingPlants>10,TEXT("moving stance feet plant and remain stable in world space"));UE_LOG(LogTemp,Display,TEXT("HUNTER ANIMATION RESULT: %s shoulder=%.2f grip=%.2f footDrift=%.2f movingPlants=%d"),*Passed?TEXT("PASS"):TEXT("FAIL"),*MaxShoulder,*MaxGrip,*MaxFootDrift,*MovingPlants);FPlatformMisc::RequestExitWithStatus(false,*Passed?0:1);});
+        At(33.2f,[Check,Passed,MaxGrip,MaxShoulder,MaxFootDrift,MovingPlants](){Check(*MaxShoulder<.5f,TEXT("shouldered aim retains stock contact"));Check(*MaxGrip<3.f,TEXT("carry and aimed weapon grips stay within three centimetres"));Check(*MaxFootDrift<3.f&&*MovingPlants>10,TEXT("moving stance feet plant and remain stable in world space"));UE_LOG(LogTemp,Display,TEXT("HUNTER ANIMATION RESULT: %s shoulder=%.2f grip=%.2f footDrift=%.2f movingPlants=%d"),*Passed?TEXT("PASS"):TEXT("FAIL"),*MaxShoulder,*MaxGrip,*MaxFootDrift,*MovingPlants);FPlatformMisc::RequestExitWithStatus(false,*Passed?0:1);});
     }
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineHunterReview"))){
         auto At=[this](float Time,TFunction<void()> Work){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Work](){Work();}),Time,false);};
@@ -601,16 +587,19 @@ void AWildlineController::SetMenu(bool Open){
     if(Menu){if(Open)Menu->RefreshDifficulty();Menu->SetVisibility(Open?ESlateVisibility::Visible:ESlateVisibility::Collapsed);}
     if(Open){if(auto* P=Cast<AWildlineCharacter>(GetPawn())){P->bFiring=false;P->StopAim();P->StopSprint();}FInputModeGameAndUI Mode;if(Menu)Mode.SetWidgetToFocus(Menu->TakeWidget());Mode.SetHideCursorDuringCapture(false);Mode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);SetInputMode(Mode);}
     else {FInputModeGameOnly Mode;SetInputMode(Mode);SetIgnoreLookInput(false);SetIgnoreMoveInput(false);}
+    if(Social&&Social->bOpen)RefreshSocialInput();
 }
 void AWildlineController::ToggleMapZoom(){const auto* S=GetWorld()->GetGameState<AWildlineGameState>();if(!bMenuOpen&&S&&S->MatchConfig.bAllowMinimap)bMapZoomed=!bMapZoomed;}
 void AWildlineController::ToggleMenu(){if(Intro){Intro->Finish();return;}SetMenu(!bMenuOpen);}
 void AWildlineController::ChooseRole(bool bAnimal){auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI)GI->bPreferredSquirrel=bAnimal;if(Menu){if(bAnimal)Menu->Squirrel();else Menu->Hunter();}ServerPickRole(bAnimal);if(!bAnimal)if(const auto* Settings=UWildlineUserSettings::Get())ServerSelectWeapon(Settings->SelectedWeapon);SetMenu(false);}
 void AWildlineController::ServerPickRole_Implementation(bool bAnimal){if(auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>())GM->PickRole(this,bAnimal);}
 static const TCHAR* SelectedExpeditionMap(int32 Mode){const auto* Settings=UWildlineUserSettings::Get();return Mode==0&&Settings&&Settings->ClassicConfig.ClassicLayout==1?TEXT("Frostwood"):Mode==2&&Settings&&Settings->HillConfig.NeighborhoodLayout==1?TEXT("NeighborhoodCedar"):WildlineRules::ModeMap(Mode);}
-void AWildlineController::Host(bool bAnimal){auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI){GI->bPreferredSquirrel=bAnimal;GI->bStartAfterTravel=true;}UGameplayStatics::OpenLevel(this,FName(SelectedExpeditionMap(GI?GI->PreferredMode:0)),true,TEXT("listen"));}
+void AWildlineController::Host(bool bAnimal){if(GetNetMode()!=NM_Standalone)return;auto* Room=GetGameInstance()->GetSubsystem<UWildlineRoomSubsystem>();if(!Room)return;const FString Address=Room->RoomAddress();if(!Address.IsEmpty()){Join(Address,bAnimal);return;}Room->RequestHost(this,bAnimal);}
+void AWildlineController::CompleteHost(bool bAnimal){auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI){GI->bPreferredSquirrel=bAnimal;GI->bStartAfterTravel=true;}UGameplayStatics::OpenLevel(this,FName(SelectedExpeditionMap(GI?GI->PreferredMode:0)),true,TEXT("listen"));}
 void AWildlineController::Join(FString Address,bool bAnimal){Address=Address.TrimStartAndEnd();if(Address.IsEmpty())return;auto* GI=GetGameInstance<UWildlineGameInstance>();if(GI){GI->bPreferredSquirrel=bAnimal;GI->bStartAfterTravel=true;GI->JoinAddress=Address;}ClientTravel(Address,TRAVEL_Absolute);}
 void AWildlineController::ServerSelectWeapon_Implementation(int32 Weapon){const auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>();if(GM&&GM->bWaitingRoomsEnabled)return;if(auto* P=Cast<AWildlineCharacter>(GetPawn()))P->SelectWeapon(Weapon);}
 void AWildlineController::PlaySelected(bool Animal){
+    if(GetNetMode()==NM_Standalone)if(auto* Room=GetGameInstance()->GetSubsystem<UWildlineRoomSubsystem>();Room&&!Room->RoomAddress().IsEmpty()){Join(Room->RoomAddress(),Animal);return;}
     auto* GI=GetGameInstance<UWildlineGameInstance>();const auto* State=GetWorld()->GetGameState<AWildlineGameState>();
     if(HasAuthority()&&GI&&State&&(GI->PreferredMode!=State->ExpeditionMode||(UWildlineUserSettings::Get()&&UWildlineUserSettings::Get()->ConfigForMode(GI->PreferredMode)!=State->MatchConfig))){GI->bPreferredSquirrel=Animal;GI->bStartAfterTravel=true;UGameplayStatics::OpenLevel(this,FName(SelectedExpeditionMap(GI->PreferredMode)),true,GetNetMode()==NM_ListenServer?TEXT("listen"):TEXT(""));return;}
     if(auto* P=Cast<AWildlineCharacter>(GetPawn());P&&P->bSquirrel==Animal&&(P->bInLobby||(State&&State->bRoundStarted)))SetMenu(false);

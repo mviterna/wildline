@@ -1,0 +1,28 @@
+[
+  {
+    "key": "ClearingDitch",
+    "title": "John Frederick Herring, 1795\u20131865, Foxhunting: Clearing a Ditch, 1839",
+    "source": "https://collections.britishart.yale.edu/catalog/tms:41941",
+    "manifest": "https://manifests.collections.yale.edu/ycba/obj/41941",
+    "download": "https://images.collections.yale.edu/iiif/2/ycba:d360316f-bc8e-4d1a-b0cb-2bb8fae915b2/full/full/0/default.jpg",
+    "license": "CC0-1.0",
+    "image_rights": "No Copyright: You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. (CC0 1.0)",
+    "credit": "Yale Center for British Art, Paul Mellon Collection",
+    "sha256": "3556899520b5ecd038f0aca7f6b191eb03135ec580462847aab9840cada21d5c",
+    "width": 4433,
+    "height": 3619
+  },
+  {
+    "key": "EncouragingHounds",
+    "title": "John Frederick Herring, 1795\u20131865, Foxhunting: Encouraging Hounds, 1839",
+    "source": "https://collections.britishart.yale.edu/catalog/tms:41949",
+    "manifest": "https://manifests.collections.yale.edu/ycba/obj/41949",
+    "download": "https://images.collections.yale.edu/iiif/2/ycba:bd759135-4853-40b6-94a6-6b893c1c21f5/full/full/0/default.jpg",
+    "license": "CC0-1.0",
+    "image_rights": "No Copyright: You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. (CC0 1.0)",
+    "credit": "Yale Center for British Art, Paul Mellon Collection",
+    "sha256": "0a3b13b474655e1e3630c95826d582a2df5b489ef0d0a4d430e9de7fdb8a322d",
+    "width": 4425,
+    "height": 3640
+  }
+]

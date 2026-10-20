@@ -23,7 +23,7 @@ void AWildlineCharacter::UpdateCourse(){
     FHitResult Hit;FCollisionQueryParams Q(SCENE_QUERY_STAT(CourseLanding),false,this);
     const FVector Target=Forest->CourseTarget(CourseLane,CourseCheckpoint);
     if(!GetWorld()->LineTraceSingleByChannel(Hit,GetActorLocation(),GetActorLocation()-FVector(0,0,25),ECC_Visibility,Q)||FMath::Abs(Hit.ImpactPoint.Z-Target.Z)>3)return;
-    if(CourseCheckpoint==5){FeederVisits++;if(auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>())GM->Deposit(1);CourseCheckpoint=0;CourseLane=-1;MulticastSound(WildlineAudio::Feeder);}
+    if(CourseCheckpoint==5){FeederVisits++;if(auto* PS=GetPlayerState<AWildlinePlayerState>()){PS->FeederScores++;PS->ForceNetUpdate();}if(auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>())GM->Deposit(1);CourseCheckpoint=0;CourseLane=-1;MulticastSound(WildlineAudio::Feeder);}
     else{CourseCheckpoint++;MulticastSound(WildlineAudio::Checkpoint);}
     ForceNetUpdate();
 }

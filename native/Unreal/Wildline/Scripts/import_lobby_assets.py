@@ -15,6 +15,8 @@ details_only='LobbyDetailsOnly' in ue.SystemLibrary.get_command_line()
 architecture_only='LobbyArchitectureOnly' in ue.SystemLibrary.get_command_line()
 lodge_details_only='LodgeDetailsOnly' in ue.SystemLibrary.get_command_line()
 lodge_shell_only='LodgeShellOnly' in ue.SystemLibrary.get_command_line()
+upgrade_only='LodgeUpgradeOnly' in ue.SystemLibrary.get_command_line()
+upgrade_ids=['sofa_03','ArmChair_01','gothic_coffee_table','vintage_cabinet_01','throw_pillows_01']
 lodge_meshes=['SM_LodgeArchitecture','SM_LodgeWindowDressings','SM_LodgeClock','SM_LodgePegRail']
 lodge_materials=['M_LodgeTimber','M_LodgeFloor','M_HearthStone','M_WindowOak','M_CurtainFabric','M_LodgeDetailBrass','M_ClockIvory','M_ClockInk']
 
@@ -72,10 +74,14 @@ def material(name,info):
         m.set_editor_property('blend_mode',ue.BlendMode.BLEND_TRANSLUCENT)
         connect(const(m,min(info.get('factor',[1,1,1,.3])[3],.35)),ue.MaterialProperty.MP_OPACITY)
     else:m.set_editor_property('blend_mode',ue.BlendMode.BLEND_OPAQUE)
+    if info.get('alpha')!='BLEND':mel.set_material_usage(m,ue.MaterialUsage.MATUSAGE_NANITE)
     mel.recompile_material(m);eal.save_loaded_asset(m,only_if_is_dirty=False);return m
 
 materials=json.loads((SRC/'material-index.json').read_text())
 for name,info in materials.items():
+    if upgrade_only:
+        if any(name.startswith('M_PH_'+n+'_') for n in upgrade_ids) or name in ['M_LodgeRugWeave','M_LodgeRugBorder','M_LodgeRugFringe','M_LodgeFloor','M_LodgeTimber']:material(name,info)
+        continue
     if lodge_shell_only:continue
     if lodge_details_only:
         if name in lodge_materials:material(name,info)
@@ -83,6 +89,7 @@ for name,info in materials.items():
     if (not details_only and not architecture_only) or (details_only and name in ['M_AcornShell','M_AcornCupule']) or (architecture_only and not name.startswith('M_PH_')):material(name,info)
 for item in json.loads((SRC/'model-index.json').read_text()):
     name=item['name'];file=SRC/'Export'/(name+'.fbx')
+    if upgrade_only and name not in ['SM_'+n for n in upgrade_ids]+['SM_LodgeHeritageRug']:continue
     if lodge_shell_only and name!='SM_LodgeArchitecture':continue
     if lodge_details_only and name not in lodge_meshes:continue
     if details_only and name not in ['SM_AcornDetailed','SM_ReadyArch']:continue
@@ -104,7 +111,7 @@ for item in json.loads((SRC/'model-index.json').read_text()):
     eal.save_loaded_asset(mesh,only_if_is_dirty=False)
     bounds=mesh.get_bounds();report.append({'name':name,'slots':slot_names,'nanite':nanite.enabled,'extent_cm':[bounds.box_extent.x,bounds.box_extent.y,bounds.box_extent.z]})
     ue.log('LOBBY HIGH DETAIL IMPORT '+name+' '+str(report[-1]))
-if details_only or architecture_only or lodge_details_only or lodge_shell_only:
+if details_only or architecture_only or lodge_details_only or lodge_shell_only or upgrade_only:
     old=json.loads((SRC/'unreal-import.json').read_text());old=[r for r in old if r['name'] not in [n['name'] for n in report]];report=old+report
 (SRC/'unreal-import.json').write_text(json.dumps(report,indent=2))
 ue.log('LOBBY HIGH DETAIL IMPORT COMPLETE '+str(len(report))+' meshes; '+str(len(cache))+' texture imports')

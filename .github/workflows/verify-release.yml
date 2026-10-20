@@ -1,0 +1,48 @@
+name: Verify Windows release
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Exact beta version to verify
+        required: true
+      tools_tag:
+        description: Private release containing validation-tools.zip
+        required: true
+permissions:
+  contents: read
+jobs:
+  installer:
+    runs-on: windows-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - name: Download private compiler and bundled prerequisite fixtures
+        shell: powershell
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TOOLS_TAG: ${{ inputs.tools_tag }}
+        run: |
+          New-Item -ItemType Directory native/Build/ReleaseValidation -Force | Out-Null
+          gh release download $env:TOOLS_TAG --repo $env:GITHUB_REPOSITORY --pattern validation-tools.zip --dir native/Build/ReleaseValidation
+          if ($LASTEXITCODE) { throw 'Validation tool download failed.' }
+          Expand-Archive native/Build/ReleaseValidation/validation-tools.zip native/Build/ReleaseValidation/Tools
+      - name: Verify exact signed public candidate and installer lifecycle
+        shell: powershell
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: |
+          & native/VerifyReleaseCandidate.ps1 -Version $env:RELEASE_VERSION -ToolsRoot native/Build/ReleaseValidation/Tools
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: release-verification
+          path: |
+            native/Build/Beta/InstallerVerification.json
+            native/Build/ReleaseValidation/result.json
+            native/Build/ReleaseValidation/*.log
+            native/Build/InstallerVerification/**/*.log
+            native/Build/VersionedSetupVerification/**/*.log
+          retention-days: 30

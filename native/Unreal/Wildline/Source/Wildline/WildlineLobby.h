@@ -6,6 +6,7 @@ class UStaticMeshComponent;
 class UMaterialInterface;
 class UStaticMesh;
 class USceneComponent;
+class UPointLightComponent;
 
 // Both interiors are built deterministically on every peer, above the reserve.
 // Only readiness/player state replicates; decorative components need no network traffic.
@@ -24,15 +25,18 @@ public:
     static int32 WeaponAt(FVector Position);
     static FVector Rack(int32 Weapon);
     UPROPERTY() TArray<UStaticMeshComponent*> Props;
-private:
     UPROPERTY() TArray<USceneComponent*> LodgeScenery;
+    UPROPERTY() UPointLightComponent* HearthLight=nullptr;
+    FString ExteriorTheme;
+private:
     bool bLodgeSceneryVisible=false;
     UStaticMeshComponent* Piece(const TCHAR* Name,const TCHAR* Shape,FVector Position,FVector Size,UMaterialInterface* Material,FRotator Rotation=FRotator::ZeroRotator,bool Collision=false);
     UStaticMeshComponent* Model(const TCHAR* Asset,FVector Position,FVector DesiredSize=FVector::ZeroVector,FRotator Rotation=FRotator::ZeroRotator,bool Collision=false);
     void Sign(const FString& Text,FVector Position,float Size,FRotator Rotation=FRotator(0,180,0));
-    void Light(FVector Position,FLinearColor Color,float Intensity,float Radius,bool Shadows=false);
+    UPointLightComponent* Light(FVector Position,FLinearColor Color,float Intensity,float Radius,bool Shadows=false);
     void BuildLodge();
     void BuildLodgeDetails();
+    void BuildLodgeExterior();
     void BuildTree();
     void BuildPortal(bool Squirrel);
 };

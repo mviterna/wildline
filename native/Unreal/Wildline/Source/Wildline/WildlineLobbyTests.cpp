@@ -3,6 +3,13 @@
 #include "WildlineCharacter.h"
 #include "WildlineMenu.h"
 #include "WildlineUserSettings.h"
+#include "WildlineSocial.h"
+#include "WildlineWorld.h"
+#include "ProceduralMeshComponent.h"
+#include "Components/PointLightComponent.h"
+#include "Components/HierarchicalInstancedStaticMeshComponent.h"
+#include "Components/Border.h"
+#include "Components/VerticalBox.h"
 #include "WildlineRules.h"
 #include "Engine/World.h"
 #include "Engine/DamageEvents.h"
@@ -50,6 +57,7 @@ void AWildlineController::RunLobbySmokeTest(){
     bool HasLodge=false,HasTree=false;
     if(auto* Room=AWildlineLobby::Find(GetWorld()))for(auto* Prop:Room->Props)if(Prop&&Prop->GetStaticMesh()){HasLodge|=Prop->GetStaticMesh()->GetName()==TEXT("SM_LodgeArchitecture");HasTree|=Prop->GetStaticMesh()->GetName()==TEXT("SM_HollowArchitecture");}
     Check(HasLodge&&HasTree,TEXT("Both textured walkable interiors exist"));
+    if(auto* Room=AWildlineLobby::Find(GetWorld()))for(const TCHAR* Name:{TEXT("SM_sofa_03"),TEXT("SM_ArmChair_01"),TEXT("SM_gothic_coffee_table"),TEXT("SM_vintage_cabinet_01"),TEXT("SM_throw_pillows_01"),TEXT("SM_LodgeHeritageRug")}){bool Found=false;for(auto* Prop:Room->Props)Found|=Prop&&Prop->GetStaticMesh()&&Prop->GetStaticMesh()->GetName()==Name;Check(Found,Name);}
     if(auto* Room=AWildlineLobby::Find(GetWorld())){
         TArray<UPostProcessComponent*> Grades;Room->GetComponents(Grades);bool HunterLit=false,AnimalLit=false,Outside=false;
         for(auto* Grade:Grades){HunterLit|=Grade->EncompassesPoint(Hunter->GetActorLocation(),0,nullptr);AnimalLit|=Grade->EncompassesPoint(Animal->GetActorLocation(),0,nullptr);Outside|=Grade->EncompassesPoint(GM->SpawnLocation(false),0,nullptr);}
@@ -79,7 +87,10 @@ void AWildlineController::RunLobbySmokeTest(){
     UE_LOG(LogTemp,Display,TEXT("WILDLINE LOBBY SMOKE: %s mode=%d"),Passed?TEXT("PASS"):TEXT("FAIL"),S->ExpeditionMode);FPlatformMisc::RequestExitWithStatus(false,Passed?0:1);
 }
 
+void WildlineRunLodgeAtmosphereReview(AWildlineController* PC);
 void AWildlineController::RunLobbyReview(){
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLodgeAtmosphereReview"))){WildlineRunLodgeAtmosphereReview(this);return;}
+    UWildlineUserSettings::Get()->PlayerDisplayName=TEXT("Local Explorer");ServerSetProfileName(TEXT("Local Explorer"));Social->Open(false);
     auto At=[this](float T,TFunction<void()> Work){FTimerHandle H;GetWorldTimerManager().SetTimer(H,FTimerDelegate::CreateWeakLambda(this,[Work](){Work();}),T,false);};
     auto Shot=[](const TCHAR* Name){FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows/")+Name,true,false);};
     auto View=[this](bool Animal,FVector Position,FVector Target){auto* Cam=GetWorld()->SpawnActor<ACameraActor>(AWildlineLobby::Centre(Animal)+Position,FRotator::ZeroRotator);Cam->SetActorRotation((AWildlineLobby::Centre(Animal)+Target-Cam->GetActorLocation()).Rotation());Cam->GetCameraComponent()->FieldOfView=83;SetViewTarget(Cam);};
@@ -91,7 +102,17 @@ void AWildlineController::RunLobbyReview(){
     At(27,[this,View](){EnterWaitingRoom(false);GetHUD()->bShowHUD=false;View(false,FVector(-60,-230,210),FVector(-60,-600,140));});At(31,[Shot](){Shot(TEXT("LobbyWeaponRack.png"));});
     At(32,[this,View](){EnterWaitingRoom(true);GetHUD()->bShowHUD=false;View(true,FVector(-50,-80,90),FVector(-220,-275,25));});At(36,[Shot](){Shot(TEXT("LobbyAcornPantry.png"));});
     At(37,[this,View](){EnterWaitingRoom(false);GetHUD()->bShowHUD=false;View(false,FVector(-410,-410,235),FVector(460,690,260));});At(41,[Shot](){Shot(TEXT("LobbyHunterWindows.png"));});
-    At(42,[](){FPlatformMisc::RequestExit(false);});
+    At(42,[this,View](){EnterWaitingRoom(false);GetHUD()->bShowHUD=false;View(false,FVector(500,-480,260),FVector(-190,250,220));
+        auto* Mine=GetPlayerState<AWildlinePlayerState>();Mine->Kills=3;Mine->Deaths=1;Mine->Shots=12;Mine->Hits=8;
+        for(int I=0;I<3;I++){auto* P=GetWorld()->SpawnActor<AWildlinePlayerState>();P->SetPlayerName(I==0?TEXT("Cedar Scout"):I==1?TEXT("Acorn Bandit"):TEXT("Hickory Runner"));P->bSquirrelTeam=I>0;P->bWaiting=I==2;P->Kills=I+1;P->Deaths=2-I;P->Shots=9+I;P->Hits=3+I;P->FoodCollected=I*7;P->FoodDeposited=I*5;P->FeederScores=I;}
+        Social->Open(true);Social->Refresh();
+        const bool Ok=Social->bGameplayBoard&&Social->ProfileFields->GetVisibility()==ESlateVisibility::Collapsed&&Social->Panel->GetBrushColor().A<.4f;
+        UE_LOG(LogTemp,Display,TEXT("WILDLINE SCOREBOARD TRANSPARENCY: %s"),Ok?TEXT("PASS"):TEXT("FAIL"));
+    });
+    At(46,[Shot](){Shot(TEXT("LobbyScoreboard.png"));});
+    At(47,[this,View](){Social->Open(false);View(false,FVector(-470,-30,185),FVector(-190,450,100));});
+    At(51,[Shot](){Shot(TEXT("LobbyLounge.png"));});
+    At(52,[](){FPlatformMisc::RequestExit(false);});
 }
 
 void AWildlineController::RunLobbyNetworkProbe(){

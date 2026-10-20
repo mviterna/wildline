@@ -38,6 +38,7 @@ AWildlineCharacter::AWildlineCharacter(){
     ThirdCamera=CreateDefaultSubobject<UCameraComponent>(TEXT("Third person"));ThirdCamera->SetupAttachment(Boom);ThirdCamera->bUsePawnControlRotation=false;ThirdCamera->bAutoActivate=false;ThirdCamera->SetActive(false);
     ViewRifle=CreateDefaultSubobject<UStaticMeshComponent>(TEXT("First person rifle"));ViewRifle->SetupAttachment(FirstCamera);ViewRifle->SetOnlyOwnerSee(true);ViewRifle->SetCollisionEnabled(ECollisionEnabled::NoCollision);ViewRifle->CastShadow=false;
     WorldRifle=CreateDefaultSubobject<UStaticMeshComponent>(TEXT("World rifle"));WorldRifle->SetupAttachment(GetMesh());WorldRifle->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+    HunterHat=CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Hunter headwear"));HunterHat->SetupAttachment(GetMesh(),TEXT("head"));HunterHat->SetCollisionEnabled(ECollisionEnabled::NoCollision);HunterHat->SetCanEverAffectNavigation(false);
     ViewBolt=CreateDefaultSubobject<UStaticMeshComponent>(TEXT("First person bolt"));ViewBolt->SetupAttachment(ViewRifle);ViewBolt->SetOnlyOwnerSee(true);ViewBolt->SetCollisionEnabled(ECollisionEnabled::NoCollision);ViewBolt->SetCastShadow(false);
     WorldBolt=CreateDefaultSubobject<UStaticMeshComponent>(TEXT("World bolt"));WorldBolt->SetupAttachment(WorldRifle);WorldBolt->SetCollisionEnabled(ECollisionEnabled::NoCollision);
     AnimalRoot=CreateDefaultSubobject<USceneComponent>(TEXT("Squirrel body"));AnimalRoot->SetupAttachment(RootComponent);
@@ -69,6 +70,7 @@ bool AWildlineCharacter::IsThermalActive()const{return !bSquirrel&&!bDead&&Selec
 bool AWildlineCharacter::IsScoped()const{return !bSquirrel&&!bDead&&SelectedWeapon==WildlineRules::RifleWeapon&&bAiming;}
 void AWildlineCharacter::ConfigureRole(){
     if(bSquirrel)SetActorScale3D(FVector::OneVector);
+    HunterHat->SetVisibility(!bSquirrel&&HunterProfile.Headwear>0);
     // The authored animal is 42.5 cm nose to tail; 1.15 gives 48.9 cm overall.
     GetCapsuleComponent()->SetCapsuleSize(bSquirrel?7.f:38.f,bSquirrel?12.f:96.f);
     UpdateSquirrelHitbox();
@@ -138,12 +140,13 @@ void AWildlineCharacter::ApplyHunterProfile(){
     HunterFaceTexture=HunterProfile.bUsePhoto?WildlinePortrait::DecodePhoto(HunterFaceData):nullptr;
     // Named hunters carry a cooked photo on a featureless head.
     // An optional custom portrait overrides the selected built-in photo.
+    UpdateHeadwear();
     HunterMaterials.Empty();const FLinearColor Outfits[]={FLinearColor(.20f,.28f,.10f),FLinearColor(1.f,.12f,.008f),FLinearColor(.32f,.18f,.065f)};
     const FLinearColor Hair[]={FLinearColor(.35f,.23f,.13f),FLinearColor(.07f,.06f,.05f),FLinearColor(.62f,.61f,.58f)};
     GetMesh()->EmptyOverrideMaterials();
     for(int32 I=0;I<GetMesh()->GetNumMaterials();I++)if(auto* M=GetMesh()->CreateDynamicMaterialInstance(I)){
         M->SetVectorParameterValue(TEXT("OutfitTint"),Outfits[HunterProfile.Outfit]);M->SetVectorParameterValue(TEXT("HairTint"),Hair[HunterProfile.Hair]);
-        const float T=HunterProfile.SkinTone;M->SetVectorParameterValue(TEXT("SkinTint"),FLinearColor(1-T*.55f,1-T*.68f,1-T*.73f));M->SetScalarParameterValue(TEXT("CapVisible"),HunterProfile.bCap?1:0);
+        const float T=HunterProfile.SkinTone;M->SetVectorParameterValue(TEXT("SkinTint"),FLinearColor(1-T*.55f,1-T*.68f,1-T*.73f));M->SetScalarParameterValue(TEXT("CapVisible"),0);
         M->SetScalarParameterValue(TEXT("BeardVisible"),HunterProfile.bBeard?1:0);
         M->SetScalarParameterValue(TEXT("CloseCrop"),0);
         M->SetScalarParameterValue(TEXT("FaceFill"),bPreviewHunter?.025f:.18f);
@@ -338,7 +341,7 @@ void AWildlineCharacter::ServerFire_Implementation(FVector_NetQuantizeNormal Dir
     const FVector Eye=GetActorLocation()+FVector(0,0,72*Scale);const FVector Muzzle=Eye+(Aim*65+GetActorRightVector()*2)*Scale;
     FCollisionQueryParams Q(SCENE_QUERY_STAT(RifleMuzzle),false,this);FHitResult Block;
     if(GetWorld()->LineTraceSingleByChannel(Block,Eye,Muzzle,ECC_Visibility,Q))return;
-    LastShot=Now;if(!MatchRules().bInfiniteAmmo)Ammo--;
+    LastShot=Now;if(!MatchRules().bInfiniteAmmo)Ammo--;if(auto* PS=GetPlayerState<AWildlinePlayerState>()){PS->Shots++;PS->ForceNetUpdate();}
     if(SelectedWeapon==ShotgunWeapon){
         TMap<AWildlineCharacter*,float> Damage;
         TArray<FWildlineImpact> Impacts;
@@ -352,7 +355,8 @@ void AWildlineCharacter::ServerFire_Implementation(FVector_NetQuantizeNormal Dir
                 else if(!Cast<AWildlineCharacter>(Hit.GetActor()))Impacts.Add(AWildlineWeaponFX::DescribeImpact(Hit));
             }
         }
-        for(const auto& Hit:Damage){Hit.Key->MulticastBlood(Hit.Key->GetActorLocation(),Aim);UGameplayStatics::ApplyDamage(Hit.Key,Hit.Value,Controller,this,UDamageType::StaticClass());}
+        bool Connected=false;for(const auto& Hit:Damage){Hit.Key->MulticastBlood(Hit.Key->GetActorLocation(),Aim);Connected|=UGameplayStatics::ApplyDamage(Hit.Key,Hit.Value,Controller,this,UDamageType::StaticClass())>0;}
+        if(Connected)if(auto* PS=GetPlayerState<AWildlinePlayerState>()){PS->Hits++;PS->ForceNetUpdate();}
         MulticastShot(Aim);if(!Impacts.IsEmpty())MulticastImpacts(Impacts);return;
     }
     if(bBot&&MatchRules().BotAccuracyScale>=1.f){
@@ -421,9 +425,9 @@ void AWildlineCharacter::Forage(){
             if(GetWorld()->LineTraceSingleByChannel(Hit,GetActorLocation()+FVector(0,0,5),Food+FVector(0,0,5),ECC_Visibility,Query))continue;
             Shared->TakenPeanuts.Add(I);BagPeanuts.Add(I);Shared->ForceNetUpdate();
         }
-        Collected.Add(I);Bag++;MulticastSound(WildlineAudio::Pickup);
+        Collected.Add(I);Bag++;if(auto* PS=GetPlayerState<AWildlinePlayerState>()){PS->FoodCollected++;PS->ForceNetUpdate();}MulticastSound(WildlineAudio::Pickup);
     }
-    if(Bag>0&&TreeIndex==INDEX_NONE&&FMath::Abs(GetActorLocation().Z-Forest->DenLocation.Z)<100&&FVector::Dist2D(GetActorLocation(),Forest->DenLocation)<280){if(auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>())GM->Deposit(Bag);MulticastSound(WildlineAudio::Deposit);Bag=0;BagPeanuts.Empty();}
+    if(Bag>0&&TreeIndex==INDEX_NONE&&FMath::Abs(GetActorLocation().Z-Forest->DenLocation.Z)<100&&FVector::Dist2D(GetActorLocation(),Forest->DenLocation)<280){if(auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>()){GM->Deposit(Bag);if(auto* PS=GetPlayerState<AWildlinePlayerState>()){PS->FoodDeposited+=Bag;PS->ForceNetUpdate();}}MulticastSound(WildlineAudio::Deposit);Bag=0;BagPeanuts.Empty();}
 }
 void AWildlineCharacter::UpdateHeatSignature(){
     // Tag geometry on every client. The viewing camera decides whether to display heat.
@@ -434,7 +438,7 @@ void AWildlineCharacter::UpdateHeatSignature(){
 }
 void AWildlineCharacter::UpdateCamera(float Delta){
     if(Forest){const auto* State=GetWorld()->GetGameState<AWildlineGameState>();Forest->ShowLocalAcorns(Forest->bFarm&&State?State->TakenPeanuts:Collected);}
-    const bool Third=bDead||(bThirdPerson&&!IsScoped());FirstCamera->SetActive(!Third);ThirdCamera->SetActive(Third);GetMesh()->SetOwnerNoSee(!Third);WorldRifle->SetOwnerNoSee(!Third);ViewRifle->SetVisibility(!bSquirrel&&!Third&&!IsScoped());
+    const bool Third=bDead||(bThirdPerson&&!IsScoped());FirstCamera->SetActive(!Third);ThirdCamera->SetActive(Third);GetMesh()->SetOwnerNoSee(!Third);WorldRifle->SetOwnerNoSee(!Third);HunterHat->SetOwnerNoSee(!Third);ViewRifle->SetVisibility(!bSquirrel&&!Third&&!IsScoped());
     ViewBolt->SetVisibility(!bSquirrel&&!Third&&!IsScoped());WorldBolt->SetOwnerNoSee(!Third);
     for(auto* Fur:FurSections)Fur->SetOwnerNoSee(!Third);
     // On a trunk, keep the chase camera on the animal's side of the bark.
@@ -541,7 +545,7 @@ void AWildlineCharacter::Tick(float Delta){
 }
 
 AWildlineBullet::AWildlineBullet(){PrimaryActorTick.bCanEverTick=true;RootComponent=CreateDefaultSubobject<USceneComponent>(TEXT("Ballistic root"));SetLifeSpan(2);}
-void AWildlineBullet::Tick(float Delta){Super::Tick(Delta);if(!HasAuthority()||!Shooter.IsValid()){Destroy();return;}const FVector Start=GetActorLocation();Velocity.Z-=980.f*Delta;const FVector End=Start+Velocity*Delta;FCollisionQueryParams Q(SCENE_QUERY_STAT(BallisticBullet),false,Shooter.Get());FHitResult Hit;if(GetWorld()->LineTraceSingleByChannel(Hit,Start,End,ECC_Visibility,Q)){if(auto* Animal=Cast<AWildlineCharacter>(Hit.GetActor());Animal&&Animal->bSquirrel&&!Animal->bDead){Animal->MulticastBlood(Hit.ImpactPoint,Velocity.GetSafeNormal());UGameplayStatics::ApplyDamage(Animal,100,Shooter->GetController(),this,UDamageType::StaticClass());}else if(!Cast<AWildlineCharacter>(Hit.GetActor()))Shooter->MulticastImpacts({AWildlineWeaponFX::DescribeImpact(Hit)});Destroy();}else SetActorLocation(End);}
+void AWildlineBullet::Tick(float Delta){Super::Tick(Delta);if(!HasAuthority()||!Shooter.IsValid()){Destroy();return;}const FVector Start=GetActorLocation();Velocity.Z-=980.f*Delta;const FVector End=Start+Velocity*Delta;FCollisionQueryParams Q(SCENE_QUERY_STAT(BallisticBullet),false,Shooter.Get());FHitResult Hit;if(GetWorld()->LineTraceSingleByChannel(Hit,Start,End,ECC_Visibility,Q)){if(auto* Animal=Cast<AWildlineCharacter>(Hit.GetActor());Animal&&Animal->bSquirrel&&!Animal->bDead){Animal->MulticastBlood(Hit.ImpactPoint,Velocity.GetSafeNormal());const float Applied=UGameplayStatics::ApplyDamage(Animal,100,Shooter->GetController(),this,UDamageType::StaticClass());if(Applied>0)if(auto* PS=Shooter->GetPlayerState<AWildlinePlayerState>()){PS->Hits++;PS->ForceNetUpdate();}}else if(!Cast<AWildlineCharacter>(Hit.GetActor()))Shooter->MulticastImpacts({AWildlineWeaponFX::DescribeImpact(Hit)});Destroy();}else SetActorLocation(End);}
 AWildlineBlood::AWildlineBlood(){PrimaryActorTick.bCanEverTick=true;RootComponent=CreateDefaultSubobject<USceneComponent>(TEXT("Blood"));SetLifeSpan(18);}
 void AWildlineBlood::BeginPlay(){Super::BeginPlay();auto* Sphere=LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Sphere.Sphere"));auto* Red=LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/Wildline/Materials/M_Blood.M_Blood"));for(int32 I=0;I<18;I++){auto* Drop=NewObject<UStaticMeshComponent>(this);Drop->SetupAttachment(RootComponent);Drop->SetStaticMesh(Sphere);Drop->SetMaterial(0,Red);Drop->SetCollisionEnabled(ECollisionEnabled::NoCollision);Drop->SetRelativeScale3D(FVector(.025f,.025f,.045f));Drop->RegisterComponent();Drops.Add(Drop);Velocities.Add(Direction*FMath::FRandRange(100.f,280.f)+FMath::VRand()*180+FVector(0,0,110));}}
 void AWildlineBlood::Tick(float Delta){Super::Tick(Delta);for(int32 I=0;I<Drops.Num();I++){if(Velocities[I].IsNearlyZero())continue;Velocities[I].Z-=650*Delta;auto* Drop=Drops[I];FVector P=Drop->GetComponentLocation()+Velocities[I]*Delta;const auto* Forest=AWildlineWorld::Find(GetWorld());const float G=Forest?Forest->GroundHeight(P.X,P.Y):WildlineRules::Ground(P.X,P.Y);if(P.Z<G+1){P.Z=G+1;Velocities[I]=FVector::ZeroVector;Drop->SetWorldScale3D(FVector(.11f,.08f,.006f));}Drop->SetWorldLocation(P);}}

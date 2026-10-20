@@ -9,7 +9,8 @@ function Start-PresentationProbe($taskFlags,$taskName){
     $taskProfile=Join-Path $PSScriptRoot "Unreal/Wildline/Saved/PresentationProbes/$taskName"
     $taskLog=Join-Path $PSScriptRoot "$taskName.log"
     $taskArgs=if($Editor){'"'+$taskProject+'" -game '}else{''}
-    $taskArgs+='/Game/Maps/Blackwood '+$taskFlags+' -unattended -UserDir="'+$taskProfile+'" -abslog="'+$taskLog+'"'
+    $taskPort=if($taskName -eq 'presentation-review'){7793}else{7792}
+    $taskArgs+='/Game/Maps/Blackwood '+$taskFlags+' -WildlineProfileName=PresentationReview -WildlineDiscoveryPort='+$taskPort+' -unattended -UserDir="'+$taskProfile+'" -abslog="'+$taskLog+'"'
     Start-Process -FilePath $taskGame -ArgumentList $taskArgs -WindowStyle Hidden -PassThru
 }
 try {
@@ -19,7 +20,9 @@ try {
     if((Get-Content -LiteralPath (Join-Path $PSScriptRoot 'presentation-smoke.log') -Raw) -notmatch 'WILDLINE INTRO SMOKE: PASS'){throw 'Missing presentation smoke pass marker.'}
     if($Capture){
         $taskShots=Join-Path $PSScriptRoot 'Unreal/Wildline/Saved/PresentationProbes/presentation-review/Saved/Screenshots/Windows'
-        foreach($taskName in @('Intro2DNotice','Intro2DRun','Intro2DBeforeShot','Intro2DShot','Intro2DTumble','Intro2DPause','StudioLogo','StudioFade','PresentationMenu','PresentationSettings')){Copy-Item -LiteralPath (Join-Path $taskShots "$taskName.png") -Destination (Join-Path $PSScriptRoot "Preview/$taskName.png") -Force}
+        $taskPreview=Join-Path $PSScriptRoot ('Preview/Presentation-'+[guid]::NewGuid().ToString('N'));New-Item -ItemType Directory -Path $taskPreview -Force | Out-Null
+        foreach($taskName in @('Intro2DNotice','Intro2DRun','Intro2DBeforeShot','Intro2DShot','Intro2DTumble','Intro2DPause','StudioLogo','StudioFade','PresentationMenu','PresentationSettings')){Copy-Item -LiteralPath (Join-Path $taskShots "$taskName.png") -Destination (Join-Path $taskPreview "$taskName.png") -Force}
+        Write-Output "Presentation captures: $taskPreview"
     }
     Write-Output '2D squirrel run interrupted before nut contact, no pickup, pause, extended logo, completion, skip, menu poster, cooked soundtrack, 40% menu music fade and gameplay entry: PASS'
 } finally {

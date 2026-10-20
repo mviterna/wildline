@@ -10,6 +10,7 @@ root = Path(ue.Paths.project_dir()).resolve()
 tools = ue.AssetToolsHelpers.get_asset_tools()
 for filename, name in [('MenuPoster.png', 'T_MenuPoster'),
                        ('MenuBluegrass.wav', 'SW_MenuBluegrass'),
+                       ('MenuRap.wav', 'SW_MenuRap'),
                        ('StudioLogo.png', 'T_StudioLogo'),
                        ('IntroSquirrelAtlas.png', 'T_IntroSquirrelAtlas')]:
     task = ue.AssetImportTask()

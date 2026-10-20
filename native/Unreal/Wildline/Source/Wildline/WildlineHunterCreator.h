@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "Components/ComboBoxString.h"
+#include "Components/Button.h"
 #include "WildlineHunterProfile.h"
 #include "WildlineHunterCreator.generated.h"
 class AWildlineCharacter;
@@ -13,6 +14,17 @@ class USlider;
 class UCheckBox;
 class USizeBox;
 class UScrollBox;
+class UBorder;
+class UUniformGridPanel;
+class UWildlineHunterCreator;
+UCLASS()
+class WILDLINE_API UWildlineHatButton : public UButton {
+    GENERATED_BODY()
+public:
+    int32 HatId=0;
+    UPROPERTY() UWildlineHunterCreator* Creator;
+    UFUNCTION() void Choose();
+};
 UCLASS()
 class WILDLINE_API UWildlineHunterCreator : public UUserWidget {
     GENERATED_BODY()
@@ -20,6 +32,7 @@ public:
     TSharedRef<SWidget> RebuildWidget() override;
     void NativeDestruct() override;
     FReply NativeOnKeyDown(const FGeometry&,const FKeyEvent&) override;
+    FReply NativeOnPreviewKeyDown(const FGeometry&,const FKeyEvent&) override;
     FWildlineHunterProfile Pending;
     FString PhotoData;
     UPROPERTY() AWildlineCharacter* Preview;
@@ -36,6 +49,21 @@ public:
     UPROPERTY() UComboBoxString* OutfitCombo;
     UPROPERTY() UComboBoxString* HairCombo;
     UPROPERTY() UCheckBox* CapCheck;
+    UPROPERTY() UBorder* HatPicker;
+    UPROPERTY() UScrollBox* HatScroll;
+    UPROPERTY() UUniformGridPanel* HatGrid;
+    UPROPERTY() UTextBlock* HatButtonLabel;
+    UPROPERTY() UTextBlock* HatSelection;
+    UPROPERTY() TArray<UWildlineHatButton*> HatCards;
+    UPROPERTY() TArray<UWildlineHatButton*> HatFilters;
+    bool bHatPicker=false;
+    int32 HatFilter=0;
+    void BuildHeadwearPicker(UBorder* Parent);
+    void RefreshHatCards();
+    void SelectHat(int32 Id);
+    void SetHatFilter(int32 Filter);
+    UFUNCTION() void OpenHeadwear();
+    UFUNCTION() void CloseHeadwear();
     UPROPERTY() UCheckBox* BeardCheck;
     UPROPERTY() TArray<USlider*> AppearanceSliders;
     UPROPERTY() TArray<USlider*> DimensionSliders;

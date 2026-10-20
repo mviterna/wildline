@@ -1,5 +1,63 @@
 # Waiting room assets
 
+## Map views, fire glow and hunting paintings, 2026-10-19
+
+Two 1839 oil-on-panel paintings by John Frederick Herring are mounted in original
+modelled gilt frames: *Foxhunting: Clearing a Ditch* (B2001.2.175) and
+*Foxhunting: Encouraging Hounds* (B2001.2.176). Images come directly from the
+Yale Center for British Art's IIIF image service. Both per-image records state
+CC0 1.0 and permit commercial reuse. Credit: Yale Center for British Art,
+Paul Mellon Collection. `Paintings/sources.json` retains source/catalog URLs,
+image dimensions, exact rights statements and SHA-256 hashes; each complete
+museum manifest is retained beside the original JPEG. No paid assets or accounts
+were used. The complete images retain their aspect ratios and are not mirrored
+or cropped into invented compositions.
+
+Reproduce with `download_lodge_paintings.py`, Blender
+`generate_lodge_paintings.py`, then the Unreal `import_lodge_atmosphere.py`
+commandlet. The frame geometry is original; its oak backing uses the previously
+retained CC0 timber maps. The fire halo is original procedural shader math,
+supported by warm flickering point light and interior bloom.
+The lit canvas materials include a diffuse fill to preserve image detail under
+the room's fixed exposure, with separate brass picture-light fixtures.
+
+`WildlineLodgeExterior.cpp` derives the view from the loaded map on each peer.
+Frostwood uses the map's snow material, bare winter trees with frosted bark,
+and snow on the exterior window ledges. Farmstead and both neighborhood layouts
+reuse their actual meshes, materials and placements as decorative copies outside
+the lodge. These copies exclude the room's bounds, have no collision, and only
+render from a camera inside the lodge. Match actors and terrain are not moved.
+Farm copies use conventional instancing with complete buffers registered once;
+this avoids a reproduced Nanite instance-culling GPU fault on duplicated farm
+components. Empty copy layers are discarded. The playable farm keeps Nanite.
+`VerifyLodgeAtmosphere.ps1 -Capture` checks and captures all five maps.
+
+## Hunter lounge upgrade, 2026-10-19
+
+Five additional free CC0 Poly Haven models are integrated at 4K: `sofa_03`
+(leather sofa), `ArmChair_01`, `gothic_coffee_table`, `vintage_cabinet_01` and
+`throw_pillows_01`. The existing outdoor picnic furniture is superseded by a
+coherent indoor lounge. All original downloaded assets remain in the project.
+`Photoreal/sources.json` retains the provider metadata, license URLs and verified
+MD5 hashes for each file. No account or purchase was needed.
+
+The original bound/fringed wool rug is generated geometry, using the free CC0
+`dirty_carpet` 4K color, normal and roughness maps. Its green border, contrasting
+woven diamonds and individual cotton fringe strands are original mesh detail.
+The floor/timber color factors and interior-only window lighting are authored
+for this room. Imported source geometry, UVs and material slots are preserved;
+Nanite is enabled for opaque furniture. Glass retains translucent rendering.
+
+To reproduce the additions without reimporting the earlier rooms, run
+`download_lobby_assets.py --upgrade-only`, then Blender with
+`convert_lobby_assets.py -- --upgrade-only` and `generate_lodge_upgrade.py`.
+Finally run the Unreal `import_lobby_assets.py` commandlet with
+`-LodgeUpgradeOnly`, `finalize_lodge_upgrade.py` to persist the Nanite shader
+permutations, and `create_lodge_fire.py` for the original procedural animated
+hearth material. The fire uses shader math with no third-party imagery.
+Asset search/download tooling is Powered by Poly Haven
+(https://polyhaven.com); it is development tooling rather than a shipped API client.
+
 Upgraded 2026-10-08. The rooms use 22 downloaded Poly Haven models and six
 4K scanned/PBR texture sets, licensed [CC0](https://polyhaven.com/license).
 Source files, author metadata, URLs, checksums and resolutions are retained

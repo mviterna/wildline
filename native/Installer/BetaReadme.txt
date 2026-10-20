@@ -28,6 +28,14 @@ failures or a required restart. GPU shader support is verified by the game at
 launch. Setup cannot upgrade your graphics hardware or install GPU drivers.
 
 Play
+Choose a local player name on first launch. Your name appears in the upper right.
+Click it or press Shift+Tab to see teams, rename yourself, switch teams, or join
+the shared room. Switching teams puts you in that team's waiting room.
+The list also shares each player's kills, deaths, food banked/picked, shot
+accuracy and feeder scores. Stats reset each round and survive team changes.
+Your Settings includes graphics presets, AA method/quality, textures, shadows,
+lighting, reflections, effects, foliage, render scale, VSync and frame limits.
+Press Apply Graphics to save those choices locally.
 Choose Classic, Farm Raid or King of the Hill, a hunter/squirrel, then Enter the
 Wild for solo play. WASD moves; mouse looks; Shift sprints; Space jumps.
 Hunter: left mouse fires, right mouse aims, R reloads, T toggles rifle thermal.
@@ -36,10 +44,16 @@ V changes camera; M changes minimap zoom; Esc opens camp/settings.
 Mouse Y starts inverted; change it under Your Settings if desired.
 
 Co-op
-Host chooses Host Co-op Expedition. Friend enters host's IP and selects Join.
+Connect all four PCs to the same Hamachi network. Anyone can Host Co-op
+Expedition when no room is active. WILDLINE discovers the active room and
+disables Host on other PCs; choose Join Expedition or Shift+Tab > Join Active
+Network Room. Enter Waiting Room also joins an existing room when discovered.
+Room discovery uses UDP 7778; game traffic uses UDP 7777. If discovery is blocked,
+enter the current host's Hamachi IP manually. The host must keep the game open.
+If they leave, someone else can host a new room; matches do not migrate hosts.
 Allow WILDLINE through Windows Firewall on your private network when prompted.
 Internet co-op needs UDP 7777 forwarded to the host, or a shared gaming VPN.
-No matchmaking, accounts or automatic NAT traversal is available yet.
+No accounts or automatic Internet NAT traversal are required for Hamachi play.
 
 Feedback
 Send the beta version from versions/<current.version>/BetaBuild.json, your Windows/GPU details, what you

@@ -28,7 +28,7 @@ public:
     UPROPERTY() TArray<UAnimSequence*> RunStarts;
     UPROPERTY() TArray<UAnimSequence*> RunStops;
     float GaitPhase=0,FootPlantWeight[2]={0,0};
-    float CrouchBlend=0,MovementBlend=0,GroundOffset=0;
+    float CrouchBlend=0,MovementBlend=0,GroundOffset=0,AimBlend=0;
     int32 FootPlantSerial[2]={0,0};
     bool bCapturedMotion=false;
 protected:

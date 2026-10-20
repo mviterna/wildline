@@ -39,40 +39,5 @@ void AWildlineLobby::BuildLodgeDetails(){
         Piece(TEXT("Sketch map trail"),TEXT("Cube"),O+FVector(X,-675,309+FMath::Sin(I*.85f)*14),FVector(8,.5f,1.2f),LodgeSurface(TEXT("M_ClockInk")),FRotator(0,0,FMath::Cos(I*.85f)*20));
     }
     for(float X:{-143.f,-69.f})Piece(TEXT("Brass map pin"),TEXT("Sphere"),O+FVector(X,-674,350),FVector(2.5f,1.5f,2.5f),LodgeSurface(TEXT("M_LodgeDetailBrass")));
-    // The lobby is above the play maps. A shared woodland clearing around the
-    // lodge supplies actual parallax through every window in all three modes.
-    // Instanced trees keep the detailed source forest inexpensive to draw.
-    LodgeScenery.Add(Piece(TEXT("Woodland clearing outside lodge"),TEXT("Cube"),O+FVector(0,0,-55),FVector(28000,28000,80),ForestSurface(TEXT("M_LeafLitter"))));
-    // Rising wooded ground closes the horizon from the elevated waiting room.
-    // The near clearing remains level with the sills, and has real parallax.
-    for(int32 I=0;I<32;I++){
-        const float A=I*2*PI/32;
-        LodgeScenery.Add(Piece(TEXT("Wooded ridge beyond lodge"),TEXT("Sphere"),O+FVector(FMath::Cos(A)*9500,FMath::Sin(A)*9500,-1450),FVector(6500,6500,4200),ForestSurface(TEXT("M_LeafLitter"))));
-    }
-    FRandomStream Random(68123);
-    const TCHAR* Trees[]={TEXT("SM_OakA_Thin"),TEXT("SM_OakB_Thin"),TEXT("SM_Pine_Thin"),TEXT("SM_OakC_Thin")};
-    for(int32 Species=0;Species<4;Species++){
-        const FString Path=FString::Printf(TEXT("/Game/Wildline/Forest/Meshes/%s.%s"),Trees[Species],Trees[Species]);
-        auto* Mesh=LoadObject<UStaticMesh>(nullptr,*Path);if(!Mesh)continue;
-        auto* Instances=NewObject<UHierarchicalInstancedStaticMeshComponent>(this);
-        AddInstanceComponent(Instances);Instances->SetupAttachment(RootComponent);Instances->SetMobility(EComponentMobility::Static);
-        // Distant scenery retains its forest materials without spending virtual
-        // shadow-map pages on foliage surrounding a sealed waiting room.
-        Instances->SetStaticMesh(Mesh);Instances->SetCollisionProfileName(TEXT("NoCollision"));Instances->SetCastShadow(false);Instances->RegisterComponent();
-        LodgeScenery.Add(Instances);
-        for(int32 I=0;I<36;I++){
-            const float Angle=(I*4+Species)*2*PI/144+Random.FRandRange(-.02f,.02f);
-            const float Radius=I<12?Random.FRandRange(1250,2800):Random.FRandRange(3000,7800);
-            const float Scale=Random.FRandRange(.55f,1.10f);
-            const float Collar=Species==2?460.f:0.f;
-            const float Ground=Radius>6400?FMath::Square((Radius-6400)/3100)*400:-15;
-            Instances->AddInstance(FTransform(FRotator(0,Random.FRandRange(0,360),0),O+FVector(FMath::Cos(Angle)*Radius,FMath::Sin(Angle)*Radius,Ground-(Mesh->GetBoundingBox().Min.Z+Collar)*Scale),FVector(Scale)));
-        }
-    }
-    // Nearby deadwood and ferns give the sills a foreground beyond distant trees.
-    for(float Side:{-1.f,1.f}){
-        if(auto* C=Model(TEXT("SM_dead_tree_trunk"),O+FVector(-180,Side*1190,-15),FVector(280,55,45),FRotator(0,32,0)))LodgeScenery.Add(C);
-        if(auto* C=Model(TEXT("SM_moss_01"),O+FVector(-170,Side*1180,18),FVector(140,70,12)))LodgeScenery.Add(C);
-    }
-    for(auto* C:LodgeScenery)if(C)C->SetVisibility(false,true);
+    BuildLodgeExterior();
 }

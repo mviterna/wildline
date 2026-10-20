@@ -11,7 +11,12 @@ public:
     UWildlineUserSettings();
     void LoadSettings(bool bForceReload = false) override;
     void ValidateSettings() override;
-    void EnforceHighQuality();
+    void InitializeGraphics();
+    void ApplyNonResolutionSettings() override;
+    UPROPERTY(Config) int32 GraphicsVersion=0;
+    UPROPERTY(Config) int32 AntiAliasingMethod=4;
+    UPROPERTY(Config) bool bMotionBlur=false;
+    UPROPERTY(Config) float Sharpening=.3f;
     UPROPERTY(Config, BlueprintReadWrite) bool bInvertMouseY = true;
     UPROPERTY(Config, BlueprintReadWrite) float MouseSensitivity = .8f;
     UPROPERTY(Config, BlueprintReadWrite) float ScopeSensitivity = .256f;
@@ -28,6 +33,12 @@ public:
     UPROPERTY(Config) int32 ExpeditionMode=0;
     UPROPERTY(Config) int32 SelectedWeapon=0;
     UPROPERTY(Config) FWildlineHunterProfile HunterProfile;
+    UPROPERTY(Config) FString PlayerDisplayName;
+    static FString CleanPlayerName(const FString& Name);
     static UWildlineUserSettings* Get();
+    static FString LocalProfilePath();
+    void LoadLocalProfile();
+    bool SaveLocalProfile() const;
+    bool bLastProfileSaveSucceeded=true;
     void Persist();
 };

@@ -616,9 +616,9 @@
     "normal": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_nor_gl_4k.jpg",
     "rough_map": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_rough_4k.jpg",
     "factor": [
-      1,
-      1,
-      1,
+      1.45,
+      1.4,
+      1.28,
       1
     ],
     "roughness": 1,
@@ -632,9 +632,9 @@
     "normal": "Photoreal\\wood_floor_worn\\wood_floor_worn_nor_gl_4k.jpg",
     "rough_map": "Photoreal\\wood_floor_worn\\wood_floor_worn_rough_4k.jpg",
     "factor": [
-      1,
-      1,
-      1,
+      0.7,
+      0.67,
+      0.59,
       1
     ],
     "roughness": 1,
@@ -801,5 +801,250 @@
     ],
     "roughness": 0.7,
     "metallic": 0
+  },
+  "M_PH_sofa_03_0": {
+    "color": "Photoreal\\sofa_03\\textures\\sofa_03_diff_4k.jpg",
+    "normal": "Photoreal\\sofa_03\\textures\\sofa_03_nor_gl_4k.jpg",
+    "arm": "Photoreal\\sofa_03\\textures\\sofa_03_rough_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/sofa_03"
+  },
+  "M_PH_sofa_03_1": {
+    "color": "Photoreal\\sofa_03\\textures\\sofa_03_diff_4k.jpg",
+    "normal": "Photoreal\\sofa_03\\textures\\sofa_03_nor_gl_4k.jpg",
+    "arm": "Photoreal\\sofa_03\\textures\\sofa_03_rough_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "BLEND",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/sofa_03"
+  },
+  "M_PH_ArmChair_01_0": {
+    "color": "Photoreal\\ArmChair_01\\textures\\Armchair_01_diff_4k.jpg",
+    "normal": "Photoreal\\ArmChair_01\\textures\\Armchair_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\ArmChair_01\\textures\\Armchair_01_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/ArmChair_01"
+  },
+  "M_PH_gothic_coffee_table_0": {
+    "color": "Photoreal\\gothic_coffee_table\\textures\\gothic_coffee_table_diff_4k.jpg",
+    "normal": "Photoreal\\gothic_coffee_table\\textures\\gothic_coffee_table_nor_gl_4k.jpg",
+    "arm": "Photoreal\\gothic_coffee_table\\textures\\gothic_coffee_table_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/gothic_coffee_table"
+  },
+  "M_PH_vintage_cabinet_01_0": {
+    "color": "Photoreal\\vintage_cabinet_01\\textures\\vintage_cabinet_01_a_diff_4k.jpg",
+    "normal": "Photoreal\\vintage_cabinet_01\\textures\\vintage_cabinet_01_a_nor_gl_4k.jpg",
+    "arm": "Photoreal\\vintage_cabinet_01\\textures\\vintage_cabinet_01_a_arm_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 1,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/vintage_cabinet_01"
+  },
+  "M_PH_vintage_cabinet_01_1": {
+    "color": "Photoreal\\vintage_cabinet_01\\textures\\vintage_cabinet_01_b_diff_4k.jpg",
+    "normal": "Photoreal\\vintage_cabinet_01\\textures\\vintage_cabinet_01_b_nor_gl_4k.jpg",
+    "arm": "Photoreal\\vintage_cabinet_01\\textures\\vintage_cabinet_01_b_rough_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/vintage_cabinet_01"
+  },
+  "M_PH_vintage_cabinet_01_2": {
+    "color": null,
+    "normal": "Photoreal\\vintage_cabinet_01\\textures\\vintage_cabinet_01_a_nor_gl_4k.jpg",
+    "arm": "Photoreal\\vintage_cabinet_01\\textures\\vintage_cabinet_01_a_rough_4k.jpg",
+    "ao": null,
+    "factor": [
+      0.029999999329447746,
+      0.029999999329447746,
+      0.029999999329447746,
+      0.30000001192092896
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "BLEND",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/vintage_cabinet_01"
+  },
+  "M_PH_throw_pillows_01_0": {
+    "color": "Photoreal\\throw_pillows_01\\textures\\throw_pillows_01_diff_4k.jpg",
+    "normal": "Photoreal\\throw_pillows_01\\textures\\throw_pillows_01_nor_gl_4k.jpg",
+    "arm": "Photoreal\\throw_pillows_01\\textures\\throw_pillows_01_rough_4k.jpg",
+    "ao": null,
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "cutoff": 0.5,
+    "two_sided": true,
+    "source": "https://polyhaven.com/a/throw_pillows_01"
+  },
+  "M_LodgeRugWeave": {
+    "color": "Photoreal\\dirty_carpet\\dirty_carpet_diff_4k.jpg",
+    "normal": "Photoreal\\dirty_carpet\\dirty_carpet_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\dirty_carpet\\dirty_carpet_rough_4k.jpg",
+    "factor": [
+      1.05,
+      0.93,
+      0.73,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/dirty_carpet",
+    "desaturate": true
+  },
+  "M_LodgeRugBorder": {
+    "color": "Photoreal\\dirty_carpet\\dirty_carpet_diff_4k.jpg",
+    "normal": "Photoreal\\dirty_carpet\\dirty_carpet_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\dirty_carpet\\dirty_carpet_rough_4k.jpg",
+    "factor": [
+      0.19,
+      0.34,
+      0.26,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/dirty_carpet",
+    "desaturate": true
+  },
+  "M_LodgeRugFringe": {
+    "color": "Photoreal\\dirty_carpet\\dirty_carpet_diff_4k.jpg",
+    "normal": "Photoreal\\dirty_carpet\\dirty_carpet_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\dirty_carpet\\dirty_carpet_rough_4k.jpg",
+    "factor": [
+      1.25,
+      1.1,
+      0.79,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/dirty_carpet",
+    "desaturate": true
+  },
+  "M_PaintingGilt": {
+    "factor": [
+      0.48,
+      0.29,
+      0.085,
+      1
+    ],
+    "roughness": 0.3,
+    "metallic": 0.82
+  },
+  "M_PaintingBacking": {
+    "color": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_diff_4k.jpg",
+    "normal": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_nor_gl_4k.jpg",
+    "rough_map": "Photoreal\\dark_wooden_planks\\dark_wooden_planks_rough_4k.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 1,
+    "metallic": 0,
+    "alpha": "OPAQUE",
+    "two_sided": false,
+    "source": "https://polyhaven.com/a/dark_wooden_planks"
+  },
+  "M_PaintingClearingDitch": {
+    "color": "Paintings/ClearingDitch.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.88,
+    "metallic": 0,
+    "source": "https://collections.britishart.yale.edu/catalog/tms:41941"
+  },
+  "M_PaintingEncouragingHounds": {
+    "color": "Paintings/EncouragingHounds.jpg",
+    "factor": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.88,
+    "metallic": 0,
+    "source": "https://collections.britishart.yale.edu/catalog/tms:41949"
   }
 }

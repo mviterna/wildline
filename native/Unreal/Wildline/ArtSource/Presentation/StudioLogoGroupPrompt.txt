@@ -1,0 +1,12 @@
+Built-in ImageGen edit, 2026-10-19.
+Edit target: StudioLogoBeforeGroup.png. Supporting references:
+DinosaurReference.png (left) and BearReference.png (right), supplied by user.
+
+Preserve the cat and sunglasses duck as the two largest foreground characters,
+smiling poop and flames behind, and exact hot_turd filmstrip lettering.
+Add a recognizable roaring dinosaur at the left outer side of the cat and
+a recognizable roaring brown bear at the right outer side of the duck.
+Match the polished illustrated sticker style, remove square frames and scenic
+backgrounds, make each newcomer about 40 percent the main characters' height.
+Do not obscure faces or lettering. Fit the complete composition on transparent
+background. Preserve all original characters and typography. No extra text.

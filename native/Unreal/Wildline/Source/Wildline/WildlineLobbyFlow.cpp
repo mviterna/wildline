@@ -5,6 +5,7 @@
 #include "WildlineUserSettings.h"
 #include "WildlineWorld.h"
 #include "WildlineRules.h"
+#include "WildlineRoom.h"
 #include "Engine/World.h"
 #include "EngineUtils.h"
 #include "Kismet/GameplayStatics.h"
@@ -12,6 +13,7 @@
 #include "Components/CapsuleComponent.h"
 
 void AWildlineController::EnterWaitingRoom(bool Animal){
+    if(GetNetMode()==NM_Standalone)if(auto* Room=GetGameInstance()->GetSubsystem<UWildlineRoomSubsystem>();Room&&!Room->RoomAddress().IsEmpty()){Join(Room->RoomAddress(),Animal);return;}
     if(auto* GI=GetGameInstance<UWildlineGameInstance>())GI->bPreferredSquirrel=Animal;
     if(Menu){if(Animal)Menu->Squirrel();else Menu->Hunter();}
     const auto* Settings=UWildlineUserSettings::Get();ServerEnterWaitingRoom(Animal,Settings?Settings->SelectedWeapon:0);SetMenu(false);
@@ -19,6 +21,7 @@ void AWildlineController::EnterWaitingRoom(bool Animal){
 void AWildlineController::ServerEnterWaitingRoom_Implementation(bool Animal,int32 Weapon){if(auto* GM=GetWorld()->GetAuthGameMode<AWildlineGameMode>())GM->EnterWaitingRoom(this,Animal,Weapon);}
 void AWildlineGameMode::EnterWaitingRoom(APlayerController* PC,bool Animal,int32 Weapon){
     if(!PC)return;auto* S=GetGameState<AWildlineGameState>();if(!S||S->Winner)return;
+    if(auto* PS=PC->GetPlayerState<AWildlinePlayerState>()){PS->bSquirrelTeam=Animal;PS->bWaiting=true;PS->ForceNetUpdate();}
     bWaitingRoomsEnabled=true;
     // Runtime interiors are deterministic, and each client creates its own copy.
     if(!AWildlineLobby::Find(GetWorld()))GetWorld()->SpawnActor<AWildlineLobby>();
@@ -60,7 +63,7 @@ void AWildlineGameMode::UpdateWaitingRooms(){
     if(!S->bRoundStarted&&!AllReady)return;
     if(!S->bRoundStarted){S->bRoundStarted=true;S->RoundStartedAt=S->GetServerWorldTimeSeconds();RefreshBots();S->ForceNetUpdate();}
     int32 Index=0;
-    for(auto* P:Waiting){if(!P->bLobbyReady)continue;P->bInLobby=false;P->bLobbyReady=false;P->ProtectedUntil=P->bSquirrel?P->ServerTime()+S->MatchConfig.SpawnProtectionSeconds:0;P->GetCharacterMovement()->StopMovementImmediately();P->SetActorLocation(SpawnLocation(P->bSquirrel,Index++),false,nullptr,ETeleportType::TeleportPhysics);P->ForceNetUpdate();}
+    for(auto* P:Waiting){if(!P->bLobbyReady)continue;P->bInLobby=false;P->bLobbyReady=false;if(auto* PS=P->GetPlayerState<AWildlinePlayerState>()){PS->bWaiting=false;PS->ForceNetUpdate();}P->ProtectedUntil=P->bSquirrel?P->ServerTime()+S->MatchConfig.SpawnProtectionSeconds:0;P->GetCharacterMovement()->StopMovementImmediately();P->SetActorLocation(SpawnLocation(P->bSquirrel,Index++),false,nullptr,ETeleportType::TeleportPhysics);P->ForceNetUpdate();}
 }
 void AWildlineGameMode::ResetWaitingRooms(){
     auto* S=GetGameState<AWildlineGameState>();if(!S)return;S->bRoundStarted=false;S->RoundStartedAt=0;
@@ -68,6 +71,7 @@ void AWildlineGameMode::ResetWaitingRooms(){
         auto* P=*It;if(P->bPreviewHunter)continue;
         if(P->bBot){if(P->Controller)P->Controller->Destroy();P->Destroy();continue;}
         if(!Cast<APlayerController>(P->Controller))continue;
+        if(auto* PS=P->GetPlayerState<AWildlinePlayerState>()){PS->bWaiting=true;PS->ForceNetUpdate();}
         P->bInLobby=true;P->bLobbyReady=false;P->bFiring=false;P->bAiming=false;P->bSprinting=false;P->GetCharacterMovement()->StopMovementImmediately();P->SetActorLocation(AWildlineLobby::Spawn(P->bSquirrel,Index++),false,nullptr,ETeleportType::TeleportPhysics);P->ForceNetUpdate();
     }
     S->ForceNetUpdate();

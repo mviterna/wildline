@@ -87,7 +87,7 @@ try {
     )) {
         $taskLog = Join-Path $taskTest ($taskProbe[0] + '.log')
         $taskProfile = Join-Path $taskTest ('Profiles/' + $taskProbe[0])
-        $taskProcess = Start-Process -FilePath $taskGame -WorkingDirectory $taskPayloadRoot -ArgumentList ($taskProbe[1] + " -unattended -UserDir=`"$taskProfile`" -abslog=`"$taskLog`"") -WindowStyle Hidden -PassThru
+        $taskProcess = Start-Process -FilePath $taskGame -WorkingDirectory $taskPayloadRoot -ArgumentList ($taskProbe[1] + " -WildlineProfileName=InstallerQA -unattended -UserDir=`"$taskProfile`" -abslog=`"$taskLog`"") -WindowStyle Hidden -PassThru
         # The Unreal bootstrap exits before the child game; wait for its pass marker.
         $taskDeadline = (Get-Date).AddSeconds(60)
         while ((Get-Date) -lt $taskDeadline) {

@@ -2850,5 +2850,580 @@
         "size": 7282876
       }
     ]
+  },
+  {
+    "id": "sofa_03",
+    "type": "model",
+    "page": "https://polyhaven.com/a/sofa_03",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 2,
+      "tags": [
+        "vintage",
+        "chair",
+        "couch",
+        "seat",
+        "fancy",
+        "mansion",
+        "manor",
+        "victorian",
+        "antique",
+        "leather"
+      ],
+      "name": "Sofa 03",
+      "categories": [
+        "furniture",
+        "seating"
+      ],
+      "authors": {
+        "Fran Calvente": "All"
+      },
+      "date_published": 1632441600,
+      "staging": null,
+      "sponsors": [
+        "9716107"
+      ],
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 8004,
+      "texel_density": 2473.260796497094,
+      "dimensions": [
+        2731.17733001709,
+        925.0842034816742,
+        1118.2640366605483
+      ],
+      "files_hash": "6304a0e5c6e96371ba5b427ce5baa763f1405e2c",
+      "description": "Free 8K model of a vintage Victorian leather sofa with carved wooden frame, scrolled arms, patterned fringe cushions and rich antique brown finish.",
+      "category_id": "a995f351-c031-54f6-b317-dc5928df17a3",
+      "category": "Furniture/Seating/Sofas & Couches",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "leather",
+          "wood",
+          "fabric"
+        ]
+      },
+      "img_version": "8e75f00a",
+      "download_count": 57503,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/sofa_03.png?width=256&height=256&format=webp&v=8e75f00a"
+    },
+    "files": [
+      {
+        "path": "sofa_03_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/sofa_03/sofa_03_4k.gltf",
+        "md5": "5bdba0f6f1814441bb21920dd919ea92",
+        "size": 4465
+      },
+      {
+        "path": "textures/sofa_03_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/sofa_03/sofa_03_nor_gl_4k.jpg",
+        "md5": "6df5a3bd0dc9ff1f6542913ef87ef8c1",
+        "size": 897070
+      },
+      {
+        "path": "textures/sofa_03_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/sofa_03/sofa_03_diff_4k.jpg",
+        "md5": "9ec019892ee95c1818d5926a205e42a1",
+        "size": 2032258
+      },
+      {
+        "path": "sofa_03.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/sofa_03/sofa_03.bin",
+        "md5": "aeebfb9aed3b40300b0fb73f0e27830e",
+        "size": 228984
+      },
+      {
+        "path": "textures/sofa_03_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/sofa_03/sofa_03_rough_4k.jpg",
+        "md5": "4b02bd8bc57b21184724ff8f69406bde",
+        "size": 2188629
+      }
+    ]
+  },
+  {
+    "id": "ArmChair_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/ArmChair_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "date_published": 1585605600,
+      "name": "Arm Chair 01",
+      "old_id": 3,
+      "categories": [
+        "furniture",
+        "seating"
+      ],
+      "type": 2,
+      "tags": [
+        "gothic",
+        "vintage",
+        "chair",
+        "furniture",
+        "victorian",
+        "couch",
+        "wood",
+        "varnished",
+        "classic"
+      ],
+      "authors": {
+        "Kirill Sannikov": "All"
+      },
+      "sponsors": [
+        "66627515",
+        "4047949"
+      ],
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 5626,
+      "texel_density": 1972.3631956341671,
+      "dimensions": [
+        848.4309017658234,
+        765.7602727413177,
+        1065.087635157397
+      ],
+      "files_hash": "8a04a102d4a1e1a480bc4288384d4a2dfd649608",
+      "description": "Free (CC0) vintage Victorian armchair 3D model - varnished carved wood frame, upholstered seat; gothic/classic styling ideal for interiors, period scenes, and renders.",
+      "category_id": "11261ec6-df2b-5150-9904-684d2558070d",
+      "category": "Furniture/Seating/Chairs",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "wood",
+          "fabric"
+        ]
+      },
+      "img_version": "abbc4732",
+      "download_count": 32435,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/ArmChair_01.png?width=256&height=256&format=webp&v=abbc4732"
+    },
+    "files": [
+      {
+        "path": "ArmChair_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/ArmChair_01/ArmChair_01_4k.gltf",
+        "md5": "335ce3d56e6c8ba414f249ad651d6cb7",
+        "size": 2643
+      },
+      {
+        "path": "textures/Armchair_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/ArmChair_01/Armchair_01_nor_gl_4k.jpg",
+        "md5": "f508b3390b7310c00a43db2405ce475c",
+        "size": 6369078
+      },
+      {
+        "path": "textures/Armchair_01_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/ArmChair_01/Armchair_01_arm_4k.jpg",
+        "md5": "d5570e27bb0cf5c5ac41a991fad53d78",
+        "size": 1453978
+      },
+      {
+        "path": "ArmChair_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/ArmChair_01/ArmChair_01.bin",
+        "md5": "fbd842795fdec75d94f1335c28acfc0e",
+        "size": 154012
+      },
+      {
+        "path": "textures/Armchair_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/ArmChair_01/Armchair_01_diff_4k.jpg",
+        "md5": "7d36e6e9825a24de3ecfbf0cd17ffa6b",
+        "size": 2865644
+      }
+    ]
+  },
+  {
+    "id": "gothic_coffee_table",
+    "type": "model",
+    "page": "https://polyhaven.com/a/gothic_coffee_table",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "type": 2,
+      "name": "Gothic Coffee Table",
+      "categories": [
+        "furniture",
+        "table"
+      ],
+      "tags": [
+        "vintage",
+        "antique",
+        "old",
+        "wooden",
+        "gothic",
+        "medieval",
+        "dark decor"
+      ],
+      "description": "Free 8K model of a Gothic wooden coffee table featuring ornate details, dark antique finish, medieval motifs, rich wood grain and aged patina.",
+      "authors": {
+        "Ulan Cabanilla": "All"
+      },
+      "donated": true,
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 23836,
+      "files_hash": "05912f196d3d1f8cf861b8ffe1ad8dacd42d927e",
+      "texel_density": 1781.276531950161,
+      "dimensions": [
+        1443.0902004241943,
+        1443.0902004241943,
+        558.7729810795281
+      ],
+      "date_published": 1759881600,
+      "staging": null,
+      "sponsors": [
+        "198244970"
+      ],
+      "category_id": "14a9e15a-6ae7-5665-8142-d5fbda6b6a75",
+      "category": "Furniture/Tables/Coffee Tables",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "wood"
+        ]
+      },
+      "img_version": "4f421bd7",
+      "download_count": 10262,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/gothic_coffee_table.png?width=256&height=256&format=webp&v=4f421bd7"
+    },
+    "files": [
+      {
+        "path": "gothic_coffee_table_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/gothic_coffee_table/gothic_coffee_table_4k.gltf",
+        "md5": "895004d2a1eb62e0e3a8fda8791f6bff",
+        "size": 2842
+      },
+      {
+        "path": "textures/gothic_coffee_table_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_nor_gl_4k.jpg",
+        "md5": "7b2c213d8e74efa4bbed0a7de28ecb8d",
+        "size": 9708971
+      },
+      {
+        "path": "textures/gothic_coffee_table_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_diff_4k.jpg",
+        "md5": "689a53d0b9d385eff34b8c3681531006",
+        "size": 7159735
+      },
+      {
+        "path": "textures/gothic_coffee_table_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/gothic_coffee_table/gothic_coffee_table_arm_4k.jpg",
+        "md5": "437d54da1be7a0598340af878c3e8c49",
+        "size": 10759328
+      },
+      {
+        "path": "gothic_coffee_table.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/gothic_coffee_table/gothic_coffee_table.bin",
+        "md5": "d8c45735d6effb7fc383dba30c35012d",
+        "size": 843496
+      }
+    ]
+  },
+  {
+    "id": "vintage_cabinet_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/vintage_cabinet_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "date_published": 1628121600,
+      "sponsors": [
+        "9716107",
+        "59361351"
+      ],
+      "name": "Vintage Cabinet 01",
+      "categories": [
+        "furniture",
+        "shelves"
+      ],
+      "type": 2,
+      "staging": null,
+      "tags": [
+        "vintage",
+        "farmhouse",
+        "old",
+        "antique",
+        "fancy",
+        "wooden",
+        "varnished",
+        "cupboard",
+        "shelf",
+        "cabinet"
+      ],
+      "authors": {
+        "Rico Cilliers": "All"
+      },
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "polycount": 61096,
+      "texel_density": 1698.6160855524683,
+      "dimensions": [
+        2021.7604637145996,
+        669.8037981987,
+        2235.0515127764083
+      ],
+      "files_hash": "bf62cfcce0951dc45080086064486e4a2b3757d8",
+      "description": "Free 8K model: varnished dark-wood vintage cabinet with carved detailing, glass-front upper doors, paneled lower cupboards and brass knobs.",
+      "category_id": "14debc4f-6ceb-597a-a824-8de173aa95a9",
+      "category": "Furniture/Storage Furniture/Cabinets & Cupboards",
+      "attributes": {
+        "condition": [
+          "worn"
+        ],
+        "material": [
+          "wood",
+          "glass",
+          "brass"
+        ]
+      },
+      "img_version": "2cb0e049",
+      "download_count": 20356,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/vintage_cabinet_01.png?width=256&height=256&format=webp&v=2cb0e049"
+    },
+    "files": [
+      {
+        "path": "vintage_cabinet_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_cabinet_01/vintage_cabinet_01_4k.gltf",
+        "md5": "5b63b0f3f5d92bdcaabd054805a7decb",
+        "size": 22562
+      },
+      {
+        "path": "textures/vintage_cabinet_01_b_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_rough_4k.jpg",
+        "md5": "d442ac1a02331d96ce46fca9a3d1fd32",
+        "size": 2227747
+      },
+      {
+        "path": "textures/vintage_cabinet_01_a_arm_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_arm_4k.jpg",
+        "md5": "11477ad5cc219aa83146e7538b3e47b3",
+        "size": 1755318
+      },
+      {
+        "path": "textures/vintage_cabinet_01_a_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_nor_gl_4k.jpg",
+        "md5": "6eb8f0a68ef1b109d1990eab72b57fc8",
+        "size": 1280138
+      },
+      {
+        "path": "vintage_cabinet_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/vintage_cabinet_01/vintage_cabinet_01.bin",
+        "md5": "9048b5c9e35ab9d2e2732cf738b7fcb8",
+        "size": 1995776
+      },
+      {
+        "path": "textures/vintage_cabinet_01_a_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_rough_4k.jpg",
+        "md5": "0b6b84ae4db5157d59c5257116184b7e",
+        "size": 1684259
+      },
+      {
+        "path": "textures/vintage_cabinet_01_a_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_a_diff_4k.jpg",
+        "md5": "5b3c16497af10f932280490d76e33162",
+        "size": 1504690
+      },
+      {
+        "path": "textures/vintage_cabinet_01_b_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_diff_4k.jpg",
+        "md5": "2a048c92ad0493c1f46152fded6a6769",
+        "size": 1780218
+      },
+      {
+        "path": "textures/vintage_cabinet_01_b_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/vintage_cabinet_01/vintage_cabinet_01_b_nor_gl_4k.jpg",
+        "md5": "e0eef468c2454e391030cd7aece0b5c4",
+        "size": 789914
+      }
+    ]
+  },
+  {
+    "id": "throw_pillows_01",
+    "type": "model",
+    "page": "https://polyhaven.com/a/throw_pillows_01",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "donated": true,
+      "date_published": 1630022400,
+      "name": "Throw Pillows 01",
+      "categories": [
+        "decorative"
+      ],
+      "type": 2,
+      "staging": null,
+      "tags": [
+        "decorative",
+        "pillow",
+        "throw",
+        "pattern",
+        "african",
+        "red",
+        "triangle",
+        "orange"
+      ],
+      "authors": {
+        "Serhii Khromov": "All"
+      },
+      "max_resolution": [
+        4096,
+        4096
+      ],
+      "polycount": 6362,
+      "texel_density": 3393.691567163853,
+      "dimensions": [
+        1021.5678811073303,
+        627.4925470352173,
+        450.1592831220478
+      ],
+      "files_hash": "8a475b95a0956bd700394e0f5ed32822071e2f54",
+      "description": "Free 4K model of two decorative throw pillows with bold African-inspired zigzag chevrons in red, orange and ochre on a textured woven fabric.",
+      "category_id": "2d8a6ed6-8345-5c6f-8391-5fb3944ee86f",
+      "category": "Decor & Art/Ornaments/Cushions & Pillows",
+      "attributes": {
+        "condition": [
+          "clean"
+        ],
+        "material": [
+          "fabric"
+        ]
+      },
+      "img_version": "d1a30215",
+      "download_count": 22996,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/throw_pillows_01.png?width=256&height=256&format=webp&v=d1a30215"
+    },
+    "files": [
+      {
+        "path": "throw_pillows_01_4k.gltf",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/throw_pillows_01/throw_pillows_01_4k.gltf",
+        "md5": "652e6838b9f2375556993c850900fbd2",
+        "size": 4548
+      },
+      {
+        "path": "textures/throw_pillows_01_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_diff_4k.jpg",
+        "md5": "f27d6ab5553399920a0ca619d4ed94be",
+        "size": 3039759
+      },
+      {
+        "path": "throw_pillows_01.bin",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/throw_pillows_01/throw_pillows_01.bin",
+        "md5": "dd26dd164ecfa138e0bb51d94a4197ed",
+        "size": 146012
+      },
+      {
+        "path": "textures/throw_pillows_01_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_nor_gl_4k.jpg",
+        "md5": "bbc9bc3b72fc5b4bc367bbb8eb14ea78",
+        "size": 9035952
+      },
+      {
+        "path": "textures/throw_pillows_01_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_rough_4k.jpg",
+        "md5": "5d339cb610592b9f35f8819e3968643d",
+        "size": 4120160
+      }
+    ]
+  },
+  {
+    "id": "dirty_carpet",
+    "type": "texture",
+    "page": "https://polyhaven.com/a/dirty_carpet",
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "resolution": "4k",
+    "metadata": {
+      "name": "Dirty Carpet",
+      "type": 1,
+      "tags": [
+        "carpet",
+        "dirty",
+        "floor",
+        "textile ",
+        "rug",
+        "discolored",
+        "faded"
+      ],
+      "authors": {
+        "Rohit Seervi": "All"
+      },
+      "info": null,
+      "dimensions": [
+        599.9999046325684,
+        599.9999046325684
+      ],
+      "date_published": 1699315200,
+      "staging": null,
+      "donated": true,
+      "max_resolution": [
+        8192,
+        8192
+      ],
+      "categories": [
+        "floor",
+        "fabric",
+        "carpet"
+      ],
+      "files_hash": "5a10cbdb900933c85bebdd7abc6efe94bf5caa36",
+      "description": "Free 8K texture of a dirty, faded carpet with coarse, flattened pile, discolored olive-brown tones, subtle stripe detail, worn fibers and surface grime.",
+      "category_id": "745bbd34-5a32-52b8-8899-f9ebe482797a",
+      "category": "Textiles & Leather/Carpet & Matting/Carpet",
+      "attributes": {
+        "surface_use": "floor",
+        "condition": [
+          "worn",
+          "weathered"
+        ],
+        "origin": "man_made"
+      },
+      "img_version": "c2afaeb5",
+      "download_count": 86193,
+      "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/dirty_carpet.png?width=256&height=256&format=webp&v=c2afaeb5"
+    },
+    "files": [
+      {
+        "path": "dirty_carpet_diff_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/dirty_carpet/dirty_carpet_diff_4k.jpg",
+        "md5": "5e5ab7f3155872457fa8feff064bc174",
+        "size": 13196738
+      },
+      {
+        "path": "dirty_carpet_nor_gl_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/dirty_carpet/dirty_carpet_nor_gl_4k.jpg",
+        "md5": "b5fa4314579ddf86448ab304976ce24e",
+        "size": 16986254
+      },
+      {
+        "path": "dirty_carpet_rough_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/dirty_carpet/dirty_carpet_rough_4k.jpg",
+        "md5": "a5b0e71c66fea6e9d257573678cea9e2",
+        "size": 6355231
+      },
+      {
+        "path": "dirty_carpet_disp_4k.jpg",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/dirty_carpet/dirty_carpet_disp_4k.jpg",
+        "md5": "11a974e2b8d13c4fa834e314ffe8040c",
+        "size": 4602154
+      }
+    ]
   }
 ]

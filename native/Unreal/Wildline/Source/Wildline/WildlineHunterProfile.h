@@ -9,6 +9,7 @@ struct FWildlineHunterProfile {
     UPROPERTY() int32 Outfit=0;
     UPROPERTY() int32 Hair=0;
     UPROPERTY() bool bCap=true;
+    UPROPERTY() int32 Headwear=-1;
     UPROPERTY() bool bUsePhoto=false;
     UPROPERTY() bool bBeard=false;
     UPROPERTY() float Slimness=0;
@@ -41,6 +42,8 @@ struct FWildlineHunterProfile {
     static float Bounded(float Value,float Min,float Max,float Default){return FMath::IsFinite(Value)?FMath::Clamp(Value,Min,Max):Default;}
     int32 PresetOptionIndex() const {return Preset==5?4:Preset==4?3:Preset==3?2:Preset==1?1:0;}
     void Clamp(){
+        if(Headwear<0)Headwear=bCap?1:0;
+        Headwear=FMath::Clamp(Headwear,0,36);
         if(DimensionsVersion<=0){HeightCm=LegacyHeight();HandSize=HandScale();FootSize=FootScale();DimensionsVersion=1;}
         DimensionsVersion=1;HeightCm=Bounded(HeightCm,60.f,230.f,174.5f);
         BodyWidth=Bounded(BodyWidth,.7f,1.5f,1.f);BodyDepth=Bounded(BodyDepth,.7f,1.6f,1.f);

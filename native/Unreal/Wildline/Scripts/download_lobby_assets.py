@@ -2,7 +2,7 @@
 
 Retain source URLs, API metadata and hashes. Run with the bundled Python runtime.
 """
-import concurrent.futures, hashlib, json, time, urllib.request
+import concurrent.futures, hashlib, json, time, urllib.request, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent / 'ArtSource/Lobby/Photoreal'
@@ -16,6 +16,8 @@ MODELS = ['wooden_picnic_table','Rockingchair_01','wooden_bookshelf_worn',
 TEXTURES = ['wood_floor_worn','dark_wooden_planks','jolcham_oak_bark_01',
             'rustic_stone_wall','forest_leaves_03','quatrefoil_jacquard_fabric']
 HEADERS = {'User-Agent':'WildlineAssetImporter/1.0 (local game development)'}
+UPGRADE_MODELS=['sofa_03','ArmChair_01','gothic_coffee_table','vintage_cabinet_01','throw_pillows_01']
+UPGRADE_TEXTURES=['dirty_carpet']
 
 def get_json(url):
     with urllib.request.urlopen(urllib.request.Request(url,headers=HEADERS),timeout=90) as r:
@@ -40,7 +42,8 @@ def fetch(job):
 def main():
     ROOT.mkdir(parents=True,exist_ok=True)
     manifest=[];jobs=[]
-    for kind,ids in [('model',MODELS),('texture',TEXTURES)]:
+    upgrade='--upgrade-only' in sys.argv
+    for kind,ids in [('model',UPGRADE_MODELS if upgrade else MODELS+UPGRADE_MODELS),('texture',UPGRADE_TEXTURES if upgrade else TEXTURES+UPGRADE_TEXTURES)]:
         for asset_id in ids:
             api=get_json('https://api.polyhaven.com/files/'+asset_id)
             meta=get_json('https://api.polyhaven.com/info/'+asset_id)
@@ -66,6 +69,8 @@ def main():
                 jobs.append((folder/name,info));entry['files'].append({'path':name,**{k:info[k] for k in ['url','md5','size']}})
             manifest.append(entry)
             print('QUEUED',asset_id,sum(f['size'] for f in entry['files'])//1048576,'MiB',flush=True)
+    if upgrade:
+        old=json.loads((ROOT/'sources.json').read_text());manifest=[e for e in old if e['id'] not in [n['id'] for n in manifest]]+manifest
     (ROOT/'sources.json').write_text(json.dumps(manifest,indent=2))
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for result in pool.map(fetch,jobs):print('DOWNLOADED',result,flush=True)

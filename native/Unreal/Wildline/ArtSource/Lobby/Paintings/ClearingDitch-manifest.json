@@ -1,0 +1,314 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://manifests.collections.yale.edu/ycba/obj/41941",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "John Frederick Herring, 1795\u20131865, Foxhunting: Clearing a Ditch, 1839"
+    ]
+  },
+  "metadata": [
+    {
+      "label": {
+        "en": [
+          "Copyright Statement"
+        ]
+      },
+      "value": {
+        "en": [
+          "Public Domain"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Creator"
+        ]
+      },
+      "value": {
+        "en": [
+          "John Frederick Herring, 1795\u20131865"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Title"
+        ]
+      },
+      "value": {
+        "en": [
+          "Foxhunting: Clearing a Ditch"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Medium"
+        ]
+      },
+      "value": {
+        "en": [
+          "Oil on panel"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Physical Description"
+        ]
+      },
+      "value": {
+        "en": [
+          "10 x 12 inches (25.4 x 30.5 cm)"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Credit Line"
+        ]
+      },
+      "value": {
+        "en": [
+          "Yale Center for British Art, Paul Mellon Collection"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Institution"
+        ]
+      },
+      "value": {
+        "en": [
+          "Yale Center for British Art"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Collection"
+        ]
+      },
+      "value": {
+        "en": [
+          "Paintings and Sculpture"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Call Number"
+        ]
+      },
+      "value": {
+        "en": [
+          "B2001.2.175"
+        ]
+      }
+    }
+  ],
+  "rights": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "requiredStatement": {
+    "label": {
+      "en": [
+        "Rights Description"
+      ]
+    },
+    "value": {
+      "en": [
+        "Metadata describing Yale Center for British Art collections is public domain under CC0. Copyright or other restrictions may apply to cultural works or images of those works in this record."
+      ]
+    }
+  },
+  "logo": [
+    {
+      "id": "https://static.britishart.yale.edu/images/ycba_logo.jpg",
+      "type": "Image"
+    }
+  ],
+  "homepage": [
+    {
+      "format": "text/html",
+      "id": "https://collections.britishart.yale.edu/catalog/tms:41941",
+      "label": {
+        "en": [
+          "catalog entry at the Yale Center for British Art"
+        ]
+      },
+      "type": "Text"
+    }
+  ],
+  "seeAlso": [
+    {
+      "format": "text/xml",
+      "id": "https://harvester-bl.britishart.yale.edu/oaicatmuseum/OAIHandler?verb=GetRecord&identifier=oai:tms.ycba.yale.edu:41941&metadataPrefix=lido",
+      "profile": "http://www.lido-schema.org/schema/v1.0/lido-v1.0.xsd",
+      "type": "Dataset"
+    },
+    {
+      "format": "text/rdf+n3",
+      "id": "http://collection.britishart.yale.edu/id/page/object/41941",
+      "type": "Dataset"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://manifests.collections.yale.edu/canvas/ycba/d360316f-bc8e-4d1a-b0cb-2bb8fae915b2",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "recto, cropped to image"
+        ]
+      },
+      "height": 3619,
+      "width": 4433,
+      "items": [
+        {
+          "id": "https://manifests.collections.yale.edu/annopage/ycba/d360316f-bc8e-4d1a-b0cb-2bb8fae915b2",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://manifests.collections.yale.edu/annotation/ycba/d360316f-bc8e-4d1a-b0cb-2bb8fae915b2",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://images.collections.yale.edu/iiif/2/ycba:d360316f-bc8e-4d1a-b0cb-2bb8fae915b2/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "@id": "https://images.collections.yale.edu/iiif/2/ycba:d360316f-bc8e-4d1a-b0cb-2bb8fae915b2",
+                    "@type": "ImageService2",
+                    "profile": "http://iiif.io/api/image/2/level2.json"
+                  }
+                ],
+                "height": 3619,
+                "width": 4433
+              },
+              "target": "https://manifests.collections.yale.edu/canvas/ycba/d360316f-bc8e-4d1a-b0cb-2bb8fae915b2"
+            }
+          ]
+        }
+      ],
+      "rendering": [
+        {
+          "id": "https://media.collections.yale.edu/tiff/ycba/d360316f-bc8e-4d1a-b0cb-2bb8fae915b2.tif",
+          "type": "Image",
+          "label": {
+            "en": [
+              "TIFF for download"
+            ]
+          },
+          "format": "image/tiff"
+        }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://media.collections.yale.edu/thumbnail/ycba/d360316f-bc8e-4d1a-b0cb-2bb8fae915b2",
+          "type": "Image",
+          "format": "image/jpeg",
+          "width": 480,
+          "height": 392
+        }
+      ],
+      "metadata": [
+        {
+          "label": {
+            "en": [
+              "Image Use Rights"
+            ]
+          },
+          "value": {
+            "en": [
+              "No Copyright: You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. (CC0 1.0)"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "https://manifests.collections.yale.edu/canvas/ycba/57619156-1d2f-4c8c-bf60-d097bad71e3c",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "recto, framed"
+        ]
+      },
+      "height": 5463,
+      "width": 5871,
+      "items": [
+        {
+          "id": "https://manifests.collections.yale.edu/annopage/ycba/57619156-1d2f-4c8c-bf60-d097bad71e3c",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://manifests.collections.yale.edu/annotation/ycba/57619156-1d2f-4c8c-bf60-d097bad71e3c",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://images.collections.yale.edu/iiif/2/ycba:57619156-1d2f-4c8c-bf60-d097bad71e3c/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "@id": "https://images.collections.yale.edu/iiif/2/ycba:57619156-1d2f-4c8c-bf60-d097bad71e3c",
+                    "@type": "ImageService2",
+                    "profile": "http://iiif.io/api/image/2/level2.json"
+                  }
+                ],
+                "height": 5463,
+                "width": 5871
+              },
+              "target": "https://manifests.collections.yale.edu/canvas/ycba/57619156-1d2f-4c8c-bf60-d097bad71e3c"
+            }
+          ]
+        }
+      ],
+      "rendering": [
+        {
+          "id": "https://media.collections.yale.edu/tiff/ycba/57619156-1d2f-4c8c-bf60-d097bad71e3c.tif",
+          "type": "Image",
+          "label": {
+            "en": [
+              "TIFF for download"
+            ]
+          },
+          "format": "image/tiff"
+        }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://media.collections.yale.edu/thumbnail/ycba/57619156-1d2f-4c8c-bf60-d097bad71e3c",
+          "type": "Image",
+          "format": "image/jpeg",
+          "width": 480,
+          "height": 447
+        }
+      ],
+      "metadata": [
+        {
+          "label": {
+            "en": [
+              "Image Use Rights"
+            ]
+          },
+          "value": {
+            "en": [
+              "No Copyright: You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. (CC0 1.0)"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

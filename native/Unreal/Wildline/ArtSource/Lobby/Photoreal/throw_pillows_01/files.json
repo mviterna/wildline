@@ -1,0 +1,684 @@
+{
+  "Diffuse": {
+    "4k": {
+      "jpg": {
+        "size": 3039759,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_diff_4k.jpg",
+        "md5": "f27d6ab5553399920a0ca619d4ed94be"
+      },
+      "png": {
+        "size": 58015351,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/throw_pillows_01/throw_pillows_01_diff_4k.png",
+        "md5": "5d51283b8d59754c3080439c7f3dbfa9"
+      },
+      "exr": {
+        "size": 26493286,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/throw_pillows_01/throw_pillows_01_diff_4k.exr",
+        "md5": "1eaa09eecde48f836fc82a8e8612bf80"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 898774,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_diff_2k.jpg",
+        "md5": "674fe201ddf5a98c3b806b842bc0e2ea"
+      },
+      "png": {
+        "size": 18487441,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/throw_pillows_01/throw_pillows_01_diff_2k.png",
+        "md5": "1b0c97045f371e10097f61b0233e372c"
+      },
+      "exr": {
+        "size": 6517000,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/throw_pillows_01/throw_pillows_01_diff_2k.exr",
+        "md5": "593333b4ba366b5ae581e18434ed1c70"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 299887,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_diff_1k.jpg",
+        "md5": "8e140f48bf4a9c48ccca4ecc941bba19"
+      },
+      "png": {
+        "size": 5085866,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/throw_pillows_01/throw_pillows_01_diff_1k.png",
+        "md5": "20531f8acd95fc0f6ad9cc283eebf3b9"
+      },
+      "exr": {
+        "size": 1922332,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/throw_pillows_01/throw_pillows_01_diff_1k.exr",
+        "md5": "a1da57a549855a6a2c99a627dbbbad4d"
+      }
+    }
+  },
+  "nor_dx": {
+    "4k": {
+      "jpg": {
+        "size": 8993396,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_nor_dx_4k.jpg",
+        "md5": "7579bcbe7372d70d3703c7e1009f144a"
+      },
+      "png": {
+        "size": 89209441,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/throw_pillows_01/throw_pillows_01_nor_dx_4k.png",
+        "md5": "f24ac0fe9459cfaf75f381fc348ad98b"
+      },
+      "exr": {
+        "size": 42617005,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/throw_pillows_01/throw_pillows_01_nor_dx_4k.exr",
+        "md5": "185e4a52a17bb8dbffb0a01c83fbd917"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2072252,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_nor_dx_2k.jpg",
+        "md5": "f3dd630a3e2294eb78bd0f136108db22"
+      },
+      "png": {
+        "size": 23041582,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/throw_pillows_01/throw_pillows_01_nor_dx_2k.png",
+        "md5": "8acb97b783113a7fef82978838f1b973"
+      },
+      "exr": {
+        "size": 10746176,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/throw_pillows_01/throw_pillows_01_nor_dx_2k.exr",
+        "md5": "e5bc8898140a3f2971ec9b2949c5ab87"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 399889,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_nor_dx_1k.jpg",
+        "md5": "da6f9602b0c2538140cf5fd7de3c76c1"
+      },
+      "png": {
+        "size": 5855295,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/throw_pillows_01/throw_pillows_01_nor_dx_1k.png",
+        "md5": "13d09ddf894709f71b31357be5792256"
+      },
+      "exr": {
+        "size": 2498882,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/throw_pillows_01/throw_pillows_01_nor_dx_1k.exr",
+        "md5": "aba1c5dc73ed492eac4831b3a4f19403"
+      }
+    }
+  },
+  "nor_gl": {
+    "4k": {
+      "jpg": {
+        "size": 9035952,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_nor_gl_4k.jpg",
+        "md5": "bbc9bc3b72fc5b4bc367bbb8eb14ea78"
+      },
+      "png": {
+        "size": 89210918,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/throw_pillows_01/throw_pillows_01_nor_gl_4k.png",
+        "md5": "529f9bbc895bf96788ce074dbe9e0986"
+      },
+      "exr": {
+        "size": 42585797,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/throw_pillows_01/throw_pillows_01_nor_gl_4k.exr",
+        "md5": "7811577d703225cedbfd29b7d8c7654e"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 2134240,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_nor_gl_2k.jpg",
+        "md5": "44490e3234340ea81c6be713b77fb688"
+      },
+      "png": {
+        "size": 23042080,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/throw_pillows_01/throw_pillows_01_nor_gl_2k.png",
+        "md5": "12a3f6362cef34e66640236c1580789d"
+      },
+      "exr": {
+        "size": 10798338,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/throw_pillows_01/throw_pillows_01_nor_gl_2k.exr",
+        "md5": "e661ae9ac21920c694599de514bbaebd"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 404720,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_nor_gl_1k.jpg",
+        "md5": "0a57d294ef66db004709f76a961a5f7b"
+      },
+      "png": {
+        "size": 5855192,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/throw_pillows_01/throw_pillows_01_nor_gl_1k.png",
+        "md5": "e1a5a5828f8f1a8ffd19e19e30c8f45b"
+      },
+      "exr": {
+        "size": 2508983,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/throw_pillows_01/throw_pillows_01_nor_gl_1k.exr",
+        "md5": "1ef294171e26c9b82be755a1f0fa7437"
+      }
+    }
+  },
+  "blend": {
+    "4k": {
+      "blend": {
+        "include": {
+          "textures/throw_pillows_01_diff_4k.jpg": {
+            "size": 3039759,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_diff_4k.jpg",
+            "md5": "f27d6ab5553399920a0ca619d4ed94be"
+          },
+          "textures/throw_pillows_01_nor_gl_4k.exr": {
+            "size": 42585797,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/throw_pillows_01/throw_pillows_01_nor_gl_4k.exr",
+            "md5": "7811577d703225cedbfd29b7d8c7654e"
+          },
+          "textures/throw_pillows_01_rough_4k.jpg": {
+            "size": 4120160,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_rough_4k.jpg",
+            "md5": "5d339cb610592b9f35f8819e3968643d"
+          }
+        },
+        "size": 390493,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/4k/throw_pillows_01/throw_pillows_01_4k.blend",
+        "md5": "a488bc47c494631fc08b39a04f9a9f30"
+      }
+    },
+    "2k": {
+      "blend": {
+        "include": {
+          "textures/throw_pillows_01_nor_gl_2k.exr": {
+            "size": 10798338,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/throw_pillows_01/throw_pillows_01_nor_gl_2k.exr",
+            "md5": "e661ae9ac21920c694599de514bbaebd"
+          },
+          "textures/throw_pillows_01_rough_2k.jpg": {
+            "size": 1275948,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_rough_2k.jpg",
+            "md5": "f3bed6f9674ce715aa27feae8b35daa0"
+          },
+          "textures/throw_pillows_01_diff_2k.jpg": {
+            "size": 898774,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_diff_2k.jpg",
+            "md5": "674fe201ddf5a98c3b806b842bc0e2ea"
+          }
+        },
+        "size": 390419,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/throw_pillows_01/throw_pillows_01_2k.blend",
+        "md5": "2bba40da1a966c5d2e9fca020b816a79"
+      }
+    },
+    "1k": {
+      "blend": {
+        "include": {
+          "textures/throw_pillows_01_rough_1k.jpg": {
+            "size": 339241,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_rough_1k.jpg",
+            "md5": "47b3576090f2b98a9d18bd9bbd5265ab"
+          },
+          "textures/throw_pillows_01_diff_1k.jpg": {
+            "size": 299887,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_diff_1k.jpg",
+            "md5": "8e140f48bf4a9c48ccca4ecc941bba19"
+          },
+          "textures/throw_pillows_01_nor_gl_1k.exr": {
+            "size": 2508983,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/throw_pillows_01/throw_pillows_01_nor_gl_1k.exr",
+            "md5": "1ef294171e26c9b82be755a1f0fa7437"
+          }
+        },
+        "size": 390450,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/1k/throw_pillows_01/throw_pillows_01_1k.blend",
+        "md5": "7127f48b1c32683b53c96915df89e8fc"
+      }
+    }
+  },
+  "gltf": {
+    "4k": {
+      "gltf": {
+        "include": {
+          "textures/throw_pillows_01_diff_4k.jpg": {
+            "size": 3039759,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_diff_4k.jpg",
+            "md5": "f27d6ab5553399920a0ca619d4ed94be"
+          },
+          "throw_pillows_01.bin": {
+            "size": 146012,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/throw_pillows_01/throw_pillows_01.bin",
+            "md5": "dd26dd164ecfa138e0bb51d94a4197ed"
+          },
+          "textures/throw_pillows_01_nor_gl_4k.jpg": {
+            "size": 9035952,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_nor_gl_4k.jpg",
+            "md5": "bbc9bc3b72fc5b4bc367bbb8eb14ea78"
+          },
+          "textures/throw_pillows_01_rough_4k.jpg": {
+            "size": 4120160,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_rough_4k.jpg",
+            "md5": "5d339cb610592b9f35f8819e3968643d"
+          }
+        },
+        "size": 4548,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/throw_pillows_01/throw_pillows_01_4k.gltf",
+        "md5": "652e6838b9f2375556993c850900fbd2"
+      }
+    },
+    "2k": {
+      "gltf": {
+        "include": {
+          "textures/throw_pillows_01_nor_gl_2k.jpg": {
+            "size": 2134240,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_nor_gl_2k.jpg",
+            "md5": "44490e3234340ea81c6be713b77fb688"
+          },
+          "textures/throw_pillows_01_rough_2k.jpg": {
+            "size": 1275948,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_rough_2k.jpg",
+            "md5": "f3bed6f9674ce715aa27feae8b35daa0"
+          },
+          "throw_pillows_01.bin": {
+            "size": 146012,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/throw_pillows_01/throw_pillows_01.bin",
+            "md5": "dd26dd164ecfa138e0bb51d94a4197ed"
+          },
+          "textures/throw_pillows_01_diff_2k.jpg": {
+            "size": 898774,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_diff_2k.jpg",
+            "md5": "674fe201ddf5a98c3b806b842bc0e2ea"
+          }
+        },
+        "size": 4548,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/throw_pillows_01/throw_pillows_01_2k.gltf",
+        "md5": "2bc55dde790cb19b4d64ba8b8e8fd0a6"
+      }
+    },
+    "1k": {
+      "gltf": {
+        "include": {
+          "textures/throw_pillows_01_rough_1k.jpg": {
+            "size": 339241,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_rough_1k.jpg",
+            "md5": "47b3576090f2b98a9d18bd9bbd5265ab"
+          },
+          "textures/throw_pillows_01_diff_1k.jpg": {
+            "size": 299887,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_diff_1k.jpg",
+            "md5": "8e140f48bf4a9c48ccca4ecc941bba19"
+          },
+          "throw_pillows_01.bin": {
+            "size": 146012,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/throw_pillows_01/throw_pillows_01.bin",
+            "md5": "dd26dd164ecfa138e0bb51d94a4197ed"
+          },
+          "textures/throw_pillows_01_nor_gl_1k.jpg": {
+            "size": 404720,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_nor_gl_1k.jpg",
+            "md5": "0a57d294ef66db004709f76a961a5f7b"
+          }
+        },
+        "size": 4548,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/throw_pillows_01/throw_pillows_01_1k.gltf",
+        "md5": "ffffc13de5ce464056e24217dc565d19"
+      }
+    }
+  },
+  "usd": {
+    "4k": {
+      "usd": {
+        "include": {
+          "textures/throw_pillows_01_diff_4k.jpg": {
+            "size": 3039759,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_diff_4k.jpg",
+            "md5": "f27d6ab5553399920a0ca619d4ed94be"
+          },
+          "textures/throw_pillows_01_nor_gl_4k.exr": {
+            "size": 42585797,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/throw_pillows_01/throw_pillows_01_nor_gl_4k.exr",
+            "md5": "7811577d703225cedbfd29b7d8c7654e"
+          },
+          "textures/throw_pillows_01_rough_4k.jpg": {
+            "size": 4120160,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_rough_4k.jpg",
+            "md5": "5d339cb610592b9f35f8819e3968643d"
+          }
+        },
+        "size": 460919,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/4k/throw_pillows_01/throw_pillows_01_4k.usdc",
+        "md5": "7c2bd336d64ac1996a05063dce5612e8"
+      }
+    },
+    "2k": {
+      "usd": {
+        "include": {
+          "textures/throw_pillows_01_nor_gl_2k.exr": {
+            "size": 10798338,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/throw_pillows_01/throw_pillows_01_nor_gl_2k.exr",
+            "md5": "e661ae9ac21920c694599de514bbaebd"
+          },
+          "textures/throw_pillows_01_rough_2k.jpg": {
+            "size": 1275948,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_rough_2k.jpg",
+            "md5": "f3bed6f9674ce715aa27feae8b35daa0"
+          },
+          "textures/throw_pillows_01_diff_2k.jpg": {
+            "size": 898774,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_diff_2k.jpg",
+            "md5": "674fe201ddf5a98c3b806b842bc0e2ea"
+          }
+        },
+        "size": 460919,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/2k/throw_pillows_01/throw_pillows_01_2k.usdc",
+        "md5": "8670fc732ac2cd751aa31a5992775d61"
+      }
+    },
+    "1k": {
+      "usd": {
+        "include": {
+          "textures/throw_pillows_01_rough_1k.jpg": {
+            "size": 339241,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_rough_1k.jpg",
+            "md5": "47b3576090f2b98a9d18bd9bbd5265ab"
+          },
+          "textures/throw_pillows_01_diff_1k.jpg": {
+            "size": 299887,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_diff_1k.jpg",
+            "md5": "8e140f48bf4a9c48ccca4ecc941bba19"
+          },
+          "textures/throw_pillows_01_nor_gl_1k.exr": {
+            "size": 2508983,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/throw_pillows_01/throw_pillows_01_nor_gl_1k.exr",
+            "md5": "1ef294171e26c9b82be755a1f0fa7437"
+          }
+        },
+        "size": 460919,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/usd/1k/throw_pillows_01/throw_pillows_01_1k.usdc",
+        "md5": "085c5c0a077eff75b5a490cd989d8b26"
+      }
+    }
+  },
+  "Metal": {
+    "4k": {
+      "jpg": {
+        "size": 197004,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_metal_4k.jpg",
+        "md5": "921d904a81bd79b20edf344db2775b2c"
+      },
+      "png": {
+        "size": 32742,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/throw_pillows_01/throw_pillows_01_metal_4k.png",
+        "md5": "b0f303826984180760dd56907d0440e9"
+      },
+      "exr": {
+        "size": 42864,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/throw_pillows_01/throw_pillows_01_metal_4k.exr",
+        "md5": "69f9ad70e23c17ec3c820b2f05dc543d"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 49548,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_metal_2k.jpg",
+        "md5": "55a2f4c6c290ccc7dca012bae0d5413e"
+      },
+      "png": {
+        "size": 8264,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/throw_pillows_01/throw_pillows_01_metal_2k.png",
+        "md5": "d1b4236811cde253fe1d58c79386c101"
+      },
+      "exr": {
+        "size": 13296,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/throw_pillows_01/throw_pillows_01_metal_2k.exr",
+        "md5": "63631b310b6afea20ffed17f82fee3fe"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 12684,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_metal_1k.jpg",
+        "md5": "e8c0e6464de97eac1caa382a44a2682f"
+      },
+      "png": {
+        "size": 2155,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/throw_pillows_01/throw_pillows_01_metal_1k.png",
+        "md5": "3984ebd3e0aff11d149c2c40985d22f3"
+      },
+      "exr": {
+        "size": 4784,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/throw_pillows_01/throw_pillows_01_metal_1k.exr",
+        "md5": "024b85ea594baa138e00e1ee6492694a"
+      }
+    }
+  },
+  "arm": {
+    "4k": {
+      "jpg": {
+        "size": 4943933,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_arm_4k.jpg",
+        "md5": "9bba0d0fb8e0bc63b849c825693408b2"
+      },
+      "png": {
+        "size": 60729280,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/throw_pillows_01/throw_pillows_01_arm_4k.png",
+        "md5": "3704766eedcffc53c5f9f7f9efb68a5f"
+      },
+      "exr": {
+        "size": 30815777,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/throw_pillows_01/throw_pillows_01_arm_4k.exr",
+        "md5": "194d08f733e8c932c85b253f2d84c83b"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1225713,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_arm_2k.jpg",
+        "md5": "91de257070f0f8aff2935cd841502aed"
+      },
+      "png": {
+        "size": 16337686,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/throw_pillows_01/throw_pillows_01_arm_2k.png",
+        "md5": "6e92c31add700c8b08a45e0fb955537a"
+      },
+      "exr": {
+        "size": 8310580,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/throw_pillows_01/throw_pillows_01_arm_2k.exr",
+        "md5": "4aabde051f0d2a418001da29f8ef72a9"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 289416,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_arm_1k.jpg",
+        "md5": "1ce067691551376ecea7caec6a55b01f"
+      },
+      "png": {
+        "size": 4337412,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/throw_pillows_01/throw_pillows_01_arm_1k.png",
+        "md5": "f5539e438fcb244b2d40291b389215e5"
+      },
+      "exr": {
+        "size": 2101666,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/throw_pillows_01/throw_pillows_01_arm_1k.exr",
+        "md5": "51597d494cf07ec3cbf8f81d8678a771"
+      }
+    }
+  },
+  "fbx": {
+    "4k": {
+      "fbx": {
+        "include": {
+          "textures/throw_pillows_01_diff_4k.jpg": {
+            "size": 3039759,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_diff_4k.jpg",
+            "md5": "f27d6ab5553399920a0ca619d4ed94be"
+          },
+          "textures/throw_pillows_01_nor_gl_4k.exr": {
+            "size": 42585797,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/throw_pillows_01/throw_pillows_01_nor_gl_4k.exr",
+            "md5": "7811577d703225cedbfd29b7d8c7654e"
+          },
+          "textures/throw_pillows_01_rough_4k.jpg": {
+            "size": 4120160,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_rough_4k.jpg",
+            "md5": "5d339cb610592b9f35f8819e3968643d"
+          }
+        },
+        "size": 322092,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/4k/throw_pillows_01/throw_pillows_01_4k.fbx",
+        "md5": "9195d5e6b60f1d993e7b4a91555b9458"
+      }
+    },
+    "2k": {
+      "fbx": {
+        "include": {
+          "textures/throw_pillows_01_nor_gl_2k.exr": {
+            "size": 10798338,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/throw_pillows_01/throw_pillows_01_nor_gl_2k.exr",
+            "md5": "e661ae9ac21920c694599de514bbaebd"
+          },
+          "textures/throw_pillows_01_rough_2k.jpg": {
+            "size": 1275948,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_rough_2k.jpg",
+            "md5": "f3bed6f9674ce715aa27feae8b35daa0"
+          },
+          "textures/throw_pillows_01_diff_2k.jpg": {
+            "size": 898774,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_diff_2k.jpg",
+            "md5": "674fe201ddf5a98c3b806b842bc0e2ea"
+          }
+        },
+        "size": 322092,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/2k/throw_pillows_01/throw_pillows_01_2k.fbx",
+        "md5": "16dc9b4fb481a41b52239320c3bcd2b1"
+      }
+    },
+    "1k": {
+      "fbx": {
+        "include": {
+          "textures/throw_pillows_01_diff_1k.jpg": {
+            "size": 299887,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_diff_1k.jpg",
+            "md5": "8e140f48bf4a9c48ccca4ecc941bba19"
+          },
+          "textures/throw_pillows_01_rough_1k.jpg": {
+            "size": 339241,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_rough_1k.jpg",
+            "md5": "47b3576090f2b98a9d18bd9bbd5265ab"
+          },
+          "textures/throw_pillows_01_nor_gl_1k.exr": {
+            "size": 2508983,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/throw_pillows_01/throw_pillows_01_nor_gl_1k.exr",
+            "md5": "1ef294171e26c9b82be755a1f0fa7437"
+          }
+        },
+        "size": 322092,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/throw_pillows_01/throw_pillows_01_1k.fbx",
+        "md5": "da6f609c7406fd3e5871a9415ef6087e"
+      }
+    }
+  },
+  "AO": {
+    "4k": {
+      "jpg": {
+        "size": 5891559,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_ao_4k.jpg",
+        "md5": "74aab1a922ae27187b7d6b7afd8d9a04"
+      },
+      "png": {
+        "size": 29220105,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/throw_pillows_01/throw_pillows_01_ao_4k.png",
+        "md5": "def66c8bbc1fbe708d8971843fa37296"
+      },
+      "exr": {
+        "size": 19818098,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/throw_pillows_01/throw_pillows_01_ao_4k.exr",
+        "md5": "4bb2107e266ec7ddee2def8ba812917a"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1502813,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_ao_2k.jpg",
+        "md5": "f5e8b1f8f8a5bcb32c76bd986ac39262"
+      },
+      "png": {
+        "size": 7471621,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/throw_pillows_01/throw_pillows_01_ao_2k.png",
+        "md5": "413a07ac96f758758d17a1d3890f97ff"
+      },
+      "exr": {
+        "size": 5017897,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/throw_pillows_01/throw_pillows_01_ao_2k.exr",
+        "md5": "7521fe2e76085c21e5e158a29c986ec1"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 305120,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_ao_1k.jpg",
+        "md5": "37fbb7ba1dc795da49b01663285b777d"
+      },
+      "png": {
+        "size": 1855793,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/throw_pillows_01/throw_pillows_01_ao_1k.png",
+        "md5": "a78dd5a8f684d93c234b112956c05f81"
+      },
+      "exr": {
+        "size": 1217244,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/throw_pillows_01/throw_pillows_01_ao_1k.exr",
+        "md5": "054618b27c1b2a526fd75390836a71e3"
+      }
+    }
+  },
+  "Rough": {
+    "4k": {
+      "jpg": {
+        "size": 4120160,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/4k/throw_pillows_01/throw_pillows_01_rough_4k.jpg",
+        "md5": "5d339cb610592b9f35f8819e3968643d"
+      },
+      "png": {
+        "size": 15511417,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/4k/throw_pillows_01/throw_pillows_01_rough_4k.png",
+        "md5": "1f555a77c49be7e3f0c3b80b58e79066"
+      },
+      "exr": {
+        "size": 16032732,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/4k/throw_pillows_01/throw_pillows_01_rough_4k.exr",
+        "md5": "4fa7d6fa1bdb8c4743fef29a5bf30dd7"
+      }
+    },
+    "2k": {
+      "jpg": {
+        "size": 1275948,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/throw_pillows_01/throw_pillows_01_rough_2k.jpg",
+        "md5": "f3bed6f9674ce715aa27feae8b35daa0"
+      },
+      "png": {
+        "size": 7023346,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/throw_pillows_01/throw_pillows_01_rough_2k.png",
+        "md5": "2983e90f84f508b97bf1f48dad430e93"
+      },
+      "exr": {
+        "size": 4950695,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/throw_pillows_01/throw_pillows_01_rough_2k.exr",
+        "md5": "bc1d7e469e844e63e8f0327fd4d3d59e"
+      }
+    },
+    "1k": {
+      "jpg": {
+        "size": 339241,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/throw_pillows_01/throw_pillows_01_rough_1k.jpg",
+        "md5": "47b3576090f2b98a9d18bd9bbd5265ab"
+      },
+      "png": {
+        "size": 1888076,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/throw_pillows_01/throw_pillows_01_rough_1k.png",
+        "md5": "3d366355bb79ea47bd8987d2fc91a714"
+      },
+      "exr": {
+        "size": 1279858,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/throw_pillows_01/throw_pillows_01_rough_1k.exr",
+        "md5": "8c69cfd91dabc63c925c6f0debac17a0"
+      }
+    }
+  }
+}

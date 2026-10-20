@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-19",
+  "status": "PASS",
+  "behavior": [
+    "Unzoomed hunters carry the rifle at the right hip with its muzzle down and their left arm free for locomotion.",
+    "The replicated aiming state smoothly raises the stock to the shoulder and brings the support hand onto the fore-end.",
+    "The trigger wrist has an explicit weapon-relative orientation, with authored finger curls and a hand-size-adjusted contact point below the scope.",
+    "Releasing aim smoothly returns the weapon to side carry."
+  ],
+  "package": "C:/_git/wildline/native/Build/HunterCarry/Windows",
+  "desktopShortcut": "C:/Users/mvite/OneDrive/Desktop/WILDLINE.lnk",
+  "desktopSelectsNewPackage": true,
+  "editorVisualChecks": {
+    "presets": [
+      "Travis",
+      "Ethan",
+      "Greyson",
+      "Mark"
+    ],
+    "result": "PASS",
+    "evidence": "native/Unreal/Wildline/Saved/HunterCarry/a7fef101976e420ea36981d3c6315467",
+    "customBody": "PASS: 180 cm, width 1.25, depth 1.15, hand size 1.1",
+    "customBodyEvidence": "native/Unreal/Wildline/Saved/HunterCarry/a2bf0dd8280f46729702d81eb33b8b47"
+  },
+  "packageVisualChecks": {
+    "presets": [
+      "Travis",
+      "Ethan"
+    ],
+    "result": "PASS",
+    "checks": [
+      "muzzle down when unzoomed",
+      "carry wrist at hip height",
+      "scope clear of face",
+      "aimed index reaches trigger guard",
+      "trigger hand below scope",
+      "finite evaluated rig",
+      "return to side carry"
+    ],
+    "evidence": "native/Unreal/Wildline/Saved/HunterCarry/f41aa48adbf447f0b054360974874e76",
+    "previews": "native/Preview/HunterCarry-f41aa48adbf447f0b054360974874e76"
+  },
+  "packageLocomotionChecks": {
+    "result": "PASS",
+    "fps30": {
+      "maximumShoulderErrorCm": 0.0,
+      "maximumWristErrorCm": 1.46,
+      "maximumPlantedFootDriftCm": 2.03
+    },
+    "fps120": {
+      "maximumShoulderErrorCm": 0.0,
+      "maximumWristErrorCm": 1.43,
+      "maximumPlantedFootDriftCm": 2.47
+    },
+    "covers": [
+      "walk",
+      "sprint",
+      "strafe",
+      "turn",
+      "crouch",
+      "crouched fall",
+      "jump",
+      "land",
+      "aim up",
+      "rifle fire",
+      "shotgun fire and pump",
+      "female body"
+    ],
+    "log": "native/hunter-carry-package-locomotion.log"
+  },
+  "packageBodyChecks": {
+    "result": "PASS",
+    "covers": [
+      "independent body dimensions",
+      "preset reset",
+      "save and reload",
+      "adult Ethan",
+      "both aimed grips on widened body",
+      "extreme proportions"
+    ],
+    "log": "native/hunter-carry-package-body.log"
+  },
+  "packageNetworkChecks": {
+    "result": "PASS",
+    "setup": "Two separate packaged processes, listen host and loopback client, UDP 7817",
+    "clientObservedAimingAndAppearance": true,
+    "evidence": "native/Unreal/Wildline/Saved/HunterCarry/Network-8451f279a0f546adbfa4944c339113d7"
+  },
+  "installer": {
+    "version": "0.2.0-beta.20261019.154152",
+    "status": "PASS",
+    "stagedExecutableMatchesTestedPackage": true,
+    "setupPath": "C:\\_git\\wildline\\native\\Build\\Beta\\Wildline-0.2.0-beta.20261019.154152-Setup.exe",
+    "sha256": "D1B1DD64FB48B4D2E242EBCA535830811379C41F3549978D3136F7EC6FA618C9",
+    "sizeBytes": 3460030056
+  },
+  "limits": [
+    "Networking was verified on localhost with two processes; four separate Hamachi PCs were not available.",
+    "Fresh-machine installation was not repeated; the existing installed game was preserved."
+  ],
+  "testedExecutableSHA256": "973665AC38FDFAD429E4EC9ECFC85E802334A6D724BD9DB8C03CEFB4A8B712C8"
+}

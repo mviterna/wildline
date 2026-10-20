@@ -2,6 +2,8 @@
 #include "WildlineLobby.h"
 #include "WildlineIntro.h"
 #include "WildlineMenu.h"
+#include "WildlineSocial.h"
+#include "WildlineRoom.h"
 #include "WildlineCharacter.h"
 #include "WildlineUserSettings.h"
 #include "Camera/PlayerCameraManager.h"
@@ -29,13 +31,16 @@ void AWildlineController::StartIntro(){
 void AWildlineController::StartMenuMusic(){
     if(!IsLocalController()||FParse::Param(FCommandLine::Get(),TEXT("NoSound")))return;
     if(!MenuMusic){
-        auto* Sound=LoadObject<USoundWave>(nullptr,TEXT("/Game/Wildline/Presentation/SW_MenuBluegrass.SW_MenuBluegrass"));
-        if(!Sound){UE_LOG(LogTemp,Warning,TEXT("WILDLINE PRESENTATION: bluegrass asset missing; run import_presentation.py"));return;}
+        auto* Sound=LoadObject<USoundWave>(nullptr,TEXT("/Game/Wildline/Presentation/SW_MenuRap.SW_MenuRap"));
+        if(!Sound){UE_LOG(LogTemp,Warning,TEXT("WILDLINE PRESENTATION: menu rap asset missing; run import_presentation.py"));return;}
         MenuMusic=UGameplayStatics::SpawnSound2D(this,Sound,.001f,1,0,nullptr,false,false);
     }else if(!MenuMusic->IsPlaying())MenuMusic->Play();
 }
 void AWildlineController::Tick(float Delta){
     Super::Tick(Delta);if(!IsLocalController())return;
+    if(Social){Social->RefreshAt-=Delta;if(Social->RefreshAt<=0){Social->RefreshAt=.4f;Social->Refresh();}}
+    ProfileSyncAt-=Delta;if(ProfileSyncAt<=0&&PlayerState){ProfileSyncAt=.5f;if(const auto* S=UWildlineUserSettings::Get();S&&!S->PlayerDisplayName.IsEmpty()&&PlayerState->GetPlayerName()!=S->PlayerDisplayName)ServerSetProfileName(S->PlayerDisplayName);}
+    if(Menu)Menu->RefreshRoom();
     if(LobbyProbeWalkAt>0&&GetWorld()->GetTimeSeconds()>=LobbyProbeWalkAt){if(auto* P=Cast<AWildlineCharacter>(GetPawn());P&&P->bInLobby)P->AddMovementInput((AWildlineLobby::Portal(P->bSquirrel)-P->GetActorLocation()).GetSafeNormal2D(),1);else LobbyProbeWalkAt=0;}
     if(Menu&&!Intro&&MenuRevealAt>=0){const float U=bMenuOpen?FMath::Clamp((GetWorld()->GetTimeSeconds()-MenuRevealAt)/.45f,0.f,1.f):1.f;Menu->SetRenderOpacity(U*U*(3-2*U));if(U>=1){MenuRevealAt=-10;PlayerCameraManager->StopCameraFade();}}
     const auto* Settings=UWildlineUserSettings::Get();const bool Audible=Intro?Intro->bMusic:bMenuOpen;
@@ -48,5 +53,5 @@ void AWildlineController::Tick(float Delta){
     }
 }
 void AWildlineController::EndPlay(const EEndPlayReason::Type Reason){
-    if(IsValid(Intro))Intro->Destroy();Intro=nullptr;if(MenuMusic){MenuMusic->Stop();MenuMusic->DestroyComponent();MenuMusic=nullptr;}Super::EndPlay(Reason);
+    if(Social){Social->RemoveFromParent();Social=nullptr;}if(Menu){Menu->RemoveFromParent();Menu=nullptr;}if(IsValid(Intro))Intro->Destroy();Intro=nullptr;if(MenuMusic){MenuMusic->Stop();MenuMusic->DestroyComponent();MenuMusic=nullptr;}Super::EndPlay(Reason);
 }

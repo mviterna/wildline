@@ -1,4 +1,5 @@
 #include "WildlineHunterCreator.h"
+#include "WildlineHeadwear.h"
 #include "WildlineCharacter.h"
 #include "WildlineGame.h"
 #include "WildlineMenu.h"
@@ -16,6 +17,7 @@
 #include "Components/TextBlock.h"
 #include "Components/Image.h"
 #include "Components/Slider.h"
+#include "Components/CapsuleComponent.h"
 #include "Components/CheckBox.h"
 #include "Components/SizeBox.h"
 #include "Components/ScaleBox.h"
@@ -71,8 +73,7 @@ TSharedRef<SWidget> UWildlineHunterCreator::RebuildWidget(){
     Add(Text(TEXT("CLOTHING & FACE DETAILS"),14,Sage),10);
     auto* Outfit=Combo(TEXT("FIELD CLOTHING"),{TEXT("Woodland olive"),TEXT("Blaze orange"),TEXT("Earth brown")},Pending.Outfit);OutfitCombo=Outfit;Outfit->OnSelectionChanged.AddDynamic(this,&UWildlineHunterCreator::OutfitChanged);
     auto* Hair=Combo(TEXT("HAIR"),{TEXT("Brown"),TEXT("Black"),TEXT("Silver")},Pending.Hair);HairCombo=Hair;Hair->OnSelectionChanged.AddDynamic(this,&UWildlineHunterCreator::HairChanged);
-    auto* Cap=WidgetTree->ConstructWidget<UCheckBox>();Cap->AddChild(Text(TEXT("  Field cap"),12,Cream));Cap->SetIsChecked(Pending.bCap);Cap->OnCheckStateChanged.AddDynamic(this,&UWildlineHunterCreator::CapChanged);Add(Cap);
-    CapCheck=Cap;
+    auto* Hats=Button(TEXT("BROWSE HATS"));HatButtonLabel=Cast<UTextBlock>(Hats->GetContent());Hats->OnClicked.AddDynamic(this,&UWildlineHunterCreator::OpenHeadwear);Add(Hats);
     BeardCheck=WidgetTree->ConstructWidget<UCheckBox>();BeardCheck->AddChild(Text(TEXT("  Facial hair"),12,Cream));BeardCheck->SetIsChecked(Pending.bBeard);BeardCheck->OnCheckStateChanged.AddDynamic(this,&UWildlineHunterCreator::BeardChanged);Add(BeardCheck);
     Slider(TEXT("SKIN TONE"),0,1,Pending.SkinTone)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::SkinChanged);
     Slider(TEXT("FACE WIDTH"),-1,1,Pending.FaceWidth)->OnValueChanged.AddDynamic(this,&UWildlineHunterCreator::WidthChanged);
@@ -91,7 +92,7 @@ TSharedRef<SWidget> UWildlineHunterCreator::RebuildWidget(){
     auto* Right=WidgetTree->ConstructWidget<UVerticalBox>();Panel->AddChildToHorizontalBox(Right)->SetSize(FSlateChildSize(ESlateSizeRule::Fill));
     Right->AddChildToVerticalBox(Text(TEXT("FIELD PORTRAIT"),12,Sage))->SetPadding(FMargin(12,0,0,12));
     auto* Views=WidgetTree->ConstructWidget<UHorizontalBox>();auto* Whole=Button(TEXT("FULL BODY"));Whole->OnClicked.AddDynamic(this,&UWildlineHunterCreator::FullBody);Views->AddChildToHorizontalBox(Whole);auto* Face=Button(TEXT("FACE CLOSE-UP"));Face->OnClicked.AddDynamic(this,&UWildlineHunterCreator::FaceView);Views->AddChildToHorizontalBox(Face);auto* TurnL=Button(TEXT("TURN LEFT"));TurnL->OnClicked.AddDynamic(this,&UWildlineHunterCreator::TurnLeft);Views->AddChildToHorizontalBox(TurnL);auto* TurnR=Button(TEXT("TURN RIGHT"));TurnR->OnClicked.AddDynamic(this,&UWildlineHunterCreator::TurnRight);Views->AddChildToHorizontalBox(TurnR);Right->AddChildToVerticalBox(Views)->SetPadding(FMargin(0,0,0,8));
-    PreviewImage=WidgetTree->ConstructWidget<UImage>();auto* FitPreview=WidgetTree->ConstructWidget<UScaleBox>();FitPreview->SetStretch(EStretch::ScaleToFit);FitPreview->SetContent(PreviewImage);Right->AddChildToVerticalBox(FitPreview)->SetSize(FSlateChildSize(ESlateSizeRule::Fill));Right->AddChildToVerticalBox(Text(TEXT("Sporting bolt-action rifle  /  Boots, field clothing and configurable cap"),11,Muted))->SetPadding(FMargin(12,10,0,0));
+    PreviewImage=WidgetTree->ConstructWidget<UImage>();auto* FitPreview=WidgetTree->ConstructWidget<UScaleBox>();FitPreview->SetStretch(EStretch::ScaleToFit);FitPreview->SetContent(PreviewImage);Right->AddChildToVerticalBox(FitPreview)->SetSize(FSlateChildSize(ESlateSizeRule::Fill));Right->AddChildToVerticalBox(Text(TEXT("36 headwear styles / Click a thumbnail to preview. Turn the portrait to inspect."),11,Muted))->SetPadding(FMargin(12,10,0,0));
     // Keep the preview away from the playable forest and capture only its actor.
     const FTransform Transform(FRotator::ZeroRotator,FVector(0,0,200000));Preview=GetWorld()->SpawnActorDeferred<AWildlineCharacter>(AWildlineCharacter::StaticClass(),Transform,nullptr,nullptr,ESpawnActorCollisionHandlingMethod::AlwaysSpawn);
     Preview->SetReplicates(false);Preview->bPreviewHunter=true;Preview->bProfileSubmitted=true;Preview->bThirdPerson=true;Preview->HunterProfile=Pending;Preview->HunterFaceData=PhotoData;Preview->FinishSpawning(Transform);Preview->SetActorEnableCollision(false);Preview->GetCharacterMovement()->DisableMovement();Preview->GetMesh()->SetOwnerNoSee(false);Preview->WorldRifle->SetOwnerNoSee(false);Preview->WorldBolt->SetOwnerNoSee(false);Preview->ViewRifle->SetVisibility(false);Preview->ViewBolt->SetVisibility(false);
@@ -101,10 +102,10 @@ TSharedRef<SWidget> UWildlineHunterCreator::RebuildWidget(){
     Preview->GetMesh()->SetLightingChannels(false,true,false);
     for(int32 I=0;I<2;I++){auto* Light=NewObject<UPointLightComponent>(Preview);Light->SetMobility(EComponentMobility::Movable);Light->SetLightingChannels(false,true,false);Light->SetupAttachment(Preview->GetRootComponent());Light->SetRelativeLocation(I==0?FVector(160,-100,105):FVector(150,100,65));Light->SetIntensityUnits(ELightUnits::Candelas);Light->SetIntensity((I==0?1800:1100)*FMath::Square(Pending.HeightScale()));Light->SetSourceRadius(40);Light->SetAttenuationRadius(800);Light->SetCastShadows(false);Light->RegisterComponent();}
     auto* Background=NewObject<UStaticMeshComponent>(Preview);Background->SetupAttachment(Preview->GetRootComponent());Background->SetStaticMesh(LoadObject<UStaticMesh>(nullptr,TEXT("/Engine/BasicShapes/Sphere.Sphere")));Background->SetMaterial(0,LoadObject<UMaterialInterface>(nullptr,TEXT("/Game/Wildline/Hunters/Materials/M_PreviewBackdrop.M_PreviewBackdrop")));Background->SetRelativeScale3D(FVector(30));Background->SetCollisionEnabled(ECollisionEnabled::NoCollision);Background->SetCastShadow(false);Background->RegisterComponent();
-    RefreshPreview();UpdateCamera();return Super::RebuildWidget();
+    BuildHeadwearPicker(LeftBorder);RefreshPreview();UpdateCamera();return Super::RebuildWidget();
 }
 void UWildlineHunterCreator::RefreshPreview(){
-    Pending.Clamp();RefreshMeasurementLabels();const bool bPhotoPreset=Pending.IsPhotoPreset();BeardCheck->SetIsEnabled(!bPhotoPreset);HairCombo->SetIsEnabled(!bPhotoPreset);
+    Pending.Clamp();if(HatButtonLabel)HatButtonLabel->SetText(FText::FromString(FString(TEXT("BROWSE HATS / "))+WildlineHeadwear::Styles[WildlineHeadwear::Clamp(Pending.Headwear)].Name));RefreshMeasurementLabels();const bool bPhotoPreset=Pending.IsPhotoPreset();BeardCheck->SetIsEnabled(!bPhotoPreset);HairCombo->SetIsEnabled(!bPhotoPreset);
     if(AppearanceSliders.Num()>3)AppearanceSliders[3]->SetIsEnabled(!bPhotoPreset);
     if(Preview){
         const float OldScale=Preview->GetActorScale3D().Z;
@@ -117,9 +118,21 @@ void UWildlineHunterCreator::RefreshPreview(){
     PhotoTexture=Pending.bUsePhoto?WildlinePortrait::DecodePhoto(PhotoData):nullptr;
     if(PhotoTexture){PhotoImage->SetBrushFromTexture(PhotoTexture);PhotoFrame->SetVisibility(ESlateVisibility::Visible);}else if(PhotoFrame)PhotoFrame->SetVisibility(ESlateVisibility::Collapsed);
 }
-void UWildlineHunterCreator::UpdateCamera(){if(!Capture||!Preview)return;const float A=FMath::DegreesToRadians(PreviewAngle);const float Scale=Pending.HeightScale();float BodyHeight=0;if(auto* Mesh=Preview->GetMesh()->GetSkeletalMeshAsset()){const auto B=Mesh->GetImportedBounds();BodyHeight=(Preview->GetMesh()->GetRelativeLocation().Z+B.Origin.Z)*Scale;}const FVector FacePivot=Preview->GetMesh()->GetSocketLocation(TEXT("head"))-Preview->GetActorLocation()+FVector(10,0,-3)*Scale;const FVector Pivot=bFaceView?FacePivot:FVector(0,0,BodyHeight);const float Distance=bFaceView?46*Scale*Pending.FaceSize:FMath::Max(160.f,Pending.HeightCm*1.58f);const FVector Offset(FMath::Cos(A)*Distance,FMath::Sin(A)*Distance,bFaceView?0:28);Capture->SetWorldLocation(Preview->GetActorLocation()+Pivot+Offset);Capture->SetWorldRotation((-Offset).Rotation());}
+void UWildlineHunterCreator::UpdateCamera(){
+    if(!Capture||!Preview)return;
+    const float A=FMath::DegreesToRadians(PreviewAngle),Scale=Pending.HeightScale();
+    const float HatHeight=WildlineHeadwear::Styles[WildlineHeadwear::Clamp(Pending.Headwear)].Height;
+    const FVector Face=Preview->GetMesh()->GetSocketLocation(TEXT("head"))+FVector(bHatPicker?2:10,0,bHatPicker?-3+HatHeight*.4f:-3)*Scale*Pending.FaceSize;
+    // Frame the entire 60-230 cm range against the same floor and camera.
+    // Zooming out with HeightCm cancelled the visible growth above ~100 cm.
+    const float Floor=Preview->GetActorLocation().Z-Preview->GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
+    const FVector Body(Preview->GetActorLocation().X,Preview->GetActorLocation().Y,Floor+115);
+    const float Distance=bFaceView?(bHatPicker?60+HatHeight*.7f:46)*Scale*Pending.FaceSize:390.f;
+    const FVector Offset(FMath::Cos(A)*Distance,FMath::Sin(A)*Distance,bFaceView?0:28);
+    Capture->SetWorldLocation((bFaceView?Face:Body)+Offset);Capture->SetWorldRotation((-Offset).Rotation());
+}
 void UWildlineHunterCreator::SyncControls(){
-    bSyncing=true;PresetCombo->SetSelectedIndex(Pending.PresetOptionIndex());BodyCombo->SetSelectedIndex(Pending.Body);OutfitCombo->SetSelectedIndex(Pending.Outfit);HairCombo->SetSelectedIndex(Pending.Hair);CapCheck->SetIsChecked(Pending.bCap);BeardCheck->SetIsChecked(Pending.bBeard);
+    bSyncing=true;PresetCombo->SetSelectedIndex(Pending.PresetOptionIndex());BodyCombo->SetSelectedIndex(Pending.Body);OutfitCombo->SetSelectedIndex(Pending.Outfit);HairCombo->SetSelectedIndex(Pending.Hair);if(CapCheck)CapCheck->SetIsChecked(Pending.bCap);BeardCheck->SetIsChecked(Pending.bBeard);
     const float Values[]={(1-Pending.Slimness)*100,Pending.SkinTone,Pending.FaceWidth,Pending.NoseDepth,Pending.PhotoX,Pending.PhotoY,Pending.PhotoZoom};
     for(int32 I=0;I<AppearanceSliders.Num()&&I<UE_ARRAY_COUNT(Values);I++)AppearanceSliders[I]->SetValue(Values[I]);
     const float Dimensions[]={Pending.HeightCm,Pending.BodyWidth*100,Pending.BodyDepth*100,Pending.HandSize*100,Pending.FootSize*100,Pending.FaceSize*100};
@@ -147,7 +160,7 @@ void UWildlineHunterCreator::FaceSizeChanged(float V){if(bSyncing)return;Pending
 void UWildlineHunterCreator::BodyChanged(FString I,ESelectInfo::Type){if(bSyncing)return;Pending.Body=I.StartsWith(TEXT("Female"))?1:0;RefreshPreview();UpdateCamera();}
 void UWildlineHunterCreator::OutfitChanged(FString I,ESelectInfo::Type){if(bSyncing)return;Pending.Outfit=I.StartsWith(TEXT("Blaze"))?1:I.StartsWith(TEXT("Earth"))?2:0;RefreshPreview();}
 void UWildlineHunterCreator::HairChanged(FString I,ESelectInfo::Type){if(bSyncing)return;Pending.Hair=I==TEXT("Black")?1:I==TEXT("Silver")?2:0;RefreshPreview();}
-void UWildlineHunterCreator::CapChanged(bool V){if(bSyncing)return;Pending.bCap=V;RefreshPreview();}
+void UWildlineHunterCreator::CapChanged(bool V){if(bSyncing)return;Pending.bCap=V;Pending.Headwear=V?1:0;RefreshPreview();}
 void UWildlineHunterCreator::SkinChanged(float V){if(bSyncing)return;Pending.SkinTone=V;RefreshPreview();}
 void UWildlineHunterCreator::WidthChanged(float V){if(bSyncing)return;Pending.FaceWidth=V;RefreshPreview();}
 void UWildlineHunterCreator::NoseChanged(float V){if(bSyncing)return;Pending.NoseDepth=V;RefreshPreview();}
@@ -157,11 +170,12 @@ void UWildlineHunterCreator::PhotoZoomChanged(float V){if(bSyncing)return;Pendin
 bool UWildlineHunterCreator::ImportPortraitPath(const FString& Path){FString Error,Encoded;if(!WildlinePortrait::ImportPhoto(Path,Encoded,Error)){Message->SetText(FText::FromString(Error));return false;}PhotoData=Encoded;Pending.bUsePhoto=true;Message->SetText(FText::FromString(TEXT("Portrait loaded. Use face close-up and the alignment controls.")));bFaceView=true;PreviewAngle=0;RefreshPreview();UpdateCamera();if(AppearanceScroll)AppearanceScroll->ScrollToEnd();return true;}
 void UWildlineHunterCreator::UploadPhoto(){const FString Path=WildlinePortrait::ChoosePhotoFile();if(!Path.IsEmpty())ImportPortraitPath(Path);}
 void UWildlineHunterCreator::ClearPhoto(){Pending.bUsePhoto=false;RefreshPreview();Message->SetText(FText::FromString(TEXT("Using the default textured face.")));}
-void UWildlineHunterCreator::FullBody(){bFaceView=false;UpdateCamera();}
+void UWildlineHunterCreator::FullBody(){if(bHatPicker)CloseHeadwear();bFaceView=false;UpdateCamera();}
 void UWildlineHunterCreator::FaceView(){bFaceView=true;PreviewAngle=0;UpdateCamera();}
 void UWildlineHunterCreator::TurnLeft(){PreviewAngle-=20;UpdateCamera();}
 void UWildlineHunterCreator::TurnRight(){PreviewAngle+=20;UpdateCamera();}
 void UWildlineHunterCreator::SaveHunter(){Pending.Clamp();if(Pending.bUsePhoto){TArray<uint8> Bytes;if(!FBase64::Decode(PhotoData,Bytes))return;IFileManager::Get().MakeDirectory(*FPaths::GetPath(WildlinePortrait::SavedPhotoPath()),true);if(!FFileHelper::SaveArrayToFile(Bytes,*WildlinePortrait::SavedPhotoPath())){Message->SetText(FText::FromString(TEXT("Could not save the portrait. Check your game profile folder.")));return;}}if(auto* S=UWildlineUserSettings::Get()){S->HunterProfile=Pending;S->Persist();}if(auto* PC=GetOwningPlayer())if(auto* P=Cast<AWildlineCharacter>(PC->GetPawn())){P->HunterProfile=Pending;P->HunterFaceData=Pending.bUsePhoto?PhotoData:FString();P->ApplyHunterProfile();P->ServerSetHunterProfile(Pending,P->HunterFaceData);}Cancel();}
 void UWildlineHunterCreator::Cancel(){if(auto* PC=Cast<AWildlineController>(GetOwningPlayer())){if(PC->Menu)PC->Menu->SetVisibility(ESlateVisibility::Visible);PC->SetMenu(true);}RemoveFromParent();}
 void UWildlineHunterCreator::NativeDestruct(){if(Preview){Preview->Destroy();Preview=nullptr;}Super::NativeDestruct();}
-FReply UWildlineHunterCreator::NativeOnKeyDown(const FGeometry& G,const FKeyEvent& E){if(E.GetKey()==EKeys::Escape){Cancel();return FReply::Handled();}return Super::NativeOnKeyDown(G,E);}
+FReply UWildlineHunterCreator::NativeOnKeyDown(const FGeometry& G,const FKeyEvent& E){if(E.GetKey()==EKeys::Escape){if(bHatPicker){CloseHeadwear();return FReply::Handled();}Cancel();return FReply::Handled();}return Super::NativeOnKeyDown(G,E);}
+FReply UWildlineHunterCreator::NativeOnPreviewKeyDown(const FGeometry& G,const FKeyEvent& E){if(E.GetKey()==EKeys::Tab&&E.IsShiftDown()){if(auto* PC=Cast<AWildlineController>(GetOwningPlayer()))PC->ToggleSocial();return FReply::Handled();}return Super::NativeOnPreviewKeyDown(G,E);}

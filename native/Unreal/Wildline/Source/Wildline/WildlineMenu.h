@@ -17,6 +17,7 @@ class UBorder;
 class UCanvasPanelSlot;
 class UScaleBox;
 class UWildlineMenu;
+class UWildlineGraphics;
 UCLASS()
 class WILDLINE_API UWildlineChoice : public UComboBoxString {
     GENERATED_BODY()
@@ -125,6 +126,7 @@ public:
     void RefreshMode();
     void RefreshDifficulty();
     UPROPERTY() UWildlineHunterCreator* Creator;
+    UPROPERTY() UWildlineGraphics* Graphics;
     UFUNCTION() void CreateHunter();
     bool bSquirrelSelected=false;
     UFUNCTION() void Hunter();
@@ -132,6 +134,9 @@ public:
     UFUNCTION() void Play();
     UFUNCTION() void Host();
     UFUNCTION() void Join();
+    UPROPERTY() UButton* HostRoomButton;
+    void RefreshRoom();
+    FReply NativeOnPreviewKeyDown(const FGeometry& Geometry,const FKeyEvent& Event) override;
     UFUNCTION() void InvertChanged(bool Value);
     UFUNCTION() void BloodChanged(bool Value);
     UFUNCTION() void SensitivityChanged(float Value);

@@ -83,3 +83,6 @@ and retains the original face UVs, cap, skin and cloth materials. No additional
 portrait source or license is introduced. `import_world_upgrade.py` imports the
 busts into `Content/Wildline/Hunters/Meshes`; the room supplies oak shields,
 brass nameplates, warm display lighting and the squirrels' rivalry captions.
+# Original headwear collection
+
+The 36 wearable hats and their matching gallery thumbnails are original WILDLINE artwork, generated with `Scripts/generate_headwear.py` and imported with `Scripts/import_headwear.py`. No third-party models, textures, paid downloads, or account access are used. The collection includes 16 field/work hats and 20 novelty hats, plus a separate no-hat choice. Reproducible FBX sources, studio thumbnails, palette metadata, and the style catalog are in `ArtSource/Hunters/Headwear`.

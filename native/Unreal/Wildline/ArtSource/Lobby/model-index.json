@@ -392,5 +392,110 @@
       "M_LodgeDetailBrass",
       "M_WindowOak"
     ]
+  },
+  {
+    "name": "SM_sofa_03",
+    "dimensions_m": [
+      2.73117733001709,
+      0.9250842332839966,
+      1.118264079093933
+    ],
+    "triangles": 8003,
+    "materials": [
+      "M_PH_sofa_03_0",
+      "M_PH_sofa_03_1"
+    ]
+  },
+  {
+    "name": "SM_ArmChair_01",
+    "dimensions_m": [
+      0.848430871963501,
+      0.7657603025436401,
+      1.0650876760482788
+    ],
+    "triangles": 5626,
+    "materials": [
+      "M_PH_ArmChair_01_0"
+    ]
+  },
+  {
+    "name": "SM_gothic_coffee_table",
+    "dimensions_m": [
+      1.4430902004241943,
+      1.4430902004241943,
+      0.5587729811668396
+    ],
+    "triangles": 23836,
+    "materials": [
+      "M_PH_gothic_coffee_table_0"
+    ]
+  },
+  {
+    "name": "SM_vintage_cabinet_01",
+    "dimensions_m": [
+      2.0217604637145996,
+      0.6698037981987,
+      2.2350516319274902
+    ],
+    "triangles": 61096,
+    "materials": [
+      "M_PH_vintage_cabinet_01_0",
+      "M_PH_vintage_cabinet_01_1",
+      "M_PH_vintage_cabinet_01_2"
+    ]
+  },
+  {
+    "name": "SM_throw_pillows_01",
+    "dimensions_m": [
+      0.9400650262832642,
+      0.4518609642982483,
+      0.4501592516899109
+    ],
+    "triangles": 6362,
+    "materials": [
+      "M_PH_throw_pillows_01_0"
+    ]
+  },
+  {
+    "name": "SM_LodgeHeritageRug",
+    "dimensions_m": [
+      4.599999904632568,
+      3.850003957748413,
+      0.039000000804662704
+    ],
+    "triangles": 175780,
+    "materials": [
+      "M_LodgeRugBorder",
+      "M_LodgeRugFringe",
+      "M_LodgeRugWeave"
+    ]
+  },
+  {
+    "name": "SM_PaintingClearingDitch",
+    "dimensions_m": [
+      0.11350000649690628,
+      1.809999942779541,
+      1.5198758840560913
+    ],
+    "triangles": 3198,
+    "materials": [
+      "M_PaintingBacking",
+      "M_PaintingClearingDitch",
+      "M_PaintingGilt"
+    ]
+  },
+  {
+    "name": "SM_PaintingEncouragingHounds",
+    "dimensions_m": [
+      0.11350000649690628,
+      1.809999942779541,
+      1.5297062397003174
+    ],
+    "triangles": 3198,
+    "materials": [
+      "M_PaintingBacking",
+      "M_PaintingEncouragingHounds",
+      "M_PaintingGilt"
+    ]
   }
 ]

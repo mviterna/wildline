@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-10-19T12:52:27.4961514-04:00",
+  "packageRoot": "C:/_git/wildline/native/Build/LodgeUpgrade/Windows",
+  "desktopLauncher": "native/LaunchNative.ps1",
+  "thirdPartyAssets": [
+    "sofa_03",
+    "ArmChair_01",
+    "gothic_coffee_table",
+    "vintage_cabinet_01",
+    "throw_pillows_01",
+    "dirty_carpet"
+  ],
+  "assetLicense": "CC0-1.0",
+  "assetFilesHashVerified": 33,
+  "resolution": "4K",
+  "authoredAdditions": [
+    "bound and fringed wool rug",
+    "procedural animated hearth fire",
+    "interior window lights"
+  ],
+  "packagedVerification": {
+    "lobbyModes": [
+      "Blackwood/classic",
+      "Farmstead/farm",
+      "Neighborhood/hill"
+    ],
+    "lobbySmoke": "PASS",
+    "lobbyLocalHostClient": "PASS",
+    "scoreboardTransparency": "PASS",
+    "fourRowScoreboardVisual": "PASS (fixture players)",
+    "profileNameAndHeightRegression": "PASS",
+    "socialLocalHostClient": "PASS",
+    "roomDiscoveryAndHostLock": "PASS",
+    "sharedStatsReplication": "PASS",
+    "finalRenderMaterialErrors": 0
+  },
+  "evidence": [
+    "native/lodge-package-build.log",
+    "native/lodge-package-verification.log",
+    "native/lodge-social-verification.log",
+    "native/Preview/LodgeUpgrade-Package",
+    "native/Unreal/Wildline/Saved/SocialProbes/9e70d2b2f5fa4e0297031967c1631a43"
+  ],
+  "limitations": [
+    "Network checks use two local processes. Four physical Hamachi PCs have not been validated.",
+    "Installer install/upgrade lifecycle was not run because a preexisting WILDLINE Beta installation is present."
+  ],
+  "installerStatus": "PASS (compiled; size and SHA-256 independently verified)",
+  "installer": {
+    "path": "C:\\_git\\wildline\\native\\Build\\Beta\\Wildline-0.2.0-beta.20261019.124701-Setup.exe",
+    "version": "0.2.0-beta.20261019.124701",
+    "size": 3441300564,
+    "sha256": "67423F763C567D5BC588BC1D1DEAE2E10CF767256503FDDDD6C8194958208DB1",
+    "cleanInstallLifecycle": "not run; existing installation preserved"
+  }
+}
