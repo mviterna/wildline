@@ -70,6 +70,7 @@ if ($StageCandidate) {
     Write-Output "Candidate available for isolated verification: https://github.com/$taskRepo/releases/tag/$taskTag. The beta feed has not changed."
     return
 }
+Invoke-GitHub @('release','edit',$taskTag,'--repo',$taskRepo,'--title',"WILDLINE $($taskReceipt.version)",'--notes-file',$taskNotesPath)
 if ($taskExistingTags -notcontains 'beta') {
     Invoke-GitHub @('release','create','beta','--repo',$taskRepo,'--prerelease','--title','WILDLINE beta downloads','--notes','Install WildlineSetup.exe once. It downloads the current verified beta and checks for future updates on launch.')
 } else {

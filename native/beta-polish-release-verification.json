@@ -1,6 +1,6 @@
 {
   "status": "LOCAL_VALIDATION_PASSED_CHANNEL_PENDING",
-  "version": "0.2.0-beta.20261020.161514",
+  "version": "0.2.0-beta.20261020.162327",
   "gameSourceCommit": "95c23a647e7815e5a251e71bb9eec4e69f5e45f8",
   "package": "native/Build/ReleasePolish/Windows",
   "executableSha256": "4DDBABE7F45403CDCBB93BF54B3EFF982A9CB72ABF761F78EFEBA29F47F8252D",
@@ -59,5 +59,14 @@
   "limits": [
     "Four physical Hamachi PCs were not available; earlier replication checks used two local processes.",
     "Hosted Windows checks use headless game probes; local rendered captures verify the gallery."
-  ]
+  ],
+  "installer": {
+    "sha256": "7783A54E6E93EEAA5AD7D779E475D6000678E3382374AB424F47126FBEA02023",
+    "bootstrapSha256": "4C183B87201040DE0C879218E98DC695A7DE35D4F78A320307031E24E9F30CB5",
+    "size": 3513990582,
+    "sourceCommit": "a4875c81d6dab757c2c8753641ee540714bb1492",
+    "compression": "zip/3, non-solid",
+    "prerequisiteAccess": "Direct file extraction without scanning a solid game archive",
+    "reference": "https://jrsoftware.org/ishelp/topic_setup_compression.htm"
+  }
 }
