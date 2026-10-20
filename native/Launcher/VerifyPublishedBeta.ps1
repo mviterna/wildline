@@ -52,10 +52,18 @@ function Wait-HeadlessLauncher($Process) {
 }
 Write-Output "Online check: starting public launcher; logs in $taskTest"
 Start-Process -FilePath $taskLauncher -WindowStyle Hidden | Out-Null
-$taskDeadline = (Get-Date).AddMinutes(20)
+$taskInstallMinutes = if ($Headless) { 35 } else { 20 }
+$taskDeadline = (Get-Date).AddMinutes($taskInstallMinutes)
 $taskMarker = Join-Path $taskInstall 'current.version'
 while ((Get-Date) -lt $taskDeadline) {
     if ((Test-Path $taskMarker) -and (Get-Content $taskMarker -Raw).Trim() -eq $taskReceipt.version) { break }
+    if ($Headless) {
+        $taskFailureLog = Join-Path $env:LOCALAPPDATA 'Wildline/LauncherLogs/launcher.log'
+        if ((Test-Path $taskFailureLog) -and (Get-Item $taskFailureLog).Length -gt 0) {
+            Get-Content $taskFailureLog -Tail 40
+            throw 'Public launcher reported an update failure.'
+        }
+    }
     Start-Sleep -Seconds 2
 }
 if (!(Test-Path $taskMarker) -or (Get-Content $taskMarker -Raw).Trim() -ne $taskReceipt.version) { throw 'Public update did not install and activate.' }

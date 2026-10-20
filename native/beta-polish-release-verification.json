@@ -1,5 +1,5 @@
 {
-  "status": "LOCAL_VALIDATION_PASSED_CHANNEL_PENDING",
+  "status": "PUBLISHED_PENDING_PUBLIC_UPDATER_VERIFICATION",
   "version": "0.2.0-beta.20261020.162327",
   "gameSourceCommit": "95c23a647e7815e5a251e71bb9eec4e69f5e45f8",
   "package": "native/Build/ReleasePolish/Windows",
@@ -55,7 +55,7 @@
   },
   "supersededCandidate": "v0.2.0-beta.20261020.150249",
   "installedBetaAndBothDesktopShortcutsPreserved": true,
-  "updateFeedPromoted": false,
+  "updateFeedPromoted": true,
   "limits": [
     "Four physical Hamachi PCs were not available; earlier replication checks used two local processes.",
     "Hosted Windows checks use headless game probes; local rendered captures verify the gallery."
@@ -68,5 +68,17 @@
     "compression": "zip/3, non-solid",
     "prerequisiteAccess": "Direct file extraction without scanning a solid game archive",
     "reference": "https://jrsoftware.org/ishelp/topic_setup_compression.htm"
-  }
+  },
+  "installerVerification": {
+    "passed": true,
+    "sha256": "7783A54E6E93EEAA5AD7D779E475D6000678E3382374AB424F47126FBEA02023",
+    "bootstrapSha256": "4C183B87201040DE0C879218E98DC695A7DE35D4F78A320307031E24E9F30CB5",
+    "checkedAtUtc": "2026-10-20T17:06:23.4702732-04:00",
+    "logs": "D:\\a\\wildline\\wildline\\native\\Build\\InstallerVerification\\a330dcc71eea4f4e9d46bb90eaa686fa",
+    "versionedSetupPassed": true,
+    "runner": "github-hosted-windows",
+    "runUrl": "https://github.com/mviterna/wildline/actions/runs/39494323023"
+  },
+  "downloadUrl": "https://github.com/mviterna/wildline-downloads/releases/download/beta/WildlineSetup.exe",
+  "releaseUrl": "https://github.com/mviterna/wildline-downloads/releases/tag/v0.2.0-beta.20261020.162327"
 }
