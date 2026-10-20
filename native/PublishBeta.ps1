@@ -36,10 +36,14 @@ if (($taskExistingTags -contains $taskTag) -and !$ResumeDraft -and !$ResumeCandi
 $taskNotesPath = Join-Path $taskOutput 'release-notes.txt'
 [IO.File]::WriteAllText($taskNotesPath, $Notes)
 if ($taskExistingTags -notcontains $taskTag) {
-    Invoke-GitHub @('release','create',$taskTag,'--repo',$taskRepo,'--draft','--prerelease','--title',"WILDLINE $($taskReceipt.version)",'--notes-file',$taskNotesPath)
+    $taskCreatePath = Join-Path $taskOutput 'release-create.json'
+    $taskCreatePayload = [ordered]@{ tag_name=$taskTag; name="WILDLINE $($taskReceipt.version)"; draft=$true; prerelease=$true; body=$Notes }
+    [IO.File]::WriteAllText($taskCreatePath, ($taskCreatePayload | ConvertTo-Json))
+    $taskCreatedRelease = Invoke-GitHub @('api','--method','POST',"repos/$taskRepo/releases",'--input',$taskCreatePath) | ConvertFrom-Json
 }
 # Drafts may not resolve through the tag endpoint until they are published.
-$taskReleases = & gh api "repos/$taskRepo/releases?per_page=100" | ConvertFrom-Json
+if ($taskCreatedRelease) { $taskReleases = $taskCreatedRelease }
+else { $taskReleases = & gh api "repos/$taskRepo/releases?per_page=100" | ConvertFrom-Json }
 if ($LASTEXITCODE) { throw 'Cannot inspect the release draft.' }
 $taskDrafts = @($taskReleases | Where-Object { $_.tag_name -eq $taskTag -and ($_.draft -or $ResumeCandidate) })
 if ($taskDrafts.Count -ne 1) { throw 'The version must be an unpublished draft or an explicitly resumed candidate; published assets are never replaced.' }
