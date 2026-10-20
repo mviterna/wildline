@@ -11,18 +11,26 @@ $taskLauncher = & (Join-Path $PSScriptRoot 'Launcher/BuildLauncher.ps1')
 [Reflection.Assembly]::LoadFrom($taskLauncher) | Out-Null
 $taskBase = "https://github.com/mviterna/wildline-downloads/releases/download/v$Version"
 $taskManifestPath = Join-Path $taskRoot 'latest.json'
-Invoke-WebRequest -UseBasicParsing "$taskBase/latest.json" -OutFile $taskManifestPath
+& curl.exe --fail --location --silent --show-error --retry 4 --output $taskManifestPath "$taskBase/latest.json"
+if ($LASTEXITCODE) { throw 'Candidate metadata download failed.' }
 $taskManifest = [Wildline.Updates.Core]::ReadManifest([IO.File]::ReadAllText($taskManifestPath), [Wildline.Updates.Core]::PublicKey)
 if ($taskManifest.version -ne $Version) { throw 'Candidate manifest version mismatch.' }
-foreach ($taskPart in $taskManifest.parts) {
-    Invoke-WebRequest -UseBasicParsing ("$taskBase/" + $taskPart.name) -OutFile (Join-Path $taskRoot $taskPart.name)
+$taskDownloads = foreach ($taskPart in $taskManifest.parts) {
+    $taskArguments = '--fail --location --silent --show-error --retry 4 --output "' + (Join-Path $taskRoot $taskPart.name) + '" "' + "$taskBase/" + $taskPart.name + '"'
+    Start-Process -FilePath curl.exe -ArgumentList $taskArguments -WindowStyle Hidden -PassThru -RedirectStandardError (Join-Path $taskRoot ($taskPart.name + '.download.log'))
+}
+foreach ($taskDownload in $taskDownloads) {
+    if (!$taskDownload.WaitForExit(1200000)) { throw 'Candidate part download timed out.' }
+    $taskDownload.Refresh()
+    if ($taskDownload.ExitCode) { throw 'Candidate part download failed; inspect download logs.' }
 }
 [Wildline.Updates.Core]::Assemble($taskManifest, $taskRoot, [Action[string,int]] { param($message,$percent) })
 Write-Output 'PASS signed public metadata, all part hashes, byte-exact public installer assembly.'
 # Only disposable candidate downloads inside this VM are removed to recover disk space.
 foreach ($taskPart in $taskManifest.parts) { Remove-Item -LiteralPath (Join-Path $taskRoot $taskPart.name) }
 $taskBootstrap = Join-Path $taskRoot 'WildlineSetup.exe'
-Invoke-WebRequest -UseBasicParsing "$taskBase/WildlineSetup.exe" -OutFile $taskBootstrap
+& curl.exe --fail --location --silent --show-error --retry 4 --output $taskBootstrap "$taskBase/WildlineSetup.exe"
+if ($LASTEXITCODE) { throw 'Candidate bootstrap download failed.' }
 $taskExpected = Get-Content (Join-Path $taskTools 'ExpectedInstaller.json') -Raw | ConvertFrom-Json
 if ($taskExpected.version -ne $Version -or (Get-FileHash $taskBootstrap -Algorithm SHA256).Hash -ne $taskExpected.bootstrapSha256 -or $taskManifest.installerSha256 -ne $taskExpected.sha256) { throw 'Downloaded installers differ from the locally tested candidate.' }
 & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'VerifyBetaInstaller.ps1') -SetupPath (Join-Path $taskRoot 'Setup.exe') -BootstrapPath $taskBootstrap
