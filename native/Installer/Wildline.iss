@@ -17,8 +17,10 @@ MinVersion=10.0.19041
 PrivilegesRequired=lowest
 OutputDir={#OutputPath}
 OutputBaseFilename=Wildline-{#BetaVersion}-Setup
-Compression=lzma2/fast
-SolidCompression=yes
+; Cooked IoStore chunks are already compressed. Deflate avoids expensive solid
+; recompression and keeps full installs and repairs fast with bounded memory.
+Compression=zip/3
+SolidCompression=no
 WizardStyle=modern
 UninstallDisplayIcon={app}\WildlineLauncher.exe
 InfoBeforeFile=BetaReadme.txt
