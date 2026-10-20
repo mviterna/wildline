@@ -18,6 +18,14 @@ Every normal build creates the full offline installer and the small online boots
 
 For an interrupted unpublished draft, use `PublishBeta.ps1 -ResumeDraft`. It reuses only assets whose GitHub SHA-256 and size match, replaces incomplete uploads in that draft, and refuses to replace any published version or mismatched completed asset.
 
+## Isolated Windows release verification
+
+Preserve the publisher's existing beta installation and desktop shortcuts. `PublishBeta.ps1 -StageCandidate` uploads and verifies a version release without advancing the beta feed. The `Verify Windows release` Actions workflow can then validate that exact candidate on a disposable GitHub-hosted Windows VM. It downloads the signed public manifest and every part, verifies reconstruction, and runs the full installer lifecycle/game probes plus the small activation/corruption/rollback fixtures.
+
+The workflow takes the candidate version and a private fixture release tag. That private release contains `validation-tools.zip` with `InnoSetup/` (the compiler distribution), `Redist/` (the same VC++ and GameInput installers bundled in the candidate), `RuntimeMetadata.json` (the candidate's `visualCppMinimum` and `gameInputMinimum`), and `ExpectedInstaller.json` (its `LatestInstaller.json`). It contains no signing key. The VM uses only the committed public verification key.
+
+After confirming the workflow succeeded for the intended source commit, download its `release-verification` artifact and copy `result.json` to local `native/Build/Beta/InstallerVerification.json`. `PublishBeta.ps1 -ResumeCandidate` checks this exact-installer receipt and all immutable remote assets before advancing the beta feed. A failed workflow leaves the previous update selected. VM lifecycle probes use NullRHI; graphical gameplay evidence comes from the separately tested package. Public launcher window/current/offline checks still use `VerifyPublishedBeta.ps1` on a clean Windows machine with a supported GPU.
+
 ## Trust and recovery
 
 `InitializeUpdates.ps1` was run once. The private RSA signing key is stored outside Git at `%LOCALAPPDATA%/WildlinePublisher/update-key.dpapi`, encrypted with Windows DPAPI for the publishing account. Back up that file with a recoverable Windows profile; it is not portable to a different Windows account by itself. Do not delete it or rerun initialization. The committed XML file is the public verification key embedded in launchers. Losing the private key requires an explicit trust migration and new installers.

@@ -1,5 +1,6 @@
 param([Parameter(Mandatory=$true)][string]$Version, [Parameter(Mandatory=$true)][string]$ToolsRoot)
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 if ($Version -notmatch '^\d+\.\d+\.\d+-beta\.\d{8}\.\d{6}$') { throw 'Invalid candidate version.' }
 if (!$env:GITHUB_ACTIONS -or $env:RUNNER_ENVIRONMENT -ne 'github-hosted') { throw 'Release lifecycle validation requires a disposable GitHub-hosted Windows VM.' }
 $taskRoot = Join-Path $PSScriptRoot 'Build/ReleaseValidation'
