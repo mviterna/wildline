@@ -1,5 +1,5 @@
 {
-  "status": "PUBLISHED_PENDING_PUBLIC_UPDATER_VERIFICATION",
+  "status": "RELEASED_VERIFIED",
   "version": "0.2.0-beta.20261020.162327",
   "gameSourceCommit": "95c23a647e7815e5a251e71bb9eec4e69f5e45f8",
   "package": "native/Build/ReleasePolish/Windows",
@@ -80,5 +80,18 @@
     "runUrl": "https://github.com/mviterna/wildline/actions/runs/39494323023"
   },
   "downloadUrl": "https://github.com/mviterna/wildline-downloads/releases/download/beta/WildlineSetup.exe",
-  "releaseUrl": "https://github.com/mviterna/wildline-downloads/releases/tag/v0.2.0-beta.20261020.162327"
+  "releaseUrl": "https://github.com/mviterna/wildline-downloads/releases/tag/v0.2.0-beta.20261020.162327",
+  "publicUpdaterVerification": {
+    "passed": true,
+    "version": "0.2.0-beta.20261020.162327",
+    "bootstrapSha256": "4C183B87201040DE0C879218E98DC695A7DE35D4F78A320307031E24E9F30CB5",
+    "checkedAtUtc": "2026-10-20T17:17:51.2876273-04:00",
+    "logs": "D:\\a\\wildline\\wildline\\native\\Build\\OnlineInstallerVerification\\1aee7252ba7e4c02b7ed3af9a6e5f9a9",
+    "firstGamePid": null,
+    "headless": true,
+    "graphicalWindowVerified": false,
+    "runUrl": "https://github.com/mviterna/wildline/actions/runs/39498399017"
+  },
+  "anonymousDownloadAndSignatureVerification": true,
+  "feedManifestSha256": "E3C6DC23B4789BA2816B327C57D44A07DFABF40F6504B53941A0F0F8F00E31CC"
 }
