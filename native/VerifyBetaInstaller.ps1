@@ -12,10 +12,12 @@ $taskTest = Join-Path $PSScriptRoot ('Build/InstallerVerification/' + [guid]::Ne
 $taskInstall = Join-Path $taskTest 'Installed Game'
 New-Item -ItemType Directory -Path $taskTest -Force | Out-Null
 function Invoke-SetupProbe([string]$Executable, [string]$Arguments) {
+    Write-Output ("Starting installer operation: " + $Arguments)
     $taskProcess = Start-Process -FilePath $Executable -ArgumentList $Arguments -WindowStyle Hidden -PassThru
     if (!$taskProcess.WaitForExit(600000)) { throw "Installer operation timed out; inspect process $($taskProcess.Id)." }
     $taskProcess.Refresh()
     if ($taskProcess.ExitCode -ne 0) { throw "Installer operation failed: $($taskProcess.ExitCode). Logs: $taskTest" }
+    Write-Output 'PASS installer operation completed.'
 }
 $taskUninstaller = Join-Path $taskInstall 'unins000.exe'
 function Assert-InstalledPayload {
@@ -33,6 +35,7 @@ function Assert-InstalledPayload {
         if ($taskEntry.path -match '(?i)(^|\\)Saved(\\|$)|\.pdb$|^Manifest_') { throw "Private/debug file in installer: $($taskEntry.path)" }
     }
     if ((Get-ItemProperty -LiteralPath $taskUninstallKey).DisplayVersion -ne $taskInfo.version) { throw 'Registered version differs from the installed build.' }
+    Write-Output ("PASS all installed payload hashes and registered version: " + $taskInfo.version)
 }
 try {
     Invoke-SetupProbe $taskInitialSetup "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /DIR=`"$taskInstall`" /LOG=`"$taskTest/install.log`""
@@ -91,10 +94,14 @@ try {
         # The Unreal bootstrap exits before the child game; wait for its pass marker.
         $taskDeadline = (Get-Date).AddSeconds(60)
         while ((Get-Date) -lt $taskDeadline) {
-            if ((Test-Path -LiteralPath $taskLog) -and (Get-Content -LiteralPath $taskLog -Raw) -match $taskProbe[2]) { break }
+            if (Test-Path -LiteralPath $taskLog) {
+                $taskProbeText = Get-Content -LiteralPath $taskLog -Raw
+                if ($taskProbeText -match $taskProbe[2] -or $taskProbeText -match 'WILDLINE .*SMOKE.*FAIL') { break }
+            }
             Start-Sleep -Milliseconds 500
         }
-        if (!(Test-Path -LiteralPath $taskLog) -or (Get-Content -LiteralPath $taskLog -Raw) -notmatch $taskProbe[2]) { throw "Installed game probe failed: $($taskProbe[0]). Logs: $taskTest" }
+        if (!(Test-Path -LiteralPath $taskLog) -or (Get-Content -LiteralPath $taskLog -Raw) -notmatch $taskProbe[2]) { if(Test-Path $taskLog){Get-Content $taskLog -Tail 60}; throw "Installed game probe failed: $($taskProbe[0]). Logs: $taskTest" }
+        Write-Output ("PASS installed game probe: " + $taskProbe[0])
         # Allow the self-terminating probe to finish before updating its binaries.
         $taskChildren = Get-Process Wildline -ErrorAction SilentlyContinue | Where-Object { $_.Path -eq (Join-Path $taskPayloadRoot 'Wildline/Binaries/Win64/Wildline.exe') }
         foreach ($taskChild in $taskChildren) {

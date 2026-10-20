@@ -656,25 +656,34 @@ void AWildlineController::RunSmokeTest(){
     P->SelectWeapon(1);P->Tick(.016f);
     Check(P->SelectedWeapon==1&&P->Ammo==2&&P->ViewRifle->GetStaticMesh()&&P->ViewRifle->GetStaticMesh()->GetName()==TEXT("SM_Shotgun")&&P->ViewBolt->GetStaticMesh()&&P->ViewBolt->GetStaticMesh()->GetBoundingBox().GetSize().X>15&&P->ViewBolt->GetStaticMesh()->GetBoundingBox().GetSize().X<30,TEXT("Classic also loads the textured shotgun with a separate wooden pump"));
     P->SelectWeapon(0);P->Tick(.016f);
-    auto CheckGrip=[&](){auto* M=P->GetMesh();M->TickAnimation(.05f,false);M->RefreshBoneTransforms();
+    auto CheckGrip=[&](){auto* M=P->GetMesh();
+        // Allow the authored raise/lower transition to settle before measuring
+        // contacts; the support arm is intentionally free during side carry.
+        for(int32 I=0;I<24;I++){P->Tick(.05f);M->TickAnimation(.05f,false);M->RefreshBoneTransforms();}
         const auto T=P->WorldRifle->GetComponentTransform();
         auto* Anim=Cast<UWildlineHunterAnim>(M->GetAnimInstance());
-        return Anim&&Anim->Idle&&Anim->Walk&&Anim->Run&&FVector::Dist(M->GetSocketLocation(TEXT("hand_r")),T.TransformPosition(FVector(-17,0,-2.8f)))<3&&FVector::Dist(M->GetSocketLocation(TEXT("hand_l")),T.TransformPosition(FVector(17,-1,-3)))<3;
+        const float HandScale=P->HunterProfile.HandScale();
+        const bool Right=FVector::Dist(M->GetSocketLocation(TEXT("hand_r")),T.TransformPosition(WildlineHunterGrip::Wrist(0,false,HandScale)))<3;
+        const bool Left=!P->bAiming||FVector::Dist(M->GetSocketLocation(TEXT("hand_l")),T.TransformPosition(WildlineHunterGrip::Wrist(1,false,HandScale)))<3;
+        const FVector Finger=T.InverseTransformPosition(M->GetSocketLocation(TEXT("index_03_r")));
+        const bool Trigger=!P->bAiming||(FVector::Dist(Finger,FVector(-7.3,0,-5.2))<4&&Finger.Z<0);
+        return Anim&&Anim->Idle&&Anim->Walk&&Anim->Run&&Right&&Left&&Trigger;
     };
-    Check(CheckGrip(),TEXT("both hunter wrists reach sporting rifle stock"));
+    Check(CheckGrip(),TEXT("hunter wrist follows the lowered rifle grip"));
     auto CheckShoulder=[&](){auto* M=P->GetMesh();const FVector Pocket=M->GetSocketLocation(TEXT("upperarm_r"))+(P->GetActorForwardVector()*5-P->GetActorRightVector()*3-FVector::UpVector*6)*P->HunterProfile.HeightScale();
         return FVector::Dist(Pocket,P->WorldRifle->GetComponentTransform().TransformPosition(FVector(-45.6f,0,-4)))<.5f;
     };
-    Check(CheckShoulder(),TEXT("rifle recoil pad contacts the animated shoulder pocket"));
+    const auto CarriedGun=P->WorldRifle->GetComponentTransform();
+    Check(!P->bAiming&&CarriedGun.GetRotation().GetForwardVector().Z<-.7f&&FMath::Abs(P->GetMesh()->GetSocketLocation(TEXT("hand_r")).Z-P->GetMesh()->GetSocketLocation(TEXT("pelvis")).Z)<8*P->HunterProfile.HeightScale()&&CarriedGun.TransformPosition(FVector(0,0,8)).Z<P->GetMesh()->GetSocketLocation(TEXT("neck_01")).Z-25*P->HunterProfile.HeightScale(),TEXT("unzoomed rifle rests at the hip with its scope clear of the face"));
     auto* HunterAnim=Cast<UWildlineHunterAnim>(P->GetMesh()->GetAnimInstance());bool Directions=HunterAnim&&HunterAnim->JumpPose&&HunterAnim->WalkDirections.Num()==8&&HunterAnim->RunDirections.Num()==8;
     if(HunterAnim){for(auto* A:HunterAnim->WalkDirections)Directions&=A!=nullptr;for(auto* A:HunterAnim->RunDirections)Directions&=A!=nullptr;}
     Check(Directions,TEXT("eight rifle locomotion directions and airborne pose are cooked"));
-    P->StartAim();P->Tick(.016f);Check(CheckGrip()&&CheckShoulder(),TEXT("scoped posture retains shoulder contact and both wrist grips"));P->StopAim();P->Tick(.016f);
-    P->GetCharacterMovement()->Velocity=FVector(0,-580,0);Check(CheckGrip(),TEXT("sprinting sideways retains both rifle grips"));P->GetCharacterMovement()->Velocity=FVector::ZeroVector;
+    P->StartAim();P->Tick(.016f);Check(CheckGrip()&&CheckShoulder(),TEXT("scoped posture shoulders the rifle with both grips and the index finger below the scope"));P->StopAim();P->Tick(.016f);
+    P->GetCharacterMovement()->Velocity=FVector(0,-580,0);Check(CheckGrip(),TEXT("sideways movement retains the lowered rifle grip"));P->GetCharacterMovement()->Velocity=FVector::ZeroVector;
     FWildlineHunterProfile TestProfile=P->HunterProfile;TestProfile.Body=1;TestProfile.Outfit=1;P->ServerSetHunterProfile(TestProfile,FString());
     bool FieldMaterials=P->HunterMaterials.Num()>=7;for(auto* M:P->HunterMaterials)FieldMaterials&=M&&M->Parent&&M->Parent->GetPathName().StartsWith(TEXT("/Game/Wildline/Hunters/Materials/"));
     Check(P->GetMesh()->GetSkeletalMeshAsset()->GetName()==TEXT("SK_HunterFemale")&&FieldMaterials,TEXT("hunter body and real field materials apply to live pawn"));
-    Check(CheckGrip(),TEXT("female hunter maintains both rifle grips"));
+    Check(CheckGrip(),TEXT("female hunter maintains the lowered rifle grip"));
     TestProfile.Body=0;P->ServerSetHunterProfile(TestProfile,FString());
     FString TestPhoto,PhotoError;const FString Fixture=FPaths::ProjectSavedDir()/TEXT("PortraitTest.png");
     FImage Portrait(64,64,ERawImageFormat::BGRA8,EGammaSpace::sRGB);FMemory::Memset(Portrait.RawData.GetData(),127,Portrait.RawData.Num());FImageUtils::SaveImageByExtension(*Fixture,Portrait);
@@ -685,7 +694,7 @@ void AWildlineController::RunSmokeTest(){
     const auto BeforeTravis=P->HunterProfile;P->ServerSetHunterProfile(FWildlineHunterProfile::Travis(),FString());
     Check(P->GetMesh()->GetSkeletalMeshAsset()->GetName()==TEXT("SK_HunterTravis")&&!P->HunterFaceTexture&&P->HunterMaterials.Num()>=7,TEXT("Travis selects the featureless photo head without an upload"));
     Check(P->GetMesh()->GetSkeletalMeshAsset()->FindMorphTarget(TEXT("SlimBuild"))&&P->GetMesh()->GetMorphTarget(TEXT("SlimBuild"))>.7f,TEXT("Travis slim body uses a cooked customizable morph"));
-    Check(CheckGrip(),TEXT("Travis hunter maintains both rifle grips"));
+    Check(CheckGrip(),TEXT("Travis hunter maintains the lowered rifle grip"));
     auto EditedTravis=P->HunterProfile;EditedTravis.Outfit=2;EditedTravis.Slimness=.2f;EditedTravis.bCap=true;EditedTravis.bBeard=false;P->ServerSetHunterProfile(EditedTravis,FString());
     Check(P->HunterProfile.Preset==1&&P->HunterProfile.Outfit==2&&FMath::IsNearlyEqual(P->GetMesh()->GetMorphTarget(TEXT("SlimBuild")),.2f)&&!P->HunterFaceTexture,TEXT("customizing Travis retains its built-in photo head"));
     P->ServerSetHunterProfile(FWildlineHunterProfile::Ethan(),FString());
