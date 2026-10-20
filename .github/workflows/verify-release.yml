@@ -8,6 +8,13 @@ on:
       tools_tag:
         description: Private release containing validation-tools.zip
         required: true
+      phase:
+        description: Candidate lifecycle gate or live public updater check
+        type: choice
+        options:
+          - candidate
+          - live
+        default: candidate
 permissions:
   contents: read
 jobs:
@@ -29,11 +36,18 @@ jobs:
           if ($LASTEXITCODE) { throw 'Validation tool download failed.' }
           Expand-Archive native/Build/ReleaseValidation/validation-tools.zip native/Build/ReleaseValidation/Tools
       - name: Verify exact signed public candidate and installer lifecycle
+        if: inputs.phase != 'live'
         shell: powershell
         env:
           RELEASE_VERSION: ${{ inputs.version }}
         run: |
           & native/VerifyReleaseCandidate.ps1 -Version $env:RELEASE_VERSION -ToolsRoot native/Build/ReleaseValidation/Tools
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - name: Verify live public updater on clean Windows
+        if: inputs.phase == 'live'
+        shell: powershell
+        run: |
+          & native/Launcher/VerifyPublishedBeta.ps1 -ReceiptPath native/Build/ReleaseValidation/Tools/ExpectedInstaller.json -Headless
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
       - uses: actions/upload-artifact@v4
         if: always()
@@ -45,4 +59,8 @@ jobs:
             native/Build/ReleaseValidation/*.log
             native/Build/InstallerVerification/**/*.log
             native/Build/VersionedSetupVerification/**/*.log
+            native/Build/OnlineInstallerVerification/**/*.log
+            native/Build/OnlineInstallerVerification/**/result.json
+            ~/AppData/Local/Wildline/LauncherLogs/*.log
+            ~/AppData/Local/Wildline/Updates/**/install.log
           retention-days: 30
