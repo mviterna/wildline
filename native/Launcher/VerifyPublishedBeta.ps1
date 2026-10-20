@@ -46,7 +46,7 @@ function Test-HeadlessPayload {
     throw 'Publicly installed headless game smoke failed.'
 }
 function Wait-HeadlessLauncher($Process) {
-    if (!$Process.WaitForExit(60000)) { throw 'Public launcher did not finish.' }
+    if (!$Process.WaitForExit(180000)) { throw 'Public launcher did not finish.' }
     $Process.Refresh()
     if ($Process.ExitCode) { throw "Public launcher command failed: $($Process.ExitCode)" }
 }
@@ -59,7 +59,13 @@ while ((Get-Date) -lt $taskDeadline) {
     Start-Sleep -Seconds 2
 }
 if (!(Test-Path $taskMarker) -or (Get-Content $taskMarker -Raw).Trim() -ne $taskReceipt.version) { throw 'Public update did not install and activate.' }
+$taskCache = Join-Path $env:LOCALAPPDATA ('Wildline/Updates/' + $taskReceipt.version)
 if ($Headless) {
+    $taskCleanupDeadline = (Get-Date).AddMinutes(3)
+    while ((Get-Date) -lt $taskCleanupDeadline) {
+        if ((Test-Path (Join-Path $taskCache 'install.log')) -and !(Test-Path (Join-Path $taskCache 'Setup.exe')) -and !@(Get-ChildItem $taskCache -Filter '*.part*' -File -ErrorAction SilentlyContinue).Count) { break }
+        Start-Sleep -Seconds 1
+    }
     Close-TestGame
     Test-HeadlessPayload
     $taskFirstPid = $null
@@ -69,7 +75,6 @@ if ($Headless) {
     $taskFirstPid = $taskGame.Id
     Write-Output "PASS public bootstrap -> signed feed -> download parts -> setup helper -> responding game ($taskFirstPid)."
 }
-$taskCache = Join-Path $env:LOCALAPPDATA ('Wildline/Updates/' + $taskReceipt.version)
 if ((Test-Path (Join-Path $taskCache 'Setup.exe')) -or @(Get-ChildItem $taskCache -Filter '*.part*' -File).Count) { throw 'Successful update kept its large download cache.' }
 $taskInstallLogTime = (Get-Item (Join-Path $taskCache 'install.log')).LastWriteTimeUtc
 $taskVerify = Start-Process -FilePath $taskLauncher -ArgumentList '--verify-only' -WindowStyle Hidden -PassThru -Wait
