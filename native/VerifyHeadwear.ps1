@@ -1,5 +1,6 @@
 param([switch]$Editor,[switch]$Capture,[string]$GamePath,[switch]$SkipGallery,[switch]$SkipProfile)
 $ErrorActionPreference='Stop'
+if(!$SkipGallery -and !$Capture){throw 'Gallery validation requires -Capture for mesh rendering and scroll layout. Use -SkipGallery for headless profile-only checks.'}
 $taskExe=if($Editor){'D:/EpicEngine/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe'}elseif($GamePath){$GamePath}else{throw 'Pass GamePath or Editor.'}
 $taskStamp=[guid]::NewGuid().ToString('N');$taskRoot=Join-Path $PSScriptRoot "Unreal/Wildline/Saved/HeadwearReview/$taskStamp";$taskPreview=Join-Path $PSScriptRoot "Preview/Headwear-$taskStamp"
 function Invoke-HeadwearProbe([string]$Mode,[string]$Fixture,[bool]$Render){

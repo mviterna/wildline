@@ -1,0 +1,63 @@
+{
+  "status": "LOCAL_VALIDATION_PASSED_CHANNEL_PENDING",
+  "version": "0.2.0-beta.20261020.161514",
+  "gameSourceCommit": "95c23a647e7815e5a251e71bb9eec4e69f5e45f8",
+  "package": "native/Build/ReleasePolish/Windows",
+  "executableSha256": "4DDBABE7F45403CDCBB93BF54B3EFF982A9CB72ABF761F78EFEBA29F47F8252D",
+  "packageSmoke": [
+    {
+      "probe": "classic",
+      "log": "C:\\_git\\wildline\\native\\Build\\ReleaseSmoke\\30750ccfaa6f4a33adfcb6ecf7020832\\classic.log",
+      "passed": true
+    },
+    {
+      "probe": "farm",
+      "log": "C:\\_git\\wildline\\native\\Build\\ReleaseSmoke\\30750ccfaa6f4a33adfcb6ecf7020832\\farm.log",
+      "passed": true
+    },
+    {
+      "probe": "hill",
+      "log": "C:\\_git\\wildline\\native\\Build\\ReleaseSmoke\\30750ccfaa6f4a33adfcb6ecf7020832\\hill.log",
+      "passed": true
+    },
+    {
+      "probe": "intro",
+      "log": "C:\\_git\\wildline\\native\\Build\\ReleaseSmoke\\30750ccfaa6f4a33adfcb6ecf7020832\\intro.log",
+      "passed": true
+    }
+  ],
+  "classicSmokeCorrection": "Replaced obsolete always-shouldered rifle and old wrist-coordinate assertions with side carry, settled aim, and trigger finger checks. All gameplay probes pass.",
+  "profileVerification": {
+    "evidence": "native/Unreal/Wildline/Saved/HeadwearReview/20c0b2bf10da4bbd8a3b4a47b6767ef0",
+    "existingUserProfilePreserved": true,
+    "passed": true,
+    "checks": [
+      "fresh launch prompts once",
+      "trimmed name saved",
+      "separate process recovers name and hat",
+      "explicit rename survives reload"
+    ]
+  },
+  "renderedHeadwear": {
+    "passed": true,
+    "count": 36,
+    "evidence": "native/Unreal/Wildline/Saved/HeadwearReview/02ffe3f408de474c9624433c89b63f22",
+    "checks": [
+      "all 37 thumbnails and modeled hats load",
+      "live chicken selection",
+      "field and funny filters",
+      "scroll reaches last choices",
+      "both bodies and supported height/head scales",
+      "gameplay attachment"
+    ],
+    "previews": "native/Preview/Headwear-02ffe3f408de474c9624433c89b63f22",
+    "scope": "Gallery uses rendered captures because mesh and scrolling assertions need an initialized viewport. Headless checks cover profile persistence."
+  },
+  "supersededCandidate": "v0.2.0-beta.20261020.150249",
+  "installedBetaAndBothDesktopShortcutsPreserved": true,
+  "updateFeedPromoted": false,
+  "limits": [
+    "Four physical Hamachi PCs were not available; earlier replication checks used two local processes.",
+    "Hosted Windows checks use headless game probes; local rendered captures verify the gallery."
+  ]
+}
