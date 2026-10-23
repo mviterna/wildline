@@ -111,6 +111,11 @@ try {
         foreach ($taskChild in $taskChildren) {
             if (!$taskChild.WaitForExit(10000)) { throw "Game probe did not exit: $($taskChild.Id)" }
         }
+        # The root Unreal launcher can outlive the Win64 game briefly. Its image
+        # must be released before the missing-EXE repair probe removes that file.
+        if (!$taskProcess.WaitForExit(30000)) { throw "Game bootstrap did not exit: $($taskProcess.Id)" }
+        $taskProcess.Refresh()
+        if ($taskProcess.ExitCode) { throw "Game bootstrap failed: $($taskProbe[0])" }
     }
     $taskRepairFile = Join-Path $taskPayloadRoot 'BetaReadme.txt'
     Set-Content -LiteralPath $taskRepairFile -Value 'same-version repair needed'
