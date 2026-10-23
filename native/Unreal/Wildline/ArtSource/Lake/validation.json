@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 2,
+  "map": "Taylorsville Lake",
+  "verifiedAt": "2026-10-22T20:03:15.5892434-04:00",
+  "version": "0.2.0-beta.20261022.195555",
+  "packageRoot": "C:\\_git\\wildline\\native\\Build\\LakeRefined\\Windows",
+  "gameSha256": "BF85091CFCF902AB883A1A60FC2F09FBF520411CDAA118AC0C59F936875CCFD6",
+  "sourceMatchesPackage": true,
+  "installer": "C:\\_git\\wildline\\native\\Build\\Beta\\Wildline-0.2.0-beta.20261022.195555-Setup.exe",
+  "installerSha256": "78B948CB614F01A9E2354EB0B0DA0C8648E7EA90F6CE0629627D92EB9B932CA4",
+  "installerBytes": 3551706539,
+  "installerLifecycle": "Not run against the installed user beta. Clean-account/VM lifecycle and prerequisite checks remain unverified.",
+  "updateSignatureVerified": true,
+  "updatePartCount": 4,
+  "updatePartHashesVerified": true,
+  "updatePublished": false,
+  "lake": {
+    "widthMeters": 207,
+    "waterAreaSquareMeters": 23927,
+    "waterAreaRatioToPrevious": 5.53,
+    "shoreTrailMeters": 649,
+    "mainDepthMeters": 18,
+    "lodgeLakeExpanded": true,
+    "dryTeamSpawnsAndDenVerified": true
+  },
+  "fish": {
+    "mesh": "SM_PhotorealBass",
+    "source": "https://sketchfab.com/3d-models/largemouth-bass-87a588ddfe904fc8a578082fcc5ebb66",
+    "creator": "faerbogdan99",
+    "license": "CC BY 4.0",
+    "population": 96,
+    "embeddedPbrMaps": 4,
+    "tailMotion": true,
+    "renderedMaterialVerified": true
+  },
+  "fishing": "PASS: reserved rods, pickup, casting charge, cast flight, timed bite, surge/tension fight, success/loss/missed bite, landing/release, rod return and movement/menu cancellation",
+  "instructions": "Shown for 4 seconds after pickup starts, then fade over 1.2 seconds",
+  "gameplay": "PASS: map cards, dry forage and trail loop, walkable doorway and dock, swim/dive/surface, authoritative underwater rifle and shotgun blocking, squirrel drowning and dry respawn",
+  "network": "PASS: two processes, guest charged cast, station selection, menu cancellation, remote fishing/swimming/death state, server rejects underwater guest fire; no unresolved dock movement-base warnings",
+  "regressions": [
+    "Blackwood PASS",
+    "Farmstead PASS",
+    "Neighborhood PASS"
+  ],
+  "desktopEntryExecutable": "PASS: root packaged Wildline.exe forwards isolated gameplay probe",
+  "desktopLauncherSelectsPackage": true,
+  "protectedBetaShortcutLauncherAndProfileHashesPreserved": true,
+  "captures": [
+    "MapTab",
+    "LodgeDoor",
+    "LodgeDock",
+    "RodPickup",
+    "RodCasting",
+    "FishingCast",
+    "FishingInstructionsFaded",
+    "FishingFight",
+    "FishingCatch",
+    "LakeOverview",
+    "ShoreTrail",
+    "Diving",
+    "Swimming",
+    "BassUnderwater"
+  ],
+  "cleanup": "PASS: latest completed game/current installer/current update retained; guarded cleanup fixture checks passed. Prior blocked Saved staging/test folders retained.",
+  "limitations": [
+    "No clean-account installer lifecycle or clean-machine prerequisites test"
+  ]
+}

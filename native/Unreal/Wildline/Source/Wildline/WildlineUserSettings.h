@@ -27,7 +27,8 @@ public:
     UPROPERTY(Config) FWildlineMatchConfig ClassicConfig;
     UPROPERTY(Config) FWildlineMatchConfig FarmConfig;
     UPROPERTY(Config) FWildlineMatchConfig HillConfig;
-    FWildlineMatchConfig& ConfigForMode(int32 Mode){return Mode==2?HillConfig:Mode==1?FarmConfig:ClassicConfig;}
+    UPROPERTY(Config) FWildlineMatchConfig LakeConfig;
+    FWildlineMatchConfig& ConfigForMode(int32 Mode){return Mode==3?LakeConfig:Mode==2?HillConfig:Mode==1?FarmConfig:ClassicConfig;}
     UPROPERTY(Config, BlueprintReadWrite) bool bBloodEnabled = true;
     UPROPERTY(Config, BlueprintReadWrite) int32 HunterDifficulty = 1;
     UPROPERTY(Config) int32 ExpeditionMode=0;

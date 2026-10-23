@@ -14,6 +14,7 @@ private:
     void Label(const FString& Text,float X,float Y,float Size,FLinearColor Color);
     void DrawReserveMap(AWildlineCharacter* Player,AWildlineGameState* State,AWildlineWorld* Forest);
     void DrawForageHints(AWildlineCharacter* Player,AWildlineWorld* Forest);
+    void DrawLakeActivity(AWildlineCharacter* Player);
     TWeakObjectPtr<AWildlineCharacter> FeedbackPlayer;
     int32 PreviousBag=0,PreviousCollected=0,PreviousStored=0;
     float FeedbackUntil=0;

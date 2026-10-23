@@ -58,12 +58,12 @@ float AWildlineGameState::RoundRemaining()const{return bRoundStarted?FMath::Max(
 AWildlineGameMode::AWildlineGameMode(){PrimaryActorTick.bCanEverTick=true;DefaultPawnClass=AWildlineCharacter::StaticClass();PlayerControllerClass=AWildlineController::StaticClass();PlayerStateClass=AWildlinePlayerState::StaticClass();HUDClass=AWildlineHUD::StaticClass();GameStateClass=AWildlineGameState::StaticClass();}
 void AWildlineGameMode::PreLogin(const FString& Options,const FString& Address,const FUniqueNetIdRepl& UniqueId,FString& ErrorMessage){Super::PreLogin(Options,Address,UniqueId,ErrorMessage);if(GetNumPlayers()>=4)ErrorMessage=TEXT("This four-player room is full.");}
 void AWildlineGameMode::InitGame(const FString& MapName,const FString& Options,FString& ErrorMessage){
-    Super::InitGame(MapName,Options,ErrorMessage);if(auto* Settings=UWildlineUserSettings::Get()){Settings->LoadSettings(false);const int32 Mode=MapName.Contains(TEXT("Neighborhood"))?2:MapName.Contains(TEXT("Farmstead"))?1:0;auto Config=Settings->ConfigForMode(Mode);Config.Clamp();if(GameSession)GameSession->MaxPlayers=Config.MaxPlayers;}
+    Super::InitGame(MapName,Options,ErrorMessage);if(auto* Settings=UWildlineUserSettings::Get()){Settings->LoadSettings(false);const int32 Mode=MapName.Contains(TEXT("TaylorsvilleLake"))?3:MapName.Contains(TEXT("Neighborhood"))?2:MapName.Contains(TEXT("Farmstead"))?1:0;auto Config=Settings->ConfigForMode(Mode);Config.Clamp();if(GameSession)GameSession->MaxPlayers=Config.MaxPlayers;}
 }
 void AWildlineGameMode::BeginPlay(){Super::BeginPlay();
     if(auto* Settings=UWildlineUserSettings::Get()){Settings->LoadSettings(false);if(auto* State=GetGameState<AWildlineGameState>())State->HunterDifficulty=FMath::Clamp(Settings->HunterDifficulty,0,2);}
     if(!AWildlineWorld::Find(GetWorld()))GetWorld()->SpawnActor<AWildlineWorld>();
-    if(auto* Forest=AWildlineWorld::Find(GetWorld());Forest){auto* State=GetGameState<AWildlineGameState>();State->ExpeditionMode=Forest->bResidential?2:Forest->bFarm?1:0;if(auto* Settings=UWildlineUserSettings::Get())State->MatchConfig=Settings->ConfigForMode(State->ExpeditionMode);State->MatchConfig.Clamp();State->MatchConfig.ClassicLayout=Forest->bWinter?1:0;if(Forest->bResidential)State->MatchConfig.NeighborhoodLayout=GetWorld()->GetMapName().Contains(TEXT("Cedar"))?1:0;}
+    if(auto* Forest=AWildlineWorld::Find(GetWorld());Forest){auto* State=GetGameState<AWildlineGameState>();State->ExpeditionMode=Forest->bLake?3:Forest->bResidential?2:Forest->bFarm?1:0;if(auto* Settings=UWildlineUserSettings::Get())State->MatchConfig=Settings->ConfigForMode(State->ExpeditionMode);State->MatchConfig.Clamp();State->MatchConfig.ClassicLayout=Forest->bWinter?1:0;if(Forest->bResidential)State->MatchConfig.NeighborhoodLayout=GetWorld()->GetMapName().Contains(TEXT("Cedar"))?1:0;}
     if(auto* Forest=AWildlineWorld::Find(GetWorld());Forest&&Forest->bFarm){
         GetGameState<AWildlineGameState>()->ExpeditionMode=WildlineRules::FarmMode;
         for(int32 I=0;I<6;I++){
@@ -103,6 +103,7 @@ FVector AWildlineGameMode::SpawnLocation(bool Animal,int32 Index) const{
     const auto* Forest=AWildlineWorld::Find(GetWorld());const bool Farm=Forest&&Forest->bFarm;
     if(Forest&&Forest->bResidential){FVector P=Animal?Forest->CourseStart+FVector(-160,Index*40-160,13):FVector(1500,-1600+Index*100,320);return P;}
     FVector P=Farm?(Animal?FVector(-3900,Index*80-160,0):FVector(1250,700+Index*90,0)):(Animal?FVector(350+Index*65,200+Index*65,0):FVector(0,750+Index*65,0));
+    if(Forest&&Forest->bLake)P=FVector(-11500,Animal?950+Index*65:250+Index*65,0);
     P.Z=(Forest?Forest->GroundHeight(P.X,P.Y):WildlineRules::Ground(P.X,P.Y))+(Animal?13:110);return P;
 }
 void AWildlineGameMode::Logout(AController* Exiting){if(Exiting)if(auto* P=Cast<AWildlineCharacter>(Exiting->GetPawn()))P->ReturnCarriedPeanuts();Super::Logout(Exiting);RefreshBots();}
@@ -110,7 +111,7 @@ void AWildlineGameMode::RecordKill(AWildlineCharacter* Victim,AController* Hunte
     auto* S=GetGameState<AWildlineGameState>();if(!S||S->Winner)return;
     if(Victim)if(auto* PS=Victim->GetPlayerState<AWildlinePlayerState>()){PS->Deaths++;PS->ForceNetUpdate();}
     if(Hunter&&Victim&&Hunter!=Victim->Controller)if(auto* PS=Hunter->GetPlayerState<AWildlinePlayerState>()){PS->Kills++;PS->ForceNetUpdate();}
-    S->HunterKills++;if(S->HunterKills>=S->MatchConfig.DefenderGoal)S->Winner=1;
+    if(Hunter){S->HunterKills++;if(S->HunterKills>=S->MatchConfig.DefenderGoal)S->Winner=1;}
     FTimerHandle Handle;const TWeakObjectPtr<AWildlineCharacter> Weak=Victim;const float Expected=Victim->RespawnAt;GetWorldTimerManager().SetTimer(Handle,FTimerDelegate::CreateWeakLambda(this,[this,Weak,Expected](){if(Weak.IsValid()&&Weak->bDead&&FMath::IsNearlyEqual(Weak->RespawnAt,Expected))RespawnAnimal(Weak);}),S->MatchConfig.RespawnSeconds,false);
 }
 void AWildlineGameMode::RespawnAnimal(TWeakObjectPtr<AWildlineCharacter> Weak){auto* P=Weak.Get();if(!P)return;auto* S=GetGameState<AWildlineGameState>();if(S&&S->Winner)return;P->bDead=false;P->Health=S?S->MatchConfig.SquirrelHealth:40;P->ProtectedUntil=P->ServerTime()+(S?S->MatchConfig.SpawnProtectionSeconds:0);P->Bag=0;P->CourseCheckpoint=0;P->CourseLane=-1;P->Stamina=100;P->RespawnAt=0;P->TreeIndex=INDEX_NONE;P->ResetBotAwareness();FVector Pos=SpawnLocation(true,P->bBot?P->BotSlot+1:0);P->SetActorLocation(Pos,false,nullptr,ETeleportType::TeleportPhysics);P->OnRepDead();P->ForceNetUpdate();}
@@ -124,6 +125,10 @@ void AWildlineController::BeginPlay(){
     FString ProbeName;if(FParse::Value(FCommandLine::Get(),TEXT("WildlineProfileName="),ProbeName))if(auto* S=UWildlineUserSettings::Get()){S->PlayerDisplayName=UWildlineUserSettings::CleanPlayerName(ProbeName);S->Persist();}
     PlayerCameraManager->ViewPitchMin=-80;PlayerCameraManager->ViewPitchMax=80;
     Menu=CreateWidget<UWildlineMenu>(this,UWildlineMenu::StaticClass());if(Menu)Menu->AddToViewport();
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLakeSmoke"))){extern void WildlineRunLakeSmoke(AWildlineController*);WildlineRunLakeSmoke(this);}
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLakeReview"))){extern void WildlineRunLakeReview(AWildlineController*);WildlineRunLakeReview(this);}
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineMapPreview"))){extern void WildlineRunMapPreview(AWildlineController*);WildlineRunMapPreview(this);}
+    if(FParse::Param(FCommandLine::Get(),TEXT("WildlineLakeNetProbe"))){extern void WildlineRunLakeNetwork(AWildlineController*);WildlineRunLakeNetwork(this);}
     Social=CreateWidget<UWildlineSocial>(this,UWildlineSocial::StaticClass());if(Social)Social->AddToViewport(30);
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineSocialReview")))RunSocialReview();
     if(FParse::Param(FCommandLine::Get(),TEXT("WildlineExistingProfileProbe"))||FParse::Param(FCommandLine::Get(),TEXT("WildlineHeadwearReview"))||FParse::Param(FCommandLine::Get(),TEXT("WildlineProfileWriteProbe"))||FParse::Param(FCommandLine::Get(),TEXT("WildlineProfileReadProbe"))){extern void WildlineRunHeadwearReview(AWildlineController*);WildlineRunHeadwearReview(this);}
@@ -583,6 +588,7 @@ void AWildlineController::SetupInputComponent(){Super::SetupInputComponent();Inp
 void AWildlineController::SetMenu(bool Open){
     if(Intro){Intro->Finish();if(Open)return;}
     bMenuOpen=Open;bShowMouseCursor=Open;
+    if(Open)if(auto* P=Cast<AWildlineCharacter>(GetPawn());P&&P->FishingStage)P->ServerCancelFishing();
     if(Open)StartMenuMusic();
     if(Menu){if(Open)Menu->RefreshDifficulty();Menu->SetVisibility(Open?ESlateVisibility::Visible:ESlateVisibility::Collapsed);}
     if(Open){if(auto* P=Cast<AWildlineCharacter>(GetPawn())){P->bFiring=false;P->StopAim();P->StopSprint();}FInputModeGameAndUI Mode;if(Menu)Mode.SetWidgetToFocus(Menu->TakeWidget());Mode.SetHideCursorDuringCapture(false);Mode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);SetInputMode(Mode);}

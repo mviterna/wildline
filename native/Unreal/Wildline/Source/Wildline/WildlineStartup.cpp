@@ -39,7 +39,7 @@ void AWildlineController::StartMenuMusic(){
 void AWildlineController::Tick(float Delta){
     Super::Tick(Delta);if(!IsLocalController())return;
     if(Social){Social->RefreshAt-=Delta;if(Social->RefreshAt<=0){Social->RefreshAt=.4f;Social->Refresh();}}
-    ProfileSyncAt-=Delta;if(ProfileSyncAt<=0&&PlayerState){ProfileSyncAt=.5f;if(const auto* S=UWildlineUserSettings::Get();S&&!S->PlayerDisplayName.IsEmpty()&&PlayerState->GetPlayerName()!=S->PlayerDisplayName)ServerSetProfileName(S->PlayerDisplayName);}
+    ProfileSyncAt-=Delta;if(ProfileSyncAt<=0&&PlayerState){ProfileSyncAt=.5f;if(Menu&&bMenuOpen&&!HasAuthority())Menu->RefreshMode();if(const auto* S=UWildlineUserSettings::Get();S&&!S->PlayerDisplayName.IsEmpty()&&PlayerState->GetPlayerName()!=S->PlayerDisplayName)ServerSetProfileName(S->PlayerDisplayName);}
     if(Menu)Menu->RefreshRoom();
     if(LobbyProbeWalkAt>0&&GetWorld()->GetTimeSeconds()>=LobbyProbeWalkAt){if(auto* P=Cast<AWildlineCharacter>(GetPawn());P&&P->bInLobby)P->AddMovementInput((AWildlineLobby::Portal(P->bSquirrel)-P->GetActorLocation()).GetSafeNormal2D(),1);else LobbyProbeWalkAt=0;}
     if(Menu&&!Intro&&MenuRevealAt>=0){const float U=bMenuOpen?FMath::Clamp((GetWorld()->GetTimeSeconds()-MenuRevealAt)/.45f,0.f,1.f):1.f;Menu->SetRenderOpacity(U*U*(3-2*U));if(U>=1){MenuRevealAt=-10;PlayerCameraManager->StopCameraFade();}}

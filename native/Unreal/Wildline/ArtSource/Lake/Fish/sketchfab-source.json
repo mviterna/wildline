@@ -1,0 +1,157 @@
+{
+  "animationCount": 0,
+  "categories": [
+    {
+      "uid": "ed9e048550b2478eb1ab2faaba192832",
+      "name": "Animals & Pets",
+      "slug": "animals-pets",
+      "uri": "https://api.sketchfab.com/v3/categories/ed9e048550b2478eb1ab2faaba192832",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/926733e187aa5a479aedd2581bffb3ea-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/ed9e048550b2478eb1ab2faaba192832/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/ed9e048550b2478eb1ab2faaba192832/800x450.png"
+        }
+      ]
+    }
+  ],
+  "commentCount": 0,
+  "createdAt": "2025-02-22T11:46:42.903611",
+  "embedUrl": "https://sketchfab.com/models/87a588ddfe904fc8a578082fcc5ebb66/embed",
+  "faceCount": 40000,
+  "isAgeRestricted": false,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "likeCount": 5,
+  "name": "Largemouth bass",
+  "publishedAt": "2025-02-22T11:48:22.057204",
+  "soundCount": 0,
+  "staffpickedAt": null,
+  "tags": [
+    {
+      "name": "fish",
+      "slug": "fish",
+      "uri": "https://api.sketchfab.com/v3/tags/fish"
+    },
+    {
+      "name": "bass",
+      "slug": "bass",
+      "uri": "https://api.sketchfab.com/v3/tags/bass"
+    },
+    {
+      "name": "sport",
+      "slug": "sport",
+      "uri": "https://api.sketchfab.com/v3/tags/sport"
+    }
+  ],
+  "thumbnails": {
+    "images": [
+      {
+        "uid": "aada0c1c034b49ac968302a390a8779d",
+        "width": 1920,
+        "height": 1080,
+        "size": 46120,
+        "url": "https://media.sketchfab.com/models/87a588ddfe904fc8a578082fcc5ebb66/thumbnails/b58804b23aa84f9592baa8c47e15b29e/d42d1d7f87c8468c99b652ce985647c9.jpeg"
+      },
+      {
+        "uid": "5b57a665847d4d8389818c405360062a",
+        "width": 1024,
+        "height": 576,
+        "size": 14591,
+        "url": "https://media.sketchfab.com/models/87a588ddfe904fc8a578082fcc5ebb66/thumbnails/b58804b23aa84f9592baa8c47e15b29e/83cbf4ca7d1e4ecc9e3d99980c67f88d.jpeg"
+      },
+      {
+        "uid": "20a0bd6d41b14777a178fad4817f8f65",
+        "width": 720,
+        "height": 405,
+        "size": 8138,
+        "url": "https://media.sketchfab.com/models/87a588ddfe904fc8a578082fcc5ebb66/thumbnails/b58804b23aa84f9592baa8c47e15b29e/04f2bbe9f0cb46eab1b6c1cb8c9929da.jpeg"
+      },
+      {
+        "uid": "19b4732ebf0e437e93dd160e6694f46a",
+        "width": 256,
+        "height": 144,
+        "size": 1878,
+        "url": "https://media.sketchfab.com/models/87a588ddfe904fc8a578082fcc5ebb66/thumbnails/b58804b23aa84f9592baa8c47e15b29e/ac658993fb76497491ff37f7f5a6961b.jpeg"
+      },
+      {
+        "uid": "4869b65e61914ab1a920bd85f05e903f",
+        "width": 64,
+        "height": 36,
+        "size": 813,
+        "url": "https://media.sketchfab.com/models/87a588ddfe904fc8a578082fcc5ebb66/thumbnails/b58804b23aa84f9592baa8c47e15b29e/2d44a536ffd64638b266982f9861c2b8.jpeg"
+      }
+    ]
+  },
+  "uid": "87a588ddfe904fc8a578082fcc5ebb66",
+  "uri": "https://api.sketchfab.com/v3/models/87a588ddfe904fc8a578082fcc5ebb66",
+  "user": {
+    "uid": "a7d6c4ae04aa477ead62a72204a1f2d3",
+    "username": "faerbogdan99",
+    "displayName": "faerbogdan99",
+    "account": "basic",
+    "profileUrl": "https://sketchfab.com/faerbogdan99",
+    "avatar": {
+      "uid": "932ca2856c024e48862d475c337883da",
+      "uri": "https://api.sketchfab.com/v3/avatars/932ca2856c024e48862d475c337883da",
+      "images": [
+        {
+          "width": 32,
+          "height": 32,
+          "size": 1196,
+          "url": "https://media.sketchfab.com/avatars/932ca2856c024e48862d475c337883da/5ad9a259cb284cb7b4e11971d2ecebff.jpeg"
+        },
+        {
+          "width": 48,
+          "height": 48,
+          "size": 1835,
+          "url": "https://media.sketchfab.com/avatars/932ca2856c024e48862d475c337883da/f5ef4682c14f4fa795edc1d0c1dcdb04.jpeg"
+        },
+        {
+          "width": 90,
+          "height": 90,
+          "size": 4452,
+          "url": "https://media.sketchfab.com/avatars/932ca2856c024e48862d475c337883da/2bbe9a952d9c48e0ac28c123e0867cf6.jpeg"
+        },
+        {
+          "width": 100,
+          "height": 100,
+          "size": 5183,
+          "url": "https://media.sketchfab.com/avatars/932ca2856c024e48862d475c337883da/0f089656c39d4af8ab90d0a0de4d3114.jpeg"
+        }
+      ]
+    },
+    "uri": "https://api.sketchfab.com/v3/users/a7d6c4ae04aa477ead62a72204a1f2d3"
+  },
+  "vertexCount": 20002,
+  "viewCount": 182,
+  "viewerUrl": "https://sketchfab.com/3d-models/largemouth-bass-87a588ddfe904fc8a578082fcc5ebb66",
+  "isDownloadable": true,
+  "isProtected": false,
+  "description": "Largemouth bass (Micropterus salmoides), або великоротий окунь, — це хижа прісноводна риба з родини центрахових (Centrarchidae), поширена в Північній Америці та завезена в багато інших регіонів світу.\nОпис:\nРозмір: Дорослі особини зазвичай досягають 30–60 см у довжину, вага може сягати 4–6 кг, хоча зафіксовані екземпляри понад 10 кг.\nЗабарвлення: Зазвичай має оливково-зелене або зеленувато-коричневе тіло з темною горизонтальною смугою вздовж боків. Черево світле, майже біле.\nГолова: Відмінною рисою є великий рот, який тягнеться далеко за задній край ока.\nПоширення та середовище існування:\nПриродно поширений у водоймах США, Канади та Мексики, але його інтродуковано в багато країн через популярність у спортивному рибальстві.\nВіддає перевагу озерам, ставкам, повільним річкам та заболоченим ділянкам із густою водною рослинністю.\nХарчування:\nХижак, що полює на дрібну рибу, жаб, ракоподібних, комах і навіть дрібних ссавців або птахів.\nЄ засадним мисливцем, що ховається серед рослинності та різко атакує здобич.",
+  "price": null,
+  "downloadCount": 77,
+  "editorUrl": "https://sketchfab.com/models/87a588ddfe904fc8a578082fcc5ebb66/edit",
+  "status": {
+    "warning": {},
+    "processing": "SUCCEEDED"
+  },
+  "source": "website",
+  "hasCommentsDisabled": false,
+  "updatedAt": "2025-02-22T11:49:19.006975",
+  "pbrType": "metalness",
+  "textureCount": 4,
+  "materialCount": 1
+}

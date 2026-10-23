@@ -48,4 +48,10 @@ try {
     $taskEnvelope | ConvertTo-Json -Compress | Set-Content -LiteralPath (Join-Path $taskOutput 'latest.json') -Encoding UTF8
     Copy-Item -LiteralPath $taskReceipt.bootstrapPath -Destination (Join-Path $taskOutput 'WildlineSetup.exe') -Force
 } finally { $taskRsa.Dispose(); if ($taskPrivate) { [Array]::Clear($taskPrivate,0,$taskPrivate.Length) } }
+# Fixture receipts have their own temporary outputs. Pruning the normal build
+# tree here would remove the fixture while VerifyUpdates is still using it.
+$taskCurrentReceipt = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../Build/Beta/LatestInstaller.json'))
+if ([IO.Path]::GetFullPath($ReceiptPath) -eq $taskCurrentReceipt) {
+    & (Join-Path $PSScriptRoot '../CleanBuildOutputs.ps1')
+}
 Write-Output $taskOutput

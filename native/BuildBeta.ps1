@@ -116,4 +116,6 @@ $taskReceipt = [ordered]@{
     bootstrapSha256 = (Get-FileHash (Join-Path $taskOutput 'WildlineSetup.exe') -Algorithm SHA256).Hash
 }
 $taskReceipt | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $taskOutput 'LatestInstaller.json') -Encoding UTF8
+# Git stores history; retain only the completed game and current distributables.
+& (Join-Path $PSScriptRoot 'CleanBuildOutputs.ps1')
 Write-Output "Ready to send: $taskSetup"

@@ -1,5 +1,6 @@
 #include "WildlineHUD.h"
 #include "WildlineLobby.h"
+#include "WildlineLake.h"
 #include "WildlineCharacter.h"
 #include "WildlineGame.h"
 #include "WildlineWorld.h"
@@ -15,9 +16,11 @@ void AWildlineHUD::Label(const FString& Text,float X,float Y,float Size,FLinearC
 void AWildlineHUD::DrawHUD(){
     Super::DrawHUD();auto* PC=Cast<AWildlineController>(GetOwningPlayerController());auto* P=PC?Cast<AWildlineCharacter>(PC->GetPawn()):nullptr;auto* S=GetWorld()->GetGameState<AWildlineGameState>();if(!Canvas||!P||!S||PC->bMenuOpen)return;
     const bool Hill=S->ExpeditionMode==WildlineRules::HillMode,Farm=S->ExpeditionMode==WildlineRules::FarmMode;const float W=Canvas->SizeX,H=Canvas->SizeY,CX=W*.5f,CY=H*.5f;const FLinearColor Cream(.88f,.91f,.78f),Sage(.70f,.79f,.51f),Dim(.63f,.70f,.60f),Panel(.025f,.04f,.032f,.65f);
+    DrawLakeActivity(P);
     if(P->bInLobby){
+        if(P->FishingStage){Label(TEXT("TAYLORSVILLE LAKE / DOCK FISHING"),30,30,16,Sage);return;}
         DrawRect(Panel,20,18,W-40,111);
-        Label(P->bSquirrel?TEXT("THE ACORN HOLLOW"):TEXT("BLACKWOOD HUNTING LODGE"),38,30,23,Cream);
+        Label(P->bSquirrel?TEXT("THE ACORN HOLLOW"):S->ExpeditionMode==3?TEXT("TAYLORSVILLE LAKE LODGE"):TEXT("BLACKWOOD HUNTING LODGE"),38,30,23,Cream);
         Label(P->bSquirrel?TEXT("SQUIRREL / Forage, climb and leap"):P->SelectedWeapon==1?TEXT("EQUIPPED / Pump-action shotgun"):TEXT("EQUIPPED / Sporting rifle"),38,65,14,Sage);
         Label(S->Winner?TEXT("ROUND FINISHED / Press F5 for the next round"):S->bRoundStarted?TEXT("ROUND IN PROGRESS / Step onto your portal to join"):FString::Printf(TEXT("%d / %d READY / The round starts when everyone is on a portal"),S->LobbyReadyPlayers,S->LobbyPlayers),38,96,12,Dim);
         DrawRect(Panel,20,H-110,W-40,90);
@@ -39,7 +42,7 @@ void AWildlineHUD::DrawHUD(){
         DrawRect(FLinearColor::Black,CX-4,CY-4,8,8);DrawRect(FLinearColor(1.f,.2f,.06f),CX-2,CY-2,4,4);
         Label(P->IsThermalActive()?TEXT("THERMAL IMAGING"):TEXT("BLACKWOOD OPTICS"),CX-85,CY-Radius+60,12,Cream);if(P->IsThermalActive())Label(FString::Printf(TEXT("%.1fs"),FMath::Max(0.f,P->ThermalUntil-P->ServerTime())),CX-20,CY-Radius+85,15,Sage);
     }else {DrawLine(CX-5,CY,CX+5,CY,Cream,1);DrawLine(CX,CY-5,CX,CY+5,Cream,1);}
-    Label(Hill?TEXT("W  /  KING OF THE HILL"):Farm?TEXT("W  /  FARM RAID"):S->MatchConfig.ClassicLayout==1?TEXT("W  /  FROSTWOOD RESERVE"):TEXT("W  /  BLACKWOOD RESERVE"),30,25,18,Cream);Label(P->bSquirrel?TEXT("SQUIRREL"):Farm?TEXT("FARMER"):Hill?TEXT("DEFENDER"):TEXT("HUNTER"),30,50,11,Sage);
+    Label(S->ExpeditionMode==3?TEXT("W  /  TAYLORSVILLE LAKE"):Hill?TEXT("W  /  KING OF THE HILL"):Farm?TEXT("W  /  FARM RAID"):S->MatchConfig.ClassicLayout==1?TEXT("W  /  FROSTWOOD RESERVE"):TEXT("W  /  BLACKWOOD RESERVE"),30,25,18,Cream);Label(P->bSquirrel?TEXT("SQUIRREL"):Farm?TEXT("FARMER"):Hill?TEXT("DEFENDER"):TEXT("HUNTER"),30,50,11,Sage);
     Label(FString::Printf(TEXT("%d / %d KILLS    %s    %s %d / %d"),S->HunterKills,S->MatchConfig.DefenderGoal,*ClockText(S->RoundRemaining()),Hill?TEXT("FEEDER TRIPS"):TEXT("STORED"),S->StoredAcorns,S->MatchConfig.SquirrelGoal),CX-260,30,14,Cream);
     if(!P->IsScoped()){
         Label(TEXT("FIELD OBJECTIVE"),30,120,11,Sage);
@@ -66,7 +69,7 @@ void AWildlineHUD::DrawReserveMap(AWildlineCharacter* P,AWildlineGameState* S,AW
     const float Range=Zoom?3500.f:F->bResidential?5500.f:F->bFarm?7000.f:WildlineRules::MapRadius+400;const FVector Origin=Zoom?P->GetActorLocation():FVector::ZeroVector;
     const FLinearColor Cream(.94f,.96f,.84f),Gold(1.f,.72f,.25f),Home(.56f,.9f,.7f),Red(1.f,.28f,.21f),Muted(.53f,.64f,.56f);
     DrawRect(FLinearColor(.013f,.026f,.022f,.94f),30,H-367,248,267);
-    DrawLine(30,H-367,278,H-367,Home,.8f);Label(FString::Printf(TEXT("%s  /  %s"),F->bResidential?TEXT("NEIGHBORHOOD"):F->bFarm?TEXT("FARMSTEAD"):F->bWinter?TEXT("FROSTWOOD"):TEXT("BLACKWOOD"),S->MatchConfig.MapIntel==0?TEXT("FULL INTEL"):S->MatchConfig.MapIntel==2?TEXT("LIMITED INTEL"):TEXT("NEARBY INTEL")),42,H-356,10,Cream);
+    DrawLine(30,H-367,278,H-367,Home,.8f);Label(FString::Printf(TEXT("%s  /  %s"),F->bLake?TEXT("TAYLORSVILLE"):F->bResidential?TEXT("NEIGHBORHOOD"):F->bFarm?TEXT("FARMSTEAD"):F->bWinter?TEXT("FROSTWOOD"):TEXT("BLACKWOOD"),S->MatchConfig.MapIntel==0?TEXT("FULL INTEL"):S->MatchConfig.MapIntel==2?TEXT("LIMITED INTEL"):TEXT("NEARBY INTEL")),42,H-356,10,Cream);
     Label(Zoom?TEXT("M: RESERVE MAP  /  70 m"):F->bFarm?TEXT("M: ZOOM IN  /  140 m"):TEXT("M: ZOOM IN  /  290 m"),42,H-344,8,Muted);
     auto Map=[&](FVector World){const FVector D=(World-Origin)*(Half/Range);return Centre+FVector2D(D.Y,-D.X);};
     auto Inside=[&](FVector2D Point,float Margin=3.f){return FMath::Abs(Point.X-Centre.X)<Half-Margin&&FMath::Abs(Point.Y-Centre.Y)<Half-Margin;};
@@ -77,11 +80,13 @@ void AWildlineHUD::DrawReserveMap(AWildlineCharacter* P,AWildlineGameState* S,AW
         const float WX=Origin.X+(1-(Y+.5f)/12.f)*Range,WY=Origin.Y+((X+.5f)/12.f-1)*Range;
         if(FVector2D(WX,WY).Size()>WildlineRules::MapRadius)continue;
         const float Shade=FMath::Clamp((F->GroundHeight(WX,WY)+550)/1100.f,0.f,1.f);
-        DrawRect(FLinearColor(.035f+Shade*.025f,.085f+Shade*.045f,.059f+Shade*.025f),Centre.X-Half+X*9,Centre.Y-Half+Y*9,9,9);
+        const bool Water=F->bLake&&AWildlineLake::RadiusAt(FVector(WX,WY,0))<1;
+        DrawRect(Water?FLinearColor(.045f,.24f,.30f):FLinearColor(.035f+Shade*.025f,.085f+Shade*.045f,.059f+Shade*.025f),Centre.X-Half+X*9,Centre.Y-Half+Y*9,9,9);
     }
     for(int32 I=1;I<6;I++){const float Offset=-Half+I*Half/3;DrawLine(Centre.X+Offset,Centre.Y-Half,Centre.X+Offset,Centre.Y+Half,FLinearColor(.06f,.12f,.09f,.25f));DrawLine(Centre.X-Half,Centre.Y+Offset,Centre.X+Half,Centre.Y+Offset,FLinearColor(.06f,.12f,.09f,.25f));}
     for(int32 I=0;I<96;I++){const float A=I*2*PI/96,B=(I+1)*2*PI/96;Segment(FVector(FMath::Cos(A),FMath::Sin(A),0)*WildlineRules::MapRadius,FVector(FMath::Cos(B),FMath::Sin(B),0)*WildlineRules::MapRadius,FLinearColor(.48f,.64f,.46f,.7f));}
-    if(!F->bFarm&&!F->bResidential)for(float X=-14000;X<14000;X+=250){auto Trail=[](float D){return FVector(D,700+FMath::Sin(D*.0007f)*210,0);};Segment(Trail(X),Trail(X+250),FLinearColor(.54f,.48f,.3f,.5f),Zoom?2.f:1.f);}
+    if(F->bLake){for(int32 I=0;I<128;I++)Segment(AWildlineLake::TrailPoint(I*2*PI/128),AWildlineLake::TrailPoint((I+1)*2*PI/128),Gold,1.5f);}
+    else if(!F->bFarm&&!F->bResidential)for(float X=-14000;X<14000;X+=250){auto Trail=[](float D){return FVector(D,700+FMath::Sin(D*.0007f)*210,0);};Segment(Trail(X),Trail(X+250),FLinearColor(.54f,.48f,.3f,.5f),Zoom?2.f:1.f);}
     for(const auto& T:F->Trees){const auto Dot=Map(T.Base);if(Inside(Dot))DrawRect(FLinearColor(.18f,.33f,.24f,.7f),Dot.X-1,Dot.Y-1,2,2);}
     if(F->bFarm){
         auto Building=[&](FVector C,FVector Extent,const TCHAR* Name){Segment(C+FVector(-Extent.X,-Extent.Y,0),C+FVector(Extent.X,-Extent.Y,0),Gold);Segment(C+FVector(Extent.X,-Extent.Y,0),C+FVector(Extent.X,Extent.Y,0),Gold);Segment(C+FVector(Extent.X,Extent.Y,0),C+FVector(-Extent.X,Extent.Y,0),Gold);Segment(C+FVector(-Extent.X,Extent.Y,0),C+FVector(-Extent.X,-Extent.Y,0),Gold);const auto M=Map(C);if(Inside(M,20))Label(Name,M.X-16,M.Y-4,8,Gold);};

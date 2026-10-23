@@ -1,5 +1,6 @@
 #include "WildlineCharacter.h"
 #include "WildlineWorld.h"
+#include "WildlineLake.h"
 #include "WildlineGame.h"
 #include "WildlineRules.h"
 #include "AIController.h"
@@ -57,6 +58,7 @@ FVector AWildlineCharacter::BotSteering(FVector Target,bool bSeparate)const{
     FVector Best=FVector::ZeroVector;float BestScore=-MAX_flt;
     for(float Angle:{0.f,30.f,-30.f,60.f,-60.f,90.f,-90.f,125.f,-125.f,170.f}){
         const FVector Heading=Desired.RotateAngleAxis(Angle,FVector::UpVector);FVector End=Start+Heading*Reach;
+        if(Forest->bLake&&AWildlineLake::RadiusAt(End)<1.1f)continue;
         if(End.Size2D()>WildlineRules::MapRadius-100)continue;
         // Follow physical support, including raised porch ramps. A flat forward
         // sweep mistakes any uphill ramp for a wall and steers away forever.

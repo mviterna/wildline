@@ -1,4 +1,5 @@
 #include "WildlineLobby.h"
+#include "WildlineWorld.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/RectLightComponent.h"
 #include "Engine/StaticMesh.h"
@@ -11,12 +12,20 @@ UMaterialInterface* RoomMaterial(const TCHAR* Name){return LoadObject<UMaterialI
 
 void AWildlineLobby::BuildLodge(){
     const FVector O=Centre(false);
-    Model(TEXT("SM_LodgeArchitecture"),O);
+    const auto* F=AWildlineWorld::Find(GetWorld());const bool Lake=F&&F->bLake;
+    if(Lake){
+        auto* C=Piece(TEXT("Lake lodge architecture"),TEXT("Cube"),O,FVector(100),nullptr);
+        C->SetStaticMesh(LoadObject<UStaticMesh>(nullptr,TEXT("/Game/Wildline/Lake/Meshes/SM_LakeLodgeArchitecture.SM_LakeLodgeArchitecture")));C->EmptyOverrideMaterials();
+    }else Model(TEXT("SM_LodgeArchitecture"),O);
     // Collision is independent of the visual meshes, so art revisions do not
     // alter portal/rack geometry or cause expensive per-log movement queries.
     auto Hidden=[this](const TCHAR* Name,FVector P,FVector Size){auto* C=Piece(Name,TEXT("Cube"),P,Size,nullptr,FRotator::ZeroRotator,true);C->SetVisibility(false);C->SetCastShadow(false);};
     Hidden(TEXT("Lodge floor collision"),O-FVector(0,0,10),FVector(1420,1420,20));
-    for(float Side:{-1.f,1.f}){Hidden(TEXT("Lodge side wall collision"),O+FVector(Side*710,0,245),FVector(35,1460,490));Hidden(TEXT("Lodge end wall collision"),O+FVector(0,Side*710,245),FVector(1460,35,490));}
+    for(float Side:{-1.f,1.f}){
+        if(Lake&&Side>0){Hidden(TEXT("Lodge door left wall"),O+FVector(710,-357.5f,245),FVector(35,745,490));Hidden(TEXT("Lodge door right wall"),O+FVector(710,482.5f,245),FVector(35,495,490));Hidden(TEXT("Lodge door lintel"),O+FVector(710,125,422),FVector(35,220,136));}
+        else Hidden(TEXT("Lodge side wall collision"),O+FVector(Side*710,0,245),FVector(35,1460,490));
+        Hidden(TEXT("Lodge end wall collision"),O+FVector(0,Side*710,245),FVector(1460,35,490));
+    }
     Hidden(TEXT("Lodge ceiling collision"),O+FVector(0,0,490),FVector(1460,1460,20));
     // A coherent leather-and-oak lounge replaces the outdoor picnic furniture.
     // Leave the central spawn, equipment and ready-portal routes open.
@@ -82,7 +91,7 @@ void AWildlineLobby::BuildLodge(){
         Piece(TEXT("Painting light wall mount"),TEXT("Cube"),O+P+FVector(68,0,18),FVector(4,9,12),DetailMaterial(TEXT("M_PaintingGilt")));
         Light(O+P+FVector(-15,0,-65),FLinearColor(1,.93f,.84f),2400,270);
     }
-    Sign(TEXT("BLACKWOOD HUNTING LODGE"),O+FVector(674,0,411),22);
+    Sign(Lake?TEXT("TAYLORSVILLE LAKE LODGE"):TEXT("BLACKWOOD HUNTING LODGE"),O+FVector(674,0,411),22);
     BuildLodgeDetails();
 }
 

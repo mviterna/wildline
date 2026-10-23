@@ -36,12 +36,31 @@ accuracy and feeder scores. Stats reset each round and survive team changes.
 Your Settings includes graphics presets, AA method/quality, textures, shadows,
 lighting, reflections, effects, foliage, render scale, VSync and frame limits.
 Press Apply Graphics to save those choices locally.
-Choose Classic, Farm Raid or King of the Hill, a hunter/squirrel, then Enter the
-Wild for solo play. WASD moves; mouse looks; Shift sprints; Space jumps.
+Click Map to browse preview thumbnails and descriptions for Blackwood,
+Frostwood, Farmstead, Maple Crescent, Cedar Backyards, or Taylorsville Lake.
+Choose a hunter/squirrel, then Enter Waiting Room. Select equipment at the
+weapon racks and stand on the ready portal when everyone is ready.
+WASD moves; mouse looks; Shift sprints; Space jumps; C or Ctrl crouches.
 Hunter: left mouse fires, right mouse aims, R reloads, T toggles rifle thermal.
 Squirrel: E grabs/releases a nearby tree, WASD climbs, Space launches away.
 V changes camera; M changes minimap zoom; Esc opens camp/settings.
 Mouse Y starts inverted; change it under Your Settings if desired.
+
+Taylorsville Lake
+The lodge door leads to a dock with moored boats, rods, bait and tackle. At the
+end of the dock, E picks up a rod. Hold left mouse and release to cast, or use
+E for a quick cast. Press E during a bite to hook the fish. Hold left mouse
+to reel; release to ease fish surges. The green tension zone gains line fastest;
+a full bar snaps the line. Catches show the bass and weight before releasing it.
+R returns the rod; walking away cancels fishing. Instructions fade shortly after
+pickup. Fishing keeps you in the waiting
+area until you use the lodge's ready portal.
+The hunting reserve has a roughly 200-meter lake, coves, a shore trail, and
+submerged textured bass, rocks and
+fallen limbs. Hunters swim automatically in deep water. WASD swims; look up
+or down to steer forward swimming; Space rises; Ctrl dives. Rifle and shotgun
+fire are disabled underwater. Squirrels cannot swim and die in the water,
+then respawn on dry land without awarding a hunter kill.
 
 Co-op
 Connect all four PCs to the same Hamachi network. Anyone can Host Co-op

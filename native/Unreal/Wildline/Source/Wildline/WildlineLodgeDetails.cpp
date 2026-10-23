@@ -1,4 +1,5 @@
 #include "WildlineLobby.h"
+#include "WildlineWorld.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/HierarchicalInstancedStaticMeshComponent.h"
 #include "Engine/StaticMesh.h"
@@ -16,7 +17,11 @@ void AWildlineLobby::BuildLodgeDetails(){
         Light(O+FVector(X,Side*615,260),FLinearColor(.69f,.83f,1),1200,510);
         Model(TEXT("SM_wooden_bowl_01"),O+FVector(X+65,Side*668,151),FVector(0,0,10));
     }
-    Model(TEXT("SM_LodgeWindowDressings"),O+FVector(687,125,155),FVector::ZeroVector,FRotator(0,180,0));
+    const auto* Forest=AWildlineWorld::Find(GetWorld());
+    if(Forest&&Forest->bLake){
+        for(float Y:{15.f,235.f})Piece(TEXT("Lake lodge door jamb"),TEXT("Cube"),O+FVector(687,Y,175),FVector(18,14,350),LodgeSurface(TEXT("M_WindowOak")));
+        Piece(TEXT("Lake lodge door header"),TEXT("Cube"),O+FVector(687,125,355),FVector(18,234,16),LodgeSurface(TEXT("M_WindowOak")));
+    }else Model(TEXT("SM_LodgeWindowDressings"),O+FVector(687,125,155),FVector::ZeroVector,FRotator(0,180,0));
     Light(O+FVector(600,125,260),FLinearColor(.69f,.83f,1),1200,510);
     Model(TEXT("SM_LodgeClock"),O+FVector(95,683,350),FVector::ZeroVector,FRotator(0,-90,0));
     Model(TEXT("SM_LodgePegRail"),O+FVector(-681,100,163));

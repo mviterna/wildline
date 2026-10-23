@@ -19,6 +19,16 @@ class UScaleBox;
 class UWildlineMenu;
 class UWildlineGraphics;
 UCLASS()
+class WILDLINE_API UWildlineMapCard : public UUserWidget {
+    GENERATED_BODY()
+public:
+    UPROPERTY() UWildlineMenu* Menu=nullptr;
+    UPROPERTY() UButton* Button=nullptr;
+    int32 MapIndex=0;
+    TSharedRef<SWidget> RebuildWidget() override;
+    UFUNCTION() void Select();
+};
+UCLASS()
 class WILDLINE_API UWildlineChoice : public UComboBoxString {
     GENERATED_BODY()
 public:
@@ -111,6 +121,11 @@ public:
     UFUNCTION() void ShowRules();
     UFUNCTION() void ShowBots();
     UFUNCTION() void ShowSettings();
+    UFUNCTION() void ShowMaps();
+    UPROPERTY() TArray<UWildlineMapCard*> MapCards;
+    UPROPERTY() UScrollBox* MapScroll=nullptr;
+    UPROPERTY() UTextBlock* SelectedMapLabel=nullptr;
+    void SelectMap(int32 Index);
     UPROPERTY() UTextBlock* SquirrelPointsLabel;
     bool bRefreshingConfig=false;
     void RefreshConfig();

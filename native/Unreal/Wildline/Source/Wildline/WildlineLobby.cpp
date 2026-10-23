@@ -1,4 +1,6 @@
 #include "WildlineLobby.h"
+#include "WildlineLake.h"
+#include "WildlineWorld.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/TextRenderComponent.h"
 #include "Components/PointLightComponent.h"
@@ -23,13 +25,21 @@ void AWildlineLobby::Tick(float DeltaSeconds){
     if(HearthLight){const float T=GetWorld()->GetTimeSeconds();HearthLight->SetIntensity(4200.f*(.94f+.04f*FMath::Sin(T*4.7f)+.02f*FMath::Sin(T*10.3f)));}
     auto* PC=GetWorld()->GetFirstPlayerController();
     const FVector Eye=PC&&PC->PlayerCameraManager?PC->PlayerCameraManager->GetCameraLocation()-Centre(false):FVector(0,0,-10000);
-    const bool Visible=FMath::Abs(Eye.X)<760&&FMath::Abs(Eye.Y)<760&&Eye.Z>-50&&Eye.Z<510;
+    const auto* F=AWildlineWorld::Find(GetWorld());
+    const bool Visible=(FMath::Abs(Eye.X)<760&&FMath::Abs(Eye.Y)<760&&Eye.Z>-50&&Eye.Z<510)||(F&&F->bLake&&AWildlineLake::InLodgeGrounds(Eye+Centre(false)));
     const FVector TreeEye=PC&&PC->PlayerCameraManager?PC->PlayerCameraManager->GetCameraLocation()-Centre(true):FVector(0,0,-10000);
     const bool TreeVisible=FMath::Abs(TreeEye.X)<520&&FMath::Abs(TreeEye.Y)<520&&TreeEye.Z>-50&&TreeEye.Z<510;
     // Waiting rooms live above the reserve; only the peer looking from inside
     // a room should render their architecture, furniture, signs and portals.
     SetActorHiddenInGame(!Visible&&!TreeVisible);
-    for(auto* Prop:Props)if(Prop&&Prop->bCastHiddenShadow)Prop->SetCastShadow(Visible||TreeVisible);
+    if(F&&F->bLake){
+        // The outdoor dock can see across to the other waiting-room position.
+        // Hide that room independently while retaining authored invisible
+        // collision and shadow envelopes on the room being viewed.
+        TArray<USceneComponent*> Components;GetComponents(Components);
+        for(auto* C:Components){const FVector P=C->GetComponentLocation();const bool Tree=FVector::DistSquared2D(P,Centre(true))<FVector::DistSquared2D(P,Centre(false));C->SetHiddenInGame(Tree?!TreeVisible:!Visible);}
+    }
+    for(auto* Prop:Props)if(Prop&&Prop->bCastHiddenShadow){const bool Tree=FVector::DistSquared2D(Prop->GetComponentLocation(),Centre(true))<FVector::DistSquared2D(Prop->GetComponentLocation(),Centre(false));Prop->SetCastShadow(F&&F->bLake?(Tree?TreeVisible:Visible):(Visible||TreeVisible));}
     if(Visible!=bLodgeSceneryVisible){bLodgeSceneryVisible=Visible;for(auto* C:LodgeScenery)if(C)C->SetVisibility(Visible,true);}
 }
 FVector AWildlineLobby::Centre(bool S){return FVector(S?2400:-2400,-6500,5500);}

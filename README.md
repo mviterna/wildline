@@ -51,6 +51,39 @@ reimport instructions are in `ArtSource/Presentation/PROVENANCE.md`. Use
 `native/VerifyPresentationPackage.ps1 -Capture` to verify the packaged sequence,
 duration/skip, cleanup and gameplay entry, and capture the studio logo and menu.
 
+**Map** opens a map guide with in-game preview thumbnails and detailed descriptions
+for Blackwood, Frostwood, Farmstead, Maple Crescent, Cedar Backyards, and
+**Taylorsville Lake**. Select a card, then enter the waiting room or host the room.
+Map choices retain the corresponding Classic, Farm Raid, or Bird Feeder rules;
+Taylorsville Lake has its own saved woodland hunting rules.
+
+At Taylorsville Lake, walk through the hunter lodge's east door to a veranda and
+fishing dock with moored boats, rods, bait buckets, and tackle. At the end of the
+dock, **E** picks up a detailed spinning rod with animated hands. Hold **LMB**
+to choose casting strength, then release to cast (or press **E** for a quick cast).
+Press **E** during a bite to set the hook. Hold **LMB** to reel and release to ease
+fish surges; the green tension zone gains line fastest. A full bar snaps the line.
+Catches show the textured bass and weight before releasing it. **R** returns the
+rod; walking away cancels. Pickup instructions fade after about five seconds.
+Fishing does not start
+the match or count as ready; use the lodge portal when everyone is ready.
+
+The hunting reserve has a roughly 200-meter lake (over five times its original
+water area), coves and a continuous shore trail. Both teams spawn in dry woodland.
+The lodge lake is also much larger. Hunters enter
+swimming automatically in deep water: **WASD** swims, looking up/down directs
+forward swimming, **Space** rises, and **Ctrl** dives. Fish, limestone rocks and
+fallen limbs populate the water. Bass use attributed textured PBR models with
+tail movement; see `ArtSource/Lake/PROVENANCE.md`. Rifle and shotgun fire are blocked underwater
+by the server. Squirrels cannot swim: entering the water kills them and they
+respawn on dry land without awarding hunters a kill.
+
+Run `native/VerifyLakePackage.ps1 -Capture -Network` for the packaged lake checks,
+two-process replication checks, and visual captures. Original lake asset sources
+are in `native/Unreal/Wildline/ArtSource/Lake`; rebuild them with
+`Scripts/generate_lake_assets.py` in Blender and `Scripts/import_lake_assets.py`
+in Unreal. `Scripts/import_map_previews.py` imports the actual map captures.
+
 ## Send a Windows beta to a friend
 
 Double-click **Build Windows Game.cmd** or **Build Beta Installer.cmd**. Both
@@ -297,6 +330,14 @@ git lfs pull
 ```
 
 Use Unreal Engine 5.8.3 and the Windows C++ toolchain to build the native project.
+New binary art assets, including Taylorsville Lake, stay on the build PC and are
+excluded from new source commits. Existing LFS assets and history remain in this
+repository. A fresh clone also needs a copy of the local `Content` and `ArtSource`
+assets before it can reproduce the current game; keep those assets backed up
+separately. Code, configuration, authoring scripts, and attribution remain in Git.
+Local builds package the assets into installers uploaded as GitHub Release assets
+in `mviterna/wildline-downloads`, so player updates add no Git LFS objects.
+
 The engine installation, packaged game, build caches, local test output and
 authoring downloads are excluded from the repository. The launch/build scripts
 use the local engine installation; adjust its path for another computer.

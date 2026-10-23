@@ -1,0 +1,31 @@
+[
+  {
+    "name": "SM_FishingBoat",
+    "source": "Original WILDLINE procedural artwork",
+    "triangles": 7184
+  },
+  {
+    "name": "SM_FishingRod",
+    "source": "Original WILDLINE procedural artwork",
+    "triangles": 1452
+  },
+  {
+    "name": "SM_LakeFish",
+    "source": "Original WILDLINE procedural artwork",
+    "triangles": 1366
+  },
+  {
+    "name": "SM_LakeLodgeArchitecture",
+    "dimensions_m": [
+      14.412060737609863,
+      14.412060737609863,
+      5.047017574310303
+    ],
+    "triangles": 610700,
+    "materials": [
+      "M_HearthStone",
+      "M_LodgeFloor",
+      "M_LodgeTimber"
+    ]
+  }
+]

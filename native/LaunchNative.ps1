@@ -48,9 +48,13 @@ if ($Build) {
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Lobby/PROVENANCE.md') -Destination (Join-Path $packageRoot 'LobbyAssetCredits.md') -Force
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Neighborhood/PROVENANCE.md') -Destination (Join-Path $packageRoot 'NeighborhoodAssetCredits.md') -Force
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Squirrel/PROVENANCE.md') -Destination (Join-Path $packageRoot 'SquirrelAssetCredits.md') -Force
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Lake/PROVENANCE.md') -Destination (Join-Path $packageRoot 'LakeAssetCredits.md') -Force
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'Unreal/Wildline/ArtSource/Audio/PROVENANCE.md') -Destination (Join-Path $packageRoot 'AudioCredits.md') -Force
     Publish-WildlineBuild -PackageRoot $packageRoot | Out-Null
-    if ($SkipInstaller) { exit 0 }
+    if ($SkipInstaller) {
+        & (Join-Path $PSScriptRoot 'CleanBuildOutputs.ps1')
+        exit 0
+    }
     # Every packaged build also produces the distributable installer. The
     # staging-only switch prevents BuildBeta from starting another game build.
     $installerArguments = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', (Join-Path $PSScriptRoot 'BuildBeta.ps1'), '-SkipGameBuild', '-EngineRoot', $engineRoot, '-PackageRoot', $packageRoot)

@@ -27,6 +27,41 @@ public:
     UPROPERTY(Replicated) bool bBot=false;
     UPROPERTY(Replicated) bool bInLobby=false;
     UPROPERTY(Replicated) bool bLobbyReady=false;
+    UPROPERTY(Replicated) bool bSwimming=false;
+    // 0 stowed, 1 waiting, 2 bite, 3 fighting, 4 pickup, 5 equipped,
+    // 6 casting, 7 landing/releasing, 8 returning the rod.
+    UPROPERTY(Replicated) int32 FishingStage=0;
+    UPROPERTY(Replicated) float FishingUntil=0;
+    UPROPERTY(Replicated) float FishingProgress=0;
+    UPROPERTY(Replicated) float FishingTension=0;
+    UPROPERTY(Replicated) float FishingStageAt=0;
+    UPROPERTY(Replicated) float FishingEquippedAt=0;
+    UPROPERTY(Replicated) float FishingChargeAt=0;
+    UPROPERTY(Replicated) float FishingPower=.5f;
+    UPROPERTY(Replicated) float FishingWeight=1.f;
+    UPROPERTY(Replicated) bool bFishingReeling=false;
+    UPROPERTY(Replicated) int32 FishCaught=0;
+    UPROPERTY(Replicated) FString FishingResult;
+    UPROPERTY(Replicated) float FishingResultUntil=0;
+    UPROPERTY(Replicated) FVector_NetQuantize FishingAnchor=FVector::ZeroVector;
+    UPROPERTY() UStaticMeshComponent* FishingRod=nullptr;
+    UPROPERTY() UStaticMeshComponent* FishingFloat=nullptr;
+    UPROPERTY() UStaticMeshComponent* FishingLine=nullptr;
+    UPROPERTY() UStaticMeshComponent* FishingCrank=nullptr;
+    UPROPERTY() UStaticMeshComponent* FishingCatch=nullptr;
+    float FishingHelpAlpha() const;
+    float FishingPull() const;
+    FTransform FishingRodPose() const;
+    FVector FishingHand(int32 Side) const;
+    float FishingReelPhase=0;
+    bool IsHeadUnderwater() const;
+    void UpdateLake(float Delta);
+    void Drown();
+    void StopSwimRise();
+    UFUNCTION(Server,Reliable) void ServerFishInteract();
+    UFUNCTION(Server,Reliable) void ServerReel(bool Reeling);
+    UFUNCTION(Server,Reliable) void ServerCancelFishing();
+    void CancelFishing(const FString& Result=FString());
     UPROPERTY(Replicated) int32 BotSlot=-1;
     UPROPERTY(Replicated) int32 AIDifficulty=1;
     UPROPERTY(Replicated) float ProtectedUntil=0;
@@ -131,6 +166,7 @@ public:
     UFUNCTION(NetMulticast,Reliable) void MulticastBlood(FVector_NetQuantize Impact,FVector_NetQuantizeNormal Direction);
 private:
     friend class AWildlineController;
+    bool bSwimRise=false,bSwimDive=false,bReeling=false;
     float NextBranchLeavesAt=0;
     FVector ClimbTransferTarget=FVector::ZeroVector;
     FVector ClimbTransferNormal=FVector::UpVector;

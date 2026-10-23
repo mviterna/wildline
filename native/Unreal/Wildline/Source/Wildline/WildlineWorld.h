@@ -24,6 +24,7 @@ public:
     AWildlineWorld();
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bFarm=false;
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bWinter=false;
+    UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bLake=false;
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bResidential=false;
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Neighborhood") UWildlineNeighborhoodConfig* NeighborhoodConfig=nullptr;
     UPROPERTY() FVector CourseStart=FVector(-950,0,210);

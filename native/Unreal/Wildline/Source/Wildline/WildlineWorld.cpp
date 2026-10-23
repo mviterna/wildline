@@ -2,6 +2,7 @@
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
 #include "WildlineLobby.h"
+#include "WildlineLake.h"
 #include "WildlineRules.h"
 #include "WildlineUserSettings.h"
 #include "WildlineTrunkProfiles.h"
@@ -65,7 +66,7 @@ FVector AWildlineWorld::TrunkCentre(int32 Index,float WorldZ,float& Radius) cons
     FVector Centre=T.MeshTransform.TransformPosition(FVector(Ring.X,Ring.Y,Ring.Z));Centre.Z=WorldZ;return Centre;
 }
 int32 AWildlineWorld::NearestTree(FVector P,float Max) const {int32 Result=INDEX_NONE;for(int32 I=0;I<Trees.Num();I++){float Radius;const auto Centre=TrunkCentre(I,P.Z,Radius);const float D=FVector::Dist2D(P,Centre)-Radius;if(D<Max&&P.Z<Trees[I].ClimbTop){Max=D;Result=I;}}return Result;}
-void AWildlineWorld::BeginPlay(){Super::BeginPlay();float ReviewYaw;if(Trees.Num()==0||(bResidential&&FParse::Value(FCommandLine::Get(),TEXT("WildlineCourseOakYaw="),ReviewYaw)))Rebuild();bool WoodReady=ClimbWood.Num()==4;for(auto* Wood:ClimbWood)WoodReady&=Wood&&Wood->GetStaticMesh()&&Wood->GetInstanceCount()>0;Trunks->SetCollisionEnabled(WoodReady?ECollisionEnabled::NoCollision:ECollisionEnabled::QueryAndPhysics);if(!AWildlineLobby::Find(GetWorld()))GetWorld()->SpawnActor<AWildlineLobby>();if(auto* S=UWildlineUserSettings::Get())ApplyTreeLeafDensity(bWinter?S->WinterTreeLeafDensity:S->TreeLeafDensity);}
+void AWildlineWorld::BeginPlay(){Super::BeginPlay();float ReviewYaw;if(Trees.Num()==0||(bResidential&&FParse::Value(FCommandLine::Get(),TEXT("WildlineCourseOakYaw="),ReviewYaw)))Rebuild();bool WoodReady=ClimbWood.Num()==4;for(auto* Wood:ClimbWood)WoodReady&=Wood&&Wood->GetStaticMesh()&&Wood->GetInstanceCount()>0;Trunks->SetCollisionEnabled(WoodReady?ECollisionEnabled::NoCollision:ECollisionEnabled::QueryAndPhysics);if(!AWildlineLobby::Find(GetWorld()))GetWorld()->SpawnActor<AWildlineLobby>();if(bLake&&!AWildlineLake::Find(GetWorld())){FActorSpawnParameters LakeSpawn;LakeSpawn.Name=TEXT("TaylorsvilleLakeScenery");GetWorld()->SpawnActor<AWildlineLake>(LakeSpawn);}if(auto* S=UWildlineUserSettings::Get())ApplyTreeLeafDensity(bWinter?S->WinterTreeLeafDensity:S->TreeLeafDensity);}
 void AWildlineWorld::ApplyTreeLeafDensity(float Density){
     Density=FMath::Clamp(Density,0.f,100.f);
     // Visual meshes only: wood collision, climb profiles and instance placement
@@ -156,8 +157,8 @@ void AWildlineWorld::Generate(){
     }
     Terrain->CreateMeshSection_LinearColor(0,Vertices,Indices,Normals,UV,Colors,Tangents,true);Terrain->SetCollisionProfileName(TEXT("BlockAll"));
     FRandomStream R(84672);
-    auto AddTree=[&](float X,float Y){FWildlineTree T;T.Base=FVector(X,Y,GroundHeight(X,Y));T.Radius=R.FRandRange(38,67);T.Height=R.FRandRange(1850,3100);Trees.Add(T);};
-    if(bResidential){}else if(bFarm){AddTree(-4800,750);AddTree(-4500,-800);AddTree(-3800,1400);AddTree(-3600,-1500);AddTree(-5500,0);}else{AddTree(600,200);AddTree(-650,350);AddTree(-1100,-1000);AddTree(1250,-800);AddTree(100,-2100);}
+    auto AddTree=[&](float X,float Y){if(bLake&&AWildlineLake::RadiusAt(FVector(X,Y,0))<1.26f)return;FWildlineTree T;T.Base=FVector(X,Y,GroundHeight(X,Y));T.Radius=R.FRandRange(38,67);T.Height=R.FRandRange(1850,3100);Trees.Add(T);};
+    if(bResidential){}else if(bLake){AddTree(-11900,200);AddTree(-11650,1350);AddTree(-11300,-1200);AddTree(-12400,-800);AddTree(-11200,-2900);}else if(bFarm){AddTree(-4800,750);AddTree(-4500,-800);AddTree(-3800,1400);AddTree(-3600,-1500);AddTree(-5500,0);}else{AddTree(600,200);AddTree(-650,350);AddTree(-1100,-1000);AddTree(1250,-800);AddTree(100,-2100);}
     for(int32 I=0;I<340;I++){const float X=R.FRandRange(-14500,14500),Y=R.FRandRange(-14500,14500);if(FMath::Sqrt(X*X+Y*Y)>14200||FMath::Sqrt(X*X+Y*Y)<1800)continue;if((bFarm||bResidential)&&FMath::Sqrt(X*X+Y*Y)<5200)continue;bool Near=false;for(const auto& T:Trees)if(FVector::Dist2D(FVector(X,Y,0),T.Base)<650){Near=true;break;}if(!Near)AddTree(X,Y);}
     for(int32 I=0;I<Trees.Num();I++){
         auto& T=Trees[I];const int32 Species=I<5?I%3:R.RandRange(0,3);T.Species=Species;
@@ -191,7 +192,7 @@ void AWildlineWorld::Generate(){
         const auto& T=Trees[I<12?I%5:(I*7+2)%Trees.Num()];const float A=I<12?(I/5)*2*PI/3+.3f:ForageRandom.FRandRange(0,2*PI);
         FVector P=T.Base+FVector(FMath::Cos(A)*310,FMath::Sin(A)*310,0);P.Z=GroundHeight(P.X,P.Y)+4.5f;AcornLocations.Add(P);
     }
-    DenLocation=FVector(0,1200,GroundHeight(0,1200));
+    DenLocation=bLake?FVector(-11700,2200,GroundHeight(-11700,2200)):FVector(0,1200,GroundHeight(0,1200));
     auto NearForage=[&](float X,float Y,float Radius){const FVector P(X,Y,0);for(const auto& A:AcornLocations)if(FVector::DistSquared2D(P,A)<FMath::Square(Radius))return true;return FVector::DistSquared2D(P,DenLocation)<FMath::Square(Radius+100);};
     // Visible rails backed by wooded slopes give the reserve a finite skyline.
     constexpr int32 FenceSections=240;
@@ -216,6 +217,7 @@ void AWildlineWorld::Generate(){
         ForestLayers[Species]->AddInstance(FTransform(FRotator(0,RimRandom.FRandRange(0,360),0),FVector(X,Y,GroundHeight(X,Y)-45-(Bounds.Min.Z+Collar)*S),FVector(S)));
     }
     auto GroundInstance=[&](int32 Species,float X,float Y,float S,float Sink=0.f){
+        if(bLake&&AWildlineLake::RadiusAt(FVector(X,Y,0))<1.23f)return;
         const FVector Normal=FVector(GroundHeight(X-10,Y)-GroundHeight(X+10,Y),GroundHeight(X,Y-10)-GroundHeight(X,Y+10),20).GetSafeNormal();
         const FQuat Align=FQuat::FindBetweenNormals(FVector::UpVector,Normal)*FQuat(FVector::UpVector,FMath::DegreesToRadians(R.FRandRange(0,360)));
         const float RootSink=Species==17?8.f:Sink;
@@ -275,6 +277,7 @@ void AWildlineWorld::Generate(){
 }
 
 float AWildlineWorld::GroundHeight(float X,float Y) const{
+    if(bLake)return AWildlineLake::BedHeight(X,Y);
     float Height=(bFarm||bResidential)?WildlineRules::FarmGround(X,Y):WildlineRules::Ground(X,Y);
     if(bResidential)for(const FBox& Basin:ResidentialPoolBasins){
         const float Edge=FMath::Min(FMath::Min(X-Basin.Min.X,Basin.Max.X-X),FMath::Min(Y-Basin.Min.Y,Basin.Max.Y-Y));
@@ -285,6 +288,7 @@ float AWildlineWorld::GroundHeight(float X,float Y) const{
 bool AWildlineWorld::InsideFarmhouse(FVector P) const{const FVector D=P-FarmhouseLocation;return bFarm&&FMath::Abs(D.X)<585&&FMath::Abs(D.Y)<470&&D.Z>FarmFloor-1&&D.Z<FarmFloor+218;}
 bool AWildlineWorld::InCropCover(FVector P) const{return bFarm&&P.X>-2400&&P.X<700&&FMath::Abs(P.Y)>850&&FMath::Abs(P.Y)<2250&&P.Z-GroundHeight(P.X,P.Y)<100;}
 FVector AWildlineWorld::FarmRoute(FVector From,FVector Target) const{
+    if(bLake)return AWildlineLake::RouteAroundLake(From,Target);
     if(!bFarm)return Target;
     // Use the open porch doorway before crossing an exterior wall.
     const FVector Door=FarmhouseLocation+FVector(-720,0,FarmFloor+5);

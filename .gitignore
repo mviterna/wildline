@@ -26,3 +26,30 @@ __pycache__/
 native/Unreal/Wildline/ArtSource/Farm/Sketchfab/ImportBackup/
 native/Unreal/Wildline/ArtSource/Farm/*-drive.html
 native/Unreal/Wildline/ArtSource/Farm/buildings/*.download-denied.html
+
+# New binary art stays on the build PC. Existing tracked LFS assets retain their
+# history; release installers include local assets and upload outside Git LFS.
+*.uasset
+*.umap
+*.fbx
+*.blend
+*.zip
+*.usdc
+*.glb
+*.gltf
+*.bin
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.tga
+*.exr
+*.hdr
+*.dds
+*.mp4
+*.wav
+*.mp3
+*.ogg
+*.ttf
+*.woff
+*.woff2

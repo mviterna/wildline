@@ -6,6 +6,13 @@ Permanent installer link: https://github.com/mviterna/wildline-downloads/release
 
 The public repository contains download instructions and compiled release assets only. The game and launcher sources remain in the private source repository.
 
+New binary art stays on the build PC, outside source commits. Build locally with
+the complete `Content` and `ArtSource` trees, then publish the installer parts and
+signed feed as Release assets. Players receive the packaged art through the
+normal launcher update without Git LFS. A source clone needs a separate copy of
+the local art to rebuild this version; back it up separately. Existing remote LFS
+objects and their metered storage are unaffected by this publishing workflow.
+
 ## Local release
 
 1. Build normally: `powershell -NoProfile -ExecutionPolicy Bypass -File native/LaunchNative.ps1 -Build`.

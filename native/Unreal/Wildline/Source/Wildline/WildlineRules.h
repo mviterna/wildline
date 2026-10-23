@@ -10,16 +10,16 @@ constexpr int32 MagazineSize = 5;
 constexpr int32 KillsToWin = 8;
 constexpr int32 AcornsToWin = 12;
 constexpr float MapRadius = 14500.f;
-constexpr int32 ClassicMode=0,FarmMode=1,HillMode=2,RifleWeapon=0,ShotgunWeapon=1;
+constexpr int32 ClassicMode=0,FarmMode=1,HillMode=2,LakeMode=3,RifleWeapon=0,ShotgunWeapon=1;
 inline int32 WeaponCapacity(int32 Weapon){return Weapon==ShotgunWeapon?2:MagazineSize;}
 inline float WeaponInterval(int32 Weapon){return Weapon==ShotgunWeapon?1.05f:ShotInterval;}
 inline float WeaponReload(int32 Weapon){return Weapon==ShotgunWeapon?2.8f:ReloadDuration;}
 constexpr int32 ShotgunPellets=12;
 constexpr float ShotgunRange=4500.f,ShotgunSpreadDegrees=4.f;
 inline float PelletDamage(float Distance){return FMath::Lerp(24.f,7.f,FMath::Clamp(Distance/ShotgunRange,0.f,1.f));}
-inline const TCHAR* ModeMap(int32 Mode){return Mode==HillMode?TEXT("Neighborhood"):Mode==FarmMode?TEXT("Farmstead"):TEXT("Blackwood");}
+inline const TCHAR* ModeMap(int32 Mode){return Mode==LakeMode?TEXT("TaylorsvilleLake"):Mode==HillMode?TEXT("Neighborhood"):Mode==FarmMode?TEXT("Farmstead"):TEXT("Blackwood");}
 inline const TCHAR* FoodName(int32 Mode){return Mode==FarmMode?TEXT("PEANUT"):TEXT("ACORN");}
-inline int32 TimeoutWinner(int32 Mode){return Mode==ClassicMode?2:1;}
+inline int32 TimeoutWinner(int32 Mode){return Mode==ClassicMode||Mode==LakeMode?2:1;}
 // Centimetres and seconds; all hunter AI uses the host's replicated difficulty.
 struct FHunterDifficulty { float SightRange,ReactionTime,ShotDelay,AimError,WalkSpeed,StopDistance,MemoryTime; };
 inline FHunterDifficulty HunterDifficulty(int32 Level) {

@@ -11,6 +11,7 @@
 
 void AWildlineLobby::BuildLodgeExterior(){
     const FVector O=Centre(false);auto* World=AWildlineWorld::Find(GetWorld());
+    if(World&&World->bLake){ExteriorTheme=TEXT("TaylorsvilleLake");return;}
     const bool Winter=World?World->bWinter:GetWorld()->GetMapName().Contains(TEXT("Frostwood"));
     const bool Farm=World&&World->bFarm,Residential=World&&World->bResidential;
     ExteriorTheme=Winter?TEXT("Frostwood"):Farm?TEXT("Farmstead"):Residential?(GetWorld()->GetMapName().Contains(TEXT("Cedar"))?TEXT("NeighborhoodCedar"):TEXT("Neighborhood")):TEXT("Blackwood");

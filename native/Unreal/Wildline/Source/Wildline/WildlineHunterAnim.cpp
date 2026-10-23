@@ -44,7 +44,9 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
     int32 FootSerial[2]={0,0};
     float HandScale=1,FootScale=1,FaceScale=1,BodyWidth=1,BodyDepth=1;
     TArray<int32> PartRoots;
-    bool bPreview=false;
+    bool bPreview=false,bSwimming=false,bFishing=false;
+    FTransform RodPose;
+    FVector RodHands[2];
     void ApplyBodyShape(FCSPose<FCompactPose>& Space,const FBoneContainer& Bones){
         if(FMath::IsNearlyEqual(BodyWidth,1.f)&&FMath::IsNearlyEqual(BodyDepth,1.f))return;
         const FVector Shape(BodyWidth,BodyDepth,1);
@@ -84,6 +86,9 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
         auto* Anim=Cast<UWildlineHunterAnim>(Instance);
         auto* Pawn=Cast<AWildlineCharacter>(Instance->GetOwningActor());
         auto* Mesh=Instance->GetSkelMeshComponent();if(!Anim||!Pawn||!Mesh)return;
+        bSwimming=Pawn->bSwimming;
+        bFishing=Pawn->FishingStage>0&&!Pawn->bDead;
+        if(bFishing){const auto Body=Mesh->GetComponentTransform();RodPose=Pawn->FishingRodPose().GetRelativeTransform(Body);for(int32 Side=0;Side<2;Side++)RodHands[Side]=Body.InverseTransformPosition(Pawn->FishingHand(Side));}
         const float BodyScale=FMath::Max(static_cast<float>(Mesh->GetComponentScale().Z),.1f);
         bPreview=Pawn->bPreviewHunter;HandScale=Pawn->HunterProfile.HandScale();FootScale=Pawn->HunterProfile.FootScale();
         FaceScale=Pawn->HunterProfile.FaceSize;BodyWidth=Pawn->HunterProfile.BodyWidth;BodyDepth=Pawn->HunterProfile.BodyDepth;
@@ -229,6 +234,18 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
             FAnimationRuntime::BlendTwoPosesTogetherInPlace(IdleData,Data,1-FMath::Clamp(Alpha,0.f,1.f));
         };
         Sample(Idle,Output,FMath::Fmod(Elapsed,FMath::Max(Idle->GetPlayLength(),.001f)));
+        if(bSwimming){
+            const auto& Bones=Output.Pose.GetBoneContainer();
+            FCSPose<FCompactPose> SwimShape;SwimShape.InitPose(Output.Pose);ApplyBodyShape(SwimShape,Bones);ApplyProportions(SwimShape,Bones);FCSPose<FCompactPose>::ConvertComponentPosesToLocalPosesSafe(SwimShape,Output.Pose);
+            auto Rotate=[&](const TCHAR* Name,FVector Axis,float Degrees){const int32 Index=Names.IndexOfByKey(FName(Name));if(Index==INDEX_NONE)return;const auto C=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(Index));if(C.GetInt()!=INDEX_NONE){auto& P=Output.Pose[C];P.SetRotation((P.GetRotation()*FQuat(Axis,FMath::DegreesToRadians(Degrees))).GetNormalized());}};
+            const float Stroke=FMath::Sin(Elapsed*4.5f),Kick=FMath::Sin(Elapsed*7.f);
+            auto& Root=Output.Pose[FCompactPoseBoneIndex(0)];Root.SetRotation(FQuat(FVector::XAxisVector,FMath::DegreesToRadians(-78)));Root.SetTranslation(FVector(0,-65,125));
+            Rotate(TEXT("upperarm_l"),FVector::YAxisVector,-40+Stroke*45);Rotate(TEXT("upperarm_r"),FVector::YAxisVector,40+Stroke*45);
+            Rotate(TEXT("lowerarm_l"),FVector::YAxisVector,-35);Rotate(TEXT("lowerarm_r"),FVector::YAxisVector,35);
+            Rotate(TEXT("thigh_l"),FVector::YAxisVector,Kick*18);Rotate(TEXT("thigh_r"),FVector::YAxisVector,-Kick*18);
+            Rotate(TEXT("calf_l"),FVector::YAxisVector,FMath::Max(0.f,Kick)*22);Rotate(TEXT("calf_r"),FVector::YAxisVector,FMath::Max(0.f,-Kick)*22);
+            Rotate(TEXT("neck_01"),FVector::XAxisVector,35);return true;
+        }
         Overlay(CrouchIdle,FMath::Fmod(Elapsed,10.f),Crouch);
         FPoseContext Moving(Output),Running(Output),Crouching(Output);
         Moving.ResetToRefPose();Running.ResetToRefPose();Crouching.ResetToRefPose();
@@ -322,6 +339,26 @@ struct FWildlineHunterProxy : public FAnimInstanceProxy {
         if(bPreview){
             ApplyProportions(Space,Bones);
             FCSPose<FCompactPose>::ConvertComponentPosesToLocalPosesSafe(Space,Output.Pose);
+            return true;
+        }
+        if(bFishing){
+            const TCHAR* Chains[2][3]={{TEXT("upperarm_r"),TEXT("lowerarm_r"),TEXT("hand_r")},{TEXT("upperarm_l"),TEXT("lowerarm_l"),TEXT("hand_l")}};
+            for(int32 Side=0;Side<2;Side++){
+                FCompactPoseBoneIndex Id[3];bool Valid=true;
+                for(int32 J=0;J<3;J++){const int32 I=Names.IndexOfByKey(FName(Chains[Side][J]));if(I==INDEX_NONE){Valid=false;break;}Id[J]=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(I));Valid&=Id[J].GetInt()!=INDEX_NONE;}
+                if(!Valid)continue;
+                FTransform Upper=Space.GetComponentSpaceTransform(Id[0]),Lower=Space.GetComponentSpaceTransform(Id[1]),Hand=Space.GetComponentSpaceTransform(Id[2]);
+                const FVector Pole=Upper.GetLocation()+Right*(Side==0?40.f:-40.f)+Forward*10-FVector::UpVector*40;
+                AnimationCore::SolveTwoBoneIK(Upper,Lower,Hand,Pole,RodHands[Side],false,1,1);
+                const FQuat Grip=Side==0?FRotationMatrix::MakeFromXY(FVector(0,0,1),FVector(0,-1,0)).ToQuat():FRotationMatrix::MakeFromXY(FVector(0,0,-1),FVector(1,0,0)).ToQuat();
+                Hand.SetRotation((RodPose.GetRotation()*Grip).GetNormalized());
+                TArray<FBoneTransform> Solved;Solved.Emplace(Id[0],Upper);Solved.Emplace(Id[1],Lower);Solved.Emplace(Id[2],Hand);Space.SafeSetCSBoneTransforms(Solved);
+            }
+            ApplyProportions(Space,Bones);FCSPose<FCompactPose>::ConvertComponentPosesToLocalPosesSafe(Space,Output.Pose);
+            FPoseContext Fingers(Output);Sample(RifleReady,Fingers,0);
+            for(const TCHAR* Side:{TEXT("r"),TEXT("l")})for(const TCHAR* Finger:{TEXT("thumb"),TEXT("index"),TEXT("middle"),TEXT("ring"),TEXT("pinky")})for(int32 J=1;J<=3;J++){
+                const int32 I=Names.IndexOfByKey(FName(*FString::Printf(TEXT("%s_0%d_%s"),Finger,J,Side)));if(I==INDEX_NONE)continue;const auto C=Bones.MakeCompactPoseIndex(FMeshPoseBoneIndex(I));if(C.GetInt()!=INDEX_NONE)Output.Pose[C].SetRotation(Fingers.Pose[C].GetRotation());
+            }
             return true;
         }
         // Share vertical aiming across the chest, neck and head so the hunter
