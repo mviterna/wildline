@@ -1,6 +1,7 @@
 #include "WildlineHUD.h"
 #include "WildlineLobby.h"
 #include "WildlineLake.h"
+#include "WildlineKnobs.h"
 #include "WildlineCharacter.h"
 #include "WildlineGame.h"
 #include "WildlineWorld.h"
@@ -42,7 +43,7 @@ void AWildlineHUD::DrawHUD(){
         DrawRect(FLinearColor::Black,CX-4,CY-4,8,8);DrawRect(FLinearColor(1.f,.2f,.06f),CX-2,CY-2,4,4);
         Label(P->IsThermalActive()?TEXT("THERMAL IMAGING"):TEXT("BLACKWOOD OPTICS"),CX-85,CY-Radius+60,12,Cream);if(P->IsThermalActive())Label(FString::Printf(TEXT("%.1fs"),FMath::Max(0.f,P->ThermalUntil-P->ServerTime())),CX-20,CY-Radius+85,15,Sage);
     }else {DrawLine(CX-5,CY,CX+5,CY,Cream,1);DrawLine(CX,CY-5,CX,CY+5,Cream,1);}
-    Label(S->ExpeditionMode==3?TEXT("W  /  TAYLORSVILLE LAKE"):Hill?TEXT("W  /  KING OF THE HILL"):Farm?TEXT("W  /  FARM RAID"):S->MatchConfig.ClassicLayout==1?TEXT("W  /  FROSTWOOD RESERVE"):TEXT("W  /  BLACKWOOD RESERVE"),30,25,18,Cream);Label(P->bSquirrel?TEXT("SQUIRREL"):Farm?TEXT("FARMER"):Hill?TEXT("DEFENDER"):TEXT("HUNTER"),30,50,11,Sage);
+    Label(S->ExpeditionMode==3?TEXT("W  /  TAYLORSVILLE LAKE"):Hill?TEXT("W  /  KING OF THE HILL"):Farm?TEXT("W  /  FARM RAID"):S->MatchConfig.ClassicLayout==2?TEXT("W  /  KNOBS STATE FOREST"):S->MatchConfig.ClassicLayout==1?TEXT("W  /  FROSTWOOD RESERVE"):TEXT("W  /  BLACKWOOD RESERVE"),30,25,18,Cream);Label(P->bSquirrel?TEXT("SQUIRREL"):Farm?TEXT("FARMER"):Hill?TEXT("DEFENDER"):TEXT("HUNTER"),30,50,11,Sage);
     Label(FString::Printf(TEXT("%d / %d KILLS    %s    %s %d / %d"),S->HunterKills,S->MatchConfig.DefenderGoal,*ClockText(S->RoundRemaining()),Hill?TEXT("FEEDER TRIPS"):TEXT("STORED"),S->StoredAcorns,S->MatchConfig.SquirrelGoal),CX-260,30,14,Cream);
     if(!P->IsScoped()){
         Label(TEXT("FIELD OBJECTIVE"),30,120,11,Sage);
@@ -85,7 +86,13 @@ void AWildlineHUD::DrawReserveMap(AWildlineCharacter* P,AWildlineGameState* S,AW
     }
     for(int32 I=1;I<6;I++){const float Offset=-Half+I*Half/3;DrawLine(Centre.X+Offset,Centre.Y-Half,Centre.X+Offset,Centre.Y+Half,FLinearColor(.06f,.12f,.09f,.25f));DrawLine(Centre.X-Half,Centre.Y+Offset,Centre.X+Half,Centre.Y+Offset,FLinearColor(.06f,.12f,.09f,.25f));}
     for(int32 I=0;I<96;I++){const float A=I*2*PI/96,B=(I+1)*2*PI/96;Segment(FVector(FMath::Cos(A),FMath::Sin(A),0)*WildlineRules::MapRadius,FVector(FMath::Cos(B),FMath::Sin(B),0)*WildlineRules::MapRadius,FLinearColor(.48f,.64f,.46f,.7f));}
-    if(F->bLake){for(int32 I=0;I<128;I++)Segment(AWildlineLake::TrailPoint(I*2*PI/128),AWildlineLake::TrailPoint((I+1)*2*PI/128),Gold,1.5f);}
+    if(F->bKnobs){
+        const FLinearColor TrailColors[]={FLinearColor(.15f,.5f,.95f),FLinearColor(1,.42f,.08f),FLinearColor(.95f,.8f,.15f)};
+        for(int32 R=0;R<3;R++){const auto& Path=WildlineKnobs::Trail(R);for(int32 I=1;I<Path.Num();I++)Segment(FVector(Path[I-1],0),FVector(Path[I],0),TrailColors[R],1.5f);}
+        for(float X=-13000;X<12000;X+=200)Segment(FVector(X,WildlineKnobs::CreekY(X),0),FVector(X+200,WildlineKnobs::CreekY(X+200),0),FLinearColor(.2f,.64f,.72f),2);
+        for(int32 I=0;I<3;I++){const auto Lot=Map(FVector(WildlineKnobs::Parking(I),0));if(Inside(Lot,10))Label(TEXT("P"),Lot.X-3,Lot.Y-4,8,Cream);}
+    }
+    else if(F->bLake){for(int32 I=0;I<128;I++)Segment(AWildlineLake::TrailPoint(I*2*PI/128),AWildlineLake::TrailPoint((I+1)*2*PI/128),Gold,1.5f);}
     else if(!F->bFarm&&!F->bResidential)for(float X=-14000;X<14000;X+=250){auto Trail=[](float D){return FVector(D,700+FMath::Sin(D*.0007f)*210,0);};Segment(Trail(X),Trail(X+250),FLinearColor(.54f,.48f,.3f,.5f),Zoom?2.f:1.f);}
     for(const auto& T:F->Trees){const auto Dot=Map(T.Base);if(Inside(Dot))DrawRect(FLinearColor(.18f,.33f,.24f,.7f),Dot.X-1,Dot.Y-1,2,2);}
     if(F->bFarm){

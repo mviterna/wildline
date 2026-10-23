@@ -6,6 +6,7 @@ class UHierarchicalInstancedStaticMeshComponent;
 class UProceduralMeshComponent;
 class UStaticMeshComponent;
 class UWildlineNeighborhoodConfig;
+class UTextRenderComponent;
 USTRUCT()
 struct FWildlineTree {
     GENERATED_BODY()
@@ -25,6 +26,8 @@ public:
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bFarm=false;
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bWinter=false;
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bLake=false;
+    UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bKnobs=false;
+    UPROPERTY() TArray<UTextRenderComponent*> KnobsLabels;
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Expedition") bool bResidential=false;
     UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Neighborhood") UWildlineNeighborhoodConfig* NeighborhoodConfig=nullptr;
     UPROPERTY() FVector CourseStart=FVector(-950,0,210);
@@ -74,6 +77,7 @@ public:
     static AWildlineWorld* Find(UWorld* World);
 private:
     void Generate();
+    void GenerateKnobsScenery();
     void GenerateFarm();
     void GenerateResidential();
     bool GenerateConfiguredNeighborhood();

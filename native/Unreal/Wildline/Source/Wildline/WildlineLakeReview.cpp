@@ -2,6 +2,7 @@
 #include "WildlineCharacter.h"
 #include "WildlineLake.h"
 #include "WildlineWorld.h"
+#include "WildlineKnobs.h"
 #include "WildlineLobby.h"
 #include "WildlineMenu.h"
 #include "WildlineUserSettings.h"
@@ -30,7 +31,7 @@ void View(AWildlineController* PC,FVector Eye,FVector Target,float FOV=70){auto*
 void Shot(const FString& Name){FScreenshotRequest::RequestScreenshot(FPaths::ProjectSavedDir()/TEXT("Screenshots/Windows/Lake/")+Name+TEXT(".png"),true,false);}
 }
 void WildlineRunMapPreview(AWildlineController* PC){
-    At(PC,2, [PC](){PC->SetMenu(false);PC->GetHUD()->bShowHUD=false;const auto* F=AWildlineWorld::Find(PC->GetWorld());if(F->bLake)View(PC,FVector(2000,-10500,14000),AWildlineLake::HuntingCentre(),82);else if(F->bResidential)View(PC,FVector(-4600,-6100,3600),FVector(0,-200,450),65);else if(F->bFarm)View(PC,FVector(-3000,-5200,3000),FVector(1500,500,400),65);else View(PC,FVector(-1800,-2300,1350),FVector(600,900,500),75);});
+    At(PC,2, [PC](){PC->SetMenu(false);PC->GetHUD()->bShowHUD=false;const auto* F=AWildlineWorld::Find(PC->GetWorld());if(F->bKnobs){const float Y=WildlineKnobs::CreekY(-1800);View(PC,FVector(-2650,Y-500,F->GroundHeight(-2650,Y-500)+250),FVector(-700,Y+350,230),72);}else if(F->bLake)View(PC,FVector(2000,-10500,14000),AWildlineLake::HuntingCentre(),82);else if(F->bResidential)View(PC,FVector(-4600,-6100,3600),FVector(0,-200,450),65);else if(F->bFarm)View(PC,FVector(-3000,-5200,3000),FVector(1500,500,400),65);else View(PC,FVector(-1800,-2300,1350),FVector(600,900,500),75);});
     At(PC,7,[PC](){FString Name=PC->GetWorld()->GetMapName();Name.RemoveFromStart(TEXT("UEDPIE_0_"));FScreenshotRequest::RequestScreenshot(FPaths::ProjectDir()/TEXT("ArtSource/Lake/Previews/")+Name+TEXT(".png"),false,false);});
     At(PC,9,[](){FPlatformMisc::RequestExit(false);});
 }
@@ -39,7 +40,7 @@ void WildlineRunLakeSmoke(AWildlineController* PC){
         bool Pass=true;auto Check=[&](bool OK,const TCHAR* Name){Pass&=OK;UE_LOG(LogTemp,Display,TEXT("LAKE CHECK %s: %s"),OK?TEXT("PASS"):TEXT("FAIL"),Name);};
         auto* W=PC->GetWorld();auto* F=AWildlineWorld::Find(W);auto* L=AWildlineLake::Find(W);auto* GM=W->GetAuthGameMode<AWildlineGameMode>();auto* S=W->GetGameState<AWildlineGameState>();
         Check(F&&F->bLake&&L&&GM&&S&&S->ExpeditionMode==3,TEXT("Lake loads as a cooked selectable expedition"));if(!F||!L||!GM||!S){FPlatformMisc::RequestExitWithStatus(false,1);return;}
-        Check(PC->Menu&&PC->Menu->MapCards.Num()==6&&PC->Menu->Mode->GetOptionCount()==4,TEXT("Map tab contains all six map cards"));
+        Check(PC->Menu&&PC->Menu->MapCards.Num()==7&&PC->Menu->Mode->GetOptionCount()==4,TEXT("Map tab contains all seven map cards"));
         PC->Menu->SelectMap(5);PC->Menu->ShowMaps();Check(PC->GetGameInstance<UWildlineGameInstance>()->PreferredMode==3&&PC->Menu->Pages->GetActiveWidgetIndex()==3,TEXT("Lake card selection and Map button work"));
         Check(F->AcornLocations.Num()==30&&F->Trees.Num()>75&&L->Fish.Num()==AWildlineLake::FishCount()+AWildlineLake::FishCount(true),TEXT("Playable forage, woodland and textured bass populations exist"));
         Check(AWildlineLake::Extent().X>=10000&&AWildlineLake::Extent().Y>=7500&&AWildlineLake::RadiusAt(F->DenLocation)>1.1f&&AWildlineLake::RadiusAt(GM->SpawnLocation(false))>1.1f&&AWildlineLake::RadiusAt(GM->SpawnLocation(true))>1.1f,TEXT("Expanded lake retains dry den and both team spawns"));

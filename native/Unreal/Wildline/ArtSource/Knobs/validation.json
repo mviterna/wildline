@@ -1,0 +1,40 @@
+{
+  "status": "PASS_WITH_RENDER_WARNING",
+  "verifiedAt": "2026-10-23T16:22:57.5342897-04:00",
+  "map": "/Game/Maps/KnobsStateForest",
+  "package": "C:\\_git\\wildline\\native\\Build\\KnobsReview\\Windows",
+  "gameSha256": "2F2FE59B17349515EBB2A745AF149F006E892A5646A48BF579BB13573CC68A9B",
+  "packagedGameplay": true,
+  "menuTravel": true,
+  "localNetworkHost": true,
+  "localNetworkClient": true,
+  "finalExecutableMatchesNetworkTestedExecutable": true,
+  "lakeRegression": true,
+  "installedBetaLauncherAndShortcutPreserved": true,
+  "desktopLauncher": "native/LaunchNative.ps1",
+  "latestBuildDirectories": [
+    "Beta",
+    "KnobsReview",
+    "Launcher",
+    "Updates"
+  ],
+  "captures": [
+    "Overview.png",
+    "Trailhead.png",
+    "CrookedCreek.png",
+    "HayRidge.png",
+    "MapCard.png"
+  ],
+  "visualChecks": [
+    "Trailhead kiosk and colored route lettering are readable",
+    "Creek gravel and tapered shallow pools render",
+    "Ridges, tree cover, trail corridors and map card render"
+  ],
+  "rendererWarning": "A transient non-Nanite VSM marking-job-queue warning occurs during rendered startup. No shader/material compile errors or gameplay check failures were observed.",
+  "installerVersion": "0.2.0-beta.20261023.160609",
+  "updateSignatureVerified": true,
+  "updatePartsVerified": true,
+  "updatePartCount": 4,
+  "published": false,
+  "desktopReviewNote": "The final desktop review increases outdoor sign brightness after the installer build; the installer/update retain the complete map with the earlier sign appearance."
+}

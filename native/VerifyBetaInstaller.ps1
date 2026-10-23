@@ -90,6 +90,7 @@ try {
         @('farm', '/Game/Maps/Farmstead -WildlineFarmSmoke -NullRHI -NoSound', 'WILDLINE FARM SMOKE: PASS'),
         @('hill', '/Game/Maps/Neighborhood -WildlineHillSmoke -NullRHI -NoSound', 'WILDLINE HILL SMOKE: PASS'),
         @('lake', '/Game/Maps/TaylorsvilleLake -WildlineLakeSmoke -NullRHI -NoSound', 'WILDLINE LAKE SMOKE: PASS'),
+        @('knobs', '/Game/Maps/KnobsStateForest -WildlineKnobsSmoke -NullRHI -NoSound', 'WILDLINE KNOBS SMOKE: PASS'),
         @('intro', '/Game/Maps/Blackwood -WildlineIntroSmoke -NullRHI -NoSound', 'WILDLINE INTRO SMOKE: PASS')
     )) {
         $taskLog = Join-Path $taskTest ($taskProbe[0] + '.log')

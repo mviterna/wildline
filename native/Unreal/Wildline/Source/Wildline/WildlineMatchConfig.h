@@ -82,7 +82,7 @@ struct FWildlineMatchConfig {
         SquirrelCaution=FMath::Clamp(SquirrelCaution,0.f,1.f);BotSpacing=FMath::Clamp(BotSpacing,60.f,400.f);BotTreeSeconds=FMath::Clamp(BotTreeSeconds,2.f,12.f);
         Defenders.SetNum(MaxBotsPerTeam);Squirrels.SetNum(MaxBotsPerTeam);
         for(auto& Bot:Defenders)Bot.Clamp();for(auto& Bot:Squirrels)Bot.Clamp();
-        MapIntel=FMath::Clamp(MapIntel,0,2);TimeWinner=FMath::Clamp(TimeWinner,0,2);NeighborhoodLayout=FMath::Clamp(NeighborhoodLayout,0,1);ClassicLayout=FMath::Clamp(ClassicLayout,0,1);
+        MapIntel=FMath::Clamp(MapIntel,0,2);TimeWinner=FMath::Clamp(TimeWinner,0,2);NeighborhoodLayout=FMath::Clamp(NeighborhoodLayout,0,1);ClassicLayout=FMath::Clamp(ClassicLayout,0,2);
         SquirrelHealth=FMath::Clamp(SquirrelHealth,10.f,200.f);RespawnSeconds=FMath::Clamp(RespawnSeconds,1.f,30.f);
         SquirrelHitbox=FMath::Clamp(SquirrelHitbox,1,100);
         SpawnProtectionSeconds=FMath::Clamp(SpawnProtectionSeconds,0.f,10.f);CarryCapacity=FMath::Clamp(CarryCapacity,1,12);

@@ -4,6 +4,13 @@ Native Windows co-op hunting prototype built in Unreal Engine 5.8.3. Play **Clas
 
 ## Launch
 
+**Knobs State Forest** is available from the Maps tab and the Classic layout
+picker. Inspired by the Kentucky forest, it adds Crooked Creek, Hay Ridge,
+three marked trail loops, native grass openings, three trailheads and an entrance
+kiosk. It uses Classic Hunt's acorn gathering, den, hunters and climbable trees.
+The terrain and trails are compressed for gameplay. Run
+`native/VerifyKnobsPackage.ps1 -Capture -Network` for map verification.
+
 On first launch, choose a local player name. It appears in the upper-right profile
 button. **Shift+Tab** opens the player list, grouped by team, with name editing,
 team changes, waiting-room entry, and a button to join the detected network room.

@@ -528,6 +528,7 @@ void AWildlineCharacter::Tick(float Delta){
     GetCharacterMovement()->bIgnoreClientMovementErrorChecksAndCorrection=TreeIndex!=INDEX_NONE;
     if(IsLocallyControlled()){if(TreeIndex!=INDEX_NONE&&bWoodClimbing&&!HasAuthority())UpdateClimb(Delta);UpdateCamera(Delta);if(TreeIndex!=INDEX_NONE&&!HasAuthority())ServerClimbInput(ForwardInput,SideInput);if(bFiring&&CanControl()&&ServerTime()-LastFireRequest>WildlineRules::WeaponInterval(SelectedWeapon)){LastFireRequest=ServerTime();FVector P;FRotator R;Controller->GetPlayerViewPoint(P,R);ServerFire(R.Vector());}}
     {extern void WildlineLakeProbeInput(AWildlineCharacter*);WildlineLakeProbeInput(this);}
+    {extern void WildlineKnobsProbeInput(AWildlineCharacter*);WildlineKnobsProbeInput(this);}
     UpdateLake(Delta);
     if(bSquirrel&&!bDead){
         FRotator Pose=FRotator::ZeroRotator;

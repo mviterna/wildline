@@ -14,7 +14,7 @@ void AWildlineLobby::BuildLodgeExterior(){
     if(World&&World->bLake){ExteriorTheme=TEXT("TaylorsvilleLake");return;}
     const bool Winter=World?World->bWinter:GetWorld()->GetMapName().Contains(TEXT("Frostwood"));
     const bool Farm=World&&World->bFarm,Residential=World&&World->bResidential;
-    ExteriorTheme=Winter?TEXT("Frostwood"):Farm?TEXT("Farmstead"):Residential?(GetWorld()->GetMapName().Contains(TEXT("Cedar"))?TEXT("NeighborhoodCedar"):TEXT("Neighborhood")):TEXT("Blackwood");
+    ExteriorTheme=World&&World->bKnobs?TEXT("KnobsStateForest"):Winter?TEXT("Frostwood"):Farm?TEXT("Farmstead"):Residential?(GetWorld()->GetMapName().Contains(TEXT("Cedar"))?TEXT("NeighborhoodCedar"):TEXT("Neighborhood")):TEXT("Blackwood");
     auto Forest=[](const TCHAR* Name){return LoadObject<UMaterialInterface>(nullptr,*FString::Printf(TEXT("/Game/Wildline/Forest/Materials/%s.%s"),Name,Name));};
     auto* Ground=World&&World->Terrain?World->Terrain->GetMaterial(0):Forest(Winter?TEXT("M_Snow"):TEXT("M_LeafLitter"));
     LodgeScenery.Add(Piece(TEXT("Map ground outside lodge"),TEXT("Cube"),O+FVector(0,0,-55),FVector(28000,28000,80),Ground));
