@@ -86,6 +86,7 @@ try {
         @('classic', '/Game/Maps/Blackwood -WildlineSmoke -NullRHI -NoSound', 'WILDLINE SMOKE RESULT: PASS'),
         @('farm', '/Game/Maps/Farmstead -WildlineFarmSmoke -NullRHI -NoSound', 'WILDLINE FARM SMOKE: PASS'),
         @('hill', '/Game/Maps/Neighborhood -WildlineHillSmoke -NullRHI -NoSound', 'WILDLINE HILL SMOKE: PASS'),
+        @('lake', '/Game/Maps/TaylorsvilleLake -WildlineLakeSmoke -NullRHI -NoSound', 'WILDLINE LAKE SMOKE: PASS'),
         @('intro', '/Game/Maps/Blackwood -WildlineIntroSmoke -NullRHI -NoSound', 'WILDLINE INTRO SMOKE: PASS')
     )) {
         $taskLog = Join-Path $taskTest ($taskProbe[0] + '.log')
@@ -132,7 +133,7 @@ try {
     if ((Get-FileHash -LiteralPath $taskSave).Hash -ne $taskSaveHash) { throw 'Bootstrap uninstall changed personal data.' }
     [ordered]@{ passed = $true; sha256 = (Get-FileHash $taskSetup -Algorithm SHA256).Hash; bootstrapSha256 = (Get-FileHash $BootstrapPath -Algorithm SHA256).Hash; checkedAtUtc = [DateTimeOffset]::UtcNow.ToString('o'); logs = $taskTest } |
         ConvertTo-Json | Set-Content -LiteralPath (Join-Path $PSScriptRoot 'Build/Beta/InstallerVerification.json') -Encoding UTF8
-    Write-Output "PASS: install in path with spaces, upgrade detection, overwrite/repair, obsolete file cleanup, saved data preservation, all payload hashes, launcher verification, shortcuts, three modes + intro, same-version reinstall, single install path, full and online bootstrap uninstall. Logs: $taskTest"
+    Write-Output "PASS: install in path with spaces, upgrade detection, overwrite/repair, obsolete file cleanup, saved data preservation, all payload hashes, launcher verification, shortcuts, three modes + lake + intro, same-version reinstall, single install path, full and online bootstrap uninstall. Logs: $taskTest"
 } finally {
     if ((Test-Path $taskUninstallKey) -or (Test-Path -LiteralPath (Join-Path $taskInstall 'Wildline.exe'))) {
         Write-Warning "Verification left an installation at $taskInstall. Inspect its logs before uninstalling."
