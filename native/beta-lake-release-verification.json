@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "version": "0.2.0-beta.20261022.195555",
+  "releaseUrl": "https://github.com/mviterna/wildline-downloads/releases/tag/v0.2.0-beta.20261022.195555",
+  "installerUrl": "https://github.com/mviterna/wildline-downloads/releases/download/beta/WildlineSetup.exe",
+  "published": true,
+  "installer": {
+    "bytes": 3551706539,
+    "sha256": "78B948CB614F01A9E2354EB0B0DA0C8648E7EA90F6CE0629627D92EB9B932CA4",
+    "bootstrapSha256": "85A2B55ABFFF9846778D1CE60DB34DEB7FA335F419F9074F2FC1A2273DA12ADA"
+  },
+  "sourceOnlyPush": {
+    "passed": true,
+    "baseCommit": "b426372f4f4672f8852de96445dd6a5e3886eb13",
+    "validatedSourceCommit": "9bcb86d4aeccf5e0168b76fcc864cbabb38f9001",
+    "changedTextFiles": 52,
+    "newLfsObjects": 0,
+    "existingTrackedLfsPathsUnchanged": 4690
+  },
+  "localProtection": {
+    "passed": true,
+    "checkedFiles": 301,
+    "assetsAndInstalledBetaAndProfilesPreserved": true,
+    "bothDesktopShortcutsPreserved": true,
+    "checkedAtUtc": "2026-10-23T15:53:28.7710833+00:00"
+  },
+  "candidateVerification": {
+    "passed": true,
+    "sha256": "78B948CB614F01A9E2354EB0B0DA0C8648E7EA90F6CE0629627D92EB9B932CA4",
+    "bootstrapSha256": "85A2B55ABFFF9846778D1CE60DB34DEB7FA335F419F9074F2FC1A2273DA12ADA",
+    "checkedAtUtc": "2026-10-23T15:49:48.8592227+00:00",
+    "logs": "D:\\a\\wildline\\wildline\\native\\Build\\InstallerVerification\\68849c216bfb472eb5b852e1b05ea7f0",
+    "versionedSetupPassed": true,
+    "runner": "github-hosted-windows",
+    "runUrl": "https://github.com/mviterna/wildline/actions/runs/39980450981"
+  },
+  "remoteAssets": [
+    {
+      "name": "latest.json",
+      "size": 1734,
+      "digest": "sha256:bf52d05572dc6b70eef370601ff3e094d9c2efecfda4de839ca87e7d9aaa154c",
+      "state": "uploaded"
+    },
+    {
+      "name": "Wildline-0.2.0-beta.20261022.195555-Setup.exe.part000",
+      "size": 1073741824,
+      "digest": "sha256:551afb6ff7694865115fe5391c7aa97d6db4e9ed63eac0f9c7b3fd48602e24e3",
+      "state": "uploaded"
+    },
+    {
+      "name": "Wildline-0.2.0-beta.20261022.195555-Setup.exe.part001",
+      "size": 1073741824,
+      "digest": "sha256:407db20a73cc1193ab0d915d8b6274b7d3741b6608b916d6c33965dccdba2e53",
+      "state": "uploaded"
+    },
+    {
+      "name": "Wildline-0.2.0-beta.20261022.195555-Setup.exe.part002",
+      "size": 1073741824,
+      "digest": "sha256:39091a344eb6acbe04f154b22c2a2569f4cb6e1e055c75b404e44dba167909ae",
+      "state": "uploaded"
+    },
+    {
+      "name": "Wildline-0.2.0-beta.20261022.195555-Setup.exe.part003",
+      "size": 330481067,
+      "digest": "sha256:836c4cfbbd79d53919cf70313e0e6019737a208d5f1fb63c181ed73805f8d76d",
+      "state": "uploaded"
+    },
+    {
+      "name": "WildlineSetup.exe",
+      "size": 2110504,
+      "digest": "sha256:85a2b55abfff9846778d1ce60db34deb7fa335f419f9074f2fc1a2273da12ada",
+      "state": "uploaded"
+    }
+  ],
+  "publicUpdaterVerification": {
+    "passed": true,
+    "version": "0.2.0-beta.20261022.195555",
+    "bootstrapSha256": "85A2B55ABFFF9846778D1CE60DB34DEB7FA335F419F9074F2FC1A2273DA12ADA",
+    "checkedAtUtc": "2026-10-23T16:04:51.6965406+00:00",
+    "logs": "D:\\a\\wildline\\wildline\\native\\Build\\OnlineInstallerVerification\\5cbbc2d7881e45c8846c57707deffb00",
+    "firstGamePid": null,
+    "headless": true,
+    "graphicalWindowVerified": false,
+    "runUrl": "https://github.com/mviterna/wildline/actions/runs/39982089683"
+  },
+  "checks": {
+    "updaterIntegrityCases": 23,
+    "publisherSignatureAndMultipartRoundTrip": true,
+    "installedGameProbes": [
+      "Classic",
+      "Farm",
+      "Hill",
+      "Taylorsville Lake",
+      "Intro"
+    ],
+    "installerLifecycle": [
+      "install in path with spaces",
+      "existing path and version detection",
+      "payload SHA-256 verification",
+      "stale content removal",
+      "save preservation",
+      "damaged and missing executable repair",
+      "single install path",
+      "full and bootstrap shortcut checks",
+      "full and bootstrap uninstall"
+    ],
+    "versionedSetupFixtures": [
+      "new version activation",
+      "previous payload retention",
+      "corrupt payload rejection",
+      "rollback"
+    ],
+    "guardedBuildCleanupFixtures": true,
+    "publicUpdater": [
+      "public bootstrap and signed feed",
+      "multipart download and verified installation",
+      "installed headless game smoke",
+      "current version without reinstall",
+      "offline launcher command",
+      "uninstall"
+    ]
+  },
+  "limitations": [
+    "CI game probes use NullRHI; graphical lake captures were verified locally before packaging.",
+    "VC++ and GameInput installation from an explicitly absent state was not separately forced."
+  ],
+  "localGameplayEvidence": "native/Unreal/Wildline/ArtSource/Lake/validation.json",
+  "releaseVerifiedAtUtc": "2026-10-23T16:06:02.185319+00:00"
+}

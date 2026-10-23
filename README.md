@@ -338,6 +338,9 @@ separately. Code, configuration, authoring scripts, and attribution remain in Gi
 Local builds package the assets into installers uploaded as GitHub Release assets
 in `mviterna/wildline-downloads`, so player updates add no Git LFS objects.
 
+The published lake build's installer, updater, and source-only push verification
+is recorded in [`native/beta-lake-release-verification.json`](native/beta-lake-release-verification.json).
+
 The engine installation, packaged game, build caches, local test output and
 authoring downloads are excluded from the repository. The launch/build scripts
 use the local engine installation; adjust its path for another computer.
