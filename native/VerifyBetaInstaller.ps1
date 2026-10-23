@@ -120,7 +120,19 @@ try {
     $taskRepairFile = Join-Path $taskPayloadRoot 'BetaReadme.txt'
     Set-Content -LiteralPath $taskRepairFile -Value 'same-version repair needed'
     # Repair must still clean obsolete content if the bootstrap was deleted.
-    Remove-Item -LiteralPath $taskGame
+    # Windows can retain an executable image briefly after process exit. Retry
+    # this deliberate fixture damage, but fail on a persistent permission/lock.
+    $taskRemoveDeadline = (Get-Date).AddSeconds(30)
+    while (Test-Path -LiteralPath $taskGame) {
+        try { Remove-Item -LiteralPath $taskGame -Force -ErrorAction Stop }
+        catch {
+            if ((Get-Date) -ge $taskRemoveDeadline) {
+                Get-Process Wildline -ErrorAction SilentlyContinue | Select-Object Id,Path | Format-Table | Out-String | Write-Output
+                throw
+            }
+            Start-Sleep -Milliseconds 250
+        }
+    }
     $taskRepairStaleFile = Join-Path $taskPayloadRoot 'Wildline/Content/Paks/obsolete-repair.pak'
     Set-Content -LiteralPath $taskRepairStaleFile -Value 'obsolete repair payload'
     $taskOtherInstall = Join-Path $taskTest 'Must Not Create Another Install'
