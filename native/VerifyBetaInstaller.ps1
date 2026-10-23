@@ -13,7 +13,10 @@ $taskInstall = Join-Path $taskTest 'Installed Game'
 New-Item -ItemType Directory -Path $taskTest -Force | Out-Null
 function Invoke-SetupProbe([string]$Executable, [string]$Arguments) {
     Write-Output ("Starting installer operation: " + $Arguments)
-    $taskProcess = Start-Process -FilePath $Executable -ArgumentList $Arguments -WindowStyle Hidden -PassThru
+    # Inno's uninstaller hands off to a temporary child. Wait for that process
+    # tree before installing again, or it can delete the new install's shortcuts.
+    $taskWaitForTree = [IO.Path]::GetFileName($Executable) -eq 'unins000.exe'
+    $taskProcess = Start-Process -FilePath $Executable -ArgumentList $Arguments -WindowStyle Hidden -PassThru -Wait:$taskWaitForTree
     if (!$taskProcess.WaitForExit(600000)) { throw "Installer operation timed out; inspect process $($taskProcess.Id)." }
     $taskProcess.Refresh()
     if ($taskProcess.ExitCode -ne 0) { throw "Installer operation failed: $($taskProcess.ExitCode). Logs: $taskTest" }
