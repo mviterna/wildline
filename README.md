@@ -11,6 +11,10 @@ kiosk. It uses Classic Hunt's acorn gathering, den, hunters and climbable trees.
 The terrain and trails are compressed for gameplay. Run
 `native/VerifyKnobsPackage.ps1 -Capture -Network` for map verification.
 
+Knobs ships in beta `0.2.0-beta.20261023.191103` through the existing updater.
+[Map and release verification](native/Unreal/Wildline/ArtSource/Knobs/validation.json)
+records the packaged, clean Windows installer and public updater results.
+
 On first launch, choose a local player name. It appears in the upper-right profile
 button. **Shift+Tab** opens the player list, grouped by team, with name editing,
 team changes, waiting-room entry, and a button to join the detected network room.

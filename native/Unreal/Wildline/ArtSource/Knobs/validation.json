@@ -1,6 +1,6 @@
 {
-  "status": "PASS_WITH_RENDER_WARNING",
-  "verifiedAt": "2026-10-23T16:22:57.5342897-04:00",
+  "status": "RELEASED_VERIFIED_WITH_RENDER_WARNING",
+  "verifiedAt": "2026-10-23T20:27:19.0758955-04:00",
   "map": "/Game/Maps/KnobsStateForest",
   "package": "C:\\_git\\wildline\\native\\Build\\KnobsReview\\Windows",
   "gameSha256": "2F2FE59B17349515EBB2A745AF149F006E892A5646A48BF579BB13573CC68A9B",
@@ -31,10 +31,59 @@
     "Ridges, tree cover, trail corridors and map card render"
   ],
   "rendererWarning": "A transient non-Nanite VSM marking-job-queue warning occurs during rendered startup. No shader/material compile errors or gameplay check failures were observed.",
-  "installerVersion": "0.2.0-beta.20261023.160609",
+  "installerVersion": "0.2.0-beta.20261023.191103",
   "updateSignatureVerified": true,
   "updatePartsVerified": true,
   "updatePartCount": 4,
-  "published": false,
-  "desktopReviewNote": "The final desktop review increases outdoor sign brightness after the installer build; the installer/update retain the complete map with the earlier sign appearance."
+  "published": true,
+  "gameSourceCommit": "9a5f5005dc08ac37ff6bbd6de61d10c2931e226e",
+  "installer": {
+    "sha256": "20A5130572BD8538C37381B585C193F0C4DC7759D2DCC233A6B8AF4E93EA67FE",
+    "bootstrapSha256": "F51D648833D2206DDA01A6366AEC09EC86986BD76B0295475E8820A268087B64",
+    "size": 3571222028,
+    "includesFinalSignBrightness": true,
+    "includesWorkingTreeChanges": false
+  },
+  "installerVerification": {
+    "passed": true,
+    "sha256": "20A5130572BD8538C37381B585C193F0C4DC7759D2DCC233A6B8AF4E93EA67FE",
+    "bootstrapSha256": "F51D648833D2206DDA01A6366AEC09EC86986BD76B0295475E8820A268087B64",
+    "checkedAtUtc": "2026-10-23T20:11:33.4429468-04:00",
+    "logs": "D:\\a\\wildline\\wildline\\native\\Build\\InstallerVerification\\bffe4bf7f6ac46b8b1ef42b71a600269",
+    "versionedSetupPassed": true,
+    "runner": "github-hosted-windows",
+    "runUrl": "https://github.com/mviterna/wildline/actions/runs/40039425698"
+  },
+  "installerVerificationAttempt": 2,
+  "publicUpdaterVerification": {
+    "passed": true,
+    "version": "0.2.0-beta.20261023.191103",
+    "bootstrapSha256": "F51D648833D2206DDA01A6366AEC09EC86986BD76B0295475E8820A268087B64",
+    "checkedAtUtc": "2026-10-23T20:26:10.1742357-04:00",
+    "logs": "D:\\a\\wildline\\wildline\\native\\Build\\OnlineInstallerVerification\\6860c3947270490e9a2d70f99c3e8043",
+    "firstGamePid": null,
+    "headless": true,
+    "graphicalWindowVerified": false,
+    "runUrl": "https://github.com/mviterna/wildline/actions/runs/40043943005"
+  },
+  "downloadUrl": "https://github.com/mviterna/wildline-downloads/releases/download/beta/WildlineSetup.exe",
+  "releaseUrl": "https://github.com/mviterna/wildline-downloads/releases/tag/v0.2.0-beta.20261023.191103",
+  "feedManifestSha256": "8BA4CEEAF480155B035A3E75F1733E24F9026339936E4F20148CFA6C2FC465CC",
+  "updateFeedPromoted": true,
+  "installedBetaAndDesktopShortcuts": {
+    "checkedFiles": 283,
+    "immutableChanges": 0,
+    "mutableGameplayChanges": 1,
+    "betaShortcutCorrect": true,
+    "developerShortcutCorrect": true
+  },
+  "protectedFilesMissing": 0,
+  "cleanupGuardVerificationPassed": true,
+  "validationScope": [
+    "Packaged rendered map review and two-process localhost host/client checks passed.",
+    "Disposable Windows installer and updater checks use NullRHI; graphical windows were not verified there.",
+    "The hosted Windows image was tested; a separate missing-runtime prerequisite matrix was not exercised.",
+    "One mutable gameplay file changed during user play; protected installation and shortcut hashes were unchanged."
+  ],
+  "temporaryValidationFixturesRetained": true
 }
